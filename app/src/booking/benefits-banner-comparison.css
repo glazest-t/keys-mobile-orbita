@@ -1,0 +1,6 @@
+.benefits-banner-comparison{display:flex;flex-direction:column;gap:16px;width:100%}
+.benefits-banner-preview{position:relative;display:block;flex:none;width:100%;padding:0;border:0;border-radius:28px;overflow:hidden;background:var(--k-action-tint);text-align:left}
+.benefits-banner-preview img{position:absolute;display:block;max-width:none;height:auto;pointer-events:none}
+/* Crop only the presentation canvas through layout; original option images stay intact. */
+.benefits-banner-preview--one{aspect-ratio:1424/764}
+.benefits-banner-preview--one img{width:112.29%;left:-6.11%;top:-14.4%}

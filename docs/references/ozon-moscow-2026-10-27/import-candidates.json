@@ -1,0 +1,369 @@
+{
+  "sourceUrl": "https://www.ozon.ru/travel/hotels/search-new?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000",
+  "observedOn": "2026-10-27",
+  "search": {
+    "city": "Москва",
+    "checkIn": "2026-10-27",
+    "checkOut": "2026-10-29",
+    "adults": 2
+  },
+  "status": "imported-demo-catalog",
+  "notes": [
+    "Снимок открытой выдачи, не интеграция с Ozon.",
+    "Неизвестные звёзды сохранены как null.",
+    "Номера, наличие на другие даты и условия отмены нельзя выводить из цены карточки."
+  ],
+  "hotels": [
+    {
+      "sourceName": "Измайлово Гамма, Дельта - ТВОЙ ОТЕЛЬ 3*",
+      "city": "Москва",
+      "stars": 3,
+      "locationSummary": "Москва • 9.2 км до центра • 500 м до метро Партизанская",
+      "rating": 4.7,
+      "reviewCount": 2438,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "SPA"
+      ],
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc1200/AZX2uKGzd_K1HOOtQXTMFg.jpg",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/izmaylovo-tvoy-otel-1635992617/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=5968185146000",
+      "priceStayMinor": 1470000,
+      "priceNightMinor": 735000,
+      "catalogId": "moscow-izmaylovo-tvoy-otel"
+    },
+    {
+      "sourceName": "Отель ShelterZ ВДНХ",
+      "city": "Москва",
+      "stars": null,
+      "locationSummary": "Москва • 8.2 км до центра • 1 км до метро ВДНХ",
+      "rating": 4.5,
+      "reviewCount": 486,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc1200/AZX2ssQqe5aKwxTXJLplXA.jpg",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/otel-shelterz-vdnh-615534660/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=5968322524000",
+      "priceStayMinor": 446600,
+      "priceNightMinor": 223300,
+      "catalogId": "moscow-otel-shelterz-vdnh"
+    },
+    {
+      "sourceName": "Отель ibis Москва Киевская 3*",
+      "city": "Москва",
+      "stars": 3,
+      "locationSummary": "Москва • 3.8 км до центра • 300 м до метро Киевская",
+      "rating": 4.7,
+      "reviewCount": 792,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "Трансфер",
+        "SPA",
+        "Бассейн"
+      ],
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc1200/AZ3OAn5cfZ6I6vjumBPLwA.jpg",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/ibis-moskva-kievskaya-614070973/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=2770917243000",
+      "priceStayMinor": 3380000,
+      "priceNightMinor": 1690000,
+      "catalogId": "moscow-ibis-moskva-kievskaya"
+    },
+    {
+      "sourceName": "Апарт-отель Окружная",
+      "city": "Москва",
+      "stars": null,
+      "locationSummary": "Москва • 11 км до центра • 400 м до метро Окружная",
+      "rating": 3.5,
+      "reviewCount": 2,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc1200/AZgOrJyvccuXautYpp2MZA.png",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/apart-otel-okruzhnaya-2477495118/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=11512383126000",
+      "priceStayMinor": 750000,
+      "priceNightMinor": 375000,
+      "catalogId": "moscow-apart-otel-okruzhnaya"
+    },
+    {
+      "sourceName": "Отель Металлург 2*",
+      "city": "Москва",
+      "stars": 2,
+      "locationSummary": "Москва • 3.5 км до центра • 700 м до метро Достоевская",
+      "rating": 4.4,
+      "reviewCount": 56,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc1200/AaBmXHzrcX6reeHw1T_HtQ.jpg",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/gostinitsa-metallurg-4783609449/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=14861713348000",
+      "priceStayMinor": 720000,
+      "priceNightMinor": 360000,
+      "catalogId": "moscow-gostinitsa-metallurg"
+    },
+    {
+      "sourceName": "Гостевой дом LESNOY SHEREMETYEVO",
+      "city": "Москва",
+      "stars": null,
+      "locationSummary": "Москва • 29 км до центра",
+      "rating": 4.7,
+      "reviewCount": 117,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc1200/AZo01oBPfLiMGIYwJhCI0A.jpg",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/gostevoy-dom-lesnoy-sheremetyevo-3074714554/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=12625112099000",
+      "priceStayMinor": 860000,
+      "priceNightMinor": 430000,
+      "catalogId": "moscow-gostevoy-dom-lesnoy-sheremetyevo"
+    },
+    {
+      "sourceName": "Отель Наследие",
+      "city": "Москва",
+      "stars": null,
+      "locationSummary": "Москва • 7.5 км до центра • 300 м до метро ВДНХ",
+      "rating": 4.5,
+      "reviewCount": 524,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc1200/AZX2uBz9dLW4Q9IhrGgVig.jpg",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/gostinitsa-ekonom-nasledie-615570897/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=4609454219000",
+      "priceStayMinor": 480000,
+      "priceNightMinor": 240000,
+      "catalogId": "moscow-gostinitsa-ekonom-nasledie"
+    },
+    {
+      "sourceName": "Гостиница Арена 2*",
+      "city": "Москва",
+      "stars": 2,
+      "locationSummary": "Москва • 4.9 км до центра • 300 м до метро Спортивная",
+      "rating": 4.5,
+      "reviewCount": 247,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc1200/AaETbkEcd7SIkJEh6vc8jA.jpg",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/arena-613312194/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=1493099024000",
+      "priceStayMinor": 1300000,
+      "priceNightMinor": 650000,
+      "catalogId": "moscow-arena"
+    },
+    {
+      "sourceName": "Отель Гутен Дак Москва",
+      "city": "Москва",
+      "stars": null,
+      "locationSummary": "Москва • 1.7 км до центра • 700 м до метро Чистые пруды",
+      "rating": 4.6,
+      "reviewCount": 335,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc600/AZYnGgFGcSSfwcEzSlVqwA.jpg",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/hostel-guten-duck-moscow-614081631/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=4601269226000",
+      "priceStayMinor": 597200,
+      "priceNightMinor": 298600,
+      "catalogId": "moscow-hostel-guten-duck-moscow"
+    },
+    {
+      "sourceName": "Отель Минима Белорусская 3*",
+      "city": "Москва",
+      "stars": 3,
+      "locationSummary": "Москва • 3 км до центра • 700 м до метро Белорусская",
+      "rating": 4.4,
+      "reviewCount": 271,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "Трансфер"
+      ],
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc600/AaETN6AReIqyIEJgQc-vow.jpg",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/minima-belorusskaya-614074934/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=3339748420000",
+      "priceStayMinor": 1980000,
+      "priceNightMinor": 990000,
+      "catalogId": "moscow-minima-belorusskaya"
+    },
+    {
+      "sourceName": "Tesla Hotel 3*",
+      "city": "Москва",
+      "stars": 3,
+      "locationSummary": "Москва • 1.8 км до центра • 500 м до метро Сухаревская",
+      "rating": 4.8,
+      "reviewCount": 144,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc600/AZYqMKdBfH6QoRlrQowAog.jpg",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/otel-tesla-614075072/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=5807998913000",
+      "priceStayMinor": 2280000,
+      "priceNightMinor": 1140000,
+      "catalogId": "moscow-otel-tesla"
+    },
+    {
+      "sourceName": "Отель Bun-in Alley",
+      "city": "Москва",
+      "stars": null,
+      "locationSummary": "Москва • 25 км до центра • 400 м до метро Бунинская аллея",
+      "rating": 4.0,
+      "reviewCount": 32,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc600/AZ0Ulg7dfkKxCUV9Gemzwg.jpg",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/bun-in-alley-1927556719/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=10534379687000",
+      "priceStayMinor": 758000,
+      "priceNightMinor": 379000,
+      "catalogId": "moscow-bun-in-alley"
+    },
+    {
+      "sourceName": "Максима Заря Отель 3*",
+      "city": "Москва",
+      "stars": 3,
+      "locationSummary": "Москва • 10 км до центра • 600 м до метро Окружная",
+      "rating": 4.8,
+      "reviewCount": 802,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "Трансфер"
+      ],
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc600/AZ9x9uHtcvmJRWKViGUxtw.jpg",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/otel-maksima-zarya-613317643/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=36137153000",
+      "priceStayMinor": 1080000,
+      "priceNightMinor": 540000,
+      "catalogId": "moscow-otel-maksima-zarya"
+    },
+    {
+      "sourceName": "Отель Москва Марриотт Империал Плаза 5*",
+      "city": "Москва",
+      "stars": 5,
+      "locationSummary": "Москва • 3.6 км до центра • 500 м до метро Комсомольская",
+      "rating": 4.8,
+      "reviewCount": 637,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "Трансфер"
+      ],
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc600/AZX2nnMpej-zRVhm-bFjVA.jpg",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/moscow-marriott-imperial-plaza-613326838/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=5968152308000",
+      "priceStayMinor": 3800000,
+      "priceNightMinor": 1900000,
+      "catalogId": "moscow-moscow-marriott-imperial-plaza"
+    },
+    {
+      "sourceName": "Отель Аквамарин ZONT Hotel Group 4*",
+      "city": "Москва",
+      "stars": 4,
+      "locationSummary": "Москва • 2.3 км до центра • 600 м до метро Новокузнецкая",
+      "rating": 4.9,
+      "reviewCount": 868,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "Трансфер",
+        "SPA"
+      ],
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc600/AZX2nL7deHeYODJ2uKjtIQ.jpg",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/akvamarin-zont-hotel-group-614073506/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=5968232118000",
+      "priceStayMinor": 8730000,
+      "priceNightMinor": 4365000,
+      "catalogId": "moscow-akvamarin-zont-hotel-group"
+    },
+    {
+      "sourceName": "Гостиница Пекин 4*",
+      "city": "Москва",
+      "stars": 4,
+      "locationSummary": "Москва • 2.1 км до центра • 300 м до метро Маяковская",
+      "rating": 4.8,
+      "reviewCount": 464,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "SPA"
+      ],
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc600/AZX2uCr0cZmMayXasoxmnQ.jpg",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/pekin-613315861/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=36136195000",
+      "priceStayMinor": 3620000,
+      "priceNightMinor": 1810000,
+      "catalogId": "moscow-pekin"
+    },
+    {
+      "sourceName": "\"Звезды Арбата\" Отель и Апартаменты 5*",
+      "city": "Москва",
+      "stars": 5,
+      "locationSummary": "Москва • 2.3 км до центра • 600 м до метро Смоленская",
+      "rating": 4.9,
+      "reviewCount": 344,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "SPA"
+      ],
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc600/AaE33AiAdIam4MPj_M98Tg.jpg",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/zvezdy-arbata-otel-i-apartamenty-613316070/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=1615579477000",
+      "priceStayMinor": 5760000,
+      "priceNightMinor": 2880000,
+      "catalogId": "moscow-zvezdy-arbata-otel-i-apartamenty"
+    },
+    {
+      "sourceName": "Отель Palmira Business Club 4*",
+      "city": "Москва",
+      "stars": 4,
+      "locationSummary": "Москва • 6.5 км до центра • 1.3 км до метро Тульская",
+      "rating": 4.9,
+      "reviewCount": 446,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "Трансфер",
+        "SPA"
+      ],
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc600/AZvwSLk9cy6fAZofgbrrQg.webp",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/palmira-business-club-613326068/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=2302577686000",
+      "priceStayMinor": 7731000,
+      "priceNightMinor": 3865500,
+      "catalogId": "moscow-palmira-business-club"
+    },
+    {
+      "sourceName": "Отель Мандарин Москва 4*",
+      "city": "Москва",
+      "stars": 4,
+      "locationSummary": "Москва • 3.8 км до центра • 700 м до метро Красносельская",
+      "rating": 4.1,
+      "reviewCount": 1094,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "Трансфер",
+        "SPA",
+        "Бассейн"
+      ],
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc1200/AaEVI-LGehuZvq7ZdpkfEQ.jpg",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/otel-mandarin-moskva-614071054/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=36141218000",
+      "priceStayMinor": 1944000,
+      "priceNightMinor": 972000,
+      "catalogId": "moscow-otel-mandarin-moskva"
+    },
+    {
+      "sourceName": "Отель Sleep and Fly SVO (Слип энд Флай Терминал Аэроэкспресс) 1*",
+      "city": "Москва",
+      "stars": 1,
+      "locationSummary": "Москва • 27 км до центра",
+      "rating": 4.5,
+      "reviewCount": 22,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc600/AZc4qpQodCOeR9vKU2Hq0Q.jpg",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/otel-gettsleep-sheremetevo-terminal-aeroekspress-1427722718/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=8146709828000",
+      "priceStayMinor": 840000,
+      "priceNightMinor": 420000,
+      "catalogId": "moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+name: Publish project
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm --prefix app ci
+      - name: Test logic
+        run: node --experimental-strip-types --test tests/*.test.mjs app/tests/auth.test.mjs
+      - name: Validate references
+        run: |
+          python3 scripts/validate_brand.py
+          python3 scripts/validate_product_spec.py
+      - name: Build Pages
+        run: npm --prefix app run build:pages
+      - name: Check published assets
+        run: python3 scripts/validate_pages.py
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

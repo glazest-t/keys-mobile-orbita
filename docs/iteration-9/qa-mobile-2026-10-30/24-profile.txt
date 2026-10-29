@@ -1,0 +1,51 @@
+Browser tab: 73, Title: "Ключи — мобильный прототип", URL: "http://127.0.0.1:5173/#profile".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 197-239
+~0 AXWebArea Ключи — мобильный прототип, URL: 127.0.0.1:5173/#profile
+~					196 button Назад
++					197 text Профиль
++					198 button Добавить фото профиля
++					199 heading Татьяна, Value: 1
++						200 text Татьяна
++					201 text +7 999 000-00-08
++					202 button Баллы «Ключей»: 0. Открыть выгоды
++						203 text Баллы «Ключей»
++						204 container
++							205 text 0 баллов
++						206 text Выгоды
++					207 container Мои поездки
++						208 heading Мои поездки, Value: 2, ID: profile-travel-title
++							209 text Мои поездки
++						210 button История поездок
++							211 text История поездок
++						212 button Путешественники
++							213 text Путешественники
++						214 button Мой стиль
++							215 text Мой стиль
++					216 container Моя выгода
++						217 heading Моя выгода, Value: 2, ID: profile-benefits-title
++							218 text Моя выгода
++						219 button Следим за ценами
++							220 text Следим за ценами
++						221 button Пригласить друзей 1 000 баллов за друга
++							222 text Пригласить друзей
++							223 text 1 000 баллов за друга
++					224 container Настройки аккаунта
++						225 heading Настройки аккаунта, Value: 2, ID: profile-settings-title
++							226 text Настройки аккаунта
++						227 button Уведомления
++							228 text Уведомления
++						229 button Безопасность и доступ
++							230 text Безопасность и доступ
++						231 button Управление данными
++							232 text Управление данными
++					233 container О сервисе
++						234 heading О сервисе, Value: 2, ID: profile-service-title
++							235 text О сервисе
++						236 button Помощь и поддержка
++							237 text Помощь и поддержка
++						238 button О приложении
++							239 text О приложении
++					240 button Выйти
++						241 text Выйти
+The focused UI element is 0 AXWebArea Ключи — мобильный прототип, URL: 127.0.0.1:5173/#profile

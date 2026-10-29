@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "approved": {
+    "points": {
+      "maxCoveragePercent": 100,
+      "covers": [
+        "lodging",
+        "services"
+      ],
+      "input": "all_available_or_none",
+      "hotelAndKeysWalletsSeparate": true
+    },
+    "friendlyRate": {
+      "requiredHotelierStatus": "approved",
+      "otherRatesAvailable": true,
+      "hotelLoyaltyAllowed": false,
+      "keysPointsAllowed": true
+    },
+    "digitalKey": {
+      "requiresActualCheckIn": true,
+      "visibleBeforeCheckIn": false
+    },
+    "onlineRegistration": {
+      "enabled": false
+    },
+    "cancellation": {
+      "freeUntilDaysBeforeArrival": 3,
+      "latePenaltyNights": 1
+    }
+  },
+  "workingDefaults": {
+    "currency": "RUB",
+    "minorUnitsPerPoint": 100,
+    "pointPrecision": "whole_points",
+    "redemptionPriority": [
+      "same_hotel",
+      "keys"
+    ],
+    "overflowPoints": "remain_in_wallet",
+    "fractionalRoubleRemainder": "pay_with_money",
+    "otp": {
+      "demoCode": "123456",
+      "expiresSeconds": 300,
+      "resendSeconds": 30
+    },
+    "noteMaxLength": 1000,
+    "reviewRatingMax": 5,
+    "tripSelection": "explicit_booking_id",
+    "freeCancellation": "restore_actual_debits_once",
+    "cancellation": {
+      "arrivalLocalTime": "15:00",
+      "timeZone": "Europe/Moscow",
+      "deadlineInclusive": true,
+      "penaltyBasis": "discounted_lodging_per_night",
+      "settlementOrder": [
+        "paid_cash",
+        "debited_whole_points",
+        "remaining_due"
+      ],
+      "afterArrival": "contact_hotel"
+    }
+  },
+  "deferred": [
+    {
+      "id": "accrual",
+      "iteration": 7,
+      "status": "requires_product_decision"
+    },
+    {
+      "id": "referral_reward",
+      "iteration": 7,
+      "status": "requires_product_decision"
+    }
+  ]
+}

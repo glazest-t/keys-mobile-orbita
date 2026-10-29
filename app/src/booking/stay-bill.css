@@ -1,0 +1,21 @@
+.stay-bill-content{padding:4px 16px calc(var(--flow-footer-height) + var(--mobile-safe-area-height,34px) + 24px);display:flex;flex-direction:column;gap:12px}
+.bill-total{border:1px solid #e4e7ef;border-radius:22px;background:#fff;padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+.bill-total>small,.bill-total>span{font:400 12px/17px Onest;color:#5a6072}
+.bill-total>strong{font:500 28px/36px Unbounded;letter-spacing:-1px}
+.keys-app .stay-bill-content h2{padding:0 4px;font:500 17px/24px Onest}
+.bill-lines{border:1px solid #e4e7ef;border-radius:22px;background:#fff;overflow:hidden}
+.bill-line{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:12px;align-items:center;padding:11px 16px;width:100%;background:transparent;border:0;text-align:left;color:#101320}
+.bill-line+.bill-line{border-top:1px solid #eef0f4}
+.bill-line>span:nth-child(2){display:flex;flex-direction:column;min-width:0;gap:1px}
+.bill-line strong{font:500 15px/21px Onest}.bill-line small{font:400 12px/17px Onest;color:#5a6072}.bill-line>b{font:500 14px/20px Onest;white-space:nowrap}
+.bill-line .icon-tile{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:15px;color:#2f5bff;background:#eef0ff}
+.bill-breakdown{display:flex;flex-direction:column;gap:8px;padding:8px 4px;font:400 14px/20px Onest;color:#5a6072}
+.bill-breakdown>span{display:flex;justify-content:space-between;gap:12px}.bill-breakdown strong{font-weight:500;color:#101320}
+.bill-footer{padding:12px 16px;background:#fff;display:flex;flex-direction:column;justify-content:center;gap:10px;height:112px;border-top:1px solid #e4e7ef}
+.bill-footer:after{content:'';position:absolute;top:100%;left:0;right:0;height:40px;background:#fff}
+.bill-footer>div{display:flex;justify-content:space-between;font:400 14px/20px Onest}.bill-footer strong{font:500 20px/26px Unbounded}
+.bill-footer>.k-button{height:52px;min-height:52px;border-radius:14px}
+.bill-checkout-note{display:flex;gap:12px;align-items:center;padding:14px 16px;border-radius:18px;background:#eef0ff;color:#2f5bff;font:400 14px/20px Onest}
+.bill-note{font:400 13px/19px Onest;color:#5a6072;padding:0 4px}
+.bill-lines:empty{display:none}.bill-payment-details{font:400 13px/19px Onest;color:#5a6072}.bill-payment-details>summary{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:44px;padding:0 4px;cursor:pointer;list-style:none}.bill-payment-details>summary::-webkit-details-marker{display:none}.bill-payment-details .bill-breakdown{padding:8px 4px}
+.bill-footer{background:#f4f5fb;border:0}.bill-footer:after{background:#f4f5fb}

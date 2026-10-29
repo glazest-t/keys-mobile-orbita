@@ -1,0 +1,102 @@
+Browser tab: 73, Title: "Ключи — мобильный прототип", URL: "http://127.0.0.1:5173/#points".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 200-206, 212-223
+~0 AXWebArea Ключи — мобильный прототип, URL: 127.0.0.1:5173/#points
+~					197 text Баллы «Ключей»
+~					198 container
+~						199 text Доступно
++						200 text 0
++						201 text 1 балл = 1 ₽
++						202 button Как работают баллы
++					203 container История баллов
++						204 checkbox Все, Value: 1
++						205 checkbox Начисления, Value: 0
++						206 checkbox Списания, Value: 0
+~					207 container
+~						208 heading Октябрь 2026 г., Value: 2
+~							209 text Октябрь 2026 г.
+~						210 button Оплата брони Mantera Resort & Congress · 30 окт. −5 860
+~							211 text Оплата брони
++							212 container
++								213 text Mantera Resort & Congress  · 30 окт.
++							214 container
++								215 text − 5 860
++						216 button Баллы за проживание Mantera Resort & Congress · 17 окт. +2 400
++							217 text Баллы за проживание
++							218 container
++								219 text Mantera Resort & Congress  · 17 окт.
++							220 container
++								221 text + 2 400
++						222 button Оплата брони Mantera Resort & Congress · 2 окт. −2 400
++							223 text Оплата брони
++							224 container
++								225 text Mantera Resort & Congress  · 2 окт.
++							226 container
++								227 text − 2 400
++					228 container
++						229 heading Сентябрь 2026 г., Value: 2
++							230 text Сентябрь 2026 г.
++						231 button Баллы за проживание Апарт-отель Площадь · 17 сент. +2 460
++							232 text Баллы за проживание
++							233 container
++								234 text Апарт-отель Площадь  · 17 сент.
++							235 container
++								236 text + 2 460
++						237 button Баллы за проживание Mantera Resort & Congress · 2 сент. +600
++							238 text Баллы за проживание
++							239 container
++								240 text Mantera Resort & Congress  · 2 сент.
++							241 container
++								242 text + 600
++					243 container
++						244 heading Август 2026 г., Value: 2
++							245 text Август 2026 г.
++						246 button Возврат при отмене Mantera Resort & Congress · 20 авг. +900
++							247 text Возврат при отмене
++							248 container
++								249 text Mantera Resort & Congress  · 20 авг.
++							250 container
++								251 text + 900
++						252 button Оплата брони Mantera Resort & Congress · 18 авг. −900
++							253 text Оплата брони
++							254 container
++								255 text Mantera Resort & Congress  · 18 авг.
++							256 container
++								257 text − 900
++						258 button Баллы за проживание Апарт-отель Площадь · 8 авг. +1 200
++							259 text Баллы за проживание
++							260 container
++								261 text Апарт-отель Площадь  · 8 авг.
++							262 container
++								263 text + 1 200
++					264 container
++						265 heading Июль 2026 г., Value: 2
++							266 text Июль 2026 г.
++						267 button Оплата брони Апарт-отель Площадь · 29 июл. −2 200
++							268 text Оплата брони
++							269 container
++								270 text Апарт-отель Площадь  · 29 июл.
++							271 container
++								272 text − 2 200
++						273 button За приглашение друга Программа «Ключей» · 19 июл. +1 000
++							274 text За приглашение друга
++							275 container
++								276 text Программа «Ключей»  · 19 июл.
++							277 container
++								278 text + 1 000
++						279 button Баллы за проживание Mantera Resort & Congress · 9 июл. +1 800
++							280 text Баллы за проживание
++							281 container
++								282 text Mantera Resort & Congress  · 9 июл.
++							283 container
++								284 text + 1 800
++					285 container
++						286 heading Июнь 2026 г., Value: 2
++							287 text Июнь 2026 г.
++						288 button Приветственные баллы Программа «Ключей» · 29 июн. +1 000
++							289 text Приветственные баллы
++							290 container
++								291 text Программа «Ключей»  · 29 июн.
++							292 container
++								293 text + 1 000
+The focused UI element is 0 AXWebArea Ключи — мобильный прототип, URL: 127.0.0.1:5173/#points

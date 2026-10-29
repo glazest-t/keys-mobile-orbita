@@ -1,0 +1,11 @@
+.sms-code-field{display:flex;flex-direction:column;gap:8px;width:100%}
+.sms-code-label{font:400 12px/18px var(--k-font-text);color:var(--k-text-secondary)}
+.sms-code-cells{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+.keys-app .sms-code-cells input{width:100%;min-width:0;height:56px;padding:0;border:1.5px solid var(--k-border-subtle);border-radius:14px;background:#ffffffd9;color:var(--k-text-primary);font:500 22px/28px var(--k-font-display);text-align:center;outline:none;box-shadow:none;caret-color:var(--k-text-primary)}
+.keys-app .sms-code-cells input:focus{border-color:var(--k-text-secondary)}
+.keys-app .sms-code-cells input[aria-invalid="true"]{border-color:var(--k-status-errorText)}
+
+.keys-app .sms-code-field.is-success input{border-color:var(--k-status-success);background:var(--k-status-successTint,#BFF0DE);color:var(--k-status-success);-webkit-text-fill-color:currentColor;opacity:1;caret-color:transparent}
+.keys-app .sms-code-success{display:flex;align-items:center;gap:6px;color:var(--k-status-success);font:500 14px/20px var(--k-font-text)}
+
+.pin-code-field{max-width:280px;align-self:center}.pin-code-field .sms-code-label{text-align:center}.pin-code-field .sms-code-cells{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}

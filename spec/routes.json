@@ -1,0 +1,1595 @@
+{
+  "version": 1,
+  "status": "iteration_1_working_baseline",
+  "source": "docs/references/screens-flows-2026-10-21.md",
+  "mapping_note": "Reviewed functional grouping. References are visual starting points, not claims of equivalent behavior. Desktop implementation is iteration 8.",
+  "routes": [
+    {
+      "id": "A01",
+      "title": "Онбординг",
+      "presentation": "flow",
+      "iteration": 3,
+      "route": "/welcome",
+      "mobile_refs": [
+        "o1",
+        "o2",
+        "o3",
+        "o4",
+        "o5",
+        "o6"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 89,
+      "notes": "Две визуальные версии трёх шагов; выбор композиции в итерации 3."
+    },
+    {
+      "id": "A02",
+      "title": "Ввод телефона",
+      "presentation": "screen",
+      "iteration": 3,
+      "route": "/auth/phone",
+      "mobile_refs": [
+        "a1"
+      ],
+      "desktop_refs": [
+        "g3"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 97,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "A03",
+      "title": "Подтверждение телефона",
+      "presentation": "screen",
+      "iteration": 3,
+      "route": "/auth/code",
+      "mobile_refs": [
+        "a2",
+        "e3"
+      ],
+      "desktop_refs": [
+        "g4"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 105,
+      "notes": "Рабочая функциональная база: 123456, срок 5 мин, повтор 30 с; конфликт с UI kit фиксируется в логике."
+    },
+    {
+      "id": "A04",
+      "title": "Имя нового гостя",
+      "presentation": "screen",
+      "iteration": 3,
+      "route": "/auth/name",
+      "mobile_refs": [
+        "a3"
+      ],
+      "desktop_refs": [
+        "g5"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 113,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "A05",
+      "title": "Приглашение отельера",
+      "presentation": "screen",
+      "iteration": 7,
+      "route": "/invite/hotelier/:inviteId",
+      "mobile_refs": [
+        "z1",
+        "fr1"
+      ],
+      "desktop_refs": [
+        "zd1"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 121,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "A06",
+      "title": "Подтверждение работы в отеле",
+      "presentation": "screen",
+      "iteration": 7,
+      "route": "/hotel-status/request",
+      "mobile_refs": [
+        "z2"
+      ],
+      "desktop_refs": [
+        "zd2"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 129,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "A07",
+      "title": "Ожидание и результат проверки отельера",
+      "presentation": "state",
+      "iteration": 7,
+      "route": "/hotel-status",
+      "mobile_refs": [
+        "z3",
+        "z4",
+        "z5",
+        "z6"
+      ],
+      "desktop_refs": [
+        "zd3",
+        "zd4"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 137,
+      "notes": "Актуальный requestId/email; отклонять устаревшие ответы; отказ не закрывает обычные тарифы."
+    },
+    {
+      "id": "A08",
+      "title": "Статус отельера и приглашение коллеги",
+      "presentation": "sheet",
+      "iteration": 7,
+      "route": "/profile",
+      "mobile_refs": [
+        "fr2",
+        "fr6",
+        "i2"
+      ],
+      "desktop_refs": [
+        "p2"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 145,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "A09",
+      "title": "Вход при оформлении брони",
+      "presentation": "flow",
+      "iteration": 4,
+      "route": "/checkout/:draftId",
+      "mobile_refs": [
+        "g1"
+      ],
+      "desktop_refs": [
+        "g3",
+        "g4",
+        "g5"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 153,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "F01",
+      "title": "Найти",
+      "presentation": "screen",
+      "iteration": 4,
+      "route": "/find",
+      "mobile_refs": [
+        "f1",
+        "k5"
+      ],
+      "desktop_refs": [
+        "g1",
+        "l1",
+        "d1",
+        "s1"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 163,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "F02",
+      "title": "Даты поездки",
+      "presentation": "sheet",
+      "iteration": 4,
+      "route": "/find",
+      "mobile_refs": [
+        "k3"
+      ],
+      "desktop_refs": [
+        "s2"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 171,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "F03",
+      "title": "Гости и условия поездки",
+      "presentation": "sheet",
+      "iteration": 4,
+      "route": "/find",
+      "mobile_refs": [
+        "k3g",
+        "k3"
+      ],
+      "desktop_refs": [
+        "s3"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 179,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "F04",
+      "title": "Результаты поиска",
+      "presentation": "screen",
+      "iteration": 4,
+      "route": "/search",
+      "mobile_refs": [
+        "c1",
+        "k4"
+      ],
+      "desktop_refs": [
+        "d2"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 187,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "F05",
+      "title": "Фильтры выдачи",
+      "presentation": "sheet",
+      "iteration": 4,
+      "route": "/search",
+      "mobile_refs": [
+        "k1"
+      ],
+      "desktop_refs": [
+        "d2"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 195,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "F06",
+      "title": "Карта результатов",
+      "presentation": "screen",
+      "iteration": 4,
+      "route": "/search/map",
+      "mobile_refs": [
+        "c2",
+        "k2"
+      ],
+      "desktop_refs": [
+        "d2"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 203,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "F07",
+      "title": "Отели свайпом",
+      "presentation": "screen",
+      "iteration": 6,
+      "route": "/discover/swipe",
+      "mobile_refs": [
+        "q3"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 211,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "F08",
+      "title": "Тематическая подборка",
+      "presentation": "screen",
+      "iteration": 6,
+      "route": "/collections/:collectionId",
+      "mobile_refs": [
+        "f1"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 219,
+      "notes": "В макете есть точка входа, полный экран подборки надо собрать."
+    },
+    {
+      "id": "F09",
+      "title": "Следить за ценой",
+      "presentation": "sheet",
+      "iteration": 6,
+      "route": "/price-alerts",
+      "mobile_refs": [
+        "w1"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 227,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "F10",
+      "title": "Избранные подборки",
+      "presentation": "screen",
+      "iteration": 6,
+      "route": "/favorites",
+      "mobile_refs": [
+        "fv1",
+        "fv4",
+        "fv5"
+      ],
+      "desktop_refs": [
+        "d7"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 235,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "F11",
+      "title": "Состав подборки и заметки",
+      "presentation": "screen",
+      "iteration": 6,
+      "route": "/favorites/:listId",
+      "mobile_refs": [
+        "fv2",
+        "fv2a",
+        "fv3",
+        "fv6"
+      ],
+      "desktop_refs": [
+        "d7"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 243,
+      "notes": "Рабочая функциональная база — 1000 символов; UI kit 140 не переносится автоматически."
+    },
+    {
+      "id": "Q01",
+      "title": "Начало и продолжение подбора",
+      "presentation": "screen",
+      "iteration": 6,
+      "route": "/discover",
+      "mobile_refs": [
+        "nc1"
+      ],
+      "desktop_refs": [
+        "w1"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 255,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "Q02",
+      "title": "Направление и город",
+      "presentation": "screen",
+      "iteration": 6,
+      "route": "/discover/destination",
+      "mobile_refs": [
+        "nc2",
+        "nc3"
+      ],
+      "desktop_refs": [
+        "w2"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 263,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "Q03",
+      "title": "С кем путешествуете",
+      "presentation": "screen",
+      "iteration": 6,
+      "route": "/discover/company",
+      "mobile_refs": [
+        "nc2"
+      ],
+      "desktop_refs": [
+        "w2"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 271,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "Q04",
+      "title": "Интересы и предпочтения",
+      "presentation": "flow",
+      "iteration": 6,
+      "route": "/discover/preferences",
+      "mobile_refs": [
+        "nc4",
+        "nc5",
+        "nc6",
+        "nc7",
+        "nc8",
+        "nc11"
+      ],
+      "desktop_refs": [
+        "w3",
+        "w4",
+        "w5"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 279,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "Q05",
+      "title": "Рекомендованные направления и отели",
+      "presentation": "screen",
+      "iteration": 6,
+      "route": "/discover/results",
+      "mobile_refs": [
+        "nc9",
+        "nc10",
+        "nc12",
+        "r1"
+      ],
+      "desktop_refs": [
+        "w5",
+        "w6"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 287,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "Q06",
+      "title": "Подбор по свободному пожеланию",
+      "presentation": "screen",
+      "iteration": 6,
+      "route": "/find/advice",
+      "mobile_refs": [
+        "nc1"
+      ],
+      "desktop_refs": [
+        "w1"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 295,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "H01",
+      "title": "Детали выбранного отеля",
+      "presentation": "screen",
+      "iteration": 4,
+      "route": "/hotels/:hotelId",
+      "mobile_refs": [
+        "h1",
+        "fr3",
+        "h2",
+        "fr5"
+      ],
+      "desktop_refs": [
+        "g2",
+        "d3",
+        "h1a",
+        "fr3d"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 305,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "H02",
+      "title": "Галерея отеля и номера",
+      "presentation": "screen",
+      "iteration": 4,
+      "route": "/hotels/:hotelId/gallery",
+      "mobile_refs": [
+        "h9",
+        "gl1"
+      ],
+      "desktop_refs": [
+        "h1g"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 313,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "H03",
+      "title": "Отзывы об отеле",
+      "presentation": "screen",
+      "iteration": 4,
+      "route": "/hotels/:hotelId/reviews",
+      "mobile_refs": [
+        "x1"
+      ],
+      "desktop_refs": [
+        "d3"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 321,
+      "notes": "Единая шкала отзывов 1–5; звёздность хранится отдельно."
+    },
+    {
+      "id": "H04",
+      "title": "Отель на карте",
+      "presentation": "screen",
+      "iteration": 4,
+      "route": "/hotels/:hotelId/map",
+      "mobile_refs": [
+        "h1"
+      ],
+      "desktop_refs": [
+        "d3"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 329,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "B01",
+      "title": "Номера и тарифы",
+      "presentation": "screen",
+      "iteration": 4,
+      "route": "/hotels/:hotelId/rooms",
+      "mobile_refs": [
+        "tv2b",
+        "fr4"
+      ],
+      "desktop_refs": [
+        "g2",
+        "d3"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 337,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "B02",
+      "title": "Описание номера и условия тарифа",
+      "presentation": "sheet",
+      "iteration": 4,
+      "route": "/hotels/:hotelId/rooms",
+      "mobile_refs": [
+        "tv2c",
+        "rm1",
+        "gl1"
+      ],
+      "desktop_refs": [
+        "h1b",
+        "h1c",
+        "h1g"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 345,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "B03",
+      "title": "Изменение дат и гостей при выборе",
+      "presentation": "sheet",
+      "iteration": 4,
+      "route": "/checkout/:draftId",
+      "mobile_refs": [
+        "k3",
+        "k3g"
+      ],
+      "desktop_refs": [
+        "s2",
+        "s3"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 353,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "B04",
+      "title": "Оформление и данные гостя",
+      "presentation": "screen",
+      "iteration": 4,
+      "route": "/checkout/:draftId/guest",
+      "mobile_refs": [
+        "h5"
+      ],
+      "desktop_refs": [
+        "d4"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 361,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "B05",
+      "title": "Дополнительный гость",
+      "presentation": "sheet",
+      "iteration": 4,
+      "route": "/checkout/:draftId/guest",
+      "mobile_refs": [
+        "h5"
+      ],
+      "desktop_refs": [
+        "d4"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 369,
+      "notes": "Форма дополнительного гостя требует отдельной композиции."
+    },
+    {
+      "id": "B06",
+      "title": "Услуги баллы и способ оплаты",
+      "presentation": "screen",
+      "iteration": 4,
+      "route": "/checkout/:draftId/summary",
+      "mobile_refs": [
+        "h6",
+        "h7",
+        "h2",
+        "fr5"
+      ],
+      "desktop_refs": [
+        "d4"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 377,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "B07",
+      "title": "Оплата бронирования",
+      "presentation": "flow",
+      "iteration": 4,
+      "route": "/checkout/:draftId/payment",
+      "mobile_refs": [
+        "h7",
+        "e4"
+      ],
+      "desktop_refs": [
+        "d4"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 385,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "B08",
+      "title": "Бронирование подтверждено",
+      "presentation": "screen",
+      "iteration": 4,
+      "route": "/bookings/:bookingId/confirmation",
+      "mobile_refs": [
+        "h8"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 393,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "B09",
+      "title": "Созданная поездка и детали новой брони",
+      "presentation": "screen",
+      "iteration": 4,
+      "route": "/bookings/:bookingId",
+      "mobile_refs": [
+        "d1",
+        "u1b"
+      ],
+      "desktop_refs": [
+        "d5",
+        "d5d"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 401,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "B10",
+      "title": "Подключение карты лояльности отеля",
+      "presentation": "flow",
+      "iteration": 7,
+      "route": "/loyalty/connect/:hotelId",
+      "mobile_refs": [
+        "l1"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 409,
+      "notes": "Подключение программы отеля демонстрационное; пароль не сохраняется."
+    },
+    {
+      "id": "M01",
+      "title": "Управление предстоящей бронью",
+      "presentation": "sheet",
+      "iteration": 4,
+      "route": "/bookings/:bookingId",
+      "mobile_refs": [
+        "d1"
+      ],
+      "desktop_refs": [
+        "d5d"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 419,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "M02",
+      "title": "Изменение существующей брони",
+      "presentation": "flow",
+      "iteration": 4,
+      "route": "/bookings/:bookingId/change",
+      "mobile_refs": [
+        "b3"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 427,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "M03",
+      "title": "Отмена бронирования",
+      "presentation": "sheet",
+      "iteration": 4,
+      "route": "/bookings/:bookingId/cancel",
+      "mobile_refs": [
+        "d3"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 435,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "M04",
+      "title": "Бронь отменена",
+      "presentation": "state",
+      "iteration": 4,
+      "route": "/bookings/:bookingId",
+      "mobile_refs": [
+        "d3"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 443,
+      "notes": "Успешная отмена требует нового визуального состояния."
+    },
+    {
+      "id": "M05",
+      "title": "Документы предстоящей поездки",
+      "presentation": "screen",
+      "iteration": 4,
+      "route": "/bookings/:bookingId/documents",
+      "mobile_refs": [
+        "d2"
+      ],
+      "desktop_refs": [
+        "d5d"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 451,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "M06",
+      "title": "Документы проживания и завершённой поездки",
+      "presentation": "screen",
+      "iteration": 5,
+      "route": "/bookings/:bookingId/documents",
+      "mobile_refs": [
+        "d2"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 459,
+      "notes": "Различать просмотр, скачивание подтверждения и сводку; не выдавать демофайл за чек."
+    },
+    {
+      "id": "T01",
+      "title": "Поездки без брони",
+      "presentation": "state",
+      "iteration": 3,
+      "route": "/trips",
+      "mobile_refs": [
+        "t0",
+        "t1"
+      ],
+      "desktop_refs": [
+        "t1"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 469,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "T02",
+      "title": "Предстоящая поездка",
+      "presentation": "state",
+      "iteration": 4,
+      "route": "/trips",
+      "mobile_refs": [
+        "u1b"
+      ],
+      "desktop_refs": [
+        "d5"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 477,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "T03",
+      "title": "Текущее проживание",
+      "presentation": "state",
+      "iteration": 5,
+      "route": "/trips",
+      "mobile_refs": [
+        "s2"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 485,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "T04",
+      "title": "День выезда",
+      "presentation": "state",
+      "iteration": 5,
+      "route": "/trips",
+      "mobile_refs": [
+        "s3"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 493,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "T05",
+      "title": "Детали текущей или завершённой поездки",
+      "presentation": "screen",
+      "iteration": 5,
+      "route": "/bookings/:bookingId",
+      "mobile_refs": [
+        "d1"
+      ],
+      "desktop_refs": [
+        "d5d"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 501,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "T06",
+      "title": "Инструкция по заселению и входу",
+      "presentation": "screen",
+      "iteration": 5,
+      "route": "/bookings/:bookingId/arrival",
+      "mobile_refs": [
+        "d4"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 509,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "T07",
+      "title": "Маршрут до отеля",
+      "presentation": "screen",
+      "iteration": 5,
+      "route": "/bookings/:bookingId/route",
+      "mobile_refs": [
+        "d5",
+        "d5b"
+      ],
+      "desktop_refs": [
+        "d5e"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 517,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "T08",
+      "title": "Завершённая поездка",
+      "presentation": "state",
+      "iteration": 5,
+      "route": "/trips",
+      "mobile_refs": [
+        "s4"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 525,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "U01",
+      "title": "Все услуги отеля",
+      "presentation": "screen",
+      "iteration": 5,
+      "route": "/bookings/:bookingId/services",
+      "mobile_refs": [
+        "sv1"
+      ],
+      "desktop_refs": [
+        "d5c"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 535,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "U02",
+      "title": "Еда в номер",
+      "presentation": "flow",
+      "iteration": 5,
+      "route": "/bookings/:bookingId/services/food",
+      "mobile_refs": [
+        "sv2"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 543,
+      "notes": "Карточка заказа есть; корзина блюд и детализация статусов требуют расширения."
+    },
+    {
+      "id": "U03",
+      "title": "Уборка и предметы для номера",
+      "presentation": "flow",
+      "iteration": 5,
+      "route": "/bookings/:bookingId/services/room",
+      "mobile_refs": [
+        "sv1",
+        "sv2"
+      ],
+      "desktop_refs": [
+        "d5c"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 551,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "U04",
+      "title": "Депозит и текущий счёт",
+      "presentation": "screen",
+      "iteration": 5,
+      "route": "/bookings/:bookingId/bill",
+      "mobile_refs": [
+        "s5"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 559,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "U05",
+      "title": "Другой запрос и сообщение о проблеме",
+      "presentation": "flow",
+      "iteration": 5,
+      "route": "/bookings/:bookingId/problem",
+      "mobile_refs": [
+        "s6"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 567,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "U06",
+      "title": "Добавление и изменение завтрака",
+      "presentation": "sheet",
+      "iteration": 5,
+      "route": "/bookings/:bookingId/services/breakfast",
+      "mobile_refs": [
+        "sv3"
+      ],
+      "desktop_refs": [
+        "d5b"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 575,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "U07",
+      "title": "Ранний заезд и поздний выезд",
+      "presentation": "sheet",
+      "iteration": 5,
+      "route": "/bookings/:bookingId/services/time",
+      "mobile_refs": [
+        "d6",
+        "s3"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 583,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "U08",
+      "title": "Цифровой ключ",
+      "presentation": "flow",
+      "iteration": 5,
+      "route": "/bookings/:bookingId/key",
+      "mobile_refs": [
+        "s2",
+        "s3"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 591,
+      "notes": "В макетах есть кнопка; подтверждение, ошибка и истечение ключа требуют расширения."
+    },
+    {
+      "id": "U09",
+      "title": "Wi Fi",
+      "presentation": "flow",
+      "iteration": 5,
+      "route": "/bookings/:bookingId/wifi",
+      "mobile_refs": [
+        "wf1",
+        "wf1b",
+        "wf2"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 599,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "U10",
+      "title": "Места рядом",
+      "presentation": "screen",
+      "iteration": 5,
+      "route": "/bookings/:bookingId/nearby",
+      "mobile_refs": [
+        "n1"
+      ],
+      "desktop_refs": [
+        "n1"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 607,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "U11",
+      "title": "Карточка места и маршрут",
+      "presentation": "screen",
+      "iteration": 5,
+      "route": "/places/:placeId",
+      "mobile_refs": [
+        "n1"
+      ],
+      "desktop_refs": [
+        "n1"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 615,
+      "notes": "Список мест есть; подробную карточку надо спроектировать."
+    },
+    {
+      "id": "R01",
+      "title": "Оценка проживания",
+      "presentation": "screen",
+      "iteration": 5,
+      "route": "/bookings/:bookingId/review",
+      "mobile_refs": [
+        "x2"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 625,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "R02",
+      "title": "Текст и фотографии отзыва",
+      "presentation": "screen",
+      "iteration": 5,
+      "route": "/bookings/:bookingId/review/details",
+      "mobile_refs": [
+        "x2"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 633,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "R03",
+      "title": "Благодарность и чаевые",
+      "presentation": "state",
+      "iteration": 5,
+      "route": "/bookings/:bookingId/review/success",
+      "mobile_refs": [
+        "x2"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 641,
+      "notes": "Подтверждение отзыва входит в итерацию 5. Чаевые — отдельный отложенный вариант, не обязательный шаг."
+    },
+    {
+      "id": "S01",
+      "title": "Поделиться отелем",
+      "presentation": "sheet",
+      "iteration": 4,
+      "route": "/hotels/:hotelId",
+      "mobile_refs": [
+        "h1"
+      ],
+      "desktop_refs": [
+        "d3"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 649,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "S02",
+      "title": "Поделиться поездкой",
+      "presentation": "sheet",
+      "iteration": 7,
+      "route": "/bookings/:bookingId/share",
+      "mobile_refs": [],
+      "desktop_refs": [],
+      "mapping_status": "needs_new_design",
+      "source_line": 657,
+      "notes": "Только демонстрационная ссылка/QR. Реальная передача прав к ключу не входит в объём."
+    },
+    {
+      "id": "S03",
+      "title": "Входящая ссылка на поездку",
+      "presentation": "screen",
+      "iteration": 7,
+      "route": "/shared/trip/:shareId",
+      "mobile_refs": [],
+      "desktop_refs": [],
+      "mapping_status": "needs_new_design",
+      "source_line": 665,
+      "notes": "Обработка неизвестной/устаревшей ссылки; никакой выдачи серверных прав по URL."
+    },
+    {
+      "id": "S04",
+      "title": "Поделиться подтверждением новой брони",
+      "presentation": "action",
+      "iteration": 4,
+      "route": "/bookings/:bookingId/confirmation",
+      "mobile_refs": [
+        "h8"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 673,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "C01",
+      "title": "Список чатов",
+      "presentation": "screen",
+      "iteration": 5,
+      "route": "/chats",
+      "mobile_refs": [
+        "ch1"
+      ],
+      "desktop_refs": [
+        "c3"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 683,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "C02",
+      "title": "Диалог с отелем",
+      "presentation": "screen",
+      "iteration": 5,
+      "route": "/chats/:hotelId",
+      "mobile_refs": [
+        "ch2"
+      ],
+      "desktop_refs": [
+        "c3"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 691,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "C03",
+      "title": "Выбор отеля для чата",
+      "presentation": "screen",
+      "iteration": 5,
+      "route": "/chats/new",
+      "mobile_refs": [],
+      "desktop_refs": [
+        "c3"
+      ],
+      "mapping_status": "needs_new_design",
+      "source_line": 699,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "N01",
+      "title": "История уведомлений",
+      "presentation": "screen",
+      "iteration": 5,
+      "route": "/notifications",
+      "mobile_refs": [
+        "n2"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 707,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "N02",
+      "title": "Действие из уведомления",
+      "presentation": "action",
+      "iteration": 5,
+      "route": "/notifications",
+      "mobile_refs": [
+        "n2",
+        "pn3"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 715,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "L01",
+      "title": "Выгоды",
+      "presentation": "screen",
+      "iteration": 7,
+      "route": "/rewards",
+      "mobile_refs": [
+        "v1"
+      ],
+      "desktop_refs": [
+        "d6"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 725,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "L02",
+      "title": "Баллы Ключей",
+      "presentation": "screen",
+      "iteration": 7,
+      "route": "/rewards/keys",
+      "mobile_refs": [
+        "v2",
+        "v5"
+      ],
+      "desktop_refs": [
+        "d6"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 733,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "L03",
+      "title": "Все программы отелей",
+      "presentation": "screen",
+      "iteration": 7,
+      "route": "/rewards/hotels",
+      "mobile_refs": [
+        "v4"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 741,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "L04",
+      "title": "Программа конкретного отеля",
+      "presentation": "screen",
+      "iteration": 7,
+      "route": "/rewards/hotels/:hotelId",
+      "mobile_refs": [
+        "v3",
+        "lp1",
+        "lp2",
+        "lp3"
+      ],
+      "desktop_refs": [
+        "v7"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 749,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "L05",
+      "title": "Программа сети отелей",
+      "presentation": "screen",
+      "iteration": 7,
+      "route": "/rewards/networks/:networkId",
+      "mobile_refs": [
+        "lp4",
+        "lp5"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 757,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "L06",
+      "title": "Пригласить друга",
+      "presentation": "sheet",
+      "iteration": 7,
+      "route": "/invite/friend",
+      "mobile_refs": [
+        "i1"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 765,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "P01",
+      "title": "Профиль",
+      "presentation": "screen",
+      "iteration": 3,
+      "route": "/profile",
+      "mobile_refs": [
+        "p1",
+        "fr2"
+      ],
+      "desktop_refs": [
+        "p1",
+        "p2"
+      ],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 775,
+      "notes": "Функциональный состав из документа; визуальный язык из макета, старые пункты не копировать слепо."
+    },
+    {
+      "id": "P02",
+      "title": "Список путешественников",
+      "presentation": "screen",
+      "iteration": 3,
+      "route": "/profile/travelers",
+      "mobile_refs": [],
+      "desktop_refs": [],
+      "mapping_status": "needs_new_design",
+      "source_line": 783,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "P03",
+      "title": "Данные путешественника",
+      "presentation": "screen",
+      "iteration": 3,
+      "route": "/profile/travelers/:travelerId",
+      "mobile_refs": [],
+      "desktop_refs": [],
+      "mapping_status": "needs_new_design",
+      "source_line": 791,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "P04",
+      "title": "Создание и редактирование путешественника",
+      "presentation": "flow",
+      "iteration": 3,
+      "route": "/profile/travelers/:travelerId/edit",
+      "mobile_refs": [],
+      "desktop_refs": [],
+      "mapping_status": "needs_new_design",
+      "source_line": 799,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "P05",
+      "title": "История путешествий",
+      "presentation": "screen",
+      "iteration": 5,
+      "route": "/profile/history",
+      "mobile_refs": [
+        "p3"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 807,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "P06",
+      "title": "Прошлая поездка и отзыв из истории",
+      "presentation": "screen",
+      "iteration": 5,
+      "route": "/profile/history/:bookingId",
+      "mobile_refs": [
+        "p3",
+        "d1",
+        "x2"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 815,
+      "notes": "Единая история новых броней и общий источник отзывов вместо двух несвязанных хранилищ."
+    },
+    {
+      "id": "P07",
+      "title": "Настройки уведомлений",
+      "presentation": "screen",
+      "iteration": 7,
+      "route": "/profile/notifications",
+      "mobile_refs": [
+        "p6"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 823,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "P08",
+      "title": "Безопасность и доступ",
+      "presentation": "screen",
+      "iteration": 7,
+      "route": "/profile/security",
+      "mobile_refs": [
+        "p6"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 831,
+      "notes": "Демонстрация настроек доступа, без утверждения настоящей защиты."
+    },
+    {
+      "id": "P09",
+      "title": "PIN код приложения",
+      "presentation": "flow",
+      "iteration": 7,
+      "route": "/profile/security/pin",
+      "mobile_refs": [],
+      "desktop_refs": [],
+      "mapping_status": "needs_new_design",
+      "source_line": 839,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "P10",
+      "title": "Устройства и сеансы",
+      "presentation": "screen",
+      "iteration": 7,
+      "route": "/profile/security/sessions",
+      "mobile_refs": [],
+      "desktop_refs": [],
+      "mapping_status": "needs_new_design",
+      "source_line": 847,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "P11",
+      "title": "Помощь и поддержка",
+      "presentation": "screen",
+      "iteration": 5,
+      "route": "/support",
+      "mobile_refs": [],
+      "desktop_refs": [],
+      "mapping_status": "needs_new_design",
+      "source_line": 855,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "P12",
+      "title": "Статья помощи",
+      "presentation": "screen",
+      "iteration": 5,
+      "route": "/support/articles/:articleId",
+      "mobile_refs": [],
+      "desktop_refs": [],
+      "mapping_status": "needs_new_design",
+      "source_line": 863,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "P13",
+      "title": "Обращение в поддержку Ключей",
+      "presentation": "flow",
+      "iteration": 5,
+      "route": "/support/new",
+      "mobile_refs": [],
+      "desktop_refs": [],
+      "mapping_status": "needs_new_design",
+      "source_line": 871,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "P14",
+      "title": "Детали обращения",
+      "presentation": "screen",
+      "iteration": 5,
+      "route": "/support/requests/:requestId",
+      "mobile_refs": [],
+      "desktop_refs": [],
+      "mapping_status": "needs_new_design",
+      "source_line": 879,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "P15",
+      "title": "Управление данными",
+      "presentation": "screen",
+      "iteration": 7,
+      "route": "/profile/data",
+      "mobile_refs": [
+        "p6"
+      ],
+      "desktop_refs": [],
+      "mapping_status": "starting_point_requires_review",
+      "source_line": 887,
+      "notes": "Сопоставление по назначению; состояния и поведение проверять по функциональному описанию."
+    },
+    {
+      "id": "P16",
+      "title": "Запрос удаления аккаунта",
+      "presentation": "flow",
+      "iteration": 7,
+      "route": "/profile/data/deletion",
+      "mobile_refs": [],
+      "desktop_refs": [],
+      "mapping_status": "needs_new_design",
+      "source_line": 895,
+      "notes": "Локальная модель запроса и отмены запроса; без настоящего удаления серверного аккаунта."
+    }
+  ],
+  "extra_designs": [
+    {
+      "platform": "mobile",
+      "id": "b2",
+      "iteration": null,
+      "disposition": "excluded_by_user",
+      "reason": "Онлайн-регистрация исключена пользователем. Исходный макет хранится только как история."
+    },
+    {
+      "platform": "mobile",
+      "id": "p4",
+      "iteration": 6,
+      "disposition": "reuse_in_feature",
+      "reason": "Предпочтения редактируются в подборе; отдельный пункт корня профиля не навязывается."
+    },
+    {
+      "platform": "mobile",
+      "id": "p5",
+      "iteration": 4,
+      "disposition": "reuse_in_feature",
+      "reason": "Варианты оплаты используются в оформлении; хранение реальных карт не реализуется."
+    },
+    {
+      "platform": "mobile",
+      "id": "e1",
+      "iteration": 3,
+      "disposition": "global_state",
+      "reason": "Общее состояние отсутствия сети; доступность ключа определяется отдельно."
+    },
+    {
+      "platform": "mobile",
+      "id": "pn1",
+      "iteration": 9,
+      "disposition": "reference_only",
+      "reason": "Макет системного push; в браузерном прототипе проверяем уведомления внутри приложения."
+    },
+    {
+      "platform": "mobile",
+      "id": "pn2",
+      "iteration": 9,
+      "disposition": "reference_only",
+      "reason": "Макет системного push с действием; реальные системные уведомления вне первой версии."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ключи — брендбук «Орбита»</title>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f7f8fa;color:#14171f;font:400 15px/1.6 "Golos Text",system-ui,sans-serif}
+a{color:#3a66f0}a:hover{color:#2a50d0}
+main{max-width:1040px;margin:0 auto;padding:56px 24px 96px;display:flex;flex-direction:column;gap:64px}
+h1{font-size:44px;line-height:1.1;font-weight:500;letter-spacing:-1.2px;margin:0}
+h2{font-size:26px;font-weight:500;letter-spacing:-.4px;margin:0 0 16px}
+p{margin:0 0 12px;color:#5d6472;max-width:680px;text-wrap:pretty}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.tile{border-radius:20px;border:1px solid #eceef2;background:#fff;padding:28px;display:grid;place-items:center;min-height:160px}
+.tile.blue{background:#3a66f0;border-color:#3a66f0}.tile.dark{background:#111318;border-color:#111318}
+.cap{font-size:12px;color:#6b7280;margin-top:8px}
+.sw{border-radius:16px;overflow:hidden;border:1px solid #eceef2;background:#fff}.sw div{height:88px}.sw span{display:block;padding:10px 14px;font-size:13px}
+.type div{padding:12px 0;border-bottom:1px solid #eceef2;display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+.splash{border-radius:28px;background:#3a66f0;height:340px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;color:#fff}
+code{font:13px ui-monospace,Menlo,monospace;background:#eef2fe;padding:2px 6px;border-radius:6px}
+</style></head><body><main>
+<header style="display:flex;flex-direction:column;gap:20px"><img src="logo/keys-logo-horizontal.svg" alt="Ключи" style="height:56px;width:auto;align-self:flex-start"><h1>Брендбук «Орбита»</h1><p>Кольцо — это все отели «Ключей». Точка — это гость. Положение точки показывает этап поездки: от желания поехать до выезда.</p></header>
+<section><h2>Знак и логотип</h2><div class="grid">
+<div><div class="tile"><img src="logo/keys-orbit-symbol-blue.svg" style="width:96px"></div><div class="cap">Знак · keys-orbit-symbol-blue.svg</div></div>
+<div><div class="tile blue"><img src="logo/keys-logo-horizontal-white.svg" style="width:180px"></div><div class="cap">На синем · keys-logo-horizontal-white.svg</div></div>
+<div><div class="tile dark"><img src="logo/keys-logo-horizontal-white.svg" style="width:180px"></div><div class="cap">Тёмная тема</div></div>
+<div><div class="tile"><img src="logo/keys-logo-stacked.svg" style="width:120px"></div><div class="cap">Вертикальный · keys-logo-stacked.svg</div></div>
+</div><p style="margin-top:20px">Построение: кольцо Ø 1, толщина 0.1875; точка Ø 1/3 на средней линии кольца под углом 45°, отступ вокруг 0.06. Минимальный размер знака 16 px, охранное поле — не меньше диаметра точки.</p></section>
+<section><h2>Иконка приложения</h2><div style="display:flex;gap:20px;align-items:flex-end;flex-wrap:wrap"><img src="app-icon/png/keys-icon-512.png" style="width:128px"><img src="app-icon/png/keys-icon-512.png" style="width:76px"><img src="app-icon/png/keys-icon-192.png" style="width:48px"><img src="app-icon/png/keys-icon-192.png" style="width:29px"></div><p style="margin-top:16px">Для iOS используйте <code>keys-icon-ios-1024.png</code> без скругления — система наложит маску сама. Для Android adaptive icon: фон #3A66F0, foreground <code>android-adaptive-foreground.svg</code>.</p></section>
+<section><h2>Заставка</h2><div class="splash"><img src="splash/splash-orbit-animated.svg" style="width:120px"><div style="font-weight:600;font-size:34px;letter-spacing:-1.5px;line-height:1">ключи</div></div><p style="margin-top:16px">Точка обходит кольцо за 2.4 с, easing <code>cubic-bezier(.6,.1,.4,.9)</code>, бесконечный цикл. Исходники в папке <code>splash/</code>: Lottie JSON, SVG, HTML/CSS, SwiftUI и Compose.</p></section>
+<section><h2>Цвет</h2><div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))">
+<div class="sw"><div style="background:#3A66F0"></div><span><b style="font-weight:500">Бренд</b><br>#3A66F0</span></div><div class="sw"><div style="background:#EEF2FE"></div><span><b style="font-weight:500">Подложка</b><br>#EEF2FE</span></div><div class="sw"><div style="background:#14171F"></div><span><b style="font-weight:500">Текст</b><br>#14171F</span></div><div class="sw"><div style="background:#6B7280"></div><span><b style="font-weight:500">Вторичный</b><br>#6B7280</span></div><div class="sw"><div style="background:#F7F8FA"></div><span><b style="font-weight:500">Фон</b><br>#F7F8FA</span></div><div class="sw"><div style="background:#ECEEF2"></div><span><b style="font-weight:500">Линии</b><br>#ECEEF2</span></div><div class="sw"><div style="background:#16865A"></div><span><b style="font-weight:500">Успех</b><br>#16865A</span></div><div class="sw"><div style="background:#111318"></div><span><b style="font-weight:500">Ночь</b><br>#111318</span></div>
+</div></section>
+<section class="type"><h2>Типографика · Golos Text</h2>
+<div><span style="font-size:24px;line-height:30px;font-weight:500;letter-spacing:-.4px">Куда отправимся?</span><span class="cap">Заголовок экрана 24/30 · 500</span></div>
+<div><span style="font-size:20px;line-height:26px;font-weight:500">Услуги и счёт</span><span class="cap">Заголовок блока 20/26 · 500</span></div>
+<div><span style="font-size:17px;line-height:24px;font-weight:500">Maidens Hotel</span><span class="cap">Название отеля 17/24 · 500</span></div>
+<div><span style="font-size:14px;line-height:21px;font-weight:500">Открыть дверь</span><span class="cap">Кнопка и подпись 14/21 · 500</span></div>
+<div><span style="font-size:14px;line-height:21px">Шведский стол · LEA, 3 этаж</span><span class="cap">Текст 14/21 · 400</span></div>
+<div><span style="font-size:12px;line-height:18px;color:#6b7280">Не включён · 680 ₽ с Silver</span><span class="cap">Мелкий 12/18 · 400</span></div>
+</section>
+<section><h2>Голос</h2><p>Спокойный помощник: коротко, по делу, на «вы». «Номер готов. Дверь откроется с телефона». Без восклицаний и капслока.</p></section>
+</main></body></html>

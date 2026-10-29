@@ -1,0 +1,21 @@
+{
+  "status": "implemented",
+  "selected": 2,
+  "options": [
+    {
+      "number": 1,
+      "title": "Приоритетная карточка и компактные диалоги",
+      "image": "/Users/tatyana.glazyrina/.codex/generated_images/01a15f51-a729-7521-8664-1d3c42c39e78/exec-920ef8f8-8254-407b-be61-fddff661b8de.png"
+    },
+    {
+      "number": 2,
+      "title": "Единый список с приоритетной поездкой",
+      "image": "/Users/tatyana.glazyrina/.codex/generated_images/01a15f51-a729-7521-8664-1d3c42c39e78/exec-c402c460-4981-4046-a267-30ef7ee5a27a.png"
+    },
+    {
+      "number": 3,
+      "title": "Приоритет и лента",
+      "image": "/Users/tatyana.glazyrina/.codex/generated_images/01a15f51-a729-7521-8664-1d3c42c39e78/exec-3d960983-9e8c-4e05-8f84-d9e9269f86ab.png"
+    }
+  ]
+}

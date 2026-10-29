@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500&amp;family=Unbounded:wght@500&amp;display=swap" rel="stylesheet"><style>body{margin:0;background:#e9ebf3;font-family:"Onest",system-ui,sans-serif;color:#101320}button{font-family:inherit;cursor:pointer}a{color:#2f5bff}a:hover{color:#1e44db}[data-screen-label] *::-webkit-scrollbar{display:none}
+@keyframes pSpin{to{transform:rotate(360deg)}}
+@keyframes pIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes pSheet{from{transform:translateY(100%)}to{transform:none}}
+@keyframes pFade{from{opacity:0}to{opacity:1}}
+@keyframes pPop{0%{transform:scale(.6);opacity:0}60%{transform:scale(1.08);opacity:1}100%{transform:scale(1)}}
+@keyframes pSplash{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+@keyframes kIn{0%{opacity:0;transform:scale(.86)}100%{opacity:1;transform:scale(1)}}@keyframes kShaft{0%,22%{transform:scaleX(1);opacity:1}42%{transform:scaleX(0);opacity:1}43%,100%{transform:scaleX(0);opacity:0}}@keyframes kTeeth{0%,20%{opacity:1}30%,100%{opacity:0}}@keyframes kDotGrow{0%,22%{transform:scale(.44)}42%,100%{transform:scale(1)}}@keyframes kOrbit{0%,42%{transform:rotate(0deg)}78%,100%{transform:rotate(315deg)}}@keyframes kSlide{0%,48%{transform:translateX(0)}82%,100%{transform:translateX(-60px)}}@keyframes kWord{0%,55%{opacity:0;transform:translateX(-14px)}85%,100%{opacity:1;transform:none}}@keyframes pWord{0%,40%{opacity:0;transform:translateX(-10px)}100%{opacity:1;transform:none}}</style></helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column;align-items:center;gap:14px;padding:24px 16px 32px;box-sizing:border-box">
+
+<div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;max-width:760px">
+<span style="font:500 12px/16px 'Onest',sans-serif;color:#5a6072;letter-spacing:.6px;text-transform:uppercase;margin-right:4px">Этап поездки</span>
+<div style="display:flex;gap:4px;padding:4px;border-radius:16px;background:#fff;box-shadow:inset 0 0 0 1px #e1e5ec;flex-wrap:wrap;justify-content:center">
+<sc-for list="{{ stages }}" as="s" hint-placeholder-count="5"><button onClick="{{ s.pick }}" style="height:34px;padding:0 12px;border:0;border-radius:12px;background:{{ s.bg }};color:{{ s.fg }};font-size:13px;font-weight:500;white-space:nowrap">{{ s.label }}</button></sc-for>
+</div>
+<button onClick="{{ restart }}" style="height:42px;padding:0 14px;border:0;border-radius:14px;background:#101320;color:#fff;font-size:13px;font-weight:500">С начала</button>
+</div>
+
+<div data-screen-label="{{ screenName }}" style="width:375px;height:780px;border-radius:50px;border:10px solid #0d0f17;background:#f4f5fb;overflow:hidden;position:relative;box-shadow:0 28px 56px #10132033;flex:none">
+<div style="position:absolute;left:0;right:0;top:0;height:44px;display:flex;justify-content:space-between;align-items:center;padding:0 28px;font-size:14px;font-weight:500;z-index:9;color:{{ sbarC }}"><span>9:41</span><span style="letter-spacing:1px">●●●</span></div>
+
+<sc-if value="{{ isSplash }}" hint-placeholder-val="{{ false }}">
+<div onClick="{{ toLogin }}" style="position:absolute;inset:0;background:radial-gradient(90% 70% at 50% 40%,#fff 0%,#eef0ff 50%,#dfe5ff 80%,#d6f1ff 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;cursor:pointer">
+{{ splashMark }}
+<span style="font-size:15px;color:#5a6072;animation:pFade .5s 1.6s both">Ключи от любого отеля</span>
+</div>
+</sc-if>
+
+<sc-if value="{{ isLogin }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;inset:0;background:radial-gradient(90% 60% at 50% 18%,#fff 0%,#eef0ff 60%,#e3e8ff 100%);display:flex;flex-direction:column;padding:72px 20px 30px;box-sizing:border-box;gap:28px">
+<div style="display:flex;align-items:center;gap:10px;animation:pIn .4s cubic-bezier(.2,.8,.2,1)"><div style="position:relative;width:34px;height:34px"><div style="position:absolute;inset:0;border-radius:50%;border:6.4px solid #2f5bff;box-sizing:border-box"></div><div style="position:absolute;left:21.1px;top:1.6px;width:11.3px;height:11.3px;border-radius:50%;background:#2f5bff;box-shadow:0 0 0 2px #fff"></div></div><span style="font:500 26px/1 'Unbounded',sans-serif;letter-spacing:-1.3px">ключи</span></div>
+<sc-if value="{{ isPhoneStep }}" hint-placeholder-val="{{ true }}">
+<div style="display:flex;flex-direction:column;gap:14px;flex:1;animation:pIn .4s cubic-bezier(.2,.8,.2,1)">
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font:500 26px/32px 'Unbounded',sans-serif;letter-spacing:-.8px">Вход</span><span style="font-size:15px;line-height:23px;color:#5a6072">Пришлём код в SMS</span></div>
+<button onClick="{{ fillPhone }}" style="height:56px;border-radius:16px;background:#ffffffc4;border:1.5px solid {{ phoneLine }};backdrop-filter:blur(30px);display:flex;align-items:center;gap:12px;padding:0 16px;font-size:17px;text-align:left;color:#101320"><span style="font-weight:500">+7</span><span style="width:1px;height:24px;background:#e4e7ef"></span><span style="color:{{ phoneC }}">{{ phoneText }}</span></button>
+<div style="flex:1"></div>
+<button onClick="{{ sendCode }}" style="height:52px;border:0;border-radius:14px;background:{{ sendBg }};color:#fff;font-size:15px;font-weight:500;transition:background .24s">Получить код</button>
+<span style="font-size:12px;line-height:17px;color:#8a90a2;text-align:center">Продолжая, вы принимаете условия сервиса</span>
+</div>
+</sc-if>
+<sc-if value="{{ isCodeStep }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:18px;flex:1;animation:pIn .4s cubic-bezier(.2,.8,.2,1)">
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font:500 26px/32px 'Unbounded',sans-serif;letter-spacing:-.8px">Код из SMS</span><span style="font-size:15px;line-height:23px;color:#5a6072">Отправили на +7 912 345-67-89</span></div>
+<button onClick="{{ typeCode }}" style="display:grid;grid-template-columns:repeat(6,1fr);gap:8px;border:0;background:none;padding:0">
+<sc-for list="{{ cells }}" as="c" hint-placeholder-count="6"><span style="height:56px;border-radius:14px;border:1.5px solid {{ c.line }};background:{{ c.bg }};display:grid;place-items:center;font:500 22px/1 'Unbounded',sans-serif;color:{{ c.fg }};transition:all .3s cubic-bezier(.2,.8,.2,1)">{{ c.v }}</span></sc-for>
+</button>
+<span style="font-size:14px;line-height:20px;color:{{ codeNoteC }};display:flex;align-items:center;gap:8px">{{ codeSpin }}{{ codeNote }}</span>
+</div>
+</sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{ isStyle }}" hint-placeholder-val="{{ false }}">
+<div style="position:absolute;inset:0;background:radial-gradient(90% 55% at 50% 22%,#fff 0%,#eef0ff 60%,#e3e8ff 100%);display:flex;flex-direction:column;padding:64px 20px 30px;box-sizing:border-box;gap:22px;animation:pFade .4s">
+<div style="align-self:center;position:relative;width:150px;height:150px">
+<div style="position:absolute;inset:0;border-radius:50%;border:1.5px solid #2f5bff33"></div>
+<div style="position:absolute;inset:28px;border-radius:50%;border:19px solid #2f5bff;box-sizing:border-box;box-shadow:0 18px 34px #2f5bff55"></div>
+<div style="position:absolute;left:84.5px;top:31.5px;width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#dcd8ff 50%,#b9b2ff);box-shadow:0 0 0 7px #ffffffcc"></div>
+<sc-for list="{{ styleSats }}" as="d" hint-placeholder-count="0"><span style="position:absolute;left:{{ d.x }};top:{{ d.y }};width:12px;height:12px;border-radius:50%;background:#2f5bff;animation:pPop .38s cubic-bezier(.34,1.56,.64,1)"></span></sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font:500 26px/32px 'Unbounded',sans-serif;letter-spacing:-.8px">Какой отдых ваш?</span><span style="font-size:15px;line-height:23px;color:#5a6072">Подберём отели под ваш стиль. Можно выбрать несколько.</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:8px"><sc-for list="{{ styleChips }}" as="c" hint-placeholder-count="8"><button onClick="{{ c.toggle }}" style="height:40px;padding:0 16px;border-radius:20px;border:1px solid {{ c.line }};background:{{ c.bg }};color:{{ c.fg }};font-size:14px;font-weight:500;transition:all .24s cubic-bezier(.2,.8,.2,1)">{{ c.label }}</button></sc-for></div>
+<div style="flex:1"></div>
+<button onClick="{{ finishStyle }}" style="height:52px;border:0;border-radius:14px;background:#2f5bff;color:#fff;font-size:15px;font-weight:500">{{ styleCta }}</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ isApp }}" hint-placeholder-val="{{ true }}">
+<div style="position:absolute;inset:0;overflow-y:auto;scrollbar-width:none;padding:52px 0 110px;box-sizing:border-box">
+
+<sc-if value="{{ showHeader }}" hint-placeholder-val="{{ true }}">
+<header style="display:flex;justify-content:space-between;align-items:center;padding:0 20px 4px">
+<div style="display:flex;align-items:center;gap:8px"><div style="position:relative;width:28px;height:28px;transform:rotate({{ markDeg }});transition:transform .7s cubic-bezier(.65,0,.35,1)"><div style="position:absolute;inset:0;border-radius:50%;border:5.25px solid #2f5bff;box-sizing:border-box"></div><div style="position:absolute;left:9.33px;top:-2.03px;width:9.33px;height:9.33px;border-radius:50%;background:#2f5bff;box-shadow:0 0 0 1.7px #f4f5fb"></div></div></div>
+<div style="display:flex;align-items:center;gap:8px"><button style="width:40px;height:40px;border:0;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 1px #e4e7ef;display:grid;place-items:center;padding:0;position:relative"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#101320" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14l-2-3V9a5 5 0 0 0-10 0v5l-2 3Zm5 3a2 2 0 0 0 4 0"></path></svg><span style="position:absolute;right:10px;top:9px;width:8px;height:8px;border-radius:50%;background:#2f5bff;box-shadow:0 0 0 2px #fff"></span></button><span style="width:40px;height:40px;border-radius:50%;background:#eef0ff;display:grid;place-items:center;font-size:13px;font-weight:500;color:#2f5bff">ТГ</span></div>
+</header>
+</sc-if>
+
+<sc-if value="{{ isBackBar }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;align-items:center;justify-content:space-between;padding:0 12px"><button onClick="{{ goBack }}" style="width:44px;height:44px;border:0;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 1px #e4e7ef;display:grid;place-items:center;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#101320" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12H5m6-6-6 6 6 6"></path></svg></button><span style="font-size:14px;font-weight:500;color:#5a6072">{{ backTitle }}</span><span style="width:44px"></span></div>
+</sc-if>
+
+<sc-if value="{{ vDream }}" hint-placeholder-val="{{ false }}">
+<main style="padding:14px 16px 0;display:flex;flex-direction:column;gap:14px;animation:pIn .4s cubic-bezier(.2,.8,.2,1)">
+<div style="display:flex;flex-direction:column;gap:2px;padding:0 4px"><span style="font-size:13px;color:#5a6072">Добрый день, Татьяна</span><span style="font:500 26px/32px 'Unbounded',sans-serif;letter-spacing:-.8px">Куда поедем?</span></div>
+<section style="border-radius:28px;background:#2f5bff;color:#fff;padding:18px;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden;box-shadow:0 24px 48px #2f5bff40">
+<div style="position:absolute;right:-70px;top:-70px;width:220px;height:220px;border-radius:50%;border:30px solid #ffffff12;box-sizing:border-box"></div>
+<div style="position:relative;display:flex;flex-direction:column;gap:4px"><span style="font-size:12px;color:#dfe6ff">Подбор под ваш стиль</span><span style="font-size:19px;line-height:25px;font-weight:500">{{ styleSummary }}</span></div>
+<div style="position:relative;display:flex;flex-direction:column;border-radius:18px;background:#ffffff1f;border:1px solid #ffffff33">
+<div style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid #ffffff26"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 14 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg><span style="display:flex;flex-direction:column"><span style="font-size:11px;color:#dfe6ff">Куда</span><span style="font-size:15px;font-weight:500">Сочи</span></span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr"><div style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-right:1px solid #ffffff26"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"></rect><path d="M4 10h16M9 3v4M15 3v4"></path></svg><span style="display:flex;flex-direction:column"><span style="font-size:11px;color:#dfe6ff">Даты</span><span style="font-size:15px;font-weight:500">12–19 сен</span></span></div><div style="display:flex;align-items:center;gap:12px;padding:12px 14px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg><span style="display:flex;flex-direction:column"><span style="font-size:11px;color:#dfe6ff">Гости</span><span style="font-size:15px;font-weight:500">2 взрослых</span></span></div></div>
+</div>
+<button onClick="{{ toResults }}" style="position:relative;height:52px;border:0;border-radius:16px;background:#fff;color:#2f5bff;font-size:15px;font-weight:500">Подобрать отели</button>
+</section>
+<section style="display:flex;flex-direction:column;gap:10px"><span style="font-size:17px;line-height:24px;font-weight:500;padding:0 4px">Идеи для вас</span>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+<button onClick="{{ toResults }}" style="border:0;padding:0;border-radius:22px;overflow:hidden;background:#fff;text-align:left;box-shadow:inset 0 0 0 1px #e4e7ef"><img src="../assets/next-trip.jpg" alt="" style="width:100%;height:110px;object-fit:cover;display:block"><span style="display:flex;flex-direction:column;padding:10px 12px 12px"><span style="font-size:14px;line-height:20px;font-weight:500;color:#101320">Ближе к морю</span><span style="font-size:12px;color:#5a6072">12 отелей · от 9 800 ₽</span></span></button>
+<button onClick="{{ toResults }}" style="border:0;padding:0;border-radius:22px;overflow:hidden;background:#fff;text-align:left;box-shadow:inset 0 0 0 1px #e4e7ef"><img src="../assets/maidens-premium-king.jpg" alt="" style="width:100%;height:110px;object-fit:cover;display:block"><span style="display:flex;flex-direction:column;padding:10px 12px 12px"><span style="font-size:14px;line-height:20px;font-weight:500;color:#101320">Без будильника</span><span style="font-size:12px;color:#5a6072">Поздний выезд включён</span></span></button>
+</div></section>
+<section style="border-radius:22px;background:#fff;border:1px solid #e4e7ef;padding:14px 16px;display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:12px;align-items:center">
+<div style="position:relative;width:52px;height:52px"><div style="position:absolute;inset:4px;border-radius:50%;border:7px solid #eef0ff;box-sizing:border-box"></div><div style="position:absolute;inset:4px;border-radius:50%;background:conic-gradient(#2f5bff 0 120deg,transparent 120deg);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 7px),#000 calc(100% - 7px));mask:radial-gradient(farthest-side,transparent calc(100% - 7px),#000 calc(100% - 7px))"></div></div>
+<span style="display:flex;flex-direction:column"><span style="font-size:15px;line-height:21px;font-weight:500">{{ pointsLabel }}</span><span style="font-size:12px;line-height:17px;color:#5a6072">{{ levelLabel }}</span></span>
+<button onClick="{{ toRewards }}" style="border:0;background:none;color:#2f5bff;font-size:13px;font-weight:500;padding:0">Выгоды ›</button>
+</section>
+</main>
+</sc-if>
+
+<sc-if value="{{ vResults }}" hint-placeholder-val="{{ false }}">
+<main style="padding:12px 16px 0;display:flex;flex-direction:column;gap:12px;animation:pIn .4s cubic-bezier(.2,.8,.2,1)">
+<div style="display:flex;flex-direction:column;gap:2px;padding:0 4px"><span style="font:500 24px/30px 'Unbounded',sans-serif;letter-spacing:-.7px">Подобрали для вас</span><span style="font-size:13px;color:#5a6072">Сочи · 12–19 сентября · 7 ночей</span></div>
+<div style="display:flex;gap:6px;overflow:hidden"><sc-for list="{{ styleTags }}" as="t" hint-placeholder-count="3"><span style="height:30px;padding:0 12px;border-radius:15px;background:#eef0ff;color:#2f5bff;font-size:12px;font-weight:500;display:flex;align-items:center;white-space:nowrap">{{ t }}</span></sc-for></div>
+<sc-for list="{{ hotels }}" as="h" hint-placeholder-count="3">
+<button onClick="{{ h.open }}" style="border:0;padding:0;border-radius:24px;overflow:hidden;background:#fff;text-align:left;box-shadow:inset 0 0 0 1px #e4e7ef;color:#101320">
+<div style="position:relative;height:150px"><img src="{{ h.img }}" alt="" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:12px;top:12px;height:30px;padding:0 10px;border-radius:15px;background:#ffffffc4;backdrop-filter:blur(20px);font-size:12px;font-weight:500;color:#2f5bff;display:flex;align-items:center;gap:6px"><span style="width:6px;height:6px;border-radius:50%;background:#2f5bff"></span>Совпадение {{ h.match }}</span><span style="position:absolute;right:12px;top:12px;height:30px;padding:0 10px;border-radius:15px;background:{{ h.badgeBg }};color:{{ h.badgeFg }};font-size:12px;font-weight:500;display:flex;align-items:center">{{ h.badge }}</span></div>
+<div style="padding:12px 14px 14px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:end"><span style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font-size:17px;line-height:23px;font-weight:500">{{ h.name }}</span><span style="font-size:12px;line-height:17px;color:#5a6072">{{ h.meta }}</span></span><span style="display:flex;flex-direction:column;align-items:flex-end"><span style="font:500 17px/22px 'Unbounded',sans-serif;letter-spacing:-.5px;white-space:nowrap">{{ h.price }}</span><span style="font-size:11px;color:#5a6072">за ночь</span></span></div>
+</button>
+</sc-for>
+</main>
+</sc-if>
+
+<sc-if value="{{ vHotel }}" hint-placeholder-val="{{ false }}">
+<main style="padding:12px 16px 0;display:flex;flex-direction:column;gap:12px;animation:pIn .4s cubic-bezier(.2,.8,.2,1)">
+<div style="position:relative;height:230px;border-radius:28px;overflow:hidden"><img src="{{ hotel.img }}" alt="" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;left:12px;right:12px;bottom:12px;border-radius:20px;background:#ffffffc4;border:1px solid #fff;backdrop-filter:blur(30px) saturate(1.8);padding:12px 14px;display:flex;justify-content:space-between;align-items:center"><span style="display:flex;flex-direction:column"><span style="font-size:18px;line-height:24px;font-weight:500">{{ hotel.name }}</span><span style="font-size:12px;color:#5a6072">{{ hotel.meta }}</span></span><span style="width:52px;height:52px;border-radius:50%;background:conic-gradient(#2f5bff 0 {{ hotel.deg }},#dfe5ff {{ hotel.deg }});display:grid;place-items:center"><span style="width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center;font:500 12px/1 'Unbounded',sans-serif;color:#2f5bff">{{ hotel.match }}</span></span></div></div>
+<section style="background:#fff;border:1px solid #e4e7ef;border-radius:22px;padding:14px 16px;display:flex;flex-direction:column;gap:10px"><span style="font-size:15px;font-weight:500">Почему вам подойдёт</span><sc-for list="{{ hotel.why }}" as="w" hint-placeholder-count="3"><span style="display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;font-size:14px;line-height:20px"><span style="width:22px;height:22px;border-radius:50%;background:#eef0ff;display:grid;place-items:center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#2f5bff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"></path></svg></span>{{ w }}</span></sc-for></section>
+<section style="background:#fff;border:1px solid #e4e7ef;border-radius:22px;padding:14px 16px;display:grid;grid-template-columns:1fr 1fr;gap:10px"><span style="display:flex;flex-direction:column"><span style="font-size:11px;color:#5a6072">Заезд</span><span style="font-size:15px;font-weight:500">12 сен · 14:00</span></span><span style="display:flex;flex-direction:column;align-items:flex-end"><span style="font-size:11px;color:#5a6072">Выезд</span><span style="font-size:15px;font-weight:500">19 сен · 12:00</span></span></section>
+<section style="background:#fff;border:1px solid #e4e7ef;border-radius:22px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center"><span style="display:flex;flex-direction:column"><span style="font-size:12px;color:#5a6072">7 ночей · лучшая цена напрямую</span><span style="font:500 24px/30px 'Unbounded',sans-serif;letter-spacing:-.8px">{{ hotel.total }}</span></span><span style="font-size:12px;font-weight:500;padding:4px 10px;border-radius:10px;background:#bff0de;color:#16865a">+{{ hotel.points }} баллов</span></section>
+<button onClick="{{ openBook }}" style="height:52px;border:0;border-radius:14px;background:#2f5bff;color:#fff;font-size:15px;font-weight:500">Забронировать</button>
+</main>
+</sc-if>
+
+<sc-if value="{{ vGoing }}" hint-placeholder-val="{{ false }}">
+<main style="padding:14px 16px 0;display:flex;flex-direction:column;gap:12px;animation:pIn .4s cubic-bezier(.2,.8,.2,1)">
+<section style="border-radius:28px;background:#2f5bff;color:#fff;overflow:hidden;box-shadow:0 24px 48px #2f5bff40">
+<div style="position:relative;height:150px"><img src="../assets/next-trip.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;inset:0;background:linear-gradient(#10132000 30%,#2f5bffee)"></div><span style="position:absolute;left:14px;top:14px;height:30px;padding:0 12px;border-radius:15px;background:#ffffffc4;backdrop-filter:blur(16px);color:#101320;font-size:12px;font-weight:500;display:flex;align-items:center;gap:6px"><span style="width:6px;height:6px;border-radius:50%;background:#2f5bff"></span>Ждём вас</span><div style="position:absolute;left:16px;bottom:10px;display:flex;flex-direction:column"><span style="font-size:20px;line-height:26px;font-weight:500">Mantera Resort &amp; Congress</span><span style="font-size:12px;color:#dfe6ff">Сочи · Премиум у моря</span></div></div>
+<div style="padding:14px 16px 16px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center">
+<span style="display:flex;flex-direction:column;gap:8px"><span style="display:flex;flex-direction:column"><span style="font-size:11px;color:#c9d2ff">Заезд</span><span style="font-size:15px;font-weight:500">12 сентября · с 14:00</span></span><span style="display:flex;flex-direction:column"><span style="font-size:11px;color:#c9d2ff">Выезд</span><span style="font-size:15px;font-weight:500">19 сентября · до 12:00</span></span><span style="font-size:12px;color:#dfe6ff;display:flex;align-items:center;gap:6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#bff0de" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"></path></svg>{{ paidLabel }}</span></span>
+<span style="position:relative;width:92px;height:92px"><span style="position:absolute;inset:0;border-radius:50%;border:8px solid #ffffff33;box-sizing:border-box"></span><span style="position:absolute;left:37px;top:-5px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px #2f5bff"></span><span style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1"><span style="font:500 26px/30px 'Unbounded',sans-serif;letter-spacing:-1px">3</span><span style="font-size:11px;color:#dfe6ff">дня</span></span></span>
+</div></section>
+<section style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+<button onClick="{{ toggleReg }}" style="height:60px;border:0;border-radius:18px;background:{{ regBg }};color:{{ regFg }};font-size:14px;font-weight:500;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;transition:background .24s"><span>Онлайн-регистрация</span><span style="font-size:11px;font-weight:400;color:{{ regSubC }}">{{ regSub }}</span></button>
+<button onClick="{{ sayRoute }}" style="height:60px;border:0;border-radius:18px;background:#eef0ff;color:#2f5bff;font-size:14px;font-weight:500;display:flex;align-items:center;justify-content:center;gap:8px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2f5bff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-8-8 18-2-8-8-2Z"></path></svg>Маршрут</button>
+</section>
+<section style="background:#fff;border:1px solid #e4e7ef;border-radius:22px;display:flex;flex-direction:column">
+<sc-for list="{{ goingRows }}" as="r" hint-placeholder-count="3"><button onClick="{{ r.act }}" style="border:0;background:none;display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 16px;text-align:left;color:#101320;border-bottom:1px solid {{ r.line }}"><span style="width:44px;height:44px;border-radius:15px;background:#eef0ff;display:grid;place-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f5bff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="{{ r.icon }}"></path></svg></span><span style="display:flex;flex-direction:column"><span style="font-size:15px;line-height:21px;font-weight:500">{{ r.t }}</span><span style="font-size:12px;line-height:17px;color:#5a6072">{{ r.s }}</span></span><span style="font-size:12px;font-weight:500;padding:4px 10px;border-radius:10px;color:{{ r.fg }};background:{{ r.bg }}">{{ r.tag }}</span></button></sc-for>
+</section>
+<button onClick="{{ arrive }}" style="height:52px;border:0;border-radius:14px;background:#101320;color:#fff;font-size:15px;font-weight:500">Я на месте — получить ключ</button>
+</main>
+</sc-if>
+
+<sc-if value="{{ vStay }}" hint-placeholder-val="{{ true }}">
+<main style="padding:14px 16px 0;display:flex;flex-direction:column;gap:12px;animation:pIn .4s cubic-bezier(.2,.8,.2,1)">
+<section style="border-radius:28px;background:#2f5bff;color:#fff;padding:18px;display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;box-shadow:0 24px 48px #2f5bff40">
+<div style="position:absolute;right:-90px;top:-90px;width:270px;height:270px;border-radius:50%;border:34px solid #ffffff10;box-sizing:border-box"></div>
+<div style="position:relative;display:flex;justify-content:space-between;align-items:center"><span style="display:flex;flex-direction:column;gap:2px"><span style="display:flex;align-items:center;gap:6px;font-size:12px;color:#dfe6ff"><span style="width:6px;height:6px;border-radius:50%;background:{{ liveDot }}"></span>{{ liveLabel }}</span><span style="font-size:17px;font-weight:500">Mantera Resort &amp; Congress</span></span></div>
+<div style="position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center">
+<span style="display:flex;flex-direction:column;gap:4px"><span style="font-size:12px;color:#dfe6ff">Ваш номер</span><span style="font:500 54px/54px 'Unbounded',sans-serif;letter-spacing:-2.8px">412</span><span style="font-size:13px;color:#dfe6ff">Премиум Кинг · 4 этаж</span></span>
+<span style="position:relative;width:104px;height:104px"><span style="position:absolute;inset:0;border-radius:50%;background:conic-gradient(#fff 0 {{ nightDeg }},#ffffff33 {{ nightDeg }} 360deg);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 9px),#000 calc(100% - 9px));mask:radial-gradient(farthest-side,transparent calc(100% - 9px),#000 calc(100% - 9px))"></span><span style="position:absolute;inset:0;transform:rotate({{ nightDeg }})"><span style="position:absolute;left:43px;top:-4.5px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px #2f5bff"></span></span><span style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;text-align:center"><span style="font-size:10px;color:#dfe6ff">{{ ringTop }}</span><span style="font:500 {{ ringSize }}/1.1 'Unbounded',sans-serif;letter-spacing:-.8px;margin-top:3px">{{ ringMain }}</span><span style="font-size:11px;color:#dfe6ff;margin-top:3px">{{ ringSub }}</span></span></span>
+</div>
+<sc-if value="{{ isCheckoutDay }}" hint-placeholder-val="{{ false }}"><div style="position:relative;border-radius:16px;background:#ffffff1f;padding:10px 14px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:15px;font-weight:500">Выезд сегодня до 12:00</span><span style="font-size:12px;color:#dfe6ff">через 2 ч 40 мин</span></div></sc-if>
+<button onClick="{{ openDoor }}" style="position:relative;height:54px;border:0;border-radius:16px;background:{{ doorBg }};color:{{ doorFg }};font-size:15px;font-weight:500;display:flex;align-items:center;justify-content:center;gap:10px;transition:background .24s,color .24s">{{ doorIcon }}<span>{{ doorLabel }}</span></button>
+</section>
+<section style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+<sc-for list="{{ stayTiles }}" as="t" hint-placeholder-count="3"><button onClick="{{ t.act }}" style="border:1px solid #e4e7ef;border-radius:20px;background:#fff;padding:14px 6px 12px;display:flex;flex-direction:column;align-items:center;gap:8px;color:#101320"><span style="width:44px;height:44px;border-radius:15px;background:#eef0ff;display:grid;place-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f5bff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="{{ t.icon }}"></path></svg></span><span style="font-size:13px;line-height:17px;font-weight:500;text-align:center">{{ t.l }}</span></button></sc-for>
+</section>
+<section style="background:#fff;border:1px solid #e4e7ef;border-radius:22px;display:flex;flex-direction:column">
+<sc-for list="{{ stayRows }}" as="r" hint-placeholder-count="3"><button onClick="{{ r.act }}" style="border:0;background:none;display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 16px;text-align:left;color:#101320;border-bottom:1px solid {{ r.line }}"><span style="width:44px;height:44px;border-radius:15px;background:#eef0ff;display:grid;place-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f5bff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="{{ r.icon }}"></path></svg></span><span style="display:flex;flex-direction:column;min-width:0"><span style="font-size:15px;line-height:21px;font-weight:500">{{ r.t }}</span><span style="font-size:12px;line-height:17px;color:#5a6072">{{ r.s }}</span></span><span style="font-size:12px;font-weight:500;padding:4px 10px;border-radius:10px;white-space:nowrap;color:{{ r.fg }};background:{{ r.bg }}">{{ r.tag }}</span></button></sc-for>
+</section>
+<sc-if value="{{ isCheckoutDay }}" hint-placeholder-val="{{ false }}"><button onClick="{{ checkout }}" style="height:52px;border:0;border-radius:14px;background:#101320;color:#fff;font-size:15px;font-weight:500">Выехать и закрыть счёт</button></sc-if>
+<sc-if value="{{ isStayOnly }}" hint-placeholder-val="{{ true }}"><section style="border-radius:22px;background:linear-gradient(110deg,#fff,#eef0ff 45%,#dcd8ff 80%,#cdefff);border:1px solid #e4e7ef;padding:14px 16px;display:grid;grid-template-columns:minmax(0,1fr) 64px;gap:12px;align-items:center"><span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:500">Рядом с вами</span><span style="font-size:12px;line-height:17px;color:#5a6072">5 мест под ваш стиль: тихий пляж, кофейня, винный бар</span></span><span style="position:relative;width:64px;height:64px"><span style="position:absolute;inset:0;border-radius:50%;border:1.5px solid #2f5bff55"></span><span style="position:absolute;inset:16px;border-radius:50%;border:1.5px solid #2f5bff80"></span><span style="position:absolute;left:26px;top:26px;width:12px;height:12px;border-radius:50%;background:#2f5bff"></span><span style="position:absolute;left:48px;top:10px;width:8px;height:8px;border-radius:50%;background:#b9b2ff"></span><span style="position:absolute;left:6px;top:42px;width:8px;height:8px;border-radius:50%;background:#8fd8ff"></span></span></section></sc-if>
+</main>
+</sc-if>
+
+<sc-if value="{{ vServices }}" hint-placeholder-val="{{ false }}">
+<main style="padding:12px 16px 0;display:flex;flex-direction:column;gap:12px;animation:pIn .4s cubic-bezier(.2,.8,.2,1)">
+<span style="font:500 24px/30px 'Unbounded',sans-serif;letter-spacing:-.7px;padding:0 4px">Услуги</span>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);padding:4px;border-radius:14px;background:#e9ecf4;gap:4px"><sc-for list="{{ svcSegs }}" as="s" hint-placeholder-count="3"><button onClick="{{ s.pick }}" style="height:34px;border:0;border-radius:10px;background:{{ s.bg }};box-shadow:{{ s.sh }};color:#101320;font-size:13px;font-weight:500">{{ s.l }}</button></sc-for></div>
+<section style="background:#fff;border:1px solid #e4e7ef;border-radius:22px;display:flex;flex-direction:column">
+<sc-for list="{{ services }}" as="r" hint-placeholder-count="4"><div style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 16px;border-bottom:1px solid {{ r.line }}"><span style="width:44px;height:44px;border-radius:15px;background:#eef0ff;display:grid;place-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f5bff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="{{ r.icon }}"></path></svg></span><span style="display:flex;flex-direction:column;min-width:0"><span style="font-size:15px;line-height:21px;font-weight:500">{{ r.t }}</span><span style="font-size:12px;line-height:17px;color:#5a6072">{{ r.s }}</span></span><button onClick="{{ r.add }}" style="height:34px;padding:0 12px;border:0;border-radius:12px;background:{{ r.bg }};color:{{ r.fg }};font-size:13px;font-weight:500;white-space:nowrap;transition:all .24s">{{ r.cta }}</button></div></sc-for>
+</section>
+</main>
+</sc-if>
+
+<sc-if value="{{ vAfter }}" hint-placeholder-val="{{ false }}">
+<main style="padding:14px 16px 0;display:flex;flex-direction:column;gap:12px;animation:pIn .4s cubic-bezier(.2,.8,.2,1)">
+<section style="border-radius:28px;background:radial-gradient(90% 80% at 50% 25%,#fff 0%,#eef0ff 55%,#dfe5ff 100%);border:1px solid #e4e7ef;padding:22px 18px 18px;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center">
+<span style="font-size:12px;color:#16865a;display:flex;align-items:center;gap:6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16865a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"></path></svg>Поездка завершена</span>
+{{ afterOrbit }}
+<span style="display:flex;flex-direction:column;gap:2px"><span style="font:500 30px/34px 'Unbounded',sans-serif;letter-spacing:-1px;color:#16865a">+{{ earned }}</span><span style="font-size:13px;color:#5a6072">баллов за Mantera · уже на вашей орбите</span></span>
+<button onClick="{{ toDreamNext }}" style="width:100%;height:52px;border:0;border-radius:14px;background:#2f5bff;color:#fff;font-size:15px;font-weight:500">Следующая поездка</button>
+</section>
+<section style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+<sc-for list="{{ afterTiles }}" as="t" hint-placeholder-count="3"><button onClick="{{ t.act }}" style="border:1px solid #e4e7ef;border-radius:20px;background:#fff;padding:14px 6px 12px;display:flex;flex-direction:column;align-items:center;gap:8px;color:#101320"><span style="width:44px;height:44px;border-radius:15px;background:#eef0ff;display:grid;place-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f5bff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="{{ t.icon }}"></path></svg></span><span style="font-size:13px;line-height:17px;font-weight:500;text-align:center">{{ t.l }}</span></button></sc-for>
+</section>
+<section style="background:#fff;border:1px solid #e4e7ef;border-radius:22px;padding:14px 16px;display:flex;flex-direction:column;gap:10px"><span style="display:flex;flex-direction:column"><span style="font-size:15px;font-weight:500">Как вам Mantera?</span><span style="font-size:12px;color:#5a6072">+200 баллов за отзыв</span></span><div style="display:flex;gap:6px"><sc-for list="{{ stars }}" as="s" hint-placeholder-count="5"><button onClick="{{ s.pick }}" style="width:48px;height:48px;border:0;border-radius:14px;background:{{ s.bg }};display:grid;place-items:center;padding:0;transition:background .2s"><svg width="24" height="24" viewBox="0 0 24 24" fill="{{ s.fill }}" stroke="{{ s.stroke }}" stroke-width="1.5" stroke-linejoin="round"><path d="m12 3 2.8 5.7 6.3.9-4.55 4.45 1.07 6.28L12 17.36l-5.62 2.97 1.07-6.28L2.9 9.6l6.3-.9Z"></path></svg></button></sc-for></div></section>
+</main>
+</sc-if>
+
+<sc-if value="{{ vRewards }}" hint-placeholder-val="{{ false }}">
+<main style="padding:14px 16px 0;display:flex;flex-direction:column;gap:12px;animation:pIn .4s cubic-bezier(.2,.8,.2,1)">
+<span style="font:500 24px/30px 'Unbounded',sans-serif;letter-spacing:-.7px;padding:0 4px">Выгоды</span>
+<section style="border-radius:28px;background:linear-gradient(140deg,#2f5bff,#5b48ff);color:#fff;padding:18px;position:relative;overflow:hidden;min-height:200px;box-sizing:border-box;box-shadow:0 24px 48px #2f5bff40">
+<div style="position:absolute;right:-40px;bottom:-40px;width:220px;height:220px"><div style="position:absolute;inset:0;border-radius:50%;border:2px solid #ffffff38"></div><div style="position:absolute;inset:34px;border-radius:50%;border:2px solid #ffffff70"></div><div style="position:absolute;inset:68px;border-radius:50%;border:2px solid #ffffff26"></div><div style="position:absolute;left:139px;top:35.2px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px #4f52ff"></div></div>
+<span style="position:relative;display:flex;flex-direction:column;gap:2px"><span style="font-size:12px;color:#dfe6ff">Уровень</span><span style="font:500 24px/30px 'Unbounded',sans-serif;letter-spacing:-.6px">{{ levelName }}</span></span>
+<span style="position:relative;display:flex;flex-direction:column;gap:2px;margin-top:28px"><span style="font-size:12px;color:#dfe6ff">Баллы</span><span style="font:500 34px/38px 'Unbounded',sans-serif;letter-spacing:-1.2px">{{ pointsFmt }}</span><span style="font-size:12px;color:#dfe6ff">1 балл = 1 ₽</span></span>
+</section>
+<section style="background:#fff;border:1px solid #e4e7ef;border-radius:22px;padding:14px 16px;display:flex;flex-direction:column;gap:10px"><span style="display:flex;justify-content:space-between;font-size:14px;font-weight:500"><span>До Высокой орбиты</span><span style="color:#5a6072;font-weight:400">{{ nightsLeft }}</span></span><span style="height:8px;border-radius:4px;background:#eef0ff;position:relative;overflow:hidden"><span style="position:absolute;left:0;top:0;bottom:0;width:{{ levelPct }};border-radius:4px;background:#2f5bff;transition:width .7s cubic-bezier(.65,0,.35,1)"></span></span></section>
+<section style="background:#fff;border:1px solid #e4e7ef;border-radius:22px;display:flex;flex-direction:column">
+<sc-for list="{{ perks }}" as="r" hint-placeholder-count="3"><div style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;align-items:center;padding:12px 16px;border-bottom:1px solid {{ r.line }}"><span style="width:44px;height:44px;border-radius:15px;background:#eef0ff;display:grid;place-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2f5bff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="{{ r.icon }}"></path></svg></span><span style="display:flex;flex-direction:column"><span style="font-size:15px;line-height:21px;font-weight:500">{{ r.t }}</span><span style="font-size:12px;line-height:17px;color:#5a6072">{{ r.s }}</span></span></div></sc-for>
+</section>
+</main>
+</sc-if>
+
+<sc-if value="{{ vChats }}" hint-placeholder-val="{{ false }}">
+<main style="padding:14px 16px 0;display:flex;flex-direction:column;gap:12px;animation:pIn .4s cubic-bezier(.2,.8,.2,1)">
+<span style="font:500 24px/30px 'Unbounded',sans-serif;letter-spacing:-.7px;padding:0 4px">Чат с отелем</span>
+<div style="display:flex;flex-direction:column;gap:8px">
+<sc-for list="{{ msgs }}" as="m" hint-placeholder-count="3"><div style="max-width:78%;align-self:{{ m.side }};padding:10px 14px;border-radius:18px;background:{{ m.bg }};color:{{ m.fg }};font-size:14px;line-height:20px;box-shadow:{{ m.sh }};animation:pIn .3s cubic-bezier(.2,.8,.2,1)">{{ m.t }}</div></sc-for>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px"><sc-for list="{{ quick }}" as="q" hint-placeholder-count="3"><button onClick="{{ q.send }}" style="height:36px;padding:0 14px;border-radius:18px;border:1px solid #c9d2ff;background:#fff;color:#2f5bff;font-size:13px;font-weight:500">{{ q.t }}</button></sc-for></div>
+</main>
+</sc-if>
+
+</div>
+
+<sc-if value="{{ showTabs }}" hint-placeholder-val="{{ true }}">
+<nav style="position:absolute;left:14px;right:14px;bottom:18px;height:64px;padding:4px;box-sizing:border-box;border-radius:32px;background:#ffffffc4;border:1px solid #fff;backdrop-filter:blur(30px) saturate(1.8);box-shadow:0 8px 24px #1013201f;display:grid;grid-template-columns:repeat(4,1fr);z-index:5">
+<sc-for list="{{ tabs }}" as="t" hint-placeholder-count="4"><button onClick="{{ t.pick }}" style="border:0;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:{{ t.fg }};font-size:11px;font-weight:500;line-height:13px;position:relative;padding-top:8px;transition:color .24s"><span style="position:absolute;top:3px;width:5px;height:5px;border-radius:50%;background:#2f5bff;opacity:{{ t.dot }};transform:scale({{ t.dot }});transition:all .38s cubic-bezier(.34,1.56,.64,1)"></span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="{{ t.icon }}"></path></svg>{{ t.l }}</button></sc-for>
+</nav>
+</sc-if>
+</sc-if>
+
+<sc-if value="{{ sheetOn }}" hint-placeholder-val="{{ false }}">
+<div onClick="{{ closeSheet }}" style="position:absolute;inset:0;background:#10132059;z-index:10;animation:pFade .25s"></div>
+<div style="position:absolute;left:0;right:0;bottom:0;z-index:11;background:#fff;border-radius:30px 30px 0 0;padding:10px 20px 30px;display:flex;flex-direction:column;gap:14px;animation:pSheet .4s cubic-bezier(.2,.8,.2,1)">
+<div style="width:36px;height:5px;border-radius:3px;background:#d9dde8;margin:0 auto"></div>
+<sc-if value="{{ sheetSuccess }}" hint-placeholder-val="{{ false }}"><div style="align-self:center;width:72px;height:72px;border-radius:50%;background:#bff0de;display:grid;place-items:center;animation:pPop .4s cubic-bezier(.34,1.56,.64,1)"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#16865a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"></path></svg></div></sc-if>
+<span style="font:500 22px/28px 'Unbounded',sans-serif;letter-spacing:-.6px">{{ sheet.title }}</span>
+<span style="font-size:14px;line-height:21px;color:#5a6072">{{ sheet.text }}</span>
+<sc-for list="{{ sheet.rows }}" as="r" hint-placeholder-count="0"><div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #eef0f4;font-size:14px"><span style="color:#5a6072">{{ r.k }}</span><span style="font-weight:500">{{ r.v }}</span></div></sc-for>
+<button onClick="{{ sheetAct }}" style="height:52px;border:0;border-radius:14px;background:#2f5bff;color:#fff;font-size:15px;font-weight:500">{{ sheet.cta }}</button>
+</div>
+</sc-if>
+
+<sc-if value="{{ toast }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;left:16px;right:16px;bottom:96px;z-index:12;background:#101320;color:#fff;border-radius:14px;padding:12px 16px;font-size:13px;line-height:18px;display:flex;align-items:center;gap:10px;animation:pIn .3s cubic-bezier(.2,.8,.2,1)"><span style="width:8px;height:8px;border-radius:50%;background:#bff0de;flex:none"></span>{{ toast }}</div></sc-if>
+</div>
+
+<span style="font-size:12px;color:#5a6072;text-align:center;max-width:420px">Нажимайте на экран: вход → стиль → подбор → бронь → заезд → ключ → услуги → выезд → баллы. Переключатель сверху — сразу к нужному этапу.</span>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { scr: 'splash', step: 'phone', phone: '', code: 0, chips: ['Тишина', 'У моря'], stage: 'stay', view: 'home', tab: 0, hotel: 0, reg: false, early: false, door: 'idle', dnd: false, bf: false, late: false, sheet: null, toast: '', svcSeg: 0, added: [], stars: 0, points: 4860, earned: 0, msgs: [{ me: false, t: 'Татьяна, добро пожаловать! Номер 412 готов. Чем можем помочь?' }], paid: true, splashRun: 1 };
+  componentDidMount() { this.splashT = setTimeout(() => this.state.scr === 'splash' && this.setState({ scr: 'login' }), 2600); }
+  componentWillUnmount() { [this.splashT, this.tt, this.d1, this.d2, ...(this.ct || [])].forEach(clearTimeout); }
+  say(t) { clearTimeout(this.tt); this.setState({ toast: t }); this.tt = setTimeout(() => this.setState({ toast: '' }), 2600); }
+  loader(S, st, c1, c2) {
+    const E = React.createElement, d = st * 2;
+    return E('span', { style: { position: 'relative', width: S, height: S, flex: 'none', display: 'inline-block', animation: 'pSpin .9s linear infinite' } },
+      E('span', { style: { position: 'absolute', inset: 0, borderRadius: '50%', border: st + 'px solid ' + c1, boxSizing: 'border-box' } }),
+      E('span', { style: { position: 'absolute', left: S / 2 - d / 2, top: st / 2 - d / 2, width: d, height: d, borderRadius: '50%', background: c2 } }));
+  }
+  splashMark() {
+    const E = React.createElement, C = '#2f5bff', BG = '#eef0ff', Dur = '2s';
+    const A = (n, ez) => n + ' ' + Dur + ' ' + (ez || 'cubic-bezier(.65,0,.35,1)') + ' both';
+    const D = 80, st = 15, dot = 26.7, cx = 116, cy = 100;
+    return E('div', { key: 'sm' + this.state.splashRun, style: { position: 'relative', width: 302, height: 200, flex: 'none' } },
+      E('div', { style: { position: 'absolute', inset: 0, animation: A('kSlide') } },
+        E('div', { style: { position: 'absolute', inset: 0, transformOrigin: cx + 'px ' + cy + 'px', animation: 'kIn .35s cubic-bezier(.2,.8,.2,1) both' } },
+          E('div', { style: { position: 'absolute', left: cx - D / 2, top: cy - D / 2, width: D, height: D, borderRadius: '50%', border: st + 'px solid ' + C, boxSizing: 'border-box' } }),
+          E('div', { style: { position: 'absolute', left: cx + D / 2 - 4, top: cy - 6, width: 74, height: 12, borderRadius: 6, background: C, transformOrigin: '0 50%', animation: A('kShaft') } }),
+          E('div', { style: { position: 'absolute', left: cx + D / 2 + 40, top: cy + 2, width: 10, height: 17, borderRadius: 3, background: C, animation: A('kTeeth', 'linear') } }),
+          E('div', { style: { position: 'absolute', left: cx + D / 2 + 56, top: cy + 2, width: 10, height: 12, borderRadius: 3, background: C, animation: A('kTeeth', 'linear') } }),
+          E('div', { style: { position: 'absolute', left: cx - D / 2, top: cy - D / 2, width: D, height: D, transform: 'rotate(90deg)' } },
+            E('div', { style: { position: 'absolute', inset: 0, animation: A('kOrbit') } },
+              E('div', { style: { position: 'absolute', left: D / 2 - dot / 2, top: st / 2 - dot / 2, width: dot, height: dot, borderRadius: '50%', background: C, boxShadow: '0 0 0 4.8px ' + BG, animation: A('kDotGrow') } }))))),
+      E('div', { style: { position: 'absolute', left: 116, top: cy - 21, font: "500 36px/42px 'Unbounded',sans-serif", letterSpacing: -1.8, color: '#101320', whiteSpace: 'nowrap', animation: A('kWord', 'cubic-bezier(.2,.8,.2,1)') } }, 'ключи'));
+  }
+  afterOrbit() {
+    const E = React.createElement;
+    return E('div', { key: 'ao' + this.state.earned, style: { position: 'relative', width: 150, height: 150 } },
+      ...[150, 110, 70].map((s, i) => E('div', { key: i, style: { position: 'absolute', left: (150 - s) / 2, top: (150 - s) / 2, width: s, height: s, borderRadius: '50%', border: i === 1 ? '11px solid #2f5bff' : '1.5px solid #2f5bff40', boxSizing: 'border-box' } })),
+      E('div', { style: { position: 'absolute', inset: 0, animation: 'pSplash 1.4s cubic-bezier(.65,0,.35,1) both' } },
+        E('div', { style: { position: 'absolute', left: 64, top: -11, width: 22, height: 22, borderRadius: '50%', background: '#b9b2ff', boxShadow: '0 0 0 4px #fff' } })));
+  }
+  renderVals() {
+    const s = this.state, set = (p, cb) => this.setState(p, cb), E = React.createElement;
+    const P = { key: 'M8 3.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Zm3.3 7.8 8.2 8.2m-2.7-2.7 2.7-2.7m-5.5 0 2.6-2.6', clean: 'M3 17h18M5 17v-2a7 7 0 0 1 14 0v2M12 5v3M10 5h4M5 21h14', wifi: 'M3 8a14 14 0 0 1 18 0M6 12a9 9 0 0 1 12 0m-9 4a4.5 4.5 0 0 1 6 0', coffee: 'M5 8h12v7a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5V8Zm12 1h2a3 3 0 0 1 0 6h-2', clock: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 4v5l3 2', clockE: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 4v5l-3 2', deposit: 'M6 5h12a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3Zm-3 4h15m3 3h-6v5h6', problem: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 4v6m0 4h.01', trips: 'M8 7h8a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-8a3 3 0 0 1 3-3Zm1 0V4h6v3M9 11v6m6-6v6', search: 'M10.5 4a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Zm5.5 12 4.5 4.5', chat: 'M20 11.5a8 8 0 0 1-8 8H5l-3 2 1.5-5A8 8 0 1 1 20 11.5Z', gift: 'M6 10h12a2 2 0 0 1 2 2v9H4v-9a2 2 0 0 1 2-2Zm6-3v14M3 7h18v4H3z', doc: 'M14 3H5v18h14V8l-5-5Zm0 0v5h5M8 13h8m-8 4h5', chatH: 'M21 11a8 8 0 0 1-8 8H7l-4 3V5a2 2 0 0 1 2-2h8a8 8 0 0 1 8 8ZM7 8h10M7 12h7', pin: 'M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 14 0Zm-7-2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z', towel: 'M5 4h11a3 3 0 0 1 3 3v13H5V4Zm0 0a3 3 0 0 0-3 3v2h3m0 7h14', food: 'M7 3v6a2 2 0 0 0 4 0V3M9 3v18M17 21V3c-2.2 1.2-3 4-3 7v4h3', spa: 'M12 20c-4 0-8-3-8-8 4 0 8 3 8 8Zm0 0c4 0 8-3 8-8-4 0-8 3-8 8Zm0 0V9', car: 'M5 16V11l2-5h10l2 5v5M3 16h18v3H3zM7 19v2m10-2v2', star: 'm12 3 2.8 5.7 6.3.9-4.55 4.45 1.07 6.28L12 17.36l-5.62 2.97 1.07-6.28L2.9 9.6l6.3-.9Z', bed: 'M3 18V7m0 4h18v7M3 15h18M7 11V9h5v2', orbit: 'M12 4.5a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15Z', invite: 'M9 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8ZM2 21a7 7 0 0 1 14 0M19 8v6M16 11h6', bill: 'M6 3h12v18l-3-2-3 2-3-2-3 2V3Zm3 5h6M9 12h6' };
+    const st = s.stage, v = s.view, app = s.scr === 'app';
+    const goStage = stg => set({ scr: 'app', stage: stg, view: 'home', tab: 0, sheet: null, door: 'idle' });
+    const fmt = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    const hotels = [
+      { name: 'Mantera Resort & Congress', meta: 'Сочи · первая линия · 4,8', match: '96%', deg: '346deg', price: '14 200 ₽', total: '99 400 ₽', points: 2980, img: '../assets/next-trip.jpg', badge: 'Лучшая цена', badgeBg: '#bff0de', badgeFg: '#16865a', why: ['Тихий этаж, вдали от лифта', 'Свой пляж в 2 минутах', 'Поздний завтрак до 12:00'] },
+      { name: 'Сосновый бор', meta: 'Сочи · в парке · 4,7', match: '91%', deg: '328deg', price: '12 800 ₽', total: '89 600 ₽', points: 2690, img: '../assets/maidens-premium-king.jpg', badge: 'SPA', badgeBg: '#eef0ff', badgeFg: '#2f5bff', why: ['Сосновый парк и тишина', 'SPA с бассейном', 'Номера с террасой'] },
+      { name: 'Маяк', meta: 'Сочи · дизайн-отель · 4,9', match: '88%', deg: '317deg', price: '16 900 ₽', total: '118 300 ₽', points: 3550, img: '../assets/maidens-hotel.jpg', badge: 'Новый', badgeBg: '#eef0ff', badgeFg: '#2f5bff', why: ['Интерьеры местных дизайнеров', 'Вид на море из каждого номера', 'Крыша с баром'] }];
+    const hotel = hotels[s.hotel];
+    const angles = { dream: 270, going: 0, stay: 90, checkout: 180, after: 225 };
+    // views
+    const vName = app ? (v === 'home' ? { dream: 'Мечтаю', going: 'Еду', stay: 'Живу', checkout: 'Уезжаю', after: 'До встречи' }[st] : v) : s.scr;
+    const door = s.door;
+    const svg = (d, c, w, anim) => E('svg', { width: 22, height: 22, viewBox: '0 0 24 24', fill: 'none', stroke: c, strokeWidth: w, strokeLinecap: 'round', strokeLinejoin: 'round', style: anim ? { animation: 'pPop .38s cubic-bezier(.34,1.56,.64,1)' } : null }, E('path', { d }));
+    const sheets = {
+      book: { title: 'Подтвердите бронь', text: hotel.name + ' · 12–19 сентября · 2 гостя', rows: [{ k: 'Номер', v: 'Премиум у моря' }, { k: '7 ночей', v: hotel.total }, { k: 'Баллы за поездку', v: '+' + fmt(hotel.points) }], cta: 'Оплатить ' + hotel.total, act: () => set({ sheet: 'booked' }) },
+      booked: { title: 'Бронь подтверждена', text: 'Ключ появится в приложении в день заезда. Регистрацию можно пройти заранее.', rows: [], cta: 'К поездке', act: () => goStage('going') },
+      early: { title: 'Ранний заезд', text: 'С 10:00 вместо 14:00. Отель подтвердит в течение часа.', rows: [{ k: 'Стоимость', v: '2 500 ₽' }], cta: s.early ? 'Отменить запрос' : 'Запросить', act: () => { set({ sheet: null, early: !s.early }); this.say(s.early ? 'Запрос отменён' : 'Запрос раннего заезда отправлен'); } },
+      wifi: { title: 'Wi‑Fi', text: 'Сеть подключится автоматически, если разрешить профиль.', rows: [{ k: 'Сеть', v: 'Beregovoy_Guest' }, { k: 'Пароль', v: 'Room412sea' }], cta: 'Подключиться', act: () => { set({ sheet: null }); this.say('Wi‑Fi подключён'); } },
+      late: { title: 'Поздний выезд', text: 'До 15:00 вместо 12:00.', rows: [{ k: 'Стоимость', v: s.points > 0 ? 'Бесплатно · Дальняя орбита' : '3 000 ₽' }], cta: s.late ? 'Отменить' : 'Продлить до 15:00', act: () => { set({ sheet: null, late: !s.late }); this.say(s.late ? 'Поздний выезд отменён' : 'Выезд продлён до 15:00'); } },
+      bill: { title: 'Счёт', text: 'Дополнительные услуги за проживание.', rows: [{ k: 'Завтраки', v: s.bf ? '4 760 ₽' : '0 ₽' }, { k: 'Мини-бар', v: '890 ₽' }, { k: 'Списать баллами', v: '−890 ₽' }, { k: 'Итого', v: s.bf ? '4 760 ₽' : '0 ₽' }], cta: 'Понятно', act: () => set({ sheet: null }) }
+    };
+    const sh = s.sheet ? sheets[s.sheet] : null;
+    const tabsDef = [['Поездки', P.trips], ['Найти', P.search], ['Чаты', P.chat], ['Выгоды', P.gift]];
+    const pickTab = i => set({ tab: i, view: ['home', 'results', 'chats', 'rewards'][i], sheet: null });
+    const nights = st === 'checkout' ? 7 : 2;
+    const svcAll = [
+      [{ t: 'Завтрак в номер', s: '35–45 минут · от 1 200 ₽', icon: P.food }, { t: 'Ужин в ресторане', s: 'Стол у окна · 19:00–23:00', icon: P.food }, { t: 'Кофе на террасу', s: '10 минут · 350 ₽', icon: P.coffee }],
+      [{ t: 'Уборка', s: 'Выберите удобное время', icon: P.clean }, { t: 'Полотенца и бельё', s: 'Бесплатно', icon: P.towel }, { t: 'Подушка на выбор', s: 'Пух, латекс, гречиха', icon: P.bed }],
+      [{ t: 'SPA и бассейн', s: 'Массаж 60 мин · 5 400 ₽', icon: P.spa }, { t: 'Трансфер в аэропорт', s: '35 минут · 2 900 ₽', icon: P.car }, { t: 'Экскурсия по побережью', s: '3 часа · 3 500 ₽', icon: P.pin }]];
+    const lvlName = s.points >= 12000 ? 'Высокая орбита' : 'Дальняя орбита';
+    return {
+      screenName: vName, sbarC: '#101320',
+      stages: [['dream', 'Мечтаю'], ['going', 'Еду'], ['stay', 'Живу'], ['checkout', 'Уезжаю'], ['after', 'До встречи']].map(([k, l]) => ({ label: l, bg: app && st === k && v === 'home' ? '#2f5bff' : 'transparent', fg: app && st === k && v === 'home' ? '#fff' : '#101320', pick: () => goStage(k) })),
+      restart: () => { clearTimeout(this.splashT); set({ scr: 'splash', step: 'phone', phone: '', code: 0, splashRun: s.splashRun + 1, stage: 'dream', view: 'home', tab: 0, sheet: null }); this.splashT = setTimeout(() => this.state.scr === 'splash' && set({ scr: 'login' }), 2600); },
+      isSplash: s.scr === 'splash', splashMark: this.splashMark(), toLogin: () => set({ scr: 'login' }),
+      isLogin: s.scr === 'login', isPhoneStep: s.step === 'phone', isCodeStep: s.step === 'code',
+      fillPhone: () => set({ phone: '912 345-67-89' }), phoneText: s.phone || 'Нажмите, чтобы ввести', phoneC: s.phone ? '#101320' : '#8a90a2', phoneLine: s.phone ? '#2f5bff' : '#e4e7ef',
+      sendBg: s.phone ? '#2f5bff' : '#c9d2ff', sendCode: () => s.phone && set({ step: 'code', code: 0 }),
+      typeCode: () => { if (s.code) return; this.ct = [1, 2, 3, 4, 5, 6].map(n => setTimeout(() => set({ code: n }), 200 * n)); this.ct.push(setTimeout(() => set({ code: 7 }), 2100), setTimeout(() => set({ scr: 'style' }), 2700)); },
+      cells: [0, 1, 2, 3, 4, 5].map(i => { const c = s.code, val = i < c ? '482193'[i] : '', chk = c === 6, ok = c === 7, act = c < 6 && i === c; return { v: val, bg: ok ? '#bff0de' : chk ? '#eef0ff' : '#fff', line: ok ? '#16865a' : (chk || act) ? '#2f5bff' : val ? '#c9d2ff' : '#e4e7ef', fg: ok ? '#16865a' : '#101320' }; }),
+      codeNote: s.code === 0 ? 'Нажмите на ячейки, чтобы ввести код' : s.code < 6 ? 'Вводим…' : s.code === 6 ? 'Проверяем код' : 'Готово', codeNoteC: s.code === 7 ? '#16865a' : '#5a6072', codeSpin: s.code === 6 ? this.loader(18, 3, '#c9d2ff', '#2f5bff') : null,
+      isStyle: s.scr === 'style',
+      styleChips: ['Тишина', 'У моря', 'Дизайн', 'Город', 'SPA', 'С детьми', 'Гастро', 'Природа'].map(l => { const on = s.chips.includes(l); return { label: l, bg: on ? '#2f5bff' : '#ffffffc4', fg: on ? '#fff' : '#101320', line: on ? '#2f5bff' : '#e4e7ef', toggle: () => set({ chips: on ? s.chips.filter(x => x !== l) : [...s.chips, l] }) }; }),
+      styleSats: s.chips.slice(0, 6).map((c, i) => { const a = (i * 60 + 200) * Math.PI / 180; return { x: (75 + 75 * Math.cos(a) - 6).toFixed(0) + 'px', y: (75 + 75 * Math.sin(a) - 6).toFixed(0) + 'px' }; }),
+      styleCta: s.chips.length ? 'Продолжить · ' + s.chips.length : 'Пропустить', finishStyle: () => goStage('dream'),
+      isApp: app, showHeader: v === 'home' || v === 'chats' || v === 'rewards', isBackBar: v === 'hotel' || v === 'services' || (v === 'results' && s.tab === 0),
+      backTitle: { hotel: 'Отель', services: 'Mantera Resort & Congress · 412', results: 'Подбор' }[v] || '', goBack: () => set({ view: v === 'hotel' ? 'results' : 'home', tab: v === 'hotel' ? s.tab : 0 }),
+      markDeg: angles[st] + 'deg',
+      vDream: v === 'home' && st === 'dream', vResults: v === 'results', vHotel: v === 'hotel', vGoing: v === 'home' && st === 'going', vStay: v === 'home' && (st === 'stay' || st === 'checkout'), vServices: v === 'services', vAfter: v === 'home' && st === 'after', vRewards: v === 'rewards', vChats: v === 'chats',
+      styleSummary: s.chips.length ? s.chips.slice(0, 3).join(' · ') : 'Расскажите, что вам нравится', styleTags: s.chips.length ? s.chips : ['Все отели'],
+      pointsLabel: fmt(s.points) + ' баллов', levelLabel: lvlName + ' · 1 балл = 1 ₽', toRewards: () => pickTab(3), toResults: () => set({ view: 'results' }),
+      hotels: hotels.map((h, i) => ({ ...h, open: () => set({ view: 'hotel', hotel: i }) })), hotel, openBook: () => set({ sheet: 'book' }),
+      paidLabel: 'Оплачено · ' + hotel.total,
+      toggleReg: () => { set({ reg: !s.reg }); if (!s.reg) this.say('Регистрация пройдена. Ключ придёт в 14:00'); },
+      regBg: s.reg ? '#bff0de' : '#eef0ff', regFg: s.reg ? '#101320' : '#2f5bff', regSub: s.reg ? 'Пройдена' : '2 минуты', regSubC: s.reg ? '#16865a' : '#5a6072',
+      sayRoute: () => this.say('Маршрут построен: 24 минуты на такси'),
+      goingRows: [
+        { t: 'Ранний заезд', s: s.early ? 'Запрошен с 10:00' : 'С 10:00 · 2 500 ₽', tag: s.early ? 'Запрошен' : 'Добавить +', fg: s.early ? '#16865a' : '#2f5bff', bg: s.early ? '#bff0de' : '#eef0ff', icon: P.clockE, act: () => set({ sheet: 'early' }), line: '#eef0f4' },
+        { t: 'Бронь и документы', s: 'Подтверждение, чек, правила', tag: 'PDF', fg: '#5a6072', bg: '#f4f5fb', icon: P.doc, act: () => this.say('Подтверждение брони открыто'), line: '#eef0f4' },
+        { t: 'Чат с отелем', s: 'Ответят за 3 минуты', tag: 'Онлайн', fg: '#16865a', bg: '#bff0de', icon: P.chatH, act: () => pickTab(2), line: 'transparent' }],
+      arrive: () => { goStage('stay'); this.say('Ключ от номера 412 готов'); },
+      liveLabel: st === 'checkout' ? 'Последний день' : 'Проживание', liveDot: st === 'checkout' ? '#ffd27a' : '#bff0de',
+      dndBg: s.dnd ? '#101320' : '#ffffff26', dndLabel: s.dnd ? 'Не беспокоить · вкл' : 'Не беспокоить', openDnd: () => { set({ dnd: !s.dnd }); this.say(s.dnd ? 'Статус снят — уборка возможна' : 'Включено «Не беспокоить»'); },
+      nightDeg: Math.round(nights / 7 * 360) + 'deg', ringTop: st === 'checkout' ? 'Сегодня' : 'Ночь', ringMain: st === 'checkout' ? 'Выезд' : nights, ringSub: st === 'checkout' ? '19 сен' : 'из 7', ringSize: st === 'checkout' ? '18px' : '28px',
+      isCheckoutDay: st === 'checkout', isStayOnly: st === 'stay',
+      doorIcon: door === 'busy' ? this.loader(22, 3.5, '#c9d2ff', '#2f5bff') : door === 'open' ? svg('m5 12 5 5 9-10', '#16865a', 2, true) : svg(P.key, '#2f5bff', 1.5),
+      doorLabel: { idle: 'Открыть дверь', busy: 'Открываем…', open: 'Дверь открыта' }[door], doorBg: door === 'open' ? '#bff0de' : '#fff', doorFg: door === 'open' ? '#16865a' : '#2f5bff',
+      openDoor: () => { if (door !== 'idle') return; set({ door: 'busy' }); this.d1 = setTimeout(() => set({ door: 'open' }), 1200); this.d2 = setTimeout(() => set({ door: 'idle' }), 4200); },
+      stayTiles: [{ l: 'Все услуги', icon: P.clean, act: () => set({ view: 'services' }) }, { l: 'Wi‑Fi', icon: P.wifi, act: () => set({ sheet: 'wifi' }) }, { l: 'Есть проблема', icon: P.problem, act: () => pickTab(2) }],
+      stayRows: st === 'checkout' ? [
+        { t: 'Поздний выезд', s: s.late ? 'Продлён до 15:00' : 'До 15:00 · бесплатно для вас', tag: s.late ? 'Продлён' : 'Продлить', fg: s.late ? '#16865a' : '#2f5bff', bg: s.late ? '#bff0de' : '#eef0ff', icon: P.clock, act: () => set({ sheet: 'late' }), line: '#eef0f4' },
+        { t: 'Счёт', s: 'Доп. услуги за проживание', tag: s.bf ? '4 760 ₽' : '0 ₽', fg: '#101320', bg: '#f4f5fb', icon: P.bill, act: () => set({ sheet: 'bill' }), line: '#eef0f4' },
+        { t: 'Всё с собой?', s: 'Шкаф, сейф, ванная, зарядки', tag: 'Чек-лист', fg: '#5a6072', bg: '#f4f5fb', icon: P.towel, act: () => this.say('Чек-лист открыт'), line: 'transparent' }] : [
+        { t: 'Завтрак', s: s.bf ? 'Добавлен · LEA, 07:00–12:00' : 'Шведский стол · 680 ₽ / сутки', tag: s.bf ? 'Добавлен' : 'Добавить', fg: s.bf ? '#16865a' : '#2f5bff', bg: s.bf ? '#bff0de' : '#eef0ff', icon: P.coffee, act: () => { set({ bf: !s.bf }); this.say(s.bf ? 'Завтрак убран' : 'Завтрак добавлен на все дни'); }, line: '#eef0f4' },
+        { t: 'Депозит', s: 'На вашем счёте', tag: '9 520 ₽', fg: '#101320', bg: '#f4f5fb', icon: P.deposit, act: () => set({ sheet: 'bill' }), line: 'transparent' }],
+      checkout: () => { const e = hotel.points; set({ stage: 'after', view: 'home', earned: e, points: s.points + e }); },
+      svcSegs: ['Еда', 'Номер', 'Отдых'].map((l, i) => ({ l, bg: i === s.svcSeg ? '#fff' : 'transparent', sh: i === s.svcSeg ? '0 2px 6px #10132014' : 'none', pick: () => set({ svcSeg: i }) })),
+      services: svcAll[s.svcSeg].map((r, i, a) => { const on = s.added.includes(r.t); return { ...r, line: i === a.length - 1 ? 'transparent' : '#eef0f4', cta: on ? 'Заказано' : 'Заказать', bg: on ? '#bff0de' : '#eef0ff', fg: on ? '#16865a' : '#2f5bff', add: () => { if (on) return; set({ added: [...s.added, r.t] }); this.say(r.t + ' — заказано'); } }; }),
+      afterOrbit: this.afterOrbit(), earned: fmt(s.earned || hotel.points),
+      toDreamNext: () => goStage('dream'),
+      afterTiles: [{ l: 'Документы поездки', icon: P.doc, act: () => this.say('Закрывающие документы отправлены на почту') }, { l: 'Пригласить друга', icon: P.invite, act: () => this.say('Ссылка скопирована · +500 баллов за друга') }, { l: 'Выгоды', icon: P.gift, act: () => pickTab(3) }],
+      stars: [1, 2, 3, 4, 5].map(n => ({ bg: n <= s.stars ? '#eef0ff' : '#f4f5fb', fill: n <= s.stars ? '#2f5bff' : 'none', stroke: n <= s.stars ? '#2f5bff' : '#c3c8d2', pick: () => { const first = !s.stars; set({ stars: n, points: s.points + (first ? 200 : 0) }); if (first) this.say('Спасибо! +200 баллов'); } })),
+      levelName: lvlName, pointsFmt: fmt(s.points), levelPct: Math.min(100, Math.round(9 / 20 * 100)) + '%', nightsLeft: '9 из 20 ночей',
+      perks: [{ t: '5% баллами', s: 'С каждой поездки и услуги', icon: P.orbit, line: '#eef0f4' }, { t: 'Ранний заезд и поздний выезд', s: 'Бесплатно, если есть возможность', icon: P.clock, line: '#eef0f4' }, { t: '−15% на завтраки', s: 'Во всех отелях «Ключей»', icon: P.coffee, line: 'transparent' }],
+      msgs: s.msgs.map(m => ({ t: m.t, side: m.me ? 'flex-end' : 'flex-start', bg: m.me ? '#2f5bff' : '#fff', fg: m.me ? '#fff' : '#101320', sh: m.me ? 'none' : 'inset 0 0 0 1px #e4e7ef' })),
+      quick: ['Нужны полотенца', 'Не работает кондиционер', 'Где парковка?'].map(t => ({ t, send: () => { set({ msgs: [...s.msgs, { me: true, t }] }); setTimeout(() => this.setState(p => ({ msgs: [...p.msgs, { me: false, t: t === 'Где парковка?' ? 'Подземная парковка, въезд с ул. Морской. Для вас бесплатно.' : 'Принято! Сотрудник будет у вас через 10 минут.' }] })), 900); } })),
+      showTabs: v !== 'hotel' && v !== 'services',
+      tabs: tabsDef.map(([l, icon], i) => ({ l, icon, fg: i === s.tab ? '#2f5bff' : '#101320', dot: i === s.tab ? 1 : 0, pick: () => pickTab(i) })),
+      sheetOn: !!sh, sheet: sh || { title: '', text: '', rows: [], cta: '' }, sheetSuccess: s.sheet === 'booked', closeSheet: () => set({ sheet: null }), sheetAct: () => sh && sh.act(),
+      toast: s.toast
+    };
+  }
+}
+</script>
+</body>
+</html>

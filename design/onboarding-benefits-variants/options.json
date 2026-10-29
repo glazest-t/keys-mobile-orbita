@@ -1,0 +1,26 @@
+{
+  "status": "implemented",
+  "screen": "Второй шаг онбординга",
+  "brief": "Баллы Ключей копятся и тратятся на любые брони; существующая программа отеля даёт свои скидки, баллы и привилегии. Кошельки раздельные.",
+  "displayOrder": [
+    {
+      "option": 1,
+      "concept": "Две карты — одна выгода",
+      "image": "/Users/tatyana.glazyrina/.codex/generated_images/01a15f51-a729-7521-8664-1d3c42c39e78/exec-85fa86cd-c4a0-475d-91a9-e2be368d893c.png"
+    },
+    {
+      "option": 2,
+      "concept": "Два источника выгоды",
+      "image": "/Users/tatyana.glazyrina/.codex/generated_images/01a15f51-a729-7521-8664-1d3c42c39e78/exec-248f1234-478b-4774-b7d7-3de083893fd1.png",
+      "refinement": "При выборе заменить авиабилет в иллюстрации на подтверждение отеля: авиабилетов в приложении нет."
+    },
+    {
+      "option": 3,
+      "concept": "Выгода на общей орбите",
+      "image": "/Users/tatyana.glazyrina/.codex/generated_images/01a15f51-a729-7521-8664-1d3c42c39e78/exec-fb0da464-97c5-4341-a5ae-cafb75a554ff.png"
+    }
+  ],
+  "selectedOption": 1,
+  "component": "app/src/onboarding/BenefitsIntro.tsx",
+  "qa": "qa/REPORT.md"
+}

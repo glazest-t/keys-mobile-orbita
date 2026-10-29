@@ -1,0 +1,18 @@
+.booking-wishes-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 2px;text-align:left;border:0;background:transparent;color:#2f5bff}
+.booking-wishes-row>span{display:flex;flex-direction:column;min-width:0;gap:3px}
+.booking-wishes-row strong{font:500 15px/21px Onest;color:#101320}
+.booking-wishes-row small{font:400 12px/18px Onest;color:#5a6072;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.guest-editor{display:flex;flex-direction:column;gap:16px}
+.guest-editor .room-detail-caption{margin:0}
+.stay-wish-options{display:flex;flex-direction:column}
+.stay-wish-options>button{min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border:0;background:none;color:#101320;text-align:left;font:400 15px/21px Onest}
+.booking-saved-wishes small,.guest-editor .k-field>small{font:400 12px/18px Onest;color:#5a6072}
+.wish-check{flex:none;width:22px;height:22px;border:1px solid #cbd0dc;border-radius:7px;display:grid;place-items:center}
+[aria-pressed=true]>.wish-check{background:#2f5bff;color:white;border-color:#2f5bff}
+.stay-wish-note{width:100%;min-height:112px;resize:none;border:1px solid #e4e7ef;border-radius:14px;background:#f4f5fb;color:#101320;padding:12px 14px;font:400 15px/22px Onest;outline:none}
+.stay-wish-note:focus{border-color:#a3a8b3}
+.guest-editor .k-field>small{text-align:right}
+.booking-saved-wishes p{white-space:pre-wrap;overflow-wrap:anywhere}
+.sheet-body .booking-traveler-list>.k-row{font-family:var(--k-font-text);border:0;border-radius:0}
+.sheet-body .booking-traveler-list>.k-row:first-child{border-top-left-radius:21px;border-top-right-radius:21px}
+.sheet-body .booking-traveler-list>.k-row:last-child{border-bottom-left-radius:21px;border-bottom-right-radius:21px}

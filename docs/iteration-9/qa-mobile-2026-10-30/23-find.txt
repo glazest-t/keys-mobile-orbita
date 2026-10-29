@@ -1,0 +1,49 @@
+Browser tab: 73, Title: "Ключи — мобильный прототип", URL: "http://127.0.0.1:5173/#find".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 201, 203-218
+~0 AXWebArea Ключи — мобильный прототип, URL: 127.0.0.1:5173/#find
+~					6 text 1:22
+~						197 image Ключи
+~						198 button Избранное
+~						199 button Уведомления
+~						200 button Профиль
++						201 heading Куда поедем?, Value: 1
++							202 text Куда поедем?
++						203 container
++							204 text Лучшие цены напрямую от отелей
++							205 button Куда Сочи
++								206 text Куда
++								207 text Сочи
++							208 button Даты 13–15 нояб
++								209 text Даты
++								210 text 13–15 нояб
++							211 button Гости 1 взрослый
++								212 text Гости
++								213 text 1 взрослый
++							214 button Найти отель
++						215 button Подбор по свайпу
++							216 container
++								217 text Ищете вдохновение?
++								218 heading Подбор по свайпу, Value: 2
++									219 text Подбор по свайпу
++								220 text Смахивайте отели — запомним, что нравится
++						221 button Горячие скидки: от 10% на проживание — смотреть отели
++							222 container
++								223 text Горячие
++								224 text скидки
++							225 text От 10% на проживание
++							226 text Смотреть отели
++						227 container
++							228 heading Вы недавно смотрели, Value: 2
++								229 text Вы недавно смотрели
++							230 container Просмотренные отели
++								231 button Mantera Resort & Congress Сочи
++									232 text Mantera Resort & Congress
++									233 text Сочи
++						234 button Опишите свой отдых
++					235 container Главные разделы
++						236 button Поездки
++						237 button Найти
++						238 button Чаты
++						239 button Выгоды
+The focused UI element is 0 AXWebArea Ключи — мобильный прототип, URL: 127.0.0.1:5173/#find

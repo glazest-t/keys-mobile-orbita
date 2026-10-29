@@ -1,0 +1,25 @@
+.history-timeline{position:relative;margin:6px 0 12px;padding-left:26px;isolation:isolate}
+.history-timeline::before{content:"";position:absolute;left:7px;top:10px;bottom:54px;width:1px;background:#d0d3e1;z-index:-1}
+.history-month+.history-month{margin-top:30px}
+.keys-app .history-month-title{position:relative;margin:0 0 16px 6px;font:600 12px/20px Onest,sans-serif;letter-spacing:1.8px;text-transform:uppercase;color:#777d90}
+.timeline-tone-info{--history-node:#2f5bff}
+.timeline-tone-success{--history-node:#21996e}
+.timeline-tone-neutral{--history-node:#888da1}
+.history-month-title::before,.history-timeline-item::before{content:"";position:absolute;width:9px;height:9px;border:4px solid #fff;border-radius:50%;background:var(--history-node);box-sizing:content-box}
+.history-month-title::before{left:-33px;top:2px}
+.history-timeline-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.history-timeline-item{position:relative;min-width:0}
+.history-timeline-item::before{left:-27px;top:24px}
+.history-timeline-card{position:relative;min-width:0;background:#fff;border:1px solid #e4e7ef;border-radius:22px;padding:9px;overflow:hidden}
+.history-timeline-open{position:relative;display:grid;grid-template-columns:82px minmax(0,1fr);gap:14px;width:100%;min-height:88px;padding:0;border:0;background:none;color:#2f5bff;text-align:left;font-family:Onest,sans-serif;cursor:pointer}
+.history-timeline-open>img{width:82px;height:100%;min-height:88px;object-fit:cover;border-radius:14px}
+.history-timeline-copy{color:#101320;display:flex;flex-direction:column;gap:6px;padding:4px 0 36px;min-width:0}
+.history-timeline-copy strong{font:500 14px/20px Onest,sans-serif;overflow-wrap:anywhere}
+.history-timeline-copy small{font:400 12px/18px Onest,sans-serif;color:#777d90}
+.history-timeline-open>.k-icon{position:absolute;right:2px;bottom:7px;color:#2f5bff}
+.history-timeline-meta{position:absolute;left:105px;right:11px;bottom:12px;display:flex;align-items:center;justify-content:space-between;gap:6px;pointer-events:none}
+.history-timeline-meta .k-status{margin:0;padding:5px 7px;border-radius:11px;font-size:12px;line-height:16px;gap:4px}
+.history-timeline-meta .k-status>.k-icon{width:13px;height:13px}
+.history-timeline-meta>button{pointer-events:auto;display:flex;align-items:center;gap:2px;min-height:32px;border:0;padding:0;background:none;font:500 12px/18px Onest,sans-serif;color:#2f5bff;white-space:nowrap;cursor:pointer}
+.history-timeline-card:has(:focus-visible){outline:2px solid #5a6072;outline-offset:2px}
+.history-filters .filter-chip.selected{background:#2f5bff;border-color:#2f5bff;color:#fff}

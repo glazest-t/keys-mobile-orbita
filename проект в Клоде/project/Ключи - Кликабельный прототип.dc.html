@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500&amp;family=Unbounded:wght@500&amp;display=swap" rel="stylesheet"><style>body{margin:0;background:#e9ebf3;font-family:"Onest",system-ui,sans-serif;color:#101320}a{color:#2f5bff}a:hover{color:#1e44db}button{font-family:inherit;cursor:pointer}
+.kc-scroll::-webkit-scrollbar{display:none}
+@keyframes kcPushIn{from{transform:translateX(100%)}to{transform:none}}
+@keyframes kcPushOut{to{transform:translateX(-28%);filter:brightness(.82)}}
+@keyframes kcPopIn{from{transform:translateX(-28%);filter:brightness(.82)}to{transform:none;filter:none}}
+@keyframes kcPopOut{to{transform:translateX(100%)}}
+@keyframes kcTab{from{opacity:0}to{opacity:1}}
+@keyframes kcSheetUp{from{transform:translateY(100%)}to{transform:none}}
+@keyframes kcDimIn{from{opacity:0}to{opacity:1}}
+@keyframes kcSheetDown{to{transform:translateY(100%)}}
+@keyframes kcDimOut{to{opacity:0}}
+.kc-sheet-in [style*="border-radius:30px 30px 0 0"],.kc-sheet-in [style*="border-radius: 30px 30px 0px 0px"]{animation:kcSheetUp .46s cubic-bezier(.32,.72,0,1) both}
+.kc-sheet-in [style*="background:#101320"][style*="inset:0"],[style*="background:#10132059"],.kc-sheet-in [style*="background: rgba(16, 19, 32, 0.35)"]{animation:kcDimIn .3s ease both}
+.kc-sheet-out [style*="border-radius:30px 30px 0 0"],.kc-sheet-out [style*="border-radius: 30px 30px 0px 0px"]{animation:kcSheetDown .34s cubic-bezier(.4,0,1,1) both}
+.kc-sheet-out [style*="background:#101320"][style*="inset:0"],[style*="background:#10132059"],.kc-sheet-out [style*="background: rgba(16, 19, 32, 0.35)"]{animation:kcDimOut .3s ease both}
+@keyframes kcInF{from{opacity:0;transform:translateX(40%) scale(.95);filter:blur(6px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes kcOutF{to{opacity:0;transform:translateX(-20%) scale(.96);filter:blur(4px)}}
+@keyframes kcInB{from{opacity:0;transform:translateX(-40%) scale(.95);filter:blur(6px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes kcOutB{to{opacity:0;transform:translateX(20%) scale(.96);filter:blur(4px)}}
+@keyframes kcInU{from{opacity:0;transform:translateY(18%) scale(.97);filter:blur(6px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes kcOutU{to{opacity:.4;transform:scale(.94);filter:blur(3px)}}
+@keyframes kcInS{from{opacity:0;transform:scale(1.05);filter:blur(10px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes kcOutS{to{opacity:0;transform:scale(.94);filter:blur(8px)}}
+@keyframes kcToast{from{opacity:0;transform:translate(-50%,10px)}to{opacity:1;transform:translate(-50%,0)}}
+@keyframes kcSpin{to{transform:rotate(360deg)}}
+.kc-scroll [data-kc-press],.kc-scroll [data-kc-hot]{cursor:pointer}
+.kc-scroll [data-kc-press]{transition:transform .14s cubic-bezier(.2,.8,.2,1),filter .14s}
+.kc-scroll [data-kc-press]:active{transform:scale(.97);filter:brightness(.96)}
+.kc-scroll [data-kc-hot]:not([data-kc-press]):active{filter:brightness(.97)}
+@keyframes kcKb{from{transform:translateY(100%)}to{transform:none}}
+@keyframes kcCaret{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes kcShake{0%,100%{transform:none}20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
+.kc-hot [data-kc-hot]{outline:2px solid #2f5bff99;outline-offset:2px;border-radius:12px;transition:outline-color .2s}</style></helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column;align-items:center;gap:16px;padding:20px 16px 32px;box-sizing:border-box">
+<header style="width:100%;max-width:1100px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+<div style="display:flex;align-items:center;gap:10px"><span style="position:relative;width:26px;height:26px;display:inline-block"><span style="position:absolute;inset:0;border-radius:50%;border:4.9px solid #2f5bff;box-sizing:border-box"></span><span style="position:absolute;left:14.5px;top:1.2px;width:8.7px;height:8.7px;border-radius:50%;background:#2f5bff;box-shadow:0 0 0 1.6px #e9ebf3"></span></span><span style="font:500 20px/1 'Unbounded',sans-serif;letter-spacing:-1px">ключи</span><span style="font-size:13px;color:#5a6072;margin-left:6px">Кликабельный прототип</span></div>
+<div style="display:flex;gap:6px;flex-wrap:wrap;padding:4px;border-radius:16px;background:#fff;box-shadow:inset 0 0 0 1px #e1e5ec">
+<sc-for list="{{ stages }}" as="s" hint-placeholder-count="6"><button onClick="{{ s.pick }}" style="height:34px;padding:0 12px;border:0;border-radius:12px;background:{{ s.bg }};color:{{ s.fg }};font-size:13px;font-weight:500;white-space:nowrap;transition:background .24s,color .24s">{{ s.label }}</button></sc-for>
+</div>
+</header>
+<div style="display:flex;gap:28px;align-items:flex-start;justify-content:center;flex-wrap:wrap;width:100%;max-width:1100px">
+<div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+<div data-screen-label="{{ screenLabel }}" style="width:375px;height:800px;box-sizing:content-box;border-radius:52px;border:10px solid #0d0f17;background:#f4f5fb;overflow:hidden;position:relative;box-shadow:0 30px 60px #10132033;flex:none;isolation:isolate">
+{{ stage }}
+</div>
+<span style="font-size:12px;color:#5a6072;text-align:center;max-width:375px">{{ hint }}</span>
+</div>
+<aside style="width:260px;display:flex;flex-direction:column;gap:12px;padding-top:6px">
+<span style="font:500 18px/24px 'Unbounded',sans-serif;letter-spacing:-.4px">{{ curLabel }}</span>
+<span style="font-size:13px;line-height:19px;color:#5a6072">Нажимайте на кнопки, карточки, вкладки и стрелку «назад» — как в приложении. Синие рамки подсветят, что можно нажать.</span>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><button onClick="{{ back }}" style="height:38px;padding:0 14px;border:1px solid #d5dbe8;border-radius:12px;background:#fff;color:#101320;font-size:13px;font-weight:500;white-space:nowrap">← Назад</button><button onClick="{{ showHot }}" style="height:38px;padding:0 14px;border:0;border-radius:12px;background:#eef0ff;color:#2f5bff;font-size:13px;font-weight:500;white-space:nowrap">Что нажать</button><button onClick="{{ restart }}" style="height:38px;padding:0 14px;border:0;border-radius:12px;background:transparent;color:#2f5bff;font-size:13px;font-weight:500;white-space:nowrap">С заставки</button></div>
+<span style="font-size:12px;font-weight:500;letter-spacing:.6px;text-transform:uppercase;color:#5a6072;margin-top:8px">Путь</span>
+<div style="display:flex;flex-direction:column;gap:2px"><sc-for list="{{ trail }}" as="t" hint-placeholder-count="3"><span style="font-size:12px;line-height:18px;color:{{ t.c }}">{{ t.l }}</span></sc-for></div>
+</aside>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { cur: 'ob', hist: [], home: 't1', dir: 'S', key: 0, screens: null, toast: '', hot: false, obKey: 0 };
+  // routes: [regex on text, target]. 'BACK' = назад, 'HOME' = текущая «Поездки», 'NEXT' = следующий по сценарию
+  R = {
+    a1: [[/Получить код|Продолжить|Далее|Войти/, 'a2'], [/отельер|TravelLine|партн/i, 'z1']],
+    a2: [[/Изменить номер/, 'BACK'], [/./, 'NONE']],
+    a3: [[/Продолжить|Готово|Начать|Далее|Сохранить/, '@t1']],
+    t1: [[/Найти отель|Подобрать|Начать поиск/, 'f1'], [/Повторить|прошл/i, 'h1'], [/Пригласить/, 'i1'], [/балл|орбит/i, 'v1']],
+    f1: [[/Найти отел|Показать отел|^Найти$/, 'c1'], [/Город или отель|Куда/, 'k5'], [/взросл|Гости|гост/, 'k3g'], [/Даты|\d+\s?[–-]\s?\d+\s(окт|сен|ноя)/, 'k3d'], [/свайп|Хочу|Не моё/i, 'q3'], [/совет|желани/i, 'nc1'], [/Mantera|₽|Недавн|Просмотр/, 'c1']],
+    k5: [[/./, 'BACK']], k1: [[/./, 'BACK']],
+    g1: [[/Получить код|Продолжить|Войти/, 'a2'], [/./, 'NONE']], fr1: [[/Позже/, '@t1'], [/Принять|Продолжить|Подтвердить|Начать|Получить/, 'z2'], [/./, 'NONE']],
+    fr4: [[/Готово|Закрыть|Понятно|Сохранить/, 'BACK'], [/./, 'NONE']], v3: [[/Готово|Закрыть|Понятно/, 'BACK'], [/./, 'NONE']],
+    fv4: [[/Mantera|₽/, 'h1'], [/./, 'NONE']], fv5: [[/Готово|Сохранить|Создать/, 'BACK'], [/./, 'NONE']],
+    k2: [[/Показать|Применить|Готово/, 'BACK'], [/./, 'NONE']], k4: [[/Mantera|₽/, 'h1'], [/./, 'NONE']],
+    e1: [[/Позвонить|Чат/, 'ch1'], [/./, 'NONE']], e3: [[/Отправить код|Изменить номер/, 'BACK'], [/./, 'NONE']], e4: [[/Повторить|Попробовать/, 'BACK'], [/./, 'NONE']],
+    k3g: [[/Готово|Применить|Показать|Сохранить|Найти/, 'BACK'], [/./, 'NONE']], k3d: [[/Готово|Применить|Показать|Сохранить|ноч/, 'BACK'], [/./, 'NONE']], k3: [[/Готово|Применить|Показать|Сохранить|ноч/, 'BACK'], [/./, 'NONE']],
+    c1: [[/Фильтр/, 'k1'], [/Карта|карт/, 'c2'], [/Даты|гост|взр/, 'k3'], [/Mantera|₽|отзыв/, 'h1']],
+    c2: [[/Mantera|₽/, 'h1'], [/./, 'BACK']],
+    q3: [[/К отелю/, 'h1'], [/./, 'NONE']],
+    nc1: [[/./, 'nc2']], nc2: [[/Город|Куда|выбрать/i, 'nc3'], [/Дальше|Продолжить|Далее/, 'nc4']], nc3: [[/./, 'BACK']],
+    nc4: [[/./, 'nc5']], nc5: [[/./, 'nc6']],
+    nc6: [[/Вода|спа/i, 'nc7'], [/./, 'nc8']], nc7: [[/./, 'nc8']], nc8: [[/./, 'nc9']], nc9: [[/./, 'nc10']], nc10: [[/./, 'r1']],
+    r1: [[/Настро|Изменить/, 'nc11'], [/Mantera|₽|Почему|%/, 'h1']], nc11: [[/./, 'BACK']], nc12: [[/./, 'BACK']],
+    h1: [[/Выбрать номер|Выбрать тариф|Выбрать/, 'tv2b'], [/Все фото|фото/i, 'h9'], [/отзыв/i, 'x1'], [/Подключить карт|карту отеля|Программ|лояльн/i, 'l1'], [/Расчёт|Friendly|Цена для вас|персональн|скидк/i, 'h2'], [/Следить/, 'w1'], [/Маршрут|Расположен|карт/i, 'd5'], [/./, 'NONE']],
+    h9: [[/./, 'BACK']], h2: [[/./, 'BACK']], l1: [[/./, 'BACK']], w1: [[/./, 'BACK']], x1: [[/./, 'BACK']],
+    tv2b: [[/Что входит|ещё|Подробнее|Все услуги/i, 'tv2c'], [/Оснащение/, 'rm1'], [/фото|Галере/i, 'gl1'], [/Выбрать|Забронировать|₽/, 'h5'], [/./, 'NONE']],
+    tv2c: [[/Выбрать|Забронировать/, 'h5'], [/./, 'BACK']], rm1: [[/./, 'BACK']], gl1: [[/./, 'BACK']],
+    h5: [[/Добавить к поездке|Ранний заезд, трансфер/, 'h6'], [/Далее|Продолжить|Дальше|Готово/, 'h7'], [/./, 'NONE']], h6: [[/Готово|Пропустить/, 'BACK'], [/./, 'NONE']],
+    h7: [[/Оплатить|Забронировать/, 'h8'], [/Расчёт|скидк|Итого/, 'h2'], [/./, 'NONE']],
+    h8: [[/./, '@u1b']],
+    u1b: [[/Детали брони/, 'd1'], [/заселит/i, 'd4'], [/Маршрут/, 'd5'], [/Ранний/, 'd6'], [/Регистрац/, 'b2'], [/Чат|отелем|Написать/, 'ch2'], [/Ключ|Я на месте|Открыть/, '@s2']],
+    d1: [[/окумент/i, 'd2'], [/Отмен/, 'd3'], [/Изменить/, 'b3'], [/./, 'NONE']], d2: [[/./, 'BACK']], d3: [[/./, 'BACK']], d4: [[/./, 'BACK']], d6: [[/./, 'BACK']], b2: [[/./, 'BACK']], b3: [[/./, 'BACK']],
+    d5: [[/Откуда|Моё место|местоположен|Изменить/i, 'd5b'], [/./, 'NONE']], d5b: [[/./, 'BACK']],
+    s2: [[/Все услуги|Услуги/, 'sv1'], [/Wi/, 'wf1'], [/Счёт|Депозит|счёт/, 's5'], [/проблем/i, 's6'], [/Рядом/, 'n1'], [/Завтрак/, 'sv3'], [/Чат/, 'ch2'], [/Открыть|дверь|ключ/i, 'TOAST:Дверь открыта']],
+    sv1: [[/Завтрак/, 'sv3'], [/./, 'sv2']], sv2: [[/./, 'BACK']], sv3: [[/./, 'BACK']],
+    wf1: [[/пароль|вручную|Логин/i, 'wf2'], [/./, 'wf1b']], wf1b: [[/./, 'BACK']], wf2: [[/./, 'BACK']], s5: [[/./, 'BACK']], s6: [[/./, 'BACK']], n1: [[/./, 'BACK']],
+    s3: [[/Счёт|Депозит/, 's5'], [/Поздний|Продлить/, 'TOAST:Выезд продлён до 15:00'], [/Wi/, 'wf1'], [/Все услуги|Услуги/, 'sv1'], [/Открыть|дверь/i, 'TOAST:Дверь открыта']],
+    s4: [[/Отзыв|Оценить|Как вам|звёзд/i, 'x2'], [/Документ/, 'd2'], [/балл/i, 'v5'], [/Следующ|Найти/, 'f1'], [/Поездк|История/, 'p3']], x2: [[/./, 'BACK']],
+    v1: [[/История/, 'v5'], [/Уровн|орбит/i, 'v2'], [/Все программ|Программы отелей|Все/, 'v4'], [/Mantera/, 'lp3'], [/Пригласить/, 'i1']], v2: [[/./, 'BACK']], v4: [[/Mantera/, 'lp3'], [/Сеть/, 'lp4'], [/./, 'lp1']], v5: [[/./, 'BACK']],
+    lp1: [[/./, 'BACK']], lp2: [[/./, 'BACK']], lp3: [[/./, 'BACK']], lp4: [[/./, 'lp5']], lp5: [[/./, 'BACK']],
+    p1: [[/стиль/i, 'p4'], [/оплат/i, 'p5'], [/Настройк/, 'p6'], [/Пригласить/, 'i1'], [/Поездк|История/, 'p3'], [/Уведомлен/, 'n2'], [/Friendly|отельер|статус/i, 'fr2'], [/Выгод|балл/i, 'v1']],
+    p3: [[/Повторить|Mantera/, 'h1'], [/./, 'NONE']], p4: [[/./, 'BACK']], p5: [[/./, 'BACK']], p6: [[/./, 'BACK']], i1: [[/./, 'BACK']], i2: [[/./, 'BACK']],
+    ch1: [[/Mantera|отел/i, 'ch2']], ch2: [[/./, 'NONE']], n2: [[/цен/i, 'pn3'], [/./, 'NONE']], pn3: [[/./, 'BACK']],
+    fv1: [[/Море|осен|спис/i, 'fv2']], fv2: [[/Даты|гост|взр/, 'fv3'], [/заметк/i, 'fv6'], [/Mantera|₽/, 'h1']], fv2a: [[/./, 'BACK']], fv3: [[/./, 'BACK']], fv6: [[/./, 'BACK']],
+    z1: [[/./, 'z2']], z2: [[/./, 'z3']], z3: [[/Перейти|кабинет|Подтвердить|ЛК/i, 'z5'], [/Позже|Закрыть|Продолжить без/i, '@t1']], z5: [[/./, '@t1']], z6: [[/./, '@t1']],
+    fr2: [[/Friendly|Что такое|Подробнее/i, 'fr6'], [/Пригласить/, 'i2']], fr6: [[/./, 'BACK']], fr3: [[/Friendly|Расчёт|−35/, 'fr5']], fr5: [[/./, 'BACK']]
+  };
+  ICONS = [['M20 12H5', 'BACK'], ['M6 6l12 12', 'BACK'], ['M20.8 4.6', 'fv1'], ['M5 17h14', 'n2'], ['cx="5" cy="12" r="1"', 'fv2a']];
+  TABS = { 'Поездки': 'HOME', 'Найти': 'f1', 'Чаты': 'ch1', 'Выгоды': 'v1' };
+  STAGES = [['Онбординг', 'ob', 't1'], ['Нет брони', 't1', 't1'], ['До заезда', 'u1b', 'u1b'], ['Проживание', 's2', 's2'], ['Выезд', 's3', 's3'], ['После', 's4', 's4'], ['Отельер', 'z1', 't1']];
+  componentDidMount() {
+    this.onMsg = e => { if (e.data && e.data.kp === 'onboarding-done') this.nav('a1', 'S', true); };
+    window.addEventListener('message', this.onMsg); window.__kc = this;
+    fetch(encodeURI('Ключи - Все экраны.dc.html')).then(r => r.text()).then(t => {
+      const doc = new DOMParser().parseFromString(t, 'text/html'), map = {};
+      doc.querySelectorAll('[data-screen-label]').forEach(el => {
+        const lab = el.getAttribute('data-screen-label'), id = lab.split(' ')[0];
+        if (map[id] || !/^[a-z]/.test(id)) return;
+        Object.assign(el.style, { border: '0', borderRadius: '0', boxShadow: 'none', margin: '0', width: '375px', boxSizing: 'border-box', minHeight: '800px' });
+        if (el.style.height) el.style.height = '800px'; else el.style.overflow = 'clip';
+        this.stickify(el);
+        el.removeAttribute('data-screen-label');
+        el.querySelectorAll('[data-comment-anchor]').forEach(x => x.removeAttribute('data-comment-anchor'));
+        let ov = '';
+        [...el.children].forEach(c => { const st = c.getAttribute('style') || ''; if (c.tagName === 'NAV' || (/position:\s*absolute/.test(st) && /bottom:\s*0/.test(st) && /linear-gradient\(#f4f5fb00/.test(st))) { ov += c.outerHTML; c.remove(); } });
+        const hs = el.outerHTML;
+        map[id] = { html: hs, ov, sheet: /border-radius:\s?30px 30px 0(px)? 0(px)?/.test(hs), label: lab.slice(id.length + 1).replace(/^\d+\s·\s/, '') };
+      });
+      // «Даты» со страницы Найти — только календарь, без гостей
+      if (map.k3) {
+        const w = document.createElement('div'); w.innerHTML = map.k3.html;
+        const r = w.firstElementChild;
+        [/Взрослые/, /С питомцем/].forEach(re => [...r.querySelectorAll('section,div')].filter(x => re.test(x.textContent) && !/Сентябрь/.test(x.textContent)).sort((a, b) => b.textContent.length - a.textContent.length).slice(0, 1).forEach(x => x.remove()));
+        [...r.querySelectorAll('span,div')].filter(x => x.children.length === 0 && /^Особенности поездки$/.test(this.txt(x))).forEach(x => x.remove());
+        r.querySelectorAll('span,div').forEach(x => { if (x.children.length === 0 && this.txt(x) === 'Когда и кто') x.textContent = 'Даты поездки'; });
+        map.k3d = { ...map.k3, html: r.outerHTML, label: 'Найти · даты' };
+      }
+      // даты / гости / даты+гости — нижние шторки поверх страницы, с которой открыты
+      const asSheet = (id, bgId, title) => {
+        if (!map[id] || !map[bgId] || map[id].sheet) return;
+        const w = document.createElement('div'); w.innerHTML = map[id].html;
+        const fr = w.firstElementChild;
+        let parts = [...fr.children].filter(c => !/9:41/.test(c.textContent) || c.children.length > 3);
+        if (parts.length === 1 && /inset:\s*0/.test(parts[0].getAttribute('style') || '')) parts = [...parts[0].children];
+        parts = parts.filter(c => !(/9:41/.test(c.textContent) && c.textContent.length < 20));
+        const sh = document.createElement('div');
+        sh.setAttribute('style', 'position:absolute;left:0;right:0;bottom:0;max-height:86%;overflow-y:auto;scrollbar-width:none;z-index:11;background:#f4f5fb;border-radius:30px 30px 0 0;padding:10px 0 26px;box-sizing:border-box;display:flex;flex-direction:column;gap:12px;box-shadow:0 -8px 32px #10132029');
+        sh.innerHTML = '<span style="width:36px;height:5px;border-radius:3px;background:#d0d4df;align-self:center;flex:none"></span>';
+        parts.forEach(p => { const st = p.getAttribute('style') || ''; if (/flex:\s*1/.test(st)) p.style.flex = 'none'; p.querySelectorAll('[style*="flex:1"],[style*="flex: 1"]').forEach(x => { if (!x.textContent.trim()) x.remove(); else x.style.flex = 'none'; }); sh.appendChild(p); });
+        sh.querySelectorAll('[data-kc-cta]').forEach(x => { x.removeAttribute('data-kc-cta'); ['position', 'bottom', 'paddingTop', 'paddingBottom', 'marginBottom', 'background', 'boxShadow', 'zIndex'].forEach(k => x.style[k] = ''); });
+        if (title) sh.querySelectorAll('span,div').forEach(x => { if (x.children.length === 0 && /^(Когда и кто|Даты поездки|Кто едет\??|Гости)$/.test(this.txt(x))) x.textContent = title; });
+        const b = document.createElement('div'); b.innerHTML = map[bgId].html;
+        const bg = b.firstElementChild;
+        Object.assign(bg.style, { height: '800px', minHeight: '800px', overflow: 'hidden', position: 'relative' });
+        bg.querySelectorAll('[data-kc-cta]').forEach(x => x.removeAttribute('data-kc-cta'));
+        bg.insertAdjacentHTML('beforeend', '<div data-kc-dim="" style="position:absolute;inset:0;background:#10132059;z-index:10"></div>');
+        bg.appendChild(sh);
+        map[id] = { ...map[id], html: bg.outerHTML, ov: '', sheet: true };
+      };
+      asSheet('k3d', 'f1', 'Даты поездки'); asSheet('k3g', 'f1', 'Кто едет'); asSheet('k3', 'c1', 'Даты и гости');
+      this.setState({ screens: map });
+    });
+  }
+  componentWillUnmount() { window.removeEventListener('message', this.onMsg); clearTimeout(this.tt); clearTimeout(this.ht); }
+  txt(el) { return (el.textContent || '').replace(/[\s\u00a0]+/g, ' ').trim(); }
+  isCta(el) { const s = el.style; return parseInt(s.height) >= 48 && parseInt(s.borderRadius) >= 12 && /47, 91, 255|#2f5bff/i.test(s.background || s.backgroundColor || '') && this.txt(el).length > 1 && this.txt(el).length < 40; }
+  // в макетах кнопка действия стоит в конце потока; в прототипе она «висит» внизу экрана при скролле
+  stickify(el) {
+    if (el.style.height) return;
+    const cands = [...el.querySelectorAll('button,span,div')].filter(b => this.isCta(b));
+    if (!cands.length) return;
+    let b = cands[cands.length - 1];
+    const grp = b.parentElement;
+    if (grp && grp !== el && grp.style.flexDirection === 'column' && grp.children.length <= 4 && [...grp.children].every(c => parseInt(c.style.height) >= 40 && !c.querySelector('img'))) b = grp;
+    let a = b, ok = true;
+    while (a && a !== el) {
+      if (/sticky|absolute|fixed/.test(a.style.position)) { ok = false; break; }
+      let n = a.nextElementSibling;
+      while (n) { const p = n.style.position; if (!(p === 'absolute' || n.tagName === 'NAV' || !this.txt(n) && !n.querySelector('img,svg'))) { ok = false; break; } n = n.nextElementSibling; }
+      if (!ok) break;
+      a = a.parentElement;
+    }
+    if (!ok || a !== el) return;
+    let t = b.parentElement;
+    if (!t || t === el || t.children.length > 3 || [...t.children].some(c => c.querySelector('img') || this.txt(c).length > 60)) t = b;
+    // подложка под закреплённой кнопкой только на обычном светлом фоне; на градиентных/цветных экранах — прозрачно
+    const plain = /^(rgb\(244, 245, 251\)|#f4f5fb)$/i.test((el.style.background || '').trim()) || !el.style.background;
+    Object.assign(t.style, { position: 'sticky', bottom: '0', zIndex: '6', paddingTop: '14px', paddingBottom: '22px', marginBottom: '-22px', background: plain ? 'linear-gradient(#f4f5fb00, #f4f5fb 30%)' : 'transparent', boxShadow: plain ? '0 22px 0 0 #f4f5fb' : 'none' });
+    t.setAttribute('data-kc-cta', '');
+  }
+  loaderHtml(fg, ring) { return '<span style="width:20px;height:20px;position:relative;display:inline-block;flex:none;animation:kcSpin .9s linear infinite"><span style="position:absolute;inset:0;border-radius:50%;border:3.5px solid ' + ring + ';box-sizing:border-box"></span><span style="position:absolute;left:6.5px;top:-1.75px;width:7px;height:7px;border-radius:50%;background:' + fg + '"></span></span>'; }
+  // компоненты из бренд-кита: переключатель, чипы, сегменты, степпер, радио, сердце, звёзды, кнопка ключа
+  interact(t, root) {
+    const up = (el, f, n) => { for (let i = 0; el && el !== root && i < (n || 6); i++, el = el.parentElement) if (el.style && f(el)) return el; return null; };
+    const has = (el, f) => [...(el.children || [])].find(c => c.style && f(c));
+    const T = el => this.txt(el);
+    const pop = el => el.animate && el.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.18)' }, { transform: 'scale(1)' }], { duration: 380, easing: 'cubic-bezier(.34,1.56,.64,1)' });
+    // ключ / дверь
+    const door = up(t, el => parseInt(el.style.height) >= 48 && /^Открыть (дверь|по Bluetooth)$/.test(T(el)));
+    if (door) {
+      if (door.dataset.busy) return true;
+      door.dataset.busy = '1'; const html = door.innerHTML, bg = door.style.background, col = door.style.color;
+      door.style.transition = 'background .24s, color .24s';
+      door.innerHTML = this.loaderHtml('#2f5bff', '#c9d2ff') + '<span>Открываем…</span>';
+      setTimeout(() => { door.style.background = '#bff0de'; door.style.color = '#16865a'; door.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16865a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"></path></svg><span>Дверь открыта</span>'; pop(door.firstChild); }, 1100);
+      setTimeout(() => { door.innerHTML = html; door.style.background = bg; door.style.color = col; delete door.dataset.busy; }, 3800);
+      return true;
+    }
+    // переключатель
+    const isTg = el => el.style.width === '50px' && el.style.height === '30px';
+    const tg = up(t, isTg, 3) || (() => { const row = up(t, el => !!has(el, isTg), 4); return row && has(row, isTg); })();
+    if (tg && tg.firstElementChild) {
+      const k = tg.firstElementChild, on = k.style.left === '23px';
+      tg.style.transition = 'background .24s'; k.style.transition = 'left .3s cubic-bezier(.34,1.56,.64,1)';
+      tg.style.background = on ? '#d9dde8' : '#2f5bff'; k.style.left = on ? '3px' : '23px';
+      return true;
+    }
+    // степпер
+    const st = up(t, el => el.style.width === '36px' && el.style.height === '36px' && /^[+−-]$/.test(T(el)), 2);
+    if (st) {
+      const num = [...st.parentElement.children].find(c => /^\d+$/.test(T(c)));
+      if (num) { const v = Math.max(0, +T(num) + (T(st) === '+' ? 1 : -1)); num.textContent = v; pop(num); }
+      return true;
+    }
+    // сегменты
+    const seg = up(t, el => el.style.padding === '4px' && /233, 236, 244|e9ecf4|238, 240, 246/i.test(el.style.background) && el.children.length >= 2 && el.children.length <= 6, 3);
+    if (seg) {
+      const item = [...seg.children].find(c => c.contains(t));
+      [...seg.children].forEach(c => { c.style.transition = 'background .24s, box-shadow .24s'; c.style.background = c === item ? '#fff' : 'transparent'; c.style.boxShadow = c === item ? '0 2px 6px #10132014' : 'none'; });
+      return true;
+    }
+    // радио
+    const isR = el => el.style.width === '22px' && el.style.height === '22px' && el.style.borderRadius === '50%';
+    const rRow = up(t, el => !!has(el, isR) || isR(el), 4);
+    if (rRow) {
+      const r = isR(rRow) ? rRow : has(rRow, isR), grp = rRow.closest('section') || rRow.parentElement;
+      grp.querySelectorAll('span,div').forEach(x => { if (isR(x)) { x.style.transition = 'border .2s'; x.style.border = x === r ? '7px solid #2f5bff' : '1.5px solid #c3c8d2'; } });
+      return true;
+    }
+    // сердце на фото
+    const heart = up(t, el => parseInt(el.style.width) <= 44 && !!el.querySelector('path[d^="M20.8 4.6"]') && /255, 255, 255, 0\.7|ffffffc4|255, 255, 255, 0\.8/i.test(el.style.background), 3);
+    if (heart) {
+      const sv = heart.querySelector('svg'), on = sv.getAttribute('fill') === '#e5484d';
+      sv.setAttribute('fill', on ? 'none' : '#e5484d'); sv.setAttribute('stroke', on ? '#101320' : '#e5484d'); pop(heart);
+      this.toast(on ? 'Убрано из избранного' : 'Добавлено в избранное');
+      return true;
+    }
+    // звёзды
+    const star = up(t, el => !!el.querySelector('path[d^="m12 3 2.8"],path[d^="m12 3 2.7"]') && parseInt(el.style.width) >= 28 && parseInt(el.style.width) <= 56, 3);
+    if (star && star.parentElement.children.length === 5) {
+      const all = [...star.parentElement.children], n = all.indexOf(star);
+      all.forEach((s, i) => { const sv = s.querySelector('svg'); if (!sv) return; sv.setAttribute('fill', i <= n ? '#2f5bff' : 'none'); sv.setAttribute('stroke', i <= n ? '#2f5bff' : '#c3c8d2'); s.style.background = i <= n ? '#eef0ff' : '#f4f5fb'; });
+      pop(star); return true;
+    }
+    // чипы
+    const chip = up(t, el => /^(32|36|40)px$/.test(el.style.height) && parseInt(el.style.borderRadius) >= 16 && T(el).length > 0 && T(el).length < 28 && !el.querySelector('img') && !!el.style.border, 2);
+    if (chip) {
+      const on = /47, 91, 255|#2f5bff/i.test(chip.style.background);
+      chip.style.transition = 'background .24s cubic-bezier(.2,.8,.2,1), color .24s, border-color .24s';
+      Object.assign(chip.style, on ? { background: '#fff', color: '#101320', borderColor: '#e4e7ef' } : { background: '#2f5bff', color: '#fff', borderColor: '#2f5bff' });
+      return true;
+    }
+    // копирование
+    if (up(t, el => /Скопировать|Копировать/.test(el.getAttribute('aria-label') || '') || !!el.querySelector('path[d^="M9 9"]') && parseInt(el.style.width) <= 40, 2)) { this.toast('Скопировано'); return true; }
+    return false;
+  }
+  go(to, t, root) {
+    const b = (() => { for (let el = t, i = 0; el && el !== root && i < 6; i++, el = el.parentElement) if (el.style && this.isCta(el)) return el; return null; })();
+    if (b && /Оплатить|Получить код|Подтвердить|Отправить|Подключиться|Сохранить|Запросить|Заказать|Войти|Продолжить/.test(this.txt(b)) && !b.dataset.busy) {
+      b.dataset.busy = '1'; b.style.gap = '10px'; b.style.display = 'flex'; b.style.alignItems = 'center'; b.style.justifyContent = 'center';
+      b.innerHTML = this.loaderHtml('#fff', '#ffffff59');
+      return setTimeout(() => this.nav(to), 700);
+    }
+    return this.nav(to);
+  }
+  toast(t) { clearTimeout(this.tt); this.setState({ toast: t }); this.tt = setTimeout(() => this.setState({ toast: '' }), 1800); }
+  nav(to, dir, reset) {
+    if (to === 'NONE') return;
+    if (this.state.kb) this.setState({ kb: null });
+    if (to.startsWith('TOAST:')) return this.toast(to.slice(6));
+    if (to === 'BACK') return this.back();
+    let home = this.state.home;
+    if (to.startsWith('@')) { to = to.slice(1); home = to; reset = true; }
+    if (to === 'HOME') to = home;
+    const m = this.state.screens;
+    if (to !== 'ob' && m && !m[to]) return this.toast('Экран ещё не нарисован');
+    const isTab = Object.values(this.TABS).includes(to) || to === home && !reset && dir !== 'F';
+    this.prevId = this.state.cur;
+    this.setState(p => ({ cur: to, home, hist: reset ? [] : isTab ? [] : [...p.hist, p.cur], dir: dir || (reset ? 'S' : this.isSheet(to) ? 'U' : isTab ? 'T' : 'F'), key: p.key + 1, hot: false }));
+  }
+  isSheet(id) { const d = (this.state.screens || {})[id]; return !!(d && d.sheet); }
+  back() {
+    const h = this.state.hist; if (!h.length) return;
+    this.prevId = this.state.cur;
+    this.setState(p => ({ cur: h[h.length - 1], hist: h.slice(0, -1), dir: this.isSheet(p.cur) ? 'D' : 'B', key: p.key + 1 }));
+  }
+  flash() { clearTimeout(this.ht); this.setState({ hot: true }); this.ht = setTimeout(() => this.setState({ hot: false }), 1200); }
+  html(id) { const m = this.state.screens; return id && m && m[id] ? m[id].html : ''; }
+  route(e) {
+    if (this.inputClick(e)) return;
+    if (e.target.closest && e.target.closest('[data-kc-dim]')) return this.back();
+    const root = e.currentTarget; let el = e.target, depth = 0;
+    const rules = this.R[this.state.cur] || [];
+    const tx = (() => { for (let x = e.target, i = 0; x && x !== root && i < 9; i++, x = x.parentElement) { const s = this.txt(x); if (s && s.length <= 90) for (const [re] of rules) if (re.source !== '.' && re.test(s)) return true; } return false; })();
+    if (!tx && this.interact(e.target, root)) return;
+    for (let x = e.target, i = 0; x && x !== root && i < 4; i++, x = x.parentElement) if (/^Открыть (дверь|по Bluetooth)$/.test(this.txt(x)) && parseInt(x.style.height) >= 48) { this.interact(e.target, root); return; }
+    while (el && el !== root && depth < 9) {
+      const txt = (el.textContent || '').replace(/[\s\u00a0]+/g, ' ').trim();
+      const r = el.getBoundingClientRect();
+      if (r.width <= 60 && r.height <= 60) { const ih = el.innerHTML; for (const [k, to] of this.ICONS) if (ih.includes(k) && ih.length < 1600) return this.nav(to); }
+      if (this.TABS[txt] && r.width < 120) return this.nav(this.TABS[txt]);
+      if (/^ТГ$/.test(txt)) return this.nav('p1');
+      if (txt && txt.length <= 90) for (const [re, to] of rules) if (re.source !== '.' && re.test(txt)) return this.go(to, e.target, root);
+      el = el.parentElement; depth++;
+    }
+    const any = rules.find(([re]) => re.source === '.');
+    if (any) return this.nav(any[1]);
+  }
+  // ——— ввод телефона и кода: системная цифровая клавиатура, маска, каретка
+  fmtPhone(d) { const p = [d.slice(0, 3), d.slice(3, 6), d.slice(6, 8), d.slice(8, 10)]; let r = p[0]; if (p[1]) r += ' ' + p[1]; if (p[2]) r += '-' + p[2]; if (p[3]) r += '-' + p[3]; return r; }
+  componentDidUpdate(pp, ps) {
+    if (ps.kb === this.state.kb && ps.cur === this.state.cur) return;
+    clearTimeout(this.liftT); this.liftT = setTimeout(() => this.lift(), 60);
+  }
+  lift() {
+    const L = document.querySelectorAll('.kc-scroll'), sc = L[L.length - 1];
+    if (!sc) return;
+    const KB = 248, on = !!this.state.kb;
+    sc.style.setProperty('padding-bottom', on ? KB + 'px' : '', on ? 'important' : '');
+    const c = sc.querySelector('[data-kc-cta]') || (this.cta && (this.cta.closest('[data-kc-cta]') || this.cta));
+    if (c) c.style.removeProperty('transform');
+    if (on) {
+      const f = this.state.kb === 'phone' && this.kbF ? this.kbF.box : this.kbCells && this.kbCells[0];
+      if (!f) return;
+      const s = sc.getBoundingClientRect(), top = s.bottom - KB - 12;
+      const target = (this.state.cur === 'a1' && this.cta) ? this.cta : f;
+      const r = target.getBoundingClientRect(), fr = f.getBoundingClientRect();
+      let d = r.bottom - top;
+      if (fr.top - d < s.top + 56) d = fr.top - (s.top + 56);
+      if (d > 0) sc.scrollTop = sc.scrollTop + d;
+    }
+  }
+  caret() { return '<span style="display:inline-block;width:2px;height:20px;margin-left:1px;vertical-align:-4px;background:#2f5bff;animation:kcCaret 1s steps(1) infinite"></span>'; }
+  initInput(node) {
+    this.kbF = null; this.kbCells = null; this.digits = '';
+    const cur = this.state.cur;
+    if (cur === 'a1') {
+      const leaf = [...node.querySelectorAll('span,div')].find(x => x.children.length === 0 && /^\d{3} \d{3}-\d{2}-\d{2}$/.test(this.txt(x)));
+      if (!leaf) return;
+      let box = leaf; for (let i = 0; i < 4 && box.parentElement; i++) { box = box.parentElement; if (/border/.test(box.getAttribute('style') || '') && parseInt(box.style.height) >= 48) break; }
+      this.kbF = { el: leaf, box, ph: this.txt(leaf), col: leaf.style.color, line: box.style.borderColor || '' };
+      this.cta = [...node.querySelectorAll('button,span,div')].find(x => this.isCta(x) && /Получить код/.test(this.txt(x)));
+      this.paintPhone(false);
+    }
+    if (cur === 'a2') {
+      const grid = [...node.querySelectorAll('div,span')].find(x => x.children.length === 6 && [...x.children].every(c => parseInt(c.style.height) >= 44));
+      if (!grid) return;
+      this.kbCells = [...grid.children];
+      this.paintCode();
+      setTimeout(() => this.state.cur === 'a2' && this.setState({ kb: 'code' }), 380);
+    }
+  }
+  paintPhone(focus) {
+    const f = this.kbF; if (!f) return; const d = this.digits;
+    f.el.innerHTML = (d ? this.fmtPhone(d) : (focus ? '' : f.ph)) + (focus ? this.caret() : '');
+    f.el.style.color = d ? '#101320' : '#8a90a2';
+    f.box.style.transition = 'border-color .2s, box-shadow .2s';
+    f.box.style.borderColor = focus ? '#2f5bff' : (f.line || '#e4e7ef');
+    f.box.style.boxShadow = focus ? '0 0 0 4px #eef0ff' : 'none';
+    if (this.cta) { const ok = d.length === 10; this.cta.style.transition = 'background .24s, opacity .24s'; this.cta.style.background = ok ? '#2f5bff' : '#c9d2ff'; }
+  }
+  paintCode(state) {
+    const d = this.digits;
+    (this.kbCells || []).forEach((c, i) => {
+      const v = d[i] || '', act = !state && i === d.length;
+      c.style.transition = 'border-color .2s, background .25s, color .25s';
+      c.innerHTML = v || (act ? this.caret() : '');
+      c.style.borderColor = state === 'ok' ? '#16865a' : state === 'chk' ? '#2f5bff' : act ? '#2f5bff' : v ? '#c9d2ff' : '#e4e7ef';
+      c.style.background = state === 'ok' ? '#bff0de' : state === 'chk' ? '#eef0ff' : '#fff';
+      c.style.color = state === 'ok' ? '#16865a' : '#101320';
+    });
+  }
+  key(k) {
+    const kb = this.state.kb; if (!kb) return;
+    if (k === 'del') this.digits = this.digits.slice(0, -1);
+    else if (kb === 'phone' && this.digits.length < 10) this.digits += k;
+    else if (kb === 'code' && this.digits.length < 6) this.digits += k;
+    if (kb === 'phone') { this.paintPhone(true); this.lift(); }
+    if (kb === 'code') {
+      this.paintCode();
+      if (this.digits.length === 6) {
+        this.setState({ kb: null });
+        setTimeout(() => this.paintCode('chk'), 120);
+        setTimeout(() => this.paintCode('ok'), 1000);
+        setTimeout(() => this.nav('a3'), 1500);
+      }
+    }
+  }
+  inputClick(e) {
+    const cur = this.state.cur, t = e.target;
+    if (cur === 'a1' && this.kbF) {
+      if (this.kbF.box.contains(t)) { this.setState({ kb: 'phone' }, () => setTimeout(() => this.lift(), 80)); this.paintPhone(true); return true; }
+      if (this.cta && this.cta.contains(t) && this.digits.length < 10) {
+        this.kbF.box.animate && this.kbF.box.animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-6px)' }, { transform: 'translateX(6px)' }, { transform: 'translateX(0)' }], { duration: 320 });
+        this.setState({ kb: 'phone' }); this.paintPhone(true); return true;
+      }
+      if (this.state.kb && !(this.cta && this.cta.contains(t))) { this.setState({ kb: null }); this.paintPhone(false); return true; }
+    }
+    if (cur === 'a2' && this.kbCells) {
+      if (this.kbCells.some(c => c.contains(t))) { this.setState({ kb: 'code' }); return true; }
+      if (!/Изменить номер/.test(this.txt(t))) return true;
+    }
+    return false;
+  }
+  keyboardEl() {
+    const E = React.createElement, L = { 2: 'АБВГ', 3: 'ДЕЖЗ', 4: 'ИЙКЛ', 5: 'МНОП', 6: 'РСТУ', 7: 'ФХЦЧ', 8: 'ШЩЪЫ', 9: 'ЬЭЮЯ' };
+    const keys = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '', '0', 'del'];
+    return E('div', { key: 'kb', style: { position: 'absolute', left: 0, right: 0, bottom: 0, zIndex: 30, background: '#d6d9e0', padding: '8px 6px 30px', display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 6, animation: 'kcKb .32s cubic-bezier(.32,.72,0,1) both', boxShadow: '0 -1px 0 #c3c8d2' } },
+      keys.map((k, i) => k === '' ? E('span', { key: i }) : E('button', {
+        key: i, onClick: () => this.key(k), 'data-kc-press': '',
+        style: { height: 48, border: 0, borderRadius: 8, background: k === 'del' ? 'transparent' : '#fff', boxShadow: k === 'del' ? 'none' : '0 1px 0 #8a90a2', color: '#101320', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', lineHeight: 1, cursor: 'pointer', fontFamily: 'inherit' }
+      }, k === 'del' ? E('svg', { width: 26, height: 20, viewBox: '0 0 26 20', fill: 'none', stroke: '#101320', strokeWidth: 1.6, strokeLinejoin: 'round', strokeLinecap: 'round' }, E('path', { d: 'M8 2h15a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H8l-7-8 7-8Zm5 5 6 6m0-6-6 6' })) : [E('span', { key: 'd', style: { fontSize: 24, fontWeight: 400 } }, k), E('span', { key: 'l', style: { fontSize: 9, letterSpacing: 1.5, color: '#5a6072', marginTop: 2, minHeight: 9 } }, L[k] || '')])));
+  }
+  markHot(node) {
+    if (!node || node.__kcMarked) return; node.__kcMarked = true;
+    this.initInput(node);
+    const rules = (this.R[this.state.cur] || []).filter(([re]) => re.source !== '.');
+    node.querySelectorAll('button, span, div, a').forEach(el => {
+      const txt = (el.textContent || '').replace(/[\s\u00a0]+/g, ' ').trim(); if (!txt || txt.length > 60) return;
+      const kids = [...el.children].some(c => (c.textContent || '').replace(/[\s\u00a0]+/g, ' ').trim() === txt);
+      if (kids) return;
+      if (this.TABS[txt] || rules.some(([re]) => re.test(txt))) {
+        // нажимается только сам элемент управления, а не вся карточка/экран
+        let box = el;
+        for (let x = el, i = 0; x && x !== node && i < 4; i++, x = x.parentElement) {
+          const r = parseFloat(x.style.borderRadius) || 0, h = x.offsetHeight || 0;
+          if (h > 140) break;
+          if (r > 0 || x.tagName === 'BUTTON') { box = x; break; }
+        }
+        if ((box.offsetHeight || 0) <= 140) box.setAttribute('data-kc-hot', '');
+      }
+    });
+    // реальные элементы управления: кнопки, чипы, переключатели, степперы
+    node.querySelectorAll('button, span, div').forEach(x => {
+      const s = x.style, h = parseInt(s.height) || 0;
+      if (x.tagName === 'BUTTON' || (h >= 28 && h <= 64 && parseFloat(s.borderRadius) >= 8 && (s.background || s.border) && this.txt(x).length < 40 && x.offsetHeight <= 64)) x.setAttribute('data-kc-press', '');
+    });
+  }
+  stageEl() {
+    const E = React.createElement, s = this.state;
+    if (s.cur === 'ob') return E('iframe', { key: 'ob' + s.obKey, src: encodeURI('Онбординг - прототип.dc.html') + '?embed=1', style: { position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0, background: '#f4f5fb' } });
+    if (!s.screens) return E('div', { style: { position: 'absolute', inset: 0, display: 'grid', placeItems: 'center' } }, E('span', { style: { width: 40, height: 40, borderRadius: '50%', border: '7px solid #eef0ff', borderTopColor: '#2f5bff', animation: 'kcSpin .9s linear infinite' } }));
+    const ez = 'cubic-bezier(.32,.72,0,1)', D = s.dir, m = s.screens;
+    const anim = {
+      F: ['kcPushIn .44s ' + ez + ' both', 'kcPushOut .44s ' + ez + ' both', 2, 1],
+      B: ['kcPopIn .4s ' + ez + ' both', 'kcPopOut .4s ' + ez + ' both', 1, 2],
+      T: ['kcTab .16s ease both', 'none', 2, 1],
+      U: ['none', 'none', 2, 1],
+      D: ['none', 'none', 1, 2],
+      S: ['kcTab .3s ease both', 'none', 2, 1]
+    }[D];
+    const layer = (id, k, z, a, cls, live) => {
+      const d = m[id] || {};
+      return E('div', { key: k, className: cls || '', style: { position: 'absolute', inset: 0, zIndex: z, animation: a, boxShadow: a.startsWith('kcPush') || a.startsWith('kcPopOut') ? '-12px 0 30px #10132026' : 'none', background: '#f4f5fb', pointerEvents: live ? 'auto' : 'none' } },
+        E('div', { ref: live ? (n => this.markHot(n)) : undefined, className: 'kc-scroll' + (live && s.hot ? ' kc-hot' : ''), onClick: live ? (e => this.route(e)) : undefined, style: { position: 'absolute', inset: 0, overflowY: 'auto', overflowX: 'hidden', scrollbarWidth: 'none', cursor: 'default', WebkitTapHighlightColor: 'transparent' }, dangerouslySetInnerHTML: { __html: d.html || '' } }),
+        d.ov ? E('div', { onClick: live ? (e => this.route(e)) : undefined, className: live && s.hot ? 'kc-hot' : '', style: { position: 'absolute', left: 0, right: 0, bottom: 0, height: 0, zIndex: 5, cursor: 'pointer' }, dangerouslySetInnerHTML: { __html: d.ov } }) : null);
+    };
+    const kids = [];
+    const showPrev = this.prevId && s.key > 0 && this.prevId !== 'ob' && D !== 'T' && D !== 'S';
+    if (showPrev) kids.push(layer(this.prevId, 'o' + s.key, anim[3], D === 'U' ? 'none' : anim[1], D === 'D' ? 'kc-sheet-out' : '', false));
+    kids.push(layer(s.cur, 'i' + s.key, anim[2], s.key > 0 ? anim[0] : 'none', D === 'U' ? 'kc-sheet-in' : '', true));
+    if (s.kb) kids.push(this.keyboardEl());
+    if (s.toast) kids.push(E('div', { key: 't', style: { position: 'absolute', left: '50%', bottom: 100, zIndex: 40, transform: 'translateX(-50%)', background: '#101320', color: '#fff', borderRadius: 14, padding: '10px 16px', fontSize: 13, whiteSpace: 'nowrap', animation: 'kcToast .3s ' + ez } }, s.toast));
+    return E(React.Fragment, null, ...kids);
+  }
+  renderVals() {
+    const s = this.state, m = s.screens || {};
+    const lab = id => id === 'ob' ? 'Заставка и онбординг' : ((m[id] || {}).label || id);
+    const trail = [...s.hist, s.cur].slice(-8);
+    return {
+      stage: this.stageEl(),
+      stages: this.STAGES.map(([l, start, home]) => { const on = (start === 'ob' && s.cur === 'ob') || (start !== 'ob' && s.home === home && s.cur !== 'ob' && (start !== 'z1' || /^z/.test(s.cur))); return { label: l, bg: on ? '#2f5bff' : 'transparent', fg: on ? '#fff' : '#101320', pick: () => { if (start === 'ob') return this.setState(p => ({ cur: 'ob', hist: [], home: 't1', obKey: p.obKey + 1, key: 0 })); this.prevHtml = this.html(s.cur); this.setState(p => ({ cur: start, home, hist: [], dir: 'S', key: p.key + 1 })); } }; }),
+      screenLabel: s.cur + ' ' + lab(s.cur), curLabel: lab(s.cur),
+      hint: s.cur === 'ob' ? 'Заставка, затем онбординг — нажимайте «Дальше». После «Начать» откроется вход.' : 'Нажимайте на элементы экрана · «Что нажать» подсветит переходы',
+      back: () => this.back(), showHot: () => this.flash(),
+      restart: () => this.setState(p => ({ cur: 'ob', hist: [], home: 't1', obKey: p.obKey + 1, key: 0 })),
+      trail: trail.map((id, i) => ({ l: (i === trail.length - 1 ? '● ' : '○ ') + lab(id), c: i === trail.length - 1 ? '#101320' : '#8a90a2' }))
+    };
+  }
+}
+</script>
+</body>
+</html>

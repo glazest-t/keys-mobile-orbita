@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-23",
+  "status": "implemented",
+  "request": "Сократить текст и визуальную дробность услуг; стоимость и действие как во флоу бронирования.",
+  "displayed_order": [
+    {
+      "option": 1,
+      "image": "/Users/tatyana.glazyrina/.codex/generated_images/01a15f51-a729-7521-8664-1d3c42c39e78/exec-fb59d126-6f12-4b54-ba5d-cc934ee300bd.png"
+    },
+    {
+      "option": 2,
+      "image": "/Users/tatyana.glazyrina/.codex/generated_images/01a15f51-a729-7521-8664-1d3c42c39e78/exec-d46a9ea1-076b-402e-a7e5-b98f416f0911.png"
+    },
+    {
+      "option": 3,
+      "image": "/Users/tatyana.glazyrina/.codex/generated_images/01a15f51-a729-7521-8664-1d3c42c39e78/exec-74d47c31-1d77-473a-9b53-b491693a1861.png"
+    }
+  ],
+  "selected_option": 3,
+  "refined_reference": "docs/iteration-4/qa-breakfast-stay/reference.png",
+  "qa": "docs/iteration-4/qa-breakfast-stay/REPORT.md"
+}

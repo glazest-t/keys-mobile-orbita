@@ -1,0 +1,18 @@
+{
+  "buttonTransition": "transform 0.24s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.24s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.24s cubic-bezier(0.2, 0.8, 0.2, 1)",
+  "pages": [
+    {
+      "current": "false",
+      "hidden": "true",
+      "inert": true,
+      "opacity": "0.683428"
+    },
+    {
+      "current": "true",
+      "hidden": "false",
+      "inert": false,
+      "opacity": "0.316572"
+    }
+  ],
+  "pillTransition": "transform 0.24s cubic-bezier(0.32, 0.72, 0, 1)"
+}

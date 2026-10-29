@@ -1,0 +1,16 @@
+/* Compact UI kit labels: icon and text form one unbreakable row. */
+:is(.keys-app,.bottom-sheet) .k-status{display:inline-flex;flex:none;flex-direction:row;flex-wrap:nowrap;align-items:center;align-self:center;justify-content:flex-start;gap:5px;width:max-content;max-width:100%;padding:5px 8px;border-radius:10px;font:500 12px/17px var(--k-font-text,Onest);white-space:nowrap;text-align:left;background:#f4f5fb;color:#5a6072}
+:is(.keys-app,.bottom-sheet) .k-status>.k-icon{flex:none}
+:is(.keys-app,.bottom-sheet) .k-status>.k-status-label{display:block;flex:none;white-space:nowrap;font:inherit;color:inherit}
+:is(.keys-app,.bottom-sheet) .k-status--success{background:#bff0de;color:#11734d}
+:is(.keys-app,.bottom-sheet) .k-status--warning{background:#fff3d6;color:#855609}
+:is(.keys-app,.bottom-sheet) .k-status--info{background:#eef0ff;color:#2f5bff}
+:is(.keys-app,.bottom-sheet) .k-status--error{background:#fde8e8;color:#be3040}
+:is(.keys-app,.bottom-sheet) .k-status--neutral{background:#f4f5fb;color:#5a6072}
+
+/* Photo overlay follows the original trip card; semantic labels stay shared. */
+:is(.keys-app,.bottom-sheet) .k-status.upcoming-status{background:#ffffffe0;color:#101320}
+:is(.keys-app,.bottom-sheet) .bill-line .k-status{align-self:flex-start;margin-top:3px}
+:is(.keys-app,.bottom-sheet) .shared-booking-content>.k-status,:is(.keys-app,.bottom-sheet) .trip-card>.k-status{align-self:flex-start}
+
+:is(.keys-app,.bottom-sheet) .service-order-summary .k-status{align-self:flex-start}

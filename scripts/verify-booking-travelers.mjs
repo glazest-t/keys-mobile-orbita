@@ -1,0 +1,33 @@
+import {chromium,expect} from '../app/node_modules/@playwright/test/index.mjs';
+import assert from 'node:assert/strict';
+import {mkdir} from 'node:fs/promises';
+import {initialState,blankTraveler} from '../app/src/state.ts';
+import {initialCommerce,ensureAccount,startDraft} from '../app/src/booking/model.ts';
+const phone='+79995550123';
+const travelers=[{...blankTraveler('self'),name:'Анна',surname:'Соколова',phone,email:'anna@example.test',primary:true},{...blankTraveler('ivan'),name:'Иван',surname:'Орлов',phone:'+447700900123',email:'ivan@example.test'},{...blankTraveler('maria'),name:'Мария',surname:'Орлова',phone:'+79995550124',email:'maria@example.test'}];
+const auth={...initialState(),onboarded:true,activePhone:phone,users:{[phone]:{phone,name:'Анна',travelers}}};
+let commerce=ensureAccount(initialCommerce(),phone);commerce.search={...commerce.search,adults:3,checkIn:'2026-11-13',checkOut:'2026-11-15'};commerce=startDraft(commerce,'orbit-sea','qa-other-person');commerce.draft.step='guest';
+const dir='docs/iteration-4/qa-booking-travelers';await mkdir(dir,{recursive:true});
+const browser=await chromium.launch({channel:'chrome',headless:true});const page=await browser.newPage({viewport:{width:1106,height:1166},reducedMotion:'reduce'});page.setDefaultTimeout(15000);
+try{
+ await page.addInitScript(({auth,commerce})=>{if(!localStorage.getItem('keys-orbita-demo-v1')){localStorage.setItem('keys-orbita-demo-v1',JSON.stringify(auth));localStorage.setItem('keys-orbita-booking-v1',JSON.stringify(commerce));}},{auth,commerce});
+ await page.goto('http://127.0.0.1:5173/#booking-flow',{waitUntil:'domcontentloaded'});
+ await expect(page.getByRole('button',{name:/^Для (себя|другого)$/})).toHaveCount(0);
+ await expect(page.getByRole('textbox',{name:'Имя',exact:true})).toHaveValue('Анна');
+ await expect(page.getByRole('button',{name:'Выбрать путешественника',exact:true})).toHaveCount(0);
+ await page.getByRole('textbox',{name:'Имя',exact:true}).fill('Иван');
+ await page.getByRole('textbox',{name:'Фамилия',exact:true}).fill('Орлов');
+ await page.getByRole('textbox',{name:'Телефон',exact:true}).fill('+447700900123');
+ await page.reload({waitUntil:'domcontentloaded'});await expect(page.getByRole('textbox',{name:'Имя',exact:true})).toHaveValue('Иван');
+ await page.getByRole('button',{name:'Добавить второго гостя',exact:true}).click();
+ const sheet=page.getByRole('dialog');await sheet.getByRole('button',{name:'Выбрать путешественника',exact:true}).click();await expect(sheet.getByRole('button',{name:'Иван Орлов',exact:true})).toHaveCount(0);
+ await page.screenshot({path:dir+'/saved-travelers.png'});
+ await sheet.getByRole('button',{name:'Анна Соколова Это вы',exact:true}).click();await sheet.getByRole('button',{name:'Готово',exact:true}).click();await expect(sheet).toHaveCount(0);
+ await page.getByRole('textbox',{name:'Имя',exact:true}).scrollIntoViewIfNeeded();await page.waitForTimeout(650);await page.screenshot({path:dir+'/guest.png'});
+ await page.getByRole('button',{name:'Продолжить',exact:true}).click();await expect(page.getByRole('heading',{name:'Подтверждение и оплата',exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'Оплатить',exact:true}).click();await expect(page.getByRole('heading',{name:'Бронь подтверждена',exact:true})).toBeVisible();await expect(page.getByText('Иван Орлов',{exact:true})).toBeVisible();
+ const result=await page.evaluate(()=>({commerce:JSON.parse(localStorage.getItem('keys-orbita-booking-v1')),auth:JSON.parse(localStorage.getItem('keys-orbita-demo-v1'))}));
+ const booking=result.commerce.bookings.find(b=>b.id==='qa-other-person');assert.equal(booking.owner,phone);assert.equal(booking.draft.contact.name,'Иван');assert.equal(booking.draft.additionalGuest.name,'Анна');assert.equal(booking.draft.contact.phone,'+447700900123');assert.deepEqual(result.auth.users[phone].travelers,travelers);
+ await page.waitForTimeout(700);await page.screenshot({path:dir+'/confirmation.png'});
+ console.log('PASS: no primary traveler selector or self/other buttons, manual primary guest survives reload, saved additional guest, duplicate exclusion, international phone, checkout and confirmed snapshot; profile unchanged.');
+}finally{await browser.close();}

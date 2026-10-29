@@ -1,0 +1,33 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {initialCommerce,ensureAccount} from '../app/src/booking/model.ts';
+import {activateTripScenario} from '../app/src/booking/demoTripScenarios.ts';
+import {openHotelConversation,sendChatMessage,replyToChat,readChat,unreadChat,threadMessages,chatThreads} from '../app/src/booking/chatThreads.ts';
+const owner='+79001234567',other='+79007654321',target={hotelId:'kazan-apart'};
+const base=()=>ensureAccount(ensureAccount(initialCommerce(),owner),other);
+test('Чат без брони не создаёт финансовых операций и изолирован по владельцу',()=>{const s=base(),next=openHotelConversation(s,owner,target.hotelId);assert.deepEqual(next.bookings,s.bookings);assert.deepEqual(next.payment,s.payment);assert.equal(chatThreads(next,owner).length,1);assert.equal(chatThreads(next,other).length,0);const sent=sendChatMessage(next,owner,target,'Как добраться?','msg');assert.equal(threadMessages(sent,other,target).length,0);assert.throws(()=>openHotelConversation(s,owner,'missing'),/недоступен/);});
+test('Одна отправка и один ответ, непрочитанное исчезает после просмотра',()=>{let s=sendChatMessage(base(),owner,target,'Условия завтрака','msg');s=sendChatMessage(s,owner,target,'Условия завтрака','msg');assert.equal(threadMessages(s,owner,target).length,1);const answered=replyToChat(s,owner,target,'msg');assert.equal(threadMessages(answered,owner,target).length,2);assert.deepEqual(replyToChat(answered,owner,target,'msg'),answered);assert.equal(unreadChat(answered,owner,target),1);const read=readChat(answered,owner,target);assert.equal(unreadChat(read,owner,target),0);assert.equal(threadMessages(read,owner,target)[1].action,'hotel');});
+test('Чат поездки использует прежнюю историю и проверяет отель и права',()=>{let s=activateTripScenario(initialCommerce(),owner,'upcoming','trip');s=ensureAccount(s,other);const t={hotelId:'orbit-sea',bookingId:'trip'};s=sendChatMessage(s,owner,t,'Когда заезд?','msg');assert.equal(s.tripMessages.trip.length,1);assert.throws(()=>sendChatMessage(s,other,t,'Когда заезд?','foreign'),/доступа/);assert.throws(()=>threadMessages(s,owner,{...t,hotelId:'kazan-apart'}),/доступа/);s=replyToChat(s,owner,t,'msg');assert.equal(s.tripMessages.trip.length,2);assert.equal(chatThreads(s,owner)[0].unread,1);assert.equal(chatThreads(readChat(s,owner,t),owner)[0].unread,0);});
+test('Прочтение диалога общей брони принадлежит каждому участнику отдельно',()=>{let s=activateTripScenario(initialCommerce(),owner,'upcoming','trip');s=ensureAccount(s,other);s.bookingManagers={trip:[other]};const t={hotelId:'orbit-sea',bookingId:'trip'};s=replyToChat(sendChatMessage(s,owner,t,'Когда заезд?','msg'),owner,t,'msg');s=readChat(s,owner,t);assert.equal(unreadChat(s,owner,t),0);assert.equal(unreadChat(s,other,t),1);});
+test('Запрос сотрудника не выдаёт персональные данные или фиктивный ответ человека',()=>{let s=replyToChat(sendChatMessage(base(),owner,target,'Позвать сотрудника','staff'),owner,target,'staff');const m=threadMessages(s,owner,target).at(-1);assert.equal(m.role,'assistant');assert.match(m.text,/Запрос/);assert.equal(m.action,undefined);assert.throws(()=>sendChatMessage(s,owner,target,'x'.repeat(1001),'too-long'),/1000/);});
+
+test('Текущий отель выше ближайшей брони и более нового сообщения; после выезда выбирается ближайшая бронь',()=>{
+ let s=activateTripScenario(initialCommerce(),owner,'history','history');
+ const current=structuredClone(s.bookings[0]);current.id='current';current.stay={status:'in_house'};
+ current.draft.search={...current.draft.search,checkIn:'2026-10-27',checkOut:'2026-10-30'};
+ const nearer=structuredClone(s.bookings[0]);nearer.id='nearer';nearer.draft.search={...nearer.draft.search,checkIn:'2026-11-01',checkOut:'2026-11-03'};
+ s={...s,bookings:[...s.bookings,current,nearer]};
+ s=sendChatMessage(s,owner,target,'Здравствуйте','newest','2026-10-29T13:00:00Z');
+ const now=new Date('2026-10-29T12:00:00Z');
+ assert.equal(chatThreads(s,owner,now)[0].bookingId,'current');
+ assert.equal(chatThreads(s,owner,now)[0].priority,'current');
+ assert.equal(chatThreads(s,owner,now).filter(t=>t.priority).length,1);
+ current.stay.status='checked_out';
+ assert.equal(chatThreads(s,owner,now)[0].bookingId,'nearer');
+ assert.equal(chatThreads(s,owner,now)[0].priority,'upcoming');
+ nearer.operation={...nearer.operation,status:'cancelled'};
+ assert.equal(chatThreads(s,owner,now)[0].bookingId,s.bookings[0].id);
+ s.hiddenTrips={[owner]:[s.bookings[0].id]};
+ assert.equal(chatThreads(s,owner,now).filter(t=>t.priority).length,0);
+ assert.equal(chatThreads(s,other,now).length,0);
+});

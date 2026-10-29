@@ -1,0 +1,317 @@
+- link:
+  - /url: /travel/hotels/
+- generic "Мили"
+- button "Поддержка":
+  - generic: Поддержка
+- button "Мои заказы":
+  - generic: Мои заказы
+- button "Избранное":
+  - generic: Избранное
+- button "Подключить отель":
+  - generic: Подключить отель
+- button "Командировки":
+  - generic: Командировки
+- button "Войти":
+  - generic: Войти
+- link "Москва":
+  - /url: /travel/hotels/search-new?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000
+  - generic: Москва
+- img "Отель ibis Москва Киевская"
+- img "Отель ibis Москва Киевская"
+- img "Отель ibis Москва Киевская"
+- img "Отель ibis Москва Киевская"
+- generic: "85"
+- generic: фото и видео
+- button:
+- button:
+- generic "Авторизуйтесь для скидки"
+- generic "Гарантия"
+- generic "300 миль за отзыв"
+- heading "Отель ibis Москва Киевская, 3*" [level=1]
+- generic "4.7"
+- generic "792 отзыва"
+- generic: Ближайшие доступные даты
+- generic "Ваши даты"
+- generic: вт-чт
+- generic: 27 – 29 октября
+- generic: от 33 800 ₽
+- generic "Дешевле"
+- generic: ср-пт
+- generic: 28 – 30 октября
+- generic: от 27 400 ₽
+- generic "Дешевле"
+- generic: чт-сб
+- generic: 29 – 31 октября
+- generic: от 21 000 ₽
+- generic "Дешевле"
+- generic: пт-вс
+- generic: 30 окт – 1 ноя
+- generic: от 13 772 ₽
+- generic "Дешевле"
+- generic: сб-пн
+- generic: 31 окт – 2 ноя
+- generic: от 11 090 ₽
+- generic "Дешевле"
+- generic: вс-вт
+- generic: 1 – 3 ноября
+- generic: от 8 872 ₽
+- generic "Дешевле"
+- generic: пн-ср
+- generic: 2 – 4 ноября
+- generic: от 8 872 ₽
+- generic "Дешевле"
+- generic: вт-чт
+- generic: 3 – 5 ноября
+- generic: от 8 872 ₽
+- generic "Дешевле"
+- generic: ср-пт
+- generic: 4 – 6 ноября
+- generic: от 13 845 ₽
+- generic "Дешевле"
+- generic: чт-сб
+- generic: 5 – 7 ноября
+- generic: от 13 600 ₽
+- generic "Дешевле"
+- generic: пт-вс
+- generic: 6 – 8 ноября
+- generic: от 13 920 ₽
+- generic "Дешевле"
+- generic: сб-пн
+- generic: 7 – 9 ноября
+- generic: от 13 920 ₽
+- generic "Дешевле"
+- generic: вс-вт
+- generic: 8 – 10 ноября
+- generic: от 12 060 ₽
+- generic "Дешевле"
+- generic: пн-ср
+- generic: 9 – 11 ноября
+- generic: от 11 740 ₽
+- generic "Дешевле"
+- generic: вт-чт
+- generic: 10 – 12 ноября
+- generic: от 14 560 ₽
+- button [disabled]:
+- button:
+- generic: Выберите номер
+- generic "Завтрак"
+- generic "Без питания"
+- generic "Двуспальная кровать"
+- img "Стандартный номер - с двуспальной кроватью"
+- img "Стандартный номер - с двуспальной кроватью"
+- img "Стандартный номер - с двуспальной кроватью"
+- generic: Стандартный номер - с двуспальной кроватью
+- button "Подробнее":
+  - generic: Подробнее
+- generic: Двуспальная кровать
+- generic "1 комната"
+- generic "16м2"
+- generic "Ванная комната в номере"
+- generic "Wi-Fi"
+- generic "Вид на окрестности"
+- generic: Без питания
+- generic: Оплата не возвращается
+- generic: Оплата сейчас
+- generic: 33 800 ₽
+- generic "+ 338"
+- button "Выбрать":
+  - generic: Выбрать
+- generic: Завтрак
+- generic: Оплата не возвращается
+- generic: Оплата сейчас
+- generic: 39 000 ₽
+- generic "+ 390"
+- button "Выбрать":
+  - generic: Выбрать
+- generic: от
+- generic: 33 800 ₽
+- generic: 27 – 29 октября, 2 ночи
+- generic: 2 гостя
+- button "Выбрать номер":
+  - generic: Выбрать номер
+- generic: Начислим от 338 миль Ozon
+- region "Map"
+- link:
+  - /url: https://docs.ozon.ru/legal/terms-of-use/site/maps/
+- generic "Показать на карте"
+- generic: Ул. Киевская, д. 2, Москва, Россия
+- button:
+- generic: Метро Киевская
+- generic "300 м"
+- generic: Метро Студенческая
+- generic "1.2 км"
+- generic: Центр города
+- generic "3.8 км"
+- generic: Киевский вокзал
+- generic "300 м"
+- generic: Аэропорт Внуково
+- generic "26 км"
+- link "Отзывы об отеле":
+  - /url: /travel/hotels/product/ibis-moskva-kievskaya-614070973/reviews/
+- text: "792"
+- generic "4.7"
+- generic: Удобства и услуги
+- generic: Самые популярные
+- generic: Wi-Fi
+- generic: Бассейн
+- generic: Сауна
+- generic: Кондиционер
+- generic: Тренажерный зал
+- generic: Игровая комната
+- generic: Детское меню
+- generic: Детский бассейн
+- generic: Регистрация
+- generic: Круглосуточная регистрация
+- generic: Ранний заезд
+- generic: Поздний выезд
+- generic: Регистрация иностранных граждан
+- generic: Бассейн
+- generic: Бассейн
+- generic: Правила проживания
+- generic: Можно с питомцем
+- generic "Платно"
+- generic: Для семей
+- generic: Детское меню
+- generic: Игровая комната
+- generic: Детский бассейн
+- generic: Парковка
+- generic: Парковка
+- generic "Платно"
+- generic: Питание и напитки
+- generic: Ресторан
+- generic: Бар
+- generic: Доставка питания в номер
+- generic: Развлечения и спорт
+- generic: Тренажерный зал
+- generic: Фитнес
+- generic: Развлекательные мероприятия
+- generic: Терраса
+- generic: Телевизор в лобби
+- generic: Пресса
+- generic: Уход за одеждой
+- generic: Гладильные услуги
+- generic "Платно"
+- generic: Прачечная
+- generic "Платно"
+- generic: Химчистка
+- generic "Платно"
+- generic: Чистка обуви
+- generic "Платно"
+- generic: Красота и здоровье
+- generic: SPA
+- generic "Платно"
+- generic: Сауна
+- generic: Хаммам
+- generic: Массаж
+- generic "Платно"
+- generic: Косметические услуги
+- generic: Интернет
+- generic: Wi-Fi
+- generic: Общие
+- generic: Лифт
+- generic: Консьерж
+- generic: Телефон
+- generic: Факс / Ксерокс
+- generic: Климат
+- generic: Кондиционер
+- generic: Отопление
+- generic: Транспорт
+- generic: Трансфер
+- generic "Платно"
+- generic: Заказ такси
+- generic: Для мероприятий
+- generic: Организация банкетов и мероприятий
+- generic: Конференц-зал
+- generic: Переговорная комната
+- generic: Бизнес-центр
+- generic: Безопасность
+- generic: Охрана
+- generic: Видеонаблюдение
+- generic: Камера хранения
+- generic: Сейф
+- generic: Датчик дыма
+- generic: Огнетушитель
+- generic: Аптечка первой помощи
+- generic: Покупки
+- generic: Банкомат
+- generic: Магазины
+- generic: Доступность
+- generic: Удобства для маломобильных гостей
+- generic: Туалеты с поручнями
+- generic: Низкая раковина
+- generic: Ресторан для маломобильных гостей
+- generic: Бар для маломобильных гостей
+- generic: Язык персонала
+- generic: Русский
+- generic: Английский
+- generic: В номерах
+- generic: Курение запрещено
+- generic: Фен
+- generic: Душ
+- generic: Тапочки
+- generic: Электронные дверные замки
+- generic: Об отеле
+- paragraph: "ibis Москва Киевская — яркий трёхзвёздочный отель в центре Москвы, в минуте ходьбы от метро «Киевская» и Киевского вокзала. Отсюда быстро добираться до Кремля, «Крокус Экспо» и аэропорта Внуково. Отель входит в состав ТГК «Киевский», где также работают Novotel 4*, и Adagio 4*, а гостям доступна вся инфраструктура комплекса: рестораны, кафе, более 100 магазинов, спортивные и бьюти-сервисы, а также двухуровневая платная подземная парковка на 540 машиномест."
+- paragraph: В отеле 350 номеров площадью 16 м² — стандартные и категории Premium. Все номера оформлены в современном стиле и оборудованы рабочей зоной; в Premium дополнительно предусмотрена чайная станция. Есть адаптированные номера для гостей с ограниченной мобильностью. Это практичный выбор для коротких визитов, командировок и самостоятельных путешествий.
+- paragraph
+- paragraph
+- button "Показать полностью":
+  - generic: Показать полностью
+- generic: Похожие отели и квартиры рядом на 27 – 29 октября
+- generic "4.8"
+- generic "277"
+- button:
+- generic: 49 000 ₽
+- link "Отель Novotel Москва Киевская":
+  - /url: /travel/hotels/product/novotel-moskva-kievskaya-612653193/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29
+- generic: Москва • 3.8 км до центра
+- generic: Важная информация
+- generic: Заселение
+- generic: с 15:00 до 23:59
+- generic: Выезд
+- generic: до 12:00
+- paragraph: "Российским гражданам при заезде обязательно нужно иметь при себе оригинал одного из следующих документов: действующий паспорт РФ, заграничный паспорт или водительское удостоверение. Стойка регистрации работает 24/7. Загранпаспорта и водительские удостоверения…"
+- button "Подробнее":
+  - generic: Подробнее
+- generic: Отель проверен
+- contentinfo:
+  - generic: Наведите камеру и скачайте приложение Ozon Travel
+  - link "Об Ozon Travel":
+    - /url: https://docs.ozon.ru/ozon-travel/
+    - generic: Об Ozon Travel
+  - link "Политика обработки данных":
+    - /url: https://docs.ozon.ru/legal/personal-data/ru/it/
+    - generic: Политика обработки данных
+  - link "Пользовательское соглашение":
+    - /url: https://docs.ozon.ru/legal/terms-of-use/ozon-travel/
+    - generic: Пользовательское соглашение
+  - link "Поддержка":
+    - /url: https://www.ozon.ru/travel/support/
+    - generic: Поддержка
+  - link "Мильная программа":
+    - /url: https://www.ozon.ru/travel/promo/miles-program/
+    - generic: Мильная программа
+  - link "Условия бронирования для клиентов":
+    - /url: https://docs.ozon.ru/common/pravila-prodayoi-i-rekvizity/ozon-travel/conditions-booking-hotel/
+    - generic: Условия бронирования для клиентов
+  - link "Подключить отель":
+    - /url: https://extranet.ozon.ru
+    - generic: Подключить отель
+  - link "Ozon командировки":
+    - /url: https://www.ozon.ru/travel/corporate/
+    - generic: Ozon командировки
+  - link "База знаний для отельера":
+    - /url: https://hotelier-help.ozon.ru
+    - generic: База знаний для отельера
+  - link "1998 – 2026 ООО \"Интернет Решения\" (Входит в группу компаний МКПАО \"Озон\" (Ozon)). Все права защищены.":
+    - /url: //docs.ozon.ru/legal/terms-of-use/site/content-policy/?perehod=footer
+    - generic: 1998 – 2026 ООО "Интернет Решения" (Входит в группу компаний МКПАО "Озон" (Ozon)). Все права защищены.
+  - text: Применяются
+  - link "рекомендательные технологии":
+    - /url: https://docs.ozon.ru/legal/terms-of-use/site/algorithms/
+  - button:
+  - button:
+  - button:
+  - button:
+  - button "Для слабовидящих":
+    - generic: Для слабовидящих

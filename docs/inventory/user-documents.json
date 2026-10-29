@@ -1,0 +1,22 @@
+{
+  "documents": [
+    {
+      "file": "docs/references/Ключи — экраны переходы и сценарии 2026-10-21.docx",
+      "source_path": "/Users/tatyana.glazyrina/Downloads/Ключи — экраны переходы и сценарии 2026-10-21.docx",
+      "sha256": "51d739916a67c3c36fd35e8fb02b0968c1dcb2b5cb423c7f2866aa1946f3f35a",
+      "bytes": 69318,
+      "text_extract": "docs/references/screens-flows-2026-10-21.md",
+      "paragraph_count": 614,
+      "table_count": 4,
+      "embedded_media_count": 0,
+      "import_date": "2026-10-21",
+      "described_project": "keys-mobile-new",
+      "described_commit": "758be06e21df214c321cf5b5c7fe90c80815a1e4",
+      "verification_scope": "File hash and OOXML text/table extraction; source repository, runtime behavior and Word page layout not verified.",
+      "functional_description_count": 99,
+      "journey_count": 23,
+      "source_copy_verified": true,
+      "paragraph_text_retention_verified": true
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+.benefits-page{display:flex;flex-direction:column;gap:16px;min-width:0}.keys-app .benefits-page h1,.keys-app .benefits-page h2,.keys-app .benefits-page p{margin:0}.keys-app .benefits-page>h1{font:500 26px/34px Unbounded;letter-spacing:-.8px}.benefit-hero{border-radius:28px;background:linear-gradient(140deg,#2f5bff,#5b48ff);color:#fff;padding:18px;position:relative;overflow:hidden;box-shadow:0 20px 38px #2f5bff26;display:flex;flex-direction:column;gap:18px}.benefit-hero-title,.benefit-hero-balance{position:relative;display:flex;flex-direction:column;gap:2px}.keys-app .benefit-hero h2{font:500 22px/28px Unbounded;letter-spacing:-.6px}.benefit-hero small{font-size:12px;line-height:16px;color:#eef1ff}.benefit-hero-balance{margin-top:18px}.benefit-hero-balance strong{font:500 36px/40px Unbounded;letter-spacing:-1.4px}.benefit-hero .k-button{position:relative;min-height:44px;height:44px;background:#ffffff26;border:1px solid #ffffff4d;color:white;font-size:14px}.benefit-section{display:flex;flex-direction:column;gap:12px}.keys-app .benefit-section h2{font:500 16px/22px Onest}.benefit-section-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:0 4px}.benefit-section-heading button,.benefit-text-link{border:0;background:none;color:var(--k-action-primary,#2f5bff);font:500 13px/20px Onest;display:inline-flex;gap:4px;align-items:center;min-height:44px;padding:0}.benefit-card{border:1px solid #e4e7ef;background:#fff;border-radius:22px;overflow:hidden;min-width:0}.benefit-card-caption{padding:12px 16px;font-size:12px;line-height:18px;color:#5a6072;background:#f8f9fd;border-bottom:1px solid #eef0f4}.benefit-program-row,.benefit-history-row{display:flex;align-items:center;gap:12px;width:100%;border:0;background:white;padding:14px 16px;text-align:left;font-family:Onest;color:#101320;min-height:78px}.benefit-program-row+.benefit-program-row,.benefit-history-row+.benefit-history-row{border-top:1px solid #eef0f4}.benefit-program-row>img{width:44px;height:44px;border-radius:13px;object-fit:cover;flex:none}.benefit-program-row>span:nth-child(2),.benefit-history-row>span:nth-child(2){flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}.benefit-program-row strong,.benefit-history-row strong{font-size:14px;line-height:20px;font-weight:500}.benefit-program-row small,.benefit-history-row small{font-size:12px;line-height:17px;color:#5a6072}.benefit-program-value{flex:none;display:flex;flex-direction:column;gap:4px;text-align:right}.benefit-program-value b{border-radius:10px;padding:4px 8px;background:#bff0de;color:#16865a;font-size:13px;white-space:nowrap}.benefit-history-row>b{font-size:14px;line-height:20px;white-space:nowrap}.benefit-history-row .positive{color:#16865a}.benefit-empty-copy{padding:20px 16px;font-size:13px;line-height:20px;color:#5a6072}.benefit-empty-small{display:flex;flex-direction:column;gap:10px;align-items:center;padding:24px 16px;text-align:center}.keys-app .benefit-empty-small p{font-size:13px;color:#5a6072}.benefit-invite{border:1px solid #e4e7ef;border-radius:22px;background:linear-gradient(110deg,#fff,#eef0ff 45%,#dcd8ff 80%,#cdefff);padding:14px 16px;display:flex;gap:12px;align-items:center;color:#101320;text-align:left;font-family:Onest}.benefit-invite>span:nth-child(2){flex:1;display:flex;flex-direction:column;gap:3px}.benefit-invite strong{font-size:15px;font-weight:500}.benefit-invite small{font-size:12px;color:#5a6072}.benefit-points-summary{padding:14px 16px;background:linear-gradient(140deg,#2f5bff,#5b48ff);border-radius:22px;color:white;display:flex;flex-direction:column;gap:6px}.benefit-points-summary>span{font-size:13px;color:#eef1ff}.benefit-points-summary>strong{font:500 36px/44px Unbounded;letter-spacing:-1px}.benefit-points-summary button{color:white;align-self:flex-start}.benefit-tabs{display:flex;gap:8px;min-width:0}.benefit-tabs button{border:1px solid #e4e7ef;border-radius:18px;padding:8px 14px;white-space:nowrap;background:white;color:#5a6072;font:500 13px/18px Onest;flex:none}.benefit-tabs button[aria-pressed=true]{background:#101320;border-color:#101320;color:white}.benefit-muted{font-size:13px;line-height:20px;color:#5a6072}.benefit-hotel{display:flex;align-items:center;gap:12px}.benefit-hotel>img{width:64px;height:64px;object-fit:cover;border-radius:18px;flex:none}.keys-app .benefit-hotel h1,.keys-app .benefit-hotel h2{font:500 18px/25px Onest}.keys-app .benefit-hotel p{font:400 13px/20px Onest;color:#5a6072;margin-top:4px}.benefit-program-hero{border-radius:22px;background:linear-gradient(135deg,#eef0ff,#fff);border:1px solid #e4e7ef;display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:18px}.benefit-program-hero>span:first-child{font-size:12px;color:#5a6072}.benefit-program-numbers{display:flex;gap:24px;flex-wrap:wrap}.benefit-program-numbers>div{display:flex;flex-direction:column;gap:6px}.benefit-program-numbers small{font-size:12px;color:#5a6072}.benefit-program-numbers strong{font:500 28px/36px Unbounded;letter-spacing:-.8px}.keys-app .benefit-program-hero p{font-size:13px;line-height:20px;color:#5a6072}.benefit-conditions{padding:4px 16px}.benefit-conditions>div{display:flex;gap:10px;align-items:flex-start;padding:12px 0;font-size:14px;line-height:21px}.benefit-conditions .k-icon{flex:none;margin-top:2px}.benefit-connect{display:flex;flex-direction:column;gap:14px}.benefit-connect>.benefit-text-link{align-self:flex-start}.benefit-info{display:flex;gap:10px;padding:14px 16px;border-radius:16px;background:#eef0ff;font-size:13px;line-height:20px}.benefit-info .k-icon{flex:none}.benefit-operation-amount{font:500 28px/36px Unbounded;margin-bottom:16px}.benefit-operation-amount small{font:400 14px/22px Onest}.benefit-operation{display:flex;flex-direction:column;gap:8px;padding:16px;margin-bottom:16px}.benefit-operation span{font-size:13px;line-height:20px;color:#5a6072}
+
+.benefit-hero>div[aria-hidden]{position:absolute;inset:0;pointer-events:none}
+
+.benefit-connect-trigger{width:100%;text-align:left;color:var(--k-text-primary);font-family:Onest;cursor:pointer}.benefit-connect-trigger>span:nth-child(2){flex:1}.benefit-connection-hotel{font:500 18px/25px Onest;margin:0 0 18px}
+/* lp1/v3: original photo/caption/balance anatomy. */
+.benefit-program-hero{padding:0;gap:0;border-radius:28px;background:#fff;display:block}.benefit-program-photo{height:140px;position:relative}.benefit-program-photo>img{height:100%;width:100%;object-fit:cover;display:block}.benefit-program-photo>div{position:absolute;left:12px;right:12px;bottom:12px;border-radius:16px;background:#ffffffe0;backdrop-filter:blur(20px);padding:10px 12px;display:flex;flex-direction:column}.keys-app .benefit-program-photo h1{font:500 16px/22px Onest;letter-spacing:0}.benefit-program-photo small{display:flex;gap:4px;align-items:center;font-size:12px;line-height:17px;color:#5a6072}.benefit-program-numbers{padding:14px 16px 16px;display:grid;grid-template-columns:1fr 1fr;gap:12px}.benefit-program-numbers strong{font:500 24px/30px Unbounded;color:#16865a;white-space:nowrap}.benefit-program-numbers>div:last-child:not(:first-child){align-items:flex-end}.benefit-program-notice{display:flex;gap:10px;padding:12px 14px;background:#fff8ec;border:1px solid #f3e2c4;border-radius:18px;color:#5b4314;font:400 13px/19px Onest}.benefit-program-notice>.k-icon{flex:none;color:#b7791f!important}.benefit-condition-check{display:grid;place-items:center;width:22px;height:22px;flex:none;background:#bff0de;color:#16865a;border-radius:50%}.benefit-condition-check .k-icon{margin:0}.benefit-conditions>div+div{border-top:1px solid #eef0f4}.benefit-network-hero{border-radius:28px;background:linear-gradient(140deg,#2f5bff,#5b48ff);padding:18px;color:white;display:flex;flex-direction:column;gap:14px;box-shadow:0 20px 40px #2f5bff38}.benefit-network-name{display:flex;gap:10px;align-items:center}.benefit-network-name .icon-tile{background:#ffffff26;color:white}.keys-app .benefit-network-name h1{font:500 17px/23px Onest}.benefit-network-hero small{font:400 12px/18px Onest;color:#dfe3ff}.benefit-network-value{display:flex;justify-content:space-between;align-items:center}.benefit-network-value span{font-size:12px;color:#dfe3ff}.benefit-network-value strong{font:500 24px/30px Unbounded}.keys-app .benefit-network-hero p{font:400 12px/17px Onest;color:#eef1ff}
+.benefit-program-hero{overflow:hidden}
+.benefit-program-numbers>div{gap:2px}.benefit-program-numbers small{line-height:15px}
+
+.benefit-privileges{display:flex;flex-direction:column;gap:12px;margin-bottom:8px}
+.benefit-privileges>section{display:flex;align-items:flex-start;gap:12px;padding:16px;border-radius:20px;background:var(--k-surface-app);border:1px solid var(--k-border-default,#e4e7ef)}
+.benefit-privileges .icon-tile{flex:none;background:var(--k-action-tint,#eef0ff);color:var(--k-action-primary,#2f5bff)}
+.bottom-sheet .benefit-privileges h3{margin:0 0 6px;font:500 15px/21px Onest;color:var(--k-text-primary,#101320)}
+.bottom-sheet .benefit-privileges p{margin:0;font:400 14px/21px Onest;color:var(--k-text-secondary,#5a6072)}
+
+/* v5 — история баллов: исходная композиция «Все экраны». */
+.benefit-points-summary{position:relative;overflow:hidden;border-radius:28px;padding:18px;display:block;box-shadow:0 24px 48px #2f5bff40}
+.benefit-points-summary>div[aria-hidden]{position:absolute;inset:0;pointer-events:none}
+.benefit-points-balance{position:relative;display:flex;flex-direction:column;gap:2px;padding-right:48px}
+.benefit-points-balance>span{font:400 12px/16px Onest;color:#eef1ff}
+.benefit-points-balance>strong{font:500 40px/44px Unbounded;letter-spacing:-1.6px;font-variant-numeric:tabular-nums}
+.benefit-points-summary .benefit-points-help{position:absolute;right:12px;bottom:12px;width:44px;height:44px;display:grid;place-items:center;padding:0;border:0;border-radius:50%;background:#ffffff1f;color:#fff}
+.benefit-history-months{display:flex;flex-direction:column;gap:16px}
+.benefit-history-month{display:flex;flex-direction:column;gap:10px}
+.keys-app .benefit-history-month h2{padding:0 4px;font:500 13px/19px Onest;color:#5a6072}
+.benefit-history-row{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:12px;padding:12px 16px;min-height:68px}
+.benefit-history-row>span:nth-child(2){gap:2px}
+.benefit-history-row .icon-tile{width:44px;height:44px;border-radius:15px;flex:none;background:#eef0ff;color:#2f5bff}
+.benefit-history-row.credit .icon-tile{background:#bff0de;color:#16865a}
+.benefit-history-row strong{font:500 15px/21px Onest}
+.benefit-history-row>b{font:500 15px/21px Unbounded;letter-spacing:-.3px;font-variant-numeric:tabular-nums}
+.benefit-history-row .positive,.benefit-operation-amount.positive{color:#11734d}
+.benefit-entry-date{white-space:nowrap}
+.benefit-history-filters>button{min-width:0}
+
+.keys-app .benefit-history-month h2::first-letter{text-transform:uppercase}
+.bottom-sheet:has(.benefit-operation) .sheet-title{font:500 20px/26px Unbounded;letter-spacing:-.5px}
+.benefit-operation>strong{font:500 15px/21px Onest}
+
+/* Программа принадлежит отелю: без знака и кобальтового кошелька «Ключей». */
+.benefit-program-row{display:grid;grid-template-columns:44px minmax(0,1fr) 16px;align-items:start;column-gap:12px;padding:16px}
+.benefit-program-row>img{margin-top:1px}
+.benefit-program-row>.k-icon{align-self:center;color:#8990a2}
+.benefit-program-row .benefit-program-copy{gap:2px}
+.benefit-program-row strong{font:500 15px/21px Onest}
+.benefit-program-perks{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:7px}
+.benefit-discount-badge,.benefit-hotel-points{display:inline-flex;align-items:center;gap:4px;min-height:27px;padding:5px 8px;border-radius:9px;font:400 12px/17px Onest;white-space:nowrap;font-variant-numeric:tabular-nums}
+.benefit-discount-badge{background:#bff0de;color:#11734d;font-weight:500}
+.benefit-hotel-points{background:#f4f5fb;color:#5a6072;box-shadow:inset 0 0 0 1px #e4e7ef}
+.benefit-hotel-points>b{color:#101320;font-weight:500}
+
+/* v3: hotel membership levels stay distinct from the Keys orbit wallet. */
+.hotel-level-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:14px 16px 0;font:400 12px/18px Onest;color:#5a6072}
+.hotel-level-badge{display:inline-flex;padding:4px 10px;border-radius:10px;background:#eef0ff;color:#2f5bff;font-weight:500;white-space:nowrap}
+.benefit-program-numbers.hotel-level-numbers{grid-template-columns:repeat(auto-fit,minmax(85px,1fr));gap:8px}
+.benefit-program-numbers.hotel-level-numbers>div{align-items:flex-start}
+.benefit-program-numbers.hotel-level-numbers strong{font-size:22px;letter-spacing:-.7px}
+.benefit-program-numbers .hotel-points-number{color:#101320}
+.hotel-level-progress{display:flex;flex-direction:column;gap:6px;padding:0 16px 16px;font:400 12px/18px Onest;color:#5a6072}
+.hotel-level-progress progress{display:block;width:100%;height:8px;border:0;border-radius:4px;overflow:hidden;background:#eef0ff;appearance:none}
+.hotel-level-progress progress::-webkit-progress-bar{background:#eef0ff;border-radius:4px}
+.hotel-level-progress progress::-webkit-progress-value{background:#2f5bff;border-radius:4px}
+.hotel-level-progress progress::-moz-progress-bar{background:#2f5bff;border-radius:4px}
+.hotel-level-progress small{font-size:11px;color:#8990a2}
+.hotel-level-max{display:inline-flex;align-items:center;gap:5px;color:#16865a}
+.hotel-level-sheet-subtitle{font:400 14px/20px Onest;color:#5a6072}
+.hotel-level-sheet-benefits{border:1px solid #e4e7ef;border-radius:22px;padding:4px 16px;background:#fff}
+.hotel-level-sheet-benefits>div{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;font:400 14px/20px Onest}
+.hotel-level-sheet-benefits>div+div{border-top:1px solid #eef0f4}
+.hotel-level-sheet-benefits strong{font:500 20px/26px Unbounded;white-space:nowrap}
+
+/* Universal hotel levels: natural height, optional benefits, no initials or rank artwork. */
+.hotel-level-cards{display:flex;flex-direction:column;gap:10px}
+.hotel-level-card{display:flex;flex-direction:column;align-items:flex-start;gap:8px;width:100%;padding:16px;border:1px solid #e4e7ef;border-radius:22px;background:#fff;color:#101320;text-align:left}
+.hotel-level-card.is-current{background:#fff;border-color:#e4e7ef;color:#101320;box-shadow:inset 5px 0 0 #2f5bff,0 6px 16px rgb(16 19 32 / 5%);padding-left:21px}
+.hotel-level-card.is-current .hotel-level-card-heading strong{color:#2f5bff}
+.hotel-level-card-heading{display:flex;align-items:flex-start;gap:12px;width:100%}
+.hotel-level-card-title{flex:1;min-width:0;display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+.hotel-level-card-heading strong{min-width:0;font:500 15px/21px Onest;overflow-wrap:anywhere}
+.hotel-level-card-heading>.k-icon{flex:none;margin-top:3px;color:#8990a2}
+.hotel-level-card-condition,.hotel-level-card-description{font:400 13px/19px Onest;color:#5a6072;overflow-wrap:anywhere;max-width:100%}
+.hotel-level-card-description{color:#73798a}
+.hotel-level-card-benefits{display:flex;flex-wrap:wrap;gap:6px;width:100%;margin-top:2px}
+.hotel-level-perk{display:inline-flex;align-items:center;max-width:100%;padding:5px 8px;border-radius:9px;font:400 12px/17px Onest;color:#5a6072;background:#f4f5fb;overflow-wrap:anywhere}
+.hotel-level-perk.discount{color:#11734d;background:#e4f7ef}
+.hotel-level-perk.points{color:#101320;background:#f4f5fb;box-shadow:inset 0 0 0 1px #e4e7ef}
+.hotel-level-perk.privilege{background:transparent;padding-left:2px;padding-right:2px}
+.hotel-level-card.is-current .hotel-level-card-condition,.hotel-level-card.is-current .hotel-level-card-description,.hotel-level-card.is-current .hotel-level-card-heading>.k-icon{color:#5a6072}
+.hotel-level-card.is-current .hotel-level-perk{color:#101320;background:#f4f5fb;box-shadow:none}
+.hotel-level-card.is-current .hotel-level-perk.discount{color:#11734d;background:#e4f7ef}
+.hotel-level-card.is-current .hotel-level-perk.privilege{background:transparent}
+
+.keys-app .hotel-level-card-title .k-status{align-self:flex-start}
+
+/* Same 9px nodes / white halo and 1px rail as the trip history timeline.
+   Per-item connectors follow variable card heights and stop at the final node. */
+.hotel-level-timeline{gap:12px}
+.hotel-level-timeline::before{display:none}
+.hotel-level-timeline>.timeline-tone-info::before{box-shadow:0 0 0 1px #bcc5ff}
+.hotel-level-timeline>.history-timeline-item:not(:last-child)::after{content:"";position:absolute;left:-19px;top:32px;height:calc(100% + 12px);width:1px;background:#d0d3e1;z-index:-1}
+.hotel-level-timeline>.timeline-tone-success:not(:last-child)::after{background:#21996e}

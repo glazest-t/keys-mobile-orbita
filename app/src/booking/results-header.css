@@ -1,0 +1,28 @@
+/* D-081: query and controls scroll with the hotel results. */
+.keys-app{--results-header-height:96px}
+.results-fixed-header{position:relative;height:var(--results-header-height);padding-top:4px;background:var(--k-surface-app);z-index:6;display:flex;flex-direction:column;gap:8px;border-bottom:1px solid var(--k-border-subtle)}
+.results-search-row{display:flex;align-items:center;gap:8px;padding:0 12px}
+.results-search-edit{flex:1;min-width:0;min-height:44px;padding:2px 4px;border:0;border-radius:12px;background:transparent;display:flex;align-items:center;justify-content:space-between;gap:8px;text-align:left;color:var(--k-text-primary);transition:transform var(--interaction-release) var(--interaction-arrive),background-color var(--interaction-release) var(--interaction-arrive)}
+.results-search-edit>span:first-child{display:flex;flex-direction:column;min-width:0;gap:1px}
+.results-search-edit strong{font:500 17px/22px Onest;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.results-search-edit small{font:400 12px/17px Onest;color:var(--k-text-secondary);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.results-edit-hint{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--k-action-tint);color:var(--k-action-primary);flex:none}
+.results-search-edit:active{transform:scale(.97);background:var(--k-action-tint);transition-duration:var(--interaction-press)}
+.results-controls-rail{flex:none}
+.results-controls-rail .filter-chip{height:32px;min-height:32px}
+.results-controls-rail .discovery-chip-track{padding:0 12px 8px;align-items:center}
+
+.keys-app .results-main{padding-top:8px}
+
+
+@media(prefers-reduced-motion:reduce){.results-search-edit:active{transform:none}}
+.bottom-sheet:has(.results-sort-panel){border-radius:30px 30px 0 0}
+.bottom-sheet:has(.results-sort-panel) .sheet-title{font:500 20px/26px Unbounded;letter-spacing:-.5px}
+.bottom-sheet:has(.results-sort-panel) .sheet-handle{width:36px;height:5px;background:#d9dde8}
+.bottom-sheet:has(.results-sort-panel) .sheet-header{padding:0 20px 14px}
+.bottom-sheet:has(.results-sort-panel) .sheet-content{padding:0 20px 30px}
+.results-sort-panel{display:flex;flex-direction:column;gap:4px}
+.results-sort-option{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;min-height:54px;padding:14px 12px;border:0;border-radius:14px;background:transparent;color:var(--k-text-primary);font:400 15px/22px Onest;text-align:left}
+.results-sort-option[aria-pressed=true]{background:var(--k-action-tint);color:var(--k-action-primary);font-weight:500}
+.results-sort-check{display:grid;place-items:center;width:22px;height:22px;border:1px solid var(--k-border-subtle);border-radius:50%;flex:none}
+.results-sort-option[aria-pressed=true] .results-sort-check{background:var(--k-action-primary);border-color:var(--k-action-primary);color:#fff}

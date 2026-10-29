@@ -1,0 +1,985 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "path": "design/assets/icons/_sprite.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/_sprite.svg",
+      "sha256": "25ae2c4abd2c5213ee89f2fd61dfe43fb9e28f5ff43aa9707161ce37ea79e8be",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/baby-cot.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/baby-cot.svg",
+      "sha256": "8c28ba09f73a82ba142bc63c5f063fa016f98ce19c732ef8c350283ea2eae2e5",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/back.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/back.svg",
+      "sha256": "815e1ad641fe2c983402894cac78c96f9f0277c88b877b3d5eb09c826c059f30",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/bar.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/bar.svg",
+      "sha256": "0b5a8068618abb30310933e646bf8a19c60ee40cb862b3f77e30688b47cbed5b",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/bell.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/bell.svg",
+      "sha256": "f82192e461795ac28546f0a9fc26b956720755871dcaabf433e32631a448cebe",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/best-price.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/best-price.svg",
+      "sha256": "565b79ec647af3ae71d57755cbc6020172bf045cd992f2362ea2ec5e1f24d3ad",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/bill.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/bill.svg",
+      "sha256": "2f7f0b2cc61dd68846dbbe667b6eb165effade074382cba2d55c0265d3ff0ba1",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/bluetooth.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/bluetooth.svg",
+      "sha256": "2d98a2386a41f59635852906de3a384f33fdf408f023855148119081c0d889fe",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/breakfast.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/breakfast.svg",
+      "sha256": "4095d67861709d4252c238ee38137bc81819020dfecf524c3b0987349506fb00",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/bulb.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/bulb.svg",
+      "sha256": "15b6822b3fd45f5b5b7e432bd3af1f8be919d664b70f51bad4c48778b1f30632",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/calendar.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/calendar.svg",
+      "sha256": "c4b232de84187ffd174ab1c71d645100910139dd17cf7b6af75d3d63b4848ede",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/camera.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/camera.svg",
+      "sha256": "c20e4c2ff53a65f7aaea1a4709ce89ca6e95557e7a3e569ab80f615484420c5b",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/car.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/car.svg",
+      "sha256": "ab6a10e950d9bb968f10d7e76611b2f9c6fcbdb520718a4a39f24995602eddd5",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/card.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/card.svg",
+      "sha256": "a7d996293ebec0ff77d7f6e75f2f14d89ce9e4b00afab56a1826fb5ff45624be",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/chat-hotel.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/chat-hotel.svg",
+      "sha256": "6013e10cdfeafaad495d9f3c8c5ed5ed1563303bbcda67919f084bca545f9a8e",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/check-in.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/check-in.svg",
+      "sha256": "d1c723591798af0b2fcc43607c4257c2ce3c45587b2216026f47706e62060f2b",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/check-out.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/check-out.svg",
+      "sha256": "528fe17254e8b39fa1a0d37f298101e62db349f0168b085887e8776aebcaee76",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/check.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/check.svg",
+      "sha256": "29d6b1d0c31772759ec722e6fc9e719324d5eba604709ab6b2d1beaa0cb1e3e1",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/chevron-down.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/chevron-down.svg",
+      "sha256": "63b3f71631c7e7c7a112d721f2cefe5f3b17bc3054c27ea7175313a6a2f4696c",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/chevron-right.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/chevron-right.svg",
+      "sha256": "8ffb810da15bf6eabfd87f1ac65053dcea2e66ffb3bb2e6d646843302adf621c",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/cleaning.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/cleaning.svg",
+      "sha256": "3f5a3c8372df6fb0edf709ee8fdf72e9e907f320cd0ecca2c268becb64fc270d",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/climate.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/climate.svg",
+      "sha256": "cb915b2b48ea6ad8551b503b4ca9cd75eed144f948554b1304694994106a9d3d",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/close.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/close.svg",
+      "sha256": "366b84cbd34c609d0803d7beb1a261b51f687356efa881f29d9622da66cde9cd",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/coffee-to-go.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/coffee-to-go.svg",
+      "sha256": "3c3256b7c93e6bfffb741667ae905873dec6ad76ba51af8179dac68e7e6bbb7c",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/concierge.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/concierge.svg",
+      "sha256": "b17ba348ddce7d1158e92ef3e6d9eb3626e827cb63104f00d452a711aee61f9d",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/deposit.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/deposit.svg",
+      "sha256": "e69263de102f29e0236cf71adab044387fbdd497c335eaaac39ac22d7aa4657b",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/discount.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/discount.svg",
+      "sha256": "eddf9f3c6a8303ae6a69bf73f09b162ace1b5bb6a6a1a9cddd1bebb3b6850c49",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/do-not-disturb.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/do-not-disturb.svg",
+      "sha256": "a5607b71bc7cc3751529933bd844da60517a0b7add7271e3b21c49e7d15b911b",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/document.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/document.svg",
+      "sha256": "5051ea7144f2aaf2d789b13b3fab45a4ad6d994a10791b1fcadad1951665d1cf",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/door.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/door.svg",
+      "sha256": "2d0ec3e8a7dd1bfb3a8c9b1b53ba76d0cf40cca4cff559646e7a83294c7b7646",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/early-check-in.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/early-check-in.svg",
+      "sha256": "26bb0477a7fb6061f7bbf6a2a1e4891b11cc7a0222ecfb333ed5103acd1b595c",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/edit.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/edit.svg",
+      "sha256": "790aafbfee900c7b8e38c8253037d0882639c5003b500bcdf6f43243913e4259",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/error.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/error.svg",
+      "sha256": "8be18f8ba41e883873535c2f9e4262f98a271afe90703a658223f13c8a4d8ba5",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/face-id.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/face-id.svg",
+      "sha256": "a6c1ccdc1467e2ed2fbe477187e49cd3732be38d2e4a896604d1e3d43a5a9106",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/filter.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/filter.svg",
+      "sha256": "8090dd3bbff6a72c8c4de4ddcdfc30e4182bc840c8d3628b50b3d43e3bd65850",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/fitness.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/fitness.svg",
+      "sha256": "d44f105b288a79512f3e62ee2520529d1a6916b600fde0c4cf4db1a6fe46a16b",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/floor.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/floor.svg",
+      "sha256": "16c1a75615113e8d474160b658688f67ddccfae5f251464d9cace09f61d14361",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/gift.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/gift.svg",
+      "sha256": "1e98410706c0eb32d0fc4573a7f0c794e1812ca91bd1ae754b4ba7a5b87299ef",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/globe.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/globe.svg",
+      "sha256": "73e053729751d25cfae31eed2fdb7869360e1ddf6ccc450ae1e7757e85bdd493",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/guests.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/guests.svg",
+      "sha256": "1fe82f491ebf27f4877c2c3ea4061f5b7d327c0af261b1f844fdd68d02f86dc0",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/heart.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/heart.svg",
+      "sha256": "804929091157ee11cd427baf7a20d7e2270a65b5e7cc11c95577a2fe31e8053f",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/icons.json",
+      "source": "проект в Клоде/project/brand-kit/icons/icons.json",
+      "sha256": "c0d44012b40f8cc25030d90234f2c954936e85be9086af3502c9ff136c99b65d",
+      "transformation": "source icon dictionary preserved; added project icons flame and sort in the same 24px stroke style",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/info.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/info.svg",
+      "sha256": "975b15fe3d5b91fb9732537f97644c5c54e815ad6ac2f106803ff84732204268",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/invite.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/invite.svg",
+      "sha256": "156b905577322d3fcfe93871a646f76b1dea51fed5fb3fcad1065116e3fb2ba7",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/iron.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/iron.svg",
+      "sha256": "7445982bac173fcdf0327f60344b8b818b67269271f3219d135d5e308b507ebf",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/key.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/key.svg",
+      "sha256": "847f6e098d56c6d5f54ddce96b1ef5ae9f76493e7abccce91d75523af0bb1d16",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/language.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/language.svg",
+      "sha256": "c8f1333c0349aaa3310e201059eb4ff22fb44c628c311f5398d8935c556371c9",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/late-check-out.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/late-check-out.svg",
+      "sha256": "3110aa4639f156ae2a167d8d826b9e205fbae83fc07037492c0ebb472bf894c0",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/laundry.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/laundry.svg",
+      "sha256": "249113bda01a155bb5ccdfdd3707bbd617412a7c37c8ca1bc65aa287cad99de0",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/logout.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/logout.svg",
+      "sha256": "c8b0ac3d6cd1943700422f1cb012197647f3bbb5642b431435d5e1023d56bec8",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/luggage.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/luggage.svg",
+      "sha256": "a7c872f954d3e78d14d28714a7fc1cef352b71535670df6124d3f403a47c3c80",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/mail.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/mail.svg",
+      "sha256": "7124df7e0e1fed21f8a71ab6e3dd85bae7fdbc731d355b12da099f9088e88a42",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/map.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/map.svg",
+      "sha256": "22460a2a443f2c11bbf38dcbfb7fd76d61bf2119cc2e987343d2b9e68cf3997b",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/menu.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/menu.svg",
+      "sha256": "f47d28659c601f1e55ffb64e257f75ce8825338d90bdc767e172c04c000884c9",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/minibar.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/minibar.svg",
+      "sha256": "7f5306e1c7b9672fe2cba369467fcb28ad6e0637f55d2779aa98690a80064e85",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/more.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/more.svg",
+      "sha256": "844802f794d658348147fb1ae3157b0cf9aaea4d210af04a194ed72a7f70dc4b",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/nav-chats.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/nav-chats.svg",
+      "sha256": "6887fa9420adafdd77da772259737ebb101d3019f105275cf41f56619815d4c1",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/nav-profile.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/nav-profile.svg",
+      "sha256": "372366a1e09dee53275fd0a6c60434f66a729451e4919fec5110b9403e34b612",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/nav-rewards.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/nav-rewards.svg",
+      "sha256": "773e8c807167d887a5c1373b9f38525b3f50d752aab808538d2188ca074e6fa6",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/nav-search.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/nav-search.svg",
+      "sha256": "69c0ddb22a292990eb619b36a0e54042c32d9909d59bdc6bf7ac4d5929ecab37",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/nav-trips.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/nav-trips.svg",
+      "sha256": "d1ece625e10c459695d5ee0358ed6dbac4760c52532b6ac8fa37e311c9f1a06f",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/nearby.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/nearby.svg",
+      "sha256": "c8fc096d04e07ffd669559514cba017ad62b46280ace37543ae97e5f8756ea53",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/nfc.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/nfc.svg",
+      "sha256": "189c71c3be62143756e475d4bc29cc83bbc0b1e93f80ccbe0e2430ad56997719",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/orbit.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/orbit.svg",
+      "sha256": "5864136316f8fcb3c67354bae44f277b4a57a6e84bf2b2b36f679e0424dc730b",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/parking.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/parking.svg",
+      "sha256": "e3c9f5ba8aa0064aba49fedc52787eb4d6c7c1f327cfef34a17584334c661290",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/passport.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/passport.svg",
+      "sha256": "dda50ee0d7ed1dcd7f0e56ec50bb8efe78dd97114ec0e252c8e63ed606dfb61c",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/pending.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/pending.svg",
+      "sha256": "297870e767da11b93b642114c465e7428760532c4b8ee9d994088f6ef9bae112",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/pet.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/pet.svg",
+      "sha256": "22eb537e506db9c00df5387b5ebb6bdf6b7508dfdf54528851d542baad1cf4c7",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/phone.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/phone.svg",
+      "sha256": "ef4cde57994b007afbaea99677f567887dde45b662b9bd83b55317d8ae0ba043",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/pillow.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/pillow.svg",
+      "sha256": "2a38683350acb8918d9ed475b34a296bd37418f92f9a57e4afffadc40b5e930d",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/pin.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/pin.svg",
+      "sha256": "4cd2a3630140fa5c645e8b54822f628efe149053bac72f151d10f5ed28c24cd4",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/plane.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/plane.svg",
+      "sha256": "b603fc2ba30318f55db5c1ba5c09766d2dc20c64b0ad83ea38328c869af0d9c8",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/plus.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/plus.svg",
+      "sha256": "54b28fbb78e75c95122d5ee122dce46070112b4e8a07b1b52681fcbc7c5ac094",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/points.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/points.svg",
+      "sha256": "065536e3995f70dc2081949d8fbb9f425b8b1c59632c44328adc59bd9e741b08",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/pool.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/pool.svg",
+      "sha256": "93c7397ff4630672d4da1b2663abad619f1105d9dee10ec51a60209478f63406",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/preferences.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/preferences.svg",
+      "sha256": "a675a88a0c1758c13c33cae644d9dfb8e1a399732a765d643e90634adbc94897",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/problem.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/problem.svg",
+      "sha256": "7cb2f0ce92776412253ea0d254d7a0d1bc6f58d5a7cbfa9fc6b8d334faaff581",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/qr.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/qr.svg",
+      "sha256": "1a34fe074bcf488f70d4b387d517399f1a06ba7aebba8ac74a998c0b5792e008",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/receipt.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/receipt.svg",
+      "sha256": "0307207e50d479e9d5f9feac2928d03f15f48fc5901e7d61b8cfad5d01590d2a",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/reception.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/reception.svg",
+      "sha256": "b986a536cacc35b53d74c1a769049b690401a0691e0ba3da46d61983089905c9",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/restaurant.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/restaurant.svg",
+      "sha256": "b2de8d49c2c2133c27cb739951eca499dbd2f3f8ebd30a215163c02cac7c3a0a",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/review.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/review.svg",
+      "sha256": "c1988442817ea4811b2e57f4dec8980a3c6b5bafbaf777c71d4e84c5b446ab43",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/room-service.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/room-service.svg",
+      "sha256": "bd480ae7857a2e3f2b1319d368ef3faedc3a77163d7dc42523902d51d91c14af",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/room.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/room.svg",
+      "sha256": "c120b4da2d0c9e48a2af1ab8c416903f007912fc3ffca66b3e1df3e627ebc9e2",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/route.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/route.svg",
+      "sha256": "3cbfc382eaf3ea15af29693b9a186fb742587af5af67519b8283c854faa522ff",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/safe.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/safe.svg",
+      "sha256": "0649b07cd88a53e7154167f59d7d5f2f0f4412b70d90ca184989adb385d8babf",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/secure.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/secure.svg",
+      "sha256": "20974d4c5347f87cbe2b10341f8a491c4d3b01e3e82bb7125a1e8c5011fd3144",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/settings.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/settings.svg",
+      "sha256": "e3554d0ebb41cd0d52989f04c5a74b973385ffa52502f38bd18837653bc3d60a",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/share.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/share.svg",
+      "sha256": "dcda674af6bbb563ee5dbce624c12afe3eed101d8708d0fd2a851ee9d2922c13",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/spa.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/spa.svg",
+      "sha256": "3e1934fa8233959daefcad80b1b00f3c5db4f9ff11eaf95833431af97fb00a65",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/style-match.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/style-match.svg",
+      "sha256": "6997239b14ce28abbcb1cbb9a26b834a75dd5b68c0c8e54e0118a2e0a7535f99",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/success.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/success.svg",
+      "sha256": "afeae4dc93a1bf8db843bf75f68adb3dc3be502e591a70376a60e265143f3f57",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/taxi.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/taxi.svg",
+      "sha256": "14280851756a73f699c6e8c457e99ae02771d8ce019065e271de604d895e5acf",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/ticket.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/ticket.svg",
+      "sha256": "9cab15f60c5c26eaf6b83ebf39b65970d8e7680f742e797a92cd242f33eda622",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/towels.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/towels.svg",
+      "sha256": "aa2b2752d681b88bcb1a62f13fa5392972b5eab755258bcb69736c82c133ce6b",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/train.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/train.svg",
+      "sha256": "639189c1de2aa8fe6c8e63843f7278e21240a230a389ad03b316e1354933a720",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/transfer.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/transfer.svg",
+      "sha256": "bbe1764bf1dddfef93c6e0c25b3ce0c2cd0e4b5960161896044d0f2ab8143565",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/trash.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/trash.svg",
+      "sha256": "b2674f238c4fba43a91f5282d3ebafaa3bef383ef9151c7605d9c84f19f73819",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/tv.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/tv.svg",
+      "sha256": "3ee49f3ad66879c74798cbce916332467df0f5ef7cd7f08ba5f1e6eca08d364e",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/wallet.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/wallet.svg",
+      "sha256": "61f821a49f1dcf26b5f5ac29345de0f7474e4adc4e1cf3ad9be524803f722a03",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/warning.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/warning.svg",
+      "sha256": "7773a7d071ddf6f44cd6371b482e631bf61adc535ea437a85a010ee1ec6a5f12",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/weather.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/weather.svg",
+      "sha256": "25d93f7f558f2b5b37a4be4c0d6bb2558c45fe364f4fa81b497e08e5c3029d9d",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/wifi.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/wifi.svg",
+      "sha256": "b27dd3ebdfc8980dc1947b22a221aa01dfef02d0c13f0aebabad66104cc5c5bb",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/wine.svg",
+      "source": "проект в Клоде/project/brand-kit/icons/wine.svg",
+      "sha256": "1fff2f56aed248bafa205991693f4ff47497d62b9dbe4bd06b122e3392b6811f",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/logo/horizontal-cobalt.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/horizontal-cobalt.svg",
+      "sha256": "8c3ae5557257e1f724eacb45be616fd89de50bad93f543b271c45bc26c6af81a",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/logo/horizontal-ink.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/horizontal-ink.svg",
+      "sha256": "57a6bbdb18e00a3fc768b26545e81ad239e0c67c638c22e7e25697acefd21d50",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/logo/horizontal-white.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/horizontal-white.svg",
+      "sha256": "1a0bc1824c07cb4f9e8afee0dd60253e5fc535c93c83abcdc5a2005aa58a54e8",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/logo/mark-3d.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/mark-3d.svg",
+      "sha256": "dbcc4d0c2bdaf1460b9877124c7042b214909677d02bedbfd859b0e2ab27e334",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/logo/mark-cobalt.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/mark-cobalt.svg",
+      "sha256": "47e79ed52eb5b0570991d7d1a62c1645dc01d88f66fe08f069f6ee997f509ed0",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/logo/mark-ink.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/mark-ink.svg",
+      "sha256": "983124462a05b2730bf5bce93fa92fff5aab49cadb82ea5146466348a354902d",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/logo/mark-white.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/mark-white.svg",
+      "sha256": "877d879225d350196b5a26a1fffc6a076842dd9bb21f45f3ab285fb571303407",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/logo/states/mark-dream-270deg.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/states/mark-dream-270deg.svg",
+      "sha256": "417ef3c7ce55f35e80e99876b9452b3f6350817f37ef10aca1ba020103af0d6b",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/logo/states/mark-going-0deg.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/states/mark-going-0deg.svg",
+      "sha256": "27249e1b359025e0752a7cd108b76c0105d32e6afa69ed325223cc9cfbe488b4",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/logo/states/mark-goodbye-180deg.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/states/mark-goodbye-180deg.svg",
+      "sha256": "860ac7cf0578f82a547ab702db038b31caadc43b27830f2e60ed2795f4ad2fb4",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/logo/states/mark-here-45deg.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/states/mark-here-45deg.svg",
+      "sha256": "2bb044cb090fe0abe839661b10b59d4441f8a2488f8b7191cda8a91ca602b34d",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/logo/states/mark-stay-90deg.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/states/mark-stay-90deg.svg",
+      "sha256": "5d8a6b28b723d4fa189a9853e3fc14c237f6c82f8dce40ce5cbb9ddd1cfb5b6b",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/logo/vertical-cobalt.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/vertical-cobalt.svg",
+      "sha256": "30106a333a23c348a20f2b5b1060913ee2a5c31057984ed55054a8b6b12179bb",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/logo/vertical-ink.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/vertical-ink.svg",
+      "sha256": "b0322693649f52976120ed445bb4c4abb78f4eb9cde39fbeee2051b52a367c72",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/logo/vertical-white.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/vertical-white.svg",
+      "sha256": "fe37ccdff197e6dcf10b4bd4c00f7728dcc35fb51fb4743a1c9b7f3782bb5bb6",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/app-icon/android-adaptive-foreground.svg",
+      "source": "проект в Клоде/project/brand-kit/app-icon/android-adaptive-foreground.svg",
+      "sha256": "d09e05dbcf0974373954a4f1b2defdcf30c9e013a66fd746804352b5a1461106",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/app-icon/android-monochrome.svg",
+      "source": "проект в Клоде/project/brand-kit/app-icon/android-monochrome.svg",
+      "sha256": "906d917f6905498f8b537e9516854fbf712a4e47187039cf635dcebdbb57d5d9",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/app-icon/favicon.svg",
+      "source": "проект в Клоде/project/brand-kit/app-icon/favicon.svg",
+      "sha256": "734c03e012530412c0b51b64d94d98c51d8fdd48a578cf3e835b2ebae0e2c3e6",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/app-icon/icon-cobalt.svg",
+      "source": "проект в Клоде/project/brand-kit/app-icon/icon-cobalt.svg",
+      "sha256": "aebba8af44466836e5bf6c45b729f01afada8d9ff51f405937b4a176c2ea0116",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/app-icon/icon-dark.svg",
+      "source": "проект в Клоде/project/brand-kit/app-icon/icon-dark.svg",
+      "sha256": "6805d46f7fa71437fe4734ce2985989b16cef8ad4b73ce8bb1c19f6638843c69",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/app-icon/icon-main.svg",
+      "source": "проект в Клоде/project/brand-kit/app-icon/icon-main.svg",
+      "sha256": "6141c9873b391c703ced32490e8493d2ca590eaf6579ceaf107e28b9026bd0b6",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/app-icon/icon-seasonal.svg",
+      "source": "проект в Клоде/project/brand-kit/app-icon/icon-seasonal.svg",
+      "sha256": "9f4ef3e6ac4bcc744c372a22d422d447346b2b1192e6bd8517108ccd1ca0a716",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/app-icon/icon-tinted-ios.svg",
+      "source": "проект в Клоде/project/brand-kit/app-icon/icon-tinted-ios.svg",
+      "sha256": "b67af1db309b13a834fc680364514061ddd64fc6a04e75e9b54e00de8085ae4a",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/assets/maidens-hotel.jpg",
+      "source": "проект в Клоде/project/brand-kit/assets/maidens-hotel.jpg",
+      "sha256": "8d91e258f2ed63f02fad2068152b45c4b563c741b304b7f40123bf4337410c7a",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/assets/maidens-premium-king.jpg",
+      "source": "проект в Клоде/project/brand-kit/assets/maidens-premium-king.jpg",
+      "sha256": "2102d435183bc1fc3b5ad4ee6ff4bf958680d229ed7de69e801ecaadb9c8ec0b",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/assets/next-trip.jpg",
+      "source": "проект в Клоде/project/brand-kit/assets/next-trip.jpg",
+      "sha256": "fbd9853c984e3719febe8ce3367980a5391e25289743bfe1362606454b9ab811",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/assets/room-suite-2.jpg",
+      "source": "проект в Клоде/project/brand-kit/assets/room-suite-2.jpg",
+      "sha256": "404a8a4cc53b9ea5429cad7763a1770137a32b7e76d46b05217b9e8c2b52f852",
+      "transformation": "unchanged_copy",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/logo/horizontal-cobalt-outlined.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/horizontal-cobalt.svg",
+      "transformation": "Unbounded 500 shaped with HarfBuzz; glyph outlines; source geometry preserved",
+      "sha256": "e2586edad03773731f804bb51838cc349cedf26aa54abee225eef845257cbc73",
+      "rights": "user_source_plus_font_OFL"
+    },
+    {
+      "path": "design/assets/logo/horizontal-ink-outlined.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/horizontal-ink.svg",
+      "transformation": "Unbounded 500 shaped with HarfBuzz; glyph outlines; source geometry preserved",
+      "sha256": "388dc670759284b31fbc9e83b9dbed3c559f9b6bfd96400df698633679d38c89",
+      "rights": "user_source_plus_font_OFL"
+    },
+    {
+      "path": "design/assets/logo/horizontal-white-outlined.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/horizontal-white.svg",
+      "transformation": "Unbounded 500 shaped with HarfBuzz; glyph outlines; source geometry preserved",
+      "sha256": "73d4f2b7891fc39f8121984543694306253b0660d0a34ca7a8260f6250efadef",
+      "rights": "user_source_plus_font_OFL"
+    },
+    {
+      "path": "design/assets/logo/vertical-cobalt-outlined.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/vertical-cobalt.svg",
+      "transformation": "Unbounded 500 shaped with HarfBuzz; glyph outlines; source geometry preserved",
+      "sha256": "5fe2d075445288e38af7308173485fd09c56c77e04b5fff24789ece8b7150671",
+      "rights": "user_source_plus_font_OFL"
+    },
+    {
+      "path": "design/assets/logo/vertical-ink-outlined.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/vertical-ink.svg",
+      "transformation": "Unbounded 500 shaped with HarfBuzz; glyph outlines; source geometry preserved",
+      "sha256": "3ef7ea3c051e95ce50edb764960cf7f6ae57503725da4d7843963200aabee43c",
+      "rights": "user_source_plus_font_OFL"
+    },
+    {
+      "path": "design/assets/logo/vertical-white-outlined.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/vertical-white.svg",
+      "transformation": "Unbounded 500 shaped with HarfBuzz; glyph outlines; source geometry preserved",
+      "sha256": "ced55fb25e2a3325aac2a552a7d52f9dbeec922d1b2eec4e57f2f22b7cff390a",
+      "rights": "user_source_plus_font_OFL"
+    },
+    {
+      "path": "design/assets/logo/mark-cobalt-ui.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/mark-cobalt.svg",
+      "transformation": "tight viewBox; explicit mask extent; transparent background; original ring and dot geometry",
+      "sha256": "fac9c8e5ee872ff07189f8078c61a4a64745111d2bb4523e4b90470f0e4e7d5b",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/logo/mark-ink-ui.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/mark-ink.svg",
+      "transformation": "tight viewBox; explicit mask extent; transparent background; original ring and dot geometry",
+      "sha256": "bb49fc6021bef1cc89ebab0bd76f787f0bc977cc2efee15e456b7227f61603e3",
+      "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/logo/mark-white-ui.svg",
+      "source": "проект в Клоде/project/brand-kit/logo/mark-white.svg",
+      "transformation": "tight viewBox; explicit mask extent; transparent background; original ring and dot geometry",
+      "sha256": "05a55bedd6db012a83132fe26119238d2563341a83d3621acdf422be7bb142c9",
+      "rights": "provided_by_user_not_independently_verified"
+    }
+  ]
+}

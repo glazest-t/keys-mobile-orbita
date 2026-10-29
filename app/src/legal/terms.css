@@ -1,0 +1,11 @@
+.service-terms{display:flex;flex-direction:column;gap:24px;padding-bottom:16px}
+.service-terms section{display:flex;flex-direction:column;gap:8px}
+.keys-app .service-terms h2{font:500 17px/23px var(--k-font-text);color:var(--k-text-primary)}
+.keys-app .service-terms p{font:400 14px/22px var(--k-font-text);color:var(--k-text-secondary)}
+.keys-app .terms{text-align:center;font:400 11px/18px var(--k-font-text)}
+.terms a{color:var(--k-action-primary);text-decoration:underline;text-underline-offset:3px}
+.terms a:focus-visible{outline:2px solid var(--k-text-secondary);outline-offset:3px;border-radius:3px}
+.service-terms-intro{display:flex;flex-direction:column;gap:10px}
+.service-terms-intro>small{font:400 12px/18px var(--k-font-text);color:var(--k-text-secondary)}
+.service-terms-tabs{display:flex;gap:8px}
+.keys-app .service-terms .service-terms-title{font:500 19px/26px var(--k-font-display);letter-spacing:-.4px}

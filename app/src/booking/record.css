@@ -1,0 +1,50 @@
+.record-flow{position:absolute;inset:0;background:#f4f5fb}
+.record-scroll{background:#f4f5fb}
+.record-header{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;gap:8px;padding:6px 12px;background:#f4f5fb;font:500 15px/21px Onest;text-align:center}
+.record-content{display:flex;flex-direction:column;gap:20px;padding:20px 16px 36px;color:#101320;font:400 14px/20px Onest}
+.record-card{background:#fff;border:1px solid #e4e7ef;border-radius:22px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.record-number{flex-direction:row;align-items:center;justify-content:space-between}
+.record-number>span:first-child{display:flex;flex-direction:column;gap:4px}
+.record-number small,.record-muted{color:#5a6072;font:400 13px/19px Onest;margin:0}
+.record-number strong{font:500 20px/26px Unbounded;letter-spacing:-.5px}
+.record-status{padding:5px 9px;border-radius:10px;background:#b7efdc;color:#08764b;font:500 12px/17px Onest}
+.record-status.cancelled{background:#fde8e8;color:#b4232a}
+.record-hotel{display:grid;grid-template-columns:60px minmax(0,1fr);gap:12px;align-items:center;padding:10px;background:#fff;border:1px solid #e4e7ef;border-radius:22px}
+.record-hotel img{width:60px;height:60px;object-fit:cover;border-radius:16px}
+.record-hotel>div{display:flex;flex-direction:column;gap:4px}.record-hotel strong{font:500 14px/20px Onest}.record-hotel small{font:400 12px/17px Onest;color:#5a6072}
+.record-section{display:flex;flex-direction:column;gap:10px}.keys-app .record-section h2{margin:0;font:500 16px/22px Onest}
+.record-info-row{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}.record-info-row>span{color:#5a6072;flex:0 1 42%}.record-info-row>strong{font-weight:400;text-align:right;flex:1;overflow-wrap:anywhere}
+.record-payment-total{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px solid #e4e7ef}.record-payment-total strong{font:500 19px/25px Unbounded;white-space:nowrap}
+.record-payment-status,.record-service{display:flex;align-items:center;gap:8px}.record-payment-status{color:#16865a;font-size:12px}
+.record-actions{display:flex;flex-direction:column;gap:8px;margin-top:4px}.record-actions .k-button{height:52px;min-height:52px;border-radius:14px;font:500 15px/22px Onest}.record-actions .k-button.secondary,.record-actions .k-button.ghost{height:44px;min-height:44px;padding:10px 16px;font-size:14px;line-height:20px}.record-actions .k-button.secondary{background:#eef0ff}.record-actions .k-button.record-cancel{color:#e5484d}
+.record-wishes{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}.record-change{display:flex;flex-direction:column;gap:4px}.record-change small{color:#5a6072}
+.record-edit{padding-top:4px;gap:14px;padding-bottom:calc(var(--flow-footer-height) + var(--mobile-safe-area-height) + 24px)}
+.keys-app .record-edit h1{font:500 22px/29px Unbounded;letter-spacing:-.6px;margin:0}
+.record-edit-options{border:1px solid #e4e7ef;border-radius:22px;background:#fff;overflow:hidden}
+.record-edit-options>button,.record-edit-options>div{width:100%;display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:center;gap:12px;padding:11px 16px;border:0;background:transparent;color:#101320;text-align:left;font:400 15px/21px Onest}
+.record-edit-options>*+*{border-top:1px solid #eef0f4}
+.record-edit-options .icon-tile{width:44px;height:44px;border-radius:15px;background:#eef0ff;color:#2f5bff}
+.record-edit-options>*>span:nth-child(2){display:flex;flex-direction:column;gap:3px}.record-edit-options strong{font-weight:500}.record-edit-options small{font:400 12px/17px Onest;color:#5a6072}.record-edit-options .record-edit-link{font:500 12px/17px Onest;color:#2f5bff}
+.record-footer{padding:16px 16px 38px;background:#fff;border-top:1px solid #e4e7ef}.record-footer .field-error{margin:0 0 8px}
+.bottom-sheet:has(.record-cancellation){border-radius:30px 30px 0 0}.bottom-sheet:has(.record-cancellation) .sheet-title{font:500 20px/26px Unbounded;letter-spacing:-.5px}
+
+/* d1: composition and typography from «Все экраны». */
+.record-details-header{padding:0 12px}
+.record-content:not(.record-edit){padding-bottom:30px}
+.record-number>span:first-child{gap:2px}
+.record-number small{font:400 12px/17px Onest}
+.record-status{padding:4px 10px;background:#bff0de;color:#11734d;font:500 12px/16px Onest;white-space:nowrap}
+.record-status.cancelled{background:#fde8e8;color:#b4232a}
+.record-hotel img{border-radius:14px}
+.record-hotel>div{gap:0}
+.record-hotel strong{font:500 15px/21px Onest}
+.keys-app .record-section h2{padding:0 4px;font:500 17px/24px Onest}
+.record-info-row{gap:12px}
+.record-info-row>span{flex:0 1 auto;min-width:0}
+.record-info-row>strong{flex:0 1 auto;min-width:0;max-width:70%;font-weight:500}
+.record-info-row.record-positive>strong{color:#11734d}
+.record-content:not(.record-edit) .record-payment-total{padding-top:10px;border-color:#eef0f4;font-weight:500}
+.record-content:not(.record-edit) .record-payment-total strong{font:500 14px/20px Onest}
+.record-payment-status{gap:6px;font:500 13px/19px Onest;color:#11734d}
+
+.record-card > .record-payment-paid{align-self:flex-end}

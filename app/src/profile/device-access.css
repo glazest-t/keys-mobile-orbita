@@ -1,0 +1,32 @@
+.device-access-setup,.device-unlock{display:flex;flex-direction:column;gap:20px;min-width:0}.device-unlock{padding:24px 24px calc(32px + var(--device-safe-area-bottom,0px));min-height:100%;box-sizing:border-box}.device-access-logo{width:112px;height:40px;object-fit:contain;align-self:center}.device-access-mark{position:relative;display:grid;place-items:center;width:76px;height:76px;border-radius:26px;background:#edf1ff;color:#2f5bff;flex:none}.device-access-mark.is-success{background:var(--k-status-successTint,#BFF0DE);color:var(--k-status-success)}.device-access-mark.is-checking:after{content:'';position:absolute;inset:-8px;border:1px solid #c3ceff;border-radius:50%;border-top:3px solid #2f5bff;animation-name:device-biometric-orbit;animation-duration:inherit;animation-timing-function:var(--k-ease-orbit);animation-iteration-count:infinite}.device-pin-input{display:flex;justify-content:center;margin:0;padding:0;border:0;min-width:0}.device-pin-input:disabled{opacity:1}.device-access-progress{font:400 14px/20px Onest;text-align:center;color:#5a6072;margin:0}.device-biometric{align-items:center;text-align:center;gap:20px}.device-biometric h2{font:500 20px/28px Unbounded;letter-spacing:-.5px;margin:0}.device-biometric p{font:400 15px/22px Onest;color:#5a6072;margin:0}.device-biometric>.k-button{width:100%}.device-lock-screen{height:100%;min-height:0}.device-unlock .profile-settings-intro{padding-top:24px}.device-unlock .pin-code-field{margin-top:10px}.biometric-demo-controls{display:flex;flex-wrap:wrap;gap:6px;border:0;padding:4px 0;margin:0;min-width:0}.biometric-demo-controls legend{font-size:12px;margin-bottom:6px}.biometric-demo-controls button[aria-pressed=true]{background:#edf1ff;border-color:#2f5bff}.device-unlock .k-button.ghost{margin-top:auto}
+@keyframes device-biometric-orbit{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.device-access-mark.is-checking:after{animation:none}}
+
+.bottom-sheet:has(.device-biometric) .sheet-title{font:500 20px/26px var(--k-font-display);letter-spacing:-.5px}
+
+.device-unlock .profile-settings-intro h1{overflow-wrap:anywhere;max-width:100%}
+
+/* Fast re-entry keeps the existing app palette, logo and four code cells. */
+.device-unlock-quick{padding:24px 28px calc(20px + var(--device-safe-area-bottom,0px));gap:20px}
+.device-unlock-quick .profile-settings-intro{padding:20px 0 8px;gap:8px}
+.device-unlock-quick .profile-settings-intro h1{font:500 22px/30px var(--k-font-display);letter-spacing:-.5px}
+.device-unlock-quick .pin-code-field{margin-top:0}
+.device-unlock-quick .sms-code-label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.device-unlock-quick .device-pin-input{min-height:88px}
+.device-unlock-quick .sms-code-success{justify-content:center}
+.device-unlock-quick .device-access-progress{position:absolute;left:28px;right:28px;top:260px}
+.device-unlock-quick>.k-button.ghost{margin:0}
+.device-pin-keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:8px 16px;border:0;padding:0;margin:0 auto;width:100%;max-width:300px}
+.device-pin-keypad button{border:0;border-radius:24px;background:transparent;min-height:64px;display:grid;place-items:center;color:var(--k-text-primary);font:400 30px/40px var(--k-font-text);transition:background var(--interaction-release),transform var(--interaction-release)}
+.device-pin-keypad button:active:not(:disabled){background:var(--k-action-tint);transform:scale(.95)}
+.device-pin-keypad .pin-key-action{color:var(--k-action-primary)}
+.device-pin-keypad button:disabled{opacity:.4}
+.device-biometric-entry{min-height:calc(100% - 1px);padding:24px 24px calc(24px + var(--device-safe-area-bottom,0px));box-sizing:border-box;display:flex;flex-direction:column;gap:24px}
+.device-biometric-center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;padding-top:40px;min-height:450px}
+.device-launch-mark{display:block;width:128px;height:128px;object-fit:contain}
+.device-biometric-feedback{min-height:100px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;color:var(--k-action-primary)}
+.keys-app .device-biometric-feedback h1{font:500 22px/30px var(--k-font-display);letter-spacing:-.5px;max-width:340px}
+.keys-app .device-biometric-feedback p{font:400 15px/22px var(--k-font-text);margin:0}
+.device-auth-success{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:18px;background:var(--k-status-successTint,#BFF0DE);color:var(--k-status-success);font:500 16px/22px var(--k-font-text);white-space:nowrap}
+.device-biometric-actions{display:flex;flex-direction:column;gap:12px;min-height:116px;justify-content:flex-end}
+@media(prefers-reduced-motion:reduce){.device-pin-keypad button:active:not(:disabled){transform:none}}

@@ -1,0 +1,5819 @@
+{
+  "hotels": {
+    "moscow-izmaylovo-tvoy-otel": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/izmaylovo-tvoy-otel-1635992617/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=5968185146000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 1470000,
+        "nightMinor": 735000,
+        "checkIn": "2026-10-27",
+        "checkOut": "2026-10-29",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": 3,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/izmaylovo-tvoy-otel-1635992617/?Dlts=2&checkIn=2026-11-13&checkOut=2026-11-15&cityOrRegionId=140158000&hotelId=5968185146000"
+    },
+    "moscow-otel-shelterz-vdnh": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/otel-shelterz-vdnh-615534660/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=5968322524000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 446600,
+        "nightMinor": 223300,
+        "checkIn": "2026-10-27",
+        "checkOut": "2026-10-29",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": null,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/otel-shelterz-vdnh-615534660/?Dlts=2&checkIn=2026-11-13&checkOut=2026-11-15&cityOrRegionId=140158000&hotelId=5968322524000"
+    },
+    "moscow-ibis-moskva-kievskaya": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/ibis-moskva-kievskaya-614070973/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=2770917243000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 3380000,
+        "nightMinor": 1690000,
+        "checkIn": "2026-10-27",
+        "checkOut": "2026-10-29",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": 3,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/ibis-moskva-kievskaya-614070973/?Dlts=2&checkIn=2026-11-13&checkOut=2026-11-15&cityOrRegionId=140158000&hotelId=2770917243000"
+    },
+    "moscow-apart-otel-okruzhnaya": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/apart-otel-okruzhnaya-2477495118/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=11512383126000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 750000,
+        "nightMinor": 375000,
+        "checkIn": "2026-10-27",
+        "checkOut": "2026-10-29",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": null,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/apart-otel-okruzhnaya-2477495118/?Dlts=2&checkIn=2026-11-13&checkOut=2026-11-15&cityOrRegionId=140158000&hotelId=11512383126000"
+    },
+    "moscow-gostinitsa-metallurg": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/gostinitsa-metallurg-4783609449/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=14861713348000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 720000,
+        "nightMinor": 360000,
+        "checkIn": "2026-10-27",
+        "checkOut": "2026-10-29",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": 2,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/gostinitsa-metallurg-4783609449/?Dlts=2&checkIn=2026-11-13&checkOut=2026-11-15&cityOrRegionId=140158000&hotelId=14861713348000"
+    },
+    "moscow-gostevoy-dom-lesnoy-sheremetyevo": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/gostevoy-dom-lesnoy-sheremetyevo-3074714554/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=12625112099000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 860000,
+        "nightMinor": 430000,
+        "checkIn": "2026-10-27",
+        "checkOut": "2026-10-29",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": null,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/gostevoy-dom-lesnoy-sheremetyevo-3074714554/?Dlts=2&checkIn=2026-11-13&checkOut=2026-11-15&cityOrRegionId=140158000&hotelId=12625112099000"
+    },
+    "moscow-gostinitsa-ekonom-nasledie": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/gostinitsa-ekonom-nasledie-615570897/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=4609454219000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 480000,
+        "nightMinor": 240000,
+        "checkIn": "2026-10-27",
+        "checkOut": "2026-10-29",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": null,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/gostinitsa-ekonom-nasledie-615570897/?Dlts=2&checkIn=2026-11-13&checkOut=2026-11-15&cityOrRegionId=140158000&hotelId=4609454219000"
+    },
+    "moscow-arena": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/arena-613312194/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=1493099024000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 1300000,
+        "nightMinor": 650000,
+        "checkIn": "2026-10-27",
+        "checkOut": "2026-10-29",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": 2,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/arena-613312194/?Dlts=2&checkIn=2026-11-13&checkOut=2026-11-15&cityOrRegionId=140158000&hotelId=1493099024000"
+    },
+    "moscow-hostel-guten-duck-moscow": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/hostel-guten-duck-moscow-614081631/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=4601269226000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 597200,
+        "nightMinor": 298600,
+        "checkIn": "2026-10-27",
+        "checkOut": "2026-10-29",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": null,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/hostel-guten-duck-moscow-614081631/?Dlts=2&checkIn=2026-11-13&checkOut=2026-11-15&cityOrRegionId=140158000&hotelId=4601269226000"
+    },
+    "moscow-minima-belorusskaya": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/minima-belorusskaya-614074934/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=3339748420000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 1980000,
+        "nightMinor": 990000,
+        "checkIn": "2026-10-27",
+        "checkOut": "2026-10-29",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": 3,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/minima-belorusskaya-614074934/?Dlts=2&checkIn=2026-11-13&checkOut=2026-11-15&cityOrRegionId=140158000&hotelId=3339748420000"
+    },
+    "moscow-otel-tesla": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/otel-tesla-614075072/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=5807998913000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 2280000,
+        "nightMinor": 1140000,
+        "checkIn": "2026-10-27",
+        "checkOut": "2026-10-29",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": 3,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/otel-tesla-614075072/?Dlts=2&checkIn=2026-11-13&checkOut=2026-11-15&cityOrRegionId=140158000&hotelId=5807998913000"
+    },
+    "moscow-bun-in-alley": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/bun-in-alley-1927556719/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=10534379687000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 758000,
+        "nightMinor": 379000,
+        "checkIn": "2026-10-27",
+        "checkOut": "2026-10-29",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": null,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/bun-in-alley-1927556719/?Dlts=2&checkIn=2026-11-13&checkOut=2026-11-15&cityOrRegionId=140158000&hotelId=10534379687000"
+    },
+    "moscow-otel-maksima-zarya": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/otel-maksima-zarya-613317643/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=36137153000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 1080000,
+        "nightMinor": 540000,
+        "checkIn": "2026-10-27",
+        "checkOut": "2026-10-29",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": 3,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/otel-maksima-zarya-613317643/?Dlts=2&checkIn=2026-11-13&checkOut=2026-11-15&cityOrRegionId=140158000&hotelId=36137153000"
+    },
+    "moscow-moscow-marriott-imperial-plaza": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/moscow-marriott-imperial-plaza-613326838/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=5968152308000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 3800000,
+        "nightMinor": 1900000,
+        "checkIn": "2026-10-27",
+        "checkOut": "2026-10-29",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": 5,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/moscow-marriott-imperial-plaza-613326838/?Dlts=2&checkIn=2026-11-13&checkOut=2026-11-15&cityOrRegionId=140158000&hotelId=5968152308000"
+    },
+    "moscow-akvamarin-zont-hotel-group": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/akvamarin-zont-hotel-group-614073506/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=5968232118000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 8730000,
+        "nightMinor": 4365000,
+        "checkIn": "2026-10-27",
+        "checkOut": "2026-10-29",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": 4,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/akvamarin-zont-hotel-group-614073506/?Dlts=2&checkIn=2026-11-13&checkOut=2026-11-15&cityOrRegionId=140158000&hotelId=5968232118000"
+    },
+    "moscow-pekin": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/pekin-613315861/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=36136195000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 3620000,
+        "nightMinor": 1810000,
+        "checkIn": "2026-10-27",
+        "checkOut": "2026-10-29",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": 4,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/pekin-613315861/?Dlts=2&checkIn=2026-11-13&checkOut=2026-11-15&cityOrRegionId=140158000&hotelId=36136195000"
+    },
+    "moscow-zvezdy-arbata-otel-i-apartamenty": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/zvezdy-arbata-otel-i-apartamenty-613316070/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=1615579477000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 5760000,
+        "nightMinor": 2880000,
+        "checkIn": "2026-10-27",
+        "checkOut": "2026-10-29",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": 5,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/zvezdy-arbata-otel-i-apartamenty-613316070/?Dlts=2&checkIn=2026-11-13&checkOut=2026-11-15&cityOrRegionId=140158000&hotelId=1615579477000"
+    },
+    "moscow-palmira-business-club": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/palmira-business-club-613326068/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=2302577686000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 7731000,
+        "nightMinor": 3865500,
+        "checkIn": "2026-10-27",
+        "checkOut": "2026-10-29",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": 4,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/palmira-business-club-613326068/?Dlts=2&checkIn=2026-11-13&checkOut=2026-11-15&cityOrRegionId=140158000&hotelId=2302577686000"
+    },
+    "moscow-otel-mandarin-moskva": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/otel-mandarin-moskva-614071054/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=36141218000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 1944000,
+        "nightMinor": 972000,
+        "checkIn": "2026-10-27",
+        "checkOut": "2026-10-29",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": 4,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/otel-mandarin-moskva-614071054/?Dlts=2&checkIn=2026-11-13&checkOut=2026-11-15&cityOrRegionId=140158000&hotelId=36141218000"
+    },
+    "moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/otel-gettsleep-sheremetevo-terminal-aeroekspress-1427722718/?Dlts=2&checkIn=2026-10-27&checkOut=2026-10-29&cityOrRegionId=140158000&hotelId=8146709828000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 840000,
+        "nightMinor": 420000,
+        "checkIn": "2026-10-27",
+        "checkOut": "2026-10-29",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": 1,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/otel-gettsleep-sheremetevo-terminal-aeroekspress-1427722718/?Dlts=2&checkIn=2026-11-13&checkOut=2026-11-15&cityOrRegionId=140158000&hotelId=8146709828000"
+    },
+    "spb-valo-network": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/valo-network-1361921991/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=8532179715000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 1110000,
+        "nightMinor": 370000,
+        "checkIn": "2026-11-05",
+        "checkOut": "2026-11-08",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": 3,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/valo-network-1361921991/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=8532179715000"
+    },
+    "spb-valo-business": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/valo-business-1101597082/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=8039785119000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 1045500,
+        "nightMinor": 348500,
+        "checkIn": "2026-11-05",
+        "checkOut": "2026-11-08",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": 4,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/valo-business-1101597082/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=8039785119000"
+    },
+    "spb-demokrat-na-kamennoostrovskom-39": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/demokrat-na-kamennoostrovskom-39-5456245574/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=15731043275000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 1200000,
+        "nightMinor": 400000,
+        "checkIn": "2026-11-05",
+        "checkOut": "2026-11-08",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": null,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/demokrat-na-kamennoostrovskom-39-5456245574/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=15731043275000"
+    },
+    "spb-apart-otel-uno-by-valo": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/apart-otel-uno-by-valo-1606938091/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=9113336601000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 1620000,
+        "nightMinor": 540000,
+        "checkIn": "2026-11-05",
+        "checkOut": "2026-11-08",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": null,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/apart-otel-uno-by-valo-1606938091/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=9113336601000"
+    },
+    "spb-apartpeydzh-nevskiy": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/apartpeydzh-nevskiy-1101596970/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6210704000000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 872200,
+        "nightMinor": 290700,
+        "checkIn": "2026-11-05",
+        "checkOut": "2026-11-08",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": 3,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/apartpeydzh-nevskiy-1101596970/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6210704000000"
+    },
+    "spb-osobnyak-molvo": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/osobnyak-molvo-612652954/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=4599416055000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 440000,
+        "nightMinor": 146700,
+        "checkIn": "2026-11-05",
+        "checkOut": "2026-11-08",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": null,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/osobnyak-molvo-612652954/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=4599416055000"
+    },
+    "spb-apartamenty-new-horizon-liteyniy": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/apartamenty-new-horizon-liteyniy-615558174/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=4605134525000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 909100,
+        "nightMinor": 303000,
+        "checkIn": "2026-11-05",
+        "checkOut": "2026-11-08",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": null,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/apartamenty-new-horizon-liteyniy-615558174/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=4605134525000"
+    },
+    "spb-ramada-plaza-by-wyndham-st-petersburg": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/ramada-plaza-by-wyndham-st-petersburg-612672006/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=5842972978000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 1350000,
+        "nightMinor": 450000,
+        "checkIn": "2026-11-05",
+        "checkOut": "2026-11-08",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": 4,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/ramada-plaza-by-wyndham-st-petersburg-612672006/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=5842972978000"
+    },
+    "spb-apartpeydzh-elagin": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/apartpeydzh-elagin-1101606411/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6240290812000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 828500,
+        "nightMinor": 276200,
+        "checkIn": "2026-11-05",
+        "checkOut": "2026-11-08",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": 3,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/apartpeydzh-elagin-1101606411/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6240290812000"
+    },
+    "spb-otel-rotas-city-center": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/otel-rotas-city-center-3317085659/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=13092288728000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 669700,
+        "nightMinor": 223200,
+        "checkIn": "2026-11-05",
+        "checkOut": "2026-11-08",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": null,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/otel-rotas-city-center-3317085659/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=13092288728000"
+    },
+    "spb-apartamenty-dvoriki-petra-na-gorohovoy": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/apartamenty-dvoriki-petra-na-gorohovoy-2779269877/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=11994836783000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 872400,
+        "nightMinor": 290800,
+        "checkIn": "2026-11-05",
+        "checkOut": "2026-11-08",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": null,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/apartamenty-dvoriki-petra-na-gorohovoy-2779269877/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=11994836783000"
+    },
+    "spb-greenwich-by-friends": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/greenwich-by-friends-617487873/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=4498161580000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 1152400,
+        "nightMinor": 384100,
+        "checkIn": "2026-11-05",
+        "checkOut": "2026-11-08",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": null,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/greenwich-by-friends-617487873/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=4498161580000"
+    },
+    "spb-ligotel": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/ligotel-616410580/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=1049768951000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 1300000,
+        "nightMinor": 433300,
+        "checkIn": "2026-11-05",
+        "checkOut": "2026-11-08",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": null,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/ligotel-616410580/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=1049768951000"
+    },
+    "spb-mini-otel-moov-apart-bogema": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/mini-otel-moov-apart-bogema-1160870712/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6238133905000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 880800,
+        "nightMinor": 293600,
+        "checkIn": "2026-11-05",
+        "checkOut": "2026-11-08",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": null,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/mini-otel-moov-apart-bogema-1160870712/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6238133905000"
+    },
+    "spb-mini-otel-demokrat-na-nevskom-107b": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/mini-otel-demokrat-na-nevskom-107b-1101598986/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6238835168000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 827300,
+        "nightMinor": 275800,
+        "checkIn": "2026-11-05",
+        "checkOut": "2026-11-08",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": null,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/mini-otel-demokrat-na-nevskom-107b-1101598986/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6238835168000"
+    },
+    "spb-aristokrat": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/aristokrat-1606938002/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=9110763915000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 706100,
+        "nightMinor": 235400,
+        "checkIn": "2026-11-05",
+        "checkOut": "2026-11-08",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": null,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/aristokrat-1606938002/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=9110763915000"
+    },
+    "spb-apart-otel-port-comfort-by-old-nevskiy": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/apart-otel-port-comfort-by-old-nevskiy-1101595448/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6242170867000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 1080000,
+        "nightMinor": 360000,
+        "checkIn": "2026-11-05",
+        "checkOut": "2026-11-08",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": 3,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/apart-otel-port-comfort-by-old-nevskiy-1101595448/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6242170867000"
+    },
+    "spb-arkada": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/arkada-615537695/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=1697271067000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 999200,
+        "nightMinor": 333100,
+        "checkIn": "2026-11-05",
+        "checkOut": "2026-11-08",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": 3,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/arkada-615537695/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=1697271067000"
+    },
+    "spb-mini-otel-sadovaya-loft": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/mini-otel-sadovaya-loft-615554323/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=5976006489000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 1005500,
+        "nightMinor": 335200,
+        "checkIn": "2026-11-05",
+        "checkOut": "2026-11-08",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": null,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/mini-otel-sadovaya-loft-615554323/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=5976006489000"
+    },
+    "spb-apartamenty-zum-1": {
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/apartamenty-zum-1-3592113661/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=13548240143000",
+      "sourceDate": "2026-10-27",
+      "sourcePrice": {
+        "stayMinor": 624200,
+        "nightMinor": 208100,
+        "checkIn": "2026-11-05",
+        "checkOut": "2026-11-08",
+        "adults": 2
+      },
+      "realRoomData": true,
+      "testFields": [
+        "roomCapacity",
+        "childrenPolicy",
+        "checkInTime",
+        "checkOutTime",
+        "cancellation",
+        "availability",
+        "paymentMethods"
+      ],
+      "sourceStars": null,
+      "roomSourceUrl": "https://www.ozon.ru/travel/hotels/product/apartamenty-zum-1-3592113661/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=13548240143000"
+    }
+  },
+  "rooms": {
+    "moscow-izmaylovo-tvoy-otel-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-izmaylovo-tvoy-otel-room-1.jpg",
+          "label": "Стандарт две кровати - 2мг (Измайлово отель гамма 3*) · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-izmaylovo-tvoy-otel-room-2.jpg",
+          "label": "Стандарт две кровати - 2мг (Измайлово отель гамма 3*) · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-izmaylovo-tvoy-otel-room-3.jpg",
+          "label": "Стандарт две кровати - 2мг (Измайлово отель гамма 3*) · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-izmaylovo-tvoy-otel-room-4.jpg",
+          "label": "Стандарт две кровати - 2мг (Измайлово отель гамма 3*) · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-izmaylovo-tvoy-otel-room-5.jpg",
+          "label": "Стандарт две кровати - 2мг (Измайлово отель гамма 3*) · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-izmaylovo-tvoy-otel-room-6.jpg",
+          "label": "Стандарт две кровати - 2мг (Измайлово отель гамма 3*) · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 21.0,
+      "view": "Вид на водоем",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандарт две кровати - 2мг (Измайлово отель гамма 3*). Площадь 21 м², две односпальные кровати.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-otel-shelterz-vdnh-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-otel-shelterz-vdnh-room-1.jpg",
+          "label": "Двухместный номер · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-shelterz-vdnh-room-2.jpg",
+          "label": "Двухместный номер · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-shelterz-vdnh-room-3.jpg",
+          "label": "Двухместный номер · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-shelterz-vdnh-room-4.jpg",
+          "label": "Двухместный номер · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-shelterz-vdnh-room-5.jpg",
+          "label": "Двухместный номер · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-shelterz-vdnh-room-6.jpg",
+          "label": "Двухместный номер · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 7.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Двухместный номер. Площадь 7 м², двуспальная кровать. Ванная комната общая.",
+      "amenities": [
+        [
+          "room",
+          "Общая ванная комната"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-ibis-moskva-kievskaya-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-ibis-moskva-kievskaya-room-1.jpg",
+          "label": "Стандартный номер - с двуспальной кроватью · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-ibis-moskva-kievskaya-room-2.jpg",
+          "label": "Стандартный номер - с двуспальной кроватью · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-ibis-moskva-kievskaya-room-3.jpg",
+          "label": "Стандартный номер - с двуспальной кроватью · фото 3",
+          "category": "Все фото"
+        }
+      ],
+      "area": 16.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандартный номер - с двуспальной кроватью. Площадь 16 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-apart-otel-okruzhnaya-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-apart-otel-okruzhnaya-room-1.png",
+          "label": "Окружная \"Ground\" · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-apart-otel-okruzhnaya-room-2.png",
+          "label": "Окружная \"Ground\" · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-apart-otel-okruzhnaya-room-3.png",
+          "label": "Окружная \"Ground\" · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-apart-otel-okruzhnaya-room-4.png",
+          "label": "Окружная \"Ground\" · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-apart-otel-okruzhnaya-room-5.png",
+          "label": "Окружная \"Ground\" · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-apart-otel-okruzhnaya-room-6.png",
+          "label": "Окружная \"Ground\" · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 30.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Окружная \"Ground\". Площадь 30 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-gostinitsa-metallurg-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-metallurg-room-1.jpg",
+          "label": "2-местный бюджет · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-metallurg-room-2.jpg",
+          "label": "2-местный бюджет · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-metallurg-room-3.jpg",
+          "label": "2-местный бюджет · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-metallurg-room-4.jpg",
+          "label": "2-местный бюджет · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-metallurg-room-5.jpg",
+          "label": "2-местный бюджет · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-metallurg-room-6.jpg",
+          "label": "2-местный бюджет · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 18.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "2-местный бюджет. Площадь 18 м², две односпальные кровати. Ванная комната общая.",
+      "amenities": [
+        [
+          "room",
+          "Общая ванная комната"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-gostevoy-dom-lesnoy-sheremetyevo-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-gostevoy-dom-lesnoy-sheremetyevo-room-1.jpg",
+          "label": "Лесной раздельные 2 кровати · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostevoy-dom-lesnoy-sheremetyevo-room-2.jpg",
+          "label": "Лесной раздельные 2 кровати · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostevoy-dom-lesnoy-sheremetyevo-room-3.jpg",
+          "label": "Лесной раздельные 2 кровати · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostevoy-dom-lesnoy-sheremetyevo-room-4.jpg",
+          "label": "Лесной раздельные 2 кровати · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostevoy-dom-lesnoy-sheremetyevo-room-5.jpg",
+          "label": "Лесной раздельные 2 кровати · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostevoy-dom-lesnoy-sheremetyevo-room-6.jpg",
+          "label": "Лесной раздельные 2 кровати · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 16.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Лесной раздельные 2 кровати. Площадь 16 м², две односпальные кровати.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-gostinitsa-ekonom-nasledie-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-ekonom-nasledie-room-1.jpg",
+          "label": "2-х местный номер, с телевизором и холодильником, удобства на этаже. · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-ekonom-nasledie-room-2.jpg",
+          "label": "2-х местный номер, с телевизором и холодильником, удобства на этаже. · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-ekonom-nasledie-room-3.jpg",
+          "label": "2-х местный номер, с телевизором и холодильником, удобства на этаже. · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-ekonom-nasledie-room-4.jpg",
+          "label": "2-х местный номер, с телевизором и холодильником, удобства на этаже. · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-ekonom-nasledie-room-5.jpg",
+          "label": "2-х местный номер, с телевизором и холодильником, удобства на этаже. · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-ekonom-nasledie-room-6.jpg",
+          "label": "2-х местный номер, с телевизором и холодильником, удобства на этаже. · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 17.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "2-х местный номер, с телевизором и холодильником, удобства на этаже.. Площадь 17 м², две односпальные кровати. Ванная комната общая.",
+      "amenities": [
+        [
+          "room",
+          "Общая ванная комната"
+        ]
+      ]
+    },
+    "moscow-arena-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-arena-room-1.jpg",
+          "label": "Д2TW ДЕЛЮКС 2-х местный · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-arena-room-2.jpg",
+          "label": "Д2TW ДЕЛЮКС 2-х местный · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-arena-room-3.jpg",
+          "label": "Д2TW ДЕЛЮКС 2-х местный · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-arena-room-4.jpg",
+          "label": "Д2TW ДЕЛЮКС 2-х местный · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-arena-room-5.jpg",
+          "label": "Д2TW ДЕЛЮКС 2-х местный · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-arena-room-6.jpg",
+          "label": "Д2TW ДЕЛЮКС 2-х местный · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 15.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": true,
+      "description": "Д2TW ДЕЛЮКС 2-х местный. Площадь 15 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ],
+        [
+          "pin",
+          "Балкон"
+        ]
+      ]
+    },
+    "moscow-hostel-guten-duck-moscow-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-hostel-guten-duck-moscow-room-1.jpg",
+          "label": "Двухместный номер с общей ванной комнатой · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-hostel-guten-duck-moscow-room-2.jpg",
+          "label": "Двухместный номер с общей ванной комнатой · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-hostel-guten-duck-moscow-room-3.jpg",
+          "label": "Двухместный номер с общей ванной комнатой · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-hostel-guten-duck-moscow-room-4.jpg",
+          "label": "Двухместный номер с общей ванной комнатой · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-hostel-guten-duck-moscow-room-5.jpg",
+          "label": "Двухместный номер с общей ванной комнатой · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-hostel-guten-duck-moscow-room-6.jpg",
+          "label": "Двухместный номер с общей ванной комнатой · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 16.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Двухместный номер с общей ванной комнатой. Площадь 16 м², двуспальная кровать. Ванная комната общая.",
+      "amenities": [
+        [
+          "room",
+          "Общая ванная комната"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-minima-belorusskaya-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-minima-belorusskaya-room-1.jpg",
+          "label": "Стандарт двухместный · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-minima-belorusskaya-room-2.jpg",
+          "label": "Стандарт двухместный · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-minima-belorusskaya-room-3.jpg",
+          "label": "Стандарт двухместный · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-minima-belorusskaya-room-4.jpg",
+          "label": "Стандарт двухместный · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-minima-belorusskaya-room-5.jpg",
+          "label": "Стандарт двухместный · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-minima-belorusskaya-room-6.jpg",
+          "label": "Стандарт двухместный · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 14.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандарт двухместный. Площадь 14 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-otel-tesla-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-otel-tesla-room-1.jpg",
+          "label": "Стандарт на 1-м этаже · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-tesla-room-2.jpg",
+          "label": "Стандарт на 1-м этаже · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-tesla-room-3.jpg",
+          "label": "Стандарт на 1-м этаже · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-tesla-room-4.jpg",
+          "label": "Стандарт на 1-м этаже · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-tesla-room-5.jpg",
+          "label": "Стандарт на 1-м этаже · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-tesla-room-6.jpg",
+          "label": "Стандарт на 1-м этаже · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 12.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандарт на 1-м этаже. Площадь 12 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-bun-in-alley-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-1.jpg",
+          "label": "Апартаменты \"Комфорт-Мини\" · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-2.jpg",
+          "label": "Апартаменты \"Комфорт-Мини\" · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-3.jpg",
+          "label": "Апартаменты \"Комфорт-Мини\" · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-4.jpg",
+          "label": "Апартаменты \"Комфорт-Мини\" · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-5.jpg",
+          "label": "Апартаменты \"Комфорт-Мини\" · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-6.jpg",
+          "label": "Апартаменты \"Комфорт-Мини\" · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 13.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Апартаменты \"Комфорт-Мини\". Площадь 13 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-otel-maksima-zarya-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-otel-maksima-zarya-room-1.jpg",
+          "label": "Стандарт Двухместный (Двуспальная кровать) · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-maksima-zarya-room-2.jpg",
+          "label": "Стандарт Двухместный (Двуспальная кровать) · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-maksima-zarya-room-3.jpg",
+          "label": "Стандарт Двухместный (Двуспальная кровать) · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-maksima-zarya-room-4.jpg",
+          "label": "Стандарт Двухместный (Двуспальная кровать) · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-maksima-zarya-room-5.jpg",
+          "label": "Стандарт Двухместный (Двуспальная кровать) · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-maksima-zarya-room-6.jpg",
+          "label": "Стандарт Двухместный (Двуспальная кровать) · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 18.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандарт Двухместный (Двуспальная кровать). Площадь 18 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-moscow-marriott-imperial-plaza-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-moscow-marriott-imperial-plaza-room-1.jpg",
+          "label": "Делюкс с большой кроватью · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-moscow-marriott-imperial-plaza-room-2.jpg",
+          "label": "Делюкс с большой кроватью · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-moscow-marriott-imperial-plaza-room-3.jpg",
+          "label": "Делюкс с большой кроватью · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-moscow-marriott-imperial-plaza-room-4.jpg",
+          "label": "Делюкс с большой кроватью · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-moscow-marriott-imperial-plaza-room-5.jpg",
+          "label": "Делюкс с большой кроватью · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-moscow-marriott-imperial-plaza-room-6.jpg",
+          "label": "Делюкс с большой кроватью · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 27.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Делюкс с большой кроватью. Площадь 27 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-akvamarin-zont-hotel-group-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-akvamarin-zont-hotel-group-room-1.jpg",
+          "label": "Стандарт c двуспальной кроватью · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-akvamarin-zont-hotel-group-room-2.jpg",
+          "label": "Стандарт c двуспальной кроватью · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-akvamarin-zont-hotel-group-room-3.jpg",
+          "label": "Стандарт c двуспальной кроватью · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-akvamarin-zont-hotel-group-room-4.jpg",
+          "label": "Стандарт c двуспальной кроватью · фото 4",
+          "category": "Все фото"
+        }
+      ],
+      "area": 22.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандарт c двуспальной кроватью. Площадь 22 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-pekin-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-pekin-room-1.jpg",
+          "label": "Классик с большой кроватью · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-pekin-room-2.jpg",
+          "label": "Классик с большой кроватью · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-pekin-room-3.jpg",
+          "label": "Классик с большой кроватью · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-pekin-room-4.jpg",
+          "label": "Классик с большой кроватью · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-pekin-room-5.jpg",
+          "label": "Классик с большой кроватью · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-pekin-room-6.jpg",
+          "label": "Классик с большой кроватью · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 19.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Классик с большой кроватью. Площадь 19 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-zvezdy-arbata-otel-i-apartamenty-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-zvezdy-arbata-otel-i-apartamenty-room-1.jpg",
+          "label": "Делюкс с одной большой кроватью · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-zvezdy-arbata-otel-i-apartamenty-room-2.jpg",
+          "label": "Делюкс с одной большой кроватью · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-zvezdy-arbata-otel-i-apartamenty-room-3.jpg",
+          "label": "Делюкс с одной большой кроватью · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-zvezdy-arbata-otel-i-apartamenty-room-4.jpg",
+          "label": "Делюкс с одной большой кроватью · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-zvezdy-arbata-otel-i-apartamenty-room-5.jpg",
+          "label": "Делюкс с одной большой кроватью · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-zvezdy-arbata-otel-i-apartamenty-room-6.jpg",
+          "label": "Делюкс с одной большой кроватью · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 28.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Делюкс с одной большой кроватью. Площадь 28 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-palmira-business-club-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-palmira-business-club-room-1.jpg",
+          "label": "Супериор · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-palmira-business-club-room-2.jpg",
+          "label": "Супериор · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-palmira-business-club-room-3.jpg",
+          "label": "Супериор · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-palmira-business-club-room-4.jpg",
+          "label": "Супериор · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-palmira-business-club-room-5.jpg",
+          "label": "Супериор · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-palmira-business-club-room-6.jpg",
+          "label": "Супериор · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 32.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Супериор. Площадь 32 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-otel-mandarin-moskva-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-otel-mandarin-moskva-room-1.jpg",
+          "label": "Бюджетный двухместный номер с ограниченным видом · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-mandarin-moskva-room-2.jpg",
+          "label": "Бюджетный двухместный номер с ограниченным видом · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-mandarin-moskva-room-3.jpg",
+          "label": "Бюджетный двухместный номер с ограниченным видом · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-mandarin-moskva-room-4.jpg",
+          "label": "Бюджетный двухместный номер с ограниченным видом · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-mandarin-moskva-room-5.jpg",
+          "label": "Бюджетный двухместный номер с ограниченным видом · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-mandarin-moskva-room-6.jpg",
+          "label": "Бюджетный двухместный номер с ограниченным видом · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 15.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Бюджетный двухместный номер с ограниченным видом. Площадь 15 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress-room-1.jpg",
+          "label": "2-местная капсула (общие удобства) · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress-room-2.jpg",
+          "label": "2-местная капсула (общие удобства) · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress-room-3.jpg",
+          "label": "2-местная капсула (общие удобства) · фото 3",
+          "category": "Все фото"
+        }
+      ],
+      "area": 3.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "2-местная капсула (общие удобства). Площадь 3 м², двуспальная кровать. Ванная комната общая.",
+      "amenities": [
+        [
+          "room",
+          "Общая ванная комната"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-valo-network-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-valo-network-room-1.jpg",
+          "label": "Нетворк Стандарт 3* с большим матрасом на подиуме · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-network-room-2.jpg",
+          "label": "Нетворк Стандарт 3* с большим матрасом на подиуме · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-network-room-3.jpg",
+          "label": "Нетворк Стандарт 3* с большим матрасом на подиуме · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-network-room-4.jpg",
+          "label": "Нетворк Стандарт 3* с большим матрасом на подиуме · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-network-room-5.jpg",
+          "label": "Нетворк Стандарт 3* с большим матрасом на подиуме · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-network-room-6.jpg",
+          "label": "Нетворк Стандарт 3* с большим матрасом на подиуме · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 16.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Нетворк Стандарт 3* с большим матрасом на подиуме. Площадь 16 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-valo-business-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-valo-business-room-1.jpg",
+          "label": "Бизнес Комфорт Классик 4* · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-business-room-2.jpg",
+          "label": "Бизнес Комфорт Классик 4* · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-business-room-3.jpg",
+          "label": "Бизнес Комфорт Классик 4* · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-business-room-4.jpg",
+          "label": "Бизнес Комфорт Классик 4* · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-business-room-5.jpg",
+          "label": "Бизнес Комфорт Классик 4* · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-business-room-6.jpg",
+          "label": "Бизнес Комфорт Классик 4* · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 24.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Бизнес Комфорт Классик 4*. Площадь 24 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-demokrat-na-kamennoostrovskom-39-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-demokrat-na-kamennoostrovskom-39-room-1.jpg",
+          "label": "Двухместный КОМФОРТ с двуспальной кроватью · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-demokrat-na-kamennoostrovskom-39-room-2.jpg",
+          "label": "Двухместный КОМФОРТ с двуспальной кроватью · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-demokrat-na-kamennoostrovskom-39-room-3.jpg",
+          "label": "Двухместный КОМФОРТ с двуспальной кроватью · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-demokrat-na-kamennoostrovskom-39-room-4.jpg",
+          "label": "Двухместный КОМФОРТ с двуспальной кроватью · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-demokrat-na-kamennoostrovskom-39-room-5.jpg",
+          "label": "Двухместный КОМФОРТ с двуспальной кроватью · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-demokrat-na-kamennoostrovskom-39-room-6.jpg",
+          "label": "Двухместный КОМФОРТ с двуспальной кроватью · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 14.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Двухместный КОМФОРТ с двуспальной кроватью. Площадь 14 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-apart-otel-uno-by-valo-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-apart-otel-uno-by-valo-room-1.jpg",
+          "label": "Комфорт двухместный · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-uno-by-valo-room-2.jpg",
+          "label": "Комфорт двухместный · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-uno-by-valo-room-3.jpg",
+          "label": "Комфорт двухместный · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-uno-by-valo-room-4.jpg",
+          "label": "Комфорт двухместный · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-uno-by-valo-room-5.jpg",
+          "label": "Комфорт двухместный · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-uno-by-valo-room-6.jpg",
+          "label": "Комфорт двухместный · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 15.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Комфорт двухместный. Площадь 15 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-apartpeydzh-nevskiy-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-nevskiy-room-1.jpg",
+          "label": "Бюджетный номер · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-nevskiy-room-2.jpg",
+          "label": "Бюджетный номер · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-nevskiy-room-3.jpg",
+          "label": "Бюджетный номер · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-nevskiy-room-4.jpg",
+          "label": "Бюджетный номер · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-nevskiy-room-5.jpg",
+          "label": "Бюджетный номер · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-nevskiy-room-6.jpg",
+          "label": "Бюджетный номер · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 9.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Бюджетный номер. Площадь 9 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-osobnyak-molvo-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-osobnyak-molvo-room-1.jpg",
+          "label": "Бюджетный номер с общей ванной комнатой на этаже · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-osobnyak-molvo-room-2.jpg",
+          "label": "Бюджетный номер с общей ванной комнатой на этаже · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-osobnyak-molvo-room-3.jpg",
+          "label": "Бюджетный номер с общей ванной комнатой на этаже · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-osobnyak-molvo-room-4.jpg",
+          "label": "Бюджетный номер с общей ванной комнатой на этаже · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-osobnyak-molvo-room-5.jpg",
+          "label": "Бюджетный номер с общей ванной комнатой на этаже · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-osobnyak-molvo-room-6.jpg",
+          "label": "Бюджетный номер с общей ванной комнатой на этаже · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 14.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Бюджетный номер с общей ванной комнатой на этаже. Площадь 14 м², две односпальные кровати. Ванная комната общая.",
+      "amenities": [
+        [
+          "room",
+          "Общая ванная комната"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-apartamenty-new-horizon-liteyniy-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-apartamenty-new-horizon-liteyniy-room-1.jpg",
+          "label": "Стандартные апартаменты · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartamenty-new-horizon-liteyniy-room-2.jpg",
+          "label": "Стандартные апартаменты · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartamenty-new-horizon-liteyniy-room-3.jpg",
+          "label": "Стандартные апартаменты · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartamenty-new-horizon-liteyniy-room-4.jpg",
+          "label": "Стандартные апартаменты · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartamenty-new-horizon-liteyniy-room-5.jpg",
+          "label": "Стандартные апартаменты · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartamenty-new-horizon-liteyniy-room-6.jpg",
+          "label": "Стандартные апартаменты · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 12.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандартные апартаменты. Площадь 12 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-ramada-plaza-by-wyndham-st-petersburg-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-ramada-plaza-by-wyndham-st-petersburg-room-1.jpg",
+          "label": "Рамада Комфорт 4* без посещения бассейна · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ramada-plaza-by-wyndham-st-petersburg-room-2.jpg",
+          "label": "Рамада Комфорт 4* без посещения бассейна · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ramada-plaza-by-wyndham-st-petersburg-room-3.jpg",
+          "label": "Рамада Комфорт 4* без посещения бассейна · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ramada-plaza-by-wyndham-st-petersburg-room-4.jpg",
+          "label": "Рамада Комфорт 4* без посещения бассейна · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ramada-plaza-by-wyndham-st-petersburg-room-5.jpg",
+          "label": "Рамада Комфорт 4* без посещения бассейна · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ramada-plaza-by-wyndham-st-petersburg-room-6.jpg",
+          "label": "Рамада Комфорт 4* без посещения бассейна · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 24.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Рамада Комфорт 4* без посещения бассейна. Площадь 24 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-apartpeydzh-elagin-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-elagin-room-1.jpg",
+          "label": "Студия · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-elagin-room-2.jpg",
+          "label": "Студия · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-elagin-room-3.jpg",
+          "label": "Студия · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-elagin-room-4.jpg",
+          "label": "Студия · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-elagin-room-5.jpg",
+          "label": "Студия · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-elagin-room-6.jpg",
+          "label": "Студия · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 26.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Студия. Площадь 26 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-otel-rotas-city-center-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-otel-rotas-city-center-room-1.jpg",
+          "label": "Апартаменты Стандарт · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-otel-rotas-city-center-room-2.jpg",
+          "label": "Апартаменты Стандарт · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-otel-rotas-city-center-room-3.jpg",
+          "label": "Апартаменты Стандарт · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-otel-rotas-city-center-room-4.jpg",
+          "label": "Апартаменты Стандарт · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-otel-rotas-city-center-room-5.jpg",
+          "label": "Апартаменты Стандарт · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-otel-rotas-city-center-room-6.jpg",
+          "label": "Апартаменты Стандарт · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 10.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Апартаменты Стандарт. Площадь 10 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-apartamenty-dvoriki-petra-na-gorohovoy-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-apartamenty-dvoriki-petra-na-gorohovoy-room-1.jpg",
+          "label": "Четырёхместные апартаменты Superior · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartamenty-dvoriki-petra-na-gorohovoy-room-2.jpg",
+          "label": "Четырёхместные апартаменты Superior · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartamenty-dvoriki-petra-na-gorohovoy-room-3.jpg",
+          "label": "Четырёхместные апартаменты Superior · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartamenty-dvoriki-petra-na-gorohovoy-room-4.jpg",
+          "label": "Четырёхместные апартаменты Superior · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartamenty-dvoriki-petra-na-gorohovoy-room-5.jpg",
+          "label": "Четырёхместные апартаменты Superior · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartamenty-dvoriki-petra-na-gorohovoy-room-6.jpg",
+          "label": "Четырёхместные апартаменты Superior · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 12.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Четырёхместные апартаменты Superior. Площадь 12 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ]
+      ]
+    },
+    "spb-greenwich-by-friends-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-greenwich-by-friends-room-1.jpg",
+          "label": "Смарт с двуспальной кроватью · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-greenwich-by-friends-room-2.jpg",
+          "label": "Смарт с двуспальной кроватью · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-greenwich-by-friends-room-3.jpg",
+          "label": "Смарт с двуспальной кроватью · фото 3",
+          "category": "Все фото"
+        }
+      ],
+      "area": 10.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Смарт с двуспальной кроватью. Площадь 10 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-ligotel-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-ligotel-room-1.jpg",
+          "label": "Стандарт · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ligotel-room-2.jpg",
+          "label": "Стандарт · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ligotel-room-3.jpg",
+          "label": "Стандарт · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ligotel-room-4.jpg",
+          "label": "Стандарт · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ligotel-room-5.jpg",
+          "label": "Стандарт · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ligotel-room-6.jpg",
+          "label": "Стандарт · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 13.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандарт. Площадь 13 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-mini-otel-moov-apart-bogema-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-mini-otel-moov-apart-bogema-room-1.jpg",
+          "label": "Апартаменты стандарт с 1 двуспальной кроватью · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-moov-apart-bogema-room-2.jpg",
+          "label": "Апартаменты стандарт с 1 двуспальной кроватью · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-moov-apart-bogema-room-3.jpg",
+          "label": "Апартаменты стандарт с 1 двуспальной кроватью · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-moov-apart-bogema-room-4.jpg",
+          "label": "Апартаменты стандарт с 1 двуспальной кроватью · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-moov-apart-bogema-room-5.jpg",
+          "label": "Апартаменты стандарт с 1 двуспальной кроватью · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-moov-apart-bogema-room-6.jpg",
+          "label": "Апартаменты стандарт с 1 двуспальной кроватью · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 20.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Апартаменты стандарт с 1 двуспальной кроватью. Площадь 20 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ]
+      ]
+    },
+    "spb-mini-otel-demokrat-na-nevskom-107b-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-mini-otel-demokrat-na-nevskom-107b-room-1.jpg",
+          "label": "Двухместный КОМФОРТ · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-demokrat-na-nevskom-107b-room-2.jpg",
+          "label": "Двухместный КОМФОРТ · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-demokrat-na-nevskom-107b-room-3.jpg",
+          "label": "Двухместный КОМФОРТ · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-demokrat-na-nevskom-107b-room-4.jpg",
+          "label": "Двухместный КОМФОРТ · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-demokrat-na-nevskom-107b-room-5.jpg",
+          "label": "Двухместный КОМФОРТ · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-demokrat-na-nevskom-107b-room-6.jpg",
+          "label": "Двухместный КОМФОРТ · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 14.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Двухместный КОМФОРТ. Площадь 14 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ]
+      ]
+    },
+    "spb-aristokrat-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-aristokrat-room-1.jpg",
+          "label": "Улучшенный Стандарт с раздельными кроватями · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-aristokrat-room-2.jpg",
+          "label": "Улучшенный Стандарт с раздельными кроватями · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-aristokrat-room-3.jpg",
+          "label": "Улучшенный Стандарт с раздельными кроватями · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-aristokrat-room-4.jpg",
+          "label": "Улучшенный Стандарт с раздельными кроватями · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-aristokrat-room-5.jpg",
+          "label": "Улучшенный Стандарт с раздельными кроватями · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-aristokrat-room-6.jpg",
+          "label": "Улучшенный Стандарт с раздельными кроватями · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 17.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Улучшенный Стандарт с раздельными кроватями. Площадь 17 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-apart-otel-port-comfort-by-old-nevskiy-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-apart-otel-port-comfort-by-old-nevskiy-room-1.jpg",
+          "label": "Стандарт с 1 двуспальной кроватью · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-port-comfort-by-old-nevskiy-room-2.jpg",
+          "label": "Стандарт с 1 двуспальной кроватью · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-port-comfort-by-old-nevskiy-room-3.jpg",
+          "label": "Стандарт с 1 двуспальной кроватью · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-port-comfort-by-old-nevskiy-room-4.jpg",
+          "label": "Стандарт с 1 двуспальной кроватью · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-port-comfort-by-old-nevskiy-room-5.jpg",
+          "label": "Стандарт с 1 двуспальной кроватью · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-port-comfort-by-old-nevskiy-room-6.jpg",
+          "label": "Стандарт с 1 двуспальной кроватью · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 13.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандарт с 1 двуспальной кроватью. Площадь 13 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-arkada-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-arkada-room-1.jpg",
+          "label": "Стандартный номер · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-arkada-room-2.jpg",
+          "label": "Стандартный номер · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-arkada-room-3.jpg",
+          "label": "Стандартный номер · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-arkada-room-4.jpg",
+          "label": "Стандартный номер · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-arkada-room-5.jpg",
+          "label": "Стандартный номер · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-arkada-room-6.jpg",
+          "label": "Стандартный номер · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 17.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандартный номер. Площадь 17 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-mini-otel-sadovaya-loft-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-mini-otel-sadovaya-loft-room-1.jpg",
+          "label": "Номер комфорт премиум с 1 двуспальной кроватью · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-sadovaya-loft-room-2.jpg",
+          "label": "Номер комфорт премиум с 1 двуспальной кроватью · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-sadovaya-loft-room-3.jpg",
+          "label": "Номер комфорт премиум с 1 двуспальной кроватью · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-sadovaya-loft-room-4.jpg",
+          "label": "Номер комфорт премиум с 1 двуспальной кроватью · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-sadovaya-loft-room-5.png",
+          "label": "Номер комфорт премиум с 1 двуспальной кроватью · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-sadovaya-loft-room-6.jpg",
+          "label": "Номер комфорт премиум с 1 двуспальной кроватью · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 15.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Номер комфорт премиум с 1 двуспальной кроватью. Площадь 15 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-apartamenty-zum-1-room": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-apartamenty-zum-1-room-1.jpg",
+          "label": "Двухместные апартаменты с красивым видом из окна (двуспальная кровать) · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartamenty-zum-1-room-2.jpg",
+          "label": "Двухместные апартаменты с красивым видом из окна (двуспальная кровать) · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartamenty-zum-1-room-3.jpg",
+          "label": "Двухместные апартаменты с красивым видом из окна (двуспальная кровать) · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartamenty-zum-1-room-4.jpg",
+          "label": "Двухместные апартаменты с красивым видом из окна (двуспальная кровать) · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartamenty-zum-1-room-5.jpg",
+          "label": "Двухместные апартаменты с красивым видом из окна (двуспальная кровать) · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartamenty-zum-1-room-6.jpg",
+          "label": "Двухместные апартаменты с красивым видом из окна (двуспальная кровать) · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 18.0,
+      "view": "Красивый вид",
+      "floor": "",
+      "balcony": false,
+      "description": "Двухместные апартаменты с красивым видом из окна (двуспальная кровать). Площадь 18 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ]
+      ]
+    },
+    "moscow-izmaylovo-tvoy-otel-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-izmaylovo-tvoy-otel-room-2-1.jpg",
+          "label": "Стандарт широкая кровать - кг (Измайлово отель гамма 3*) · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-izmaylovo-tvoy-otel-room-2-2.jpg",
+          "label": "Стандарт широкая кровать - кг (Измайлово отель гамма 3*) · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-izmaylovo-tvoy-otel-room-2-3.jpg",
+          "label": "Стандарт широкая кровать - кг (Измайлово отель гамма 3*) · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-izmaylovo-tvoy-otel-room-2-4.jpg",
+          "label": "Стандарт широкая кровать - кг (Измайлово отель гамма 3*) · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-izmaylovo-tvoy-otel-room-2-5.jpg",
+          "label": "Стандарт широкая кровать - кг (Измайлово отель гамма 3*) · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-izmaylovo-tvoy-otel-room-2-6.jpg",
+          "label": "Стандарт широкая кровать - кг (Измайлово отель гамма 3*) · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 21.0,
+      "view": "Вид на водоем",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандарт широкая кровать - кг (Измайлово отель гамма 3*). Площадь 21 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-izmaylovo-tvoy-otel-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-izmaylovo-tvoy-otel-room-3-1.jpg",
+          "label": "Стандарт плюс широкая кровать - к+ (Измайлово отель гамма 3*) · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-izmaylovo-tvoy-otel-room-3-2.jpg",
+          "label": "Стандарт плюс широкая кровать - к+ (Измайлово отель гамма 3*) · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-izmaylovo-tvoy-otel-room-3-3.jpg",
+          "label": "Стандарт плюс широкая кровать - к+ (Измайлово отель гамма 3*) · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-izmaylovo-tvoy-otel-room-3-4.jpg",
+          "label": "Стандарт плюс широкая кровать - к+ (Измайлово отель гамма 3*) · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-izmaylovo-tvoy-otel-room-3-5.jpg",
+          "label": "Стандарт плюс широкая кровать - к+ (Измайлово отель гамма 3*) · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-izmaylovo-tvoy-otel-room-3-6.jpg",
+          "label": "Стандарт плюс широкая кровать - к+ (Измайлово отель гамма 3*) · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 21.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандарт плюс широкая кровать - к+ (Измайлово отель гамма 3*). Площадь 21 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-ibis-moskva-kievskaya-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-ibis-moskva-kievskaya-room-2-1.jpg",
+          "label": "Стандартный номер, для маломобильных - с двуспальной кроватью · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-ibis-moskva-kievskaya-room-2-2.jpg",
+          "label": "Стандартный номер, для маломобильных - с двуспальной кроватью · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-ibis-moskva-kievskaya-room-2-3.jpg",
+          "label": "Стандартный номер, для маломобильных - с двуспальной кроватью · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-ibis-moskva-kievskaya-room-2-4.jpg",
+          "label": "Стандартный номер, для маломобильных - с двуспальной кроватью · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-ibis-moskva-kievskaya-room-2-5.jpg",
+          "label": "Стандартный номер, для маломобильных - с двуспальной кроватью · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-ibis-moskva-kievskaya-room-2-6.jpg",
+          "label": "Стандартный номер, для маломобильных - с двуспальной кроватью · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 24.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандартный номер, для маломобильных - с двуспальной кроватью. Площадь 24 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-ibis-moskva-kievskaya-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-ibis-moskva-kievskaya-room-3-1.jpg",
+          "label": "Стандартный номер - с 2 односпальными кроватями · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-ibis-moskva-kievskaya-room-3-2.jpg",
+          "label": "Стандартный номер - с 2 односпальными кроватями · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-ibis-moskva-kievskaya-room-3-3.jpg",
+          "label": "Стандартный номер - с 2 односпальными кроватями · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-ibis-moskva-kievskaya-room-3-4.jpg",
+          "label": "Стандартный номер - с 2 односпальными кроватями · фото 4",
+          "category": "Все фото"
+        }
+      ],
+      "area": 16.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандартный номер - с 2 односпальными кроватями. Площадь 16 м², две односпальные кровати.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-apart-otel-okruzhnaya-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-apart-otel-okruzhnaya-room-2-1.png",
+          "label": "Окружная \"Standard\" · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-apart-otel-okruzhnaya-room-2-2.png",
+          "label": "Окружная \"Standard\" · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-apart-otel-okruzhnaya-room-2-3.png",
+          "label": "Окружная \"Standard\" · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-apart-otel-okruzhnaya-room-2-4.png",
+          "label": "Окружная \"Standard\" · фото 4",
+          "category": "Все фото"
+        }
+      ],
+      "area": 16.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Окружная \"Standard\". Площадь 16 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-gostinitsa-metallurg-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-metallurg-room-2-1.jpg",
+          "label": "3-местный бюджет · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-metallurg-room-2-2.jpg",
+          "label": "3-местный бюджет · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-metallurg-room-2-3.jpg",
+          "label": "3-местный бюджет · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-metallurg-room-2-4.jpg",
+          "label": "3-местный бюджет · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-metallurg-room-2-5.jpg",
+          "label": "3-местный бюджет · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-metallurg-room-2-6.jpg",
+          "label": "3-местный бюджет · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 18.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "3-местный бюджет. Площадь 18 м², двуспальная кровать. Ванная комната общая.",
+      "amenities": [
+        [
+          "room",
+          "Общая ванная комната"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-gostinitsa-metallurg-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-metallurg-room-3-1.jpg",
+          "label": "Стандарт двухместный с 2 раздельными кроватями · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-metallurg-room-3-2.jpg",
+          "label": "Стандарт двухместный с 2 раздельными кроватями · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-metallurg-room-3-3.jpg",
+          "label": "Стандарт двухместный с 2 раздельными кроватями · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-metallurg-room-3-4.jpg",
+          "label": "Стандарт двухместный с 2 раздельными кроватями · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-metallurg-room-3-5.jpg",
+          "label": "Стандарт двухместный с 2 раздельными кроватями · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-metallurg-room-3-6.jpg",
+          "label": "Стандарт двухместный с 2 раздельными кроватями · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 18.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандарт двухместный с 2 раздельными кроватями. Площадь 18 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-gostevoy-dom-lesnoy-sheremetyevo-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-gostevoy-dom-lesnoy-sheremetyevo-room-2-1.jpg",
+          "label": "Лесной двуспальная кровать · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostevoy-dom-lesnoy-sheremetyevo-room-2-2.jpg",
+          "label": "Лесной двуспальная кровать · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostevoy-dom-lesnoy-sheremetyevo-room-2-3.jpg",
+          "label": "Лесной двуспальная кровать · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostevoy-dom-lesnoy-sheremetyevo-room-2-4.jpg",
+          "label": "Лесной двуспальная кровать · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostevoy-dom-lesnoy-sheremetyevo-room-2-5.jpg",
+          "label": "Лесной двуспальная кровать · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostevoy-dom-lesnoy-sheremetyevo-room-2-6.jpg",
+          "label": "Лесной двуспальная кровать · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 16.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Лесной двуспальная кровать. Площадь 16 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-gostevoy-dom-lesnoy-sheremetyevo-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-gostevoy-dom-lesnoy-sheremetyevo-room-3-1.jpg",
+          "label": "Лесной апартаменты · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostevoy-dom-lesnoy-sheremetyevo-room-3-2.jpg",
+          "label": "Лесной апартаменты · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostevoy-dom-lesnoy-sheremetyevo-room-3-3.jpg",
+          "label": "Лесной апартаменты · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostevoy-dom-lesnoy-sheremetyevo-room-3-4.jpg",
+          "label": "Лесной апартаменты · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostevoy-dom-lesnoy-sheremetyevo-room-3-5.jpg",
+          "label": "Лесной апартаменты · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostevoy-dom-lesnoy-sheremetyevo-room-3-6.jpg",
+          "label": "Лесной апартаменты · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 28.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Лесной апартаменты. Площадь 28 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-gostinitsa-ekonom-nasledie-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-ekonom-nasledie-room-2-1.jpg",
+          "label": "Номер стандарт · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-ekonom-nasledie-room-2-2.jpg",
+          "label": "Номер стандарт · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-ekonom-nasledie-room-2-3.jpg",
+          "label": "Номер стандарт · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-ekonom-nasledie-room-2-4.jpg",
+          "label": "Номер стандарт · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-ekonom-nasledie-room-2-5.jpg",
+          "label": "Номер стандарт · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-ekonom-nasledie-room-2-6.jpg",
+          "label": "Номер стандарт · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 17.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Номер стандарт. Площадь 17 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ]
+      ]
+    },
+    "moscow-gostinitsa-ekonom-nasledie-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-ekonom-nasledie-room-3-1.jpg",
+          "label": "2-комнатный номер стандарт · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-ekonom-nasledie-room-3-2.jpg",
+          "label": "2-комнатный номер стандарт · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-ekonom-nasledie-room-3-3.jpg",
+          "label": "2-комнатный номер стандарт · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-ekonom-nasledie-room-3-4.jpg",
+          "label": "2-комнатный номер стандарт · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-ekonom-nasledie-room-3-5.jpg",
+          "label": "2-комнатный номер стандарт · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-gostinitsa-ekonom-nasledie-room-3-6.jpg",
+          "label": "2-комнатный номер стандарт · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 34.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "2-комнатный номер стандарт. Площадь 34 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ]
+      ]
+    },
+    "moscow-arena-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-arena-room-2-1.jpg",
+          "label": "Д2ДБ ДЕЛЮКС 2-х местный · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-arena-room-2-2.jpg",
+          "label": "Д2ДБ ДЕЛЮКС 2-х местный · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-arena-room-2-3.jpg",
+          "label": "Д2ДБ ДЕЛЮКС 2-х местный · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-arena-room-2-4.jpg",
+          "label": "Д2ДБ ДЕЛЮКС 2-х местный · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-arena-room-2-5.jpg",
+          "label": "Д2ДБ ДЕЛЮКС 2-х местный · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-arena-room-2-6.jpg",
+          "label": "Д2ДБ ДЕЛЮКС 2-х местный · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 18.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": true,
+      "description": "Д2ДБ ДЕЛЮКС 2-х местный. Площадь 18 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ],
+        [
+          "pin",
+          "Балкон"
+        ]
+      ]
+    },
+    "moscow-arena-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-arena-room-3-1.jpg",
+          "label": "Супериор · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-arena-room-3-2.jpg",
+          "label": "Супериор · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-arena-room-3-3.jpg",
+          "label": "Супериор · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-arena-room-3-4.jpg",
+          "label": "Супериор · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-arena-room-3-5.jpg",
+          "label": "Супериор · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-arena-room-3-6.jpg",
+          "label": "Супериор · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 17.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": true,
+      "description": "Супериор. Площадь 17 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ],
+        [
+          "pin",
+          "Балкон"
+        ]
+      ]
+    },
+    "moscow-hostel-guten-duck-moscow-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-hostel-guten-duck-moscow-room-2-1.jpg",
+          "label": "2-местный номер эконом стандарт · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-hostel-guten-duck-moscow-room-2-2.jpg",
+          "label": "2-местный номер эконом стандарт · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-hostel-guten-duck-moscow-room-2-3.jpg",
+          "label": "2-местный номер эконом стандарт · фото 3",
+          "category": "Все фото"
+        }
+      ],
+      "area": 18.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "2-местный номер эконом стандарт. Площадь 18 м², двуспальная кровать. Ванная комната общая.",
+      "amenities": [
+        [
+          "room",
+          "Общая ванная комната"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-minima-belorusskaya-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-minima-belorusskaya-room-2-1.jpg",
+          "label": "Стандарт двухместный с ванной · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-minima-belorusskaya-room-2-2.jpg",
+          "label": "Стандарт двухместный с ванной · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-minima-belorusskaya-room-2-3.jpg",
+          "label": "Стандарт двухместный с ванной · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-minima-belorusskaya-room-2-4.jpg",
+          "label": "Стандарт двухместный с ванной · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-minima-belorusskaya-room-2-5.jpg",
+          "label": "Стандарт двухместный с ванной · фото 5",
+          "category": "Все фото"
+        }
+      ],
+      "area": 16.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандарт двухместный с ванной. Площадь 16 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-minima-belorusskaya-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-minima-belorusskaya-room-3-1.jpg",
+          "label": "Комфорт двухместный · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-minima-belorusskaya-room-3-2.jpg",
+          "label": "Комфорт двухместный · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-minima-belorusskaya-room-3-3.jpg",
+          "label": "Комфорт двухместный · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-minima-belorusskaya-room-3-4.jpg",
+          "label": "Комфорт двухместный · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-minima-belorusskaya-room-3-5.jpg",
+          "label": "Комфорт двухместный · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-minima-belorusskaya-room-3-6.jpg",
+          "label": "Комфорт двухместный · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 14.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Комфорт двухместный. Площадь 14 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-otel-tesla-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-otel-tesla-room-2-1.jpg",
+          "label": "Стандарт · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-tesla-room-2-2.jpg",
+          "label": "Стандарт · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-tesla-room-2-3.jpg",
+          "label": "Стандарт · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-tesla-room-2-4.jpg",
+          "label": "Стандарт · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-tesla-room-2-5.jpg",
+          "label": "Стандарт · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-tesla-room-2-6.jpg",
+          "label": "Стандарт · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 15.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандарт. Площадь 15 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-otel-tesla-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-otel-tesla-room-3-1.jpg",
+          "label": "Комфорт · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-tesla-room-3-2.jpg",
+          "label": "Комфорт · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-tesla-room-3-3.jpg",
+          "label": "Комфорт · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-tesla-room-3-4.jpg",
+          "label": "Комфорт · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-tesla-room-3-5.jpg",
+          "label": "Комфорт · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-tesla-room-3-6.jpg",
+          "label": "Комфорт · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 18.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Комфорт. Площадь 18 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-bun-in-alley-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-2-1.jpg",
+          "label": "Апартаменты \"Престиж\" · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-2-2.jpg",
+          "label": "Апартаменты \"Престиж\" · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-2-3.jpg",
+          "label": "Апартаменты \"Престиж\" · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-2-4.jpg",
+          "label": "Апартаменты \"Престиж\" · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-2-5.jpg",
+          "label": "Апартаменты \"Престиж\" · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-2-6.jpg",
+          "label": "Апартаменты \"Престиж\" · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 24.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Апартаменты \"Престиж\". Площадь 24 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-bun-in-alley-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-3-1.jpg",
+          "label": "Апартаменты \"Комфорт+\" · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-3-2.jpg",
+          "label": "Апартаменты \"Комфорт+\" · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-3-3.jpg",
+          "label": "Апартаменты \"Комфорт+\" · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-3-4.jpg",
+          "label": "Апартаменты \"Комфорт+\" · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-3-5.jpg",
+          "label": "Апартаменты \"Комфорт+\" · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-3-6.jpg",
+          "label": "Апартаменты \"Комфорт+\" · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 21.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Апартаменты \"Комфорт+\". Площадь 21 м², две односпальные кровати.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-bun-in-alley-room-4": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-4-1.jpg",
+          "label": "Двухместный номер Comfort с видом на город (двуспальная кровать) · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-4-2.jpg",
+          "label": "Двухместный номер Comfort с видом на город (двуспальная кровать) · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-4-3.jpg",
+          "label": "Двухместный номер Comfort с видом на город (двуспальная кровать) · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-4-4.jpg",
+          "label": "Двухместный номер Comfort с видом на город (двуспальная кровать) · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-4-5.jpg",
+          "label": "Двухместный номер Comfort с видом на город (двуспальная кровать) · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-bun-in-alley-room-4-6.jpg",
+          "label": "Двухместный номер Comfort с видом на город (двуспальная кровать) · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 21.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Двухместный номер Comfort с видом на город (двуспальная кровать). Площадь 21 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ]
+      ]
+    },
+    "moscow-otel-maksima-zarya-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-otel-maksima-zarya-room-2-1.jpg",
+          "label": "Стандарт Двухместный (Отдельные кровати) · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-maksima-zarya-room-2-2.jpg",
+          "label": "Стандарт Двухместный (Отдельные кровати) · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-maksima-zarya-room-2-3.jpg",
+          "label": "Стандарт Двухместный (Отдельные кровати) · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-maksima-zarya-room-2-4.jpg",
+          "label": "Стандарт Двухместный (Отдельные кровати) · фото 4",
+          "category": "Все фото"
+        }
+      ],
+      "area": 18.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандарт Двухместный (Отдельные кровати). Площадь 18 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-otel-maksima-zarya-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-otel-maksima-zarya-room-3-1.jpg",
+          "label": "Студио (Двуспальная кровать) · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-maksima-zarya-room-3-2.jpg",
+          "label": "Студио (Двуспальная кровать) · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-maksima-zarya-room-3-3.jpg",
+          "label": "Студио (Двуспальная кровать) · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-maksima-zarya-room-3-4.jpg",
+          "label": "Студио (Двуспальная кровать) · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-maksima-zarya-room-3-5.jpg",
+          "label": "Студио (Двуспальная кровать) · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-maksima-zarya-room-3-6.jpg",
+          "label": "Студио (Двуспальная кровать) · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 28.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Студио (Двуспальная кровать). Площадь 28 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-moscow-marriott-imperial-plaza-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-moscow-marriott-imperial-plaza-room-2-1.jpg",
+          "label": "Делюкс с одной кроватью · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-moscow-marriott-imperial-plaza-room-2-2.jpg",
+          "label": "Делюкс с одной кроватью · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-moscow-marriott-imperial-plaza-room-2-3.jpg",
+          "label": "Делюкс с одной кроватью · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-moscow-marriott-imperial-plaza-room-2-4.jpg",
+          "label": "Делюкс с одной кроватью · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-moscow-marriott-imperial-plaza-room-2-5.jpg",
+          "label": "Делюкс с одной кроватью · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-moscow-marriott-imperial-plaza-room-2-6.jpg",
+          "label": "Делюкс с одной кроватью · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 21.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Делюкс с одной кроватью. Площадь 21 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-moscow-marriott-imperial-plaza-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-moscow-marriott-imperial-plaza-room-3-1.jpg",
+          "label": "Делюкс с двумя раздельными кроватями · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-moscow-marriott-imperial-plaza-room-3-2.jpg",
+          "label": "Делюкс с двумя раздельными кроватями · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-moscow-marriott-imperial-plaza-room-3-3.jpg",
+          "label": "Делюкс с двумя раздельными кроватями · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-moscow-marriott-imperial-plaza-room-3-4.jpg",
+          "label": "Делюкс с двумя раздельными кроватями · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-moscow-marriott-imperial-plaza-room-3-5.jpg",
+          "label": "Делюкс с двумя раздельными кроватями · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-moscow-marriott-imperial-plaza-room-3-6.jpg",
+          "label": "Делюкс с двумя раздельными кроватями · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 29.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Делюкс с двумя раздельными кроватями. Площадь 29 м², две односпальные кровати.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-akvamarin-zont-hotel-group-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-akvamarin-zont-hotel-group-room-2-1.jpg",
+          "label": "Стандарт · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-akvamarin-zont-hotel-group-room-2-2.jpg",
+          "label": "Стандарт · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-akvamarin-zont-hotel-group-room-2-3.jpg",
+          "label": "Стандарт · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-akvamarin-zont-hotel-group-room-2-4.jpg",
+          "label": "Стандарт · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-akvamarin-zont-hotel-group-room-2-5.jpg",
+          "label": "Стандарт · фото 5",
+          "category": "Все фото"
+        }
+      ],
+      "area": 22.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандарт. Площадь 22 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-akvamarin-zont-hotel-group-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-akvamarin-zont-hotel-group-room-3-1.jpg",
+          "label": "Стандарт c 2 односпальными кроватями · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-akvamarin-zont-hotel-group-room-3-2.jpg",
+          "label": "Стандарт c 2 односпальными кроватями · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-akvamarin-zont-hotel-group-room-3-3.jpg",
+          "label": "Стандарт c 2 односпальными кроватями · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-akvamarin-zont-hotel-group-room-3-4.jpg",
+          "label": "Стандарт c 2 односпальными кроватями · фото 4",
+          "category": "Все фото"
+        }
+      ],
+      "area": 22.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандарт c 2 односпальными кроватями. Площадь 22 м², две односпальные кровати.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-pekin-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-pekin-room-2-1.jpg",
+          "label": "Стандарт Плюс с большой кроватью · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-pekin-room-2-2.jpg",
+          "label": "Стандарт Плюс с большой кроватью · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-pekin-room-2-3.jpg",
+          "label": "Стандарт Плюс с большой кроватью · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-pekin-room-2-4.jpg",
+          "label": "Стандарт Плюс с большой кроватью · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-pekin-room-2-5.jpg",
+          "label": "Стандарт Плюс с большой кроватью · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-pekin-room-2-6.jpg",
+          "label": "Стандарт Плюс с большой кроватью · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 20.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандарт Плюс с большой кроватью. Площадь 20 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-pekin-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-pekin-room-3-1.jpg",
+          "label": "Стандарт Плюс с двумя одноместными кроватями · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-pekin-room-3-2.jpg",
+          "label": "Стандарт Плюс с двумя одноместными кроватями · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-pekin-room-3-3.jpg",
+          "label": "Стандарт Плюс с двумя одноместными кроватями · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-pekin-room-3-4.jpg",
+          "label": "Стандарт Плюс с двумя одноместными кроватями · фото 4",
+          "category": "Все фото"
+        }
+      ],
+      "area": 20.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандарт Плюс с двумя одноместными кроватями. Площадь 20 м², две односпальные кровати.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-zvezdy-arbata-otel-i-apartamenty-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-zvezdy-arbata-otel-i-apartamenty-room-2-1.jpg",
+          "label": "Делюкс с двумя раздельными кроватями · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-zvezdy-arbata-otel-i-apartamenty-room-2-2.jpg",
+          "label": "Делюкс с двумя раздельными кроватями · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-zvezdy-arbata-otel-i-apartamenty-room-2-3.jpg",
+          "label": "Делюкс с двумя раздельными кроватями · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-zvezdy-arbata-otel-i-apartamenty-room-2-4.jpg",
+          "label": "Делюкс с двумя раздельными кроватями · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-zvezdy-arbata-otel-i-apartamenty-room-2-5.jpg",
+          "label": "Делюкс с двумя раздельными кроватями · фото 5",
+          "category": "Все фото"
+        }
+      ],
+      "area": 28.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Делюкс с двумя раздельными кроватями. Площадь 28 м², две односпальные кровати.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-zvezdy-arbata-otel-i-apartamenty-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-zvezdy-arbata-otel-i-apartamenty-room-3-1.jpg",
+          "label": "Премиум Делюкс с видом на Новый Арбат · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-zvezdy-arbata-otel-i-apartamenty-room-3-2.jpg",
+          "label": "Премиум Делюкс с видом на Новый Арбат · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-zvezdy-arbata-otel-i-apartamenty-room-3-3.jpg",
+          "label": "Премиум Делюкс с видом на Новый Арбат · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-zvezdy-arbata-otel-i-apartamenty-room-3-4.jpg",
+          "label": "Премиум Делюкс с видом на Новый Арбат · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-zvezdy-arbata-otel-i-apartamenty-room-3-5.jpg",
+          "label": "Премиум Делюкс с видом на Новый Арбат · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-zvezdy-arbata-otel-i-apartamenty-room-3-6.jpg",
+          "label": "Премиум Делюкс с видом на Новый Арбат · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 30.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Премиум Делюкс с видом на Новый Арбат. Площадь 30 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-palmira-business-club-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-palmira-business-club-room-2-1.jpg",
+          "label": "Студия · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-palmira-business-club-room-2-2.jpg",
+          "label": "Студия · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-palmira-business-club-room-2-3.jpg",
+          "label": "Студия · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-palmira-business-club-room-2-4.jpg",
+          "label": "Студия · фото 4",
+          "category": "Все фото"
+        }
+      ],
+      "area": 32.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Студия. Площадь 32 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-palmira-business-club-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-palmira-business-club-room-3-1.jpg",
+          "label": "СУПЕРИОР с видом на реку · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-palmira-business-club-room-3-2.jpg",
+          "label": "СУПЕРИОР с видом на реку · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-palmira-business-club-room-3-3.jpg",
+          "label": "СУПЕРИОР с видом на реку · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-palmira-business-club-room-3-4.jpg",
+          "label": "СУПЕРИОР с видом на реку · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-palmira-business-club-room-3-5.jpg",
+          "label": "СУПЕРИОР с видом на реку · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-palmira-business-club-room-3-6.jpg",
+          "label": "СУПЕРИОР с видом на реку · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 32.0,
+      "view": "Вид на водоем",
+      "floor": "",
+      "balcony": false,
+      "description": "СУПЕРИОР с видом на реку. Площадь 32 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-otel-mandarin-moskva-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-otel-mandarin-moskva-room-2-1.jpg",
+          "label": "Стандартный номер с одной двуспальной кроватью · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-mandarin-moskva-room-2-2.jpg",
+          "label": "Стандартный номер с одной двуспальной кроватью · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-mandarin-moskva-room-2-3.jpg",
+          "label": "Стандартный номер с одной двуспальной кроватью · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-mandarin-moskva-room-2-4.jpg",
+          "label": "Стандартный номер с одной двуспальной кроватью · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-mandarin-moskva-room-2-5.jpg",
+          "label": "Стандартный номер с одной двуспальной кроватью · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-mandarin-moskva-room-2-6.jpg",
+          "label": "Стандартный номер с одной двуспальной кроватью · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 20.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандартный номер с одной двуспальной кроватью. Площадь 20 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "moscow-otel-mandarin-moskva-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/moscow-otel-mandarin-moskva-room-3-1.jpg",
+          "label": "Стандартный номер с двумя раздельными кроватями · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-mandarin-moskva-room-3-2.jpg",
+          "label": "Стандартный номер с двумя раздельными кроватями · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-mandarin-moskva-room-3-3.jpg",
+          "label": "Стандартный номер с двумя раздельными кроватями · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-mandarin-moskva-room-3-4.jpg",
+          "label": "Стандартный номер с двумя раздельными кроватями · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-mandarin-moskva-room-3-5.jpg",
+          "label": "Стандартный номер с двумя раздельными кроватями · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/moscow-otel-mandarin-moskva-room-3-6.jpg",
+          "label": "Стандартный номер с двумя раздельными кроватями · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 18.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандартный номер с двумя раздельными кроватями. Площадь 18 м², две односпальные кровати.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-valo-network-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-valo-network-room-2-1.jpg",
+          "label": "Нетворк Стандарт Плюс 3* с раздельными матрасами на подиуме (с возможностью соединить) · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-network-room-2-2.jpg",
+          "label": "Нетворк Стандарт Плюс 3* с раздельными матрасами на подиуме (с возможностью соединить) · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-network-room-2-3.jpg",
+          "label": "Нетворк Стандарт Плюс 3* с раздельными матрасами на подиуме (с возможностью соединить) · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-network-room-2-4.jpg",
+          "label": "Нетворк Стандарт Плюс 3* с раздельными матрасами на подиуме (с возможностью соединить) · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-network-room-2-5.jpg",
+          "label": "Нетворк Стандарт Плюс 3* с раздельными матрасами на подиуме (с возможностью соединить) · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-network-room-2-6.jpg",
+          "label": "Нетворк Стандарт Плюс 3* с раздельными матрасами на подиуме (с возможностью соединить) · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 18.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Нетворк Стандарт Плюс 3* с раздельными матрасами на подиуме (с возможностью соединить). Площадь 18 м², две односпальные кровати.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-valo-network-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-valo-network-room-3-1.jpg",
+          "label": "Нетворк Стандарт Плюс 3* с большим матрасом на подиуме · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-network-room-3-2.jpg",
+          "label": "Нетворк Стандарт Плюс 3* с большим матрасом на подиуме · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-network-room-3-3.jpg",
+          "label": "Нетворк Стандарт Плюс 3* с большим матрасом на подиуме · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-network-room-3-4.jpg",
+          "label": "Нетворк Стандарт Плюс 3* с большим матрасом на подиуме · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-network-room-3-5.jpg",
+          "label": "Нетворк Стандарт Плюс 3* с большим матрасом на подиуме · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-network-room-3-6.jpg",
+          "label": "Нетворк Стандарт Плюс 3* с большим матрасом на подиуме · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 18.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Нетворк Стандарт Плюс 3* с большим матрасом на подиуме. Площадь 18 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-valo-business-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-valo-business-room-2-1.jpg",
+          "label": "Бизнес Комфорт 4* · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-business-room-2-2.jpg",
+          "label": "Бизнес Комфорт 4* · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-business-room-2-3.jpg",
+          "label": "Бизнес Комфорт 4* · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-business-room-2-4.jpg",
+          "label": "Бизнес Комфорт 4* · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-business-room-2-5.jpg",
+          "label": "Бизнес Комфорт 4* · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-business-room-2-6.jpg",
+          "label": "Бизнес Комфорт 4* · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 24.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Бизнес Комфорт 4*. Площадь 24 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-valo-business-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-valo-business-room-3-1.jpg",
+          "label": "Бизнес Комфорт с балконом 4* · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-business-room-3-2.jpg",
+          "label": "Бизнес Комфорт с балконом 4* · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-business-room-3-3.jpg",
+          "label": "Бизнес Комфорт с балконом 4* · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-business-room-3-4.jpg",
+          "label": "Бизнес Комфорт с балконом 4* · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-business-room-3-5.jpg",
+          "label": "Бизнес Комфорт с балконом 4* · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-valo-business-room-3-6.jpg",
+          "label": "Бизнес Комфорт с балконом 4* · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 23.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": true,
+      "description": "Бизнес Комфорт с балконом 4*. Площадь 23 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ],
+        [
+          "pin",
+          "Балкон"
+        ]
+      ]
+    },
+    "spb-apart-otel-uno-by-valo-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-apart-otel-uno-by-valo-room-2-1.jpg",
+          "label": "Комфорт Плюс · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-uno-by-valo-room-2-2.jpg",
+          "label": "Комфорт Плюс · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-uno-by-valo-room-2-3.jpg",
+          "label": "Комфорт Плюс · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-uno-by-valo-room-2-4.jpg",
+          "label": "Комфорт Плюс · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-uno-by-valo-room-2-5.jpg",
+          "label": "Комфорт Плюс · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-uno-by-valo-room-2-6.jpg",
+          "label": "Комфорт Плюс · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 19.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Комфорт Плюс. Площадь 19 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-apart-otel-uno-by-valo-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-apart-otel-uno-by-valo-room-3-1.jpg",
+          "label": "Супериор · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-uno-by-valo-room-3-2.jpg",
+          "label": "Супериор · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-uno-by-valo-room-3-3.jpg",
+          "label": "Супериор · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-uno-by-valo-room-3-4.jpg",
+          "label": "Супериор · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-uno-by-valo-room-3-5.jpg",
+          "label": "Супериор · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-uno-by-valo-room-3-6.jpg",
+          "label": "Супериор · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 21.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Супериор. Площадь 21 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-apartpeydzh-nevskiy-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-nevskiy-room-2-1.jpg",
+          "label": "Номер-студио · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-nevskiy-room-2-2.jpg",
+          "label": "Номер-студио · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-nevskiy-room-2-3.jpg",
+          "label": "Номер-студио · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-nevskiy-room-2-4.jpg",
+          "label": "Номер-студио · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-nevskiy-room-2-5.jpg",
+          "label": "Номер-студио · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-nevskiy-room-2-6.jpg",
+          "label": "Номер-студио · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 14.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Номер-студио. Площадь 14 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-apartpeydzh-nevskiy-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-nevskiy-room-3-1.jpg",
+          "label": "Двухместный номер \"Романтик\" с двуспальной кроватью · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-nevskiy-room-3-2.jpg",
+          "label": "Двухместный номер \"Романтик\" с двуспальной кроватью · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-nevskiy-room-3-3.jpg",
+          "label": "Двухместный номер \"Романтик\" с двуспальной кроватью · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-nevskiy-room-3-4.jpg",
+          "label": "Двухместный номер \"Романтик\" с двуспальной кроватью · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-nevskiy-room-3-5.jpg",
+          "label": "Двухместный номер \"Романтик\" с двуспальной кроватью · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-nevskiy-room-3-6.jpg",
+          "label": "Двухместный номер \"Романтик\" с двуспальной кроватью · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 17.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Двухместный номер \"Романтик\" с двуспальной кроватью. Площадь 17 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-osobnyak-molvo-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-osobnyak-molvo-room-2-1.jpg",
+          "label": "Номер Улучшенный Бюджетный (общие удобства) · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-osobnyak-molvo-room-2-2.jpg",
+          "label": "Номер Улучшенный Бюджетный (общие удобства) · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-osobnyak-molvo-room-2-3.jpg",
+          "label": "Номер Улучшенный Бюджетный (общие удобства) · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-osobnyak-molvo-room-2-4.jpg",
+          "label": "Номер Улучшенный Бюджетный (общие удобства) · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-osobnyak-molvo-room-2-5.jpg",
+          "label": "Номер Улучшенный Бюджетный (общие удобства) · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-osobnyak-molvo-room-2-6.jpg",
+          "label": "Номер Улучшенный Бюджетный (общие удобства) · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 12.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Номер Улучшенный Бюджетный (общие удобства). Площадь 12 м², две односпальные кровати. Ванная комната общая.",
+      "amenities": [
+        [
+          "room",
+          "Общая ванная комната"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-osobnyak-molvo-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-osobnyak-molvo-room-3-1.jpg",
+          "label": "Стандарт с двуспальной кроватью · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-osobnyak-molvo-room-3-2.jpg",
+          "label": "Стандарт с двуспальной кроватью · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-osobnyak-molvo-room-3-3.jpg",
+          "label": "Стандарт с двуспальной кроватью · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-osobnyak-molvo-room-3-4.jpg",
+          "label": "Стандарт с двуспальной кроватью · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-osobnyak-molvo-room-3-5.jpg",
+          "label": "Стандарт с двуспальной кроватью · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-osobnyak-molvo-room-3-6.jpg",
+          "label": "Стандарт с двуспальной кроватью · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 14.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандарт с двуспальной кроватью. Площадь 14 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-apartamenty-new-horizon-liteyniy-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-apartamenty-new-horizon-liteyniy-room-2-1.jpg",
+          "label": "Улучшенные апартаменты · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartamenty-new-horizon-liteyniy-room-2-2.jpg",
+          "label": "Улучшенные апартаменты · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartamenty-new-horizon-liteyniy-room-2-3.jpg",
+          "label": "Улучшенные апартаменты · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartamenty-new-horizon-liteyniy-room-2-4.jpg",
+          "label": "Улучшенные апартаменты · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartamenty-new-horizon-liteyniy-room-2-5.jpg",
+          "label": "Улучшенные апартаменты · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartamenty-new-horizon-liteyniy-room-2-6.jpg",
+          "label": "Улучшенные апартаменты · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 16.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Улучшенные апартаменты. Площадь 16 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-ramada-plaza-by-wyndham-st-petersburg-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-ramada-plaza-by-wyndham-st-petersburg-room-2-1.jpg",
+          "label": "Рамада Комфорт 4* · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ramada-plaza-by-wyndham-st-petersburg-room-2-2.jpg",
+          "label": "Рамада Комфорт 4* · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ramada-plaza-by-wyndham-st-petersburg-room-2-3.jpg",
+          "label": "Рамада Комфорт 4* · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ramada-plaza-by-wyndham-st-petersburg-room-2-4.jpg",
+          "label": "Рамада Комфорт 4* · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ramada-plaza-by-wyndham-st-petersburg-room-2-5.jpg",
+          "label": "Рамада Комфорт 4* · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ramada-plaza-by-wyndham-st-petersburg-room-2-6.jpg",
+          "label": "Рамада Комфорт 4* · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 24.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Рамада Комфорт 4*. Площадь 24 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-ramada-plaza-by-wyndham-st-petersburg-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-ramada-plaza-by-wyndham-st-petersburg-room-3-1.jpg",
+          "label": "Рамада Полулюкс 4* без посещения бассейна · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ramada-plaza-by-wyndham-st-petersburg-room-3-2.jpg",
+          "label": "Рамада Полулюкс 4* без посещения бассейна · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ramada-plaza-by-wyndham-st-petersburg-room-3-3.jpg",
+          "label": "Рамада Полулюкс 4* без посещения бассейна · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ramada-plaza-by-wyndham-st-petersburg-room-3-4.jpg",
+          "label": "Рамада Полулюкс 4* без посещения бассейна · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ramada-plaza-by-wyndham-st-petersburg-room-3-5.jpg",
+          "label": "Рамада Полулюкс 4* без посещения бассейна · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ramada-plaza-by-wyndham-st-petersburg-room-3-6.jpg",
+          "label": "Рамада Полулюкс 4* без посещения бассейна · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 27.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Рамада Полулюкс 4* без посещения бассейна. Площадь 27 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-apartpeydzh-elagin-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-elagin-room-2-1.jpg",
+          "label": "Студия с диваном · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-elagin-room-2-2.jpg",
+          "label": "Студия с диваном · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-elagin-room-2-3.jpg",
+          "label": "Студия с диваном · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-elagin-room-2-4.jpg",
+          "label": "Студия с диваном · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-elagin-room-2-5.jpg",
+          "label": "Студия с диваном · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-elagin-room-2-6.jpg",
+          "label": "Студия с диваном · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 26.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Студия с диваном. Площадь 26 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-apartpeydzh-elagin-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-elagin-room-3-1.jpg",
+          "label": "Однокомнатный апартамент · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-elagin-room-3-2.jpg",
+          "label": "Однокомнатный апартамент · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-elagin-room-3-3.jpg",
+          "label": "Однокомнатный апартамент · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-elagin-room-3-4.jpg",
+          "label": "Однокомнатный апартамент · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-elagin-room-3-5.jpg",
+          "label": "Однокомнатный апартамент · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apartpeydzh-elagin-room-3-6.jpg",
+          "label": "Однокомнатный апартамент · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 38.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Однокомнатный апартамент. Площадь 38 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-otel-rotas-city-center-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-otel-rotas-city-center-room-2-1.jpg",
+          "label": "Улучшенная студия · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-otel-rotas-city-center-room-2-2.jpg",
+          "label": "Улучшенная студия · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-otel-rotas-city-center-room-2-3.jpg",
+          "label": "Улучшенная студия · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-otel-rotas-city-center-room-2-4.jpg",
+          "label": "Улучшенная студия · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-otel-rotas-city-center-room-2-5.jpg",
+          "label": "Улучшенная студия · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-otel-rotas-city-center-room-2-6.jpg",
+          "label": "Улучшенная студия · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 25.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Улучшенная студия. Площадь 25 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-otel-rotas-city-center-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-otel-rotas-city-center-room-3-1.jpg",
+          "label": "Делюкс студия · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-otel-rotas-city-center-room-3-2.jpg",
+          "label": "Делюкс студия · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-otel-rotas-city-center-room-3-3.jpg",
+          "label": "Делюкс студия · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-otel-rotas-city-center-room-3-4.jpg",
+          "label": "Делюкс студия · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-otel-rotas-city-center-room-3-5.jpg",
+          "label": "Делюкс студия · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-otel-rotas-city-center-room-3-6.jpg",
+          "label": "Делюкс студия · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 33.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Делюкс студия. Площадь 33 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-ligotel-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-ligotel-room-2-1.jpg",
+          "label": "Комфорт · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ligotel-room-2-2.jpg",
+          "label": "Комфорт · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ligotel-room-2-3.jpg",
+          "label": "Комфорт · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ligotel-room-2-4.jpg",
+          "label": "Комфорт · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ligotel-room-2-5.jpg",
+          "label": "Комфорт · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ligotel-room-2-6.jpg",
+          "label": "Комфорт · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 16.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Комфорт. Площадь 16 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-ligotel-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-ligotel-room-3-1.jpg",
+          "label": "Комфорт с раздельными кроватями · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ligotel-room-3-2.jpg",
+          "label": "Комфорт с раздельными кроватями · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ligotel-room-3-3.jpg",
+          "label": "Комфорт с раздельными кроватями · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-ligotel-room-3-4.jpg",
+          "label": "Комфорт с раздельными кроватями · фото 4",
+          "category": "Все фото"
+        }
+      ],
+      "area": 16.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Комфорт с раздельными кроватями. Площадь 16 м², две односпальные кровати.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-aristokrat-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-aristokrat-room-2-1.jpg",
+          "label": "Комфорт с одной большой или двумя раздельными кроватями · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-aristokrat-room-2-2.jpg",
+          "label": "Комфорт с одной большой или двумя раздельными кроватями · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-aristokrat-room-2-3.jpg",
+          "label": "Комфорт с одной большой или двумя раздельными кроватями · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-aristokrat-room-2-4.jpg",
+          "label": "Комфорт с одной большой или двумя раздельными кроватями · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-aristokrat-room-2-5.jpg",
+          "label": "Комфорт с одной большой или двумя раздельными кроватями · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-aristokrat-room-2-6.jpg",
+          "label": "Комфорт с одной большой или двумя раздельными кроватями · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 17.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Комфорт с одной большой или двумя раздельными кроватями. Площадь 17 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-aristokrat-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-aristokrat-room-3-1.jpg",
+          "label": "Стандарт с одной большой или двумя раздельными кроватями · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-aristokrat-room-3-2.jpg",
+          "label": "Стандарт с одной большой или двумя раздельными кроватями · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-aristokrat-room-3-3.jpg",
+          "label": "Стандарт с одной большой или двумя раздельными кроватями · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-aristokrat-room-3-4.jpg",
+          "label": "Стандарт с одной большой или двумя раздельными кроватями · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-aristokrat-room-3-5.jpg",
+          "label": "Стандарт с одной большой или двумя раздельными кроватями · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-aristokrat-room-3-6.jpg",
+          "label": "Стандарт с одной большой или двумя раздельными кроватями · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 15.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Стандарт с одной большой или двумя раздельными кроватями. Площадь 15 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-apart-otel-port-comfort-by-old-nevskiy-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-apart-otel-port-comfort-by-old-nevskiy-room-2-1.jpg",
+          "label": "Студия Комфорт · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-port-comfort-by-old-nevskiy-room-2-2.jpg",
+          "label": "Студия Комфорт · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-port-comfort-by-old-nevskiy-room-2-3.jpg",
+          "label": "Студия Комфорт · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-port-comfort-by-old-nevskiy-room-2-4.jpg",
+          "label": "Студия Комфорт · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-port-comfort-by-old-nevskiy-room-2-5.jpg",
+          "label": "Студия Комфорт · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-apart-otel-port-comfort-by-old-nevskiy-room-2-6.jpg",
+          "label": "Студия Комфорт · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 17.0,
+      "view": "Вид на внутренний дворик",
+      "floor": "",
+      "balcony": false,
+      "description": "Студия Комфорт. Площадь 17 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-arkada-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-arkada-room-2-1.jpg",
+          "label": "Комфорт · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-arkada-room-2-2.jpg",
+          "label": "Комфорт · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-arkada-room-2-3.jpg",
+          "label": "Комфорт · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-arkada-room-2-4.jpg",
+          "label": "Комфорт · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-arkada-room-2-5.jpg",
+          "label": "Комфорт · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-arkada-room-2-6.jpg",
+          "label": "Комфорт · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 23.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Комфорт. Площадь 23 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-mini-otel-sadovaya-loft-room-2": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-mini-otel-sadovaya-loft-room-2-1.jpg",
+          "label": "Номер эконом с 1 двуспальной кроватью · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-sadovaya-loft-room-2-2.jpg",
+          "label": "Номер эконом с 1 двуспальной кроватью · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-sadovaya-loft-room-2-3.jpg",
+          "label": "Номер эконом с 1 двуспальной кроватью · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-sadovaya-loft-room-2-4.jpg",
+          "label": "Номер эконом с 1 двуспальной кроватью · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-sadovaya-loft-room-2-5.png",
+          "label": "Номер эконом с 1 двуспальной кроватью · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-sadovaya-loft-room-2-6.jpg",
+          "label": "Номер эконом с 1 двуспальной кроватью · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 15.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Номер эконом с 1 двуспальной кроватью. Площадь 15 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    },
+    "spb-mini-otel-sadovaya-loft-room-3": {
+      "photos": [
+        {
+          "src": "/hotels/rooms/spb-mini-otel-sadovaya-loft-room-3-1.jpg",
+          "label": "Номер улучшенный стандарт с 1 двуспальной кроватью · фото 1",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-sadovaya-loft-room-3-2.jpg",
+          "label": "Номер улучшенный стандарт с 1 двуспальной кроватью · фото 2",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-sadovaya-loft-room-3-3.jpg",
+          "label": "Номер улучшенный стандарт с 1 двуспальной кроватью · фото 3",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-sadovaya-loft-room-3-4.jpg",
+          "label": "Номер улучшенный стандарт с 1 двуспальной кроватью · фото 4",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-sadovaya-loft-room-3-5.jpg",
+          "label": "Номер улучшенный стандарт с 1 двуспальной кроватью · фото 5",
+          "category": "Все фото"
+        },
+        {
+          "src": "/hotels/rooms/spb-mini-otel-sadovaya-loft-room-3-6.jpg",
+          "label": "Номер улучшенный стандарт с 1 двуспальной кроватью · фото 6",
+          "category": "Все фото"
+        }
+      ],
+      "area": 20.0,
+      "view": "Вид на окрестности",
+      "floor": "",
+      "balcony": false,
+      "description": "Номер улучшенный стандарт с 1 двуспальной кроватью. Площадь 20 м², двуспальная кровать.",
+      "amenities": [
+        [
+          "room",
+          "Ванная комната в номере"
+        ],
+        [
+          "climate",
+          "Кондиционер"
+        ],
+        [
+          "wifi",
+          "Wi-Fi"
+        ]
+      ]
+    }
+  }
+}

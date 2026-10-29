@@ -1,0 +1,20 @@
+/* Help uses the same search field, filter chips and C5 rows as profile/history. */
+.support-page{gap:16px}
+.help-search{position:relative}
+.help-search>.k-icon{position:absolute;left:16px;top:18px;z-index:1;pointer-events:none}
+.help-search .k-field>label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.help-search .k-field-box{min-height:56px;background:var(--k-surface-card,#fff);border-radius:18px}
+.help-search .k-field-box input{padding-left:46px;font-size:15px;line-height:24px}
+.help-filters{display:flex;align-items:center;gap:8px;padding:1px 0}
+.help-filters .filter-chip{min-height:36px;height:36px;padding:0 14px;white-space:nowrap;font:500 13px/20px var(--k-font-text);border-radius:18px}
+.support-page .history-section{gap:10px}
+.support-page .history-section h2{font:500 17px/24px var(--k-font-text);color:var(--k-text-primary);padding:0 4px}
+.support-page .help-questions .k-row{min-height:64px;padding:12px 14px;gap:12px}
+.support-page .help-questions .icon-tile{width:36px;height:36px;border-radius:12px}
+.support-page .help-questions .k-row strong{font:500 14px/20px var(--k-font-text)}
+.support-page .support-article{padding:18px;background:#fff;border:1px solid var(--k-border-subtle);border-radius:22px;gap:16px}
+.support-page .support-article h1{font:500 20px/28px var(--k-font-display);letter-spacing:-.5px}
+.support-page .support-article p{font:400 15px/24px var(--k-font-text);color:var(--k-text-secondary)}
+.support-page .history-review-comment{font:500 14px/20px var(--k-font-text)}
+.support-page .history-review-comment textarea{min-height:160px;border-radius:18px}
+.support-page .support-character-count{margin-top:-10px}

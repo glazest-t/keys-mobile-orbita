@@ -1,0 +1,3823 @@
+{
+  "hotels": {
+    "orbit-sea": {
+      "type": "Гостиница",
+      "district": "Сириус",
+      "network": "Mantera",
+      "bonuses": [
+        "Программа лояльности «Ключи»",
+        "Программа лояльности отеля"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Круглосуточная стойка регистрации",
+        "Камера хранения",
+        "Лифт",
+        "Бассейн",
+        "Спа",
+        "Ресторан",
+        "Фитнес-центр"
+      ],
+      "booking": [
+        "Можно с детьми",
+        "Доступная среда"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "orbit-city": {
+      "type": "Гостиница",
+      "district": "Тверской",
+      "network": "",
+      "bonuses": [
+        "Программа лояльности «Ключи»"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Круглосуточная стойка регистрации",
+        "Камера хранения",
+        "Лифт",
+        "Спа"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "orbit-forest": {
+      "type": "Гостиница",
+      "district": "Курортный",
+      "network": "",
+      "bonuses": [
+        "Программа лояльности «Ключи»",
+        "Программа лояльности отеля"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Круглосуточная стойка регистрации",
+        "Камера хранения",
+        "Лифт"
+      ],
+      "booking": [
+        "Можно с детьми",
+        "Можно с питомцем"
+      ],
+      "parking": [
+        "Есть парковка",
+        "Бесплатная парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "pine-sochi": {
+      "type": "Гостиница",
+      "district": "Хостинский",
+      "network": "",
+      "bonuses": [
+        "Программа лояльности «Ключи»"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Круглосуточная стойка регистрации",
+        "Камера хранения",
+        "Лифт"
+      ],
+      "booking": [
+        "Можно с детьми",
+        "Можно с питомцем"
+      ],
+      "parking": [
+        "Есть парковка",
+        "Бесплатная парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "lighthouse-sochi": {
+      "type": "Гостиница",
+      "district": "Центральный",
+      "network": "",
+      "bonuses": [
+        "Программа лояльности «Ключи»"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Круглосуточная стойка регистрации",
+        "Камера хранения",
+        "Лифт",
+        "Бассейн",
+        "Ресторан"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "kazan-city": {
+      "type": "Гостиница",
+      "district": "Вахитовский",
+      "network": "Cosmos Hotel Group",
+      "bonuses": [
+        "Программа лояльности «Ключи»",
+        "Программа лояльности отеля"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Круглосуточная стойка регистрации",
+        "Камера хранения",
+        "Лифт",
+        "Бассейн",
+        "Спа",
+        "Фитнес-центр",
+        "Ресторан"
+      ],
+      "booking": [
+        "Можно с детьми",
+        "Доступная среда"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "kazan-apartment": {
+      "type": "Квартира",
+      "district": "Советский",
+      "network": "",
+      "bonuses": [
+        "Программа лояльности «Ключи»"
+      ],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми",
+        "Можно с питомцем"
+      ],
+      "parking": [
+        "Есть парковка",
+        "Бесплатная парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "kazan-apart": {
+      "type": "Апарт-отель",
+      "district": "Вахитовский",
+      "network": "AZIMUT Hotels",
+      "bonuses": [
+        "Программа лояльности «Ключи»",
+        "Программа лояльности отеля",
+        "Эксклюзивно только в Ключах"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Круглосуточная стойка регистрации",
+        "Камера хранения",
+        "Лифт",
+        "Ресторан"
+      ],
+      "booking": [
+        "Можно с детьми",
+        "Доступная среда"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "kazan-guest": {
+      "type": "Гостевой дом",
+      "district": "Кировский",
+      "network": "",
+      "bonuses": [
+        "Программа лояльности «Ключи»"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Ресторан"
+      ],
+      "booking": [
+        "Можно с детьми",
+        "Можно с питомцем"
+      ],
+      "parking": [
+        "Есть парковка",
+        "Бесплатная парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "kazan-hostel": {
+      "type": "Хостел",
+      "district": "Вахитовский",
+      "network": "ibis",
+      "bonuses": [
+        "Программа лояльности «Ключи»",
+        "Программа лояльности отеля"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Круглосуточная стойка регистрации",
+        "Камера хранения",
+        "Лифт"
+      ],
+      "booking": [],
+      "parking": [],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "kazan-country": {
+      "type": "Загородный дом",
+      "district": "Советский",
+      "network": "",
+      "bonuses": [
+        "Программа лояльности «Ключи»",
+        "Эксклюзивно только в Ключах"
+      ],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми",
+        "Можно с питомцем",
+        "Можно курить"
+      ],
+      "parking": [
+        "Есть парковка",
+        "Бесплатная парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "kazan-camp": {
+      "type": "База отдыха",
+      "district": "Кировский",
+      "network": "Грейс",
+      "bonuses": [
+        "Программа лояльности «Ключи»",
+        "Программа лояльности отеля"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Бассейн",
+        "Спа",
+        "Фитнес-центр",
+        "Ресторан"
+      ],
+      "booking": [
+        "Можно с детьми",
+        "Можно с питомцем"
+      ],
+      "parking": [
+        "Есть парковка",
+        "Бесплатная парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "kazan-health": {
+      "type": "Санаторий",
+      "district": "Московский",
+      "network": "Alean Collection",
+      "bonuses": [
+        "Программа лояльности «Ключи»",
+        "Программа лояльности отеля"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Круглосуточная стойка регистрации",
+        "Камера хранения",
+        "Лифт",
+        "Бассейн",
+        "Спа",
+        "Фитнес-центр",
+        "Ресторан"
+      ],
+      "booking": [
+        "Можно с детьми",
+        "Доступная среда"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "moscow-izmaylovo-tvoy-otel": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [
+        "Горячие скидки"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Спа"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "moscow-otel-shelterz-vdnh": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [
+        "Горячие скидки"
+      ],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "moscow-ibis-moskva-kievskaya": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "ibis",
+      "bonuses": [
+        "Горячие скидки"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер",
+        "Спа",
+        "Бассейн",
+        "Ресторан",
+        "Фитнес-центр",
+        "Круглосуточная стойка регистрации",
+        "Лифт",
+        "Камера хранения",
+        "Можно с питомцем",
+        "Рабочее место"
+      ],
+      "booking": [
+        "Можно с детьми",
+        "Можно с питомцем",
+        "Доступная среда"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "moscow-apart-otel-okruzhnaya": {
+      "type": "Апарт-отель",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "moscow-gostinitsa-metallurg": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [
+        "Горячие скидки"
+      ],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "moscow-gostevoy-dom-lesnoy-sheremetyevo": {
+      "type": "Гостевой дом",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "moscow-gostinitsa-ekonom-nasledie": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "moscow-arena": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "moscow-hostel-guten-duck-moscow": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "moscow-minima-belorusskaya": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [
+        "Горячие скидки"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "moscow-otel-tesla": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "moscow-bun-in-alley": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "moscow-otel-maksima-zarya": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "moscow-moscow-marriott-imperial-plaza": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "Marriott",
+      "bonuses": [
+        "Горячие скидки"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "moscow-akvamarin-zont-hotel-group": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "ZONT Hotel Group",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер",
+        "Спа"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "moscow-pekin": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [
+        "Горячие скидки"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Спа"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "moscow-zvezdy-arbata-otel-i-apartamenty": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi",
+        "Спа"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "moscow-palmira-business-club": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [
+        "Горячие скидки"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер",
+        "Спа"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "moscow-otel-mandarin-moskva": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер",
+        "Спа",
+        "Бассейн"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "spb-valo-network": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [
+        "Горячие скидки"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер",
+        "Спа",
+        "Бассейн"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "spb-valo-business": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [
+        "Горячие скидки"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер",
+        "Спа",
+        "Бассейн"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "spb-demokrat-na-kamennoostrovskom-39": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "spb-apart-otel-uno-by-valo": {
+      "type": "Апарт-отель",
+      "district": "",
+      "network": "",
+      "bonuses": [
+        "Горячие скидки"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "spb-apartpeydzh-nevskiy": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [
+        "Горячие скидки"
+      ],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "spb-osobnyak-molvo": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "spb-apartamenty-new-horizon-liteyniy": {
+      "type": "Квартира",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "spb-ramada-plaza-by-wyndham-st-petersburg": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [
+        "Горячие скидки"
+      ],
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер",
+        "Спа",
+        "Бассейн"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "spb-apartpeydzh-elagin": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "spb-otel-rotas-city-center": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "spb-apartamenty-dvoriki-petra-na-gorohovoy": {
+      "type": "Квартира",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "spb-greenwich-by-friends": {
+      "type": "Гостевой дом",
+      "district": "",
+      "network": "",
+      "bonuses": [
+        "Горячие скидки"
+      ],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "spb-ligotel": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [
+        "Горячие скидки"
+      ],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "spb-mini-otel-moov-apart-bogema": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "spb-mini-otel-demokrat-na-nevskom-107b": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "spb-aristokrat": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "spb-apart-otel-port-comfort-by-old-nevskiy": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "spb-arkada": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [
+        "Горячие скидки"
+      ],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "spb-mini-otel-sadovaya-loft": {
+      "type": "Гостиница",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    },
+    "spb-apartamenty-zum-1": {
+      "type": "Квартира",
+      "district": "",
+      "network": "",
+      "bonuses": [],
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "booking": [
+        "Можно с детьми"
+      ],
+      "parking": [
+        "Есть парковка"
+      ],
+      "payment": [
+        "Оплата картой",
+        "Оплата на месте"
+      ]
+    }
+  },
+  "rooms": {
+    "sea-standard": {
+      "beds": [
+        "Одна двуспальная",
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Телевизор",
+        "Кондиционер",
+        "Холодильник",
+        "Сейф",
+        "Балкон",
+        "Кофемашина"
+      ],
+      "kitchen": false
+    },
+    "city-standard": {
+      "beds": [
+        "Одна двуспальная",
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Телевизор",
+        "Кондиционер",
+        "Холодильник",
+        "Сейф",
+        "Балкон"
+      ],
+      "kitchen": false
+    },
+    "forest-family": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 2,
+      "bedCount": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Телевизор",
+        "Кондиционер",
+        "Холодильник",
+        "Сейф",
+        "Балкон"
+      ],
+      "kitchen": false
+    },
+    "pine-sochi-room": {
+      "beds": [
+        "Одна двуспальная",
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Телевизор",
+        "Кондиционер",
+        "Холодильник",
+        "Сейф",
+        "Балкон"
+      ],
+      "kitchen": false
+    },
+    "lighthouse-sochi-room": {
+      "beds": [
+        "Одна двуспальная",
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Телевизор",
+        "Кондиционер",
+        "Холодильник",
+        "Сейф",
+        "Балкон"
+      ],
+      "kitchen": false
+    },
+    "sea-deluxe": {
+      "beds": [
+        "Одна двуспальная",
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Телевизор",
+        "Кондиционер",
+        "Холодильник",
+        "Сейф",
+        "Балкон",
+        "Кофемашина"
+      ],
+      "kitchen": false
+    },
+    "sea-suite": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 2,
+      "bedCount": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Телевизор",
+        "Кондиционер",
+        "Холодильник",
+        "Сейф",
+        "Балкон",
+        "Кофемашина"
+      ],
+      "kitchen": false
+    },
+    "kazan-city-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Телевизор",
+        "Кондиционер",
+        "Холодильник",
+        "Сейф"
+      ],
+      "kitchen": false
+    },
+    "kazan-apartment-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 2,
+      "bedCount": 3,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Телевизор",
+        "Кондиционер",
+        "Холодильник",
+        "Сейф",
+        "Балкон",
+        "Кофемашина",
+        "Стиральная машина"
+      ],
+      "kitchen": true
+    },
+    "kazan-apart-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 2,
+      "bedCount": 3,
+      "bathrooms": 2,
+      "amenities": [
+        "Ванная комната в номере",
+        "Телевизор",
+        "Кондиционер",
+        "Холодильник",
+        "Сейф",
+        "Кофемашина",
+        "Стиральная машина"
+      ],
+      "kitchen": true
+    },
+    "kazan-guest-room": {
+      "beds": [
+        "Одна двуспальная",
+        "Две односпальные"
+      ],
+      "bedrooms": 2,
+      "bedCount": 3,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Телевизор",
+        "Кондиционер",
+        "Холодильник",
+        "Сейф",
+        "Балкон"
+      ],
+      "kitchen": false
+    },
+    "kazan-hostel-room": {
+      "beds": [
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 0,
+      "amenities": [
+        "Телевизор",
+        "Холодильник"
+      ],
+      "kitchen": false
+    },
+    "kazan-country-room": {
+      "beds": [
+        "Одна двуспальная",
+        "Две односпальные"
+      ],
+      "bedrooms": 4,
+      "bedCount": 7,
+      "bathrooms": 3,
+      "amenities": [
+        "Ванная комната в номере",
+        "Телевизор",
+        "Кондиционер",
+        "Холодильник",
+        "Сейф",
+        "Балкон",
+        "Кофемашина",
+        "Стиральная машина"
+      ],
+      "kitchen": true
+    },
+    "kazan-camp-room": {
+      "beds": [
+        "Одна двуспальная",
+        "Две односпальные"
+      ],
+      "bedrooms": 3,
+      "bedCount": 4,
+      "bathrooms": 2,
+      "amenities": [
+        "Ванная комната в номере",
+        "Телевизор",
+        "Кондиционер",
+        "Холодильник",
+        "Сейф",
+        "Балкон"
+      ],
+      "kitchen": false
+    },
+    "kazan-health-room": {
+      "beds": [
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Телевизор",
+        "Кондиционер",
+        "Холодильник",
+        "Сейф",
+        "Балкон"
+      ],
+      "kitchen": false
+    },
+    "moscow-izmaylovo-tvoy-otel-room": {
+      "beds": [
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-otel-shelterz-vdnh-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 0,
+      "amenities": [
+        "Общая ванная комната",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-ibis-moskva-kievskaya-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-apart-otel-okruzhnaya-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-gostinitsa-metallurg-room": {
+      "beds": [
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 0,
+      "amenities": [
+        "Общая ванная комната",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-gostevoy-dom-lesnoy-sheremetyevo-room": {
+      "beds": [
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-gostinitsa-ekonom-nasledie-room": {
+      "beds": [
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 0,
+      "amenities": [
+        "Общая ванная комната"
+      ],
+      "kitchen": false
+    },
+    "moscow-arena-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Балкон"
+      ],
+      "kitchen": false
+    },
+    "moscow-hostel-guten-duck-moscow-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 0,
+      "amenities": [
+        "Общая ванная комната",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-minima-belorusskaya-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-otel-tesla-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-bun-in-alley-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-otel-maksima-zarya-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-moscow-marriott-imperial-plaza-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-akvamarin-zont-hotel-group-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-pekin-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-zvezdy-arbata-otel-i-apartamenty-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-palmira-business-club-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-otel-mandarin-moskva-room": {
+      "beds": [
+        "Одна двуспальная",
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 0,
+      "amenities": [
+        "Общая ванная комната",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-valo-network-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-valo-business-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-demokrat-na-kamennoostrovskom-39-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-apart-otel-uno-by-valo-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-apartpeydzh-nevskiy-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-osobnyak-molvo-room": {
+      "beds": [
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 0,
+      "amenities": [
+        "Общая ванная комната",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-apartamenty-new-horizon-liteyniy-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-ramada-plaza-by-wyndham-st-petersburg-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-apartpeydzh-elagin-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-otel-rotas-city-center-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-apartamenty-dvoriki-petra-na-gorohovoy-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере"
+      ],
+      "kitchen": false
+    },
+    "spb-greenwich-by-friends-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-ligotel-room": {
+      "beds": [
+        "Одна двуспальная",
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-mini-otel-moov-apart-bogema-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере"
+      ],
+      "kitchen": false
+    },
+    "spb-mini-otel-demokrat-na-nevskom-107b-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере"
+      ],
+      "kitchen": false
+    },
+    "spb-aristokrat-room": {
+      "beds": [
+        "Одна двуспальная",
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-apart-otel-port-comfort-by-old-nevskiy-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-arkada-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-mini-otel-sadovaya-loft-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-apartamenty-zum-1-room": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере"
+      ],
+      "kitchen": false
+    },
+    "moscow-izmaylovo-tvoy-otel-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-izmaylovo-tvoy-otel-room-3": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-ibis-moskva-kievskaya-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-ibis-moskva-kievskaya-room-3": {
+      "beds": [
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-apart-otel-okruzhnaya-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-gostinitsa-metallurg-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 0,
+      "amenities": [
+        "Общая ванная комната",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-gostinitsa-metallurg-room-3": {
+      "beds": [
+        "Одна односпальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-gostevoy-dom-lesnoy-sheremetyevo-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-gostevoy-dom-lesnoy-sheremetyevo-room-3": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-gostinitsa-ekonom-nasledie-room-2": {
+      "beds": [
+        "Одна двуспальная",
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере"
+      ],
+      "kitchen": false
+    },
+    "moscow-gostinitsa-ekonom-nasledie-room-3": {
+      "beds": [
+        "Одна двуспальная",
+        "Две односпальные"
+      ],
+      "bedrooms": 2,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере"
+      ],
+      "kitchen": false
+    },
+    "moscow-arena-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Балкон"
+      ],
+      "kitchen": false
+    },
+    "moscow-arena-room-3": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Балкон"
+      ],
+      "kitchen": false
+    },
+    "moscow-hostel-guten-duck-moscow-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 0,
+      "amenities": [
+        "Общая ванная комната",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-minima-belorusskaya-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-minima-belorusskaya-room-3": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-otel-tesla-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-otel-tesla-room-3": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-bun-in-alley-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-bun-in-alley-room-3": {
+      "beds": [
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-bun-in-alley-room-4": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере"
+      ],
+      "kitchen": false
+    },
+    "moscow-otel-maksima-zarya-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-otel-maksima-zarya-room-3": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-moscow-marriott-imperial-plaza-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-moscow-marriott-imperial-plaza-room-3": {
+      "beds": [
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-akvamarin-zont-hotel-group-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-akvamarin-zont-hotel-group-room-3": {
+      "beds": [
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-pekin-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-pekin-room-3": {
+      "beds": [
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-zvezdy-arbata-otel-i-apartamenty-room-2": {
+      "beds": [
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-zvezdy-arbata-otel-i-apartamenty-room-3": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-palmira-business-club-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-palmira-business-club-room-3": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-otel-mandarin-moskva-room-2": {
+      "beds": [
+        "Одна двуспальная",
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "moscow-otel-mandarin-moskva-room-3": {
+      "beds": [
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-valo-network-room-2": {
+      "beds": [
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-valo-network-room-3": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-valo-business-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-valo-business-room-3": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Балкон"
+      ],
+      "kitchen": false
+    },
+    "spb-apart-otel-uno-by-valo-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-apart-otel-uno-by-valo-room-3": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-apartpeydzh-nevskiy-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-apartpeydzh-nevskiy-room-3": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-osobnyak-molvo-room-2": {
+      "beds": [
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 0,
+      "amenities": [
+        "Общая ванная комната",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-osobnyak-molvo-room-3": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-apartamenty-new-horizon-liteyniy-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-ramada-plaza-by-wyndham-st-petersburg-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-ramada-plaza-by-wyndham-st-petersburg-room-3": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-apartpeydzh-elagin-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-apartpeydzh-elagin-room-3": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-otel-rotas-city-center-room-2": {
+      "beds": [
+        "Одна двуспальная",
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-otel-rotas-city-center-room-3": {
+      "beds": [
+        "Одна двуспальная",
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-ligotel-room-2": {
+      "beds": [
+        "Одна двуспальная",
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-ligotel-room-3": {
+      "beds": [
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 2,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-aristokrat-room-2": {
+      "beds": [
+        "Одна двуспальная",
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-aristokrat-room-3": {
+      "beds": [
+        "Одна двуспальная",
+        "Две односпальные"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-apart-otel-port-comfort-by-old-nevskiy-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-arkada-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-mini-otel-sadovaya-loft-room-2": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    },
+    "spb-mini-otel-sadovaya-loft-room-3": {
+      "beds": [
+        "Одна двуспальная"
+      ],
+      "bedrooms": 1,
+      "bedCount": 1,
+      "bathrooms": 1,
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi"
+      ],
+      "kitchen": false
+    }
+  },
+  "visuals": {
+    "kazan-city": {
+      "styles": [
+        "Дизайн"
+      ],
+      "location": "Казань · Вахитовский",
+      "address": "Вахитовский район",
+      "distance": "В центре города",
+      "stars": 5,
+      "rating": 4.8,
+      "reviews": 126,
+      "amenities": [
+        "Wi-Fi",
+        "Круглосуточная стойка регистрации",
+        "Камера хранения",
+        "Лифт",
+        "Бассейн",
+        "Спа",
+        "Фитнес-центр",
+        "Ресторан",
+        "Парковка",
+        "Завтрак"
+      ],
+      "photos": [
+        "/brand/assets/assets/maidens-hotel.jpg",
+        "/brand/assets/assets/room-suite-2.jpg"
+      ],
+      "description": "Гостиница в районе Вахитовский."
+    },
+    "kazan-apartment": {
+      "styles": [
+        "Тихое место",
+        "С детьми"
+      ],
+      "location": "Казань · Советский",
+      "address": "Советский район",
+      "distance": "4 км до центра",
+      "stars": 0,
+      "rating": 4.9,
+      "reviews": 42,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "Можно с питомцем"
+      ],
+      "photos": [
+        "/brand/assets/assets/room-suite-2.jpg",
+        "/brand/assets/assets/maidens-premium-king.jpg"
+      ],
+      "description": "Квартира в районе Советский."
+    },
+    "kazan-apart": {
+      "styles": [
+        "Дизайн"
+      ],
+      "location": "Казань · Вахитовский",
+      "address": "Вахитовский район",
+      "distance": "В центре города",
+      "stars": 4,
+      "rating": 4.7,
+      "reviews": 98,
+      "amenities": [
+        "Wi-Fi",
+        "Круглосуточная стойка регистрации",
+        "Камера хранения",
+        "Лифт",
+        "Ресторан",
+        "Парковка",
+        "Завтрак"
+      ],
+      "photos": [
+        "/brand/assets/assets/maidens-premium-king.jpg",
+        "/brand/assets/assets/room-suite-2.jpg"
+      ],
+      "description": "Апарт-отель в районе Вахитовский."
+    },
+    "kazan-guest": {
+      "styles": [
+        "Тихое место",
+        "С детьми"
+      ],
+      "location": "Казань · Кировский",
+      "address": "Кировский район",
+      "distance": "4 км до центра",
+      "stars": 2,
+      "rating": 4.6,
+      "reviews": 51,
+      "amenities": [
+        "Wi-Fi",
+        "Ресторан",
+        "Парковка",
+        "Можно с питомцем",
+        "Завтрак"
+      ],
+      "photos": [
+        "/brand/assets/assets/next-trip.jpg",
+        "/brand/assets/assets/room-suite-2.jpg"
+      ],
+      "description": "Гостевой дом в районе Кировский."
+    },
+    "kazan-hostel": {
+      "styles": [
+        "Дизайн"
+      ],
+      "location": "Казань · Вахитовский",
+      "address": "Вахитовский район",
+      "distance": "В центре города",
+      "stars": 1,
+      "rating": 4.3,
+      "reviews": 137,
+      "amenities": [
+        "Wi-Fi",
+        "Круглосуточная стойка регистрации",
+        "Камера хранения",
+        "Лифт"
+      ],
+      "photos": [
+        "/brand/assets/assets/maidens-hotel.jpg",
+        "/brand/assets/assets/room-suite-2.jpg"
+      ],
+      "description": "Хостел в районе Вахитовский."
+    },
+    "kazan-country": {
+      "styles": [
+        "Тихое место",
+        "С детьми"
+      ],
+      "location": "Казань · Советский",
+      "address": "Советский район",
+      "distance": "4 км до центра",
+      "stars": 0,
+      "rating": 4.9,
+      "reviews": 18,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "Можно с питомцем"
+      ],
+      "photos": [
+        "/brand/assets/assets/room-suite-2.jpg",
+        "/brand/assets/assets/maidens-premium-king.jpg"
+      ],
+      "description": "Загородный дом в районе Советский."
+    },
+    "kazan-camp": {
+      "styles": [
+        "Тихое место",
+        "С детьми"
+      ],
+      "location": "Казань · Кировский",
+      "address": "Кировский район",
+      "distance": "4 км до центра",
+      "stars": 3,
+      "rating": 4.5,
+      "reviews": 76,
+      "amenities": [
+        "Wi-Fi",
+        "Бассейн",
+        "Спа",
+        "Фитнес-центр",
+        "Ресторан",
+        "Парковка",
+        "Можно с питомцем",
+        "Завтрак"
+      ],
+      "photos": [
+        "/brand/assets/assets/maidens-premium-king.jpg",
+        "/brand/assets/assets/room-suite-2.jpg"
+      ],
+      "description": "База отдыха в районе Кировский."
+    },
+    "kazan-health": {
+      "styles": [
+        "Тихое место",
+        "С детьми"
+      ],
+      "location": "Казань · Московский",
+      "address": "Московский район",
+      "distance": "4 км до центра",
+      "stars": 4,
+      "rating": 4.8,
+      "reviews": 204,
+      "amenities": [
+        "Wi-Fi",
+        "Круглосуточная стойка регистрации",
+        "Камера хранения",
+        "Лифт",
+        "Бассейн",
+        "Спа",
+        "Фитнес-центр",
+        "Ресторан",
+        "Парковка",
+        "Завтрак"
+      ],
+      "photos": [
+        "/brand/assets/assets/next-trip.jpg",
+        "/brand/assets/assets/room-suite-2.jpg"
+      ],
+      "description": "Санаторий в районе Московский."
+    },
+    "moscow-izmaylovo-tvoy-otel": {
+      "styles": [
+        "Спа"
+      ],
+      "location": "Москва",
+      "address": "Метро Партизанская",
+      "distance": "9,2 км до центра",
+      "stars": 3,
+      "rating": 4.7,
+      "reviews": 2438,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "Спа"
+      ],
+      "photos": [
+        "/hotels/moscow/moscow-izmaylovo-tvoy-otel.jpg",
+        "/hotels/moscow/moscow-izmaylovo-tvoy-otel-gallery-1.jpg",
+        "/hotels/moscow/moscow-izmaylovo-tvoy-otel-gallery-2.jpg",
+        "/hotels/moscow/moscow-izmaylovo-tvoy-otel-gallery-3.jpg",
+        "/hotels/moscow/moscow-izmaylovo-tvoy-otel-gallery-4.jpg"
+      ],
+      "description": "Городской отель в пяти минутах ходьбы от метро «Партизанская». Здесь удобно остановиться на несколько дней и чередовать поездки по Москве с отдыхом в отеле."
+    },
+    "moscow-otel-shelterz-vdnh": {
+      "styles": [],
+      "location": "Москва",
+      "address": "Метро ВДНХ",
+      "distance": "8,2 км до центра",
+      "stars": -1,
+      "rating": 4.5,
+      "reviews": 486,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "photos": [
+        "/hotels/moscow/moscow-otel-shelterz-vdnh.jpg",
+        "/hotels/moscow/moscow-otel-shelterz-vdnh-gallery-1.jpg",
+        "/hotels/moscow/moscow-otel-shelterz-vdnh-gallery-2.jpg",
+        "/hotels/moscow/moscow-otel-shelterz-vdnh-gallery-3.jpg",
+        "/hotels/moscow/moscow-otel-shelterz-vdnh-gallery-4.jpg"
+      ],
+      "description": "Небольшой отель в районе ВДНХ для коротких поездок в Москву. До метро около километра — прогулку можно включить в начало дня."
+    },
+    "moscow-ibis-moskva-kievskaya": {
+      "styles": [
+        "Спа"
+      ],
+      "location": "Москва",
+      "address": "ул. Киевская, 2",
+      "distance": "3,8 км до центра",
+      "stars": 3,
+      "rating": 4.7,
+      "reviews": 792,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "Трансфер",
+        "Спа",
+        "Бассейн",
+        "Ресторан",
+        "Фитнес-центр",
+        "Круглосуточная стойка регистрации",
+        "Лифт",
+        "Камера хранения",
+        "Можно с питомцем",
+        "Рабочее место"
+      ],
+      "photos": [
+        "/hotels/moscow/moscow-ibis-moskva-kievskaya.jpg",
+        "/hotels/moscow/moscow-ibis-moskva-kievskaya-gallery-1.jpg",
+        "/hotels/moscow/moscow-ibis-moskva-kievskaya-gallery-2.jpg",
+        "/hotels/moscow/moscow-ibis-moskva-kievskaya-gallery-3.jpg"
+      ],
+      "description": "Отель рядом с метро «Киевская» для прогулок по столице и деловых встреч. В комплексе есть бассейн и спа, а к проживанию можно выбрать завтрак."
+    },
+    "moscow-apart-otel-okruzhnaya": {
+      "styles": [],
+      "location": "Москва",
+      "address": "Метро Окружная",
+      "distance": "11 км до центра",
+      "stars": -1,
+      "rating": 3.5,
+      "reviews": 2,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "photos": [
+        "/hotels/moscow/moscow-apart-otel-okruzhnaya.png",
+        "/hotels/moscow/moscow-apart-otel-okruzhnaya-gallery-1.png",
+        "/hotels/moscow/moscow-apart-otel-okruzhnaya-gallery-2.jpg",
+        "/hotels/moscow/moscow-apart-otel-okruzhnaya-gallery-3.jpg",
+        "/hotels/moscow/moscow-apart-otel-okruzhnaya-gallery-4.jpg"
+      ],
+      "description": "Апарт-отель в нескольких минутах ходьбы от метро «Окружная». Подойдёт тем, кто планирует поездки по городу и предпочитает останавливаться вне центра."
+    },
+    "moscow-gostinitsa-metallurg": {
+      "styles": [],
+      "location": "Москва",
+      "address": "Метро Достоевская",
+      "distance": "3,5 км до центра",
+      "stars": 2,
+      "rating": 4.4,
+      "reviews": 56,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "photos": [
+        "/hotels/moscow/moscow-gostinitsa-metallurg.jpg",
+        "/hotels/moscow/moscow-gostinitsa-metallurg-gallery-1.jpg",
+        "/hotels/moscow/moscow-gostinitsa-metallurg-gallery-2.jpg",
+        "/hotels/moscow/moscow-gostinitsa-metallurg-gallery-3.jpg",
+        "/hotels/moscow/moscow-gostinitsa-metallurg-gallery-4.jpg"
+      ],
+      "description": "Отель примерно в 700 метрах от метро «Достоевская». Здесь можно остановиться на городские выходные, а для поездки на машине предусмотрена парковка."
+    },
+    "moscow-gostevoy-dom-lesnoy-sheremetyevo": {
+      "styles": [],
+      "location": "Москва",
+      "address": "Москва",
+      "distance": "29 км до центра",
+      "stars": -1,
+      "rating": 4.7,
+      "reviews": 117,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "photos": [
+        "/hotels/moscow/moscow-gostevoy-dom-lesnoy-sheremetyevo.jpg",
+        "/hotels/moscow/moscow-gostevoy-dom-lesnoy-sheremetyevo-gallery-1.jpg",
+        "/hotels/moscow/moscow-gostevoy-dom-lesnoy-sheremetyevo-gallery-2.jpg",
+        "/hotels/moscow/moscow-gostevoy-dom-lesnoy-sheremetyevo-gallery-3.jpg",
+        "/hotels/moscow/moscow-gostevoy-dom-lesnoy-sheremetyevo-gallery-4.jpg"
+      ],
+      "description": "Гостевой дом в стороне от центра Москвы, в районе Шереметьево. Формат для короткой остановки в пути; для гостей есть Wi-Fi и парковка."
+    },
+    "moscow-gostinitsa-ekonom-nasledie": {
+      "styles": [],
+      "location": "Москва",
+      "address": "Метро ВДНХ",
+      "distance": "7,5 км до центра",
+      "stars": -1,
+      "rating": 4.5,
+      "reviews": 524,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "photos": [
+        "/hotels/moscow/moscow-gostinitsa-ekonom-nasledie.jpg",
+        "/hotels/moscow/moscow-gostinitsa-ekonom-nasledie-gallery-1.jpg",
+        "/hotels/moscow/moscow-gostinitsa-ekonom-nasledie-gallery-2.jpg",
+        "/hotels/moscow/moscow-gostinitsa-ekonom-nasledie-gallery-3.jpg",
+        "/hotels/moscow/moscow-gostinitsa-ekonom-nasledie-gallery-4.jpg"
+      ],
+      "description": "Отель рядом с ВДНХ: до одноимённой станции метро около 300 метров. Удобная отправная точка для знакомства с северной частью Москвы."
+    },
+    "moscow-arena": {
+      "styles": [],
+      "location": "Москва",
+      "address": "Метро Спортивная",
+      "distance": "4,9 км до центра",
+      "stars": 2,
+      "rating": 4.5,
+      "reviews": 247,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "photos": [
+        "/hotels/moscow/moscow-arena.jpg",
+        "/hotels/moscow/moscow-arena-gallery-1.jpg",
+        "/hotels/moscow/moscow-arena-gallery-2.jpg",
+        "/hotels/moscow/moscow-arena-gallery-3.jpg",
+        "/hotels/moscow/moscow-arena-gallery-4.jpg"
+      ],
+      "description": "Гостиница рядом с метро «Спортивная», примерно в пяти километрах от центра. Подойдёт для короткой поездки, когда важнее удобный маршрут, чем проживание в самом центре."
+    },
+    "moscow-hostel-guten-duck-moscow": {
+      "styles": [],
+      "location": "Москва",
+      "address": "Метро Чистые пруды",
+      "distance": "1,7 км до центра",
+      "stars": -1,
+      "rating": 4.6,
+      "reviews": 335,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "photos": [
+        "/hotels/moscow/moscow-hostel-guten-duck-moscow.jpg",
+        "/hotels/moscow/moscow-hostel-guten-duck-moscow-gallery-1.jpg",
+        "/hotels/moscow/moscow-hostel-guten-duck-moscow-gallery-2.jpg",
+        "/hotels/moscow/moscow-hostel-guten-duck-moscow-gallery-3.jpg",
+        "/hotels/moscow/moscow-hostel-guten-duck-moscow-gallery-4.jpg"
+      ],
+      "description": "Городской отель недалеко от Чистых прудов и прогулочных улиц центра. Здесь удобно остановиться, если хочется проводить больше времени в городе и меньше — в дороге."
+    },
+    "moscow-minima-belorusskaya": {
+      "styles": [],
+      "location": "Москва",
+      "address": "Метро Белорусская",
+      "distance": "3 км до центра",
+      "stars": 3,
+      "rating": 4.4,
+      "reviews": 271,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "Трансфер"
+      ],
+      "photos": [
+        "/hotels/moscow/moscow-minima-belorusskaya.jpg",
+        "/hotels/moscow/moscow-minima-belorusskaya-gallery-1.jpg",
+        "/hotels/moscow/moscow-minima-belorusskaya-gallery-2.jpg",
+        "/hotels/moscow/moscow-minima-belorusskaya-gallery-3.jpg",
+        "/hotels/moscow/moscow-minima-belorusskaya-gallery-4.jpg"
+      ],
+      "description": "Отель в районе Белорусской, примерно в 700 метрах от метро. Можно выбрать для короткого визита в Москву или поездки с насыщенным расписанием."
+    },
+    "moscow-otel-tesla": {
+      "styles": [],
+      "location": "Москва",
+      "address": "Метро Сухаревская",
+      "distance": "1,8 км до центра",
+      "stars": 3,
+      "rating": 4.8,
+      "reviews": 144,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "photos": [
+        "/hotels/moscow/moscow-otel-tesla.jpg",
+        "/hotels/moscow/moscow-otel-tesla-gallery-1.jpg",
+        "/hotels/moscow/moscow-otel-tesla-gallery-2.jpg",
+        "/hotels/moscow/moscow-otel-tesla-gallery-3.jpg",
+        "/hotels/moscow/moscow-otel-tesla-gallery-4.jpg"
+      ],
+      "description": "Небольшой городской отель рядом с метро «Сухаревская». Подойдёт для выходных с прогулками по центральным районам Москвы."
+    },
+    "moscow-bun-in-alley": {
+      "styles": [],
+      "location": "Москва",
+      "address": "Метро Бунинская аллея",
+      "distance": "25 км до центра",
+      "stars": -1,
+      "rating": 4.0,
+      "reviews": 32,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "photos": [
+        "/hotels/moscow/moscow-bun-in-alley.jpg",
+        "/hotels/moscow/moscow-bun-in-alley-gallery-1.jpg",
+        "/hotels/moscow/moscow-bun-in-alley-gallery-2.jpg",
+        "/hotels/moscow/moscow-bun-in-alley-gallery-3.jpg",
+        "/hotels/moscow/moscow-bun-in-alley-gallery-4.jpg"
+      ],
+      "description": "Отель в районе Бунинской аллеи, в нескольких минутах от метро. Вариант для тех, чьи планы связаны с юго-западом Москвы."
+    },
+    "moscow-otel-maksima-zarya": {
+      "styles": [],
+      "location": "Москва",
+      "address": "Метро Окружная",
+      "distance": "10 км до центра",
+      "stars": 3,
+      "rating": 4.8,
+      "reviews": 802,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "Трансфер"
+      ],
+      "photos": [
+        "/hotels/moscow/moscow-otel-maksima-zarya.jpg",
+        "/hotels/moscow/moscow-otel-maksima-zarya-gallery-1.jpg",
+        "/hotels/moscow/moscow-otel-maksima-zarya-gallery-2.jpg",
+        "/hotels/moscow/moscow-otel-maksima-zarya-gallery-3.jpg",
+        "/hotels/moscow/moscow-otel-maksima-zarya-gallery-4.jpg"
+      ],
+      "description": "Отель рядом с метро «Окружная» для рабочих поездок и городских маршрутов. Для гостей предусмотрены Wi-Fi и парковка."
+    },
+    "moscow-moscow-marriott-imperial-plaza": {
+      "styles": [],
+      "location": "Москва",
+      "address": "Метро Комсомольская",
+      "distance": "3,6 км до центра",
+      "stars": 5,
+      "rating": 4.8,
+      "reviews": 637,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "Трансфер"
+      ],
+      "photos": [
+        "/hotels/moscow/moscow-moscow-marriott-imperial-plaza.jpg",
+        "/hotels/moscow/moscow-moscow-marriott-imperial-plaza-gallery-1.jpg",
+        "/hotels/moscow/moscow-moscow-marriott-imperial-plaza-gallery-2.jpg",
+        "/hotels/moscow/moscow-moscow-marriott-imperial-plaza-gallery-3.jpg"
+      ],
+      "description": "Пятизвёздочный отель примерно в 500 метрах от метро «Комсомольская». Подойдёт для поездки, в которой хочется совместить удобные переезды и отдых в отеле."
+    },
+    "moscow-akvamarin-zont-hotel-group": {
+      "styles": [
+        "Спа"
+      ],
+      "location": "Москва",
+      "address": "Метро Новокузнецкая",
+      "distance": "2,3 км до центра",
+      "stars": 4,
+      "rating": 4.9,
+      "reviews": 868,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "Трансфер",
+        "Спа"
+      ],
+      "photos": [
+        "/hotels/moscow/moscow-akvamarin-zont-hotel-group.jpg",
+        "/hotels/moscow/moscow-akvamarin-zont-hotel-group-gallery-1.jpg",
+        "/hotels/moscow/moscow-akvamarin-zont-hotel-group-gallery-2.jpg",
+        "/hotels/moscow/moscow-akvamarin-zont-hotel-group-gallery-3.jpg",
+        "/hotels/moscow/moscow-akvamarin-zont-hotel-group-gallery-4.jpg"
+      ],
+      "description": "Отель в районе Новокузнецкой для прогулок по Москве и отдыха после насыщенного дня. В отеле есть спа, а до метро около 600 метров."
+    },
+    "moscow-pekin": {
+      "styles": [
+        "Спа"
+      ],
+      "location": "Москва",
+      "address": "Метро Маяковская",
+      "distance": "2,1 км до центра",
+      "stars": 4,
+      "rating": 4.8,
+      "reviews": 464,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "Спа"
+      ],
+      "photos": [
+        "/hotels/moscow/moscow-pekin.jpg",
+        "/hotels/moscow/moscow-pekin-gallery-1.jpg",
+        "/hotels/moscow/moscow-pekin-gallery-2.jpg",
+        "/hotels/moscow/moscow-pekin-gallery-3.jpg"
+      ],
+      "description": "Гостиница в центральной части Москвы, рядом с метро «Маяковская». Удобно остановиться здесь, если в планах прогулки, театры и встречи в центре."
+    },
+    "moscow-zvezdy-arbata-otel-i-apartamenty": {
+      "styles": [
+        "Спа"
+      ],
+      "location": "Москва",
+      "address": "Метро Смоленская",
+      "distance": "2,3 км до центра",
+      "stars": 5,
+      "rating": 4.9,
+      "reviews": 344,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "Спа"
+      ],
+      "photos": [
+        "/hotels/moscow/moscow-zvezdy-arbata-otel-i-apartamenty.jpg",
+        "/hotels/moscow/moscow-zvezdy-arbata-otel-i-apartamenty-gallery-1.jpg",
+        "/hotels/moscow/moscow-zvezdy-arbata-otel-i-apartamenty-gallery-2.jpg",
+        "/hotels/moscow/moscow-zvezdy-arbata-otel-i-apartamenty-gallery-3.jpg",
+        "/hotels/moscow/moscow-zvezdy-arbata-otel-i-apartamenty-gallery-4.jpg"
+      ],
+      "description": "Пятизвёздочный отель и апартаменты в районе Арбата, недалеко от метро «Смоленская». Для отдыха после прогулок в отеле есть спа."
+    },
+    "moscow-palmira-business-club": {
+      "styles": [
+        "Спа"
+      ],
+      "location": "Москва",
+      "address": "Метро Тульская",
+      "distance": "6,5 км до центра",
+      "stars": 4,
+      "rating": 4.9,
+      "reviews": 446,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "Трансфер",
+        "Спа"
+      ],
+      "photos": [
+        "/hotels/moscow/moscow-palmira-business-club.webp",
+        "/hotels/moscow/moscow-palmira-business-club-gallery-1.jpg",
+        "/hotels/moscow/moscow-palmira-business-club-gallery-2.jpg",
+        "/hotels/moscow/moscow-palmira-business-club-gallery-3.jpg"
+      ],
+      "description": "Четырёхзвёздочный отель с Wi-Fi, парковкой и спа. Подойдёт для рабочей поездки, в которой хочется оставить время и на отдых."
+    },
+    "moscow-otel-mandarin-moskva": {
+      "styles": [
+        "Спа"
+      ],
+      "location": "Москва",
+      "address": "Метро Красносельская",
+      "distance": "3,8 км до центра",
+      "stars": 4,
+      "rating": 4.1,
+      "reviews": 1094,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка",
+        "Трансфер",
+        "Спа",
+        "Бассейн"
+      ],
+      "photos": [
+        "/hotels/moscow/moscow-otel-mandarin-moskva.jpg",
+        "/hotels/moscow/moscow-otel-mandarin-moskva-gallery-1.jpg",
+        "/hotels/moscow/moscow-otel-mandarin-moskva-gallery-2.jpg",
+        "/hotels/moscow/moscow-otel-mandarin-moskva-gallery-3.jpg",
+        "/hotels/moscow/moscow-otel-mandarin-moskva-gallery-4.jpg"
+      ],
+      "description": "Городской отель недалеко от метро «Красносельская». После встреч или прогулок можно отдохнуть у бассейна или запланировать посещение спа."
+    },
+    "moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress": {
+      "styles": [],
+      "location": "Москва",
+      "address": "Москва",
+      "distance": "27 км до центра",
+      "stars": 1,
+      "rating": 4.5,
+      "reviews": 22,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "photos": [
+        "/hotels/moscow/moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress.jpg",
+        "/hotels/moscow/moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress-gallery-1.jpg",
+        "/hotels/moscow/moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress-gallery-2.jpg",
+        "/hotels/moscow/moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress-gallery-3.jpg",
+        "/hotels/moscow/moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress-gallery-4.jpg"
+      ],
+      "description": "Отель в терминале Аэроэкспресса в Шереметьево для отдыха между дорогой и перелётом. Его удобно рассмотреть для короткой остановки рядом с аэропортом."
+    },
+    "spb-valo-network": {
+      "styles": [
+        "Спа"
+      ],
+      "location": "Санкт-Петербург",
+      "address": "Метро Бухарестская",
+      "distance": "6,6 км до центра",
+      "stars": 3,
+      "rating": 4.7,
+      "reviews": 1461,
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер",
+        "Спа",
+        "Бассейн"
+      ],
+      "photos": [
+        "/hotels/spb/spb-valo-network-0.jpg",
+        "/hotels/spb/spb-valo-network-1.jpg",
+        "/hotels/spb/spb-valo-network-2.jpg",
+        "/hotels/spb/spb-valo-network-3.jpg",
+        "/hotels/spb/spb-valo-network-4.jpg"
+      ],
+      "description": "Городской отель рядом с метро «Бухарестская». Бассейн и спа позволяют дополнить поездки по Петербургу отдыхом в самом отеле."
+    },
+    "spb-valo-business": {
+      "styles": [
+        "Спа"
+      ],
+      "location": "Санкт-Петербург",
+      "address": "Метро Бухарестская",
+      "distance": "6,6 км до центра",
+      "stars": 4,
+      "rating": 4.8,
+      "reviews": 728,
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер",
+        "Спа",
+        "Бассейн"
+      ],
+      "photos": [
+        "/hotels/spb/spb-valo-business-0.jpg",
+        "/hotels/spb/spb-valo-business-1.jpg",
+        "/hotels/spb/spb-valo-business-2.jpg",
+        "/hotels/spb/spb-valo-business-3.jpg",
+        "/hotels/spb/spb-valo-business-4.jpg"
+      ],
+      "description": "Вало Бизнес расположен в нескольких минутах ходьбы от «Бухарестской». В отеле есть бассейн и спа — вариант для сочетания городских планов с отдыхом."
+    },
+    "spb-demokrat-na-kamennoostrovskom-39": {
+      "styles": [],
+      "location": "Санкт-Петербург",
+      "address": "Метро Петроградская",
+      "distance": "3,1 км до центра",
+      "stars": -1,
+      "rating": 5.0,
+      "reviews": 7,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "photos": [
+        "/hotels/spb/spb-demokrat-na-kamennoostrovskom-39-0.jpg",
+        "/hotels/spb/spb-demokrat-na-kamennoostrovskom-39-1.jpg",
+        "/hotels/spb/spb-demokrat-na-kamennoostrovskom-39-2.jpg",
+        "/hotels/spb/spb-demokrat-na-kamennoostrovskom-39-3.jpg",
+        "/hotels/spb/spb-demokrat-na-kamennoostrovskom-39-4.jpg"
+      ],
+      "description": "Отель на Каменноостровском проспекте, в 300 метрах от метро «Петроградская». Подойдёт для знакомства с Петроградской стороной и поездок в другие районы."
+    },
+    "spb-apart-otel-uno-by-valo": {
+      "styles": [],
+      "location": "Санкт-Петербург",
+      "address": "Метро Лиговский проспект",
+      "distance": "3 км до центра",
+      "stars": -1,
+      "rating": 4.8,
+      "reviews": 652,
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер"
+      ],
+      "photos": [
+        "/hotels/spb/spb-apart-otel-uno-by-valo-0.jpg",
+        "/hotels/spb/spb-apart-otel-uno-by-valo-1.png",
+        "/hotels/spb/spb-apart-otel-uno-by-valo-2.jpg",
+        "/hotels/spb/spb-apart-otel-uno-by-valo-3.jpg",
+        "/hotels/spb/spb-apart-otel-uno-by-valo-4.jpg"
+      ],
+      "description": "Апарт-отель рядом с метро «Лиговский проспект». Удобная отправная точка для самостоятельного знакомства с городом."
+    },
+    "spb-apartpeydzh-nevskiy": {
+      "styles": [],
+      "location": "Санкт-Петербург",
+      "address": "Метро Маяковская",
+      "distance": "2,3 км до центра",
+      "stars": 3,
+      "rating": 4.4,
+      "reviews": 172,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "photos": [
+        "/hotels/spb/spb-apartpeydzh-nevskiy-0.jpg",
+        "/hotels/spb/spb-apartpeydzh-nevskiy-1.jpg",
+        "/hotels/spb/spb-apartpeydzh-nevskiy-2.jpg",
+        "/hotels/spb/spb-apartpeydzh-nevskiy-3.jpg",
+        "/hotels/spb/spb-apartpeydzh-nevskiy-4.jpg"
+      ],
+      "description": "Отель возле «Маяковской», в 2,3 километра от центра. Можно чередовать пешие прогулки с короткими поездками на метро."
+    },
+    "spb-osobnyak-molvo": {
+      "styles": [],
+      "location": "Санкт-Петербург",
+      "address": "Метро Горный институт",
+      "distance": "2 км до центра",
+      "stars": -1,
+      "rating": 4.6,
+      "reviews": 959,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "photos": [
+        "/hotels/spb/spb-osobnyak-molvo-0.jpg",
+        "/hotels/spb/spb-osobnyak-molvo-1.jpg",
+        "/hotels/spb/spb-osobnyak-molvo-2.jpg",
+        "/hotels/spb/spb-osobnyak-molvo-3.jpg",
+        "/hotels/spb/spb-osobnyak-molvo-4.jpg"
+      ],
+      "description": "Особняк Молво находится в двух километрах от центра Петербурга. Вариант для поездки с прогулками и возвращением в свой городской уголок вечером."
+    },
+    "spb-apartamenty-new-horizon-liteyniy": {
+      "styles": [],
+      "location": "Санкт-Петербург",
+      "address": "Метро Маяковская",
+      "distance": "1,9 км до центра",
+      "stars": -1,
+      "rating": 4.5,
+      "reviews": 13,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "photos": [
+        "/hotels/spb/spb-apartamenty-new-horizon-liteyniy-0.jpg",
+        "/hotels/spb/spb-apartamenty-new-horizon-liteyniy-1.jpg",
+        "/hotels/spb/spb-apartamenty-new-horizon-liteyniy-2.jpg",
+        "/hotels/spb/spb-apartamenty-new-horizon-liteyniy-3.jpg",
+        "/hotels/spb/spb-apartamenty-new-horizon-liteyniy-4.jpg"
+      ],
+      "description": "Квартира в районе Литейного проспекта, недалеко от «Маяковской». Формат для самостоятельной поездки с собственным ритмом дня."
+    },
+    "spb-ramada-plaza-by-wyndham-st-petersburg": {
+      "styles": [
+        "Спа"
+      ],
+      "location": "Санкт-Петербург",
+      "address": "Метро Бухарестская",
+      "distance": "6,7 км до центра",
+      "stars": 4,
+      "rating": 4.6,
+      "reviews": 456,
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер",
+        "Спа",
+        "Бассейн"
+      ],
+      "photos": [
+        "/hotels/spb/spb-ramada-plaza-by-wyndham-st-petersburg-0.jpg",
+        "/hotels/spb/spb-ramada-plaza-by-wyndham-st-petersburg-1.jpg",
+        "/hotels/spb/spb-ramada-plaza-by-wyndham-st-petersburg-2.jpg",
+        "/hotels/spb/spb-ramada-plaza-by-wyndham-st-petersburg-3.jpg",
+        "/hotels/spb/spb-ramada-plaza-by-wyndham-st-petersburg-4.jpg"
+      ],
+      "description": "Рамада Плаза находится рядом с «Бухарестской». В отеле есть бассейн и спа, а до центра можно добраться на метро."
+    },
+    "spb-apartpeydzh-elagin": {
+      "styles": [],
+      "location": "Санкт-Петербург",
+      "address": "Метро Старая Деревня",
+      "distance": "6,2 км до центра",
+      "stars": 3,
+      "rating": 4.4,
+      "reviews": 94,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "photos": [
+        "/hotels/spb/spb-apartpeydzh-elagin-0.jpg",
+        "/hotels/spb/spb-apartpeydzh-elagin-1.jpg",
+        "/hotels/spb/spb-apartpeydzh-elagin-2.jpg",
+        "/hotels/spb/spb-apartpeydzh-elagin-3.jpg",
+        "/hotels/spb/spb-apartpeydzh-elagin-4.jpg"
+      ],
+      "description": "АпартПейдж Елагин расположен в районе метро «Старая Деревня». Для гостей, которые приезжают на автомобиле, в карточке объекта указана парковка."
+    },
+    "spb-otel-rotas-city-center": {
+      "styles": [],
+      "location": "Санкт-Петербург",
+      "address": "Метро Чернышевская",
+      "distance": "2,6 км до центра",
+      "stars": -1,
+      "rating": 4.7,
+      "reviews": 6,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "photos": [
+        "/hotels/spb/spb-otel-rotas-city-center-0.jpg",
+        "/hotels/spb/spb-otel-rotas-city-center-1.jpg",
+        "/hotels/spb/spb-otel-rotas-city-center-2.jpg",
+        "/hotels/spb/spb-otel-rotas-city-center-3.jpg",
+        "/hotels/spb/spb-otel-rotas-city-center-4.jpg"
+      ],
+      "description": "Городской отель на Гродненском, в 300 метрах от «Чернышевской». Подойдёт для прогулок по окрестностям и маршрутов через центр Петербурга."
+    },
+    "spb-apartamenty-dvoriki-petra-na-gorohovoy": {
+      "styles": [],
+      "location": "Санкт-Петербург",
+      "address": "Метро Сенная площадь",
+      "distance": "1,5 км до центра",
+      "stars": -1,
+      "rating": 4.7,
+      "reviews": 9,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "photos": [
+        "/hotels/spb/spb-apartamenty-dvoriki-petra-na-gorohovoy-0.jpg",
+        "/hotels/spb/spb-apartamenty-dvoriki-petra-na-gorohovoy-1.jpg",
+        "/hotels/spb/spb-apartamenty-dvoriki-petra-na-gorohovoy-2.jpg",
+        "/hotels/spb/spb-apartamenty-dvoriki-petra-na-gorohovoy-3.jpg",
+        "/hotels/spb/spb-apartamenty-dvoriki-petra-na-gorohovoy-4.jpg"
+      ],
+      "description": "Апартаменты на Гороховой, в полутора километрах от центра. Рядом метро «Сенная площадь» для поездок по городу."
+    },
+    "spb-greenwich-by-friends": {
+      "styles": [],
+      "location": "Санкт-Петербург",
+      "address": "Метро Чернышевская",
+      "distance": "2,5 км до центра",
+      "stars": -1,
+      "rating": 4.9,
+      "reviews": 56,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "photos": [
+        "/hotels/spb/spb-greenwich-by-friends-0.jpg",
+        "/hotels/spb/spb-greenwich-by-friends-1.jpg",
+        "/hotels/spb/spb-greenwich-by-friends-2.jpg",
+        "/hotels/spb/spb-greenwich-by-friends-3.jpg",
+        "/hotels/spb/spb-greenwich-by-friends-4.jpg"
+      ],
+      "description": "Гостевые комнаты в районе «Чернышевской». Компактный формат размещения для поездки, в которой большую часть дня хочется проводить в городе."
+    },
+    "spb-ligotel": {
+      "styles": [],
+      "location": "Санкт-Петербург",
+      "address": "Метро Площадь Восстания",
+      "distance": "2,8 км до центра",
+      "stars": -1,
+      "rating": 4.8,
+      "reviews": 196,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "photos": [
+        "/hotels/spb/spb-ligotel-0.jpg",
+        "/hotels/spb/spb-ligotel-1.jpg",
+        "/hotels/spb/spb-ligotel-2.jpg",
+        "/hotels/spb/spb-ligotel-3.jpg",
+        "/hotels/spb/spb-ligotel-4.jpg"
+      ],
+      "description": "Лиготель расположен в 200 метрах от метро «Площадь Восстания». Вариант для активной городской программы с удобной транспортной точкой рядом."
+    },
+    "spb-mini-otel-moov-apart-bogema": {
+      "styles": [],
+      "location": "Санкт-Петербург",
+      "address": "Метро Чернышевская",
+      "distance": "1,8 км до центра",
+      "stars": -1,
+      "rating": 4.8,
+      "reviews": 63,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "photos": [
+        "/hotels/spb/spb-mini-otel-moov-apart-bogema-0.jpg",
+        "/hotels/spb/spb-mini-otel-moov-apart-bogema-1.jpg",
+        "/hotels/spb/spb-mini-otel-moov-apart-bogema-2.jpg",
+        "/hotels/spb/spb-mini-otel-moov-apart-bogema-3.jpg",
+        "/hotels/spb/spb-mini-otel-moov-apart-bogema-4.jpg"
+      ],
+      "description": "Moov Apart Bogema находится в 1,8 километра от центра. Отсюда можно начать знакомство с центральными улицами и продолжить маршрут на метро."
+    },
+    "spb-mini-otel-demokrat-na-nevskom-107b": {
+      "styles": [],
+      "location": "Санкт-Петербург",
+      "address": "Метро Площадь Восстания",
+      "distance": "3,1 км до центра",
+      "stars": -1,
+      "rating": 4.7,
+      "reviews": 62,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "photos": [
+        "/hotels/spb/spb-mini-otel-demokrat-na-nevskom-107b-0.jpg",
+        "/hotels/spb/spb-mini-otel-demokrat-na-nevskom-107b-1.jpg",
+        "/hotels/spb/spb-mini-otel-demokrat-na-nevskom-107b-2.jpg",
+        "/hotels/spb/spb-mini-otel-demokrat-na-nevskom-107b-3.jpg",
+        "/hotels/spb/spb-mini-otel-demokrat-na-nevskom-107b-4.jpg"
+      ],
+      "description": "Отель на Невском проспекте, недалеко от «Площади Восстания». Подойдёт тем, кто выбирает размещение рядом с главной городской магистралью."
+    },
+    "spb-aristokrat": {
+      "styles": [],
+      "location": "Санкт-Петербург",
+      "address": "Метро Путиловская",
+      "distance": "8 км до центра",
+      "stars": -1,
+      "rating": 4.6,
+      "reviews": 29,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "photos": [
+        "/hotels/spb/spb-aristokrat-0.jpg",
+        "/hotels/spb/spb-aristokrat-1.jpg",
+        "/hotels/spb/spb-aristokrat-2.jpg",
+        "/hotels/spb/spb-aristokrat-3.jpg",
+        "/hotels/spb/spb-aristokrat-4.jpg"
+      ],
+      "description": "Аристократ расположен в районе метро «Путиловская». В карточке объекта указаны Wi-Fi и парковка — полезное сочетание для поездки на автомобиле."
+    },
+    "spb-apart-otel-port-comfort-by-old-nevskiy": {
+      "styles": [],
+      "location": "Санкт-Петербург",
+      "address": "Метро Площадь Александра Невского 1",
+      "distance": "4,1 км до центра",
+      "stars": 3,
+      "rating": 4.4,
+      "reviews": 85,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "photos": [
+        "/hotels/spb/spb-apart-otel-port-comfort-by-old-nevskiy-0.jpg",
+        "/hotels/spb/spb-apart-otel-port-comfort-by-old-nevskiy-1.jpg",
+        "/hotels/spb/spb-apart-otel-port-comfort-by-old-nevskiy-2.jpg",
+        "/hotels/spb/spb-apart-otel-port-comfort-by-old-nevskiy-3.jpg"
+      ],
+      "description": "Port Comfort by old Nevskiy находится рядом с «Площадью Александра Невского». Можно исследовать старую часть Невского проспекта и выезжать в другие районы на метро."
+    },
+    "spb-arkada": {
+      "styles": [],
+      "location": "Санкт-Петербург",
+      "address": "Метро Достоевская",
+      "distance": "1,8 км до центра",
+      "stars": 3,
+      "rating": 4.7,
+      "reviews": 88,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "photos": [
+        "/hotels/spb/spb-arkada-0.jpg",
+        "/hotels/spb/spb-arkada-1.jpg",
+        "/hotels/spb/spb-arkada-2.jpg",
+        "/hotels/spb/spb-arkada-3.jpg",
+        "/hotels/spb/spb-arkada-4.jpg"
+      ],
+      "description": "Аркада расположена в 500 метрах от «Достоевской». Отель в центральной части города для прогулок и коротких поездок по Петербургу."
+    },
+    "spb-mini-otel-sadovaya-loft": {
+      "styles": [],
+      "location": "Санкт-Петербург",
+      "address": "Метро Невский проспект",
+      "distance": "1,2 км до центра",
+      "stars": -1,
+      "rating": 4.6,
+      "reviews": 344,
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер"
+      ],
+      "photos": [
+        "/hotels/spb/spb-mini-otel-sadovaya-loft-0.jpg",
+        "/hotels/spb/spb-mini-otel-sadovaya-loft-1.jpg",
+        "/hotels/spb/spb-mini-otel-sadovaya-loft-2.jpg",
+        "/hotels/spb/spb-mini-otel-sadovaya-loft-3.jpg",
+        "/hotels/spb/spb-mini-otel-sadovaya-loft-4.jpg"
+      ],
+      "description": "Sadovaya Loft находится в 1,2 километра от центра, рядом с метро «Невский проспект». Вариант для насыщенной поездки с городскими прогулками."
+    },
+    "spb-apartamenty-zum-1": {
+      "styles": [],
+      "location": "Санкт-Петербург",
+      "address": "Метро Чёрная речка",
+      "distance": "5,9 км до центра",
+      "stars": -1,
+      "rating": 4.3,
+      "reviews": 20,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "photos": [
+        "/hotels/spb/spb-apartamenty-zum-1-0.jpg",
+        "/hotels/spb/spb-apartamenty-zum-1-1.jpg",
+        "/hotels/spb/spb-apartamenty-zum-1-2.jpg",
+        "/hotels/spb/spb-apartamenty-zum-1-3.jpg",
+        "/hotels/spb/spb-apartamenty-zum-1-4.jpg"
+      ],
+      "description": "Двухместные апартаменты в ЖК ЗУМ рядом с «Чёрной речкой». В карточке объекта указаны Wi-Fi и парковка."
+    }
+  }
+}

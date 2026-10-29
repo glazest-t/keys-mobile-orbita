@@ -1,0 +1,80 @@
+[
+  {
+    "id": "f1",
+    "file": "docs/brand/reference/f1.html",
+    "source": "проект в Клоде/project/Ключи - Все экраны.dc.html",
+    "scope": "source frame markup/styles; local fonts and image paths resolved; historical text and figures",
+    "corrections": [],
+    "external_images": []
+  },
+  {
+    "id": "h1",
+    "file": "docs/brand/reference/h1.html",
+    "source": "проект в Клоде/project/Ключи - Все экраны.dc.html",
+    "scope": "source frame markup/styles; local fonts and image paths resolved; historical text and figures",
+    "corrections": [],
+    "external_images": []
+  },
+  {
+    "id": "s2",
+    "file": "docs/brand/reference/s2.html",
+    "source": "проект в Клоде/project/Ключи - Все экраны.dc.html",
+    "scope": "source frame markup/styles; local fonts and image paths resolved; historical text and figures",
+    "corrections": [],
+    "external_images": []
+  },
+  {
+    "id": "v1",
+    "file": "docs/brand/reference/v1.html",
+    "source": "проект в Клоде/project/Ключи - Все экраны.dc.html",
+    "scope": "source frame markup/styles; local fonts and image paths resolved; historical text and figures",
+    "corrections": [],
+    "external_images": []
+  },
+  {
+    "id": "fr3",
+    "file": "docs/brand/reference/fr3.html",
+    "source": "проект в Клоде/project/Ключи - Все экраны.dc.html",
+    "scope": "source frame markup/styles; local fonts and image paths resolved; historical text and figures",
+    "corrections": [],
+    "external_images": []
+  },
+  {
+    "id": "fr4",
+    "file": "docs/brand/reference/fr4.html",
+    "source": "проект в Клоде/project/Ключи - Все экраны.dc.html",
+    "scope": "source frame markup/styles; local fonts and image paths resolved; historical text and figures",
+    "corrections": [],
+    "external_images": [
+      "https://directus.manteratravel.ru/assets/e512f84a-c876-4ab6-a4bc-b332a2163c31?fit=cover&width=800&quality=80",
+      "https://directus.manteratravel.ru/assets/0b6b2ffd-16c1-4c76-96c4-44bd89514c70?fit=cover&width=800&quality=80",
+      "https://directus.manteratravel.ru/assets/ed67b832-2e82-4e5f-bf10-9ad15d9481ab?fit=cover&width=800&quality=80"
+    ]
+  },
+  {
+    "id": "h7",
+    "file": "docs/brand/reference/h7.html",
+    "source": "проект в Клоде/project/Ключи - Все экраны.dc.html",
+    "scope": "source frame markup/styles; local fonts and image paths resolved; historical text and figures",
+    "corrections": [],
+    "external_images": []
+  },
+  {
+    "id": "a1",
+    "file": "docs/brand/reference/a1.html",
+    "source": "проект в Клоде/project/Ключи - Все экраны.dc.html",
+    "scope": "source frame markup/styles; local fonts and image paths resolved; historical text and figures",
+    "corrections": [
+      "D-010: remove blue phone border and glow"
+    ],
+    "external_images": []
+  },
+  {
+    "id": "t1",
+    "file": "docs/brand/reference/t1.html",
+    "source": "проект в Клоде/project/Ключи - Все экраны.dc.html",
+    "scope": "source frame markup/styles; local fonts and image paths resolved; historical text and figures",
+    "corrections": [],
+    "external_images": []
+  }
+]

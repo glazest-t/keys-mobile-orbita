@@ -1,0 +1,8 @@
+/* Original motion keyframes from github-onboarding. */
+@keyframes kIn{0%{opacity:0;transform:scale(.86)}100%{opacity:1;transform:scale(1)}}@keyframes kShaft{0%,22%{transform:scaleX(1);opacity:1}42%{transform:scaleX(0);opacity:1}43%,100%{transform:scaleX(0);opacity:0}}@keyframes kTeeth{0%,20%{opacity:1}30%,100%{opacity:0}}@keyframes kDotGrow{0%,22%{transform:scale(.44)}42%,100%{transform:scale(1)}}@keyframes kOrbit{0%,42%{transform:rotate(0deg)}78%,100%{transform:rotate(315deg)}}@keyframes kSlide{0%,48%{transform:translateX(0)}82%,100%{transform:translateX(-60px)}}@keyframes kWord{0%,55%{opacity:0;transform:translateX(-14px)}85%,100%{opacity:1;transform:none}}@keyframes obSlide{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:none}}
+@keyframes obFade{from{opacity:0}to{opacity:1}}@keyframes obVis{from{opacity:0;transform:scale(.92) rotate(-2deg)}to{opacity:1;transform:none}}
+@keyframes obText{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes obDot{0%{opacity:0;transform:scale(.6)}18%{opacity:1;transform:scale(1)}78%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.6)}}@keyframes obSweep{0%{transform:rotate(-120deg);opacity:0}15%{opacity:1}80%{opacity:1}100%{transform:rotate(45deg);opacity:0}}
+@keyframes obRing{0%{opacity:0;transform:scale(.94)}30%{opacity:1}100%{opacity:0;transform:scale(1.04)}}
+@keyframes obSpin{to{transform:rotate(360deg)}}
+@keyframes obPop{0%{opacity:0;transform:scale(.7)}60%{opacity:1;transform:scale(1.06)}100%{transform:scale(1)}}

@@ -1,0 +1,324 @@
+{
+  "observedOn": "2026-10-27",
+  "status": "imported-demo-catalog",
+  "hotels": [
+    {
+      "catalogId": "spb-valo-network",
+      "sourceName": "Отель Вало Нетворк 3*",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/valo-network-1361921991/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=8532179715000",
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc1200/AZX21gB4fEO9GXiBB4ji6Q.jpg",
+      "locationSummary": "Санкт-Петербург • 6.6 км до центра • 500 м до метро Бухарестская",
+      "stars": 3,
+      "rating": 4.7,
+      "reviewCount": 1461,
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер",
+        "Спа",
+        "Бассейн"
+      ],
+      "priceStayMinor": 1110000,
+      "priceNightMinor": 370000
+    },
+    {
+      "catalogId": "spb-valo-business",
+      "sourceName": "Отель Вало Бизнес 4*",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/valo-business-1101597082/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=8039785119000",
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc1200/AaEVK4nOeDStgNcVsC8Llw.jpg",
+      "locationSummary": "Санкт-Петербург • 6.6 км до центра • 500 м до метро Бухарестская",
+      "stars": 4,
+      "rating": 4.8,
+      "reviewCount": 728,
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер",
+        "Спа",
+        "Бассейн"
+      ],
+      "priceStayMinor": 1045500,
+      "priceNightMinor": 348500
+    },
+    {
+      "catalogId": "spb-demokrat-na-kamennoostrovskom-39",
+      "sourceName": "Отель Демократ на Каменноостровском 39",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/demokrat-na-kamennoostrovskom-39-5456245574/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=15731043275000",
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc1200/AZ_6nMKGchWt_t2ytIxoTw.jpg",
+      "locationSummary": "Санкт-Петербург • 3.1 км до центра • 300 м до метро Петроградская",
+      "stars": null,
+      "rating": 5.0,
+      "reviewCount": 7,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "priceStayMinor": 1200000,
+      "priceNightMinor": 400000
+    },
+    {
+      "catalogId": "spb-apart-otel-uno-by-valo",
+      "sourceName": "УНО апарт-отель",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/apart-otel-uno-by-valo-1606938091/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=9113336601000",
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc1200/AZo0i_gIc_27PFzZudz9hQ.jpg",
+      "locationSummary": "Санкт-Петербург • 3 км до центра • 300 м до метро Лиговский проспект",
+      "stars": null,
+      "rating": 4.8,
+      "reviewCount": 652,
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер"
+      ],
+      "priceStayMinor": 1620000,
+      "priceNightMinor": 540000
+    },
+    {
+      "catalogId": "spb-apartpeydzh-nevskiy",
+      "sourceName": "Отель АпартПейдж Невский 3*",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/apartpeydzh-nevskiy-1101596970/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6210704000000",
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc1200/AZX21GrXcraBxK3lOOH-yg.jpg",
+      "locationSummary": "Санкт-Петербург • 2.3 км до центра • 300 м до метро Маяковская",
+      "stars": 3,
+      "rating": 4.4,
+      "reviewCount": 172,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "priceStayMinor": 872200,
+      "priceNightMinor": 290700
+    },
+    {
+      "catalogId": "spb-osobnyak-molvo",
+      "sourceName": "Отель Особняк Молво",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/osobnyak-molvo-612652954/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=4599416055000",
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc1200/AZX2miRDfz-g_itWp4L8Ww.jpg",
+      "locationSummary": "Санкт-Петербург • 2 км до центра • 1.3 км до метро Горный институт",
+      "stars": null,
+      "rating": 4.6,
+      "reviewCount": 959,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "priceStayMinor": 440000,
+      "priceNightMinor": 146700
+    },
+    {
+      "catalogId": "spb-apartamenty-new-horizon-liteyniy",
+      "sourceName": "Квартира New Horizon Liteiyniy",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/apartamenty-new-horizon-liteyniy-615558174/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=4605134525000",
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc1200/AaET_6FteaibGPORyz2n9g.jpg",
+      "locationSummary": "Санкт-Петербург • 1.9 км до центра • 700 м до метро Маяковская",
+      "stars": null,
+      "rating": 4.5,
+      "reviewCount": 13,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "priceStayMinor": 909100,
+      "priceNightMinor": 303000
+    },
+    {
+      "catalogId": "spb-ramada-plaza-by-wyndham-st-petersburg",
+      "sourceName": "Отель Рамада Плаза 4*",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/ramada-plaza-by-wyndham-st-petersburg-612672006/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=5842972978000",
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc1200/AaEUdDkVffy-CigFFvaA0Q.jpg",
+      "locationSummary": "Санкт-Петербург • 6.7 км до центра • 400 м до метро Бухарестская",
+      "stars": 4,
+      "rating": 4.6,
+      "reviewCount": 456,
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер",
+        "Спа",
+        "Бассейн"
+      ],
+      "priceStayMinor": 1350000,
+      "priceNightMinor": 450000
+    },
+    {
+      "catalogId": "spb-apartpeydzh-elagin",
+      "sourceName": "Отель АпартПейдж Елагин 3*",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/apartpeydzh-elagin-1101606411/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6240290812000",
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc1200/AZX20m4rfnKZoXgjcFBHgA.jpg",
+      "locationSummary": "Санкт-Петербург • 6.2 км до центра • 600 м до метро Старая Деревня",
+      "stars": 3,
+      "rating": 4.4,
+      "reviewCount": 94,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "priceStayMinor": 828500,
+      "priceNightMinor": 276200
+    },
+    {
+      "catalogId": "spb-otel-rotas-city-center",
+      "sourceName": "Отель Ротас Сити Цент на Гродненском",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/otel-rotas-city-center-3317085659/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=13092288728000",
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc1200/AaETqgafeaGNG-FcgSnwdQ.jpg",
+      "locationSummary": "Санкт-Петербург • 2.6 км до центра • 300 м до метро Чернышевская",
+      "stars": null,
+      "rating": 4.7,
+      "reviewCount": 6,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "priceStayMinor": 669700,
+      "priceNightMinor": 223200
+    },
+    {
+      "catalogId": "spb-apartamenty-dvoriki-petra-na-gorohovoy",
+      "sourceName": "Апартаменты Дворики Петра на Гороховой",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/apartamenty-dvoriki-petra-na-gorohovoy-2779269877/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=11994836783000",
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc600/AZj83rHhcGC2l1xnxVrB_g.jpg",
+      "locationSummary": "Санкт-Петербург • 1.5 км до центра • 400 м до метро Сенная площадь",
+      "stars": null,
+      "rating": 4.7,
+      "reviewCount": 9,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "priceStayMinor": 872400,
+      "priceNightMinor": 290800
+    },
+    {
+      "catalogId": "spb-greenwich-by-friends",
+      "sourceName": "Гостевые комнаты Гринвич",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/greenwich-by-friends-617487873/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=4498161580000",
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc600/AaET-1vld6mxZsRiK4bxhQ.jpg",
+      "locationSummary": "Санкт-Петербург • 2.5 км до центра • 700 м до метро Чернышевская",
+      "stars": null,
+      "rating": 4.9,
+      "reviewCount": 56,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "priceStayMinor": 1152400,
+      "priceNightMinor": 384100
+    },
+    {
+      "catalogId": "spb-ligotel",
+      "sourceName": "Лиготель",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/ligotel-616410580/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=1049768951000",
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc600/AZX2mh_SdlWLzv1Y0_Tv3g.jpg",
+      "locationSummary": "Санкт-Петербург • 2.8 км до центра • 200 м до метро Площадь Восстания",
+      "stars": null,
+      "rating": 4.8,
+      "reviewCount": 196,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "priceStayMinor": 1300000,
+      "priceNightMinor": 433300
+    },
+    {
+      "catalogId": "spb-mini-otel-moov-apart-bogema",
+      "sourceName": "Отель Moov Apart Bogema (Мув Апарт Богема)",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/mini-otel-moov-apart-bogema-1160870712/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6238133905000",
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc600/AZYrUdrben-SqPEgSu673A.jpg",
+      "locationSummary": "Санкт-Петербург • 1.8 км до центра • 900 м до метро Чернышевская",
+      "stars": null,
+      "rating": 4.8,
+      "reviewCount": 63,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "priceStayMinor": 880800,
+      "priceNightMinor": 293600
+    },
+    {
+      "catalogId": "spb-mini-otel-demokrat-na-nevskom-107b",
+      "sourceName": "Отель Демократ на Невском 107",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/mini-otel-demokrat-na-nevskom-107b-1101598986/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6238835168000",
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc600/AaEdcctzcVq2cdvFiJwhOA.jpg",
+      "locationSummary": "Санкт-Петербург • 3.1 км до центра • 600 м до метро Площадь Восстания",
+      "stars": null,
+      "rating": 4.7,
+      "reviewCount": 62,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "priceStayMinor": 827300,
+      "priceNightMinor": 275800
+    },
+    {
+      "catalogId": "spb-aristokrat",
+      "sourceName": "Отель Аристократ",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/aristokrat-1606938002/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=9110763915000",
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc600/AZX2odKXdC-FsHLkgtPPBw.jpg",
+      "locationSummary": "Санкт-Петербург • 8 км до центра • 700 м до метро Путиловская",
+      "stars": null,
+      "rating": 4.6,
+      "reviewCount": 29,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "priceStayMinor": 706100,
+      "priceNightMinor": 235400
+    },
+    {
+      "catalogId": "spb-apart-otel-port-comfort-by-old-nevskiy",
+      "sourceName": "Отель Port Comfort by old Nevskiy 3*",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/apart-otel-port-comfort-by-old-nevskiy-1101595448/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6242170867000",
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc600/AZX2na7weN-K1yxjI8zVAg.jpg",
+      "locationSummary": "Санкт-Петербург • 4.1 км до центра • 400 м до метро Площадь Александра Невского 1",
+      "stars": 3,
+      "rating": 4.4,
+      "reviewCount": 85,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "priceStayMinor": 1080000,
+      "priceNightMinor": 360000
+    },
+    {
+      "catalogId": "spb-arkada",
+      "sourceName": "Отель Аркада 3*",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/arkada-615537695/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=1697271067000",
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc600/AZX2mLIdeHORzP0it-mplQ.jpg",
+      "locationSummary": "Санкт-Петербург • 1.8 км до центра • 500 м до метро Достоевская",
+      "stars": 3,
+      "rating": 4.7,
+      "reviewCount": 88,
+      "amenities": [
+        "Wi-Fi"
+      ],
+      "priceStayMinor": 999200,
+      "priceNightMinor": 333100
+    },
+    {
+      "catalogId": "spb-mini-otel-sadovaya-loft",
+      "sourceName": "Отель Sadovaya Loft (Садовая Лофт)",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/mini-otel-sadovaya-loft-615554323/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=5976006489000",
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc600/AZX21g74dxefGKFnsfiXDQ.jpg",
+      "locationSummary": "Санкт-Петербург • 1.2 км до центра • 400 м до метро Невский проспект",
+      "stars": null,
+      "rating": 4.6,
+      "reviewCount": 344,
+      "amenities": [
+        "Wi-Fi",
+        "Трансфер"
+      ],
+      "priceStayMinor": 1005500,
+      "priceNightMinor": 335200
+    },
+    {
+      "catalogId": "spb-apartamenty-zum-1",
+      "sourceName": "Апартаменты Уютные Двухместные в ЖК ЗУМ",
+      "sourceUrl": "https://www.ozon.ru/travel/hotels/product/apartamenty-zum-1-3592113661/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=13548240143000",
+      "photoUrl": "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc600/AZ0zjZE2c-W6u8cdapvazA.jpg",
+      "locationSummary": "Санкт-Петербург • 5.9 км до центра • 700 м до метро Чёрная речка",
+      "stars": null,
+      "rating": 4.3,
+      "reviewCount": 20,
+      "amenities": [
+        "Wi-Fi",
+        "Парковка"
+      ],
+      "priceStayMinor": 624200,
+      "priceNightMinor": 208100
+    }
+  ]
+}

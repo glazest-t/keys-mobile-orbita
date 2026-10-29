@@ -1,0 +1,79 @@
+/* UI Kit F4/B1/S2/N2/N4/N5. Appearance follows Все экраны. */
+/* Water response: shared Orbit tokens, two outward rings, no looping. */
+.k-water-button{isolation:isolate}
+.k-water-button:active:not(:disabled){scale:.96}
+.k-water-ripples{position:absolute;inset:0;border-radius:inherit;pointer-events:none;color:var(--k-action-primary)}
+.k-water-ripples i{position:absolute;inset:0;border:1.5px solid currentColor;border-radius:inherit;opacity:0;animation:water-ring var(--k-duration-slow) var(--k-ease-orbit) both}
+.k-water-ripples i+i{animation-delay:var(--k-duration-instant)}
+@keyframes water-ring{0%{transform:scale(.97);opacity:0}18%{opacity:.28}100%{transform:scale(1.42);opacity:0}}
+@media(prefers-reduced-motion:reduce){.k-water-ripples{display:none}.k-water-button:active:not(:disabled){scale:1}}
+.keys-app,.sheet-body {
+ --interaction-press:120ms;
+ --interaction-release:240ms;
+ --interaction-arrive:cubic-bezier(.2,.8,.2,1);
+ --interaction-click:cubic-bezier(.34,1.56,.64,1);
+ --interaction-push:cubic-bezier(.32,.72,0,1);
+}
+:is(.keys-app,.sheet-body) :is(.k-button,.k-icon-button,.avatar,.text-action,.switch-row,.chat-send,.chat-context-action,.chat-prompt) {
+ transition:transform var(--interaction-release) var(--interaction-arrive),background-color var(--interaction-release) var(--interaction-arrive),opacity var(--interaction-release) var(--interaction-arrive);
+ transform:scale(1);
+}
+:is(.keys-app,.sheet-body) :is(.k-button,.k-icon-button,.avatar,.text-action,.switch-row,.chat-send,.chat-context-action,.chat-prompt):active:not(:disabled) {
+ transform:scale(.97);
+ transition-duration:var(--interaction-press);
+}
+:is(.keys-app,.sheet-body) [data-dragging=true] button:active {transform:scale(1)}
+.tab-content,.tab-page{position:absolute;inset:0}
+.tab-page:not([data-current=true]){pointer-events:none}
+.keys-app .bottom-navigation button{position:relative;z-index:1;background:transparent;transition:color 200ms ease,transform 240ms var(--interaction-arrive)}
+.keys-app .bottom-navigation button:active{transform:scale(.97);transition-duration:120ms}
+.nav-active-pill{position:absolute;left:4px;top:4px;bottom:4px;width:calc((100% - 8px)/4);border-radius:28px;background:var(--k-action-tint);transform:translateX(calc(var(--active-tab)*100%));transition:transform 240ms var(--interaction-push);pointer-events:none}
+:is(.keys-app,.sheet-body,.filter-editor) .switch{transition:background-color 300ms var(--interaction-click)}
+:is(.keys-app,.sheet-body,.filter-editor) .switch:after{left:3px;transform:translateX(0);transition:transform 300ms var(--interaction-click)}
+:is(.keys-app,.sheet-body,.filter-editor) .switch.on:after{left:3px;transform:translateX(var(--switch-travel,18px))}
+:is(.keys-app,.sheet-body,.filter-editor) .switch-row:disabled{opacity:.4}
+.sheet-body .k-button:focus-visible,.sheet-body .k-row:focus-visible{outline:2px solid #5a6072;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){
+ :is(.keys-app,.sheet-body) :is(.k-button,.k-icon-button,.avatar,.text-action,.switch-row,.chat-send,.chat-context-action,.chat-prompt):active:not(:disabled),.keys-app .bottom-navigation button:active{transform:none}
+ .sheet-body *{animation:none!important;transition:none!important}
+ .filter-editor .switch,.filter-editor .switch:after{transition:none}
+}
+
+/* B1: success stays on the action itself; the label and button keep their size. */
+:is(.keys-app,.sheet-body) .k-button.primary.is-success{background:#BFF0DE;color:var(--k-status-success,#16865A);opacity:1;transform:scale(1);cursor:default}
+.button-success-icon{display:inline-flex;align-items:center;justify-content:center;animation:button-success-arrive 380ms var(--interaction-click) both}
+@keyframes button-success-arrive{from{opacity:0;transform:scale(.5)}to{opacity:1;transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){.button-success-icon{animation:none}}
+
+/* C5: rows and tiles respond with a surface change, never a scale jump. */
+:is(.keys-app,.sheet-body) :is(.k-list-row,.k-surface-action,.k-service-tile,.document-list-row,.hotel-service-row,.hotel-service-order,.bill-line){transition:background-color var(--interaction-release) var(--interaction-arrive);transform:none}
+:is(.keys-app,.sheet-body) :is(.k-list-row,.k-surface-action,.k-service-tile,.hotel-service-row,.hotel-service-order,.bill-line):active:not(:disabled),.keys-app .document-list-row:has(button:active:not(:disabled)){background:#F4F5FB;transition-duration:var(--interaction-press);transform:none}
+:is(.keys-app,.sheet-body) :is(.k-list-row,.k-surface-action,.k-service-tile):disabled{opacity:.48;cursor:default}
+:is(.keys-app,.sheet-body) .k-surface-action:focus-visible,:is(.keys-app,.sheet-body) .k-list-row:focus-visible,:is(.keys-app,.sheet-body) .k-service-tile:focus-visible{outline:2px solid var(--k-focus-ring);outline-offset:-2px}
+@media(prefers-reduced-motion:reduce){:is(.keys-app,.sheet-body) :is(.k-list-row,.k-surface-action,.k-service-tile,.document-list-row,.hotel-service-row,.hotel-service-order,.bill-line){transition:none}}
+/* B3: orbital loader on the white key button. */
+.keys-app .stay-card .door-button[aria-busy=true]{opacity:1;background:#fff;color:var(--k-action-primary)}
+.keys-app .door-button .k-spinner{position:relative;width:20px;height:20px;box-sizing:border-box;border:3.5px solid #c9d2ff;border-radius:50%;background:none}
+.keys-app .door-button .k-spinner:after{content:'';position:absolute;left:3px;top:-5.25px;width:7px;height:7px;border-radius:50%;background:var(--k-action-primary)}
+
+/* UI Kit 09 / brand motion: the satellite visits the outer orbit once. */
+.points-balance .points-orbit-track{position:absolute;inset:0;animation:points-orbit-pass var(--points-duration) var(--points-ease) both}
+.points-balance .points-orbit-dot{animation:points-orbit-expand var(--points-duration) var(--points-ease) both}
+.points-balance .points-balance-value strong{font-variant-numeric:tabular-nums}
+@keyframes points-orbit-pass{from{transform:rotate(-360deg)}to{transform:rotate(0deg)}}
+@keyframes points-orbit-expand{0%,100%{transform:translate(0,0)}45%,60%{transform:translate(10px,-10px)}}
+@media(prefers-reduced-motion:reduce){.points-balance .points-orbit-track,.points-balance .points-orbit-dot{animation:none}}
+
+/* I3: Orbit easing for SMS feedback and the next authentication step. */
+.keys-app .sms-code-cells input{transition:background-color var(--k-duration-base) var(--k-ease-orbit),border-color var(--k-duration-base) var(--k-ease-orbit),color var(--k-duration-base) var(--k-ease-orbit)}
+.keys-app .orbit-enter,.keys-app .sms-code-success{animation:orbit-enter var(--k-duration-base) var(--k-ease-orbit) both}
+.keys-app .sms-code-success .button-success-icon{animation:orbit-enter var(--k-duration-base) var(--k-ease-orbit) both}
+@keyframes orbit-enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.keys-app .orbit-enter,.keys-app .sms-code-success,.keys-app .sms-code-success .button-success-icon{animation:none}.keys-app .sms-code-cells input{transition:none}}
+
+/* ch2: message arrival and the assistant typing state share Orbit motion. */
+.hotel-chat-message{animation:orbit-enter var(--k-duration-base) var(--k-ease-orbit) both}
+.chat-typing-dots i{animation:chat-typing var(--k-duration-loaderTurn) var(--k-ease-orbit) infinite alternate}
+.chat-typing-dots i:nth-child(2){animation-delay:var(--k-duration-instant)}.chat-typing-dots i:nth-child(3){animation-delay:var(--k-duration-quick)}
+@keyframes chat-typing{from{opacity:.3;transform:translateY(0)}to{opacity:1;transform:translateY(-3px)}}
+@media(prefers-reduced-motion:reduce){.hotel-chat-message,.chat-typing-dots i{animation:none}}

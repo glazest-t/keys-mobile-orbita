@@ -1,0 +1,92 @@
+.booking-content.rooms-page{padding:10px 16px 32px;gap:12px}
+.rooms-selection{display:flex;flex-direction:column;gap:12px;min-width:0}
+.room-filter-track{gap:8px}
+.room-filter-icon{width:36px;padding:0!important;justify-content:center}
+.room-offer{border:1px solid #e4e7ef;background:#fff;border-radius:24px;overflow:hidden}
+.room-offer-photo{height:180px;position:relative}
+.room-offer-photo .photo-counter{left:auto;right:12px}
+.room-offer-heading{padding:14px 14px 0;display:flex;flex-direction:column;gap:4px}
+.keys-app .room-offer-heading h2{font:500 17px/23px Onest;letter-spacing:0;margin:0}
+.keys-app .room-offer-heading p{font:400 13px/19px Onest;color:#5a6072;margin:0}
+.room-link{display:flex;align-items:center;gap:2px;padding:2px 0;border:0;background:none;text-align:left;font:500 13px/19px Onest;color:#2f5bff;min-height:24px}
+.room-offer-rates{gap:8px;padding:14px;align-items:stretch}
+.room-tariff{flex:none;width:224px;padding:14px;border-radius:20px;border:1px solid #e4e7ef;display:flex;flex-direction:column;gap:12px;color:#101320;background:#fff}
+.keys-app .room-tariff h3{font:500 14px/19px Onest;margin:0;letter-spacing:0}
+.room-rate-rules{display:flex;flex-direction:column;gap:6px}
+.room-rate-rules>div{display:flex;gap:8px;align-items:center;font:400 12px/17px Onest}
+.room-rate-rules>div>span{width:18px;height:18px;flex:none;border-radius:50%;display:grid;place-items:center;background:#eceef3;color:#8a90a2}
+.room-rate-rules>div>.included{background:#bff0de;color:#11734d}
+.room-rate-tags{display:flex;flex-wrap:wrap;gap:5px}
+.room-rate-tags>span{padding:4px 8px;border-radius:12px;background:#eef0ff;color:#2f5bff;font:500 11px/16px Onest}
+.room-tariff>.room-link{font-size:12px}
+.room-rate-price{display:flex;align-items:flex-end;justify-content:space-between;gap:8px;margin-top:auto;border-top:1px solid #eef0f4;padding-top:10px}
+.room-rate-price>div{display:flex;flex-direction:column;gap:2px;min-width:0}
+.room-rate-price strong{font:500 16px/22px Unbounded;letter-spacing:-.4px;white-space:nowrap}
+.room-rate-price small{display:flex;align-items:center;gap:4px;font:400 11px/16px Onest;color:#8a90a2}
+.room-rate-price b{padding:1px 5px;border-radius:7px;background:#eef0ff;color:#2f5bff;font-weight:500;font-size:10px}
+.room-rate-price>button{border:0;border-radius:12px;padding:0 10px;min-height:36px;background:#2f5bff;color:#fff;font:500 12px Onest;flex:none}
+.room-tariff.friendly{background:linear-gradient(150deg,#1b1e33,#2d2a55);border-color:transparent;color:#fff}
+.room-tariff.friendly .room-link{color:#c9d2ff}
+.room-tariff.friendly .room-rate-tags>span{background:#ffffff1f;color:#fff}
+.room-tariff.friendly .room-rate-price{border-color:#ffffff1f}
+.room-tariff.friendly .room-rate-price>button{background:#fff;color:#101320}
+.room-rate-badge,.room-detail-badge{align-self:flex-start;border-radius:11px;background:#ffffff1f;color:#ffd98a;padding:4px 7px;font:500 11px/15px Onest}
+.room-detail-badge{background:#eef0ff;color:#2f5bff}
+.room-equipment,.room-rate-detail,.room-filters-sheet{display:flex;flex-direction:column;gap:18px;padding:0 20px 28px}
+.room-specs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.room-specs>span{display:flex;gap:8px;align-items:center;font:400 13px/19px Onest}
+.room-equipment section,.room-rate-detail section{display:flex;flex-direction:column;gap:10px}
+.room-equipment h3,.room-rate-detail h3{font:500 12px/18px Onest;text-transform:uppercase;color:#5a6072;letter-spacing:.3px;margin:0}
+.room-bed-options{display:flex;flex-wrap:wrap;gap:8px}
+.room-bed-options>span{display:flex;gap:8px;align-items:center;padding:10px;border-radius:14px;background:#f4f5fb;font:400 13px/19px Onest}
+.room-equipment-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.room-feature{display:flex;align-items:center;gap:12px}
+.room-feature>.icon-tile{color:#2f5bff;width:36px;height:36px;border-radius:12px;flex:none}
+.room-feature>span:last-child{display:flex;flex-direction:column;gap:2px;min-width:0}
+.room-feature strong{font:500 14px/20px Onest}
+.room-feature small,.room-rate-detail>p,.room-equipment>p{font:400 12px/18px Onest;color:#5a6072}
+.room-equipment-grid .room-feature{gap:8px}
+.room-equipment-grid .room-feature strong{font-size:12px;line-height:17px;font-weight:400}
+.room-detail-price{display:flex;gap:12px;justify-content:space-between;align-items:center;border-top:1px solid #e4e7ef;padding-top:12px}
+.room-detail-price>span{display:flex;flex-direction:column;gap:4px}
+.room-detail-price strong{font:500 18px/24px Unbounded;white-space:nowrap}
+.room-detail-price small{font:400 12px/17px Onest;color:#5a6072}
+.room-detail-price .k-button{width:auto;flex:none;padding:0 24px}
+.room-bed-filters{display:flex;flex-wrap:wrap;gap:8px}
+.room-filters-sheet h3{margin:0;font:500 14px/20px Onest}
+.room-empty{display:flex;flex-direction:column;gap:12px;padding:28px 12px;text-align:center}
+.room-gallery{padding-bottom:calc(var(--flow-footer-height) + var(--mobile-safe-area-height) + 24px)!important}
+.room-photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 4px;padding:0 8px}
+.room-photo-wide{grid-column:1/-1}
+.room-photo-grid .gallery-tile img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}
+.room-photo-grid .room-photo-wide img{aspect-ratio:3/2}
+.room-photo-grid .gallery-tile:nth-child(3n+2) img{aspect-ratio:3/4}
+
+/* App-owned surfaces fill the scene; short pages must not reveal the previous route. */
+.booking-scroll{background:var(--k-surface-app)}
+.booking-scroll>.mobile-scroll>.mobile-scroll-content{min-height:100%}
+.booking-content.rooms-page{padding-bottom:calc(var(--mobile-safe-area-height) + 24px)}
+.bottom-sheet:has(.room-detail-panel){border-radius:30px 30px 0 0}
+.bottom-sheet:has(.room-detail-panel) .sheet-title{font:500 20px/26px Unbounded;letter-spacing:-.5px}
+.bottom-sheet:has(.room-detail-panel) .sheet-handle{width:36px;height:5px;background:#d9dde8}
+.bottom-sheet:has(.room-detail-panel) .sheet-header{padding:0 20px 14px}
+.bottom-sheet:has(.room-detail-panel) .sheet-content{padding:0 20px 30px}
+.room-detail-panel{padding:0;gap:14px}
+.room-detail-panel .room-detail-caption{font:400 14px/20px Onest;color:#5a6072;margin:0}
+.room-detail-panel section,.room-detail-panel .room-specs{padding:12px 14px;background:#f4f5fb;border-radius:18px}
+.room-detail-panel h3{font:500 14px/20px Onest;text-transform:none;letter-spacing:0;color:#101320}
+.room-detail-panel .room-feature>.icon-tile{width:24px;height:24px;border-radius:0;background:none}
+.room-detail-panel .room-feature strong{font-weight:400}
+.room-detail-panel .room-bed-options>span{padding:0;background:none}
+.room-detail-panel .k-button{border-radius:14px}
+.room-detail-panel .room-detail-price{padding-top:14px}
+.room-detail-panel .room-detail-price strong{font:500 20px/26px Unbounded}
+/* fr4: emerald Friendly Rate, not the violet hotel loyalty tariff. */
+.room-tariff.friendly{background:var(--k-feature-friendly);box-shadow:0 14px 30px #0b6b6338}
+.room-tariff.friendly .room-link{color:#b8f7e4}
+.room-tariff.friendly .room-rate-rules>div>span{background:#ffffff26;color:#bff0de}
+.room-tariff.friendly .room-rate-price>button{color:#063f3c}
+.room-tariff.friendly .room-rate-price small{color:#9fe0d2}
+.room-tariff.friendly .room-rate-price b{background:#b8f7e4;color:#063f3c}
+.hotel-price-value>.friendly-rate-label{align-self:center}
+.discovery-price>.friendly-rate-label{margin-top:4px}

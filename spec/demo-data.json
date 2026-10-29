@@ -1,0 +1,5331 @@
+{
+  "version": 1,
+  "disclaimer": "Первые пять отелей и фотографии — из пользовательских макетов. Восемь объектов Казани вымышлены для проверки фильтров; их сети, характеристики и фотографии — демонстрационные. Цены, наличие, отзывы и операции — тестовые. Персональные данные вымышлены. Двадцать московских отелей добавлены из пользовательской ссылки Ozon Travel (снимок 27.10.2026): реальные названия, фото, рейтинги, опубликованные удобства и цены. Недостающие поля номеров и правила бронирования — тестовые по согласованию пользователя; точные границы в spec/imported-hotels.json. Цены фиксированы и не обновляются с Ozon. Добавлены 20 объектов Санкт-Петербурга по ссылке Ozon, снимок цен за 5–8 ноября 2026 для двух гостей. Применяется опубликованная округлённая цена за ночь: итог за три ночи может отличаться от исходного на 1 рубль. Недостающие параметры и наличие тестовые; отзывы вымышлены.",
+  "currency": "RUB",
+  "user": {
+    "id": "guest-demo",
+    "name": "Анна Примерова",
+    "email": "anna@example.test",
+    "hotelierStatus": "approved"
+  },
+  "hotels": [
+    {
+      "id": "orbit-sea",
+      "name": "Mantera Resort & Congress",
+      "city": "Сочи",
+      "hotelDiscountBasisPoints": 500,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "hotelPointsProgram": true
+    },
+    {
+      "id": "orbit-city",
+      "name": "Орбита в городе",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "orbit-forest",
+      "name": "Орбита в лесу",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "hotelPointsProgram": true
+    },
+    {
+      "id": "pine-sochi",
+      "name": "Сосновый бор",
+      "city": "Сочи",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "lighthouse-sochi",
+      "name": "Маяк",
+      "city": "Сочи",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "kazan-city",
+      "name": "Орбита Казань",
+      "city": "Казань",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "kazan-apartment",
+      "name": "Квартира у озера",
+      "city": "Казань",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "kazan-apart",
+      "name": "Апарт-отель Площадь",
+      "city": "Казань",
+      "hotelDiscountBasisPoints": 1500,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "kazan-guest",
+      "name": "Дом на тихой улице",
+      "city": "Казань",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "kazan-hostel",
+      "name": "Хостел Спутник",
+      "city": "Казань",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "kazan-country",
+      "name": "Дом у леса",
+      "city": "Казань",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "kazan-camp",
+      "name": "База отдыха Берег",
+      "city": "Казань",
+      "hotelDiscountBasisPoints": 1500,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "kazan-health",
+      "name": "Санаторий Равновесие",
+      "city": "Казань",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel",
+      "name": "Измайлово Гамма, Дельта - ТВОЙ ОТЕЛЬ",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "moscow-otel-shelterz-vdnh",
+      "name": "Отель ShelterZ ВДНХ",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "moscow-ibis-moskva-kievskaya",
+      "name": "Отель ibis Москва Киевская",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "moscow-apart-otel-okruzhnaya",
+      "name": "Апарт-отель Окружная",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "moscow-gostinitsa-metallurg",
+      "name": "Отель Металлург",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "moscow-gostevoy-dom-lesnoy-sheremetyevo",
+      "name": "Гостевой дом LESNOY SHEREMETYEVO",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "moscow-gostinitsa-ekonom-nasledie",
+      "name": "Отель Наследие",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "moscow-arena",
+      "name": "Гостиница Арена",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "moscow-hostel-guten-duck-moscow",
+      "name": "Отель Гутен Дак Москва",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "moscow-minima-belorusskaya",
+      "name": "Отель Минима Белорусская",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "moscow-otel-tesla",
+      "name": "Tesla Hotel",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "moscow-bun-in-alley",
+      "name": "Отель Bun-in Alley",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "moscow-otel-maksima-zarya",
+      "name": "Максима Заря Отель",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "moscow-moscow-marriott-imperial-plaza",
+      "name": "Отель Москва Марриотт Империал Плаза",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "moscow-akvamarin-zont-hotel-group",
+      "name": "Отель Аквамарин ZONT Hotel Group",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "moscow-pekin",
+      "name": "Гостиница Пекин",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "moscow-zvezdy-arbata-otel-i-apartamenty",
+      "name": "\"Звезды Арбата\" Отель и Апартаменты",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "moscow-palmira-business-club",
+      "name": "Отель Palmira Business Club",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva",
+      "name": "Отель Мандарин Москва",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress",
+      "name": "Отель Sleep and Fly SVO (Слип энд Флай Терминал Аэроэкспресс)",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "spb-valo-network",
+      "name": "Отель Вало Нетворк",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "spb-valo-business",
+      "name": "Отель Вало Бизнес",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "spb-demokrat-na-kamennoostrovskom-39",
+      "name": "Отель Демократ на Каменноостровском 39",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "spb-apart-otel-uno-by-valo",
+      "name": "УНО апарт-отель",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "spb-apartpeydzh-nevskiy",
+      "name": "Отель АпартПейдж Невский",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "spb-osobnyak-molvo",
+      "name": "Отель Особняк Молво",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "spb-apartamenty-new-horizon-liteyniy",
+      "name": "Квартира New Horizon Liteiyniy",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "spb-ramada-plaza-by-wyndham-st-petersburg",
+      "name": "Отель Рамада Плаза",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "spb-apartpeydzh-elagin",
+      "name": "Отель АпартПейдж Елагин",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "spb-otel-rotas-city-center",
+      "name": "Отель Ротас Сити Цент на Гродненском",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "spb-apartamenty-dvoriki-petra-na-gorohovoy",
+      "name": "Апартаменты Дворики Петра на Гороховой",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "spb-greenwich-by-friends",
+      "name": "Гостевые комнаты Гринвич",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "spb-ligotel",
+      "name": "Лиготель",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "spb-mini-otel-moov-apart-bogema",
+      "name": "Отель Moov Apart Bogema (Мув Апарт Богема)",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "spb-mini-otel-demokrat-na-nevskom-107b",
+      "name": "Отель Демократ на Невском 107",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "spb-aristokrat",
+      "name": "Отель Аристократ",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "spb-apart-otel-port-comfort-by-old-nevskiy",
+      "name": "Отель Port Comfort by old Nevskiy",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "spb-arkada",
+      "name": "Отель Аркада",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "spb-mini-otel-sadovaya-loft",
+      "name": "Отель Sadovaya Loft (Садовая Лофт)",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    },
+    {
+      "id": "spb-apartamenty-zum-1",
+      "name": "Апартаменты Уютные Двухместные в ЖК ЗУМ",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "sea-standard",
+      "hotelId": "orbit-sea",
+      "title": "Стандарт с балконом",
+      "maxGuests": 2
+    },
+    {
+      "id": "city-standard",
+      "hotelId": "orbit-city",
+      "title": "Городской стандарт",
+      "maxGuests": 2
+    },
+    {
+      "id": "forest-family",
+      "hotelId": "orbit-forest",
+      "title": "Семейный номер",
+      "maxGuests": 4
+    },
+    {
+      "id": "pine-sochi-room",
+      "hotelId": "pine-sochi",
+      "title": "Стандарт с балконом",
+      "maxGuests": 2
+    },
+    {
+      "id": "lighthouse-sochi-room",
+      "hotelId": "lighthouse-sochi",
+      "title": "Стандарт с балконом",
+      "maxGuests": 2
+    },
+    {
+      "id": "sea-deluxe",
+      "hotelId": "orbit-sea",
+      "title": "Делюкс с видом на море",
+      "maxGuests": 3
+    },
+    {
+      "id": "sea-suite",
+      "hotelId": "orbit-sea",
+      "title": "Полулюкс с видом на море",
+      "maxGuests": 4
+    },
+    {
+      "id": "kazan-city-room",
+      "hotelId": "kazan-city",
+      "title": "Стандарт",
+      "maxGuests": 2
+    },
+    {
+      "id": "kazan-apartment-room",
+      "hotelId": "kazan-apartment",
+      "title": "Двухкомнатная квартира",
+      "maxGuests": 4
+    },
+    {
+      "id": "kazan-apart-room",
+      "hotelId": "kazan-apart",
+      "title": "Семейный номер",
+      "maxGuests": 4
+    },
+    {
+      "id": "kazan-guest-room",
+      "hotelId": "kazan-guest",
+      "title": "Семейный номер",
+      "maxGuests": 4
+    },
+    {
+      "id": "kazan-hostel-room",
+      "hotelId": "kazan-hostel",
+      "title": "Двухместный номер",
+      "maxGuests": 2
+    },
+    {
+      "id": "kazan-country-room",
+      "hotelId": "kazan-country",
+      "title": "Дом с четырьмя спальнями",
+      "maxGuests": 10
+    },
+    {
+      "id": "kazan-camp-room",
+      "hotelId": "kazan-camp",
+      "title": "Семейный номер",
+      "maxGuests": 6
+    },
+    {
+      "id": "kazan-health-room",
+      "hotelId": "kazan-health",
+      "title": "Семейный номер",
+      "maxGuests": 3
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel-room",
+      "hotelId": "moscow-izmaylovo-tvoy-otel",
+      "title": "Стандарт две кровати - 2мг (Измайлово отель гамма 3*)",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-otel-shelterz-vdnh-room",
+      "hotelId": "moscow-otel-shelterz-vdnh",
+      "title": "Двухместный номер",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-ibis-moskva-kievskaya-room",
+      "hotelId": "moscow-ibis-moskva-kievskaya",
+      "title": "Стандартный номер - с двуспальной кроватью",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-apart-otel-okruzhnaya-room",
+      "hotelId": "moscow-apart-otel-okruzhnaya",
+      "title": "Окружная \"Ground\"",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-gostinitsa-metallurg-room",
+      "hotelId": "moscow-gostinitsa-metallurg",
+      "title": "2-местный бюджет",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-gostevoy-dom-lesnoy-sheremetyevo-room",
+      "hotelId": "moscow-gostevoy-dom-lesnoy-sheremetyevo",
+      "title": "Лесной раздельные 2 кровати",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-gostinitsa-ekonom-nasledie-room",
+      "hotelId": "moscow-gostinitsa-ekonom-nasledie",
+      "title": "2-х местный номер, с телевизором и холодильником, удобства на этаже.",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-arena-room",
+      "hotelId": "moscow-arena",
+      "title": "Д2TW ДЕЛЮКС 2-х местный",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-hostel-guten-duck-moscow-room",
+      "hotelId": "moscow-hostel-guten-duck-moscow",
+      "title": "Двухместный номер с общей ванной комнатой",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-minima-belorusskaya-room",
+      "hotelId": "moscow-minima-belorusskaya",
+      "title": "Стандарт двухместный",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-otel-tesla-room",
+      "hotelId": "moscow-otel-tesla",
+      "title": "Стандарт на 1-м этаже",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-bun-in-alley-room",
+      "hotelId": "moscow-bun-in-alley",
+      "title": "Апартаменты \"Комфорт-Мини\"",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-otel-maksima-zarya-room",
+      "hotelId": "moscow-otel-maksima-zarya",
+      "title": "Стандарт Двухместный (Двуспальная кровать)",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-moscow-marriott-imperial-plaza-room",
+      "hotelId": "moscow-moscow-marriott-imperial-plaza",
+      "title": "Делюкс с большой кроватью",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-akvamarin-zont-hotel-group-room",
+      "hotelId": "moscow-akvamarin-zont-hotel-group",
+      "title": "Стандарт c двуспальной кроватью",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-pekin-room",
+      "hotelId": "moscow-pekin",
+      "title": "Классик с большой кроватью",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-zvezdy-arbata-otel-i-apartamenty-room",
+      "hotelId": "moscow-zvezdy-arbata-otel-i-apartamenty",
+      "title": "Делюкс с одной большой кроватью",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-palmira-business-club-room",
+      "hotelId": "moscow-palmira-business-club",
+      "title": "Супериор",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva-room",
+      "hotelId": "moscow-otel-mandarin-moskva",
+      "title": "Бюджетный двухместный номер с ограниченным видом",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress-room",
+      "hotelId": "moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress",
+      "title": "2-местная капсула (общие удобства)",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-valo-network-room",
+      "hotelId": "spb-valo-network",
+      "title": "Нетворк Стандарт 3* с большим матрасом на подиуме",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-valo-business-room",
+      "hotelId": "spb-valo-business",
+      "title": "Бизнес Комфорт Классик 4*",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-demokrat-na-kamennoostrovskom-39-room",
+      "hotelId": "spb-demokrat-na-kamennoostrovskom-39",
+      "title": "Двухместный КОМФОРТ с двуспальной кроватью",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-apart-otel-uno-by-valo-room",
+      "hotelId": "spb-apart-otel-uno-by-valo",
+      "title": "Комфорт двухместный",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-apartpeydzh-nevskiy-room",
+      "hotelId": "spb-apartpeydzh-nevskiy",
+      "title": "Бюджетный номер",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-osobnyak-molvo-room",
+      "hotelId": "spb-osobnyak-molvo",
+      "title": "Бюджетный номер с общей ванной комнатой на этаже",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-apartamenty-new-horizon-liteyniy-room",
+      "hotelId": "spb-apartamenty-new-horizon-liteyniy",
+      "title": "Стандартные апартаменты",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-ramada-plaza-by-wyndham-st-petersburg-room",
+      "hotelId": "spb-ramada-plaza-by-wyndham-st-petersburg",
+      "title": "Рамада Комфорт 4* без посещения бассейна",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-apartpeydzh-elagin-room",
+      "hotelId": "spb-apartpeydzh-elagin",
+      "title": "Студия",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-otel-rotas-city-center-room",
+      "hotelId": "spb-otel-rotas-city-center",
+      "title": "Апартаменты Стандарт",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-apartamenty-dvoriki-petra-na-gorohovoy-room",
+      "hotelId": "spb-apartamenty-dvoriki-petra-na-gorohovoy",
+      "title": "Четырёхместные апартаменты Superior",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-greenwich-by-friends-room",
+      "hotelId": "spb-greenwich-by-friends",
+      "title": "Смарт с двуспальной кроватью",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-ligotel-room",
+      "hotelId": "spb-ligotel",
+      "title": "Стандарт",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-mini-otel-moov-apart-bogema-room",
+      "hotelId": "spb-mini-otel-moov-apart-bogema",
+      "title": "Апартаменты стандарт с 1 двуспальной кроватью",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-mini-otel-demokrat-na-nevskom-107b-room",
+      "hotelId": "spb-mini-otel-demokrat-na-nevskom-107b",
+      "title": "Двухместный КОМФОРТ",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-aristokrat-room",
+      "hotelId": "spb-aristokrat",
+      "title": "Улучшенный Стандарт с раздельными кроватями",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-apart-otel-port-comfort-by-old-nevskiy-room",
+      "hotelId": "spb-apart-otel-port-comfort-by-old-nevskiy",
+      "title": "Стандарт с 1 двуспальной кроватью",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-arkada-room",
+      "hotelId": "spb-arkada",
+      "title": "Стандартный номер",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-mini-otel-sadovaya-loft-room",
+      "hotelId": "spb-mini-otel-sadovaya-loft",
+      "title": "Номер комфорт премиум с 1 двуспальной кроватью",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-apartamenty-zum-1-room",
+      "hotelId": "spb-apartamenty-zum-1",
+      "title": "Двухместные апартаменты с красивым видом из окна (двуспальная кровать)",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel-room-2",
+      "hotelId": "moscow-izmaylovo-tvoy-otel",
+      "title": "Стандарт широкая кровать - кг (Измайлово отель гамма 3*)",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel-room-3",
+      "hotelId": "moscow-izmaylovo-tvoy-otel",
+      "title": "Стандарт плюс широкая кровать - к+ (Измайлово отель гамма 3*)",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-ibis-moskva-kievskaya-room-2",
+      "hotelId": "moscow-ibis-moskva-kievskaya",
+      "title": "Стандартный номер, для маломобильных - с двуспальной кроватью",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-ibis-moskva-kievskaya-room-3",
+      "hotelId": "moscow-ibis-moskva-kievskaya",
+      "title": "Стандартный номер - с 2 односпальными кроватями",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-apart-otel-okruzhnaya-room-2",
+      "hotelId": "moscow-apart-otel-okruzhnaya",
+      "title": "Окружная \"Standard\"",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-gostinitsa-metallurg-room-2",
+      "hotelId": "moscow-gostinitsa-metallurg",
+      "title": "3-местный бюджет",
+      "maxGuests": 3
+    },
+    {
+      "id": "moscow-gostinitsa-metallurg-room-3",
+      "hotelId": "moscow-gostinitsa-metallurg",
+      "title": "Стандарт двухместный с 2 раздельными кроватями",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-gostevoy-dom-lesnoy-sheremetyevo-room-2",
+      "hotelId": "moscow-gostevoy-dom-lesnoy-sheremetyevo",
+      "title": "Лесной двуспальная кровать",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-gostevoy-dom-lesnoy-sheremetyevo-room-3",
+      "hotelId": "moscow-gostevoy-dom-lesnoy-sheremetyevo",
+      "title": "Лесной апартаменты",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-gostinitsa-ekonom-nasledie-room-2",
+      "hotelId": "moscow-gostinitsa-ekonom-nasledie",
+      "title": "Номер стандарт",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-gostinitsa-ekonom-nasledie-room-3",
+      "hotelId": "moscow-gostinitsa-ekonom-nasledie",
+      "title": "2-комнатный номер стандарт",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-arena-room-2",
+      "hotelId": "moscow-arena",
+      "title": "Д2ДБ ДЕЛЮКС 2-х местный",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-arena-room-3",
+      "hotelId": "moscow-arena",
+      "title": "Супериор",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-hostel-guten-duck-moscow-room-2",
+      "hotelId": "moscow-hostel-guten-duck-moscow",
+      "title": "2-местный номер эконом стандарт",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-minima-belorusskaya-room-2",
+      "hotelId": "moscow-minima-belorusskaya",
+      "title": "Стандарт двухместный с ванной",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-minima-belorusskaya-room-3",
+      "hotelId": "moscow-minima-belorusskaya",
+      "title": "Комфорт двухместный",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-otel-tesla-room-2",
+      "hotelId": "moscow-otel-tesla",
+      "title": "Стандарт",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-otel-tesla-room-3",
+      "hotelId": "moscow-otel-tesla",
+      "title": "Комфорт",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-bun-in-alley-room-2",
+      "hotelId": "moscow-bun-in-alley",
+      "title": "Апартаменты \"Престиж\"",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-bun-in-alley-room-3",
+      "hotelId": "moscow-bun-in-alley",
+      "title": "Апартаменты \"Комфорт+\"",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-bun-in-alley-room-4",
+      "hotelId": "moscow-bun-in-alley",
+      "title": "Двухместный номер Comfort с видом на город (двуспальная кровать)",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-otel-maksima-zarya-room-2",
+      "hotelId": "moscow-otel-maksima-zarya",
+      "title": "Стандарт Двухместный (Отдельные кровати)",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-otel-maksima-zarya-room-3",
+      "hotelId": "moscow-otel-maksima-zarya",
+      "title": "Студио (Двуспальная кровать)",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-moscow-marriott-imperial-plaza-room-2",
+      "hotelId": "moscow-moscow-marriott-imperial-plaza",
+      "title": "Делюкс с одной кроватью",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-moscow-marriott-imperial-plaza-room-3",
+      "hotelId": "moscow-moscow-marriott-imperial-plaza",
+      "title": "Делюкс с двумя раздельными кроватями",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-akvamarin-zont-hotel-group-room-2",
+      "hotelId": "moscow-akvamarin-zont-hotel-group",
+      "title": "Стандарт",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-akvamarin-zont-hotel-group-room-3",
+      "hotelId": "moscow-akvamarin-zont-hotel-group",
+      "title": "Стандарт c 2 односпальными кроватями",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-pekin-room-2",
+      "hotelId": "moscow-pekin",
+      "title": "Стандарт Плюс с большой кроватью",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-pekin-room-3",
+      "hotelId": "moscow-pekin",
+      "title": "Стандарт Плюс с двумя одноместными кроватями",
+      "maxGuests": 1
+    },
+    {
+      "id": "moscow-zvezdy-arbata-otel-i-apartamenty-room-2",
+      "hotelId": "moscow-zvezdy-arbata-otel-i-apartamenty",
+      "title": "Делюкс с двумя раздельными кроватями",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-zvezdy-arbata-otel-i-apartamenty-room-3",
+      "hotelId": "moscow-zvezdy-arbata-otel-i-apartamenty",
+      "title": "Премиум Делюкс с видом на Новый Арбат",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-palmira-business-club-room-2",
+      "hotelId": "moscow-palmira-business-club",
+      "title": "Студия",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-palmira-business-club-room-3",
+      "hotelId": "moscow-palmira-business-club",
+      "title": "СУПЕРИОР с видом на реку",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva-room-2",
+      "hotelId": "moscow-otel-mandarin-moskva",
+      "title": "Стандартный номер с одной двуспальной кроватью",
+      "maxGuests": 2
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva-room-3",
+      "hotelId": "moscow-otel-mandarin-moskva",
+      "title": "Стандартный номер с двумя раздельными кроватями",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-valo-network-room-2",
+      "hotelId": "spb-valo-network",
+      "title": "Нетворк Стандарт Плюс 3* с раздельными матрасами на подиуме (с возможностью соединить)",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-valo-network-room-3",
+      "hotelId": "spb-valo-network",
+      "title": "Нетворк Стандарт Плюс 3* с большим матрасом на подиуме",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-valo-business-room-2",
+      "hotelId": "spb-valo-business",
+      "title": "Бизнес Комфорт 4*",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-valo-business-room-3",
+      "hotelId": "spb-valo-business",
+      "title": "Бизнес Комфорт с балконом 4*",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-apart-otel-uno-by-valo-room-2",
+      "hotelId": "spb-apart-otel-uno-by-valo",
+      "title": "Комфорт Плюс",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-apart-otel-uno-by-valo-room-3",
+      "hotelId": "spb-apart-otel-uno-by-valo",
+      "title": "Супериор",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-apartpeydzh-nevskiy-room-2",
+      "hotelId": "spb-apartpeydzh-nevskiy",
+      "title": "Номер-студио",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-apartpeydzh-nevskiy-room-3",
+      "hotelId": "spb-apartpeydzh-nevskiy",
+      "title": "Двухместный номер \"Романтик\" с двуспальной кроватью",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-osobnyak-molvo-room-2",
+      "hotelId": "spb-osobnyak-molvo",
+      "title": "Номер Улучшенный Бюджетный (общие удобства)",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-osobnyak-molvo-room-3",
+      "hotelId": "spb-osobnyak-molvo",
+      "title": "Стандарт с двуспальной кроватью",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-apartamenty-new-horizon-liteyniy-room-2",
+      "hotelId": "spb-apartamenty-new-horizon-liteyniy",
+      "title": "Улучшенные апартаменты",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-ramada-plaza-by-wyndham-st-petersburg-room-2",
+      "hotelId": "spb-ramada-plaza-by-wyndham-st-petersburg",
+      "title": "Рамада Комфорт 4*",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-ramada-plaza-by-wyndham-st-petersburg-room-3",
+      "hotelId": "spb-ramada-plaza-by-wyndham-st-petersburg",
+      "title": "Рамада Полулюкс 4* без посещения бассейна",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-apartpeydzh-elagin-room-2",
+      "hotelId": "spb-apartpeydzh-elagin",
+      "title": "Студия с диваном",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-apartpeydzh-elagin-room-3",
+      "hotelId": "spb-apartpeydzh-elagin",
+      "title": "Однокомнатный апартамент",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-otel-rotas-city-center-room-2",
+      "hotelId": "spb-otel-rotas-city-center",
+      "title": "Улучшенная студия",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-otel-rotas-city-center-room-3",
+      "hotelId": "spb-otel-rotas-city-center",
+      "title": "Делюкс студия",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-ligotel-room-2",
+      "hotelId": "spb-ligotel",
+      "title": "Комфорт",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-ligotel-room-3",
+      "hotelId": "spb-ligotel",
+      "title": "Комфорт с раздельными кроватями",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-aristokrat-room-2",
+      "hotelId": "spb-aristokrat",
+      "title": "Комфорт с одной большой или двумя раздельными кроватями",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-aristokrat-room-3",
+      "hotelId": "spb-aristokrat",
+      "title": "Стандарт с одной большой или двумя раздельными кроватями",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-apart-otel-port-comfort-by-old-nevskiy-room-2",
+      "hotelId": "spb-apart-otel-port-comfort-by-old-nevskiy",
+      "title": "Студия Комфорт",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-arkada-room-2",
+      "hotelId": "spb-arkada",
+      "title": "Комфорт",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-mini-otel-sadovaya-loft-room-2",
+      "hotelId": "spb-mini-otel-sadovaya-loft",
+      "title": "Номер эконом с 1 двуспальной кроватью",
+      "maxGuests": 2
+    },
+    {
+      "id": "spb-mini-otel-sadovaya-loft-room-3",
+      "hotelId": "spb-mini-otel-sadovaya-loft",
+      "title": "Номер улучшенный стандарт с 1 двуспальной кроватью",
+      "maxGuests": 2
+    }
+  ],
+  "rates": [
+    {
+      "id": "sea-standard-rate",
+      "hotelId": "orbit-sea",
+      "roomId": "sea-standard",
+      "kind": "standard",
+      "nightlyMinor": 1420000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "city-standard-rate",
+      "hotelId": "orbit-city",
+      "roomId": "city-standard",
+      "kind": "standard",
+      "nightlyMinor": 1100000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "forest-standard-rate",
+      "hotelId": "orbit-forest",
+      "roomId": "forest-family",
+      "kind": "standard",
+      "nightlyMinor": 1300000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "pine-sochi-rate",
+      "hotelId": "pine-sochi",
+      "roomId": "pine-sochi-room",
+      "kind": "standard",
+      "nightlyMinor": 1280000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "lighthouse-sochi-rate",
+      "hotelId": "lighthouse-sochi",
+      "roomId": "lighthouse-sochi-room",
+      "kind": "standard",
+      "nightlyMinor": 1690000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "sea-deluxe-rate",
+      "hotelId": "orbit-sea",
+      "roomId": "sea-deluxe",
+      "kind": "standard",
+      "nightlyMinor": 1840000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "sea-suite-rate",
+      "hotelId": "orbit-sea",
+      "roomId": "sea-suite",
+      "kind": "standard",
+      "nightlyMinor": 2640000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "sea-standard-breakfast",
+      "hotelId": "orbit-sea",
+      "roomId": "sea-standard",
+      "kind": "standard",
+      "nightlyMinor": 1720000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "sea-deluxe-breakfast",
+      "hotelId": "orbit-sea",
+      "roomId": "sea-deluxe",
+      "kind": "standard",
+      "nightlyMinor": 2290000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "sea-suite-breakfast",
+      "hotelId": "orbit-sea",
+      "roomId": "sea-suite",
+      "kind": "standard",
+      "nightlyMinor": 3240000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "kazan-city-rate",
+      "hotelId": "kazan-city",
+      "roomId": "kazan-city-room",
+      "kind": "standard",
+      "nightlyMinor": 850000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "kazan-apartment-rate",
+      "hotelId": "kazan-apartment",
+      "roomId": "kazan-apartment-room",
+      "kind": "standard",
+      "nightlyMinor": 420000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "kazan-apart-rate",
+      "hotelId": "kazan-apart",
+      "roomId": "kazan-apart-room",
+      "kind": "standard",
+      "nightlyMinor": 670000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "kazan-guest-rate",
+      "hotelId": "kazan-guest",
+      "roomId": "kazan-guest-room",
+      "kind": "standard",
+      "nightlyMinor": 480000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "half_board"
+    },
+    {
+      "id": "kazan-hostel-rate",
+      "hotelId": "kazan-hostel",
+      "roomId": "kazan-hostel-room",
+      "kind": "standard",
+      "nightlyMinor": 160000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "kazan-country-rate",
+      "hotelId": "kazan-country",
+      "roomId": "kazan-country-room",
+      "kind": "standard",
+      "nightlyMinor": 980000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "kazan-camp-rate",
+      "hotelId": "kazan-camp",
+      "roomId": "kazan-camp-room",
+      "kind": "standard",
+      "nightlyMinor": 720000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "full_board"
+    },
+    {
+      "id": "kazan-health-rate",
+      "hotelId": "kazan-health",
+      "roomId": "kazan-health-room",
+      "kind": "standard",
+      "nightlyMinor": 1100000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "all_inclusive"
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel-rate",
+      "hotelId": "moscow-izmaylovo-tvoy-otel",
+      "roomId": "moscow-izmaylovo-tvoy-otel-room",
+      "kind": "standard",
+      "nightlyMinor": 455000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-otel-shelterz-vdnh-rate",
+      "hotelId": "moscow-otel-shelterz-vdnh",
+      "roomId": "moscow-otel-shelterz-vdnh-room",
+      "kind": "standard",
+      "nightlyMinor": 248100,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-ibis-moskva-kievskaya-rate",
+      "hotelId": "moscow-ibis-moskva-kievskaya",
+      "roomId": "moscow-ibis-moskva-kievskaya-room",
+      "kind": "standard",
+      "nightlyMinor": 696000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-ibis-moskva-kievskaya-breakfast",
+      "hotelId": "moscow-ibis-moskva-kievskaya",
+      "roomId": "moscow-ibis-moskva-kievskaya-room",
+      "kind": "standard",
+      "nightlyMinor": 946000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-apart-otel-okruzhnaya-rate",
+      "hotelId": "moscow-apart-otel-okruzhnaya",
+      "roomId": "moscow-apart-otel-okruzhnaya-room",
+      "kind": "standard",
+      "nightlyMinor": 410000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-gostinitsa-metallurg-rate",
+      "hotelId": "moscow-gostinitsa-metallurg",
+      "roomId": "moscow-gostinitsa-metallurg-room",
+      "kind": "standard",
+      "nightlyMinor": 270000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-gostevoy-dom-lesnoy-sheremetyevo-rate",
+      "hotelId": "moscow-gostevoy-dom-lesnoy-sheremetyevo",
+      "roomId": "moscow-gostevoy-dom-lesnoy-sheremetyevo-room",
+      "kind": "standard",
+      "nightlyMinor": 430000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-gostinitsa-ekonom-nasledie-rate",
+      "hotelId": "moscow-gostinitsa-ekonom-nasledie",
+      "roomId": "moscow-gostinitsa-ekonom-nasledie-room",
+      "kind": "standard",
+      "nightlyMinor": 240000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-arena-rate",
+      "hotelId": "moscow-arena",
+      "roomId": "moscow-arena-room",
+      "kind": "standard",
+      "nightlyMinor": 650000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-hostel-guten-duck-moscow-rate",
+      "hotelId": "moscow-hostel-guten-duck-moscow",
+      "roomId": "moscow-hostel-guten-duck-moscow-room",
+      "kind": "standard",
+      "nightlyMinor": 424000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-minima-belorusskaya-rate",
+      "hotelId": "moscow-minima-belorusskaya",
+      "roomId": "moscow-minima-belorusskaya-room",
+      "kind": "standard",
+      "nightlyMinor": 532000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-otel-tesla-rate",
+      "hotelId": "moscow-otel-tesla",
+      "roomId": "moscow-otel-tesla-room",
+      "kind": "standard",
+      "nightlyMinor": 617500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-bun-in-alley-rate",
+      "hotelId": "moscow-bun-in-alley",
+      "roomId": "moscow-bun-in-alley-room",
+      "kind": "standard",
+      "nightlyMinor": 379000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-otel-maksima-zarya-rate",
+      "hotelId": "moscow-otel-maksima-zarya",
+      "roomId": "moscow-otel-maksima-zarya-room",
+      "kind": "standard",
+      "nightlyMinor": 435000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-moscow-marriott-imperial-plaza-rate",
+      "hotelId": "moscow-moscow-marriott-imperial-plaza",
+      "roomId": "moscow-moscow-marriott-imperial-plaza-room",
+      "kind": "standard",
+      "nightlyMinor": 1400000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-akvamarin-zont-hotel-group-rate",
+      "hotelId": "moscow-akvamarin-zont-hotel-group",
+      "roomId": "moscow-akvamarin-zont-hotel-group-room",
+      "kind": "standard",
+      "nightlyMinor": 720000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-pekin-rate",
+      "hotelId": "moscow-pekin",
+      "roomId": "moscow-pekin-room",
+      "kind": "standard",
+      "nightlyMinor": 705500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-zvezdy-arbata-otel-i-apartamenty-rate",
+      "hotelId": "moscow-zvezdy-arbata-otel-i-apartamenty",
+      "roomId": "moscow-zvezdy-arbata-otel-i-apartamenty-room",
+      "kind": "standard",
+      "nightlyMinor": 1110000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-palmira-business-club-rate",
+      "hotelId": "moscow-palmira-business-club",
+      "roomId": "moscow-palmira-business-club-room",
+      "kind": "standard",
+      "nightlyMinor": 1134000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva-rate",
+      "hotelId": "moscow-otel-mandarin-moskva",
+      "roomId": "moscow-otel-mandarin-moskva-room",
+      "kind": "standard",
+      "nightlyMinor": 408500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress-rate",
+      "hotelId": "moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress",
+      "roomId": "moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress-room",
+      "kind": "standard",
+      "nightlyMinor": 420000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-valo-network-rate",
+      "hotelId": "spb-valo-network",
+      "roomId": "spb-valo-network-room",
+      "kind": "standard",
+      "nightlyMinor": 376667,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-valo-business-rate",
+      "hotelId": "spb-valo-business",
+      "roomId": "spb-valo-business-room",
+      "kind": "standard",
+      "nightlyMinor": 410000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-demokrat-na-kamennoostrovskom-39-rate",
+      "hotelId": "spb-demokrat-na-kamennoostrovskom-39",
+      "roomId": "spb-demokrat-na-kamennoostrovskom-39-room",
+      "kind": "standard",
+      "nightlyMinor": 400000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-apart-otel-uno-by-valo-rate",
+      "hotelId": "spb-apart-otel-uno-by-valo",
+      "roomId": "spb-apart-otel-uno-by-valo-room",
+      "kind": "standard",
+      "nightlyMinor": 540000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-apartpeydzh-nevskiy-rate",
+      "hotelId": "spb-apartpeydzh-nevskiy",
+      "roomId": "spb-apartpeydzh-nevskiy-room",
+      "kind": "standard",
+      "nightlyMinor": 294933,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-osobnyak-molvo-rate",
+      "hotelId": "spb-osobnyak-molvo",
+      "roomId": "spb-osobnyak-molvo-room",
+      "kind": "standard",
+      "nightlyMinor": 146667,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-apartamenty-new-horizon-liteyniy-rate",
+      "hotelId": "spb-apartamenty-new-horizon-liteyniy",
+      "roomId": "spb-apartamenty-new-horizon-liteyniy-room",
+      "kind": "standard",
+      "nightlyMinor": 318667,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-ramada-plaza-by-wyndham-st-petersburg-rate",
+      "hotelId": "spb-ramada-plaza-by-wyndham-st-petersburg",
+      "roomId": "spb-ramada-plaza-by-wyndham-st-petersburg-room",
+      "kind": "standard",
+      "nightlyMinor": 450000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-apartpeydzh-elagin-rate",
+      "hotelId": "spb-apartpeydzh-elagin",
+      "roomId": "spb-apartpeydzh-elagin-room",
+      "kind": "standard",
+      "nightlyMinor": 298933,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-otel-rotas-city-center-rate",
+      "hotelId": "spb-otel-rotas-city-center",
+      "roomId": "spb-otel-rotas-city-center-room",
+      "kind": "standard",
+      "nightlyMinor": 249900,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-apartamenty-dvoriki-petra-na-gorohovoy-rate",
+      "hotelId": "spb-apartamenty-dvoriki-petra-na-gorohovoy",
+      "roomId": "spb-apartamenty-dvoriki-petra-na-gorohovoy-room",
+      "kind": "standard",
+      "nightlyMinor": 295000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-greenwich-by-friends-rate",
+      "hotelId": "spb-greenwich-by-friends",
+      "roomId": "spb-greenwich-by-friends-room",
+      "kind": "standard",
+      "nightlyMinor": 398733,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-ligotel-rate",
+      "hotelId": "spb-ligotel",
+      "roomId": "spb-ligotel-room",
+      "kind": "standard",
+      "nightlyMinor": 433333,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-mini-otel-moov-apart-bogema-rate",
+      "hotelId": "spb-mini-otel-moov-apart-bogema",
+      "roomId": "spb-mini-otel-moov-apart-bogema-room",
+      "kind": "standard",
+      "nightlyMinor": 297867,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-mini-otel-demokrat-na-nevskom-107b-rate",
+      "hotelId": "spb-mini-otel-demokrat-na-nevskom-107b",
+      "roomId": "spb-mini-otel-demokrat-na-nevskom-107b-room",
+      "kind": "standard",
+      "nightlyMinor": 290000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-aristokrat-rate",
+      "hotelId": "spb-aristokrat",
+      "roomId": "spb-aristokrat-room",
+      "kind": "standard",
+      "nightlyMinor": 247500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-apart-otel-port-comfort-by-old-nevskiy-rate",
+      "hotelId": "spb-apart-otel-port-comfort-by-old-nevskiy",
+      "roomId": "spb-apart-otel-port-comfort-by-old-nevskiy-room",
+      "kind": "standard",
+      "nightlyMinor": 360000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-arkada-rate",
+      "hotelId": "spb-arkada",
+      "roomId": "spb-arkada-room",
+      "kind": "standard",
+      "nightlyMinor": 359000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-mini-otel-sadovaya-loft-rate",
+      "hotelId": "spb-mini-otel-sadovaya-loft",
+      "roomId": "spb-mini-otel-sadovaya-loft-room",
+      "kind": "standard",
+      "nightlyMinor": 340000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-apartamenty-zum-1-rate",
+      "hotelId": "spb-apartamenty-zum-1",
+      "roomId": "spb-apartamenty-zum-1-room",
+      "kind": "standard",
+      "nightlyMinor": 218800,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel-breakfast",
+      "hotelId": "moscow-izmaylovo-tvoy-otel",
+      "roomId": "moscow-izmaylovo-tvoy-otel-room",
+      "kind": "standard",
+      "nightlyMinor": 915000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel-room-half_board",
+      "hotelId": "moscow-izmaylovo-tvoy-otel",
+      "roomId": "moscow-izmaylovo-tvoy-otel-room",
+      "kind": "standard",
+      "nightlyMinor": 1375000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "half_board"
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel-room-2-none",
+      "hotelId": "moscow-izmaylovo-tvoy-otel",
+      "roomId": "moscow-izmaylovo-tvoy-otel-room-2",
+      "kind": "standard",
+      "nightlyMinor": 465000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel-room-2-breakfast",
+      "hotelId": "moscow-izmaylovo-tvoy-otel",
+      "roomId": "moscow-izmaylovo-tvoy-otel-room-2",
+      "kind": "standard",
+      "nightlyMinor": 925000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel-room-2-half_board",
+      "hotelId": "moscow-izmaylovo-tvoy-otel",
+      "roomId": "moscow-izmaylovo-tvoy-otel-room-2",
+      "kind": "standard",
+      "nightlyMinor": 1385000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "half_board"
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel-room-3-none",
+      "hotelId": "moscow-izmaylovo-tvoy-otel",
+      "roomId": "moscow-izmaylovo-tvoy-otel-room-3",
+      "kind": "standard",
+      "nightlyMinor": 475000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel-room-3-breakfast",
+      "hotelId": "moscow-izmaylovo-tvoy-otel",
+      "roomId": "moscow-izmaylovo-tvoy-otel-room-3",
+      "kind": "standard",
+      "nightlyMinor": 935000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel-room-3-half_board",
+      "hotelId": "moscow-izmaylovo-tvoy-otel",
+      "roomId": "moscow-izmaylovo-tvoy-otel-room-3",
+      "kind": "standard",
+      "nightlyMinor": 1395000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "half_board"
+    },
+    {
+      "id": "moscow-ibis-moskva-kievskaya-room-2-none",
+      "hotelId": "moscow-ibis-moskva-kievskaya",
+      "roomId": "moscow-ibis-moskva-kievskaya-room-2",
+      "kind": "standard",
+      "nightlyMinor": 696000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-ibis-moskva-kievskaya-room-2-breakfast",
+      "hotelId": "moscow-ibis-moskva-kievskaya",
+      "roomId": "moscow-ibis-moskva-kievskaya-room-2",
+      "kind": "standard",
+      "nightlyMinor": 946000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-ibis-moskva-kievskaya-room-3-none",
+      "hotelId": "moscow-ibis-moskva-kievskaya",
+      "roomId": "moscow-ibis-moskva-kievskaya-room-3",
+      "kind": "standard",
+      "nightlyMinor": 696000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-ibis-moskva-kievskaya-room-3-breakfast",
+      "hotelId": "moscow-ibis-moskva-kievskaya",
+      "roomId": "moscow-ibis-moskva-kievskaya-room-3",
+      "kind": "standard",
+      "nightlyMinor": 946000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-apart-otel-okruzhnaya-room-2-none",
+      "hotelId": "moscow-apart-otel-okruzhnaya",
+      "roomId": "moscow-apart-otel-okruzhnaya-room-2",
+      "kind": "standard",
+      "nightlyMinor": 435000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-gostinitsa-metallurg-room-2-none",
+      "hotelId": "moscow-gostinitsa-metallurg",
+      "roomId": "moscow-gostinitsa-metallurg-room-2",
+      "kind": "standard",
+      "nightlyMinor": 360000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-gostinitsa-metallurg-room-3-none",
+      "hotelId": "moscow-gostinitsa-metallurg",
+      "roomId": "moscow-gostinitsa-metallurg-room-3",
+      "kind": "standard",
+      "nightlyMinor": 360000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-gostevoy-dom-lesnoy-sheremetyevo-room-2-none",
+      "hotelId": "moscow-gostevoy-dom-lesnoy-sheremetyevo",
+      "roomId": "moscow-gostevoy-dom-lesnoy-sheremetyevo-room-2",
+      "kind": "standard",
+      "nightlyMinor": 430000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-gostevoy-dom-lesnoy-sheremetyevo-room-3-none",
+      "hotelId": "moscow-gostevoy-dom-lesnoy-sheremetyevo",
+      "roomId": "moscow-gostevoy-dom-lesnoy-sheremetyevo-room-3",
+      "kind": "standard",
+      "nightlyMinor": 580000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-gostinitsa-ekonom-nasledie-room-2-none",
+      "hotelId": "moscow-gostinitsa-ekonom-nasledie",
+      "roomId": "moscow-gostinitsa-ekonom-nasledie-room-2",
+      "kind": "standard",
+      "nightlyMinor": 330000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-gostinitsa-ekonom-nasledie-room-3-none",
+      "hotelId": "moscow-gostinitsa-ekonom-nasledie",
+      "roomId": "moscow-gostinitsa-ekonom-nasledie-room-3",
+      "kind": "standard",
+      "nightlyMinor": 350000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-arena-breakfast",
+      "hotelId": "moscow-arena",
+      "roomId": "moscow-arena-room",
+      "kind": "standard",
+      "nightlyMinor": 790000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-arena-room-2-none",
+      "hotelId": "moscow-arena",
+      "roomId": "moscow-arena-room-2",
+      "kind": "standard",
+      "nightlyMinor": 650000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-arena-room-2-breakfast",
+      "hotelId": "moscow-arena",
+      "roomId": "moscow-arena-room-2",
+      "kind": "standard",
+      "nightlyMinor": 790000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-arena-room-3-none",
+      "hotelId": "moscow-arena",
+      "roomId": "moscow-arena-room-3",
+      "kind": "standard",
+      "nightlyMinor": 650000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-arena-room-3-breakfast",
+      "hotelId": "moscow-arena",
+      "roomId": "moscow-arena-room-3",
+      "kind": "standard",
+      "nightlyMinor": 790000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-hostel-guten-duck-moscow-room-2-none",
+      "hotelId": "moscow-hostel-guten-duck-moscow",
+      "roomId": "moscow-hostel-guten-duck-moscow-room-2",
+      "kind": "standard",
+      "nightlyMinor": 424000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-minima-belorusskaya-breakfast",
+      "hotelId": "moscow-minima-belorusskaya",
+      "roomId": "moscow-minima-belorusskaya-room",
+      "kind": "standard",
+      "nightlyMinor": 675000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-minima-belorusskaya-room-half_board",
+      "hotelId": "moscow-minima-belorusskaya",
+      "roomId": "moscow-minima-belorusskaya-room",
+      "kind": "standard",
+      "nightlyMinor": 879000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "half_board"
+    },
+    {
+      "id": "moscow-minima-belorusskaya-room-2-none",
+      "hotelId": "moscow-minima-belorusskaya",
+      "roomId": "moscow-minima-belorusskaya-room-2",
+      "kind": "standard",
+      "nightlyMinor": 563500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-minima-belorusskaya-room-2-breakfast",
+      "hotelId": "moscow-minima-belorusskaya",
+      "roomId": "moscow-minima-belorusskaya-room-2",
+      "kind": "standard",
+      "nightlyMinor": 705500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-minima-belorusskaya-room-2-half_board",
+      "hotelId": "moscow-minima-belorusskaya",
+      "roomId": "moscow-minima-belorusskaya-room-2",
+      "kind": "standard",
+      "nightlyMinor": 907000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "half_board"
+    },
+    {
+      "id": "moscow-minima-belorusskaya-room-3-none",
+      "hotelId": "moscow-minima-belorusskaya",
+      "roomId": "moscow-minima-belorusskaya-room-3",
+      "kind": "standard",
+      "nightlyMinor": 631500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-minima-belorusskaya-room-3-breakfast",
+      "hotelId": "moscow-minima-belorusskaya",
+      "roomId": "moscow-minima-belorusskaya-room-3",
+      "kind": "standard",
+      "nightlyMinor": 769500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-minima-belorusskaya-room-3-half_board",
+      "hotelId": "moscow-minima-belorusskaya",
+      "roomId": "moscow-minima-belorusskaya-room-3",
+      "kind": "standard",
+      "nightlyMinor": 968500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "half_board"
+    },
+    {
+      "id": "moscow-otel-tesla-breakfast",
+      "hotelId": "moscow-otel-tesla",
+      "roomId": "moscow-otel-tesla-room",
+      "kind": "standard",
+      "nightlyMinor": 797500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-otel-tesla-room-2-none",
+      "hotelId": "moscow-otel-tesla",
+      "roomId": "moscow-otel-tesla-room-2",
+      "kind": "standard",
+      "nightlyMinor": 712500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-otel-tesla-room-2-breakfast",
+      "hotelId": "moscow-otel-tesla",
+      "roomId": "moscow-otel-tesla-room-2",
+      "kind": "standard",
+      "nightlyMinor": 892500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-otel-tesla-room-3-none",
+      "hotelId": "moscow-otel-tesla",
+      "roomId": "moscow-otel-tesla-room-3",
+      "kind": "standard",
+      "nightlyMinor": 807500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-otel-tesla-room-3-breakfast",
+      "hotelId": "moscow-otel-tesla",
+      "roomId": "moscow-otel-tesla-room-3",
+      "kind": "standard",
+      "nightlyMinor": 987500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-bun-in-alley-room-2-none",
+      "hotelId": "moscow-bun-in-alley",
+      "roomId": "moscow-bun-in-alley-room-2",
+      "kind": "standard",
+      "nightlyMinor": 399000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-bun-in-alley-room-3-none",
+      "hotelId": "moscow-bun-in-alley",
+      "roomId": "moscow-bun-in-alley-room-3",
+      "kind": "standard",
+      "nightlyMinor": 399000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-bun-in-alley-room-4-none",
+      "hotelId": "moscow-bun-in-alley",
+      "roomId": "moscow-bun-in-alley-room-4",
+      "kind": "standard",
+      "nightlyMinor": 498700,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-otel-maksima-zarya-breakfast",
+      "hotelId": "moscow-otel-maksima-zarya",
+      "roomId": "moscow-otel-maksima-zarya-room",
+      "kind": "standard",
+      "nightlyMinor": 655000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-otel-maksima-zarya-room-2-none",
+      "hotelId": "moscow-otel-maksima-zarya",
+      "roomId": "moscow-otel-maksima-zarya-room-2",
+      "kind": "standard",
+      "nightlyMinor": 435000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-otel-maksima-zarya-room-2-breakfast",
+      "hotelId": "moscow-otel-maksima-zarya",
+      "roomId": "moscow-otel-maksima-zarya-room-2",
+      "kind": "standard",
+      "nightlyMinor": 633000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-otel-maksima-zarya-room-3-none",
+      "hotelId": "moscow-otel-maksima-zarya",
+      "roomId": "moscow-otel-maksima-zarya-room-3",
+      "kind": "standard",
+      "nightlyMinor": 648000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-otel-maksima-zarya-room-3-breakfast",
+      "hotelId": "moscow-otel-maksima-zarya",
+      "roomId": "moscow-otel-maksima-zarya-room-3",
+      "kind": "standard",
+      "nightlyMinor": 868000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-moscow-marriott-imperial-plaza-breakfast",
+      "hotelId": "moscow-moscow-marriott-imperial-plaza",
+      "roomId": "moscow-moscow-marriott-imperial-plaza-room",
+      "kind": "standard",
+      "nightlyMinor": 1840000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-moscow-marriott-imperial-plaza-room-2-none",
+      "hotelId": "moscow-moscow-marriott-imperial-plaza",
+      "roomId": "moscow-moscow-marriott-imperial-plaza-room-2",
+      "kind": "standard",
+      "nightlyMinor": 1400000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-moscow-marriott-imperial-plaza-room-2-breakfast",
+      "hotelId": "moscow-moscow-marriott-imperial-plaza",
+      "roomId": "moscow-moscow-marriott-imperial-plaza-room-2",
+      "kind": "standard",
+      "nightlyMinor": 1840000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-moscow-marriott-imperial-plaza-room-3-none",
+      "hotelId": "moscow-moscow-marriott-imperial-plaza",
+      "roomId": "moscow-moscow-marriott-imperial-plaza-room-3",
+      "kind": "standard",
+      "nightlyMinor": 1400000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-moscow-marriott-imperial-plaza-room-3-breakfast",
+      "hotelId": "moscow-moscow-marriott-imperial-plaza",
+      "roomId": "moscow-moscow-marriott-imperial-plaza-room-3",
+      "kind": "standard",
+      "nightlyMinor": 1840000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-akvamarin-zont-hotel-group-breakfast",
+      "hotelId": "moscow-akvamarin-zont-hotel-group",
+      "roomId": "moscow-akvamarin-zont-hotel-group-room",
+      "kind": "standard",
+      "nightlyMinor": 1040000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-akvamarin-zont-hotel-group-room-2-none",
+      "hotelId": "moscow-akvamarin-zont-hotel-group",
+      "roomId": "moscow-akvamarin-zont-hotel-group-room-2",
+      "kind": "standard",
+      "nightlyMinor": 720000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-akvamarin-zont-hotel-group-room-2-breakfast",
+      "hotelId": "moscow-akvamarin-zont-hotel-group",
+      "roomId": "moscow-akvamarin-zont-hotel-group-room-2",
+      "kind": "standard",
+      "nightlyMinor": 1040000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-akvamarin-zont-hotel-group-room-3-none",
+      "hotelId": "moscow-akvamarin-zont-hotel-group",
+      "roomId": "moscow-akvamarin-zont-hotel-group-room-3",
+      "kind": "standard",
+      "nightlyMinor": 720000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-akvamarin-zont-hotel-group-room-3-breakfast",
+      "hotelId": "moscow-akvamarin-zont-hotel-group",
+      "roomId": "moscow-akvamarin-zont-hotel-group-room-3",
+      "kind": "standard",
+      "nightlyMinor": 1040000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-pekin-breakfast",
+      "hotelId": "moscow-pekin",
+      "roomId": "moscow-pekin-room",
+      "kind": "standard",
+      "nightlyMinor": 1071000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-pekin-room-2-none",
+      "hotelId": "moscow-pekin",
+      "roomId": "moscow-pekin-room-2",
+      "kind": "standard",
+      "nightlyMinor": 735250,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-pekin-room-2-breakfast",
+      "hotelId": "moscow-pekin",
+      "roomId": "moscow-pekin-room-2",
+      "kind": "standard",
+      "nightlyMinor": 1100750,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-pekin-room-3-none",
+      "hotelId": "moscow-pekin",
+      "roomId": "moscow-pekin-room-3",
+      "kind": "standard",
+      "nightlyMinor": 735250,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-pekin-room-3-breakfast",
+      "hotelId": "moscow-pekin",
+      "roomId": "moscow-pekin-room-3",
+      "kind": "standard",
+      "nightlyMinor": 1100750,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-zvezdy-arbata-otel-i-apartamenty-breakfast",
+      "hotelId": "moscow-zvezdy-arbata-otel-i-apartamenty",
+      "roomId": "moscow-zvezdy-arbata-otel-i-apartamenty-room",
+      "kind": "standard",
+      "nightlyMinor": 1510000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-zvezdy-arbata-otel-i-apartamenty-room-2-none",
+      "hotelId": "moscow-zvezdy-arbata-otel-i-apartamenty",
+      "roomId": "moscow-zvezdy-arbata-otel-i-apartamenty-room-2",
+      "kind": "standard",
+      "nightlyMinor": 1110000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-zvezdy-arbata-otel-i-apartamenty-room-2-breakfast",
+      "hotelId": "moscow-zvezdy-arbata-otel-i-apartamenty",
+      "roomId": "moscow-zvezdy-arbata-otel-i-apartamenty-room-2",
+      "kind": "standard",
+      "nightlyMinor": 1510000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-zvezdy-arbata-otel-i-apartamenty-room-3-none",
+      "hotelId": "moscow-zvezdy-arbata-otel-i-apartamenty",
+      "roomId": "moscow-zvezdy-arbata-otel-i-apartamenty-room-3",
+      "kind": "standard",
+      "nightlyMinor": 1470000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-zvezdy-arbata-otel-i-apartamenty-room-3-breakfast",
+      "hotelId": "moscow-zvezdy-arbata-otel-i-apartamenty",
+      "roomId": "moscow-zvezdy-arbata-otel-i-apartamenty-room-3",
+      "kind": "standard",
+      "nightlyMinor": 1870000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-palmira-business-club-breakfast",
+      "hotelId": "moscow-palmira-business-club",
+      "roomId": "moscow-palmira-business-club-room",
+      "kind": "standard",
+      "nightlyMinor": 1494000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-palmira-business-club-room-2-none",
+      "hotelId": "moscow-palmira-business-club",
+      "roomId": "moscow-palmira-business-club-room-2",
+      "kind": "standard",
+      "nightlyMinor": 1260000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-palmira-business-club-room-2-breakfast",
+      "hotelId": "moscow-palmira-business-club",
+      "roomId": "moscow-palmira-business-club-room-2",
+      "kind": "standard",
+      "nightlyMinor": 1620000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-palmira-business-club-room-3-none",
+      "hotelId": "moscow-palmira-business-club",
+      "roomId": "moscow-palmira-business-club-room-3",
+      "kind": "standard",
+      "nightlyMinor": 1386000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-palmira-business-club-room-3-breakfast",
+      "hotelId": "moscow-palmira-business-club",
+      "roomId": "moscow-palmira-business-club-room-3",
+      "kind": "standard",
+      "nightlyMinor": 1746000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva-breakfast",
+      "hotelId": "moscow-otel-mandarin-moskva",
+      "roomId": "moscow-otel-mandarin-moskva-room",
+      "kind": "standard",
+      "nightlyMinor": 743000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva-room-half_board",
+      "hotelId": "moscow-otel-mandarin-moskva",
+      "roomId": "moscow-otel-mandarin-moskva-room",
+      "kind": "standard",
+      "nightlyMinor": 1143000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "half_board"
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva-room-2-none",
+      "hotelId": "moscow-otel-mandarin-moskva",
+      "roomId": "moscow-otel-mandarin-moskva-room-2",
+      "kind": "standard",
+      "nightlyMinor": 482000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva-room-2-breakfast",
+      "hotelId": "moscow-otel-mandarin-moskva",
+      "roomId": "moscow-otel-mandarin-moskva-room-2",
+      "kind": "standard",
+      "nightlyMinor": 822000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva-room-2-half_board",
+      "hotelId": "moscow-otel-mandarin-moskva",
+      "roomId": "moscow-otel-mandarin-moskva-room-2",
+      "kind": "standard",
+      "nightlyMinor": 1222000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "half_board"
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva-room-3-none",
+      "hotelId": "moscow-otel-mandarin-moskva",
+      "roomId": "moscow-otel-mandarin-moskva-room-3",
+      "kind": "standard",
+      "nightlyMinor": 482000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva-room-3-breakfast",
+      "hotelId": "moscow-otel-mandarin-moskva",
+      "roomId": "moscow-otel-mandarin-moskva-room-3",
+      "kind": "standard",
+      "nightlyMinor": 822000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva-room-3-half_board",
+      "hotelId": "moscow-otel-mandarin-moskva",
+      "roomId": "moscow-otel-mandarin-moskva-room-3",
+      "kind": "standard",
+      "nightlyMinor": 1222000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "half_board"
+    },
+    {
+      "id": "spb-valo-network-breakfast",
+      "hotelId": "spb-valo-network",
+      "roomId": "spb-valo-network-room",
+      "kind": "standard",
+      "nightlyMinor": 636667,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "spb-valo-network-room-2-none",
+      "hotelId": "spb-valo-network",
+      "roomId": "spb-valo-network-room-2",
+      "kind": "standard",
+      "nightlyMinor": 396667,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-valo-network-room-2-breakfast",
+      "hotelId": "spb-valo-network",
+      "roomId": "spb-valo-network-room-2",
+      "kind": "standard",
+      "nightlyMinor": 656667,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "spb-valo-network-room-3-none",
+      "hotelId": "spb-valo-network",
+      "roomId": "spb-valo-network-room-3",
+      "kind": "standard",
+      "nightlyMinor": 416667,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-valo-network-room-3-breakfast",
+      "hotelId": "spb-valo-network",
+      "roomId": "spb-valo-network-room-3",
+      "kind": "standard",
+      "nightlyMinor": 676667,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "spb-valo-business-breakfast",
+      "hotelId": "spb-valo-business",
+      "roomId": "spb-valo-business-room",
+      "kind": "standard",
+      "nightlyMinor": 770000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "spb-valo-business-room-2-none",
+      "hotelId": "spb-valo-business",
+      "roomId": "spb-valo-business-room-2",
+      "kind": "standard",
+      "nightlyMinor": 420000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-valo-business-room-2-breakfast",
+      "hotelId": "spb-valo-business",
+      "roomId": "spb-valo-business-room-2",
+      "kind": "standard",
+      "nightlyMinor": 780000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "spb-valo-business-room-3-none",
+      "hotelId": "spb-valo-business",
+      "roomId": "spb-valo-business-room-3",
+      "kind": "standard",
+      "nightlyMinor": 420000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-valo-business-room-3-breakfast",
+      "hotelId": "spb-valo-business",
+      "roomId": "spb-valo-business-room-3",
+      "kind": "standard",
+      "nightlyMinor": 780000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "spb-apart-otel-uno-by-valo-room-2-none",
+      "hotelId": "spb-apart-otel-uno-by-valo",
+      "roomId": "spb-apart-otel-uno-by-valo-room-2",
+      "kind": "standard",
+      "nightlyMinor": 600000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-apart-otel-uno-by-valo-room-3-none",
+      "hotelId": "spb-apart-otel-uno-by-valo",
+      "roomId": "spb-apart-otel-uno-by-valo-room-3",
+      "kind": "standard",
+      "nightlyMinor": 680000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-apartpeydzh-nevskiy-room-2-none",
+      "hotelId": "spb-apartpeydzh-nevskiy",
+      "roomId": "spb-apartpeydzh-nevskiy-room-2",
+      "kind": "standard",
+      "nightlyMinor": 295000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-apartpeydzh-nevskiy-room-3-none",
+      "hotelId": "spb-apartpeydzh-nevskiy",
+      "roomId": "spb-apartpeydzh-nevskiy-room-3",
+      "kind": "standard",
+      "nightlyMinor": 318600,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-osobnyak-molvo-room-2-none",
+      "hotelId": "spb-osobnyak-molvo",
+      "roomId": "spb-osobnyak-molvo-room-2",
+      "kind": "standard",
+      "nightlyMinor": 156667,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-osobnyak-molvo-room-3-none",
+      "hotelId": "spb-osobnyak-molvo",
+      "roomId": "spb-osobnyak-molvo-room-3",
+      "kind": "standard",
+      "nightlyMinor": 333000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-apartamenty-new-horizon-liteyniy-room-2-none",
+      "hotelId": "spb-apartamenty-new-horizon-liteyniy",
+      "roomId": "spb-apartamenty-new-horizon-liteyniy-room-2",
+      "kind": "standard",
+      "nightlyMinor": 362667,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-ramada-plaza-by-wyndham-st-petersburg-breakfast",
+      "hotelId": "spb-ramada-plaza-by-wyndham-st-petersburg",
+      "roomId": "spb-ramada-plaza-by-wyndham-st-petersburg-room",
+      "kind": "standard",
+      "nightlyMinor": 710000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "spb-ramada-plaza-by-wyndham-st-petersburg-room-2-none",
+      "hotelId": "spb-ramada-plaza-by-wyndham-st-petersburg",
+      "roomId": "spb-ramada-plaza-by-wyndham-st-petersburg-room-2",
+      "kind": "standard",
+      "nightlyMinor": 500000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-ramada-plaza-by-wyndham-st-petersburg-room-2-breakfast",
+      "hotelId": "spb-ramada-plaza-by-wyndham-st-petersburg",
+      "roomId": "spb-ramada-plaza-by-wyndham-st-petersburg-room-2",
+      "kind": "standard",
+      "nightlyMinor": 760000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "spb-ramada-plaza-by-wyndham-st-petersburg-room-3-none",
+      "hotelId": "spb-ramada-plaza-by-wyndham-st-petersburg",
+      "roomId": "spb-ramada-plaza-by-wyndham-st-petersburg-room-3",
+      "kind": "standard",
+      "nightlyMinor": 500000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-ramada-plaza-by-wyndham-st-petersburg-room-3-breakfast",
+      "hotelId": "spb-ramada-plaza-by-wyndham-st-petersburg",
+      "roomId": "spb-ramada-plaza-by-wyndham-st-petersburg-room-3",
+      "kind": "standard",
+      "nightlyMinor": 760000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "spb-apartpeydzh-elagin-room-2-none",
+      "hotelId": "spb-apartpeydzh-elagin",
+      "roomId": "spb-apartpeydzh-elagin-room-2",
+      "kind": "standard",
+      "nightlyMinor": 403133,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-apartpeydzh-elagin-room-3-none",
+      "hotelId": "spb-apartpeydzh-elagin",
+      "roomId": "spb-apartpeydzh-elagin-room-3",
+      "kind": "standard",
+      "nightlyMinor": 463633,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-otel-rotas-city-center-room-2-none",
+      "hotelId": "spb-otel-rotas-city-center",
+      "roomId": "spb-otel-rotas-city-center-room-2",
+      "kind": "standard",
+      "nightlyMinor": 263233,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-otel-rotas-city-center-room-3-none",
+      "hotelId": "spb-otel-rotas-city-center",
+      "roomId": "spb-otel-rotas-city-center-room-3",
+      "kind": "standard",
+      "nightlyMinor": 263233,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-greenwich-by-friends-breakfast",
+      "hotelId": "spb-greenwich-by-friends",
+      "roomId": "spb-greenwich-by-friends-room",
+      "kind": "standard",
+      "nightlyMinor": 510733,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "spb-ligotel-breakfast",
+      "hotelId": "spb-ligotel",
+      "roomId": "spb-ligotel-room",
+      "kind": "standard",
+      "nightlyMinor": 513333,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "spb-ligotel-room-2-none",
+      "hotelId": "spb-ligotel",
+      "roomId": "spb-ligotel-room-2",
+      "kind": "standard",
+      "nightlyMinor": 532000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-ligotel-room-2-breakfast",
+      "hotelId": "spb-ligotel",
+      "roomId": "spb-ligotel-room-2",
+      "kind": "standard",
+      "nightlyMinor": 612000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "spb-ligotel-room-3-none",
+      "hotelId": "spb-ligotel",
+      "roomId": "spb-ligotel-room-3",
+      "kind": "standard",
+      "nightlyMinor": 532000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-ligotel-room-3-breakfast",
+      "hotelId": "spb-ligotel",
+      "roomId": "spb-ligotel-room-3",
+      "kind": "standard",
+      "nightlyMinor": 612000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "spb-aristokrat-room-2-none",
+      "hotelId": "spb-aristokrat",
+      "roomId": "spb-aristokrat-room-2",
+      "kind": "standard",
+      "nightlyMinor": 261267,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-aristokrat-room-3-none",
+      "hotelId": "spb-aristokrat",
+      "roomId": "spb-aristokrat-room-3",
+      "kind": "standard",
+      "nightlyMinor": 290300,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-apart-otel-port-comfort-by-old-nevskiy-room-2-none",
+      "hotelId": "spb-apart-otel-port-comfort-by-old-nevskiy",
+      "roomId": "spb-apart-otel-port-comfort-by-old-nevskiy-room-2",
+      "kind": "standard",
+      "nightlyMinor": 403200,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-arkada-breakfast",
+      "hotelId": "spb-arkada",
+      "roomId": "spb-arkada-room",
+      "kind": "standard",
+      "nightlyMinor": 386000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "spb-arkada-room-2-none",
+      "hotelId": "spb-arkada",
+      "roomId": "spb-arkada-room-2",
+      "kind": "standard",
+      "nightlyMinor": 409000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-arkada-room-2-breakfast",
+      "hotelId": "spb-arkada",
+      "roomId": "spb-arkada-room-2",
+      "kind": "standard",
+      "nightlyMinor": 428000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "spb-mini-otel-sadovaya-loft-room-2-none",
+      "hotelId": "spb-mini-otel-sadovaya-loft",
+      "roomId": "spb-mini-otel-sadovaya-loft-room-2",
+      "kind": "standard",
+      "nightlyMinor": 340000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "spb-mini-otel-sadovaya-loft-room-3-none",
+      "hotelId": "spb-mini-otel-sadovaya-loft",
+      "roomId": "spb-mini-otel-sadovaya-loft-room-3",
+      "kind": "standard",
+      "nightlyMinor": 370000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "sea-friendly-rate",
+      "hotelId": "orbit-sea",
+      "roomId": "sea-standard",
+      "kind": "friendly_rate",
+      "nightlyMinor": 923000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "sea-standard-rate"
+    },
+    {
+      "id": "city-standard-rate-friendly",
+      "hotelId": "orbit-city",
+      "roomId": "city-standard",
+      "kind": "friendly_rate",
+      "nightlyMinor": 715000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "city-standard-rate"
+    },
+    {
+      "id": "forest-standard-rate-friendly",
+      "hotelId": "orbit-forest",
+      "roomId": "forest-family",
+      "kind": "friendly_rate",
+      "nightlyMinor": 845000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "forest-standard-rate"
+    },
+    {
+      "id": "pine-sochi-rate-friendly",
+      "hotelId": "pine-sochi",
+      "roomId": "pine-sochi-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 832000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "pine-sochi-rate"
+    },
+    {
+      "id": "lighthouse-sochi-rate-friendly",
+      "hotelId": "lighthouse-sochi",
+      "roomId": "lighthouse-sochi-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 1098500,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "lighthouse-sochi-rate"
+    },
+    {
+      "id": "sea-deluxe-rate-friendly",
+      "hotelId": "orbit-sea",
+      "roomId": "sea-deluxe",
+      "kind": "friendly_rate",
+      "nightlyMinor": 1196000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "sea-deluxe-rate"
+    },
+    {
+      "id": "sea-suite-rate-friendly",
+      "hotelId": "orbit-sea",
+      "roomId": "sea-suite",
+      "kind": "friendly_rate",
+      "nightlyMinor": 1716000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "sea-suite-rate"
+    },
+    {
+      "id": "sea-standard-breakfast-friendly",
+      "hotelId": "orbit-sea",
+      "roomId": "sea-standard",
+      "kind": "friendly_rate",
+      "nightlyMinor": 1118000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "sea-standard-breakfast"
+    },
+    {
+      "id": "sea-deluxe-breakfast-friendly",
+      "hotelId": "orbit-sea",
+      "roomId": "sea-deluxe",
+      "kind": "friendly_rate",
+      "nightlyMinor": 1488500,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "sea-deluxe-breakfast"
+    },
+    {
+      "id": "sea-suite-breakfast-friendly",
+      "hotelId": "orbit-sea",
+      "roomId": "sea-suite",
+      "kind": "friendly_rate",
+      "nightlyMinor": 2106000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "sea-suite-breakfast"
+    },
+    {
+      "id": "kazan-city-rate-friendly",
+      "hotelId": "kazan-city",
+      "roomId": "kazan-city-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 552500,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "kazan-city-rate"
+    },
+    {
+      "id": "kazan-apartment-rate-friendly",
+      "hotelId": "kazan-apartment",
+      "roomId": "kazan-apartment-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 273000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "kazan-apartment-rate"
+    },
+    {
+      "id": "kazan-apart-rate-friendly",
+      "hotelId": "kazan-apart",
+      "roomId": "kazan-apart-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 435500,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "kazan-apart-rate"
+    },
+    {
+      "id": "kazan-guest-rate-friendly",
+      "hotelId": "kazan-guest",
+      "roomId": "kazan-guest-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 312000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "half_board",
+      "baseRateId": "kazan-guest-rate"
+    },
+    {
+      "id": "kazan-hostel-rate-friendly",
+      "hotelId": "kazan-hostel",
+      "roomId": "kazan-hostel-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 104000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "kazan-hostel-rate"
+    },
+    {
+      "id": "kazan-country-rate-friendly",
+      "hotelId": "kazan-country",
+      "roomId": "kazan-country-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 637000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "kazan-country-rate"
+    },
+    {
+      "id": "kazan-camp-rate-friendly",
+      "hotelId": "kazan-camp",
+      "roomId": "kazan-camp-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 468000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "full_board",
+      "baseRateId": "kazan-camp-rate"
+    },
+    {
+      "id": "kazan-health-rate-friendly",
+      "hotelId": "kazan-health",
+      "roomId": "kazan-health-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 715000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "all_inclusive",
+      "baseRateId": "kazan-health-rate"
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel-rate-friendly",
+      "hotelId": "moscow-izmaylovo-tvoy-otel",
+      "roomId": "moscow-izmaylovo-tvoy-otel-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 295750,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-izmaylovo-tvoy-otel-rate"
+    },
+    {
+      "id": "moscow-otel-shelterz-vdnh-rate-friendly",
+      "hotelId": "moscow-otel-shelterz-vdnh",
+      "roomId": "moscow-otel-shelterz-vdnh-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 161265,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-otel-shelterz-vdnh-rate"
+    },
+    {
+      "id": "moscow-ibis-moskva-kievskaya-rate-friendly",
+      "hotelId": "moscow-ibis-moskva-kievskaya",
+      "roomId": "moscow-ibis-moskva-kievskaya-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 452400,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-ibis-moskva-kievskaya-rate"
+    },
+    {
+      "id": "moscow-ibis-moskva-kievskaya-breakfast-friendly",
+      "hotelId": "moscow-ibis-moskva-kievskaya",
+      "roomId": "moscow-ibis-moskva-kievskaya-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 614900,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-ibis-moskva-kievskaya-breakfast"
+    },
+    {
+      "id": "moscow-apart-otel-okruzhnaya-rate-friendly",
+      "hotelId": "moscow-apart-otel-okruzhnaya",
+      "roomId": "moscow-apart-otel-okruzhnaya-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 266500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-apart-otel-okruzhnaya-rate"
+    },
+    {
+      "id": "moscow-gostinitsa-metallurg-rate-friendly",
+      "hotelId": "moscow-gostinitsa-metallurg",
+      "roomId": "moscow-gostinitsa-metallurg-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 175500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-gostinitsa-metallurg-rate"
+    },
+    {
+      "id": "moscow-gostevoy-dom-lesnoy-sheremetyevo-rate-friendly",
+      "hotelId": "moscow-gostevoy-dom-lesnoy-sheremetyevo",
+      "roomId": "moscow-gostevoy-dom-lesnoy-sheremetyevo-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 279500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-gostevoy-dom-lesnoy-sheremetyevo-rate"
+    },
+    {
+      "id": "moscow-gostinitsa-ekonom-nasledie-rate-friendly",
+      "hotelId": "moscow-gostinitsa-ekonom-nasledie",
+      "roomId": "moscow-gostinitsa-ekonom-nasledie-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 156000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-gostinitsa-ekonom-nasledie-rate"
+    },
+    {
+      "id": "moscow-arena-rate-friendly",
+      "hotelId": "moscow-arena",
+      "roomId": "moscow-arena-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 422500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-arena-rate"
+    },
+    {
+      "id": "moscow-hostel-guten-duck-moscow-rate-friendly",
+      "hotelId": "moscow-hostel-guten-duck-moscow",
+      "roomId": "moscow-hostel-guten-duck-moscow-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 275600,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-hostel-guten-duck-moscow-rate"
+    },
+    {
+      "id": "moscow-minima-belorusskaya-rate-friendly",
+      "hotelId": "moscow-minima-belorusskaya",
+      "roomId": "moscow-minima-belorusskaya-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 345800,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-minima-belorusskaya-rate"
+    },
+    {
+      "id": "moscow-otel-tesla-rate-friendly",
+      "hotelId": "moscow-otel-tesla",
+      "roomId": "moscow-otel-tesla-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 401375,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-otel-tesla-rate"
+    },
+    {
+      "id": "moscow-bun-in-alley-rate-friendly",
+      "hotelId": "moscow-bun-in-alley",
+      "roomId": "moscow-bun-in-alley-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 246350,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-bun-in-alley-rate"
+    },
+    {
+      "id": "moscow-otel-maksima-zarya-rate-friendly",
+      "hotelId": "moscow-otel-maksima-zarya",
+      "roomId": "moscow-otel-maksima-zarya-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 282750,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-otel-maksima-zarya-rate"
+    },
+    {
+      "id": "moscow-moscow-marriott-imperial-plaza-rate-friendly",
+      "hotelId": "moscow-moscow-marriott-imperial-plaza",
+      "roomId": "moscow-moscow-marriott-imperial-plaza-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 910000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-moscow-marriott-imperial-plaza-rate"
+    },
+    {
+      "id": "moscow-akvamarin-zont-hotel-group-rate-friendly",
+      "hotelId": "moscow-akvamarin-zont-hotel-group",
+      "roomId": "moscow-akvamarin-zont-hotel-group-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 468000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-akvamarin-zont-hotel-group-rate"
+    },
+    {
+      "id": "moscow-pekin-rate-friendly",
+      "hotelId": "moscow-pekin",
+      "roomId": "moscow-pekin-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 458575,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-pekin-rate"
+    },
+    {
+      "id": "moscow-zvezdy-arbata-otel-i-apartamenty-rate-friendly",
+      "hotelId": "moscow-zvezdy-arbata-otel-i-apartamenty",
+      "roomId": "moscow-zvezdy-arbata-otel-i-apartamenty-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 721500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-zvezdy-arbata-otel-i-apartamenty-rate"
+    },
+    {
+      "id": "moscow-palmira-business-club-rate-friendly",
+      "hotelId": "moscow-palmira-business-club",
+      "roomId": "moscow-palmira-business-club-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 737100,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-palmira-business-club-rate"
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva-rate-friendly",
+      "hotelId": "moscow-otel-mandarin-moskva",
+      "roomId": "moscow-otel-mandarin-moskva-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 265525,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-otel-mandarin-moskva-rate"
+    },
+    {
+      "id": "moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress-rate-friendly",
+      "hotelId": "moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress",
+      "roomId": "moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 273000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress-rate"
+    },
+    {
+      "id": "spb-valo-network-rate-friendly",
+      "hotelId": "spb-valo-network",
+      "roomId": "spb-valo-network-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 244834,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-valo-network-rate"
+    },
+    {
+      "id": "spb-valo-business-rate-friendly",
+      "hotelId": "spb-valo-business",
+      "roomId": "spb-valo-business-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 266500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-valo-business-rate"
+    },
+    {
+      "id": "spb-demokrat-na-kamennoostrovskom-39-rate-friendly",
+      "hotelId": "spb-demokrat-na-kamennoostrovskom-39",
+      "roomId": "spb-demokrat-na-kamennoostrovskom-39-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 260000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-demokrat-na-kamennoostrovskom-39-rate"
+    },
+    {
+      "id": "spb-apart-otel-uno-by-valo-rate-friendly",
+      "hotelId": "spb-apart-otel-uno-by-valo",
+      "roomId": "spb-apart-otel-uno-by-valo-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 351000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-apart-otel-uno-by-valo-rate"
+    },
+    {
+      "id": "spb-apartpeydzh-nevskiy-rate-friendly",
+      "hotelId": "spb-apartpeydzh-nevskiy",
+      "roomId": "spb-apartpeydzh-nevskiy-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 191706,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-apartpeydzh-nevskiy-rate"
+    },
+    {
+      "id": "spb-osobnyak-molvo-rate-friendly",
+      "hotelId": "spb-osobnyak-molvo",
+      "roomId": "spb-osobnyak-molvo-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 95334,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-osobnyak-molvo-rate"
+    },
+    {
+      "id": "spb-apartamenty-new-horizon-liteyniy-rate-friendly",
+      "hotelId": "spb-apartamenty-new-horizon-liteyniy",
+      "roomId": "spb-apartamenty-new-horizon-liteyniy-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 207134,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-apartamenty-new-horizon-liteyniy-rate"
+    },
+    {
+      "id": "spb-ramada-plaza-by-wyndham-st-petersburg-rate-friendly",
+      "hotelId": "spb-ramada-plaza-by-wyndham-st-petersburg",
+      "roomId": "spb-ramada-plaza-by-wyndham-st-petersburg-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 292500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-ramada-plaza-by-wyndham-st-petersburg-rate"
+    },
+    {
+      "id": "spb-apartpeydzh-elagin-rate-friendly",
+      "hotelId": "spb-apartpeydzh-elagin",
+      "roomId": "spb-apartpeydzh-elagin-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 194306,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-apartpeydzh-elagin-rate"
+    },
+    {
+      "id": "spb-otel-rotas-city-center-rate-friendly",
+      "hotelId": "spb-otel-rotas-city-center",
+      "roomId": "spb-otel-rotas-city-center-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 162435,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-otel-rotas-city-center-rate"
+    },
+    {
+      "id": "spb-apartamenty-dvoriki-petra-na-gorohovoy-rate-friendly",
+      "hotelId": "spb-apartamenty-dvoriki-petra-na-gorohovoy",
+      "roomId": "spb-apartamenty-dvoriki-petra-na-gorohovoy-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 191750,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-apartamenty-dvoriki-petra-na-gorohovoy-rate"
+    },
+    {
+      "id": "spb-greenwich-by-friends-rate-friendly",
+      "hotelId": "spb-greenwich-by-friends",
+      "roomId": "spb-greenwich-by-friends-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 259176,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-greenwich-by-friends-rate"
+    },
+    {
+      "id": "spb-ligotel-rate-friendly",
+      "hotelId": "spb-ligotel",
+      "roomId": "spb-ligotel-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 281666,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-ligotel-rate"
+    },
+    {
+      "id": "spb-mini-otel-moov-apart-bogema-rate-friendly",
+      "hotelId": "spb-mini-otel-moov-apart-bogema",
+      "roomId": "spb-mini-otel-moov-apart-bogema-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 193614,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-mini-otel-moov-apart-bogema-rate"
+    },
+    {
+      "id": "spb-mini-otel-demokrat-na-nevskom-107b-rate-friendly",
+      "hotelId": "spb-mini-otel-demokrat-na-nevskom-107b",
+      "roomId": "spb-mini-otel-demokrat-na-nevskom-107b-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 188500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-mini-otel-demokrat-na-nevskom-107b-rate"
+    },
+    {
+      "id": "spb-aristokrat-rate-friendly",
+      "hotelId": "spb-aristokrat",
+      "roomId": "spb-aristokrat-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 160875,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-aristokrat-rate"
+    },
+    {
+      "id": "spb-apart-otel-port-comfort-by-old-nevskiy-rate-friendly",
+      "hotelId": "spb-apart-otel-port-comfort-by-old-nevskiy",
+      "roomId": "spb-apart-otel-port-comfort-by-old-nevskiy-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 234000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-apart-otel-port-comfort-by-old-nevskiy-rate"
+    },
+    {
+      "id": "spb-arkada-rate-friendly",
+      "hotelId": "spb-arkada",
+      "roomId": "spb-arkada-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 233350,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-arkada-rate"
+    },
+    {
+      "id": "spb-mini-otel-sadovaya-loft-rate-friendly",
+      "hotelId": "spb-mini-otel-sadovaya-loft",
+      "roomId": "spb-mini-otel-sadovaya-loft-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 221000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-mini-otel-sadovaya-loft-rate"
+    },
+    {
+      "id": "spb-apartamenty-zum-1-rate-friendly",
+      "hotelId": "spb-apartamenty-zum-1",
+      "roomId": "spb-apartamenty-zum-1-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 142220,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-apartamenty-zum-1-rate"
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel-breakfast-friendly",
+      "hotelId": "moscow-izmaylovo-tvoy-otel",
+      "roomId": "moscow-izmaylovo-tvoy-otel-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 594750,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-izmaylovo-tvoy-otel-breakfast"
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel-room-half_board-friendly",
+      "hotelId": "moscow-izmaylovo-tvoy-otel",
+      "roomId": "moscow-izmaylovo-tvoy-otel-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 893750,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "half_board",
+      "baseRateId": "moscow-izmaylovo-tvoy-otel-room-half_board"
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel-room-2-none-friendly",
+      "hotelId": "moscow-izmaylovo-tvoy-otel",
+      "roomId": "moscow-izmaylovo-tvoy-otel-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 302250,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-izmaylovo-tvoy-otel-room-2-none"
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel-room-2-breakfast-friendly",
+      "hotelId": "moscow-izmaylovo-tvoy-otel",
+      "roomId": "moscow-izmaylovo-tvoy-otel-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 601250,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-izmaylovo-tvoy-otel-room-2-breakfast"
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel-room-2-half_board-friendly",
+      "hotelId": "moscow-izmaylovo-tvoy-otel",
+      "roomId": "moscow-izmaylovo-tvoy-otel-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 900250,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "half_board",
+      "baseRateId": "moscow-izmaylovo-tvoy-otel-room-2-half_board"
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel-room-3-none-friendly",
+      "hotelId": "moscow-izmaylovo-tvoy-otel",
+      "roomId": "moscow-izmaylovo-tvoy-otel-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 308750,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-izmaylovo-tvoy-otel-room-3-none"
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel-room-3-breakfast-friendly",
+      "hotelId": "moscow-izmaylovo-tvoy-otel",
+      "roomId": "moscow-izmaylovo-tvoy-otel-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 607750,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-izmaylovo-tvoy-otel-room-3-breakfast"
+    },
+    {
+      "id": "moscow-izmaylovo-tvoy-otel-room-3-half_board-friendly",
+      "hotelId": "moscow-izmaylovo-tvoy-otel",
+      "roomId": "moscow-izmaylovo-tvoy-otel-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 906750,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "half_board",
+      "baseRateId": "moscow-izmaylovo-tvoy-otel-room-3-half_board"
+    },
+    {
+      "id": "moscow-ibis-moskva-kievskaya-room-2-none-friendly",
+      "hotelId": "moscow-ibis-moskva-kievskaya",
+      "roomId": "moscow-ibis-moskva-kievskaya-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 452400,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-ibis-moskva-kievskaya-room-2-none"
+    },
+    {
+      "id": "moscow-ibis-moskva-kievskaya-room-2-breakfast-friendly",
+      "hotelId": "moscow-ibis-moskva-kievskaya",
+      "roomId": "moscow-ibis-moskva-kievskaya-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 614900,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-ibis-moskva-kievskaya-room-2-breakfast"
+    },
+    {
+      "id": "moscow-ibis-moskva-kievskaya-room-3-none-friendly",
+      "hotelId": "moscow-ibis-moskva-kievskaya",
+      "roomId": "moscow-ibis-moskva-kievskaya-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 452400,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-ibis-moskva-kievskaya-room-3-none"
+    },
+    {
+      "id": "moscow-ibis-moskva-kievskaya-room-3-breakfast-friendly",
+      "hotelId": "moscow-ibis-moskva-kievskaya",
+      "roomId": "moscow-ibis-moskva-kievskaya-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 614900,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-ibis-moskva-kievskaya-room-3-breakfast"
+    },
+    {
+      "id": "moscow-apart-otel-okruzhnaya-room-2-none-friendly",
+      "hotelId": "moscow-apart-otel-okruzhnaya",
+      "roomId": "moscow-apart-otel-okruzhnaya-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 282750,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-apart-otel-okruzhnaya-room-2-none"
+    },
+    {
+      "id": "moscow-gostinitsa-metallurg-room-2-none-friendly",
+      "hotelId": "moscow-gostinitsa-metallurg",
+      "roomId": "moscow-gostinitsa-metallurg-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 234000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-gostinitsa-metallurg-room-2-none"
+    },
+    {
+      "id": "moscow-gostinitsa-metallurg-room-3-none-friendly",
+      "hotelId": "moscow-gostinitsa-metallurg",
+      "roomId": "moscow-gostinitsa-metallurg-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 234000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-gostinitsa-metallurg-room-3-none"
+    },
+    {
+      "id": "moscow-gostevoy-dom-lesnoy-sheremetyevo-room-2-none-friendly",
+      "hotelId": "moscow-gostevoy-dom-lesnoy-sheremetyevo",
+      "roomId": "moscow-gostevoy-dom-lesnoy-sheremetyevo-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 279500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-gostevoy-dom-lesnoy-sheremetyevo-room-2-none"
+    },
+    {
+      "id": "moscow-gostevoy-dom-lesnoy-sheremetyevo-room-3-none-friendly",
+      "hotelId": "moscow-gostevoy-dom-lesnoy-sheremetyevo",
+      "roomId": "moscow-gostevoy-dom-lesnoy-sheremetyevo-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 377000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-gostevoy-dom-lesnoy-sheremetyevo-room-3-none"
+    },
+    {
+      "id": "moscow-gostinitsa-ekonom-nasledie-room-2-none-friendly",
+      "hotelId": "moscow-gostinitsa-ekonom-nasledie",
+      "roomId": "moscow-gostinitsa-ekonom-nasledie-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 214500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-gostinitsa-ekonom-nasledie-room-2-none"
+    },
+    {
+      "id": "moscow-gostinitsa-ekonom-nasledie-room-3-none-friendly",
+      "hotelId": "moscow-gostinitsa-ekonom-nasledie",
+      "roomId": "moscow-gostinitsa-ekonom-nasledie-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 227500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-gostinitsa-ekonom-nasledie-room-3-none"
+    },
+    {
+      "id": "moscow-arena-breakfast-friendly",
+      "hotelId": "moscow-arena",
+      "roomId": "moscow-arena-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 513500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-arena-breakfast"
+    },
+    {
+      "id": "moscow-arena-room-2-none-friendly",
+      "hotelId": "moscow-arena",
+      "roomId": "moscow-arena-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 422500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-arena-room-2-none"
+    },
+    {
+      "id": "moscow-arena-room-2-breakfast-friendly",
+      "hotelId": "moscow-arena",
+      "roomId": "moscow-arena-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 513500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-arena-room-2-breakfast"
+    },
+    {
+      "id": "moscow-arena-room-3-none-friendly",
+      "hotelId": "moscow-arena",
+      "roomId": "moscow-arena-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 422500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-arena-room-3-none"
+    },
+    {
+      "id": "moscow-arena-room-3-breakfast-friendly",
+      "hotelId": "moscow-arena",
+      "roomId": "moscow-arena-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 513500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-arena-room-3-breakfast"
+    },
+    {
+      "id": "moscow-hostel-guten-duck-moscow-room-2-none-friendly",
+      "hotelId": "moscow-hostel-guten-duck-moscow",
+      "roomId": "moscow-hostel-guten-duck-moscow-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 275600,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-hostel-guten-duck-moscow-room-2-none"
+    },
+    {
+      "id": "moscow-minima-belorusskaya-breakfast-friendly",
+      "hotelId": "moscow-minima-belorusskaya",
+      "roomId": "moscow-minima-belorusskaya-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 438750,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-minima-belorusskaya-breakfast"
+    },
+    {
+      "id": "moscow-minima-belorusskaya-room-half_board-friendly",
+      "hotelId": "moscow-minima-belorusskaya",
+      "roomId": "moscow-minima-belorusskaya-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 571350,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "half_board",
+      "baseRateId": "moscow-minima-belorusskaya-room-half_board"
+    },
+    {
+      "id": "moscow-minima-belorusskaya-room-2-none-friendly",
+      "hotelId": "moscow-minima-belorusskaya",
+      "roomId": "moscow-minima-belorusskaya-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 366275,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-minima-belorusskaya-room-2-none"
+    },
+    {
+      "id": "moscow-minima-belorusskaya-room-2-breakfast-friendly",
+      "hotelId": "moscow-minima-belorusskaya",
+      "roomId": "moscow-minima-belorusskaya-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 458575,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-minima-belorusskaya-room-2-breakfast"
+    },
+    {
+      "id": "moscow-minima-belorusskaya-room-2-half_board-friendly",
+      "hotelId": "moscow-minima-belorusskaya",
+      "roomId": "moscow-minima-belorusskaya-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 589550,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "half_board",
+      "baseRateId": "moscow-minima-belorusskaya-room-2-half_board"
+    },
+    {
+      "id": "moscow-minima-belorusskaya-room-3-none-friendly",
+      "hotelId": "moscow-minima-belorusskaya",
+      "roomId": "moscow-minima-belorusskaya-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 410475,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-minima-belorusskaya-room-3-none"
+    },
+    {
+      "id": "moscow-minima-belorusskaya-room-3-breakfast-friendly",
+      "hotelId": "moscow-minima-belorusskaya",
+      "roomId": "moscow-minima-belorusskaya-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 500175,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-minima-belorusskaya-room-3-breakfast"
+    },
+    {
+      "id": "moscow-minima-belorusskaya-room-3-half_board-friendly",
+      "hotelId": "moscow-minima-belorusskaya",
+      "roomId": "moscow-minima-belorusskaya-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 629525,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "half_board",
+      "baseRateId": "moscow-minima-belorusskaya-room-3-half_board"
+    },
+    {
+      "id": "moscow-otel-tesla-breakfast-friendly",
+      "hotelId": "moscow-otel-tesla",
+      "roomId": "moscow-otel-tesla-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 518375,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-otel-tesla-breakfast"
+    },
+    {
+      "id": "moscow-otel-tesla-room-2-none-friendly",
+      "hotelId": "moscow-otel-tesla",
+      "roomId": "moscow-otel-tesla-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 463125,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-otel-tesla-room-2-none"
+    },
+    {
+      "id": "moscow-otel-tesla-room-2-breakfast-friendly",
+      "hotelId": "moscow-otel-tesla",
+      "roomId": "moscow-otel-tesla-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 580125,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-otel-tesla-room-2-breakfast"
+    },
+    {
+      "id": "moscow-otel-tesla-room-3-none-friendly",
+      "hotelId": "moscow-otel-tesla",
+      "roomId": "moscow-otel-tesla-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 524875,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-otel-tesla-room-3-none"
+    },
+    {
+      "id": "moscow-otel-tesla-room-3-breakfast-friendly",
+      "hotelId": "moscow-otel-tesla",
+      "roomId": "moscow-otel-tesla-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 641875,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-otel-tesla-room-3-breakfast"
+    },
+    {
+      "id": "moscow-bun-in-alley-room-2-none-friendly",
+      "hotelId": "moscow-bun-in-alley",
+      "roomId": "moscow-bun-in-alley-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 259350,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-bun-in-alley-room-2-none"
+    },
+    {
+      "id": "moscow-bun-in-alley-room-3-none-friendly",
+      "hotelId": "moscow-bun-in-alley",
+      "roomId": "moscow-bun-in-alley-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 259350,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-bun-in-alley-room-3-none"
+    },
+    {
+      "id": "moscow-bun-in-alley-room-4-none-friendly",
+      "hotelId": "moscow-bun-in-alley",
+      "roomId": "moscow-bun-in-alley-room-4",
+      "kind": "friendly_rate",
+      "nightlyMinor": 324155,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-bun-in-alley-room-4-none"
+    },
+    {
+      "id": "moscow-otel-maksima-zarya-breakfast-friendly",
+      "hotelId": "moscow-otel-maksima-zarya",
+      "roomId": "moscow-otel-maksima-zarya-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 425750,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-otel-maksima-zarya-breakfast"
+    },
+    {
+      "id": "moscow-otel-maksima-zarya-room-2-none-friendly",
+      "hotelId": "moscow-otel-maksima-zarya",
+      "roomId": "moscow-otel-maksima-zarya-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 282750,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-otel-maksima-zarya-room-2-none"
+    },
+    {
+      "id": "moscow-otel-maksima-zarya-room-2-breakfast-friendly",
+      "hotelId": "moscow-otel-maksima-zarya",
+      "roomId": "moscow-otel-maksima-zarya-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 411450,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-otel-maksima-zarya-room-2-breakfast"
+    },
+    {
+      "id": "moscow-otel-maksima-zarya-room-3-none-friendly",
+      "hotelId": "moscow-otel-maksima-zarya",
+      "roomId": "moscow-otel-maksima-zarya-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 421200,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-otel-maksima-zarya-room-3-none"
+    },
+    {
+      "id": "moscow-otel-maksima-zarya-room-3-breakfast-friendly",
+      "hotelId": "moscow-otel-maksima-zarya",
+      "roomId": "moscow-otel-maksima-zarya-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 564200,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-otel-maksima-zarya-room-3-breakfast"
+    },
+    {
+      "id": "moscow-moscow-marriott-imperial-plaza-breakfast-friendly",
+      "hotelId": "moscow-moscow-marriott-imperial-plaza",
+      "roomId": "moscow-moscow-marriott-imperial-plaza-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 1196000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-moscow-marriott-imperial-plaza-breakfast"
+    },
+    {
+      "id": "moscow-moscow-marriott-imperial-plaza-room-2-none-friendly",
+      "hotelId": "moscow-moscow-marriott-imperial-plaza",
+      "roomId": "moscow-moscow-marriott-imperial-plaza-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 910000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-moscow-marriott-imperial-plaza-room-2-none"
+    },
+    {
+      "id": "moscow-moscow-marriott-imperial-plaza-room-2-breakfast-friendly",
+      "hotelId": "moscow-moscow-marriott-imperial-plaza",
+      "roomId": "moscow-moscow-marriott-imperial-plaza-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 1196000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-moscow-marriott-imperial-plaza-room-2-breakfast"
+    },
+    {
+      "id": "moscow-moscow-marriott-imperial-plaza-room-3-none-friendly",
+      "hotelId": "moscow-moscow-marriott-imperial-plaza",
+      "roomId": "moscow-moscow-marriott-imperial-plaza-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 910000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-moscow-marriott-imperial-plaza-room-3-none"
+    },
+    {
+      "id": "moscow-moscow-marriott-imperial-plaza-room-3-breakfast-friendly",
+      "hotelId": "moscow-moscow-marriott-imperial-plaza",
+      "roomId": "moscow-moscow-marriott-imperial-plaza-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 1196000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-moscow-marriott-imperial-plaza-room-3-breakfast"
+    },
+    {
+      "id": "moscow-akvamarin-zont-hotel-group-breakfast-friendly",
+      "hotelId": "moscow-akvamarin-zont-hotel-group",
+      "roomId": "moscow-akvamarin-zont-hotel-group-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 676000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-akvamarin-zont-hotel-group-breakfast"
+    },
+    {
+      "id": "moscow-akvamarin-zont-hotel-group-room-2-none-friendly",
+      "hotelId": "moscow-akvamarin-zont-hotel-group",
+      "roomId": "moscow-akvamarin-zont-hotel-group-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 468000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-akvamarin-zont-hotel-group-room-2-none"
+    },
+    {
+      "id": "moscow-akvamarin-zont-hotel-group-room-2-breakfast-friendly",
+      "hotelId": "moscow-akvamarin-zont-hotel-group",
+      "roomId": "moscow-akvamarin-zont-hotel-group-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 676000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-akvamarin-zont-hotel-group-room-2-breakfast"
+    },
+    {
+      "id": "moscow-akvamarin-zont-hotel-group-room-3-none-friendly",
+      "hotelId": "moscow-akvamarin-zont-hotel-group",
+      "roomId": "moscow-akvamarin-zont-hotel-group-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 468000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-akvamarin-zont-hotel-group-room-3-none"
+    },
+    {
+      "id": "moscow-akvamarin-zont-hotel-group-room-3-breakfast-friendly",
+      "hotelId": "moscow-akvamarin-zont-hotel-group",
+      "roomId": "moscow-akvamarin-zont-hotel-group-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 676000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-akvamarin-zont-hotel-group-room-3-breakfast"
+    },
+    {
+      "id": "moscow-pekin-breakfast-friendly",
+      "hotelId": "moscow-pekin",
+      "roomId": "moscow-pekin-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 696150,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-pekin-breakfast"
+    },
+    {
+      "id": "moscow-pekin-room-2-none-friendly",
+      "hotelId": "moscow-pekin",
+      "roomId": "moscow-pekin-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 477913,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-pekin-room-2-none"
+    },
+    {
+      "id": "moscow-pekin-room-2-breakfast-friendly",
+      "hotelId": "moscow-pekin",
+      "roomId": "moscow-pekin-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 715488,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-pekin-room-2-breakfast"
+    },
+    {
+      "id": "moscow-pekin-room-3-none-friendly",
+      "hotelId": "moscow-pekin",
+      "roomId": "moscow-pekin-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 477913,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-pekin-room-3-none"
+    },
+    {
+      "id": "moscow-pekin-room-3-breakfast-friendly",
+      "hotelId": "moscow-pekin",
+      "roomId": "moscow-pekin-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 715488,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-pekin-room-3-breakfast"
+    },
+    {
+      "id": "moscow-zvezdy-arbata-otel-i-apartamenty-breakfast-friendly",
+      "hotelId": "moscow-zvezdy-arbata-otel-i-apartamenty",
+      "roomId": "moscow-zvezdy-arbata-otel-i-apartamenty-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 981500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-zvezdy-arbata-otel-i-apartamenty-breakfast"
+    },
+    {
+      "id": "moscow-zvezdy-arbata-otel-i-apartamenty-room-2-none-friendly",
+      "hotelId": "moscow-zvezdy-arbata-otel-i-apartamenty",
+      "roomId": "moscow-zvezdy-arbata-otel-i-apartamenty-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 721500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-zvezdy-arbata-otel-i-apartamenty-room-2-none"
+    },
+    {
+      "id": "moscow-zvezdy-arbata-otel-i-apartamenty-room-2-breakfast-friendly",
+      "hotelId": "moscow-zvezdy-arbata-otel-i-apartamenty",
+      "roomId": "moscow-zvezdy-arbata-otel-i-apartamenty-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 981500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-zvezdy-arbata-otel-i-apartamenty-room-2-breakfast"
+    },
+    {
+      "id": "moscow-zvezdy-arbata-otel-i-apartamenty-room-3-none-friendly",
+      "hotelId": "moscow-zvezdy-arbata-otel-i-apartamenty",
+      "roomId": "moscow-zvezdy-arbata-otel-i-apartamenty-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 955500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-zvezdy-arbata-otel-i-apartamenty-room-3-none"
+    },
+    {
+      "id": "moscow-zvezdy-arbata-otel-i-apartamenty-room-3-breakfast-friendly",
+      "hotelId": "moscow-zvezdy-arbata-otel-i-apartamenty",
+      "roomId": "moscow-zvezdy-arbata-otel-i-apartamenty-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 1215500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-zvezdy-arbata-otel-i-apartamenty-room-3-breakfast"
+    },
+    {
+      "id": "moscow-palmira-business-club-breakfast-friendly",
+      "hotelId": "moscow-palmira-business-club",
+      "roomId": "moscow-palmira-business-club-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 971100,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-palmira-business-club-breakfast"
+    },
+    {
+      "id": "moscow-palmira-business-club-room-2-none-friendly",
+      "hotelId": "moscow-palmira-business-club",
+      "roomId": "moscow-palmira-business-club-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 819000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-palmira-business-club-room-2-none"
+    },
+    {
+      "id": "moscow-palmira-business-club-room-2-breakfast-friendly",
+      "hotelId": "moscow-palmira-business-club",
+      "roomId": "moscow-palmira-business-club-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 1053000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-palmira-business-club-room-2-breakfast"
+    },
+    {
+      "id": "moscow-palmira-business-club-room-3-none-friendly",
+      "hotelId": "moscow-palmira-business-club",
+      "roomId": "moscow-palmira-business-club-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 900900,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-palmira-business-club-room-3-none"
+    },
+    {
+      "id": "moscow-palmira-business-club-room-3-breakfast-friendly",
+      "hotelId": "moscow-palmira-business-club",
+      "roomId": "moscow-palmira-business-club-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 1134900,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-palmira-business-club-room-3-breakfast"
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva-breakfast-friendly",
+      "hotelId": "moscow-otel-mandarin-moskva",
+      "roomId": "moscow-otel-mandarin-moskva-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 482950,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-otel-mandarin-moskva-breakfast"
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva-room-half_board-friendly",
+      "hotelId": "moscow-otel-mandarin-moskva",
+      "roomId": "moscow-otel-mandarin-moskva-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 742950,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "half_board",
+      "baseRateId": "moscow-otel-mandarin-moskva-room-half_board"
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva-room-2-none-friendly",
+      "hotelId": "moscow-otel-mandarin-moskva",
+      "roomId": "moscow-otel-mandarin-moskva-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 313300,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-otel-mandarin-moskva-room-2-none"
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva-room-2-breakfast-friendly",
+      "hotelId": "moscow-otel-mandarin-moskva",
+      "roomId": "moscow-otel-mandarin-moskva-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 534300,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-otel-mandarin-moskva-room-2-breakfast"
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva-room-2-half_board-friendly",
+      "hotelId": "moscow-otel-mandarin-moskva",
+      "roomId": "moscow-otel-mandarin-moskva-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 794300,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "half_board",
+      "baseRateId": "moscow-otel-mandarin-moskva-room-2-half_board"
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva-room-3-none-friendly",
+      "hotelId": "moscow-otel-mandarin-moskva",
+      "roomId": "moscow-otel-mandarin-moskva-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 313300,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "moscow-otel-mandarin-moskva-room-3-none"
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva-room-3-breakfast-friendly",
+      "hotelId": "moscow-otel-mandarin-moskva",
+      "roomId": "moscow-otel-mandarin-moskva-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 534300,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-otel-mandarin-moskva-room-3-breakfast"
+    },
+    {
+      "id": "moscow-otel-mandarin-moskva-room-3-half_board-friendly",
+      "hotelId": "moscow-otel-mandarin-moskva",
+      "roomId": "moscow-otel-mandarin-moskva-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 794300,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "half_board",
+      "baseRateId": "moscow-otel-mandarin-moskva-room-3-half_board"
+    },
+    {
+      "id": "spb-valo-network-breakfast-friendly",
+      "hotelId": "spb-valo-network",
+      "roomId": "spb-valo-network-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 413834,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "spb-valo-network-breakfast"
+    },
+    {
+      "id": "spb-valo-network-room-2-none-friendly",
+      "hotelId": "spb-valo-network",
+      "roomId": "spb-valo-network-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 257834,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-valo-network-room-2-none"
+    },
+    {
+      "id": "spb-valo-network-room-2-breakfast-friendly",
+      "hotelId": "spb-valo-network",
+      "roomId": "spb-valo-network-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 426834,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "spb-valo-network-room-2-breakfast"
+    },
+    {
+      "id": "spb-valo-network-room-3-none-friendly",
+      "hotelId": "spb-valo-network",
+      "roomId": "spb-valo-network-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 270834,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-valo-network-room-3-none"
+    },
+    {
+      "id": "spb-valo-network-room-3-breakfast-friendly",
+      "hotelId": "spb-valo-network",
+      "roomId": "spb-valo-network-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 439834,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "spb-valo-network-room-3-breakfast"
+    },
+    {
+      "id": "spb-valo-business-breakfast-friendly",
+      "hotelId": "spb-valo-business",
+      "roomId": "spb-valo-business-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 500500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "spb-valo-business-breakfast"
+    },
+    {
+      "id": "spb-valo-business-room-2-none-friendly",
+      "hotelId": "spb-valo-business",
+      "roomId": "spb-valo-business-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 273000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-valo-business-room-2-none"
+    },
+    {
+      "id": "spb-valo-business-room-2-breakfast-friendly",
+      "hotelId": "spb-valo-business",
+      "roomId": "spb-valo-business-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 507000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "spb-valo-business-room-2-breakfast"
+    },
+    {
+      "id": "spb-valo-business-room-3-none-friendly",
+      "hotelId": "spb-valo-business",
+      "roomId": "spb-valo-business-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 273000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-valo-business-room-3-none"
+    },
+    {
+      "id": "spb-valo-business-room-3-breakfast-friendly",
+      "hotelId": "spb-valo-business",
+      "roomId": "spb-valo-business-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 507000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "spb-valo-business-room-3-breakfast"
+    },
+    {
+      "id": "spb-apart-otel-uno-by-valo-room-2-none-friendly",
+      "hotelId": "spb-apart-otel-uno-by-valo",
+      "roomId": "spb-apart-otel-uno-by-valo-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 390000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-apart-otel-uno-by-valo-room-2-none"
+    },
+    {
+      "id": "spb-apart-otel-uno-by-valo-room-3-none-friendly",
+      "hotelId": "spb-apart-otel-uno-by-valo",
+      "roomId": "spb-apart-otel-uno-by-valo-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 442000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-apart-otel-uno-by-valo-room-3-none"
+    },
+    {
+      "id": "spb-apartpeydzh-nevskiy-room-2-none-friendly",
+      "hotelId": "spb-apartpeydzh-nevskiy",
+      "roomId": "spb-apartpeydzh-nevskiy-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 191750,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-apartpeydzh-nevskiy-room-2-none"
+    },
+    {
+      "id": "spb-apartpeydzh-nevskiy-room-3-none-friendly",
+      "hotelId": "spb-apartpeydzh-nevskiy",
+      "roomId": "spb-apartpeydzh-nevskiy-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 207090,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-apartpeydzh-nevskiy-room-3-none"
+    },
+    {
+      "id": "spb-osobnyak-molvo-room-2-none-friendly",
+      "hotelId": "spb-osobnyak-molvo",
+      "roomId": "spb-osobnyak-molvo-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 101834,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-osobnyak-molvo-room-2-none"
+    },
+    {
+      "id": "spb-osobnyak-molvo-room-3-none-friendly",
+      "hotelId": "spb-osobnyak-molvo",
+      "roomId": "spb-osobnyak-molvo-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 216450,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-osobnyak-molvo-room-3-none"
+    },
+    {
+      "id": "spb-apartamenty-new-horizon-liteyniy-room-2-none-friendly",
+      "hotelId": "spb-apartamenty-new-horizon-liteyniy",
+      "roomId": "spb-apartamenty-new-horizon-liteyniy-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 235734,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-apartamenty-new-horizon-liteyniy-room-2-none"
+    },
+    {
+      "id": "spb-ramada-plaza-by-wyndham-st-petersburg-breakfast-friendly",
+      "hotelId": "spb-ramada-plaza-by-wyndham-st-petersburg",
+      "roomId": "spb-ramada-plaza-by-wyndham-st-petersburg-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 461500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "spb-ramada-plaza-by-wyndham-st-petersburg-breakfast"
+    },
+    {
+      "id": "spb-ramada-plaza-by-wyndham-st-petersburg-room-2-none-friendly",
+      "hotelId": "spb-ramada-plaza-by-wyndham-st-petersburg",
+      "roomId": "spb-ramada-plaza-by-wyndham-st-petersburg-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 325000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-ramada-plaza-by-wyndham-st-petersburg-room-2-none"
+    },
+    {
+      "id": "spb-ramada-plaza-by-wyndham-st-petersburg-room-2-breakfast-friendly",
+      "hotelId": "spb-ramada-plaza-by-wyndham-st-petersburg",
+      "roomId": "spb-ramada-plaza-by-wyndham-st-petersburg-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 494000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "spb-ramada-plaza-by-wyndham-st-petersburg-room-2-breakfast"
+    },
+    {
+      "id": "spb-ramada-plaza-by-wyndham-st-petersburg-room-3-none-friendly",
+      "hotelId": "spb-ramada-plaza-by-wyndham-st-petersburg",
+      "roomId": "spb-ramada-plaza-by-wyndham-st-petersburg-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 325000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-ramada-plaza-by-wyndham-st-petersburg-room-3-none"
+    },
+    {
+      "id": "spb-ramada-plaza-by-wyndham-st-petersburg-room-3-breakfast-friendly",
+      "hotelId": "spb-ramada-plaza-by-wyndham-st-petersburg",
+      "roomId": "spb-ramada-plaza-by-wyndham-st-petersburg-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 494000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "spb-ramada-plaza-by-wyndham-st-petersburg-room-3-breakfast"
+    },
+    {
+      "id": "spb-apartpeydzh-elagin-room-2-none-friendly",
+      "hotelId": "spb-apartpeydzh-elagin",
+      "roomId": "spb-apartpeydzh-elagin-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 262036,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-apartpeydzh-elagin-room-2-none"
+    },
+    {
+      "id": "spb-apartpeydzh-elagin-room-3-none-friendly",
+      "hotelId": "spb-apartpeydzh-elagin",
+      "roomId": "spb-apartpeydzh-elagin-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 301361,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-apartpeydzh-elagin-room-3-none"
+    },
+    {
+      "id": "spb-otel-rotas-city-center-room-2-none-friendly",
+      "hotelId": "spb-otel-rotas-city-center",
+      "roomId": "spb-otel-rotas-city-center-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 171101,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-otel-rotas-city-center-room-2-none"
+    },
+    {
+      "id": "spb-otel-rotas-city-center-room-3-none-friendly",
+      "hotelId": "spb-otel-rotas-city-center",
+      "roomId": "spb-otel-rotas-city-center-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 171101,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-otel-rotas-city-center-room-3-none"
+    },
+    {
+      "id": "spb-greenwich-by-friends-breakfast-friendly",
+      "hotelId": "spb-greenwich-by-friends",
+      "roomId": "spb-greenwich-by-friends-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 331976,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "spb-greenwich-by-friends-breakfast"
+    },
+    {
+      "id": "spb-ligotel-breakfast-friendly",
+      "hotelId": "spb-ligotel",
+      "roomId": "spb-ligotel-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 333666,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "spb-ligotel-breakfast"
+    },
+    {
+      "id": "spb-ligotel-room-2-none-friendly",
+      "hotelId": "spb-ligotel",
+      "roomId": "spb-ligotel-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 345800,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-ligotel-room-2-none"
+    },
+    {
+      "id": "spb-ligotel-room-2-breakfast-friendly",
+      "hotelId": "spb-ligotel",
+      "roomId": "spb-ligotel-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 397800,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "spb-ligotel-room-2-breakfast"
+    },
+    {
+      "id": "spb-ligotel-room-3-none-friendly",
+      "hotelId": "spb-ligotel",
+      "roomId": "spb-ligotel-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 345800,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-ligotel-room-3-none"
+    },
+    {
+      "id": "spb-ligotel-room-3-breakfast-friendly",
+      "hotelId": "spb-ligotel",
+      "roomId": "spb-ligotel-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 397800,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "spb-ligotel-room-3-breakfast"
+    },
+    {
+      "id": "spb-aristokrat-room-2-none-friendly",
+      "hotelId": "spb-aristokrat",
+      "roomId": "spb-aristokrat-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 169824,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-aristokrat-room-2-none"
+    },
+    {
+      "id": "spb-aristokrat-room-3-none-friendly",
+      "hotelId": "spb-aristokrat",
+      "roomId": "spb-aristokrat-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 188695,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-aristokrat-room-3-none"
+    },
+    {
+      "id": "spb-apart-otel-port-comfort-by-old-nevskiy-room-2-none-friendly",
+      "hotelId": "spb-apart-otel-port-comfort-by-old-nevskiy",
+      "roomId": "spb-apart-otel-port-comfort-by-old-nevskiy-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 262080,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-apart-otel-port-comfort-by-old-nevskiy-room-2-none"
+    },
+    {
+      "id": "spb-arkada-breakfast-friendly",
+      "hotelId": "spb-arkada",
+      "roomId": "spb-arkada-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 250900,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "spb-arkada-breakfast"
+    },
+    {
+      "id": "spb-arkada-room-2-none-friendly",
+      "hotelId": "spb-arkada",
+      "roomId": "spb-arkada-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 265850,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-arkada-room-2-none"
+    },
+    {
+      "id": "spb-arkada-room-2-breakfast-friendly",
+      "hotelId": "spb-arkada",
+      "roomId": "spb-arkada-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 278200,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "spb-arkada-room-2-breakfast"
+    },
+    {
+      "id": "spb-mini-otel-sadovaya-loft-room-2-none-friendly",
+      "hotelId": "spb-mini-otel-sadovaya-loft",
+      "roomId": "spb-mini-otel-sadovaya-loft-room-2",
+      "kind": "friendly_rate",
+      "nightlyMinor": 221000,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-mini-otel-sadovaya-loft-room-2-none"
+    },
+    {
+      "id": "spb-mini-otel-sadovaya-loft-room-3-none-friendly",
+      "hotelId": "spb-mini-otel-sadovaya-loft",
+      "roomId": "spb-mini-otel-sadovaya-loft-room-3",
+      "kind": "friendly_rate",
+      "nightlyMinor": 240500,
+      "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "spb-mini-otel-sadovaya-loft-room-3-none"
+    }
+  ],
+  "availability": [
+    {
+      "roomId": "sea-standard",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 3
+    },
+    {
+      "roomId": "city-standard",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 0
+    },
+    {
+      "roomId": "forest-family",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 2
+    },
+    {
+      "roomId": "pine-sochi-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 3
+    },
+    {
+      "roomId": "lighthouse-sochi-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 3
+    },
+    {
+      "roomId": "sea-deluxe",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 2
+    },
+    {
+      "roomId": "sea-suite",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 2
+    },
+    {
+      "roomId": "kazan-city-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "kazan-apartment-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "kazan-apart-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "kazan-guest-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "kazan-hostel-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "kazan-country-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "kazan-camp-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "kazan-health-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-izmaylovo-tvoy-otel-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-otel-shelterz-vdnh-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-ibis-moskva-kievskaya-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-apart-otel-okruzhnaya-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-gostinitsa-metallurg-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-gostevoy-dom-lesnoy-sheremetyevo-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-gostinitsa-ekonom-nasledie-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-arena-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-hostel-guten-duck-moscow-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-minima-belorusskaya-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-otel-tesla-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-bun-in-alley-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-otel-maksima-zarya-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-moscow-marriott-imperial-plaza-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-akvamarin-zont-hotel-group-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-pekin-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-zvezdy-arbata-otel-i-apartamenty-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-palmira-business-club-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-otel-mandarin-moskva-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-valo-network-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-valo-business-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-demokrat-na-kamennoostrovskom-39-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-apart-otel-uno-by-valo-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-apartpeydzh-nevskiy-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-osobnyak-molvo-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-apartamenty-new-horizon-liteyniy-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-ramada-plaza-by-wyndham-st-petersburg-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-apartpeydzh-elagin-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-otel-rotas-city-center-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-apartamenty-dvoriki-petra-na-gorohovoy-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-greenwich-by-friends-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-ligotel-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-mini-otel-moov-apart-bogema-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-mini-otel-demokrat-na-nevskom-107b-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-aristokrat-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-apart-otel-port-comfort-by-old-nevskiy-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-arkada-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-mini-otel-sadovaya-loft-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-apartamenty-zum-1-room",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-izmaylovo-tvoy-otel-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-izmaylovo-tvoy-otel-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-ibis-moskva-kievskaya-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-ibis-moskva-kievskaya-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-apart-otel-okruzhnaya-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-gostinitsa-metallurg-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-gostinitsa-metallurg-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-gostevoy-dom-lesnoy-sheremetyevo-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-gostevoy-dom-lesnoy-sheremetyevo-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-gostinitsa-ekonom-nasledie-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-gostinitsa-ekonom-nasledie-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-arena-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-arena-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-hostel-guten-duck-moscow-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-minima-belorusskaya-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-minima-belorusskaya-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-otel-tesla-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-otel-tesla-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-bun-in-alley-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-bun-in-alley-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-bun-in-alley-room-4",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-otel-maksima-zarya-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-otel-maksima-zarya-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-moscow-marriott-imperial-plaza-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-moscow-marriott-imperial-plaza-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-akvamarin-zont-hotel-group-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-akvamarin-zont-hotel-group-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-pekin-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-pekin-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-zvezdy-arbata-otel-i-apartamenty-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-zvezdy-arbata-otel-i-apartamenty-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-palmira-business-club-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-palmira-business-club-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-otel-mandarin-moskva-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "moscow-otel-mandarin-moskva-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-valo-network-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-valo-network-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-valo-business-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-valo-business-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-apart-otel-uno-by-valo-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-apart-otel-uno-by-valo-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-apartpeydzh-nevskiy-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-apartpeydzh-nevskiy-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-osobnyak-molvo-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-osobnyak-molvo-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-apartamenty-new-horizon-liteyniy-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-ramada-plaza-by-wyndham-st-petersburg-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-ramada-plaza-by-wyndham-st-petersburg-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-apartpeydzh-elagin-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-apartpeydzh-elagin-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-otel-rotas-city-center-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-otel-rotas-city-center-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-ligotel-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-ligotel-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-aristokrat-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-aristokrat-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-apart-otel-port-comfort-by-old-nevskiy-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-arkada-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-mini-otel-sadovaya-loft-room-2",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    },
+    {
+      "roomId": "spb-mini-otel-sadovaya-loft-room-3",
+      "from": "2026-10-27",
+      "to": "2027-12-31",
+      "remaining": 8
+    }
+  ],
+  "services": [
+    {
+      "id": "sea-transfer",
+      "hotelId": "orbit-sea",
+      "title": "Трансфер",
+      "unitPriceMinor": 250000
+    },
+    {
+      "id": "sea-breakfast",
+      "hotelId": "orbit-sea",
+      "title": "Завтрак",
+      "unitPriceMinor": 150000
+    },
+    {
+      "id": "sea-early",
+      "hotelId": "orbit-sea",
+      "title": "Ранний заезд",
+      "unitPriceMinor": 250000,
+      "stayTime": {
+        "kind": "arrival",
+        "time": "10:00"
+      }
+    },
+    {
+      "id": "sea-late",
+      "hotelId": "orbit-sea",
+      "title": "Поздний выезд",
+      "unitPriceMinor": 300000,
+      "stayTime": {
+        "kind": "departure",
+        "time": "15:00"
+      }
+    },
+    {
+      "id": "sea-dinner",
+      "hotelId": "orbit-sea",
+      "title": "Ужин в ресторане",
+      "unitPriceMinor": 640000
+    },
+    {
+      "id": "sea-spa",
+      "hotelId": "orbit-sea",
+      "title": "Спа-программа",
+      "unitPriceMinor": 480000
+    }
+  ],
+  "paymentState": {
+    "balances": {
+      "keys:guest-demo": 4860,
+      "hotel:orbit-sea:guest-demo": 1240
+    },
+    "operations": {}
+  },
+  "search": {
+    "city": "Сочи",
+    "checkIn": "2026-11-12",
+    "checkOut": "2026-11-19",
+    "adults": 2,
+    "childrenAges": []
+  },
+  "quoteCases": [
+    {
+      "id": "regular-with-points",
+      "rateId": "sea-standard-rate",
+      "nights": 7,
+      "serviceIds": [
+        "sea-transfer"
+      ],
+      "usePoints": true,
+      "expected": {
+        "orderTotalMinor": 9693000,
+        "cashDueMinor": 9083000,
+        "hotelPoints": 1240,
+        "keysPoints": 4860
+      }
+    },
+    {
+      "id": "friendly-with-points",
+      "rateId": "sea-friendly-rate",
+      "nights": 7,
+      "serviceIds": [
+        "sea-transfer"
+      ],
+      "usePoints": true,
+      "expected": {
+        "orderTotalMinor": 6711000,
+        "cashDueMinor": 6225000,
+        "hotelPoints": 0,
+        "keysPoints": 4860
+      }
+    }
+  ],
+  "stayCases": [
+    {
+      "id": "before-arrival",
+      "bookingStatus": "confirmed",
+      "stayStatus": "upcoming",
+      "roomNumber": null,
+      "checkedInAt": null,
+      "keyValidUntil": null,
+      "now": "2026-11-11T12:00:00+03:00",
+      "expectedVisible": false
+    },
+    {
+      "id": "checked-in",
+      "bookingStatus": "confirmed",
+      "stayStatus": "in_house",
+      "roomNumber": "405",
+      "checkedInAt": "2026-11-12T15:00:00+03:00",
+      "keyValidUntil": "2026-11-19T12:00:00+03:00",
+      "now": "2026-11-12T15:01:00+03:00",
+      "expectedVisible": true
+    },
+    {
+      "id": "checked-out",
+      "bookingStatus": "completed",
+      "stayStatus": "checked_out",
+      "roomNumber": "405",
+      "checkedInAt": "2026-11-12T15:00:00+03:00",
+      "keyValidUntil": "2026-11-19T12:00:00+03:00",
+      "now": "2026-11-19T12:01:00+03:00",
+      "expectedVisible": false
+    }
+  ]
+}

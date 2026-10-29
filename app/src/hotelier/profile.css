@@ -1,0 +1,26 @@
+.keys-content:has(>.profile-page){padding-top:4px;gap:10px}
+.profile-page{display:flex;flex-direction:column;gap:16px}
+.keys-app .profile-page .profile-identity{padding:2px 4px 0;margin:0;flex:none}
+.keys-app .profile-page .avatar.big{font:500 19px/26px Unbounded}
+.profile-page .hotelier-profile-identity h1{text-wrap:balance}
+.profile-points{position:relative;isolation:isolate;overflow:hidden;display:flex;justify-content:space-between;align-items:center;gap:12px;flex:none;width:100%;border:0;border-radius:22px;padding:14px 16px;background:linear-gradient(140deg,#2f5bff,#5b48ff);color:#fff;text-align:left}
+.profile-points:before{content:'';position:absolute;z-index:-1;right:-30px;top:-30px;width:120px;height:120px;border:2px solid #ffffff40;border-radius:50%;pointer-events:none}
+.profile-points>span:first-child{display:flex;flex-direction:column;min-width:0}
+.profile-points small{font:400 12px/17px Onest;color:#eef1ff}
+.profile-points strong{font:500 19px/26px Unbounded;letter-spacing:-.5px;overflow-wrap:anywhere}
+.profile-points-link{display:flex;align-items:center;gap:2px;flex:none;font:500 13px/19px Onest}
+.keys-app .profile-page .k-list-row{padding:9px 12px;min-height:54px;grid-template-columns:36px minmax(0,1fr) auto;gap:12px}
+.keys-app .profile-page .k-list-row+.k-list-row:before{left:12px;right:12px}
+.profile-page .k-list-row small{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.profile-page .danger-text>span:nth-child(2){color:#e5484d}
+.keys-app .profile-page .k-list-row>.k-icon{color:#a3a8b3!important}
+
+.profile-navigation-group{display:flex;flex-direction:column;gap:8px}
+.keys-app .profile-navigation-group>h2{padding:0 4px;font:600 18px/25px var(--k-font-text);color:var(--k-text-primary);letter-spacing:-.25px}
+.keys-app .profile-page .k-list-row>.icon-tile{width:36px;height:36px;border-radius:12px}
+.profile-page .profile-logout{margin-top:-8px}
+.keys-app .profile-page .profile-logout .k-list-row{min-height:48px;padding-top:6px;padding-bottom:6px}
+.profile-page .profile-photo-trigger{width:64px;height:64px}
+.keys-app:has(.profile-page) .app-header{justify-content:flex-start;gap:14px}
+.keys-app:has(.profile-page) .app-header .header-title{font:500 19px/26px var(--k-font-text);text-align:left}
+.keys-app:has(.profile-page) .app-header .header-spacer{display:none}

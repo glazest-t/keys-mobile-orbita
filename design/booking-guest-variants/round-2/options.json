@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-29",
+  "round": 2,
+  "scope": "Блок Гости, три дополнительные компоновки",
+  "status": "Ожидает выбора; приложение не изменено",
+  "options": [
+    {
+      "displayedOption": 1,
+      "image": "design/booking-guest-variants/round-2/variant-1.png",
+      "source": "/Users/tatyana.glazyrina/.codex/generated_images/01a15f51-a729-7521-8664-1d3c42c39e78/exec-625d2947-2d48-4ba3-9e5b-b56a20abf00d.png"
+    },
+    {
+      "displayedOption": 2,
+      "image": "design/booking-guest-variants/round-2/variant-2.png",
+      "source": "/Users/tatyana.glazyrina/.codex/generated_images/01a15f51-a729-7521-8664-1d3c42c39e78/exec-6451f84d-424d-4974-be79-fbead61d7070.png"
+    },
+    {
+      "displayedOption": 3,
+      "image": "design/booking-guest-variants/round-2/variant-3.png",
+      "source": "/Users/tatyana.glazyrina/.codex/generated_images/01a15f51-a729-7521-8664-1d3c42c39e78/exec-552f2cb7-2aa8-4f1b-972c-50a20aa6d98f.png"
+    }
+  ]
+}

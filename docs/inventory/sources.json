@@ -1,0 +1,2753 @@
+{
+  "source": "проект в Клоде",
+  "method": "Static inventory of files, data-screen-label attributes, and literal HTML src/href paths. Excludes .DS_Store. Does not verify runtime behavior, JS/CSS URLs, network availability, or licenses.",
+  "file_count": 303,
+  "total_bytes": 24410272,
+  "extensions": {
+    ".css": 3,
+    ".html": 36,
+    ".jpeg": 1,
+    ".jpg": 15,
+    ".js": 5,
+    ".json": 7,
+    ".kt": 2,
+    ".md": 10,
+    ".png": 50,
+    ".svg": 145,
+    ".swift": 2,
+    ".webp": 26,
+    "[no extension]": 1
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1672,
+      "sha256": "163bccce6ecdd8ae652cb26af1d6080f5f6e306acda0560a1757cdcd6946e0f8"
+    },
+    {
+      "path": "manifest-abc8ea7c-ea96-4106-b72b-909bff14b67a-1792567656-5757c576-2026-10-21-07-28-02.json",
+      "bytes": 1678,
+      "sha256": "4e5df2b16bd3e1aa3bbe38c7e62924248cdeeafda5ffad30c0bf6dfe14fa461b"
+    },
+    {
+      "path": "project/.thumbnail",
+      "bytes": 16910,
+      "sha256": "e829968b20797a83c3f86a9a455fbbbf42dc36980e436fc139560188ec1c27bd"
+    },
+    {
+      "path": "project/anywhere.svg",
+      "bytes": 1591,
+      "sha256": "8d50735e5ceb558da4dfaa1fc642cfd0d506b75afcad6f302eb9d4e69896ed45"
+    },
+    {
+      "path": "project/brand-kit/README.md",
+      "bytes": 2857,
+      "sha256": "49927c11871a8d2a9825bdf8b3cf8f9db910be5e774c109f021ac6d5bb694017"
+    },
+    {
+      "path": "project/brand-kit/app-icon/android-adaptive-foreground.svg",
+      "bytes": 8272,
+      "sha256": "d09e05dbcf0974373954a4f1b2defdcf30c9e013a66fd746804352b5a1461106"
+    },
+    {
+      "path": "project/brand-kit/app-icon/android-monochrome.svg",
+      "bytes": 8272,
+      "sha256": "906d917f6905498f8b537e9516854fbf712a4e47187039cf635dcebdbb57d5d9"
+    },
+    {
+      "path": "project/brand-kit/app-icon/favicon.svg",
+      "bytes": 8252,
+      "sha256": "734c03e012530412c0b51b64d94d98c51d8fdd48a578cf3e835b2ebae0e2c3e6"
+    },
+    {
+      "path": "project/brand-kit/app-icon/icon-cobalt.svg",
+      "bytes": 8156,
+      "sha256": "aebba8af44466836e5bf6c45b729f01afada8d9ff51f405937b4a176c2ea0116"
+    },
+    {
+      "path": "project/brand-kit/app-icon/icon-dark.svg",
+      "bytes": 8156,
+      "sha256": "6805d46f7fa71437fe4734ce2985989b16cef8ad4b73ce8bb1c19f6638843c69"
+    },
+    {
+      "path": "project/brand-kit/app-icon/icon-main.svg",
+      "bytes": 9009,
+      "sha256": "6141c9873b391c703ced32490e8493d2ca590eaf6579ceaf107e28b9026bd0b6"
+    },
+    {
+      "path": "project/brand-kit/app-icon/icon-seasonal.svg",
+      "bytes": 9062,
+      "sha256": "9f4ef3e6ac4bcc744c372a22d422d447346b2b1192e6bd8517108ccd1ca0a716"
+    },
+    {
+      "path": "project/brand-kit/app-icon/icon-tinted-ios.svg",
+      "bytes": 8156,
+      "sha256": "b67af1db309b13a834fc680364514061ddd64fc6a04e75e9b54e00de8085ae4a"
+    },
+    {
+      "path": "project/brand-kit/assets/maidens-hotel.jpg",
+      "bytes": 45843,
+      "sha256": "8d91e258f2ed63f02fad2068152b45c4b563c741b304b7f40123bf4337410c7a"
+    },
+    {
+      "path": "project/brand-kit/assets/maidens-premium-king.jpg",
+      "bytes": 614564,
+      "sha256": "2102d435183bc1fc3b5ad4ee6ff4bf958680d229ed7de69e801ecaadb9c8ec0b"
+    },
+    {
+      "path": "project/brand-kit/assets/next-trip.jpg",
+      "bytes": 185139,
+      "sha256": "fbd9853c984e3719febe8ce3367980a5391e25289743bfe1362606454b9ab811"
+    },
+    {
+      "path": "project/brand-kit/assets/room-suite-2.jpg",
+      "bytes": 1486391,
+      "sha256": "404a8a4cc53b9ea5429cad7763a1770137a32b7e76d46b05217b9e8c2b52f852"
+    },
+    {
+      "path": "project/brand-kit/brand-spec.md",
+      "bytes": 12074,
+      "sha256": "495f158ac6b04244b558300fe9c2123df6fb48f286db1fba6fe9df101129b290"
+    },
+    {
+      "path": "project/brand-kit/icons/_sprite.svg",
+      "bytes": 32295,
+      "sha256": "25ae2c4abd2c5213ee89f2fd61dfe43fb9e28f5ff43aa9707161ce37ea79e8be"
+    },
+    {
+      "path": "project/brand-kit/icons/baby-cot.svg",
+      "bytes": 8031,
+      "sha256": "8c28ba09f73a82ba142bc63c5f063fa016f98ce19c732ef8c350283ea2eae2e5"
+    },
+    {
+      "path": "project/brand-kit/icons/back.svg",
+      "bytes": 8001,
+      "sha256": "815e1ad641fe2c983402894cac78c96f9f0277c88b877b3d5eb09c826c059f30"
+    },
+    {
+      "path": "project/brand-kit/icons/bar.svg",
+      "bytes": 8013,
+      "sha256": "0b5a8068618abb30310933e646bf8a19c60ee40cb862b3f77e30688b47cbed5b"
+    },
+    {
+      "path": "project/brand-kit/icons/bell.svg",
+      "bytes": 8037,
+      "sha256": "f82192e461795ac28546f0a9fc26b956720755871dcaabf433e32631a448cebe"
+    },
+    {
+      "path": "project/brand-kit/icons/best-price.svg",
+      "bytes": 8059,
+      "sha256": "565b79ec647af3ae71d57755cbc6020172bf045cd992f2362ea2ec5e1f24d3ad"
+    },
+    {
+      "path": "project/brand-kit/icons/bill.svg",
+      "bytes": 8042,
+      "sha256": "2f7f0b2cc61dd68846dbbe667b6eb165effade074382cba2d55c0265d3ff0ba1"
+    },
+    {
+      "path": "project/brand-kit/icons/bluetooth.svg",
+      "bytes": 8006,
+      "sha256": "2d98a2386a41f59635852906de3a384f33fdf408f023855148119081c0d889fe"
+    },
+    {
+      "path": "project/brand-kit/icons/breakfast.svg",
+      "bytes": 8048,
+      "sha256": "4095d67861709d4252c238ee38137bc81819020dfecf524c3b0987349506fb00"
+    },
+    {
+      "path": "project/brand-kit/icons/bulb.svg",
+      "bytes": 8070,
+      "sha256": "15b6822b3fd45f5b5b7e432bd3af1f8be919d664b70f51bad4c48778b1f30632"
+    },
+    {
+      "path": "project/brand-kit/icons/calendar.svg",
+      "bytes": 8057,
+      "sha256": "c4b232de84187ffd174ab1c71d645100910139dd17cf7b6af75d3d63b4848ede"
+    },
+    {
+      "path": "project/brand-kit/icons/camera.svg",
+      "bytes": 8048,
+      "sha256": "c20e4c2ff53a65f7aaea1a4709ce89ca6e95557e7a3e569ab80f615484420c5b"
+    },
+    {
+      "path": "project/brand-kit/icons/car.svg",
+      "bytes": 8029,
+      "sha256": "ab6a10e950d9bb968f10d7e76611b2f9c6fcbdb520718a4a39f24995602eddd5"
+    },
+    {
+      "path": "project/brand-kit/icons/card.svg",
+      "bytes": 8051,
+      "sha256": "a7d996293ebec0ff77d7f6e75f2f14d89ce9e4b00afab56a1826fb5ff45624be"
+    },
+    {
+      "path": "project/brand-kit/icons/chat-hotel.svg",
+      "bytes": 8055,
+      "sha256": "6013e10cdfeafaad495d9f3c8c5ed5ed1563303bbcda67919f084bca545f9a8e"
+    },
+    {
+      "path": "project/brand-kit/icons/check-in.svg",
+      "bytes": 8043,
+      "sha256": "d1c723591798af0b2fcc43607c4257c2ce3c45587b2216026f47706e62060f2b"
+    },
+    {
+      "path": "project/brand-kit/icons/check-out.svg",
+      "bytes": 8045,
+      "sha256": "528fe17254e8b39fa1a0d37f298101e62db349f0168b085887e8776aebcaee76"
+    },
+    {
+      "path": "project/brand-kit/icons/check.svg",
+      "bytes": 7995,
+      "sha256": "29d6b1d0c31772759ec722e6fc9e719324d5eba604709ab6b2d1beaa0cb1e3e1"
+    },
+    {
+      "path": "project/brand-kit/icons/chevron-down.svg",
+      "bytes": 7993,
+      "sha256": "63b3f71631c7e7c7a112d721f2cefe5f3b17bc3054c27ea7175313a6a2f4696c"
+    },
+    {
+      "path": "project/brand-kit/icons/chevron-right.svg",
+      "bytes": 7993,
+      "sha256": "8ffb810da15bf6eabfd87f1ac65053dcea2e66ffb3bb2e6d646843302adf621c"
+    },
+    {
+      "path": "project/brand-kit/icons/cleaning.svg",
+      "bytes": 8036,
+      "sha256": "3f5a3c8372df6fb0edf709ee8fdf72e9e907f320cd0ecca2c268becb64fc270d"
+    },
+    {
+      "path": "project/brand-kit/icons/climate.svg",
+      "bytes": 8052,
+      "sha256": "cb915b2b48ea6ad8551b503b4ca9cd75eed144f948554b1304694994106a9d3d"
+    },
+    {
+      "path": "project/brand-kit/icons/close.svg",
+      "bytes": 8001,
+      "sha256": "366b84cbd34c609d0803d7beb1a261b51f687356efa881f29d9622da66cde9cd"
+    },
+    {
+      "path": "project/brand-kit/icons/coffee-to-go.svg",
+      "bytes": 8016,
+      "sha256": "3c3256b7c93e6bfffb741667ae905873dec6ad76ba51af8179dac68e7e6bbb7c"
+    },
+    {
+      "path": "project/brand-kit/icons/concierge.svg",
+      "bytes": 8062,
+      "sha256": "b17ba348ddce7d1158e92ef3e6d9eb3626e827cb63104f00d452a711aee61f9d"
+    },
+    {
+      "path": "project/brand-kit/icons/deposit.svg",
+      "bytes": 8054,
+      "sha256": "e69263de102f29e0236cf71adab044387fbdd497c335eaaac39ac22d7aa4657b"
+    },
+    {
+      "path": "project/brand-kit/icons/discount.svg",
+      "bytes": 8045,
+      "sha256": "eddf9f3c6a8303ae6a69bf73f09b162ace1b5bb6a6a1a9cddd1bebb3b6850c49"
+    },
+    {
+      "path": "project/brand-kit/icons/do-not-disturb.svg",
+      "bytes": 8023,
+      "sha256": "a5607b71bc7cc3751529933bd844da60517a0b7add7271e3b21c49e7d15b911b"
+    },
+    {
+      "path": "project/brand-kit/icons/document.svg",
+      "bytes": 8024,
+      "sha256": "5051ea7144f2aaf2d789b13b3fab45a4ad6d994a10791b1fcadad1951665d1cf"
+    },
+    {
+      "path": "project/brand-kit/icons/door.svg",
+      "bytes": 8040,
+      "sha256": "2d0ec3e8a7dd1bfb3a8c9b1b53ba76d0cf40cca4cff559646e7a83294c7b7646"
+    },
+    {
+      "path": "project/brand-kit/icons/early-check-in.svg",
+      "bytes": 8032,
+      "sha256": "26bb0477a7fb6061f7bbf6a2a1e4891b11cc7a0222ecfb333ed5103acd1b595c"
+    },
+    {
+      "path": "project/brand-kit/icons/edit.svg",
+      "bytes": 8037,
+      "sha256": "790aafbfee900c7b8e38c8253037d0882639c5003b500bcdf6f43243913e4259"
+    },
+    {
+      "path": "project/brand-kit/icons/error.svg",
+      "bytes": 8036,
+      "sha256": "8be18f8ba41e883873535c2f9e4262f98a271afe90703a658223f13c8a4d8ba5"
+    },
+    {
+      "path": "project/brand-kit/icons/face-id.svg",
+      "bytes": 8124,
+      "sha256": "a6c1ccdc1467e2ed2fbe477187e49cd3732be38d2e4a896604d1e3d43a5a9106"
+    },
+    {
+      "path": "project/brand-kit/icons/filter.svg",
+      "bytes": 8004,
+      "sha256": "8090dd3bbff6a72c8c4de4ddcdfc30e4182bc840c8d3628b50b3d43e3bd65850"
+    },
+    {
+      "path": "project/brand-kit/icons/fitness.svg",
+      "bytes": 8019,
+      "sha256": "d44f105b288a79512f3e62ee2520529d1a6916b600fde0c4cf4db1a6fe46a16b"
+    },
+    {
+      "path": "project/brand-kit/icons/floor.svg",
+      "bytes": 8002,
+      "sha256": "16c1a75615113e8d474160b658688f67ddccfae5f251464d9cace09f61d14361"
+    },
+    {
+      "path": "project/brand-kit/icons/gift.svg",
+      "bytes": 8057,
+      "sha256": "1e98410706c0eb32d0fc4573a7f0c794e1812ca91bd1ae754b4ba7a5b87299ef"
+    },
+    {
+      "path": "project/brand-kit/icons/globe.svg",
+      "bytes": 8072,
+      "sha256": "73e053729751d25cfae31eed2fdb7869360e1ddf6ccc450ae1e7757e85bdd493"
+    },
+    {
+      "path": "project/brand-kit/icons/guests.svg",
+      "bytes": 8085,
+      "sha256": "1fe82f491ebf27f4877c2c3ea4061f5b7d327c0af261b1f844fdd68d02f86dc0"
+    },
+    {
+      "path": "project/brand-kit/icons/heart.svg",
+      "bytes": 8083,
+      "sha256": "804929091157ee11cd427baf7a20d7e2270a65b5e7cc11c95577a2fe31e8053f"
+    },
+    {
+      "path": "project/brand-kit/icons/icons.json",
+      "bytes": 10160,
+      "sha256": "ebc436d6ed5cc5b37f997bb3a6898253c8e6e851b52d7e9b0572587eeb8a21da"
+    },
+    {
+      "path": "project/brand-kit/icons/info.svg",
+      "bytes": 8037,
+      "sha256": "975b15fe3d5b91fb9732537f97644c5c54e815ad6ac2f106803ff84732204268"
+    },
+    {
+      "path": "project/brand-kit/icons/invite.svg",
+      "bytes": 8053,
+      "sha256": "156b905577322d3fcfe93871a646f76b1dea51fed5fb3fcad1065116e3fb2ba7"
+    },
+    {
+      "path": "project/brand-kit/icons/iron.svg",
+      "bytes": 8020,
+      "sha256": "7445982bac173fcdf0327f60344b8b818b67269271f3219d135d5e308b507ebf"
+    },
+    {
+      "path": "project/brand-kit/icons/key.svg",
+      "bytes": 8070,
+      "sha256": "847f6e098d56c6d5f54ddce96b1ef5ae9f76493e7abccce91d75523af0bb1d16"
+    },
+    {
+      "path": "project/brand-kit/icons/language.svg",
+      "bytes": 8052,
+      "sha256": "c8f1333c0349aaa3310e201059eb4ff22fb44c628c311f5398d8935c556371c9"
+    },
+    {
+      "path": "project/brand-kit/icons/late-check-out.svg",
+      "bytes": 8031,
+      "sha256": "3110aa4639f156ae2a167d8d826b9e205fbae83fc07037492c0ebb472bf894c0"
+    },
+    {
+      "path": "project/brand-kit/icons/laundry.svg",
+      "bytes": 8092,
+      "sha256": "249113bda01a155bb5ccdfdd3707bbd617412a7c37c8ca1bc65aa287cad99de0"
+    },
+    {
+      "path": "project/brand-kit/icons/logout.svg",
+      "bytes": 8045,
+      "sha256": "c8b0ac3d6cd1943700422f1cb012197647f3bbb5642b431435d5e1023d56bec8"
+    },
+    {
+      "path": "project/brand-kit/icons/luggage.svg",
+      "bytes": 8059,
+      "sha256": "a7c872f954d3e78d14d28714a7fc1cef352b71535670df6124d3f403a47c3c80"
+    },
+    {
+      "path": "project/brand-kit/icons/mail.svg",
+      "bytes": 8048,
+      "sha256": "7124df7e0e1fed21f8a71ab6e3dd85bae7fdbc731d355b12da099f9088e88a42"
+    },
+    {
+      "path": "project/brand-kit/icons/map.svg",
+      "bytes": 8049,
+      "sha256": "22460a2a443f2c11bbf38dcbfb7fd76d61bf2119cc2e987343d2b9e68cf3997b"
+    },
+    {
+      "path": "project/brand-kit/icons/menu.svg",
+      "bytes": 8004,
+      "sha256": "f47d28659c601f1e55ffb64e257f75ce8825338d90bdc767e172c04c000884c9"
+    },
+    {
+      "path": "project/brand-kit/icons/minibar.svg",
+      "bytes": 8056,
+      "sha256": "7f5306e1c7b9672fe2cba369467fcb28ad6e0637f55d2779aa98690a80064e85"
+    },
+    {
+      "path": "project/brand-kit/icons/more.svg",
+      "bytes": 8079,
+      "sha256": "844802f794d658348147fb1ae3157b0cf9aaea4d210af04a194ed72a7f70dc4b"
+    },
+    {
+      "path": "project/brand-kit/icons/nav-chats.svg",
+      "bytes": 8035,
+      "sha256": "6887fa9420adafdd77da772259737ebb101d3019f105275cf41f56619815d4c1"
+    },
+    {
+      "path": "project/brand-kit/icons/nav-profile.svg",
+      "bytes": 8039,
+      "sha256": "372366a1e09dee53275fd0a6c60434f66a729451e4919fec5110b9403e34b612"
+    },
+    {
+      "path": "project/brand-kit/icons/nav-rewards.svg",
+      "bytes": 8160,
+      "sha256": "773e8c807167d887a5c1373b9f38525b3f50d752aab808538d2188ca074e6fa6"
+    },
+    {
+      "path": "project/brand-kit/icons/nav-search.svg",
+      "bytes": 8040,
+      "sha256": "69c0ddb22a292990eb619b36a0e54042c32d9909d59bdc6bf7ac4d5929ecab37"
+    },
+    {
+      "path": "project/brand-kit/icons/nav-trips.svg",
+      "bytes": 8059,
+      "sha256": "d1ece625e10c459695d5ee0358ed6dbac4760c52532b6ac8fa37e311c9f1a06f"
+    },
+    {
+      "path": "project/brand-kit/icons/nearby.svg",
+      "bytes": 8087,
+      "sha256": "c8fc096d04e07ffd669559514cba017ad62b46280ace37543ae97e5f8756ea53"
+    },
+    {
+      "path": "project/brand-kit/icons/nfc.svg",
+      "bytes": 8043,
+      "sha256": "189c71c3be62143756e475d4bc29cc83bbc0b1e93f80ccbe0e2430ad56997719"
+    },
+    {
+      "path": "project/brand-kit/icons/orbit.svg",
+      "bytes": 8082,
+      "sha256": "5864136316f8fcb3c67354bae44f277b4a57a6e84bf2b2b36f679e0424dc730b"
+    },
+    {
+      "path": "project/brand-kit/icons/parking.svg",
+      "bytes": 8067,
+      "sha256": "e3c9f5ba8aa0064aba49fedc52787eb4d6c7c1f327cfef34a17584334c661290"
+    },
+    {
+      "path": "project/brand-kit/icons/passport.svg",
+      "bytes": 8082,
+      "sha256": "dda50ee0d7ed1dcd7f0e56ec50bb8efe78dd97114ec0e252c8e63ed606dfb61c"
+    },
+    {
+      "path": "project/brand-kit/icons/pending.svg",
+      "bytes": 8031,
+      "sha256": "297870e767da11b93b642114c465e7428760532c4b8ee9d994088f6ef9bae112"
+    },
+    {
+      "path": "project/brand-kit/icons/pet.svg",
+      "bytes": 8180,
+      "sha256": "22eb537e506db9c00df5387b5ebb6bdf6b7508dfdf54528851d542baad1cf4c7"
+    },
+    {
+      "path": "project/brand-kit/icons/phone.svg",
+      "bytes": 8072,
+      "sha256": "ef4cde57994b007afbaea99677f567887dde45b662b9bd83b55317d8ae0ba043"
+    },
+    {
+      "path": "project/brand-kit/icons/pillow.svg",
+      "bytes": 8038,
+      "sha256": "2a38683350acb8918d9ed475b34a296bd37418f92f9a57e4afffadc40b5e930d"
+    },
+    {
+      "path": "project/brand-kit/icons/pin.svg",
+      "bytes": 8068,
+      "sha256": "4cd2a3630140fa5c645e8b54822f628efe149053bac72f151d10f5ed28c24cd4"
+    },
+    {
+      "path": "project/brand-kit/icons/plane.svg",
+      "bytes": 8005,
+      "sha256": "b603fc2ba30318f55db5c1ba5c09766d2dc20c64b0ad83ea38328c869af0d9c8"
+    },
+    {
+      "path": "project/brand-kit/icons/plus.svg",
+      "bytes": 7997,
+      "sha256": "54b28fbb78e75c95122d5ee122dce46070112b4e8a07b1b52681fcbc7c5ac094"
+    },
+    {
+      "path": "project/brand-kit/icons/points.svg",
+      "bytes": 8046,
+      "sha256": "065536e3995f70dc2081949d8fbb9f425b8b1c59632c44328adc59bd9e741b08"
+    },
+    {
+      "path": "project/brand-kit/icons/pool.svg",
+      "bytes": 8083,
+      "sha256": "93c7397ff4630672d4da1b2663abad619f1105d9dee10ec51a60209478f63406"
+    },
+    {
+      "path": "project/brand-kit/icons/preferences.svg",
+      "bytes": 8142,
+      "sha256": "a675a88a0c1758c13c33cae644d9dfb8e1a399732a765d643e90634adbc94897"
+    },
+    {
+      "path": "project/brand-kit/icons/problem.svg",
+      "bytes": 8035,
+      "sha256": "7cb2f0ce92776412253ea0d254d7a0d1bc6f58d5a7cbfa9fc6b8d334faaff581"
+    },
+    {
+      "path": "project/brand-kit/icons/qr.svg",
+      "bytes": 8186,
+      "sha256": "1a34fe074bcf488f70d4b387d517399f1a06ba7aebba8ac74a998c0b5792e008"
+    },
+    {
+      "path": "project/brand-kit/icons/receipt.svg",
+      "bytes": 8011,
+      "sha256": "0307207e50d479e9d5f9feac2928d03f15f48fc5901e7d61b8cfad5d01590d2a"
+    },
+    {
+      "path": "project/brand-kit/icons/reception.svg",
+      "bytes": 8025,
+      "sha256": "b986a536cacc35b53d74c1a769049b690401a0691e0ba3da46d61983089905c9"
+    },
+    {
+      "path": "project/brand-kit/icons/restaurant.svg",
+      "bytes": 8039,
+      "sha256": "b2de8d49c2c2133c27cb739951eca499dbd2f3f8ebd30a215163c02cac7c3a0a"
+    },
+    {
+      "path": "project/brand-kit/icons/review.svg",
+      "bytes": 8066,
+      "sha256": "c1988442817ea4811b2e57f4dec8980a3c6b5bafbaf777c71d4e84c5b446ab43"
+    },
+    {
+      "path": "project/brand-kit/icons/room-service.svg",
+      "bytes": 8023,
+      "sha256": "bd480ae7857a2e3f2b1319d368ef3faedc3a77163d7dc42523902d51d91c14af"
+    },
+    {
+      "path": "project/brand-kit/icons/room.svg",
+      "bytes": 8016,
+      "sha256": "c120b4da2d0c9e48a2af1ab8c416903f007912fc3ffca66b3e1df3e627ebc9e2"
+    },
+    {
+      "path": "project/brand-kit/icons/route.svg",
+      "bytes": 8005,
+      "sha256": "3cbfc382eaf3ea15af29693b9a186fb742587af5af67519b8283c854faa522ff"
+    },
+    {
+      "path": "project/brand-kit/icons/safe.svg",
+      "bytes": 8089,
+      "sha256": "0649b07cd88a53e7154167f59d7d5f2f0f4412b70d90ca184989adb385d8babf"
+    },
+    {
+      "path": "project/brand-kit/icons/secure.svg",
+      "bytes": 8060,
+      "sha256": "20974d4c5347f87cbe2b10341f8a491c4d3b01e3e82bb7125a1e8c5011fd3144"
+    },
+    {
+      "path": "project/brand-kit/icons/settings.svg",
+      "bytes": 8261,
+      "sha256": "e3554d0ebb41cd0d52989f04c5a74b973385ffa52502f38bd18837653bc3d60a"
+    },
+    {
+      "path": "project/brand-kit/icons/share.svg",
+      "bytes": 8043,
+      "sha256": "dcda674af6bbb563ee5dbce624c12afe3eed101d8708d0fd2a851ee9d2922c13"
+    },
+    {
+      "path": "project/brand-kit/icons/spa.svg",
+      "bytes": 8090,
+      "sha256": "3e1934fa8233959daefcad80b1b00f3c5db4f9ff11eaf95833431af97fb00a65"
+    },
+    {
+      "path": "project/brand-kit/icons/style-match.svg",
+      "bytes": 8082,
+      "sha256": "6997239b14ce28abbcb1cbb9a26b834a75dd5b68c0c8e54e0118a2e0a7535f99"
+    },
+    {
+      "path": "project/brand-kit/icons/success.svg",
+      "bytes": 8033,
+      "sha256": "afeae4dc93a1bf8db843bf75f68adb3dc3be502e591a70376a60e265143f3f57"
+    },
+    {
+      "path": "project/brand-kit/icons/taxi.svg",
+      "bytes": 8036,
+      "sha256": "14280851756a73f699c6e8c457e99ae02771d8ce019065e271de604d895e5acf"
+    },
+    {
+      "path": "project/brand-kit/icons/ticket.svg",
+      "bytes": 8084,
+      "sha256": "9cab15f60c5c26eaf6b83ebf39b65970d8e7680f742e797a92cd242f33eda622"
+    },
+    {
+      "path": "project/brand-kit/icons/towels.svg",
+      "bytes": 8039,
+      "sha256": "aa2b2752d681b88bcb1a62f13fa5392972b5eab755258bcb69736c82c133ce6b"
+    },
+    {
+      "path": "project/brand-kit/icons/train.svg",
+      "bytes": 8068,
+      "sha256": "639189c1de2aa8fe6c8e63843f7278e21240a230a389ad03b316e1354933a720"
+    },
+    {
+      "path": "project/brand-kit/icons/transfer.svg",
+      "bytes": 8005,
+      "sha256": "bbe1764bf1dddfef93c6e0c25b3ce0c2cd0e4b5960161896044d0f2ab8143565"
+    },
+    {
+      "path": "project/brand-kit/icons/trash.svg",
+      "bytes": 8015,
+      "sha256": "b2674f238c4fba43a91f5282d3ebafaa3bef383ef9151c7605d9c84f19f73819"
+    },
+    {
+      "path": "project/brand-kit/icons/tv.svg",
+      "bytes": 8043,
+      "sha256": "3ee49f3ad66879c74798cbce916332467df0f5ef7cd7f08ba5f1e6eca08d364e"
+    },
+    {
+      "path": "project/brand-kit/icons/wallet.svg",
+      "bytes": 8045,
+      "sha256": "61f821a49f1dcf26b5f5ac29345de0f7474e4adc4e1cf3ad9be524803f722a03"
+    },
+    {
+      "path": "project/brand-kit/icons/warning.svg",
+      "bytes": 8034,
+      "sha256": "7773a7d071ddf6f44cd6371b482e631bf61adc535ea437a85a010ee1ec6a5f12"
+    },
+    {
+      "path": "project/brand-kit/icons/weather.svg",
+      "bytes": 8113,
+      "sha256": "25d93f7f558f2b5b37a4be4c0d6bb2558c45fe364f4fa81b497e08e5c3029d9d"
+    },
+    {
+      "path": "project/brand-kit/icons/wifi.svg",
+      "bytes": 8085,
+      "sha256": "b27dd3ebdfc8980dc1947b22a221aa01dfef02d0c13f0aebabad66104cc5c5bb"
+    },
+    {
+      "path": "project/brand-kit/icons/wine.svg",
+      "bytes": 8021,
+      "sha256": "1fff2f56aed248bafa205991693f4ff47497d62b9dbe4bd06b122e3392b6811f"
+    },
+    {
+      "path": "project/brand-kit/logo/horizontal-cobalt.svg",
+      "bytes": 8436,
+      "sha256": "8c3ae5557257e1f724eacb45be616fd89de50bad93f543b271c45bc26c6af81a"
+    },
+    {
+      "path": "project/brand-kit/logo/horizontal-ink.svg",
+      "bytes": 8430,
+      "sha256": "57a6bbdb18e00a3fc768b26545e81ad239e0c67c638c22e7e25697acefd21d50"
+    },
+    {
+      "path": "project/brand-kit/logo/horizontal-white.svg",
+      "bytes": 8487,
+      "sha256": "1a0bc1824c07cb4f9e8afee0dd60253e5fc535c93c83abcdc5a2005aa58a54e8"
+    },
+    {
+      "path": "project/brand-kit/logo/mark-3d.svg",
+      "bytes": 8804,
+      "sha256": "dbcc4d0c2bdaf1460b9877124c7042b214909677d02bedbfd859b0e2ab27e334"
+    },
+    {
+      "path": "project/brand-kit/logo/mark-cobalt.svg",
+      "bytes": 8275,
+      "sha256": "47e79ed52eb5b0570991d7d1a62c1645dc01d88f66fe08f069f6ee997f509ed0"
+    },
+    {
+      "path": "project/brand-kit/logo/mark-ink.svg",
+      "bytes": 8269,
+      "sha256": "983124462a05b2730bf5bce93fa92fff5aab49cadb82ea5146466348a354902d"
+    },
+    {
+      "path": "project/brand-kit/logo/mark-white.svg",
+      "bytes": 8326,
+      "sha256": "877d879225d350196b5a26a1fffc6a076842dd9bb21f45f3ab285fb571303407"
+    },
+    {
+      "path": "project/brand-kit/logo/states/mark-dream-270deg.svg",
+      "bytes": 8273,
+      "sha256": "417ef3c7ce55f35e80e99876b9452b3f6350817f37ef10aca1ba020103af0d6b"
+    },
+    {
+      "path": "project/brand-kit/logo/states/mark-going-0deg.svg",
+      "bytes": 8273,
+      "sha256": "27249e1b359025e0752a7cd108b76c0105d32e6afa69ed325223cc9cfbe488b4"
+    },
+    {
+      "path": "project/brand-kit/logo/states/mark-goodbye-180deg.svg",
+      "bytes": 8279,
+      "sha256": "860ac7cf0578f82a547ab702db038b31caadc43b27830f2e60ed2795f4ad2fb4"
+    },
+    {
+      "path": "project/brand-kit/logo/states/mark-here-45deg.svg",
+      "bytes": 8271,
+      "sha256": "2bb044cb090fe0abe839661b10b59d4441f8a2488f8b7191cda8a91ca602b34d"
+    },
+    {
+      "path": "project/brand-kit/logo/states/mark-stay-90deg.svg",
+      "bytes": 8273,
+      "sha256": "5d8a6b28b723d4fa189a9853e3fc14c237f6c82f8dce40ce5cbb9ddd1cfb5b6b"
+    },
+    {
+      "path": "project/brand-kit/logo/vertical-cobalt.svg",
+      "bytes": 8444,
+      "sha256": "30106a333a23c348a20f2b5b1060913ee2a5c31057984ed55054a8b6b12179bb"
+    },
+    {
+      "path": "project/brand-kit/logo/vertical-ink.svg",
+      "bytes": 8438,
+      "sha256": "b0322693649f52976120ed445bb4c4abb78f4eb9cde39fbeee2051b52a367c72"
+    },
+    {
+      "path": "project/brand-kit/logo/vertical-white.svg",
+      "bytes": 8495,
+      "sha256": "fe37ccdff197e6dcf10b4bd4c00f7728dcc35fb51fb4743a1c9b7f3782bb5bb6"
+    },
+    {
+      "path": "project/brand-kit/motion/splash.html",
+      "bytes": 3465,
+      "sha256": "958a6a052ed441d5fef744920a9d30a0fb878fb8ae64f47b962317431d08a12f"
+    },
+    {
+      "path": "project/brand-kit/prompt.md",
+      "bytes": 4072,
+      "sha256": "775f3d73f4048479ca9d2b7e8f1b8825ca36926a69b4daca1e5949906eef065d"
+    },
+    {
+      "path": "project/brand-kit/reference/brand-kit-preview.dc.html",
+      "bytes": 10260,
+      "sha256": "ed069e4d2d9796a9d3c9aa31055338fe983cbb3aa0c66024670b90ae6e25edd9"
+    },
+    {
+      "path": "project/brand-kit/reference/components.dc.html",
+      "bytes": 36160,
+      "sha256": "ea06b6c6ff5bed7d900a8ce72d8da8730eb7c6f247bc1849b1b9b776216fc06d"
+    },
+    {
+      "path": "project/brand-kit/reference/doc-page.js",
+      "bytes": 38579,
+      "sha256": "f52ae9c02fca7ab44c37f3ff363194fdf81caa20ae63e2fe1f518ed21133185e"
+    },
+    {
+      "path": "project/brand-kit/reference/proposal.dc.html",
+      "bytes": 226991,
+      "sha256": "5a33be05ddc635e045ddf7d6d26676c9149eee0bde0018d9ea9f0f9d90ea50c2"
+    },
+    {
+      "path": "project/brand-kit/reference/prototype.dc.html",
+      "bytes": 69645,
+      "sha256": "ab3d7e5a7c3114950ab2711568e82e72cf2fba871c835bbe9dba71592c322d27"
+    },
+    {
+      "path": "project/brand-kit/reference/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "path": "project/brand-kit/reference/ui-kit.dc.html",
+      "bytes": 216981,
+      "sha256": "89a2f3b23c4afe954ffca04efa5c2528ba294158e123d1b428b69346c0b360b0"
+    },
+    {
+      "path": "project/brand-kit/screens/01-splash.png",
+      "bytes": 58082,
+      "sha256": "d0b87c9483c132f4f0722c9012be67885cb718d19d84d266e7e3d141096bd7b1"
+    },
+    {
+      "path": "project/brand-kit/screens/02-login-phone.png",
+      "bytes": 68233,
+      "sha256": "1289d419b292e332a1b925cb4f356a247c756ce8e295880cb70c0bc43f61c44f"
+    },
+    {
+      "path": "project/brand-kit/screens/03-login-phone-filled.png",
+      "bytes": 75351,
+      "sha256": "5efaa8eca5a63ccfde074ec889dd4c6d0733728b5662fc5fc068eb6aa15ff504"
+    },
+    {
+      "path": "project/brand-kit/screens/04-login-code.png",
+      "bytes": 79130,
+      "sha256": "dfda0644de0d5602780e6fc400b947c24ea5af47a15b5b60ec2fbce138150110"
+    },
+    {
+      "path": "project/brand-kit/screens/05-style-quiz.png",
+      "bytes": 77759,
+      "sha256": "a48a91855b02c26793241c27e04579b616512134e38fd070f6315f7a3dedc772"
+    },
+    {
+      "path": "project/brand-kit/screens/06-home-dream.png",
+      "bytes": 168589,
+      "sha256": "4bb66d487a7994877f1d908d628fb8fe717b7dbc3b98345163245491d699a265"
+    },
+    {
+      "path": "project/brand-kit/screens/07-search-results.png",
+      "bytes": 212880,
+      "sha256": "d4f0669a51744df0b730490089ce111fe16ec246190b6db335270c79231220a2"
+    },
+    {
+      "path": "project/brand-kit/screens/08-hotel-details.png",
+      "bytes": 153308,
+      "sha256": "a50a103ce06084f88db659b30fae772da9f45277523dab61bfd60c7b092889f5"
+    },
+    {
+      "path": "project/brand-kit/screens/09-booking-sheet.png",
+      "bytes": 142826,
+      "sha256": "b8d6dc33ba1cc8c4982033a3db5cb6f9371fabfc218c4538d0716f66b585c7c0"
+    },
+    {
+      "path": "project/brand-kit/screens/10-home-going.png",
+      "bytes": 181235,
+      "sha256": "cb6cd4924d708345a6c7c9745f20a225a06795a4ec08b407c50c739d6266d08f"
+    },
+    {
+      "path": "project/brand-kit/screens/11-home-stay.png",
+      "bytes": 158817,
+      "sha256": "60d99bf24dc4e8da036434262f94c86a6cb6a6f727de693dfc378a129bf96ed0"
+    },
+    {
+      "path": "project/brand-kit/screens/12-services.png",
+      "bytes": 81534,
+      "sha256": "b8c95a21935e4909406acc2cd5f8304a9b772e2c5c0d18f6efe5cd17e7c87c0f"
+    },
+    {
+      "path": "project/brand-kit/screens/13-home-checkout.png",
+      "bytes": 166061,
+      "sha256": "3b8ee7e21e96129114b9bf9bd392dcb072f3819beb97ad5c9f98f4f86a01b5b8"
+    },
+    {
+      "path": "project/brand-kit/screens/14-home-after.png",
+      "bytes": 133557,
+      "sha256": "ed30d075c82b38a26aefadca303a6c09f451988935f48edecc71bc06755714c1"
+    },
+    {
+      "path": "project/brand-kit/screens/15-rewards.png",
+      "bytes": 125963,
+      "sha256": "fdfeeb2f291a61ab6c2f444f8d6b3d2ef93cd8d9a01ae719933cc64b9c1d6163"
+    },
+    {
+      "path": "project/brand-kit/screens/16-chat.png",
+      "bytes": 86748,
+      "sha256": "880f721172e550243b30c49e409cd6c4b8e5b93c1fe5bb291f0291bc434ceb2f"
+    },
+    {
+      "path": "project/brand-kit/screens.md",
+      "bytes": 6980,
+      "sha256": "3653414e9cd7a44d63f7153fb068526f16b6f936900fba345f9423c6cfc90268"
+    },
+    {
+      "path": "project/brand-kit/tokens/KeysTheme.kt",
+      "bytes": 890,
+      "sha256": "08e741fba217061eaae07d44832180f87c335cbe0acacb4a780b56e9e1263a2d"
+    },
+    {
+      "path": "project/brand-kit/tokens/KeysTheme.swift",
+      "bytes": 1595,
+      "sha256": "31ad2b8eaf6b1374e089f1ecd5a7d1307d51b942fb9c35bb5b7ff54335bfd65a"
+    },
+    {
+      "path": "project/brand-kit/tokens/tokens.css",
+      "bytes": 3409,
+      "sha256": "ef86eb692fab8f67086f1d603ae9de988f629402cdd4f4cef641f829a5bbe157"
+    },
+    {
+      "path": "project/brand-kit/tokens/tokens.json",
+      "bytes": 3834,
+      "sha256": "0c46c42a5f413a1d77273300422f0688b6f1b0af9559b7c66f39e407be0d7183"
+    },
+    {
+      "path": "project/brandbook/README.md",
+      "bytes": 5536,
+      "sha256": "f770b8a0584001fbc24ed01629cd8330951e434c94814e7048b403bc1244f71a"
+    },
+    {
+      "path": "project/brandbook/app-icon/android-adaptive-foreground.svg",
+      "bytes": 8335,
+      "sha256": "5caea7c2b5c12e664cbe7443b24da35574f899c9252abe5561ef2b01d7ce5c07"
+    },
+    {
+      "path": "project/brandbook/app-icon/keys-icon-ios-1024.svg",
+      "bytes": 8436,
+      "sha256": "cbf16a8ff0ce5ef930b6e532f0484714fc31becabcc032aaa7422fd584e9aa17"
+    },
+    {
+      "path": "project/brandbook/app-icon/keys-icon-rounded.svg",
+      "bytes": 8425,
+      "sha256": "8055be17aa1a05ccb1c29644be26d9ecbd1542df1f757a945bb49ddde48e1064"
+    },
+    {
+      "path": "project/brandbook/app-icon/png/keys-icon-120.png",
+      "bytes": 8729,
+      "sha256": "40b0c40cbf7592425804d5453c87999e9c4bdaf2b3c91bbb77a2aeb36eceb9f0"
+    },
+    {
+      "path": "project/brandbook/app-icon/png/keys-icon-180.png",
+      "bytes": 10463,
+      "sha256": "bc42a47a2802818be99b1fddc8aa3f9096fd64e38f880c854220ba3f7445a4ba"
+    },
+    {
+      "path": "project/brandbook/app-icon/png/keys-icon-192.png",
+      "bytes": 11721,
+      "sha256": "56f4110ce223770b749534dab0d2dc97c4e97e257fb1359a6b10b9c22782ce1b"
+    },
+    {
+      "path": "project/brandbook/app-icon/png/keys-icon-512.png",
+      "bytes": 26363,
+      "sha256": "484fa84f94b63a496a4d8e25545b1a23e48384ac5bb91d6c0b871b9872bf06c0"
+    },
+    {
+      "path": "project/brandbook/app-icon/png/keys-icon-ios-1024.png",
+      "bytes": 54151,
+      "sha256": "3f05f01897fb9c2b3f7004ef62eca37d9e4cf18889c50cae9a8a3aa4846bb78e"
+    },
+    {
+      "path": "project/brandbook/brandbook.html",
+      "bytes": 6939,
+      "sha256": "1e8038dbcedce09822eb7e9410318a95a513d71d7773655ab80da64ef851f305"
+    },
+    {
+      "path": "project/brandbook/logo/keys-logo-horizontal-blue.svg",
+      "bytes": 12304,
+      "sha256": "fd29521f0819d049eebf1d2fa7859c1751a0abdb04476cacbed84ff540a077c9"
+    },
+    {
+      "path": "project/brandbook/logo/keys-logo-horizontal-white.svg",
+      "bytes": 12295,
+      "sha256": "6f4b9805d095151ec90a933ea4849673116ea69b34c17f8a18a43ecc46885860"
+    },
+    {
+      "path": "project/brandbook/logo/keys-logo-horizontal.svg",
+      "bytes": 12292,
+      "sha256": "30f06aca1b092ddd9171ccdc185da65a7b9dae06b293b3dc0876a45b4b926e77"
+    },
+    {
+      "path": "project/brandbook/logo/keys-logo-stacked.svg",
+      "bytes": 12310,
+      "sha256": "642bc4d3991b76fcd88297f30241f5ca14f971e9fe4fbaa4bf4c6990f81d11ce"
+    },
+    {
+      "path": "project/brandbook/logo/keys-orbit-symbol-blue.svg",
+      "bytes": 8272,
+      "sha256": "5bb0dd2e52d4656e7d9ecb7fce0e8631ebb949522d55e131caedb73222ab969e"
+    },
+    {
+      "path": "project/brandbook/logo/keys-orbit-symbol-ink.svg",
+      "bytes": 8286,
+      "sha256": "76ed39cb2eb1593c24758fe7924fcf7ec06ac6c247f755c0053179c7a84c2b63"
+    },
+    {
+      "path": "project/brandbook/logo/keys-orbit-symbol-white.svg",
+      "bytes": 8278,
+      "sha256": "b7dd936e9be65e1c12acf822bc34fcf27f64c6733f64a0e508b2a16d9b7f0626"
+    },
+    {
+      "path": "project/brandbook/logo/keys-wordmark.svg",
+      "bytes": 11828,
+      "sha256": "8632857da6da0d3313fccbc348020b36abcd52e955bc532e7054b89909762769"
+    },
+    {
+      "path": "project/brandbook/logo/png/keys-orbit-symbol-blue-512.png",
+      "bytes": 33017,
+      "sha256": "b92d6e416eba8902ef4171d0336faac89b8f59f32bb0c8dde9c2bb40a89c3bf9"
+    },
+    {
+      "path": "project/brandbook/logo/png/keys-orbit-symbol-white-512.png",
+      "bytes": 29140,
+      "sha256": "e7a1e11fa71aff690b19b71c2007b578accb6086bb13100bd42c2fa2044b48af"
+    },
+    {
+      "path": "project/brandbook/splash/SplashOrbit.kt",
+      "bytes": 1125,
+      "sha256": "b10137415b3804221dc0935198e2635769871d44661cbfafc07b7731d1ae1889"
+    },
+    {
+      "path": "project/brandbook/splash/SplashOrbit.swift",
+      "bytes": 1403,
+      "sha256": "54b0d3225a027b7d6dc7ff8374f50ac61ce4723e0c7ec7edb1b880163ff27a51"
+    },
+    {
+      "path": "project/brandbook/splash/keys-orbit-splash.lottie.json",
+      "bytes": 2236,
+      "sha256": "dc0a4c4a755d50cf32e3ca4995c36f3ad286bfe5db9ace490ab673df2600be1b"
+    },
+    {
+      "path": "project/brandbook/splash/splash-orbit-animated.svg",
+      "bytes": 8291,
+      "sha256": "9748f5242594fc6b558a9643e284555b6662bc70154cbeefcd4b86b4e60eeac7"
+    },
+    {
+      "path": "project/brandbook/splash/splash.html",
+      "bytes": 2044,
+      "sha256": "e5308181ea7e82d48202757cea02c455bdd5604f36bc74378d16f1a84c280de8"
+    },
+    {
+      "path": "project/brandbook/tokens/keys-tokens.css",
+      "bytes": 655,
+      "sha256": "cc9734230bcee479744504f1d77228b2e88d3e76fffacc2d2be6a4ad19b9be78"
+    },
+    {
+      "path": "project/brandbook/tokens/keys-tokens.json",
+      "bytes": 2117,
+      "sha256": "af2e764370d3c897052e88fbe8426c654d2da149309f0d75653af3c56d217504"
+    },
+    {
+      "path": "project/deals.svg",
+      "bytes": 1616,
+      "sha256": "9667c2c92ba4ac5919b411e58cfdc151c7915ca19cb10857f5175f421fa3e6c2"
+    },
+    {
+      "path": "project/design/ui-kit-reference/loyalty.png",
+      "bytes": 15973,
+      "sha256": "2c3e65fe06d991a987959d1313e494e9bf9b2b26d4032a029195311d3e016731"
+    },
+    {
+      "path": "project/design/ui-kit-reference/nearby.png",
+      "bytes": 25460,
+      "sha256": "104dc9baf8ed1948de2fb407ac0e736c2420d9282489ba2c3c758ece9ef03e1d"
+    },
+    {
+      "path": "project/design/ui-kit-reference/orders-expanded.png",
+      "bytes": 44711,
+      "sha256": "7eb279fa0ba226af1087bc156515a46fd18ba4e892a3517c8c6932481af9d6ac"
+    },
+    {
+      "path": "project/design/ui-kit-reference/screen-after.png",
+      "bytes": 78915,
+      "sha256": "65f9fd08746cd2586c268332b8390e70be973ea272fdc542d5d2d4ccce72f6ea"
+    },
+    {
+      "path": "project/design/ui-kit-reference/screen-arrival.png",
+      "bytes": 139444,
+      "sha256": "02287bfee1b2bb659fd42911fcddabbd0a3196faaabbdb19b54b8e30685c82da"
+    },
+    {
+      "path": "project/design/ui-kit-reference/screen-booked-3.png",
+      "bytes": 141860,
+      "sha256": "97323be52ae7c4da471750fb18abcea5dc222c7f691ee924041b252de25c2b2e"
+    },
+    {
+      "path": "project/design/ui-kit-reference/screen-checkout.png",
+      "bytes": 67298,
+      "sha256": "90e1627970de6b384db56540f7d918f51848658758d7091f5ecb3dbe44be7eb8"
+    },
+    {
+      "path": "project/design/ui-kit-reference/screen-search.png",
+      "bytes": 161698,
+      "sha256": "bba12b8d8e73d1dba5c70733d7d625dca7d8c1df982fc3114302a4e24f0dd3b4"
+    },
+    {
+      "path": "project/design/ui-kit-reference/screen-stay-1.png",
+      "bytes": 69704,
+      "sha256": "bd26a09d08b28f6f45ab9e8ea3da70a2edebe4ee376f9da30b00cf7fcff9cc04"
+    },
+    {
+      "path": "project/design/ui-kit-reference/screen-stay-2.png",
+      "bytes": 70084,
+      "sha256": "4b06302a60e14d30ee32e2bb8d914d0048a7d607bbd0bf0a1951a3561e51c97d"
+    },
+    {
+      "path": "project/doc-page.js",
+      "bytes": 38579,
+      "sha256": "f52ae9c02fca7ab44c37f3ff363194fdf81caa20ae63e2fe1f518ed21133185e"
+    },
+    {
+      "path": "project/github-onboarding/README.md",
+      "bytes": 1965,
+      "sha256": "8851551ab45ecaa71e25c1d2f6d1a8136f5229db9748c13fadb7e9c6b06abdf2"
+    },
+    {
+      "path": "project/github-onboarding/index.html",
+      "bytes": 1270,
+      "sha256": "3a41d7392a7ec41315f7150b8945031ef6f76bb36859973cb45ea955383472e6"
+    },
+    {
+      "path": "project/github-onboarding/onboarding-variant-1.html",
+      "bytes": 639601,
+      "sha256": "13c6b3404b03124e49ae166d18a22821b522951a8ac4bfcb474979cb99d798ef"
+    },
+    {
+      "path": "project/github-onboarding/onboarding-variant-2.html",
+      "bytes": 639601,
+      "sha256": "c4d510adf0edf40930a912e209b757487f21579421bfbfb23af2a6ab958513cc"
+    },
+    {
+      "path": "project/github-onboarding/src/onboarding-variant-1.dc.html",
+      "bytes": 52480,
+      "sha256": "7d31eac8533685647017387dd1d1c97e9141b18c674c404219ab901f940d08fe"
+    },
+    {
+      "path": "project/github-onboarding/src/onboarding-variant-2.dc.html",
+      "bytes": 52480,
+      "sha256": "6ff1f004092a648044cbeb5a7ab1317aedb8982ed6369660b2cce2b269255bc4"
+    },
+    {
+      "path": "project/github-onboarding/src/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "path": "project/github.md",
+      "bytes": 2427,
+      "sha256": "9fdccb79aa955912072400162dbeaf3f530a7d088cdf6f7a1c2cf7e5197ce31c"
+    },
+    {
+      "path": "project/login-export/README.md",
+      "bytes": 3348,
+      "sha256": "bc612ef12df345d4114fbc052f3bf2ef9c81ae5f62ea586b29e1c0339350fd1e"
+    },
+    {
+      "path": "project/login-export/assets/keys-orbit-symbol-blue.svg",
+      "bytes": 8272,
+      "sha256": "5bb0dd2e52d4656e7d9ecb7fce0e8631ebb949522d55e131caedb73222ab969e"
+    },
+    {
+      "path": "project/login-export/assets/maidens-hotel.jpg",
+      "bytes": 45843,
+      "sha256": "8d91e258f2ed63f02fad2068152b45c4b563c741b304b7f40123bf4337410c7a"
+    },
+    {
+      "path": "project/login-export/assets/next-trip.jpg",
+      "bytes": 185139,
+      "sha256": "fbd9853c984e3719febe8ce3367980a5391e25289743bfe1362606454b9ab811"
+    },
+    {
+      "path": "project/login-export/login-flow.html",
+      "bytes": 15826,
+      "sha256": "4b5c38aa30ab909504dc5bb33b44bdaf4172333f00f411b2c7f8b9f4b8c757af"
+    },
+    {
+      "path": "project/login-export/login-spec.json",
+      "bytes": 6047,
+      "sha256": "a9b6eefaffcb57e82966a95cc455698cb000457fdc1e8349c49ac3151d132049"
+    },
+    {
+      "path": "project/login-export/screens/01-splash-key.png",
+      "bytes": 14583,
+      "sha256": "f91cd37909b0de51504f1094bdf732b9aa38fbb04f113bf21466ad5f9eea3053"
+    },
+    {
+      "path": "project/login-export/screens/02-splash-key-to-orbit.png",
+      "bytes": 14475,
+      "sha256": "349a754e8160b9f7d0d26a16c128513563d0b560bc22d76290043e02986d6cc1"
+    },
+    {
+      "path": "project/login-export/screens/03-splash-orbit.png",
+      "bytes": 14390,
+      "sha256": "d6e3ab262b032b000631a43ad2a2fddcb01365c3f52d7faae2e1e926c4ead77c"
+    },
+    {
+      "path": "project/login-export/screens/04-splash-logo.png",
+      "bytes": 15282,
+      "sha256": "aeb419df3818d592e63871fb476dad05f2978f355ea083bf229a5d7d7cdfe73f"
+    },
+    {
+      "path": "project/login-export/screens/05-logo-lifted.png",
+      "bytes": 16166,
+      "sha256": "df5e16cb7d3ad7f2f845860ada3a11cb38a7ec0914b4f8bba83f3564924de224"
+    },
+    {
+      "path": "project/login-export/screens/06-phone-empty.png",
+      "bytes": 16166,
+      "sha256": "705854d76f3ba96d9d3ad03d278e33a9f828dd838830abedd812f0ae1326dcf8"
+    },
+    {
+      "path": "project/login-export/screens/07-phone-keyboard.png",
+      "bytes": 20179,
+      "sha256": "ab02531f41cd22c73f65d12565fc9b020124df4b85ed0ddb858239210b8909a6"
+    },
+    {
+      "path": "project/login-export/screens/08-code-typing.png",
+      "bytes": 19403,
+      "sha256": "a70e20ff3b826ed029a7d99787785d7f298fc812fb838f67ca3083965d73e796"
+    },
+    {
+      "path": "project/login-export/screens/09-code-ok.png",
+      "bytes": 19984,
+      "sha256": "1eb45636e2f7ab4f164b3dad51b437f098d396f7e350239e1c99ced98107bd01"
+    },
+    {
+      "path": "project/login-export/screens/10-home.png",
+      "bytes": 22167,
+      "sha256": "aecfffbbea79da4befa9ee914428b744a417b3a411ca12e77d58b78922abda05"
+    },
+    {
+      "path": "project/login-export/splash/splash-animation.css",
+      "bytes": 2110,
+      "sha256": "093c03d012ce06908827f5ffa2b75d5a81ee92d5ec88d09e2afd9595beec866d"
+    },
+    {
+      "path": "project/login-export/splash/splash.svg",
+      "bytes": 8446,
+      "sha256": "fa3eb219007cd57e6e7f75f300a0fb7e048e316c3c13dd79597190ca20a384bf"
+    },
+    {
+      "path": "project/onboarding-export/README.md",
+      "bytes": 6271,
+      "sha256": "0fdc58bfdca90bb52d98607bb54c178238afdb118c66d20b502cde0de630e0ba"
+    },
+    {
+      "path": "project/onboarding-export/assets/keys-orbit-symbol-blue.svg",
+      "bytes": 8272,
+      "sha256": "5bb0dd2e52d4656e7d9ecb7fce0e8631ebb949522d55e131caedb73222ab969e"
+    },
+    {
+      "path": "project/onboarding-export/assets/maidens-hotel.jpg",
+      "bytes": 45843,
+      "sha256": "8d91e258f2ed63f02fad2068152b45c4b563c741b304b7f40123bf4337410c7a"
+    },
+    {
+      "path": "project/onboarding-export/assets/maidens-premium-king.jpg",
+      "bytes": 614564,
+      "sha256": "2102d435183bc1fc3b5ad4ee6ff4bf958680d229ed7de69e801ecaadb9c8ec0b"
+    },
+    {
+      "path": "project/onboarding-export/assets/next-trip.jpg",
+      "bytes": 185139,
+      "sha256": "fbd9853c984e3719febe8ce3367980a5391e25289743bfe1362606454b9ab811"
+    },
+    {
+      "path": "project/onboarding-export/html/onboarding-1.html",
+      "bytes": 4297,
+      "sha256": "3dc5b283e5f1915578230bba6a09d47866eec33b3694dbb5c66c7d4a71400491"
+    },
+    {
+      "path": "project/onboarding-export/html/onboarding-2.html",
+      "bytes": 5075,
+      "sha256": "f1edf0b64eb5f6f91f366d2242b0138257eaf59ff551f538c07d3cbf3a699755"
+    },
+    {
+      "path": "project/onboarding-export/html/onboarding-3.html",
+      "bytes": 5157,
+      "sha256": "fbf4ca748ed4cf1a26b24e2bf75e828d650862d5ddc5fcf8265597a7877c8e63"
+    },
+    {
+      "path": "project/onboarding-export/html/onboarding-4.html",
+      "bytes": 6920,
+      "sha256": "9ef5fd9d62d3bb7a69a62834a7c355b7d13429b784eb56e65106491eb5138c02"
+    },
+    {
+      "path": "project/onboarding-export/onboarding-all.html",
+      "bytes": 20583,
+      "sha256": "5bfcb4e1db48226a86f1cb09bddccd85bfab933c3103f3b90698ea3bae7fa519"
+    },
+    {
+      "path": "project/onboarding-export/onboarding-flow.html",
+      "bytes": 22061,
+      "sha256": "b450955ed1ea48b677ee8a4fd27628f9988b0c0c7003cd014eca9ad1638ccb29"
+    },
+    {
+      "path": "project/onboarding-export/onboarding-spec.json",
+      "bytes": 6499,
+      "sha256": "87b6f9a18a01568636c6ff701324338ce4762d5f1d70dbf0fc238855dc4689b2"
+    },
+    {
+      "path": "project/onboarding-export/screens/onboarding-1.png",
+      "bytes": 955921,
+      "sha256": "a39e4a1f7a3d4f197f2535c72b5389aa99139510cbf671b4a39b63ae6a7089e7"
+    },
+    {
+      "path": "project/onboarding-export/screens/onboarding-2.png",
+      "bytes": 447852,
+      "sha256": "a3d6fc2212a0344c92ff1158543cf3740f64615fa0d45118aa1175b0a8823768"
+    },
+    {
+      "path": "project/onboarding-export/screens/onboarding-3.png",
+      "bytes": 731849,
+      "sha256": "ec745f03c17b56095453fdf01f00a410da4a994a65939436cc634dd3523de063"
+    },
+    {
+      "path": "project/onboarding-export/screens/onboarding-4.png",
+      "bytes": 199785,
+      "sha256": "67db0c76dbadeb391cb6730cd90da4519ee9b55d42401349c523dd0e32e6dff3"
+    },
+    {
+      "path": "project/src/home/nearby/nearby-cafe-generated.jpg",
+      "bytes": 160261,
+      "sha256": "1971cf8e61bc069a1dd6f6fa66913d52c477b4b3fb0ab4abb5dde087c83057cf"
+    },
+    {
+      "path": "project/src/scenarios/breakfast-in-room.png",
+      "bytes": 2324730,
+      "sha256": "1b989d96d9c7e3ad8413d45a413aaa26f2d2434529865e0d871648971b759461"
+    },
+    {
+      "path": "project/src/scenarios/maidens-hotel.jpg",
+      "bytes": 45843,
+      "sha256": "8d91e258f2ed63f02fad2068152b45c4b563c741b304b7f40123bf4337410c7a"
+    },
+    {
+      "path": "project/src/scenarios/maidens-premium-king.jpg",
+      "bytes": 614564,
+      "sha256": "2102d435183bc1fc3b5ad4ee6ff4bf958680d229ed7de69e801ecaadb9c8ec0b"
+    },
+    {
+      "path": "project/src/scenarios/next-trip.jpg",
+      "bytes": 185139,
+      "sha256": "fbd9853c984e3719febe8ce3367980a5391e25289743bfe1362606454b9ab811"
+    },
+    {
+      "path": "project/src/scenarios/room-cozy.webp",
+      "bytes": 14032,
+      "sha256": "2e752dcd9dde9773dee48d8bdcfddef563d1037705e54f5805986fa902334c32"
+    },
+    {
+      "path": "project/src/scenarios/room-suite-2.jpg",
+      "bytes": 1486391,
+      "sha256": "404a8a4cc53b9ea5429cad7763a1770137a32b7e76d46b05217b9e8c2b52f852"
+    },
+    {
+      "path": "project/src/sections/ideas-art/adults.webp",
+      "bytes": 10006,
+      "sha256": "f29c1443c812b66bd120cf6e5aa05956f355f0dfe7c809851fcf94a01ba7d29d"
+    },
+    {
+      "path": "project/src/sections/ideas-art/breakfast.webp",
+      "bytes": 11174,
+      "sha256": "c9a45304768edfb635413e4ce70808671de2a06935ed9c3ff35b1d35f5f2a014"
+    },
+    {
+      "path": "project/src/sections/ideas-art/budget.webp",
+      "bytes": 13136,
+      "sha256": "0c69db987ae037f15197a82faeaf254faa9319499a0a506a0508b5b81975e8f4"
+    },
+    {
+      "path": "project/src/sections/ideas-art/couple.webp",
+      "bytes": 9974,
+      "sha256": "cfeb541afbaad81baf1333589d9c4a31f1a90786a0f88d1ecd71f61def73da5f"
+    },
+    {
+      "path": "project/src/sections/ideas-art/covers/breakfast.webp",
+      "bytes": 23752,
+      "sha256": "da8082d4f8936c9002096f96fa7363fef2067e721ab2dc7ef2faf5c62f8cdb4a"
+    },
+    {
+      "path": "project/src/sections/ideas-art/covers/gastro.webp",
+      "bytes": 22090,
+      "sha256": "6f77b3f87f8aefdc33b16f397eef1c6f421dc90df3259a07271a381ff4c84393"
+    },
+    {
+      "path": "project/src/sections/ideas-art/covers/hammam.webp",
+      "bytes": 17538,
+      "sha256": "47dab34cb189a11d0af5b3bb0d7c234f2b3f66cf757e7234c4c5326ca563dd44"
+    },
+    {
+      "path": "project/src/sections/ideas-art/covers/pool.webp",
+      "bytes": 39988,
+      "sha256": "91651c03385bc1c739fd540ee3e5a50da467f10efda68a95c39839c6b4246dbb"
+    },
+    {
+      "path": "project/src/sections/ideas-art/covers/sleep.webp",
+      "bytes": 14032,
+      "sha256": "2e752dcd9dde9773dee48d8bdcfddef563d1037705e54f5805986fa902334c32"
+    },
+    {
+      "path": "project/src/sections/ideas-art/covers/sup.webp",
+      "bytes": 23960,
+      "sha256": "9a6f50500913126c30b44df850af049505c21f764eb69ccb6eccad631de3fcb7"
+    },
+    {
+      "path": "project/src/sections/ideas-art/covers/terrace.webp",
+      "bytes": 22060,
+      "sha256": "d01559d4ec0f8314e273615f097d23429fbd8a99e20c7016271f38ed7874a5bf"
+    },
+    {
+      "path": "project/src/sections/ideas-art/covers/waterfall.webp",
+      "bytes": 28104,
+      "sha256": "a15cd6b50ea37ce1038e14998229de97b2463786305cbe52f78579b643b6d5c0"
+    },
+    {
+      "path": "project/src/sections/ideas-art/covers/yacht.webp",
+      "bytes": 15134,
+      "sha256": "ee477f69416d9eed92f7f351066d58e40cd29c55488d6761c54d118bcf1c90a0"
+    },
+    {
+      "path": "project/src/sections/ideas-art/covers/yoga.webp",
+      "bytes": 20720,
+      "sha256": "aeb349538c6549f6074e89cc9fe3b7fdbe41a345760d856e95f9dff7a9d08d2b"
+    },
+    {
+      "path": "project/src/sections/ideas-art/greenery.webp",
+      "bytes": 10758,
+      "sha256": "331d469fc2695f6e5e69f72cf1d7cbfb3ec8d6109cf8672dc91c29608b988a10"
+    },
+    {
+      "path": "project/src/sections/ideas-art/hiking.webp",
+      "bytes": 12782,
+      "sha256": "5a18b1c3e86d9f8380bc109270d90902162aa677e5eaa6bbb28bc56b526ac181"
+    },
+    {
+      "path": "project/src/sections/ideas-art/kids.webp",
+      "bytes": 11498,
+      "sha256": "f08715a76539479abe0ec3b62c1e766d557e148ef45234950268c2b2f998feed"
+    },
+    {
+      "path": "project/src/sections/ideas-art/mountains.webp",
+      "bytes": 11572,
+      "sha256": "5582229e408da3de5b8bd18ec407134282e616024a2c866a77e93e0e685f4759"
+    },
+    {
+      "path": "project/src/sections/ideas-art/pool.webp",
+      "bytes": 15576,
+      "sha256": "6cd1b6b7379b041cfeaf16b94e816f5aa41ee1630275aa20013af1a666e47ad3"
+    },
+    {
+      "path": "project/src/sections/ideas-art/restaurant.webp",
+      "bytes": 14512,
+      "sha256": "9577e7e61d1bc8126ef83f5bbdf41e186a43e0e95895ce84499da4068455eff6"
+    },
+    {
+      "path": "project/src/sections/ideas-art/sea.webp",
+      "bytes": 11892,
+      "sha256": "455ebb58f82b8e9c76ff4a09d97a76b0270db58ccc28c37714e57f58881e5969"
+    },
+    {
+      "path": "project/src/sections/ideas-art/sleep.webp",
+      "bytes": 14678,
+      "sha256": "c5d30030c216e69df5f045dcf9791a5edc1eb85d74fb0339b88be60ebf535a33"
+    },
+    {
+      "path": "project/src/sections/ideas-art/spa.webp",
+      "bytes": 12898,
+      "sha256": "6be895a552e8c637e77450b7e9aa269d188d9308055b5feb55f504c5132673bc"
+    },
+    {
+      "path": "project/src/sections/ideas-art/sunset.webp",
+      "bytes": 10888,
+      "sha256": "ca2f41065b4a37054ec3f614f7ca7734767e8659d57683460281cb23eb1c639d"
+    },
+    {
+      "path": "project/src/sections/ideas-art/work.webp",
+      "bytes": 10834,
+      "sha256": "a42fbc7797b6426cdd2f7df5538147e35f6ade61ed992c3959ee490b84beeb39"
+    },
+    {
+      "path": "project/src/sections/profile-avatar.jpg",
+      "bytes": 48255,
+      "sha256": "b0457c7ab07cb31d4fba4c131e6208572da2e089bbfb4b5bdaa3bc2feaafc76c"
+    },
+    {
+      "path": "project/src/ui-kit-key/brand/keys-logo.svg",
+      "bytes": 4028,
+      "sha256": "4cdfc0939b4bf373a1958c37422750739f40570605ca6ca113d2bcfd66add283"
+    },
+    {
+      "path": "project/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "path": "project/tmp-ob.dc.html",
+      "bytes": 52387,
+      "sha256": "bd93f16b3de1ca3dc3ae833b4f6da075034034f48898ffc98e09a9503d01d758"
+    },
+    {
+      "path": "project/tmpob.dc.html",
+      "bytes": 53637,
+      "sha256": "b1affcb5170df2abe1d1c3f16c52823b5eff6d4401c3f16902f3cb892b45cf2b"
+    },
+    {
+      "path": "project/uploads/638677186964049719-f8f98073-fbff-42c3-b97a-25e52dd9a049.jpeg",
+      "bytes": 300006,
+      "sha256": "2aec9fe5b8a033daa447abad8cd854f24cfa9c8ec6dcd79b398155bbf74256b3"
+    },
+    {
+      "path": "project/uploads/Изображение Codex 19 окт. 2026 г., 14_59_33.png",
+      "bytes": 2324730,
+      "sha256": "1b989d96d9c7e3ad8413d45a413aaa26f2d2434529865e0d871648971b759461"
+    },
+    {
+      "path": "project/uploads/Снимок экрана 2026-10-16 в 12.48.56.png",
+      "bytes": 318769,
+      "sha256": "a73d1d51819ce92704241d09c0d6a239e12a4c1f98b92ed8cf58f299c3317e68"
+    },
+    {
+      "path": "project/weekend.svg",
+      "bytes": 1725,
+      "sha256": "ca8f3d0d50c274155e5a6a63cec091e22c899310f953a0f8a63f95a9f6f2ed3b"
+    },
+    {
+      "path": "project/Архив/Поездки (старая версия).dc.html",
+      "bytes": 57819,
+      "sha256": "7ae6aae27617eff93770474021b1d4e5a0797d615ba5203d6c7eedc7c816cafa"
+    },
+    {
+      "path": "project/Бренд-кит.dc.html",
+      "bytes": 10330,
+      "sha256": "ff82c4a9dffaa4cfbacdeceab33da8d6b526ff77b10b1b13d8abdb08c4be44f2"
+    },
+    {
+      "path": "project/Ключи - UI Kit.dc.html",
+      "bytes": 217009,
+      "sha256": "d2179164a209d4b23063ff1c71d89e7f9e16f58264c08828f15fe2251de8664f"
+    },
+    {
+      "path": "project/Ключи - Брендинг.dc.html",
+      "bytes": 459773,
+      "sha256": "acb5793a62850d7b5d35cca82b98f4396e56caeccccd49a8df108c0a8ad827dc"
+    },
+    {
+      "path": "project/Ключи - Все экраны.dc.html",
+      "bytes": 1197336,
+      "sha256": "d81f8201f37ec3785c83f6cc0d9f969f9a65d1eae970bc087248fd376ce90fa5"
+    },
+    {
+      "path": "project/Ключи - Десктоп.dc.html",
+      "bytes": 959717,
+      "sha256": "2dbe6506ace8d68557a0b79e8b5902d0b3018e1ae0da990f33d89b59730042c3"
+    },
+    {
+      "path": "project/Ключи - Итоговое предложение агентства.dc.html",
+      "bytes": 226991,
+      "sha256": "5a33be05ddc635e045ddf7d6d26676c9149eee0bde0018d9ea9f0f9d90ea50c2"
+    },
+    {
+      "path": "project/Ключи - Кликабельный прототип.dc.html",
+      "bytes": 45621,
+      "sha256": "063c98f2ca341ed97242ab1128534163ae11aefafe5e38fc2b242b1d7b081747"
+    },
+    {
+      "path": "project/Ключи - Концепция бренда (агентство).dc.html",
+      "bytes": 76628,
+      "sha256": "ba659b9c2c19afc8335529a681a860ea5a6c6d48c7e6ca2590ce4be5f9a35e07"
+    },
+    {
+      "path": "project/Ключи - Прототип по сценариям.dc.html",
+      "bytes": 13933,
+      "sha256": "79420dd4e4bd6027d9eea65e8f426c42abc84702d99270a3410a16a3a3b17aef"
+    },
+    {
+      "path": "project/Компоненты.dc.html",
+      "bytes": 36160,
+      "sha256": "ea06b6c6ff5bed7d900a8ce72d8da8730eb7c6f247bc1849b1b9b776216fc06d"
+    },
+    {
+      "path": "project/Онбординг - прототип.dc.html",
+      "bytes": 53696,
+      "sha256": "2d54a533007ca67e6d6c71d97ede4cea17fa8be614f812a883b0f713277c5e6b"
+    },
+    {
+      "path": "project/Орбита - Платформа бренда 2.0.dc.html",
+      "bytes": 141577,
+      "sha256": "d9c92d68c243bf3493e7d548f94abddb7c449f30e9331e7638cc7c26d40cbd25"
+    },
+    {
+      "path": "project/Прототип.dc.html",
+      "bytes": 69669,
+      "sha256": "93b5c272d4806ef6e4669e559923d4e75b202fadf593da4c2e4408f238ae13e2"
+    }
+  ],
+  "html": [
+    {
+      "file": "project/brand-kit/motion/splash.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap"
+      ]
+    },
+    {
+      "file": "project/brand-kit/reference/brand-kit-preview.dc.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500&display=swap"
+      ]
+    },
+    {
+      "file": "project/brand-kit/reference/components.dc.html",
+      "screen_count": 1,
+      "screens": [
+        {
+          "source_id": null,
+          "label_id": null,
+          "label": "Заставка"
+        }
+      ],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500&display=swap"
+      ]
+    },
+    {
+      "file": "project/brand-kit/reference/proposal.dc.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500&display=swap"
+      ]
+    },
+    {
+      "file": "project/brand-kit/reference/prototype.dc.html",
+      "screen_count": 1,
+      "screens": [
+        {
+          "source_id": null,
+          "label_id": null,
+          "label": "{{ screenName }}"
+        }
+      ],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500&display=swap"
+      ]
+    },
+    {
+      "file": "project/brand-kit/reference/ui-kit.dc.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500&display=swap"
+      ]
+    },
+    {
+      "file": "project/brandbook/brandbook.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap"
+      ]
+    },
+    {
+      "file": "project/brandbook/splash/splash.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap"
+      ]
+    },
+    {
+      "file": "project/github-onboarding/index.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500&display=swap"
+      ]
+    },
+    {
+      "file": "project/github-onboarding/onboarding-variant-1.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": []
+    },
+    {
+      "file": "project/github-onboarding/onboarding-variant-2.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": []
+    },
+    {
+      "file": "project/github-onboarding/src/onboarding-variant-1.dc.html",
+      "screen_count": 1,
+      "screens": [
+        {
+          "source_id": null,
+          "label_id": null,
+          "label": "Онбординг прототип"
+        }
+      ],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500&display=swap"
+      ]
+    },
+    {
+      "file": "project/github-onboarding/src/onboarding-variant-2.dc.html",
+      "screen_count": 1,
+      "screens": [
+        {
+          "source_id": null,
+          "label_id": null,
+          "label": "Онбординг прототип"
+        }
+      ],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500&display=swap"
+      ]
+    },
+    {
+      "file": "project/login-export/login-flow.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap"
+      ]
+    },
+    {
+      "file": "project/onboarding-export/html/onboarding-1.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap"
+      ]
+    },
+    {
+      "file": "project/onboarding-export/html/onboarding-2.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap"
+      ]
+    },
+    {
+      "file": "project/onboarding-export/html/onboarding-3.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap"
+      ]
+    },
+    {
+      "file": "project/onboarding-export/html/onboarding-4.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap"
+      ]
+    },
+    {
+      "file": "project/onboarding-export/onboarding-all.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap"
+      ]
+    },
+    {
+      "file": "project/onboarding-export/onboarding-flow.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap"
+      ]
+    },
+    {
+      "file": "project/tmp-ob.dc.html",
+      "screen_count": 1,
+      "screens": [
+        {
+          "source_id": null,
+          "label_id": null,
+          "label": "Онбординг прототип"
+        }
+      ],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500&display=swap"
+      ]
+    },
+    {
+      "file": "project/tmpob.dc.html",
+      "screen_count": 1,
+      "screens": [
+        {
+          "source_id": null,
+          "label_id": null,
+          "label": "Онбординг прототип"
+        }
+      ],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500&display=swap"
+      ]
+    },
+    {
+      "file": "project/Архив/Поездки (старая версия).dc.html",
+      "screen_count": 4,
+      "screens": [
+        {
+          "source_id": null,
+          "label_id": null,
+          "label": "Поездки"
+        },
+        {
+          "source_id": null,
+          "label_id": null,
+          "label": "День заезда"
+        },
+        {
+          "source_id": null,
+          "label_id": null,
+          "label": "Проживание"
+        },
+        {
+          "source_id": null,
+          "label_id": null,
+          "label": "Поездка завершена"
+        }
+      ],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap"
+      ]
+    },
+    {
+      "file": "project/Бренд-кит.dc.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500&display=swap"
+      ]
+    },
+    {
+      "file": "project/Ключи - UI Kit.dc.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500&display=swap"
+      ]
+    },
+    {
+      "file": "project/Ключи - Брендинг.dc.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": [
+        "https://fonts.googleapis.com",
+        "https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Unbounded:wght@500;600;700&display=swap"
+      ]
+    },
+    {
+      "file": "project/Ключи - Все экраны.dc.html",
+      "screen_count": 117,
+      "screens": [
+        {
+          "source_id": "t0",
+          "label_id": null,
+          "label": "1 · Первый вход"
+        },
+        {
+          "source_id": "t1",
+          "label_id": "t1",
+          "label": "t1 Поездки · броней нет · вся страница"
+        },
+        {
+          "source_id": "u1b",
+          "label_id": "u1b",
+          "label": "u1b 3 · До заезда"
+        },
+        {
+          "source_id": "s2",
+          "label_id": "s2",
+          "label": "s2 4 · Проживание"
+        },
+        {
+          "source_id": "s3",
+          "label_id": "s3",
+          "label": "s3 5 · День выезда"
+        },
+        {
+          "source_id": "s5",
+          "label_id": "s5",
+          "label": "s5 Счёт и депозит"
+        },
+        {
+          "source_id": "s6",
+          "label_id": "s6",
+          "label": "s6 Есть проблема"
+        },
+        {
+          "source_id": "wf1",
+          "label_id": "wf1",
+          "label": "wf1 Wi‑Fi · автоподключение"
+        },
+        {
+          "source_id": "wf1b",
+          "label_id": "wf1b",
+          "label": "wf1b Wi‑Fi · подключено"
+        },
+        {
+          "source_id": "wf2",
+          "label_id": "wf2",
+          "label": "wf2 Wi‑Fi · логин и пароль"
+        },
+        {
+          "source_id": "s4",
+          "label_id": "s4",
+          "label": "s4 6 · Поездка завершена"
+        },
+        {
+          "source_id": "x2",
+          "label_id": "x2",
+          "label": "x2 Отзыв о поездке"
+        },
+        {
+          "source_id": "d1",
+          "label_id": "d1",
+          "label": "d1 Детали брони"
+        },
+        {
+          "source_id": "d2",
+          "label_id": "d2",
+          "label": "d2 Документы поездки"
+        },
+        {
+          "source_id": "d3",
+          "label_id": "d3",
+          "label": "d3 Отмена брони"
+        },
+        {
+          "source_id": "d4",
+          "label_id": "d4",
+          "label": "d4 Как заселиться"
+        },
+        {
+          "source_id": "d5",
+          "label_id": "d5",
+          "label": "d5 Маршрут"
+        },
+        {
+          "source_id": "d5b",
+          "label_id": "d5b",
+          "label": "d5b Маршрут · откуда"
+        },
+        {
+          "source_id": "d6",
+          "label_id": "d6",
+          "label": "d6 Ранний заезд"
+        },
+        {
+          "source_id": "a1",
+          "label_id": "a1",
+          "label": "a1 Вход · телефон"
+        },
+        {
+          "source_id": "a2",
+          "label_id": "a2",
+          "label": "a2 Вход · код из СМС"
+        },
+        {
+          "source_id": "a3",
+          "label_id": "a3",
+          "label": "a3 Регистрация · имя"
+        },
+        {
+          "source_id": "g1",
+          "label_id": "g1",
+          "label": "g1 Вход при бронировании"
+        },
+        {
+          "source_id": "z1",
+          "label_id": "z1",
+          "label": "z1 Отельер · приглашение"
+        },
+        {
+          "source_id": "z2",
+          "label_id": "z2",
+          "label": "z2 Отельер · рабочий email"
+        },
+        {
+          "source_id": "z3",
+          "label_id": "z3",
+          "label": "z3 Отельер · ожидаем подтверждения"
+        },
+        {
+          "source_id": "z4",
+          "label_id": null,
+          "label": "1 · Первый вход"
+        },
+        {
+          "source_id": "z5",
+          "label_id": "z5",
+          "label": "z5 Отельер · статус подтверждён"
+        },
+        {
+          "source_id": "z6",
+          "label_id": "z6",
+          "label": "z6 Отельер · статус отклонён"
+        },
+        {
+          "source_id": "i1",
+          "label_id": "i1",
+          "label": "i1 Пригласить друзей"
+        },
+        {
+          "source_id": "i2",
+          "label_id": "i2",
+          "label": "i2 Пригласить · для отельера"
+        },
+        {
+          "source_id": "l1",
+          "label_id": "l1",
+          "label": "l1 Подключить карту отеля"
+        },
+        {
+          "source_id": "w1",
+          "label_id": "w1",
+          "label": "w1 Следить за ценой"
+        },
+        {
+          "source_id": "x1",
+          "label_id": "x1",
+          "label": "x1 Все отзывы"
+        },
+        {
+          "source_id": "fr1",
+          "label_id": "fr1",
+          "label": "fr1 Friendly Rate · приглашение по ссылке"
+        },
+        {
+          "source_id": "fr2",
+          "label_id": "fr2",
+          "label": "fr2 Профиль · отельер"
+        },
+        {
+          "source_id": "fr6",
+          "label_id": "fr6",
+          "label": "fr6 Профиль · что такое Friendly Rate"
+        },
+        {
+          "source_id": "fr3",
+          "label_id": "fr3",
+          "label": "fr3 Детали отеля · цена с Friendly Rate"
+        },
+        {
+          "source_id": "fr4",
+          "label_id": "fr4",
+          "label": "fr4 Выбор тарифа · Friendly Rate"
+        },
+        {
+          "source_id": "fr5",
+          "label_id": "fr5",
+          "label": "fr5 Расчёт цены · Friendly Rate"
+        },
+        {
+          "source_id": "v1",
+          "label_id": "v1",
+          "label": "v1 Выгоды · вся страница"
+        },
+        {
+          "source_id": "v2",
+          "label_id": "v2",
+          "label": "v2 Уровни орбиты"
+        },
+        {
+          "source_id": "v3",
+          "label_id": "v3",
+          "label": "v3 Программа · бонусы с уровнями"
+        },
+        {
+          "source_id": "v4",
+          "label_id": "v4",
+          "label": "v4 Программы отелей · все"
+        },
+        {
+          "source_id": "lp1",
+          "label_id": "lp1",
+          "label": "lp1 Программа · скидка"
+        },
+        {
+          "source_id": "lp2",
+          "label_id": "lp2",
+          "label": "lp2 Программа · бонусы"
+        },
+        {
+          "source_id": "lp3",
+          "label_id": "lp3",
+          "label": "lp3 Программа · скидка с уровнями"
+        },
+        {
+          "source_id": "lp4",
+          "label_id": "lp4",
+          "label": "lp4 Сеть отелей · список"
+        },
+        {
+          "source_id": "lp5",
+          "label_id": "lp5",
+          "label": "lp5 Сеть · скидка с уровнями"
+        },
+        {
+          "source_id": "v5",
+          "label_id": "v5",
+          "label": "v5 История баллов «Ключей»"
+        },
+        {
+          "source_id": "f1",
+          "label_id": "f1",
+          "label": "f1 Найти · вся страница"
+        },
+        {
+          "source_id": "fv1",
+          "label_id": "fv1",
+          "label": "fv1 Избранное · списки"
+        },
+        {
+          "source_id": "fv2",
+          "label_id": "fv2",
+          "label": "fv2 Список · цены на даты"
+        },
+        {
+          "source_id": "fv2a",
+          "label_id": "fv2a",
+          "label": "fv2a Список · действия"
+        },
+        {
+          "source_id": "fv3",
+          "label_id": "fv3",
+          "label": "fv3 Список · изменить даты и гостей"
+        },
+        {
+          "source_id": "fv4",
+          "label_id": "fv4",
+          "label": "fv4 Первое добавление · название списка"
+        },
+        {
+          "source_id": "fv5",
+          "label_id": "fv5",
+          "label": "fv5 Следующие добавления · в тот же список"
+        },
+        {
+          "source_id": "fv6",
+          "label_id": "fv6",
+          "label": "fv6 Список · заметка к отелю"
+        },
+        {
+          "source_id": "c1",
+          "label_id": "c1",
+          "label": "c1 Классический поиск · выдача"
+        },
+        {
+          "source_id": "c2",
+          "label_id": "c2",
+          "label": "c2 Выдача · карта развёрнута"
+        },
+        {
+          "source_id": "q3",
+          "label_id": "q3",
+          "label": "q3 Подбор по свайпу"
+        },
+        {
+          "source_id": "nc1",
+          "label_id": "nc1",
+          "label": "nc1 Нужен совет · старт"
+        },
+        {
+          "source_id": "nc2",
+          "label_id": "nc2",
+          "label": "nc2 Подбор · куда и с кем"
+        },
+        {
+          "source_id": "nc3",
+          "label_id": "nc3",
+          "label": "nc3 Подбор · выбор города"
+        },
+        {
+          "source_id": "nc4",
+          "label_id": "nc4",
+          "label": "nc4 Подбор · лента идей"
+        },
+        {
+          "source_id": "nc5",
+          "label_id": "nc5",
+          "label": "nc5 Подбор · свайп «Хочу»"
+        },
+        {
+          "source_id": "nc6",
+          "label_id": "nc6",
+          "label": "nc6 Подбор · темы"
+        },
+        {
+          "source_id": "nc7",
+          "label_id": "nc7",
+          "label": "nc7 Подбор · тема «Вода и спа»"
+        },
+        {
+          "source_id": "nc8",
+          "label_id": "nc8",
+          "label": "nc8 Подбор · вопрос о бюджете"
+        },
+        {
+          "source_id": "nc9",
+          "label_id": "nc9",
+          "label": "nc9 Подбор · где жить"
+        },
+        {
+          "source_id": "nc10",
+          "label_id": "nc10",
+          "label": "nc10 Подбор · готово"
+        },
+        {
+          "source_id": "r1",
+          "label_id": "r1",
+          "label": "r1 Подбор · выдача с совпадениями"
+        },
+        {
+          "source_id": "nc11",
+          "label_id": "nc11",
+          "label": "nc11 Подбор · настройки"
+        },
+        {
+          "source_id": "nc12",
+          "label_id": "nc12",
+          "label": "nc12 Подбор · нет отелей"
+        },
+        {
+          "source_id": "h1",
+          "label_id": "h1",
+          "label": "h1 Детали отеля · вся страница"
+        },
+        {
+          "source_id": "h9",
+          "label_id": "h9",
+          "label": "h9 Фото отеля"
+        },
+        {
+          "source_id": "h2",
+          "label_id": "h2",
+          "label": "h2 Расчёт цены"
+        },
+        {
+          "source_id": "tv2b",
+          "label_id": "tv2b",
+          "label": "tv2b Выбор номера и тарифа"
+        },
+        {
+          "source_id": "tv2c",
+          "label_id": "tv2c",
+          "label": "tv2c Тариф · что входит"
+        },
+        {
+          "source_id": "rm1",
+          "label_id": "rm1",
+          "label": "rm1 Оснащение номера"
+        },
+        {
+          "source_id": "gl1",
+          "label_id": "gl1",
+          "label": "gl1 Галерея номера"
+        },
+        {
+          "source_id": "h5",
+          "label_id": "h5",
+          "label": "h5 Данные бронирования · шаг 1"
+        },
+        {
+          "source_id": "h6",
+          "label_id": "h6",
+          "label": "h6 Добавить к поездке"
+        },
+        {
+          "source_id": "h7",
+          "label_id": "h7",
+          "label": "h7 Подтверждение и оплата · шаг 2"
+        },
+        {
+          "source_id": "h8",
+          "label_id": "h8",
+          "label": "h8 Бронь подтверждена"
+        },
+        {
+          "source_id": "o1",
+          "label_id": "o1",
+          "label": "o1 Онбординг · всё в одном"
+        },
+        {
+          "source_id": "o2",
+          "label_id": "o2",
+          "label": "o2 Онбординг · выгода"
+        },
+        {
+          "source_id": "o3",
+          "label_id": "o3",
+          "label": "o3 Онбординг · подбор"
+        },
+        {
+          "source_id": "o4",
+          "label_id": "o4",
+          "label": "o4 Онбординг 2 · управление"
+        },
+        {
+          "source_id": "o5",
+          "label_id": "o5",
+          "label": "o5 Онбординг 2 · цена и баллы"
+        },
+        {
+          "source_id": "o6",
+          "label_id": "o6",
+          "label": "o6 Онбординг 2 · под вас"
+        },
+        {
+          "source_id": "k1",
+          "label_id": "k1",
+          "label": "k1 Фильтры"
+        },
+        {
+          "source_id": "k2",
+          "label_id": "k2",
+          "label": "k2 Карта"
+        },
+        {
+          "source_id": "k3",
+          "label_id": "k3",
+          "label": "k3 Выдача · даты и гости"
+        },
+        {
+          "source_id": "k3g",
+          "label_id": "k3g",
+          "label": "k3g Найти · гости"
+        },
+        {
+          "source_id": "k4",
+          "label_id": "k4",
+          "label": "k4 Пустой поиск"
+        },
+        {
+          "source_id": "k5",
+          "label_id": "k5",
+          "label": "k5 Поиск · куда"
+        },
+        {
+          "source_id": "b2",
+          "label_id": "b2",
+          "label": "b2 Онлайн-регистрация"
+        },
+        {
+          "source_id": "b3",
+          "label_id": "b3",
+          "label": "b3 Изменить бронь"
+        },
+        {
+          "source_id": "sv1",
+          "label_id": "sv1",
+          "label": "sv1 Все услуги отеля · вся страница"
+        },
+        {
+          "source_id": "sv2",
+          "label_id": "sv2",
+          "label": "sv2 Услуга · заказ"
+        },
+        {
+          "source_id": "sv3",
+          "label_id": "sv3",
+          "label": "sv3 Услуга · просмотр · завтрак"
+        },
+        {
+          "source_id": "n1",
+          "label_id": "n1",
+          "label": "n1 Рядом с вами"
+        },
+        {
+          "source_id": "p1",
+          "label_id": "p1",
+          "label": "p1 Профиль"
+        },
+        {
+          "source_id": "p4",
+          "label_id": "p4",
+          "label": "p4 Профиль · мой стиль"
+        },
+        {
+          "source_id": "p5",
+          "label_id": "p5",
+          "label": "p5 Профиль · способы оплаты"
+        },
+        {
+          "source_id": "p6",
+          "label_id": "p6",
+          "label": "p6 Профиль · настройки"
+        },
+        {
+          "source_id": "n2",
+          "label_id": "n2",
+          "label": "n2 Уведомления · вся страница"
+        },
+        {
+          "source_id": "pn1",
+          "label_id": "pn1",
+          "label": "pn1 Push · экран блокировки"
+        },
+        {
+          "source_id": "pn2",
+          "label_id": "pn2",
+          "label": "pn2 Push · с действием"
+        },
+        {
+          "source_id": "pn3",
+          "label_id": "pn3",
+          "label": "pn3 Push · цена снизилась"
+        },
+        {
+          "source_id": "ch1",
+          "label_id": "ch1",
+          "label": "ch1 Чаты · список"
+        },
+        {
+          "source_id": "ch2",
+          "label_id": "ch2",
+          "label": "ch2 Чат с отелем"
+        },
+        {
+          "source_id": "p3",
+          "label_id": "p3",
+          "label": "p3 История поездок"
+        },
+        {
+          "source_id": "e1",
+          "label_id": "e1",
+          "label": "e1 Нет сети"
+        },
+        {
+          "source_id": "e3",
+          "label_id": "e3",
+          "label": "e3 Неверный код"
+        },
+        {
+          "source_id": "e4",
+          "label_id": "e4",
+          "label": "e4 Оплата не прошла"
+        }
+      ],
+      "external_html_references": [
+        "https://directus.manteratravel.ru/assets/09ac6989-6f6e-4d9d-a89e-74a9a1168bab?fit=cover&width=600&quality=80",
+        "https://directus.manteratravel.ru/assets/0b6b2ffd-16c1-4c76-96c4-44bd89514c70?fit=cover&width=600&quality=80",
+        "https://directus.manteratravel.ru/assets/0b6b2ffd-16c1-4c76-96c4-44bd89514c70?fit=cover&width=800&quality=80",
+        "https://directus.manteratravel.ru/assets/14e0f5cd-1718-48a8-ba76-1a99200ebe42?fit=cover&width=600&quality=80",
+        "https://directus.manteratravel.ru/assets/16d10311-7768-4dff-9eb5-63105fcb2d71?fit=cover&width=200&quality=80",
+        "https://directus.manteratravel.ru/assets/2cf9ade7-fdfe-4332-8607-51a869f276df?fit=cover&width=600&quality=80",
+        "https://directus.manteratravel.ru/assets/4a7a2324-60cb-4428-ad9e-5da85f0e647c?fit=cover&width=200&quality=80",
+        "https://directus.manteratravel.ru/assets/4a7a2324-60cb-4428-ad9e-5da85f0e647c?fit=cover&width=900&quality=80",
+        "https://directus.manteratravel.ru/assets/57ffa703-7954-4a42-90e7-1422d09c629d?fit=cover&width=600&quality=80",
+        "https://directus.manteratravel.ru/assets/762fc2c5-0380-4695-b85d-16d55aec4954?fit=cover&width=600&quality=80",
+        "https://directus.manteratravel.ru/assets/82c09065-6736-4214-a54c-3224644f52f6?fit=cover&width=200&quality=80",
+        "https://directus.manteratravel.ru/assets/95af3a59-a7d6-4f72-a1c7-26b4d63d5f51?fit=cover&width=600&quality=80",
+        "https://directus.manteratravel.ru/assets/98fd5fd7-5fd6-481a-8746-e9ae1099760b?fit=cover&width=600&quality=80",
+        "https://directus.manteratravel.ru/assets/aaacad71-383b-4508-a494-c1ede778da91?fit=cover&width=200&quality=80",
+        "https://directus.manteratravel.ru/assets/b8fb4369-af9d-4281-8d8b-b7153a1496c2?fit=cover&width=200&quality=80",
+        "https://directus.manteratravel.ru/assets/d6de947a-86f7-44b5-842d-9129a597c072?fit=cover&width=600&quality=80",
+        "https://directus.manteratravel.ru/assets/df48b87e-948a-4a65-bfad-1633f5257cd1?fit=cover&width=600&quality=80",
+        "https://directus.manteratravel.ru/assets/e512f84a-c876-4ab6-a4bc-b332a2163c31?fit=cover&width=600&quality=80",
+        "https://directus.manteratravel.ru/assets/e512f84a-c876-4ab6-a4bc-b332a2163c31?fit=cover&width=800&quality=80",
+        "https://directus.manteratravel.ru/assets/ed67b832-2e82-4e5f-bf10-9ad15d9481ab?fit=cover&width=600&quality=80",
+        "https://directus.manteratravel.ru/assets/ed67b832-2e82-4e5f-bf10-9ad15d9481ab?fit=cover&width=800&quality=80",
+        "https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500&display=swap",
+        "https://mantera.ru/upload/iblock/085/k3rkzcqoh8t9b345pyoiz36iafe9ouro.jpg"
+      ]
+    },
+    {
+      "file": "project/Ключи - Десктоп.dc.html",
+      "screen_count": 41,
+      "screens": [
+        {
+          "source_id": "g1",
+          "label_id": "g1",
+          "label": "g1 Гость · Найти без входа"
+        },
+        {
+          "source_id": "g2",
+          "label_id": "g2",
+          "label": "g2 Гость · детали отеля и тарифы"
+        },
+        {
+          "source_id": "g3",
+          "label_id": "g3",
+          "label": "g3 Вход при бронировании · телефон"
+        },
+        {
+          "source_id": "g4",
+          "label_id": "g4",
+          "label": "g4 Вход при бронировании · код"
+        },
+        {
+          "source_id": "g5",
+          "label_id": "g5",
+          "label": "g5 Вход при бронировании · имя (первый вход)"
+        },
+        {
+          "source_id": "l1",
+          "label_id": "l1",
+          "label": "l1 Вошёл · Найти с баллами и уровнями"
+        },
+        {
+          "source_id": "t1",
+          "label_id": "t1",
+          "label": "t1 Вошёл · меню поездки в шапке"
+        },
+        {
+          "source_id": "d1",
+          "label_id": "d1",
+          "label": "d1 Найти"
+        },
+        {
+          "source_id": "d2",
+          "label_id": "d2",
+          "label": "d2 Выдача · список и карта"
+        },
+        {
+          "source_id": "d3",
+          "label_id": "d3",
+          "label": "d3 Детали отеля · номера, тарифы и информация"
+        },
+        {
+          "source_id": "h1a",
+          "label_id": "h1a",
+          "label": "h1a Детали отеля · все удобства"
+        },
+        {
+          "source_id": "h1b",
+          "label_id": "h1b",
+          "label": "h1b Тариф · что входит (Ещё 3 в тарифе)"
+        },
+        {
+          "source_id": "h1c",
+          "label_id": "h1c",
+          "label": "h1c Оснащение номера"
+        },
+        {
+          "source_id": "h1g",
+          "label_id": "h1g",
+          "label": "h1g Детали отеля · галерея"
+        },
+        {
+          "source_id": "d4",
+          "label_id": "d4",
+          "label": "d4 Бронирование · данные и оплата"
+        },
+        {
+          "source_id": "d5",
+          "label_id": "d5",
+          "label": "d5 Поездки · до заезда"
+        },
+        {
+          "source_id": "d5b",
+          "label_id": "d5b",
+          "label": "d5b Поездки · окно «Завтрак»"
+        },
+        {
+          "source_id": "d5c",
+          "label_id": "d5c",
+          "label": "d5c Поездки · все услуги отеля"
+        },
+        {
+          "source_id": "d5d",
+          "label_id": "d5d",
+          "label": "d5d Поездки · детали брони"
+        },
+        {
+          "source_id": "d5e",
+          "label_id": "d5e",
+          "label": "d5e Поездки · маршрут"
+        },
+        {
+          "source_id": "d6",
+          "label_id": "d6",
+          "label": "d6 Выгоды"
+        },
+        {
+          "source_id": "v7",
+          "label_id": "v7",
+          "label": "v7 Выгоды · программа лояльности отеля"
+        },
+        {
+          "source_id": "p1",
+          "label_id": "p1",
+          "label": "p1 Профиль гостя"
+        },
+        {
+          "source_id": "d7",
+          "label_id": "d7",
+          "label": "d7 Избранное · подборки и заметки"
+        },
+        {
+          "source_id": "c3",
+          "label_id": "c3",
+          "label": "c3 Чаты"
+        },
+        {
+          "source_id": "n1",
+          "label_id": "n1",
+          "label": "n1 Поездки · места рядом"
+        },
+        {
+          "source_id": "zd1",
+          "label_id": "zd1",
+          "label": "zd1 Отельер · приглашение по ссылке"
+        },
+        {
+          "source_id": "zd2",
+          "label_id": "zd2",
+          "label": "zd2 Отельер · рабочий email"
+        },
+        {
+          "source_id": "zd3",
+          "label_id": "zd3",
+          "label": "zd3 Отельер · ожидает подтверждения"
+        },
+        {
+          "source_id": "zd4",
+          "label_id": "zd4",
+          "label": "zd4 Отельер · статус подтверждён"
+        },
+        {
+          "source_id": "fr3d",
+          "label_id": "fr3d",
+          "label": "fr3d Отельер · детали отеля с Friendly Rate"
+        },
+        {
+          "source_id": "p2",
+          "label_id": "p2",
+          "label": "p2 Профиль отельера · Friendly Rate и приглашения"
+        },
+        {
+          "source_id": "s1",
+          "label_id": "s1",
+          "label": "s1 Найти · поле «Куда»"
+        },
+        {
+          "source_id": "s2",
+          "label_id": "s2",
+          "label": "s2 Найти · поле «Даты»"
+        },
+        {
+          "source_id": "s3",
+          "label_id": "s3",
+          "label": "s3 Найти · поле «Гости»"
+        },
+        {
+          "source_id": "w1",
+          "label_id": "w1",
+          "label": "w1 Подбор по пожеланиям · старт"
+        },
+        {
+          "source_id": "w2",
+          "label_id": "w2",
+          "label": "w2 Подбор · куда и с кем"
+        },
+        {
+          "source_id": "w3",
+          "label_id": "w3",
+          "label": "w3 Подбор · лента идей «Хочу / Не моё»"
+        },
+        {
+          "source_id": "w4",
+          "label_id": "w4",
+          "label": "w4 Подбор · темы и тема «Вода и спа»"
+        },
+        {
+          "source_id": "w5",
+          "label_id": "w5",
+          "label": "w5 Подбор · бюджет и где жить"
+        },
+        {
+          "source_id": "w6",
+          "label_id": "w6",
+          "label": "w6 Подбор · отели по вашим пожеланиям"
+        }
+      ],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500&display=swap",
+        "https://mantera.ru/upload/iblock/085/k3rkzcqoh8t9b345pyoiz36iafe9ouro.jpg"
+      ]
+    },
+    {
+      "file": "project/Ключи - Итоговое предложение агентства.dc.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500&display=swap"
+      ]
+    },
+    {
+      "file": "project/Ключи - Кликабельный прототип.dc.html",
+      "screen_count": 1,
+      "screens": [
+        {
+          "source_id": null,
+          "label_id": null,
+          "label": "{{ screenLabel }}"
+        }
+      ],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500&display=swap"
+      ]
+    },
+    {
+      "file": "project/Ключи - Концепция бренда (агентство).dc.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500&display=swap"
+      ]
+    },
+    {
+      "file": "project/Ключи - Прототип по сценариям.dc.html",
+      "screen_count": 1,
+      "screens": [
+        {
+          "source_id": null,
+          "label_id": null,
+          "label": "{{ screenLabel }}"
+        }
+      ],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500&display=swap"
+      ]
+    },
+    {
+      "file": "project/Компоненты.dc.html",
+      "screen_count": 1,
+      "screens": [
+        {
+          "source_id": null,
+          "label_id": null,
+          "label": "Заставка"
+        }
+      ],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500&display=swap"
+      ]
+    },
+    {
+      "file": "project/Онбординг - прототип.dc.html",
+      "screen_count": 1,
+      "screens": [
+        {
+          "source_id": null,
+          "label_id": null,
+          "label": "Онбординг прототип"
+        }
+      ],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500&display=swap"
+      ]
+    },
+    {
+      "file": "project/Орбита - Платформа бренда 2.0.dc.html",
+      "screen_count": 0,
+      "screens": [],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap"
+      ]
+    },
+    {
+      "file": "project/Прототип.dc.html",
+      "screen_count": 1,
+      "screens": [
+        {
+          "source_id": null,
+          "label_id": null,
+          "label": "{{ screenName }}"
+        }
+      ],
+      "external_html_references": [
+        "https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500&display=swap"
+      ]
+    }
+  ],
+  "missing_local_html_references": [
+    {
+      "target": "project/Архив/src/home/nearby/nearby-cafe-generated.jpg",
+      "referenced_by": [
+        "project/Архив/Поездки (старая версия).dc.html"
+      ]
+    },
+    {
+      "target": "project/Архив/src/scenarios/maidens-hotel.jpg",
+      "referenced_by": [
+        "project/Архив/Поездки (старая версия).dc.html"
+      ]
+    },
+    {
+      "target": "project/Архив/src/sections/profile-avatar.jpg",
+      "referenced_by": [
+        "project/Архив/Поездки (старая версия).dc.html"
+      ]
+    },
+    {
+      "target": "project/Архив/support.js",
+      "referenced_by": [
+        "project/Архив/Поездки (старая версия).dc.html"
+      ]
+    }
+  ]
+}

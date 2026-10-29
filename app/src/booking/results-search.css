@@ -1,0 +1,22 @@
+/* k3 «Выдача · изменить даты и гостей», scoped to the results editor. */
+.results-query-flow{position:absolute;inset:0;background:#f4f5fb}
+.results-query-header{height:60px;padding:8px 12px;display:flex;align-items:center;justify-content:space-between;background:#f4f5fb}
+.keys-app .results-query-header h1{font:500 14px/20px Onest;color:#5a6072;letter-spacing:0;margin:0}
+.results-query-header .header-spacer{width:44px}
+.results-query-content.when-content{gap:10px;padding:4px 16px calc(var(--flow-footer-height) + var(--mobile-safe-area-height,34px) + 24px)}
+.results-query-content .date-calendar{padding:14px 12px;gap:8px}
+.results-query-content .calendar-heading strong{font:500 16px/22px Onest;text-transform:capitalize}
+.results-query-content .calendar-grid{row-gap:2px}
+.results-query-content .calendar-grid>small{font-size:11px;padding-bottom:6px}
+.results-query-content .calendar-grid>button{height:38px;min-height:38px;font-size:14px}
+.results-query-content .calendar-grid>button>span{width:38px;height:38px}
+.results-query-content .guest-fields{gap:10px}
+.results-query-content .guest-count-group,.results-query-content .trip-features{padding:2px 16px}
+.results-query-content .guest-counter{padding:10px 0}
+.results-query-content .feature-copy{gap:12px}
+.results-query-content .feature-copy>.icon-tile{width:22px;height:22px;flex:none}
+.results-query-content .feature-copy small{font:400 12px/17px Onest}
+.results-query-content .trip-features{gap:0}
+.results-query-footer{padding:10px 16px 14px;background:#f4f5fb}
+.results-query-footer>.k-button{height:52px;min-height:52px;border-radius:14px;font:500 15px/22px Onest}
+.results-query-footer>.field-error{margin:0 0 8px}

@@ -1,0 +1,12 @@
+$ python3 scripts/validate_brand.py
+OK: JSON/CSS agreement; 140 asset hashes; 6 outlined logos; fonts/licenses; HTML links; 5 text contrast pairs
+exit=0
+
+$ python3 scripts/validate_product_spec.py
+OK: 303 source hashes + DOCX; 99 routes; 158 designs; 23 journeys; policies and deliverable links
+exit=0
+
+$ /Users/tatyana.glazyrina/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node --check docs/brand/brandbook.js
+exit=0
+
+Local documentation links: 82 checked, 0 missing (handoff, root/current product and acceptance, iteration 9).

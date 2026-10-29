@@ -1,0 +1,13 @@
+# Пустые поездки — выбранный вариант 3
+
+28 октября 2026. Пользователь выбрала арочное окно с морским пейзажем и орбитой.
+
+- Эталон: `selected-option-3.png`, 1254 × 1254. Оригинал ImageGen: exec-839e1d01-68e4-4717-ac87-f54fbf4d4b6f.png в каталоге generated_images/01a15f51-a729-7521-8664-1d3c42c39e78.
+- Ассет: `../../app/public/brand/illustrations/trip-empty-portal.png`, 1254 × 1254. Создан ImageGen по выбранному изображению, без текста и интерфейса. Оригинал: generated_images/01a18171-9937-7c90-a64e-f27c2af9781d/exec-7613f79c-4da0-43bb-98a0-e0f09872be6f.png.
+- Блок изображения 180 × 168 CSS px, contain. Иллюстрация декоративная: пустой alt, без перехвата нажатий.
+- Тексты, шрифты, CTA и логика приложения сохранены. Изменён только визуальный вариант пустой карточки.
+- `implemented-trips.png` — весь браузер; `implemented-screen.png` — экран 393 × 852; `implemented-card.png` — карточка 361 × 381. `reference-card-normalized.png` — карточка эталона, приведённая к ширине 361 для QA. Обрезки сделаны только для сравнения снимков, исходный ассет не редактировался.
+
+## Промпт ассета
+
+Extract and faithfully recreate ONLY the 3D illustration from the attached UI reference. Output a square 1024x1024 production illustration asset on pure white (#FFFFFF) background. No card border, no UI, no text, no letters, no button. Preserve the exact concept and style: a thick freestanding vertical arched portal/window in softly translucent pearl white with lavender shading, rounded sculpted corners, glossy soft clay/glass material. Through the arch is a calm miniature marine landscape with a pale lavender sky, a small pearl sun in the upper right, a light blue distant hill at left, a saturated cobalt blue foreground wave/hill across the lower interior, and reflective blue water. One thin luminous cobalt blue elliptical orbital ring wraps around the outside lower third of the portal, passes behind on the right and in front at the bottom, with a small pearlescent sphere on the ring at the right. Same perspective as reference: front view with a slight view of the left outer thickness, broad arched top, tall vertical opening. Restrained premium 3D product branding, soft studio lighting, cobalt #2F5BFF and pale lavender, precise elegant forms. The complete portal, ring, and sphere must fit comfortably inside the square, centered, occupying about 90% of the canvas width and height, with a subtle soft lavender ground shadow only immediately beneath it and pure white elsewhere. Do not add any objects or decorations beyond those in the reference illustration. Maintain the reference visual fidelity, especially the arch proportions and the orientation of the blue orbit.

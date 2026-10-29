@@ -1,0 +1,24 @@
+/* d3 uses the shared sheet and its motion; only the screen's visual treatment differs. */
+.bottom-sheet:has(.cancellation-panel){border-radius:30px 30px 0 0;font-family:Onest,sans-serif;color:#101320}
+.bottom-sheet:has(.cancellation-panel) .sheet-handle-zone{height:29px;flex:none;padding-bottom:4px}
+.bottom-sheet:has(.cancellation-panel) .sheet-handle{width:36px;height:5px;border-radius:3px;background:#d9dde8}
+.bottom-sheet:has(.cancellation-panel) .sheet-header{padding:0 20px 4px}
+.bottom-sheet:has(.cancellation-panel) .sheet-title{font:500 20px/26px Unbounded;letter-spacing:-.5px}
+.bottom-sheet:has(.cancellation-panel) .sheet-content{padding:0 20px 30px}
+.cancellation-panel{display:flex;flex-direction:column;gap:14px}
+.cancellation-panel p{margin:0}
+.cancellation-subtitle{font:400 14px/21px Onest;color:#5a6072}
+.cancellation-summary{display:flex;flex-direction:column;gap:10px;padding:12px 14px;border-radius:18px;background:#f4f5fb}
+.cancellation-summary>div{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;font:400 14px/20px Onest}
+.cancellation-summary span{min-width:0;color:#5a6072}
+.cancellation-summary strong{flex:none;font-weight:500;text-align:right}
+.cancellation-summary .cancellation-refund{padding-top:10px;border-top:1px solid #eef0f4}
+.cancellation-refund span{font-weight:500;color:#101320}
+.cancellation-points strong{color:#11734d}
+.cancellation-panel .cancellation-policy{display:flex;align-items:center;gap:8px;font:400 13px/19px Onest;color:#11734d}
+.cancellation-policy>svg,.cancellation-policy>.k-icon{flex:none}
+.cancellation-panel .cancellation-policy.with-penalty{color:#a15b11}
+.cancellation-panel .k-button{border-radius:14px;font:500 15px/22px Onest}
+.cancellation-panel .k-button.cancellation-confirm{height:52px;min-height:52px;background:#e5484d;color:#fff}
+.cancellation-panel .k-button.cancellation-confirm:active{background:#cb383e}
+.cancellation-panel .k-button.cancellation-keep{height:44px;min-height:44px;padding:10px 16px;font:500 14px/20px Onest;color:#2f5bff}

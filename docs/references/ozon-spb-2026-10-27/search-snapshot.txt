@@ -1,0 +1,538 @@
+- link:
+  - /url: /travel/hotels/
+- generic "Мили"
+- button "Поддержка":
+  - generic: Поддержка
+- button "Мои заказы":
+  - generic: Мои заказы
+- button "Избранное":
+  - generic: Избранное
+- button "Подключить отель":
+  - generic: Подключить отель
+- button "Командировки":
+  - generic: Командировки
+- button "Войти":
+  - generic: Войти
+- textbox: Санкт-Петербург
+- textbox: 5 – 8 ноя
+- textbox: 2 гостя
+- button "Найти":
+  - generic: Найти
+- generic: Фильтры
+- generic: Отель
+- generic: Квартира
+- generic: Завтрак
+- generic: Бассейн
+- generic: 5 звёзд
+- generic: "Рейтинг: 4.5+"
+- generic: Рядом с центром
+- generic: Рядом с метро
+- generic: Рядом с пляжем
+- generic: Рядом с подъёмником
+- link "ТОП-100 Отель Вало Нетворк 3*":
+  - /url: /travel/hotels/product/valo-network-1361921991/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=8532179715000
+  - generic "ТОП-100"
+  - button:
+  - img "Отель Вало Нетворк 3*"
+- link "Отель Вало Нетворк 3*":
+  - /url: /travel/hotels/product/valo-network-1361921991/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=8532179715000
+  - generic: Отель Вало Нетворк 3*
+- generic: Санкт-Петербург • 6.6 км до центра • 500 м до метро Бухарестская
+- generic "4.7"
+- generic: 1 461 отзыв
+- generic "Wi-Fi"
+- generic "Трансфер"
+- generic "SPA"
+- generic "Бассейн"
+- generic: 11 100 ₽
+- generic: 3 ночи • 3 700 ₽ за ночь
+- generic "+111"
+- link "Выбрать":
+  - /url: /travel/hotels/product/valo-network-1361921991/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=8532179715000
+  - button "Выбрать":
+    - generic: Выбрать
+- link "Авторизуйтесь для скидки Выбор Ozon Отель Вало Бизнес 4*":
+  - /url: /travel/hotels/product/valo-business-1101597082/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=8039785119000
+  - generic "Авторизуйтесь для скидки"
+  - generic: Выбор Ozon
+  - button:
+  - img "Отель Вало Бизнес 4*"
+- link "Отель Вало Бизнес 4*":
+  - /url: /travel/hotels/product/valo-business-1101597082/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=8039785119000
+  - generic: Отель Вало Бизнес 4*
+- generic: Санкт-Петербург • 6.6 км до центра • 500 м до метро Бухарестская
+- generic "4.8"
+- generic: 728 отзывов
+- generic "Wi-Fi"
+- generic "Трансфер"
+- generic "SPA"
+- generic "Бассейн"
+- generic: Остался 1 вариант по этой цене
+- generic: 10 455 ₽
+- generic: 3 ночи • 3 485 ₽ за ночь
+- generic "+105"
+- link "Выбрать":
+  - /url: /travel/hotels/product/valo-business-1101597082/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=8039785119000
+  - button "Выбрать":
+    - generic: Выбрать
+- link "Авторизуйтесь для скидки Выбор Ozon Отель Демократ на Каменноостровском 39":
+  - /url: /travel/hotels/product/demokrat-na-kamennoostrovskom-39-5456245574/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=15731043275000
+  - generic "Авторизуйтесь для скидки"
+  - generic: Выбор Ozon
+  - button:
+  - img "Отель Демократ на Каменноостровском 39"
+- link "Отель Демократ на Каменноостровском 39":
+  - /url: /travel/hotels/product/demokrat-na-kamennoostrovskom-39-5456245574/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=15731043275000
+  - generic: Отель Демократ на Каменноостровском 39
+- generic: Санкт-Петербург • 3.1 км до центра • 300 м до метро Петроградская
+- generic "5.0"
+- generic: 7 отзывов
+- generic "Wi-Fi"
+- generic: 12 000 ₽
+- generic: 3 ночи • 4 000 ₽ за ночь
+- generic "+120"
+- link "Выбрать":
+  - /url: /travel/hotels/product/demokrat-na-kamennoostrovskom-39-5456245574/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=15731043275000
+  - button "Выбрать":
+    - generic: Выбрать
+- link "Авторизуйтесь для скидки Выбор Ozon УНО апарт-отель":
+  - /url: /travel/hotels/product/apart-otel-uno-by-valo-1606938091/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=9113336601000
+  - generic "Авторизуйтесь для скидки"
+  - generic: Выбор Ozon
+  - button:
+  - img "УНО апарт-отель"
+- link "УНО апарт-отель":
+  - /url: /travel/hotels/product/apart-otel-uno-by-valo-1606938091/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=9113336601000
+  - generic: УНО апарт-отель
+- generic: Санкт-Петербург • 3 км до центра • 300 м до метро Лиговский проспект
+- generic "4.8"
+- generic: 652 отзыва
+- generic "Wi-Fi"
+- generic "Трансфер"
+- generic: 16 200 ₽
+- generic: 3 ночи • 5 400 ₽ за ночь
+- generic "+162"
+- link "Выбрать":
+  - /url: /travel/hotels/product/apart-otel-uno-by-valo-1606938091/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=9113336601000
+  - button "Выбрать":
+    - generic: Выбрать
+- link "Авторизуйтесь для скидки Отель АпартПейдж Невский 3*":
+  - /url: /travel/hotels/product/apartpeydzh-nevskiy-1101596970/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6210704000000
+  - generic "Авторизуйтесь для скидки"
+  - button:
+  - img "Отель АпартПейдж Невский 3*"
+- link "Отель АпартПейдж Невский 3*":
+  - /url: /travel/hotels/product/apartpeydzh-nevskiy-1101596970/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6210704000000
+  - generic: Отель АпартПейдж Невский 3*
+- generic: Санкт-Петербург • 2.3 км до центра • 300 м до метро Маяковская
+- generic "4.4"
+- generic: 172 отзыва
+- generic "Wi-Fi"
+- generic "Парковка"
+- generic: Остался 1 вариант по этой цене
+- generic: 8 722 ₽
+- generic: 3 ночи • 2 907 ₽ за ночь
+- generic "+87"
+- link "Выбрать":
+  - /url: /travel/hotels/product/apartpeydzh-nevskiy-1101596970/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6210704000000
+  - button "Выбрать":
+    - generic: Выбрать
+- link "Авторизуйтесь для скидки Отель Особняк Молво":
+  - /url: /travel/hotels/product/osobnyak-molvo-612652954/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=4599416055000
+  - generic "Авторизуйтесь для скидки"
+  - button:
+  - img "Отель Особняк Молво"
+- link "Отель Особняк Молво":
+  - /url: /travel/hotels/product/osobnyak-molvo-612652954/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=4599416055000
+  - generic: Отель Особняк Молво
+- generic: Санкт-Петербург • 2 км до центра • 1.3 км до метро Горный институт
+- generic "4.6"
+- generic: 959 отзывов
+- generic "Wi-Fi"
+- generic: Остался 1 вариант по этой цене
+- generic: 4 400 ₽
+- generic: 3 ночи • 1 467 ₽ за ночь
+- generic "+44"
+- link "Выбрать":
+  - /url: /travel/hotels/product/osobnyak-molvo-612652954/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=4599416055000
+  - button "Выбрать":
+    - generic: Выбрать
+- link "Часто бронируют Квартира New Horizon Liteiyniy":
+  - /url: /travel/hotels/product/apartamenty-new-horizon-liteyniy-615558174/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=4605134525000
+  - generic "Часто бронируют"
+  - button:
+  - img "Квартира New Horizon Liteiyniy"
+- link "Квартира New Horizon Liteiyniy":
+  - /url: /travel/hotels/product/apartamenty-new-horizon-liteyniy-615558174/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=4605134525000
+  - generic: Квартира New Horizon Liteiyniy
+- generic: Санкт-Петербург • 1.9 км до центра • 700 м до метро Маяковская
+- generic "4.5"
+- generic: 13 отзывов
+- generic "Wi-Fi"
+- generic: Остался 1 вариант по этой цене
+- generic: 9 091 ₽
+- generic: 3 ночи • 3 030 ₽ за ночь
+- generic "+91"
+- link "Выбрать":
+  - /url: /travel/hotels/product/apartamenty-new-horizon-liteyniy-615558174/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=4605134525000
+  - button "Выбрать":
+    - generic: Выбрать
+- link "Авторизуйтесь для скидки Выбор Ozon Отель Рамада Плаза 4*":
+  - /url: /travel/hotels/product/ramada-plaza-by-wyndham-st-petersburg-612672006/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=5842972978000
+  - generic "Авторизуйтесь для скидки"
+  - generic: Выбор Ozon
+  - button:
+  - img "Отель Рамада Плаза 4*"
+- link "Отель Рамада Плаза 4*":
+  - /url: /travel/hotels/product/ramada-plaza-by-wyndham-st-petersburg-612672006/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=5842972978000
+  - generic: Отель Рамада Плаза 4*
+- generic: Санкт-Петербург • 6.7 км до центра • 400 м до метро Бухарестская
+- generic "4.6"
+- generic: 456 отзывов
+- generic "Wi-Fi"
+- generic "Трансфер"
+- generic "SPA"
+- generic "Бассейн"
+- generic: 13 500 ₽
+- generic: 3 ночи • 4 500 ₽ за ночь
+- generic "+135"
+- link "Выбрать":
+  - /url: /travel/hotels/product/ramada-plaza-by-wyndham-st-petersburg-612672006/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=5842972978000
+  - button "Выбрать":
+    - generic: Выбрать
+- link "Авторизуйтесь для скидки Отель АпартПейдж Елагин 3*":
+  - /url: /travel/hotels/product/apartpeydzh-elagin-1101606411/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6240290812000
+  - generic "Авторизуйтесь для скидки"
+  - button:
+  - img "Отель АпартПейдж Елагин 3*"
+- link "Отель АпартПейдж Елагин 3*":
+  - /url: /travel/hotels/product/apartpeydzh-elagin-1101606411/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6240290812000
+  - generic: Отель АпартПейдж Елагин 3*
+- generic: Санкт-Петербург • 6.2 км до центра • 600 м до метро Старая Деревня
+- generic "4.4"
+- generic: 94 отзыва
+- generic "Wi-Fi"
+- generic "Парковка"
+- generic: 8 285 ₽
+- generic: 3 ночи • 2 762 ₽ за ночь
+- generic "+83"
+- link "Выбрать":
+  - /url: /travel/hotels/product/apartpeydzh-elagin-1101606411/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6240290812000
+  - button "Выбрать":
+    - generic: Выбрать
+- link "Авторизуйтесь для скидки Отель Ротас Сити Цент на Гродненском":
+  - /url: /travel/hotels/product/otel-rotas-city-center-3317085659/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=13092288728000
+  - generic "Авторизуйтесь для скидки"
+  - button:
+  - img "Отель Ротас Сити Цент на Гродненском"
+- link "Отель Ротас Сити Цент на Гродненском":
+  - /url: /travel/hotels/product/otel-rotas-city-center-3317085659/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=13092288728000
+  - generic: Отель Ротас Сити Цент на Гродненском
+- generic: Санкт-Петербург • 2.6 км до центра • 300 м до метро Чернышевская
+- generic "4.7"
+- generic: 6 отзывов
+- generic "Wi-Fi"
+- generic: Остался 1 вариант по этой цене
+- generic: 6 697 ₽
+- generic: 3 ночи • 2 232 ₽ за ночь
+- generic "+67"
+- link "Выбрать":
+  - /url: /travel/hotels/product/otel-rotas-city-center-3317085659/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=13092288728000
+  - button "Выбрать":
+    - generic: Выбрать
+- link "Часто бронируют Апартаменты Дворики Петра на Гороховой":
+  - /url: /travel/hotels/product/apartamenty-dvoriki-petra-na-gorohovoy-2779269877/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=11994836783000
+  - generic "Часто бронируют"
+  - button:
+  - img "Апартаменты Дворики Петра на Гороховой"
+- link "Апартаменты Дворики Петра на Гороховой":
+  - /url: /travel/hotels/product/apartamenty-dvoriki-petra-na-gorohovoy-2779269877/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=11994836783000
+  - generic: Апартаменты Дворики Петра на Гороховой
+- generic: Санкт-Петербург • 1.5 км до центра • 400 м до метро Сенная площадь
+- generic "4.7"
+- generic: 9 отзывов
+- generic "Wi-Fi"
+- generic "Парковка"
+- generic: Остался 1 вариант по этой цене
+- generic: 8 724 ₽
+- generic: 3 ночи • 2 908 ₽ за ночь
+- generic "+87"
+- link "Выбрать":
+  - /url: /travel/hotels/product/apartamenty-dvoriki-petra-na-gorohovoy-2779269877/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=11994836783000
+  - button "Выбрать":
+    - generic: Выбрать
+- link "Суперхозяин Выбор Ozon Гостевые комнаты Гринвич":
+  - /url: /travel/hotels/product/greenwich-by-friends-617487873/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=4498161580000
+  - generic "Суперхозяин"
+  - generic: Выбор Ozon
+  - button:
+  - img "Гостевые комнаты Гринвич"
+- link "Гостевые комнаты Гринвич":
+  - /url: /travel/hotels/product/greenwich-by-friends-617487873/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=4498161580000
+  - generic: Гостевые комнаты Гринвич
+- generic: Санкт-Петербург • 2.5 км до центра • 700 м до метро Чернышевская
+- generic "4.9"
+- generic: 56 отзывов
+- generic "Wi-Fi"
+- generic: Осталось 2 варианта по этой цене
+- generic: 11 524 ₽
+- generic: 3 ночи • 3 841 ₽ за ночь
+- generic "+115"
+- link "Выбрать":
+  - /url: /travel/hotels/product/greenwich-by-friends-617487873/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=4498161580000
+  - button "Выбрать":
+    - generic: Выбрать
+- link "Авторизуйтесь для скидки Лиготель":
+  - /url: /travel/hotels/product/ligotel-616410580/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=1049768951000
+  - generic "Авторизуйтесь для скидки"
+  - button:
+  - img "Лиготель"
+- link "Лиготель":
+  - /url: /travel/hotels/product/ligotel-616410580/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=1049768951000
+  - generic: Лиготель
+- generic: Санкт-Петербург • 2.8 км до центра • 200 м до метро Площадь Восстания
+- generic "4.8"
+- generic: 196 отзывов
+- generic "Wi-Fi"
+- generic "Парковка"
+- generic: Остался 1 вариант по этой цене
+- generic: 13 000 ₽
+- generic: 3 ночи • 4 333 ₽ за ночь
+- generic "+130"
+- link "Выбрать":
+  - /url: /travel/hotels/product/ligotel-616410580/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=1049768951000
+  - button "Выбрать":
+    - generic: Выбрать
+- link "Авторизуйтесь для скидки Отель Moov Apart Bogema (Мув Апарт Богема)":
+  - /url: /travel/hotels/product/mini-otel-moov-apart-bogema-1160870712/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6238133905000
+  - generic "Авторизуйтесь для скидки"
+  - button:
+  - img "Отель Moov Apart Bogema (Мув Апарт Богема)"
+- link "Отель Moov Apart Bogema (Мув Апарт Богема)":
+  - /url: /travel/hotels/product/mini-otel-moov-apart-bogema-1160870712/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6238133905000
+  - generic: Отель Moov Apart Bogema (Мув Апарт Богема)
+- generic: Санкт-Петербург • 1.8 км до центра • 900 м до метро Чернышевская
+- generic "4.8"
+- generic: 63 отзыва
+- generic "Wi-Fi"
+- generic: 8 808 ₽
+- generic: 3 ночи • 2 936 ₽ за ночь
+- generic "+88"
+- link "Выбрать":
+  - /url: /travel/hotels/product/mini-otel-moov-apart-bogema-1160870712/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6238133905000
+  - button "Выбрать":
+    - generic: Выбрать
+- link "Авторизуйтесь для скидки Отель Демократ на Невском 107":
+  - /url: /travel/hotels/product/mini-otel-demokrat-na-nevskom-107b-1101598986/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6238835168000
+  - generic "Авторизуйтесь для скидки"
+  - button:
+  - img "Отель Демократ на Невском 107"
+- link "Отель Демократ на Невском 107":
+  - /url: /travel/hotels/product/mini-otel-demokrat-na-nevskom-107b-1101598986/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6238835168000
+  - generic: Отель Демократ на Невском 107
+- generic: Санкт-Петербург • 3.1 км до центра • 600 м до метро Площадь Восстания
+- generic "4.7"
+- generic: 62 отзыва
+- generic "Wi-Fi"
+- generic: 8 273 ₽
+- generic: 3 ночи • 2 758 ₽ за ночь
+- generic "+83"
+- link "Выбрать":
+  - /url: /travel/hotels/product/mini-otel-demokrat-na-nevskom-107b-1101598986/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6238835168000
+  - button "Выбрать":
+    - generic: Выбрать
+- link "Авторизуйтесь для скидки Отель Аристократ":
+  - /url: /travel/hotels/product/aristokrat-1606938002/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=9110763915000
+  - generic "Авторизуйтесь для скидки"
+  - button:
+  - img "Отель Аристократ"
+- link "Отель Аристократ":
+  - /url: /travel/hotels/product/aristokrat-1606938002/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=9110763915000
+  - generic: Отель Аристократ
+- generic: Санкт-Петербург • 8 км до центра • 700 м до метро Путиловская
+- generic "4.6"
+- generic: 29 отзывов
+- generic "Wi-Fi"
+- generic "Парковка"
+- generic: Остался 1 вариант по этой цене
+- generic: 7 061 ₽
+- generic: 3 ночи • 2 354 ₽ за ночь
+- generic "+71"
+- link "Выбрать":
+  - /url: /travel/hotels/product/aristokrat-1606938002/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=9110763915000
+  - button "Выбрать":
+    - generic: Выбрать
+- link "Авторизуйтесь для скидки Выбор Ozon Отель Port Comfort by old Nevskiy 3*":
+  - /url: /travel/hotels/product/apart-otel-port-comfort-by-old-nevskiy-1101595448/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6242170867000
+  - generic "Авторизуйтесь для скидки"
+  - generic: Выбор Ozon
+  - button:
+  - img "Отель Port Comfort by old Nevskiy 3*"
+- link "Отель Port Comfort by old Nevskiy 3*":
+  - /url: /travel/hotels/product/apart-otel-port-comfort-by-old-nevskiy-1101595448/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6242170867000
+  - generic: Отель Port Comfort by old Nevskiy 3*
+- generic: Санкт-Петербург • 4.1 км до центра • 400 м до метро Площадь Александра Невского 1
+- generic "4.4"
+- generic: 85 отзывов
+- generic "Wi-Fi"
+- generic "Парковка"
+- generic: Остался 1 вариант по этой цене
+- generic: 10 800 ₽
+- generic: 3 ночи • 3 600 ₽ за ночь
+- generic "+108"
+- link "Выбрать":
+  - /url: /travel/hotels/product/apart-otel-port-comfort-by-old-nevskiy-1101595448/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=6242170867000
+  - button "Выбрать":
+    - generic: Выбрать
+- link "Авторизуйтесь для скидки Отель Аркада 3*":
+  - /url: /travel/hotels/product/arkada-615537695/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=1697271067000
+  - generic "Авторизуйтесь для скидки"
+  - button:
+  - img "Отель Аркада 3*"
+- link "Отель Аркада 3*":
+  - /url: /travel/hotels/product/arkada-615537695/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=1697271067000
+  - generic: Отель Аркада 3*
+- generic: Санкт-Петербург • 1.8 км до центра • 500 м до метро Достоевская
+- generic "4.7"
+- generic: 88 отзывов
+- generic "Wi-Fi"
+- generic: Осталось 3 варианта по этой цене
+- generic: 9 992 ₽
+- generic: 3 ночи • 3 331 ₽ за ночь
+- generic "+100"
+- link "Выбрать":
+  - /url: /travel/hotels/product/arkada-615537695/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=1697271067000
+  - button "Выбрать":
+    - generic: Выбрать
+- link "Авторизуйтесь для скидки Отель Sadovaya Loft (Садовая Лофт)":
+  - /url: /travel/hotels/product/mini-otel-sadovaya-loft-615554323/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=5976006489000
+  - generic "Авторизуйтесь для скидки"
+  - button:
+  - img "Отель Sadovaya Loft (Садовая Лофт)"
+- link "Отель Sadovaya Loft (Садовая Лофт)":
+  - /url: /travel/hotels/product/mini-otel-sadovaya-loft-615554323/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=5976006489000
+  - generic: Отель Sadovaya Loft (Садовая Лофт)
+- generic: Санкт-Петербург • 1.2 км до центра • 400 м до метро Невский проспект
+- generic "4.6"
+- generic: 344 отзыва
+- generic "Wi-Fi"
+- generic "Трансфер"
+- generic: Осталось 2 варианта по этой цене
+- generic: 10 055 ₽
+- generic: 3 ночи • 3 352 ₽ за ночь
+- generic "+101"
+- link "Выбрать":
+  - /url: /travel/hotels/product/mini-otel-sadovaya-loft-615554323/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=5976006489000
+  - button "Выбрать":
+    - generic: Выбрать
+- link "Авторизуйтесь для скидки Апартаменты Уютные Двухместные в ЖК ЗУМ":
+  - /url: /travel/hotels/product/apartamenty-zum-1-3592113661/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=13548240143000
+  - generic "Авторизуйтесь для скидки"
+  - button:
+  - img "Апартаменты Уютные Двухместные в ЖК ЗУМ"
+- link "Апартаменты Уютные Двухместные в ЖК ЗУМ":
+  - /url: /travel/hotels/product/apartamenty-zum-1-3592113661/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=13548240143000
+  - generic: Апартаменты Уютные Двухместные в ЖК ЗУМ
+- generic: Санкт-Петербург • 5.9 км до центра • 700 м до метро Чёрная речка
+- generic "4.3"
+- generic: 20 отзывов
+- generic "Wi-Fi"
+- generic "Парковка"
+- generic: 6 242 ₽
+- generic: 3 ночи • 2 081 ₽ за ночь
+- generic "+62"
+- link "Выбрать":
+  - /url: /travel/hotels/product/apartamenty-zum-1-3592113661/?Dlts=2&checkIn=2026-11-05&checkOut=2026-11-08&cityOrRegionId=2887869237000&hotelId=13548240143000
+  - button "Выбрать":
+    - generic: Выбрать
+- region "Map"
+- generic: 11 100 ₽
+- generic: 12 000 ₽
+- generic: 16 200 ₽
+- generic: 4 400 ₽
+- generic: 6 697 ₽
+- generic: 8 273 ₽
+- generic: 8 067 ₽
+- generic: 5 606 ₽
+- generic: 18 037 ₽
+- generic: 5 225 ₽
+- generic: 9 900 ₽
+- generic: 9 683 ₽
+- generic: 13 888 ₽
+- generic: 13 600 ₽
+- generic "Тут разводят мосты"
+- generic "Проспект советской архитектуры"
+- generic "Главное для туриста"
+- generic "Идеально для экскурсий"
+- generic "Северные пляжи"
+- generic "Остров музеев"
+- generic: 8 285 ₽
+- generic: 7 061 ₽
+- generic: 6 242 ₽
+- generic: 7 072 ₽
+- generic: 8 388 ₽
+- generic: 11 880 ₽
+- generic: 9 522 ₽
+- generic: 10 400 ₽
+- generic: 5 809 ₽
+- generic: 8 875 ₽
+- generic: 7 380 ₽
+- generic: 7 286 ₽
+- generic: 8 325 ₽
+- generic: 15 555 ₽
+- generic: 9 537 ₽
+- generic: 8 872 ₽
+- generic: 9 015 ₽
+- generic: 7 750 ₽
+- generic: 7 760 ₽
+- generic: 11 250 ₽
+- generic: 9 600 ₽
+- generic: 12 900 ₽
+- generic: 6 190 ₽
+- generic: 19 650 ₽
+- link:
+  - /url: https://docs.ozon.ru/legal/terms-of-use/site/maps/
+- button:
+- generic: Районы
+- checkbox [checked]
+- contentinfo:
+  - generic: Наведите камеру и скачайте приложение Ozon Travel
+  - link "Об Ozon Travel":
+    - /url: https://docs.ozon.ru/ozon-travel/
+    - generic: Об Ozon Travel
+  - link "Политика обработки данных":
+    - /url: https://docs.ozon.ru/legal/personal-data/ru/it/
+    - generic: Политика обработки данных
+  - link "Пользовательское соглашение":
+    - /url: https://docs.ozon.ru/legal/terms-of-use/ozon-travel/
+    - generic: Пользовательское соглашение
+  - link "Поддержка":
+    - /url: https://www.ozon.ru/travel/support/
+    - generic: Поддержка
+  - link "Мильная программа":
+    - /url: https://www.ozon.ru/travel/promo/miles-program/
+    - generic: Мильная программа
+  - link "Условия бронирования для клиентов":
+    - /url: https://docs.ozon.ru/common/pravila-prodayoi-i-rekvizity/ozon-travel/conditions-booking-hotel/
+    - generic: Условия бронирования для клиентов
+  - link "Подключить отель":
+    - /url: https://extranet.ozon.ru
+    - generic: Подключить отель
+  - link "Ozon командировки":
+    - /url: https://www.ozon.ru/travel/corporate/
+    - generic: Ozon командировки
+  - link "База знаний для отельера":
+    - /url: https://hotelier-help.ozon.ru
+    - generic: База знаний для отельера
+  - link "1998 – 2026 ООО \"Интернет Решения\" (Входит в группу компаний МКПАО \"Озон\" (Ozon)). Все права защищены.":
+    - /url: //docs.ozon.ru/legal/terms-of-use/site/content-policy/?perehod=footer
+    - generic: 1998 – 2026 ООО "Интернет Решения" (Входит в группу компаний МКПАО "Озон" (Ozon)). Все права защищены.
+  - text: Применяются
+  - link "рекомендательные технологии":
+    - /url: https://docs.ozon.ru/legal/terms-of-use/site/algorithms/
+  - button:
+  - button:
+  - button:
+  - button:
+  - button "Для слабовидящих":
+    - generic: Для слабовидящих

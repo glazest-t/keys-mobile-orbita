@@ -1,0 +1,32 @@
+Browser tab: 73, Title: "Ключи — мобильный прототип", URL: "http://127.0.0.1:5173/#profile-history".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 199-200, 205, 212-241
+~0 AXWebArea Ключи — мобильный прототип, URL: 127.0.0.1:5173/#profile-history
+~					197 button Добавить бронь
+~					198 heading История поездок, Value: 1
++						199 text История поездок
++					200 text Отель или город
+~					201 text field (settable) Отель или город
+~					202 container Статус поездки
+~						203 checkbox Все, Value: 1
+~						204 checkbox Предстоящие, Value: 0
++						205 checkbox Завершённые, Value: 0
+~						206 checkbox Отменённые, Value: 0
+~					207 container ноябрь 2026
+~						208 heading НОЯБРЬ 2026, Value: 2
+~							209 text НОЯБРЬ 2026
+~						210 content list
+~							211 container
++								212 button Подробнее о поездке: Mantera Resort & Congress, 13 нояб. — 15 нояб.
++									213 text Mantera Resort & Congress
++									214 container
++										215 text Сочи  ·  13 нояб. — 15 нояб.
++								216 text Предстоящая
++							217 container
++								218 button Подробнее о поездке: Mantera Resort & Congress, 13 нояб. — 15 нояб.
++									219 text Mantera Resort & Congress
++									220 container
++										221 text Сочи  ·  13 нояб. — 15 нояб.
++								222 text Завершена
++								223 button Повторить
+The focused UI element is 0 AXWebArea Ключи — мобильный прототип, URL: 127.0.0.1:5173/#profile-history

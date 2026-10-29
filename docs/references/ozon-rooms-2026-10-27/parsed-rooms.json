@@ -1,0 +1,3285 @@
+{
+  "moscow-izmaylovo-tvoy-otel": [
+    {
+      "title": "СТАНДАРТ ДВЕ КРОВАТИ - 2МГ (ИЗМАЙЛОВО ОТЕЛЬ ГАММА 3*)",
+      "area": 21.0,
+      "bedrooms": 1,
+      "beds": "twin",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на водоем"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc1200/AZsOJ2dleASYiFPP9RsbUQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZsOJ2fNdmqsUdc_9IiWJA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZsOJ2h7ejO9_IZts5PVKQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZsOJ2jkeUe7UgaL-z4ZKw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZsOJ2ahdRaCiJAPzGug9Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZsOJ2b-ew6umoIDxbadQg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 910000,
+          "cancellation": "nonrefundable"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 990000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1830000,
+          "cancellation": "nonrefundable"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1910000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак и ужин",
+          "stayMinor": 2750000,
+          "cancellation": "nonrefundable"
+        },
+        {
+          "meal": "Завтрак и ужин",
+          "stayMinor": 2830000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "СТАНДАРТ ШИРОКАЯ КРОВАТЬ - КГ (ИЗМАЙЛОВО ОТЕЛЬ ГАММА 3*)",
+      "area": 21.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на водоем"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc1200/AZsOJ2qgc-2AMS22OjInLQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZsOJ2rtdxu4MbIVOdnnYQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZsOJ2tdfyWIULlDdFfijw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZsOJ2zYcoKs96n1yp2kCw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZsOJ2mIcOyQNamhEOr_fw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZsOJ2u3ekuIejnksxdnSg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 930000,
+          "cancellation": "nonrefundable"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 1010000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1850000,
+          "cancellation": "nonrefundable"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1930000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак и ужин",
+          "stayMinor": 2770000,
+          "cancellation": "nonrefundable"
+        },
+        {
+          "meal": "Завтрак и ужин",
+          "stayMinor": 2850000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "СТАНДАРТ ПЛЮС ШИРОКАЯ КРОВАТЬ - К+ (ИЗМАЙЛОВО ОТЕЛЬ ГАММА 3*)",
+      "area": 21.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc1200/AZsOJ2oxfAyx3dxFObMqUw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc125/AZsOJ2qJcdqurWgN0Bc4yg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc125/AZsOJ2r-cgC4-keMzZeuFg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc125/AZsOJ2tjclSqy5Sc7S5TLA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc125/AZsOJ2d2clmwgIej7LkUKg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc125/AZsOJ2gOd-q-aCrolhMhgQ.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 950000,
+          "cancellation": "nonrefundable"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 1030000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1870000,
+          "cancellation": "nonrefundable"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1950000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак и ужин",
+          "stayMinor": 2790000,
+          "cancellation": "nonrefundable"
+        },
+        {
+          "meal": "Завтрак и ужин",
+          "stayMinor": 2870000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "moscow-otel-shelterz-vdnh": [
+    {
+      "title": "Двухместный номер",
+      "area": 7.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Общая ванная комната",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc1200/AZsOHEarcFil1ONrWN6xBw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZsOHERGfemwHlPAlyztMA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZsOHESAc8eIjmpz2sHVDg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZsOHEcWdrW5tlsvP7Sx0g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZsOHETaeNGUy0A4poMBrw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZsOHEdndMqnXhxnbWP7rg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 496200,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "moscow-ibis-moskva-kievskaya": [
+    {
+      "title": "Стандартный номер - с двуспальной кроватью",
+      "area": 16.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc1200/AaBDiw-1dvqHuYsrOeM0iQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AaBG7uPleNKFqZI9xdqE6Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AaBG7ue7dam8ytcY8HJW4Q.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1392000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1892000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Стандартный номер, для маломобильных - с двуспальной кроватью",
+      "area": 24.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc1200/AaBDlfRVfmG-Y3Qah4rlig.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AaBDlflAclWhiZalwqs8HQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AaBDlf4qeE6CGfrbP6bdfA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AaBDlgLzcmWFbQZIqhUVPw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AaBDlgknd0SmkFoehLPvJA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AaBDlgzNff2liqQW41cR3g.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1392000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1892000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Стандартный номер - с 2 односпальными кроватями",
+      "area": 16.0,
+      "bedrooms": 1,
+      "beds": "twin",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc1200/AaBDk2CSetSAh7fobxI2WQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AaBDk1xydYui8zBPF-1Ckw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AaBG6WurfU-itrnuqUmYTg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AaBG6XBRe8e1WoVJFXzkdg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1392000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1892000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "moscow-apart-otel-okruzhnaya": [
+    {
+      "title": "Окружная \"Ground\"",
+      "area": 30.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc1200/AaE81UiufqadS7NBL5tagQ.png",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AaE81UkuexWdXB9ZQfXE-w.png",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AaE81Um8eO6xT1MTWcjx0Q.png",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AaE81Uq3e8GkimESIRgysQ.png",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AaE81Us5dniOoCf9mpNIIw.png",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AaE81U0Ufg6B7FLr6QJWMw.png"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 820000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Окружная \"Standard\"",
+      "area": 16.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc1200/AaEdodMteu-yS0KY6jGJCA.png",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AaEdodQ5fMm90jVeqf1vOQ.png",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AaEdodUKc_awiSA3GqnoOA.png",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AaEdodWXe1a6eEtgkVPrMg.png"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 870000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "moscow-gostinitsa-metallurg": [
+    {
+      "title": "2-местный бюджет",
+      "area": 18.0,
+      "bedrooms": 1,
+      "beds": "twin",
+      "amenities": [
+        "Общая ванная комната",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc1200/AZ6sBrvDc_y1yVebaDTvlg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZ6sBryScIuQ_XfXbQjUXA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZ6sBr11dWagJlB89bYuKA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZ6sBr6PfmeiqxtRyqe0BQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZ6sBrmxc_qf_VCl1nNbhQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZ6sBrsBfu2VBhGFG3V3sQ.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 540000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 900000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "3-местный бюджет",
+      "area": 18.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Общая ванная комната",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc1200/AZ6sBr31fueW-YZkFGy3JA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZ6sBr7edWayx64nioRE8w.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZ6sBrnidPO-5MJhNKEiCA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZ6sBrrwc7CsBMZoWeS_Jg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZ6sBrvAfmGuSF3srEEE3g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZ6sBrw7cV2lZ28dd-EjLw.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 720000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 1200000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Стандарт двухместный с 2 раздельными кроватями",
+      "area": 18.0,
+      "bedrooms": 1,
+      "beds": "single",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc1200/AaDywF4NeoeQVoP0XI0auA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AaDywGW1fGi14XnstJhQuA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AaDywG3-ctW51yent2kxtA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AaDywHIvfCaU6XsLTDScbg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AaDywGmsdBmeMhgtaL-PBQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AaDywHmUeiGbvesJn8QIcg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 720000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 1200000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "moscow-gostevoy-dom-lesnoy-sheremetyevo": [
+    {
+      "title": "Лесной раздельные 2 кровати",
+      "area": 16.0,
+      "bedrooms": 1,
+      "beds": "twin",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc1200/AZycKewGcJaVgTvp1S9zyA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZycKeyRflaWQdR2Mmzmng.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZycKe0UclCazlfx4Ix08A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZycKe30ewC1PCXELNEFiQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZycKe5AeaKuSmG1w_bbnw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZycKe6MepipI4VJqCC4kw.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 860000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Лесной двуспальная кровать",
+      "area": 16.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc1200/AZ0YAyxmdCKWL-RmAZDh1A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZ0YAyyyddqIZauBBn4SBQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZ0YAy0TcUi4W2-50TRgzw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZ0YAyoyeQ-qOhbKpxv0IQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZ0YAyqod8Kg079g2ZdqAw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZ0YAysFd7ag6NTQ9Yufig.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 860000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Лесной апартаменты",
+      "area": 28.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc1200/AZ4jYKssc2GZ6QiDBc3_ZQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZ4jYKd-dZCe9s1pNtReEA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZ4jYKgReNi_x4npsL9suQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZ4jYKifdlSEIVLd2kXFwQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZ4jYKkSevif4AZtLiSpAg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZ4jYKXZcu-o8M5ekTyWUA.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1160000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 1160000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "moscow-gostinitsa-ekonom-nasledie": [
+    {
+      "title": "2-х местный номер, с телевизором и холодильником, удобства на этаже.",
+      "area": 17.0,
+      "bedrooms": 1,
+      "beds": "twin",
+      "amenities": [
+        "Общая ванная комната",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc1200/AZs5jpwFcMa4GgPHBqTy6A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZs5jp18fCafTvTep6Rzow.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZs5jqGZdbSE4qLYkvNG8g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZs5jp3LfKe-vo4TgiJFcg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZs5jqKyeMO3-Dt7Okgw-w.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZs5jp5neoyIgL-_TIGYCg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 480000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 480000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Номер стандарт",
+      "area": 17.0,
+      "bedrooms": 1,
+      "beds": "both",
+      "amenities": [
+        "Ванная комната в номере",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc1200/AZs5jqWpeqOhuAGoFpmKBw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZs5jqYId5efWJNRp0dXfg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZs5jqhLck6qMTsYoDKiwg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZs5jqiWe82dZGMlLp3rvw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZs5jqkheU2Qk2_3ioSieA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZs5jqlcequ9r9WCwcum1Q.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 660000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "2-комнатный номер стандарт",
+      "area": 34.0,
+      "bedrooms": 2,
+      "beds": "both",
+      "amenities": [
+        "Ванная комната в номере",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc1200/AZs5jqsFcnyBxIHeFh9hJg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZs5jrALdiuCHcx87GG66Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZs5jrW_fZKVIPQ-axcsiQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZs5jqJ6e4uz1O-NJqrRXA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZs5jqL4cn-MZNNvk1vOFA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZs5jqNCej2vfNwAHQdk0A.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 700000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "moscow-arena": [
+    {
+      "title": "Д2TW ДЕЛЮКС 2-х местный",
+      "area": 15.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности",
+        "Балкон в номере"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc1200/AZsOKAjQfF-rnBOEFLXPvw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZsOKA14dFGm4nFBbM_4qw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZsOKA3TdUee_0HkSLFT9Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZsOKA5afmSUIx3OQX4CEw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZsOKAuYdY2nQu0KFRM2ng.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZsOKAk_c5KvKesP2Tjxfw.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1300000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1580000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Д2ДБ ДЕЛЮКС 2-х местный",
+      "area": 18.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности",
+        "Балкон в номере"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc1200/AZsOKBAAdLCv8tLLtok9hA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZsOKBBydLGW9Bt7EkP87g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZsOKBDGfL2lGWdPpkA60A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZsOKBEyfO6W7Br3RkxleA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZsOKBGxftKJuZbo9mP82g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZsOKBI6e1WqbqNpbaQNMg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1300000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1580000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Супериор",
+      "area": 17.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на внутренний дворик",
+        "Балкон в номере"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc1200/AZsOKBX_dIu-TIjxXaXd6A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZsOKBCPdfKRGP4ie-GFqg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZsOKBNNd1mJb5-Is1G7-Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZsOKBZsfFWRI0PDr5g63w.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZsOKBD0cUCjqsxlVzgSpw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZsOKBFidb2PfAXZ2BeZAQ.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1300000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1580000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "moscow-hostel-guten-duck-moscow": [
+    {
+      "title": "Кровать в 6-местном номере с общей ванной комнатой (только для взрослых)",
+      "area": 25.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Общая ванная комната",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc1200/AZvp0U7udGSLuFS6TXdk2w.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvp0U9_cVyPhbPT8x6NOg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZvp0VDRee2mW2gmSfkjHA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZvp0VFpeUOx3UF6_DcBoQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvp0VIUdc2wU1GG5fmb0g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZvp0U2pedSVfMXoimNKjw.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 597200,
+          "cancellation": "nonrefundable"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 682600,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Кровать в общем 6-местном номере для мужчин и женщин",
+      "area": 25.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Общая ванная комната",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc1200/AZvp0UsgfIiH4q7QCMgYSg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZvp0UhLchqAn3TDa8mKeA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZvp0UkucfGAHV2Kqnlzmg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZvp0UpLev2N-pYrsFBeVw.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 597200,
+          "cancellation": "nonrefundable"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 682600,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 682600,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Двухместный номер с общей ванной комнатой",
+      "area": 16.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Общая ванная комната",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc1200/AZvp0UpheGCuONNP6oVzkA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZvp0UuadYe3zrj3wylH0w.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZvp0VKpcn2ZfxihTk1_WQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvp0VOTfiGKMM1PTmRKUA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZvp0UyVfYCfK9Xs9Vxf3A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZvp0U2icNeEauQlno6bdQ.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 848000,
+          "cancellation": "nonrefundable"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 932800,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 932800,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "2-местный номер эконом стандарт",
+      "area": 18.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Общая ванная комната",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc1200/AaC7jUT7dUWpYFmUPilfEw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AaC7jT_ecSeZOLly5R3F1A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AaC7jUIod7qEfWGO7m5i6A.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 848000,
+          "cancellation": "nonrefundable"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 932800,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "moscow-minima-belorusskaya": [
+    {
+      "title": "Стандарт двухместный",
+      "area": 14.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc1200/AZvqFZvKdQeiojxa8R4Kkw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZvqFZm8eNasp4wqmV39GQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZvqFZpqenmuu-FsnPOUEA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZvqFZsVeWGg462HFyVaYg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZ7v6zNmdE6oQx1qLKxv2Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZ7v6yXJcbW1pyKUBGHV1A.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1064000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1350000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак и ужин",
+          "stayMinor": 1758000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Стандарт двухместный с ванной",
+      "area": 16.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc1200/AZvqFZpucYGYGeV4upT6Ww.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvqFZtuc6OQgDYuoEytZA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZvqFZwBeDOPRmdPYIqrxA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvqFZynfy2nVI3CqDkStA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvqFZ1ecCGE5xbrSC3CQw.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1127000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1411000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак и ужин",
+          "stayMinor": 1814000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Комфорт двухместный",
+      "area": 14.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc1200/AZ75nc3sc9KFTmoLPkStCQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZvqFZ1neRa2g4ilxnBo8g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZ75nc-5cmGbKHZHMQ2tVQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZ75ndGxfheKta6VnoMHkw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZ75ncsJd4GyvXoKXlwlZA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvqFZzHfZyDuWkggb6-4w.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1263000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1539000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак и ужин",
+          "stayMinor": 1937000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "moscow-otel-tesla": [
+    {
+      "title": "Стандарт на 1-м этаже",
+      "area": 12.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc1200/AaEf_ed9d9WjHbG_jUm_RQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AaEf9q7Ve7akrmGt5mj9HQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AaEf9rCJdr6CViVjute5aQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AaEf9qh0cBKBoW2FZDxVYQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AaEf9qnje5ajPDOS1HQFTQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AaEf9qtKfES6gv365EJ9HQ.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1235000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 1300000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1595000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1660000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Стандарт",
+      "area": 15.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc1200/AaEf_edCexmemU1lTDqP5w.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AaEf-HK9fG6y__YQSKam1g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AaEf-HRGcoagxL9DmTeQaA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AaEf-HZCfIOQ8hJ1EMMKUw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AaEf-HeNfCyfAAXDgoP0bw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AaEf-HikcJ-rqTUHzc6vrw.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1425000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 1500000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1785000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1860000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Комфорт",
+      "area": 18.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc1200/AaEf-HpzcBCpHtpybTwFqQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AaEf-HZhcH-jHSHgyTNkNA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AaEf-HLfcQ-UsFKkHpgulQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AaEf-IRwd8a4IaCW0sF90Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AaEf-HTwc8qAU6VL193xWw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AaEf-H1WcBKTPbMX31m-kQ.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1615000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 1700000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1975000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 2060000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "moscow-bun-in-alley": [
+    {
+      "title": "Апартаменты \"Комфорт-Мини\"",
+      "area": 13.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc1200/AZsOLllhcMmyQPK7ifB-Bw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZsOLlzce4GDrGMqDq2pzQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZsOLldVelGO3ztLZo_3Rw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZsOLlnveReQbHvcI7UUYw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZsOLlfJebKgYMWbHn8ZiA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZsOLlg3cs6oSGoELDhvUA.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 758000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Апартаменты \"Престиж\"",
+      "area": 24.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc1200/AZsOLlx_ezulEskry79oqA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZsOLlzqepGtg8elv3TPfA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZsOLlfvciuXYn_DBGDBQw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZsOLl1WdHaelWLJhMubXQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZsOLlkhfFuqxoDkPrgA1Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZsOLlmHePa0lGPlvDLdCQ.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 798000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Апартаменты \"Комфорт+\"",
+      "area": 21.0,
+      "bedrooms": 1,
+      "beds": "twin",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc1200/AZsOLlegdBG43prSorbFtQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZsOLltWcR6dL0c2a3co_w.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZsOLlgJche7tbCy6M39MQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZsOLlh7d4SCmq9AzBy-_w.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZsOLljUdxGNMHPLLuixxw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZsOLlmIcByPggIA55P6og.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 798000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Двухместный номер Comfort с видом на город (двуспальная кровать)",
+      "area": 21.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc1200/AZ0Ul5M_eKWdDm75MK4dLw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZ0Ul5A8cHS2NnqyTdZxsA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZ9fzMI2dtOlxqsjELQD9Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZ0Ul5CVcXq7bDUGrhATWw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZ0Ul5Pgcdi_i9KBSdzweg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZ0Ul5D-ejSli01zZZ4THw.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 997400,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "moscow-otel-maksima-zarya": [
+    {
+      "title": "Стандарт Двухместный (Двуспальная кровать)",
+      "area": 18.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc1200/AZvp2LVCeIyqueZNrPxb2A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZvp2LFqeKmDz4D9Sa5PGg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvp2LJKc7Op_5H3JY4naQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvp2LMWfb-JhAxuR65AXg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvp2LPgcbOKXyjFrlf5ig.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZvp2LTKevmgORrnkY4lVA.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 870000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1310000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Стандарт Двухместный (Отдельные кровати)",
+      "area": 18.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc1200/AZvp2LCRd4mquDfqgB_01Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvp2LFidreV-F0E_VIQHw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZvp2LMCdyyO7FB2UjJRjA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZvp2LIpfpiGEMQcY8zZKQ.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 870000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1266000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Студио (Двуспальная кровать)",
+      "area": 28.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc1200/AZvp2LnVco6rxV7wioWCxA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZvp2LrWerK89hYujfA5mg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZvp2LujeiCZNJGAWxgaNw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZvp2LyLc_KAsZbL3r7QGw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvp2L-NdxaatzV9Xb4Qgg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc125/AZvp2L6-eiG5rs-KbntmDA.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1296000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1736000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "moscow-moscow-marriott-imperial-plaza": [
+    {
+      "title": "Делюкс с большой кроватью",
+      "area": 27.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc1200/AZvqLI7feN-CaAraB35POQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZvqLI_HcRWxoLfEFase-A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZvqLJCtecOeljmLL8XOaw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZvqLIz0e6aNr3FVCtWwiw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvqLI3Semimc8_4_bzZlg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvqLI5uep-VOlAckfcgZA.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 2800000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 3680000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Делюкс с одной кроватью",
+      "area": 21.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc1200/AZvqLJGNcouSWpznbL7tIw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZvqLIz4dEi14qj6Bx7JCw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZvqLI2pcI-cCrGaLUWdoQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvqLI6FfjCTeSmhbxSrcg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvqLJBacrWQasIRntkuZw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZvqLJEsdVuCkZI1mAHeRQ.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 2800000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 3680000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Делюкс с двумя раздельными кроватями",
+      "area": 29.0,
+      "bedrooms": 1,
+      "beds": "twin",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc1200/AZvqLJAhfjuVfUxzwjipoQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZvqLJEGc-myEZcMxDan3w.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZvqLJHQe-WuabcUq8CmnQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvqLI0ycIiZh8-rhs9MBA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvqLI4nfuapT87U6fKLcQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZvqLI7lcpa0eitVsdHt_Q.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 2800000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 3680000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "moscow-akvamarin-zont-hotel-group": [
+    {
+      "title": "Стандарт c двуспальной кроватью",
+      "area": 22.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc1200/AZvp5fR-cmaXfWqrR6a1FQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZvp5fVsdO2ZgbNR2FNHAA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvp5fYBe7qOfvVDM7AQ1A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZvp5fa0euS2oj3NcrC63A.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1440000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 2080000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Стандарт",
+      "area": 22.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc1200/AZvp5fT0ex2pjh7Y2Bt8jA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZvp5fXqdIWZdfF5t3v9MQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZvp5fc-faSZXoEFBMGC5Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZvp5fgFfcSBSYluQei5pQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvp5fijdHONy7_kEcm-tw.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1440000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 2080000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Стандарт c 2 односпальными кроватями",
+      "area": 22.0,
+      "bedrooms": 1,
+      "beds": "twin",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc1200/AZvp5fbLd--xyM1oA64p4w.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvp5fShe4yVv5uoUS7Vrg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZvp5fVTdkuY5EzpU9oXww.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZvp5fYHfMC3DvVTcf_bRA.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1440000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 2080000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "moscow-pekin": [
+    {
+      "title": "Классик с большой кроватью, площадь номера от 19 до 20 кв.м.",
+      "area": 19.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc1200/AZvpy-JXewOiRktHOxbFlw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZvpy-LdcYK6ikAsKiP3Xw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZvpy-NOcuyzZy0v61hhwg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZvpy-QEeQiAAB7ttN-DIA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvpy-RUdB-T1tKwwubQew.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZvpy-Usdh2h53mL_86w4w.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1411000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 2142000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Стандарт Плюс с большой кроватью, площадь номера от 20 до 27 кв.м.",
+      "area": 20.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc1200/AZvpy-XCfA2EGUS5zmhE2Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvpy-ZDd_iqyylVvhrA8A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvpy-hofuipMu3sG-m7Zg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZvpy-lNfPWpUOkw3D1ZqQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZvpy-RWdma6u7YR-oDFLw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZvpy-bKdHGXMGcxcKhi0w.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1470500,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 2201500,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Стандарт Плюс с двумя одноместными кроватями, площадь номера от 20 до 27 кв.м.",
+      "area": 20.0,
+      "bedrooms": 1,
+      "beds": "twin",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc1200/AZvpy-VKfCWMvJbMW-E57Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvpy-aQczKuxn8xkYOY2w.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvpy-djdOyM72yCJOOdaA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvpy-fecfaSpZaMvf3-eQ.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1470500,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 2201500,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "moscow-zvezdy-arbata-otel-i-apartamenty": [
+    {
+      "title": "Делюкс с одной большой кроватью",
+      "area": 28.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc1200/AaE5fawGeGyogilLUliRLQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AaE5faKbfvO-XK9ZnqXKuw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AaE5faYifUiDpd0kWVyikw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AaE5faeWe6uQMSJ6x9rFyQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AaE5fampfziSZWFDcq0NcQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AaE5fatDfUmwRc3aDUH_8Q.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 2220000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 3020000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Делюкс с двумя раздельными кроватями",
+      "area": 28.0,
+      "bedrooms": 1,
+      "beds": "twin",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc1200/AaE5f3gpdZeZjHnUcixtpw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AaE5f3rrdwGoFhbUHIdotQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AaE5f3zPfpO7TNeoJli-pg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AaE5f3-OdDCLohEUaJvtAw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AaE5f4VadRqWrAcheUk-wg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 2220000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 3020000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Премиум Делюкс с видом на Новый Арбат",
+      "area": 30.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc1200/AaE5f4Yxc96Lj8BZBF_9Dw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AaE5f4bndjenxciws3h7tQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AaE5f4dHfNyE8hNFIaKXQw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AaE5f4gheAS-FREpkBw8wg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AaE5f3tbcYa-SpbSZTDqpg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AaE5f4JJdx-CYkkYQkQH4w.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 2940000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 3740000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "moscow-palmira-business-club": [
+    {
+      "title": "СУПЕРИОР",
+      "area": 32.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc1200/AZvp4M8odLCZAbfIqOIj1Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZ27Pdv6enahXFTlzZDUgw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvp4NBFe9278zSGsaovqQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZvp4M5beQq03F8O86dj4w.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZvp4NEbeVKqszqH_jD7aA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvp4M17e86_JkVyzk7fHg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 2268000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 2520000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 2988000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 3320000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "СТУДИЯ",
+      "area": 32.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc1200/AZ27P7y6cayLwacXQquTQQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZvp4NHZcAublEhlnm0C4A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvp4NAPelubZzhRAwJ-4A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvp4NK9fV-Lejtj9FH8Sg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 2520000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 2800000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 3240000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 3600000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "СУПЕРИОР с видом на реку",
+      "area": 32.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на водоем"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc1200/AaEVxZgCfQ6HIrZtHPyPYg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AaEVznBGezuPFqh7-yLW7g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AaEVznVbcNm64WeGgECfGw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AaEVznpceHuyyWyn4VmoyA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZvp4NNOfkSTHDQtzjFf5g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvp4NQkd1Ob1qY2A34AZg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 2772000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 3080000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 3492000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 3880000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "moscow-otel-mandarin-moskva": [
+    {
+      "title": "Бюджетный двухместный номер с ограниченным видом",
+      "area": 15.0,
+      "bedrooms": 1,
+      "beds": "both",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc1200/AZvqO2u_fZyesoPTbgvVXg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvqO2ynfa6Ot9p0DbtsjQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvqO21ddnmY4dH_7Xk6mQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZvqO25FfemnWb20ldBFlQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvqO28EdzGN7yjbetxe6g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZvqO2_LfCKeTe8Z5-13jA.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 817000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 886000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1486000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1486000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак и ужин",
+          "stayMinor": 2286000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак и ужин",
+          "stayMinor": 2286000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Стандартный номер с одной двуспальной кроватью",
+      "area": 20.0,
+      "bedrooms": 1,
+      "beds": "both",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc1200/AZvqO3JFcI2iVvST_bJfiA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZvqO3MleTiK4QPQQ_uz-A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZvqO32OeLC6gN7PU5zGdg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvqO3QIe-Sm3cxb2rtPRQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZvqO3uZeVexDr1b57kPDA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvqO3Tbc16tzAuVuaBiRA.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 964000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 1044000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1644000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1644000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак и ужин",
+          "stayMinor": 2444000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак и ужин",
+          "stayMinor": 2444000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Стандартный номер с двумя раздельными кроватями",
+      "area": 18.0,
+      "bedrooms": 1,
+      "beds": "twin",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc1200/AZvqO32QfH2ChCOR4Q3icQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc125/AZvqO3dfecuLgeGWjyBNXw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc125/AZvqO3iFcbyXDTXYLTE84w.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc125/AZvqO35bcka7PdL-40XR2A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc125/AZvqO3J_fJCMixyWJlN7iQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc125/AZvqO3pTe7qYU2P1GCMClw.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 964000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1644000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак и ужин",
+          "stayMinor": 2444000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "moscow-otel-gettsleep-sheremetevo-terminal-aeroekspress": [
+    {
+      "title": "2-местная капсула (общие удобства)",
+      "area": 3.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Общая ванная комната",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc1200/AZs3MIYtciCyPzh_eXKr-g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZs3MIeneQuBe50Wlmmwsg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZs3MIlAeRq9-15XjwYShQ.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 840000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "spb-valo-network": [
+    {
+      "title": "Нетворк Стандарт 3* с большим матрасом на подиуме",
+      "area": 16.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc1200/AZvp2j7GeAm3FIJ-6UAlkw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvp2kCgdNG1BnOEpjKuAA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvp2j-QePeyiIOc8-FZfg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZvp2kFxeIevCBmVdkdFUQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZvp2kKlc4yzLE-uCyhlrw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZvp2kOWex2W8fw0woDiGg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1130000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1910000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Нетворк Стандарт Плюс 3* с раздельными матрасами на подиуме (с возможностью соединить)",
+      "area": 18.0,
+      "bedrooms": 1,
+      "beds": "twin",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc1200/AZvp2kjNcyeJteHbdYtSzg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZvp2kZGcXyxvQHT_KCWrA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZvp2kWTfe2PcXZfmxSJrw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZvp2kfYeKmEx28zdrPrBw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvp2kE9eFuasUAzOGqPBA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZvp2kTSfMmAP3P0PFELJA.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1190000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1970000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Нетворк Стандарт Плюс 3* с большим матрасом на подиуме",
+      "area": 18.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc600/AZvp2j9-fAyxk2GwZDH3ew.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc125/AZvp2kGMfw-UjYeV-N_-5A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc125/AZvp2kMPdvW1-_HUXn1rFQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc125/AZvp2kCZfrSlLZwmB-iVhg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc125/AZvp2kJpdOaclehG3ynbeg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc125/AZvp2kYRcImiycnEkOliYA.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1250000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 2030000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "spb-valo-business": [
+    {
+      "title": "Бизнес Комфорт Классик 4*",
+      "area": 24.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc1200/AaAecyh4cD2vK7lYN89cAg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AaAecynefp2wfPYjLpbjlA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AaAecys4cxKJnBjQ91Citg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AaAecywlcYmqkGozUJjJNQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AaAecyB0dSqLrnBS0T8aWw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AaAecyKefyeJL3sef3Df7A.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1230000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 2310000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Бизнес Комфорт 4*",
+      "area": 24.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc1200/AZvpxyc8fSSc5N78N0Dy4Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZ1Dx8cXcnivnhrhg0F8nA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZvpxyPscsi6jmhPi_oaKA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZvpxyWrc6-aiZE_GMbokA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZvpxyk-c_GB52Raatpjww.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZ1Dx8fMfe6moVVEYPx_Kg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1260000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 2340000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Бизнес Комфорт с балконом 4*",
+      "area": 23.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на внутренний дворик",
+        "Балкон в номере"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc1200/AZvpxyYpez6orgOWPm0Vug.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc125/AZ1METEaet-ckp4t2I0euQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc125/AZ1METNNeXSC2ZwlIBs7Iw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc125/AZvpxynqeheDhrqLiWudQQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc125/AZvpxybYd6OdiNp3oUSAsg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc125/AZ1METOadASQG1bfijtKDw.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1260000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 2340000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "spb-demokrat-na-kamennoostrovskom-39": [
+    {
+      "title": "Двухместный КОМФОРТ с двуспальной кроватью",
+      "area": 14.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc1200/AZ_6MAwpeuma49BSU7qHeA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZ_6MA9SfJax0EY_uPl13g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZ_6MAy5c5iYLWGkNII8Pg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZ_6MA7bcP62Q9yBgGKC_Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZ_6MA_deTOXHddPXGcaiQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZ_6MBCDej-Uc2KlFIDUfw.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1200000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "spb-apart-otel-uno-by-valo": [
+    {
+      "title": "Комфорт двухместный",
+      "area": 15.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc1200/AZvpyOCRfxajCoucz1KCzA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZvpyONAegOhFFRuND4kww.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZvpyOQOdDGr5BdmrisGsg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvpyOj4eUSOWEMGTDGPpA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZvpyOmyd2-NSGvTaTb0Bg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvpyOG6dq2q_1TNenpHSg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1620000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Комфорт Плюс",
+      "area": 19.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc1200/AZvpyOJ8fJ-HmWv-AaTwtQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvpyOkNcz2_qUHNGgTP_Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZvpyOHddRKGvaEvR_Q26g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvpyONJfQyF4_SBxx6J4Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZvpyO7TeqqlHeBh7ycPdg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvpyO-qfmqhoozmwqeYJg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1800000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Супериор",
+      "area": 21.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc1200/AZvpyONXchmc0qpof8WtVg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvpyOvQeZOElgZy85ZqSw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZvpyOsJdYeDV92KsPLbng.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvpyOUCetuEV1SyTrqa1g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvpyOQ_eMC2MppxRNiIIQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZvpyOaIfyu5Z5aPYHk2dQ.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 2040000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "spb-apartpeydzh-nevskiy": [
+    {
+      "title": "Бюджетный номер",
+      "area": 9.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc1200/AZsOJ-QRcHmvEDEl3g9aPA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZsOJ-SRcQGhfn82sRvuJw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZsOJ-bmdv2FWhJRE4kK5w.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZsOJ-Tze-el1g0tfD3wGw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZsOJ-dQcSSNTZanpD5xug.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZsOJ-gCefGHo-KKTNqEag.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 884800,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Номер-студио",
+      "area": 14.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc1200/AZsOJ9sxftK16l-DCkypBw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZsOJ9ufezSriD6mXDk0Sw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZsOJ9lifcCkSaKZ8RJw7g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZ3354glfciRsywF9902Tw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZsOJ9nBexKp2mZt0QusNw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZsOJ9oedkqfcHlSP_8mPQ.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 885000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Двухместный номер \"Романтик\" с двуспальной кроватью",
+      "area": 17.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc1200/AZsOJ9yEeYmudjQSd0sZKw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZsOJ98ed0uR6Q-A0eIT-A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZsOJ90bchWIGC1y7ax4_A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZsOJ9-EdHiOZw29caFfwA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZsOJ-BKfyKnTxePw1w8MA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZsOJ92Ae7upU7SKUo4KXQ.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 955800,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "spb-osobnyak-molvo": [
+    {
+      "title": "Бюджетный номер с общей ванной комнатой на этаже",
+      "area": 14.0,
+      "bedrooms": 1,
+      "beds": "twin",
+      "amenities": [
+        "Общая ванная комната",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc1200/AZvp9-NufGCOvYMHVUnEnQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvp9-QPdhK4ceG7hl4iNQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZvp9-TBdeKoOgft0fqLDA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZvp9-VIcViwGUm0TQUh3w.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvp9-XhdtuC--4xXhD_sA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvp9-a1ew2jYk94NK0Vfg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 440000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Номер Улучшенный Бюджетный (общие удобства)",
+      "area": 12.0,
+      "bedrooms": 1,
+      "beds": "twin",
+      "amenities": [
+        "Общая ванная комната",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc1200/AZs6CLrVceyRCRyDo2bdyQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZs6CL1je56BD6sS123ARg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZs6CMC9eKS0ChJ7HCuKkg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZs6CM6bfkmRBuorxL8kcA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZs6CMJZdmy6UoB7kAqk-g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZs6CNGFfJi5yBqNTHc2OA.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 470000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Стандарт с двуспальной кроватью",
+      "area": 14.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc1200/AZvp9-JudRa7l4R_A3CvnQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvp9-cfcR6E0Q3FulJKOA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvp9-fvdGWDq5gH_yKlGQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZvp9-iaehaFCw-TFuWqFg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZvp9-Mvere2IP62i1fhGQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZvp9-QBe_GBHgcY9zvoTA.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 999000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "spb-apartamenty-new-horizon-liteyniy": [
+    {
+      "title": "Стандартные апартаменты",
+      "area": 12.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc1200/AZsOId-GerWieU6vyFCwkw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZsOId_2dd6_pifnQ7EfXg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZsOIeBhd-KOei7hD2p0OA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZsOIeD_eK2DbMbag7V_vA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZsOId2TeKOCCJZetT7F4g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZsOId4Jc8-gDSrgRWsMIg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 956000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Улучшенные апартаменты",
+      "area": 16.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc1200/AZsOId0rcW20cR5dEMSoPg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZsOId1-fcGLFzddpOSPwg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZsOId9yeF6MwlSb5DYQpg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZsOId3OfQm3Ediy7UCHKw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZsOId4rchey4jXSiCVRWA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZsOId_NeJGhvkZNlY3Wiw.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1088000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "spb-ramada-plaza-by-wyndham-st-petersburg": [
+    {
+      "title": "Рамада Комфорт 4* без посещения бассейна",
+      "area": 24.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc1200/AZ8m20xUdyiUq8vxsrh-ug.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZ8m201NdjWX6mgfMnlu1Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZ8m204cdVazxV-EG5icDA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZ8m208HchWn4dA9wgyI4g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZ8m20_AfeaPpPfrWpOSow.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZ8m21Bpfl-D9uPxDhJ4Ug.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1350000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 2130000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Рамада Комфорт 4*",
+      "area": 24.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc1200/AZ1DwzEied-rbQwVM987IA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZ1DwzJDegKWciMSsd2OWg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZvqP4kscF-mSUcVIrfOlQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZvqP4hcc1G56R5O6ntcDA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZvqP4bLfDabS59HthgP7Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvqP4d7cSitbbwkZoKxgQ.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1500000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 2280000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Рамада Полулюкс 4* без посещения бассейна",
+      "area": 27.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc1200/AZ8m20ybfgGODFaXAhxE8Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc125/AZ8m201XdvKCiV0nOCJh6Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc125/AZ8m204Ed4KeBaQGs25SZA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc125/AZ8m21ANcJWgXsAdFjPPRA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc125/AZ8m21GSca6WaPcrELSTSA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc125/AZ8m21JJfaCp1x3-A5t0-A.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1500000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 2280000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "spb-apartpeydzh-elagin": [
+    {
+      "title": "Студия",
+      "area": 26.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc1200/AZsN7IVkfhWCbJLeofIvGw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZsN7IYkfWWlVEKV-kcpqg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZsN7IMJcXOFs9IJSVsdMA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZsN7INgcxamxGy9fVGEHw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZsN7IPXfime6DojPsCV4w.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZsN7IQdfIimO3dcaqD6qQ.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 896800,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Студия с диваном",
+      "area": 26.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc1200/AZsN7Idudxi4q2xELw7Uog.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZsN7IhfctyHc9Zm-20qXw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZsN7IpFcoKHz_HGSzpKJA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZsN7IqufCWDKOuYZTLpVg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZsN7IsheLW0qDhzPCVvNQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZsN7IjTfSm0sEBAv9iDsA.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1209400,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Однокомнатный апартамент",
+      "area": 38.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc1200/AZsN7IffeTa7zK07JAg6pQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZsN7Ig-fpKFQdzuTnv4Hw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZsN7Il2dMOz-RP7lXoChg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZsN7IslcHagc0z0DbrhYg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZsN7Inhcs2NbeBVc5Rz6g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZsN7It0dZqtlS4WpSRRpg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1390900,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "spb-otel-rotas-city-center": [
+    {
+      "title": "Rotas Сити Центр апартаменты: Гродненский пер., 12/14, 3 этаж - Апартаменты Стандарт",
+      "area": 10.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc1200/AZxofjk3c_uKd3kDDD_3-w.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZxofjEhciGfTJBbcap6XQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZxofjPadbiSylIPEmBA9w.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZxofjpScOKOcxpFCrdWcg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZxofjSRfqG-Ioa_ZfZUTQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZxofjWefjGDbyuA1b4EzQ.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 749700,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Rotas Сити Центр отель: Гродненский пер., д. 12/14 - Улучшенная студия",
+      "area": 25.0,
+      "bedrooms": 1,
+      "beds": "both",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc1200/AZxofiNIcKiqiiC_pYQXtg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZxofiP1c-icfPyycoIfdA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZxofh9We7quHHL_9N5JUQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZxofiALeIix__zFbeQ_mQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZxofiDGchmuIsqPGVliEw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZxofiSxdBCgfWZeQ4CauA.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 789700,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Rotas Сити Центр отель: Гродненский пер., д. 12/14 - Делюкс студия",
+      "area": 33.0,
+      "bedrooms": 1,
+      "beds": "both",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc1200/AZxofid7fze_FndfGTsexw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZxofikFc_K9hPPdsM-nnA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZxofiabcGGCvsvscVVj1g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZxofiqddwybGFurWW_C5Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZxofit0d0OpPZAwsT9oBg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZxofinMePGGsM2tcrjlRA.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 789700,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "spb-apartamenty-dvoriki-petra-na-gorohovoy": [
+    {
+      "title": "Четырёхместные апартаменты Superior",
+      "area": 12.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc1200/AZsqCQa5e9SFGFBLs3bd0A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZsqCQhGe4a3wof2Onnepg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZsqCQh-c_qSlI2Bbd64tg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZsqCQcXdrWNT94ytB60mw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZsqCQWwdr64NCoz2nxk8g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZsqCQYHdfyIAzwi3ldQzw.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 885000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "spb-greenwich-by-friends": [
+    {
+      "title": "Смарт с двуспальной кроватью",
+      "area": 10.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc1200/AZsOF1F3eZeaF9djNnr1fA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZsOF1Hhe7C0JvdJd4fBUA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZsOF1Jac6WAK7nCrZiHMg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1196200,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1532200,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "spb-ligotel": [
+    {
+      "title": "Стандарт",
+      "area": 13.0,
+      "bedrooms": 1,
+      "beds": "both",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc1200/AZvpzrfReq2Qe6oA2i9t9g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvpzriWdVC2vqL9RkR4BQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZvpzrljeP2aAI2Wqh10YA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvpzrp6dZ-UbT27j1J0mA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZvpzrsxesGvl31Phpzzmg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvpzrxTfG-KbjG3Hikttg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1300000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1540000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Комфорт",
+      "area": 16.0,
+      "bedrooms": 1,
+      "beds": "both",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc1200/AZvpzr_IcXSHielCzSlcOQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZvpzrkLeh2pfc99KZOyQg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZvpzrn4dT2v3jzog31EuA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZvpzrtBeO-JLYP_e4THuQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZvpzsDGdH-cQB4N5Zj3Uw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvpzrxDdFSAWqIdJGDPZw.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1596000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1836000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Комфорт с раздельными кроватями",
+      "area": 16.0,
+      "bedrooms": 1,
+      "beds": "twin",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc1200/AZvpzruDfFyjJ4PMkE8BOQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc125/AZvpzrxudE242v15hFBVwg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc125/AZvpzr0SfO2NnMGTieTe2A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc125/AZvpzr3Tcg2cxQG-wIoCYQ.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1596000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1836000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "spb-mini-otel-moov-apart-bogema": [
+    {
+      "title": "Апартаменты стандарт с 1 двуспальной кроватью",
+      "area": 20.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc1200/AZs5zwBmeki4AJSxgR8GUA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZs5zxRjeVC8OOg8sU67JA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZs5zwNcerqPB79D-u20Lg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZs5zxa8d-6QMTZ7CeJ87w.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZs5zxkAfbqO8hfUtcDTkA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZs5zvi5fz-6cu7wbPC9lg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 893600,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "spb-mini-otel-demokrat-na-nevskom-107b": [
+    {
+      "title": "Двухместный КОМФОРТ",
+      "area": 14.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc1200/AZsN-3yXePqYFKpHlRMErQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZsN-32Kemq5oC1_-ZGD0g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZsN-35ReN-_yLAlntEkeQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZsN-399daSRWSueDMluDA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZsN-4ATdEW6HC98nt4Tww.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZsN-4CIeymTMkrDgYANIw.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 870000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "spb-aristokrat": [
+    {
+      "title": "Улучшенный Стандарт с раздельными кроватями",
+      "area": 17.0,
+      "bedrooms": 1,
+      "beds": "both",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc1200/AZvqL_KDfl6NE0jj-vwbow.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvqL-0nctaw2aMzvWDAhw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZvqL-3Vfu6-CPiXxZWLiQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZvqL-6Ce-K3mfNrENvK4Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZvqL-8_cCmqgcuZr8sV-Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZvqL_MqcAaQzBmo1ljKyw.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 742500,
+          "cancellation": "nonrefundable"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 825000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 825000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Комфорт с одной большой или двумя раздельными кроватями",
+      "area": 17.0,
+      "bedrooms": 1,
+      "beds": "both",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc1200/AZvqL_TxfRKpgN_HVrYQ7A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvqL_XVcjC3gtJdoEOJzQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvqL_aoe86A2PYZhHyjiA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZvqL--Wdo6KUZsArTiEGA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZvqL-zNda6t6c7eZ-LWTA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZvqL_A8dO2AZ-txVQld3Q.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 783800,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Стандарт с одной большой или двумя раздельными кроватями",
+      "area": 15.0,
+      "bedrooms": 1,
+      "beds": "both",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc1200/AZvqL-6NeaiGp5zDpL49Ag.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc125/AZvqL-9Kd2i28xFI37FYkw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc125/AZvqL_AAetedLVSrQkzONg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc125/AZvqL_Czd9q3BFjuUSX94w.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc125/AZvqL_FdeHSq5M9a0nfpzA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc125/AZvqL-x_cDqsBPBSZyhX0A.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 870900,
+          "cancellation": "nonrefundable"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 957000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 957000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "spb-apart-otel-port-comfort-by-old-nevskiy": [
+    {
+      "title": "Стандарт с 1 двуспальной кроватью",
+      "area": 13.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc1200/AZvp1ucjcmKS1H817kkByg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZvp1uQBdNWiKX_vf9U6tQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvp1uTAdh6s2ACLjvIXHg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZvp1ugmdjOmfMBoHe8hWg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZvp1uBMcDGeLylXGj485w.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZvp1uEIdM6hFJHNBym6Wg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1080000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Студия Комфорт",
+      "area": 17.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на внутренний дворик"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc1200/AZvp1uKCd56tC3zJYUtW4g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZvp1uNMc5KJuLebm0r_Dw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZvp1uQ9eAaFGHW1VO8rjQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZvp1ulRd82HBEZ5L5RpfA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvp1uU2dYyna-9WKTywaQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZvp1un2fOCnBgEv4HGVcA.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1209600,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "spb-arkada": [
+    {
+      "title": "Стандартный номер",
+      "area": 17.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc1200/AZvp3KeIcbeqs5z8dC12jQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZvp3KhFc0GsMUBUKciQ8g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZvp3KQFdbSkq90pYcXlOw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZvp3KUueLuZ7o8MxJFqiw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvp3KXIfnKaiqF8bNV03Q.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZvp3KZeeSuIFXCebqe4FQ.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1077000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1158000,
+          "cancellation": "nonrefundable"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1317000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Комфорт",
+      "area": 23.0,
+      "bedrooms": 1,
+      "beds": "unknown",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc1200/AZvp3K55cgaYjz7TlKJhMA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZvp3KVIeUCeEKRtoBhnCA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-06/wc250/AZvp3Ks_dNautPLACh0fag.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZvp3Kc5faK9L5kr_2koZw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZvp3Kv5ev6y6sbQwfyqDA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZvp3KhSdvCXnD52vgEabQ.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1227000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1284000,
+          "cancellation": "nonrefundable"
+        },
+        {
+          "meal": "Завтрак",
+          "stayMinor": 1467000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "spb-mini-otel-sadovaya-loft": [
+    {
+      "title": "Номер комфорт премиум с 1 двуспальной кроватью",
+      "area": 15.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc1200/AZs51ofqdAOBYHrAxOiOKg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZs51rzic66i0-iYvhPbNA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZs51q3WeRm4a7lxkdKDug.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZs51rHxere8nJxNjbMTpg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZs51seIe7a4SGxBGSZQbw.png",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-04/wc250/AZs51ptqftCA7nm2OtrWMw.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1020000,
+          "cancellation": "nonrefundable"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 1110000,
+          "cancellation": "unknown"
+        }
+      ]
+    },
+    {
+      "title": "Номер эконом с 1 двуспальной кроватью",
+      "area": 15.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc1200/AZs51rAUej2InnH-YpZrqg.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc250/AZs51qp9fa2KeyYxtjmObQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-02/wc250/AZs51rRPdnCMTWsHb2ExIw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc250/AZs51ov7fDOE-VscOA4twA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZs51paqfFG2isAnH3TXjg.png",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZs51puXcbKqEQCmSbt1Sw.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1020000,
+          "cancellation": "nonrefundable"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 1110000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 1110000,
+          "cancellation": "free"
+        }
+      ]
+    },
+    {
+      "title": "Номер улучшенный стандарт с 1 двуспальной кроватью",
+      "area": 20.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Кондиционер",
+        "Wi-Fi",
+        "Вид на окрестности"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc1200/AZs51rW0e0CLt02kAE52DQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-07/wc125/AZs51oOIfZm5OnWducth6A.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc125/AZs51og-e_25HToNqJ_6MQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc125/AZs51pjAccW8c9VKAfryhQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc125/AZs51ppCfoKLYPjcNDACSQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-01/wc125/AZs51o0id8aEwluAA_jC8Q.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 1110000,
+          "cancellation": "nonrefundable"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 1260000,
+          "cancellation": "free"
+        },
+        {
+          "meal": "Без питания",
+          "stayMinor": 1260000,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ],
+  "spb-apartamenty-zum-1": [
+    {
+      "title": "Двухместные апартаменты с красивым видом из окна (двуспальная кровать)",
+      "area": 18.0,
+      "bedrooms": 1,
+      "beds": "double",
+      "amenities": [
+        "Ванная комната в номере",
+        "Красивый вид"
+      ],
+      "photos": [
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc1200/AZ2Vdnc-dV20606JsfXSjw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-05/wc250/AZ2VdnfieGCuUQ4VuMIZ0g.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-09/wc250/AZ2VdnoHdFmss3L9DmEEwQ.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-08/wc250/AZ2Vdn7Ec1esU94Z6n8Agw.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-03/wc250/AZ2VdnpmfOOqMJoSwWj1rA.jpg",
+        "https://cdn1.ozonusercontent.com/s3/hotels-media-00/wc250/AZ2Vdn8oese2lBHQbB3nkg.jpg"
+      ],
+      "rates": [
+        {
+          "meal": "Без питания",
+          "stayMinor": 656400,
+          "cancellation": "free"
+        }
+      ]
+    }
+  ]
+}

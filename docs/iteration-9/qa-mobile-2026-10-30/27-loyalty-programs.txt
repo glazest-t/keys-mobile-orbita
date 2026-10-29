@@ -1,0 +1,39 @@
+Browser tab: 73, Title: "Ключи — мобильный прототип", URL: "http://127.0.0.1:5173/#loyalty-programs".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 199-293
+~0 AXWebArea Ключи — мобильный прототип, URL: 127.0.0.1:5173/#loyalty-programs
+~					197 text Программы отелей
+~					198 text Отель или город
++					199 text field (settable) Отель или город
++					200 container Тип программы
++						201 checkbox Все, Value: 1
++						202 checkbox Скидки, Value: 0
++						203 checkbox Баллы, Value: 0
++						204 checkbox Сети, Value: 0
++					205 text Баллы и скидки каждой программы учитываются отдельно
++					206 button Орбита · Казань Сеть · 2 отеля
++						207 text Орбита · Казань
++						208 text Сеть · 2 отеля
++					209 button Mantera Resort & Congress Сочи Скидка 7% 0 баллов
++						210 text Mantera Resort & Congress
++						211 text Сочи
++						212 container Скидка 7%
++							213 text − 7 %
++						214 text 0
++						215 text баллов
++					216 button Орбита в лесу Санкт-Петербург 2 500 баллов
++						217 text Орбита в лесу
++						218 text Санкт-Петербург
++						219 text 2 500
++						220 text баллов
++					221 button Апарт-отель Площадь Казань Скидка 15%
++						222 text Апарт-отель Площадь
++						223 text Казань
++						224 container Скидка 15%
++							225 text − 15 %
++					226 button База отдыха Берег Казань Скидка 15%
++						227 text База отдыха Берег
++						228 text Казань
++						229 container Скидка 15%
++							230 text − 15 %
+The focused UI element is 0 AXWebArea Ключи — мобильный прототип, URL: 127.0.0.1:5173/#loyalty-programs

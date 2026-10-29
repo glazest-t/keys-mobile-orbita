@@ -1,0 +1,112 @@
+.hotelier-page{display:flex;flex-direction:column;gap:24px;flex:1;padding:12px 0 8px}.keys-app .hotelier-page h1{margin:0;font:500 24px/30px Unbounded;letter-spacing:-.7px}.keys-app .hotelier-page p{margin:8px 0 0;font:400 15px/23px Onest;color:var(--k-text-secondary)}.hotelier-actions{margin-top:auto;display:flex;flex-direction:column;gap:6px;padding-top:16px}.hotelier-invitation{position:relative;overflow:hidden;border-radius:24px;background:var(--k-action-primary);color:white;padding:20px;display:flex;flex-direction:column;gap:12px}.hotelier-invitation small{font:400 12px/18px Onest}.hotelier-invitation strong{font:500 18px/24px Onest}.hotelier-orbit{position:absolute;right:-55px;top:-60px;width:180px;height:180px;border-radius:50%;border:24px solid #ffffff14;pointer-events:none}.hotelier-steps{background:var(--k-surface-card);border:1px solid var(--k-border-subtle);border-radius:22px;overflow:hidden}.hotelier-steps>div{display:flex;align-items:center;gap:12px;padding:14px 16px}.hotelier-steps>div+div{border-top:1px solid var(--k-border-subtle)}.hotelier-steps>div>span:last-child{display:flex;flex-direction:column;gap:3px}.hotelier-steps strong{font:500 15px/21px Onest}.hotelier-steps small{font:400 12px/17px Onest;color:var(--k-text-secondary)}.hotelier-status-card{display:flex;flex-direction:column;align-items:flex-start;gap:14px;background:var(--k-surface-card);border:1px solid var(--k-border-subtle);padding:16px;border-radius:22px}.hotelier-status-card>div{width:100%;border-top:1px solid var(--k-border-subtle);padding-top:14px;display:flex;flex-direction:column;gap:5px;font:400 14px/20px Onest}.hotelier-status-card>div>span{color:var(--k-text-secondary)}.hotelier-status-card strong{font-weight:500;overflow-wrap:anywhere}.hotelier-success{display:flex;flex:1;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:18px;padding:50px 10px}.hotelier-success-icon{width:88px;height:88px;border-radius:50%;display:grid;place-items:center;color:#16865a;background:#bff0de}.hotelier-demo{margin-top:12px}.hotelier-demo>small{display:block;margin:6px 0}.hotelier-demo>button{display:block;margin:4px 0}
+
+.hotelier-actions>a{text-decoration:none}
+.hotelier-banner{display:flex;position:relative;border:1px solid var(--k-border-subtle);border-radius:22px;background:var(--k-surface-card);overflow:hidden}.hotelier-banner-action{display:flex;align-items:center;gap:12px;padding:16px;border:0;background:transparent;flex:1;min-width:0;text-align:left;color:var(--k-text-primary)}.hotelier-banner-action>span:nth-child(2){display:flex;flex-direction:column;gap:4px;flex:1;min-width:0}.hotelier-banner-action strong{font:500 14px/20px Onest}.hotelier-banner-action small{font:400 12px/17px Onest;color:var(--k-action-primary)}.hotelier-banner.is-approved .icon-tile{background:#bff0de;color:#16865a}.hotelier-banner-close{border:0;background:transparent;align-self:flex-start;flex:none;width:36px;height:44px;display:grid;place-items:center}.hotelier-login{display:flex;flex-direction:column;gap:20px}.keys-app .hotelier-browser-help{font:400 12px/17px Onest}.hotelier-status-card>div:first-child{border-top:0;padding-top:0}
+.keys-app.hotelier-entry{background:radial-gradient(90% 60% at 50% 18%,#fff 0%,#eef0ff 60%,#e3e8ff 100%)}
+.hotelier-entry .app-header{background:transparent}
+.hotelier-header>div{display:flex;align-items:center;gap:8px}
+.hotelier-header>div>span{padding:5px 10px;border-radius:10px;background:#ffffffb3;font:500 12px/18px Onest}
+.hotelier-entry .hotelier-page{padding-top:18px}
+.hotelier-entry .hotelier-actions .k-button{border-radius:14px}
+.hotelier-entry .hotelier-actions .k-button.ghost{min-height:44px;font-size:14px}
+.hotelier-entry .hotelier-success{gap:14px;padding:30px 0}
+.hotelier-entry .hotelier-success-icon{width:84px;height:84px}
+.hotelier-entry .hotelier-success p{max-width:290px;margin:0}
+.hotelier-status-card>.k-status{align-self:flex-start}
+.hotelier-status-card>.hotelier-email-summary{gap:6px}
+.hotelier-email-summary>div{display:flex;align-items:center;gap:12px;min-width:0}
+.hotelier-email-summary strong{flex:1;min-width:0}
+.hotelier-email-edit{flex:none;min-height:44px;margin:-8px -6px -8px 0;padding:8px 6px;border:0;background:transparent;color:var(--k-action-primary);font:500 13px/20px Onest}
+.keys-app .hotelier-profile-identity{display:flex;flex-direction:row;align-items:center;gap:14px;text-align:left}
+.keys-app .hotelier-profile-identity>.avatar.big{width:60px;height:60px;margin:0;flex:none;background:#eef0ff;color:#2f5bff;border:0;box-shadow:none;font-size:21px}
+.hotelier-profile-identity>div{display:flex;flex-direction:column;align-items:flex-start;min-width:0;gap:4px}
+.keys-app .hotelier-profile-identity h1{font:500 22px/28px Unbounded;letter-spacing:-.6px;margin:0}
+.keys-app .hotelier-profile-identity p{font:400 13px/19px Onest;margin:0}
+.hotelier-profile-badge{position:relative;display:inline-flex;align-items:center;gap:6px;max-width:100%;border:0;border-radius:13px;min-height:26px;padding:3px 9px 3px 4px;background:var(--k-feature-friendly);color:#fff;font:500 12px/18px Onest;white-space:nowrap;box-shadow:0 6px 14px #0b6b6326}
+.hotelier-profile-badge::before{content:"";position:absolute;inset:-9px 0}
+.hotelier-profile-badge>span:first-child{display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:#ffffff26;flex:none}
+.bottom-sheet:has(.hotelier-info) .sheet-header{position:relative;padding-left:78px;min-height:62px}
+.bottom-sheet:has(.hotelier-info) .sheet-header::before{content:"";position:absolute;left:18px;top:0;width:48px;height:48px;border-radius:15px;background:url('/brand/assets/logo/mark-white-ui.svg') center/28px 28px no-repeat,var(--k-feature-friendly);box-shadow:0 6px 14px #0b6b6326}
+.hotelier-entry .k-field-box{border-radius:14px}
+.hotelier-info{display:flex;flex-direction:column;gap:18px;font:400 15px/23px Onest;color:var(--k-text-primary)}
+.hotelier-info p{margin:0;color:var(--k-text-primary)}
+.bottom-sheet:has(.hotelier-info) .sheet-title{font:500 20px/26px Unbounded;letter-spacing:-.5px}
+.hotelier-info .hotelier-eligibility{color:var(--k-text-secondary)}
+.hotelier-info-rules{display:flex;flex-direction:column;gap:12px;font:400 14px/21px Onest}
+.hotelier-info-rules>div{display:flex;gap:10px;align-items:flex-start}
+.hotelier-info-rules .k-icon{color:#0b6b63;flex:none;margin-top:1px}
+.hotelier-inviter{display:flex;flex-direction:column;gap:8px}
+.hotelier-inviter small{font:400 12px/17px Onest;color:var(--k-text-secondary)}
+.hotelier-inviter>div{display:flex;gap:12px;align-items:center;padding:12px 14px;background:#f4f5fb;border-radius:18px}
+.hotelier-inviter>div>span:last-child{display:flex;flex-direction:column;min-width:0}
+.hotelier-inviter strong{font:500 15px/21px Onest}
+.hotelier-inviter-avatar{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#e7f5f2;color:#0b6b63;flex:none}
+.hotelier-info .hotelier-eligibility{display:flex;gap:10px;align-items:center;font:400 13px/19px Onest;color:var(--k-text-secondary)}
+.hotelier-eligibility .k-icon{flex:none;color:#0b6b63}
+.hotelier-share-page{flex:1;display:flex;flex-direction:column;gap:24px;padding:12px 0 8px}
+.hotelier-share-hero{position:relative;isolation:isolate;overflow:hidden;padding:20px;border-radius:24px;background:var(--k-feature-loyaltySoft)}
+.hotelier-share-hero>img{position:absolute;z-index:-1;width:160px;height:160px;right:-35px;top:-26px;opacity:.12}
+.hotelier-share-hero small{display:block;font:500 12px/18px Onest;color:#0b6b63;margin-bottom:8px}
+.keys-app .hotelier-share-hero h1{font:500 24px/30px Unbounded;letter-spacing:-.7px;max-width:250px}
+.hotelier-share-steps{margin:0;padding:16px;list-style:none;counter-reset:step;display:flex;flex-direction:column;gap:14px;border:1px solid var(--k-border-subtle);border-radius:22px;background:#fff}
+.hotelier-share-steps li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;align-items:center;font:400 14px/20px Onest;counter-increment:step}
+.hotelier-share-steps li::before{content:counter(step);width:28px;height:28px;display:grid;place-items:center;background:#eef0ff;color:#2f5bff;border-radius:50%;font-size:13px}
+.hotelier-share-link{position:relative}
+.hotelier-share-link .k-field-box{padding-right:130px}
+.hotelier-share-link input{text-overflow:ellipsis}
+.hotelier-share-link>button{position:absolute;bottom:4px;right:5px;display:flex;gap:5px;align-items:center;justify-content:center;min-height:44px;border:0;border-radius:10px;padding:0 10px;background:#eef0ff;color:#2f5bff;font:500 13px/18px Onest}
+
+/* Подтверждённый Friendly Rate: выбранный пользователем вариант 2. */
+.hotelier-friendly-banner{border:0;border-radius:24px;background:#075654 url('/brand/illustrations/hotelier-friendly-portal.png') center/cover no-repeat;color:#fff}
+.hotelier-friendly-action{display:flex;flex-direction:column;align-items:flex-start;min-width:0;width:100%;min-height:136px;padding:16px;border:0;background:transparent;color:inherit;text-align:left}
+.hotelier-friendly-status{display:flex;align-items:center;gap:7px;font:400 10px/18px Onest;white-space:nowrap;margin-bottom:5px}
+.hotelier-friendly-status>span{display:grid;place-items:center;flex:none;width:19px;height:19px;background:#ffffff1f;border-radius:50%}
+.hotelier-friendly-action>strong{font:500 24px/30px Unbounded;letter-spacing:-.7px;white-space:nowrap}
+.hotelier-friendly-description{margin-top:2px;font:400 12px/17px Onest;white-space:nowrap}
+.hotelier-friendly-more{display:flex;align-items:center;gap:5px;margin-top:12px;font:500 12px/18px Onest}
+.hotelier-friendly-banner>.hotelier-banner-close{position:absolute;right:0;top:0;width:44px;height:44px;color:#fff}
+.hotelier-friendly-action:focus-visible,.hotelier-friendly-banner>.hotelier-banner-close:focus-visible{outline:2px solid white;outline-offset:-4px;border-radius:20px}
+/* i1 / i2: invitations share the original app palette and component density. */
+.hotelier-share-page{padding-top:8px}
+.hotelier-share-page .hotelier-share-hero{background:linear-gradient(140deg,#fff 0%,#eef0ff 55%,#dcd8ff 100%);border:1px solid #e4e7ef;border-radius:28px;padding:20px 18px}
+.keys-app .invite-heading h1{font:500 24px/30px Unbounded;letter-spacing:-.7px;margin:0}
+.invite-heading p{font:400 14px/21px Onest;color:#5a6072;margin:8px 0 0}
+.invite-audiences{display:flex;flex-direction:column;gap:10px}
+.invite-audience{display:grid;grid-template-columns:44px minmax(0,1fr) 22px;gap:12px;align-items:center;padding:14px 16px;border:1.5px solid #e4e7ef;border-radius:20px;background:#fff;text-align:left;color:#101320}
+.invite-audience.is-selected{border-color:#2f5bff;box-shadow:0 0 0 4px #eef0ff}
+.invite-audience .icon-tile{width:44px;height:44px;border-radius:15px;background:#eef0ff;color:#2f5bff}
+.invite-audience>span:nth-child(2){display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-width:0}
+.invite-audience strong{font:500 15px/21px Onest}
+.invite-audience small{font:400 12px/17px Onest;color:#5a6072}
+.invite-rate-label{margin-top:4px;border-radius:8px;padding:3px 8px;background:#eef0ff;color:#2f5bff;font:500 11px/15px Onest;white-space:nowrap}
+.invite-radio{width:22px;height:22px;border-radius:50%;border:1.5px solid #c3c8d2}
+.is-selected>.invite-radio{border:7px solid #2f5bff}
+.invite-explanation{display:grid;grid-template-columns:20px minmax(0,1fr);gap:10px;padding:12px 14px;border:1px solid #e4e7ef;border-radius:18px;background:#f4f5fb;font:400 13px/19px Onest;color:#101320}
+.invite-explanation>.k-icon{color:#2f5bff}
+.hotelier-share-page .hotelier-actions>.k-button{border-radius:14px}
+.hotelier-awaiting-banner{border-radius:20px;background:#fff3d6;border-color:#f1dfb4}
+.hotelier-awaiting-banner .hotelier-banner-action{align-items:flex-start;padding:12px 14px;gap:10px}
+.hotelier-awaiting-banner .icon-tile{width:32px;height:32px;flex:none;border-radius:50%;background:#fff;color:#b7791f}
+.hotelier-awaiting-banner .hotelier-banner-action small{color:#5b4a2e}
+.hotelier-banner-cta{font:500 13px/19px Onest;color:#2f5bff;margin-top:4px}
+.hotelier-approved>.hotelier-success{flex:1;justify-content:center}
+.hotelier-confirmed-rate{padding:4px 10px;border-radius:10px;background:#101320;color:#fff;font:500 12px/16px Onest;white-space:nowrap}
+
+.invite-info-icon{display:flex;color:#2f5bff}
+
+/* Selected invitation: pearl access card, no duplicate logo/header. */
+.keys-app.hotelier-invite-screen{background:var(--k-surface-app,#F4F5FB)}
+.hotelier-invite-screen .keys-content{padding:32px 20px 24px}
+.hotelier-entry .hotelier-invite-page{padding:0;gap:16px;min-width:0}
+.keys-app .hotelier-invite-intro h1{font:500 27px/34px var(--k-font-display);letter-spacing:-.8px}
+.keys-app .hotelier-invite-intro p{margin:12px 0 0;font:400 15px/22px var(--k-font-text)}
+.hotelier-invite-art{width:calc(100% + 32px);margin-left:-16px;height:315px;flex:none;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.hotelier-invite-art img{width:100%;height:100%;object-fit:contain;display:block}
+.hotelier-invite-person{display:flex;align-items:center;gap:14px;background:var(--k-surface-card,#fff);border-radius:24px;padding:16px;min-width:0}
+.hotelier-invite-avatar{display:grid;place-items:center;width:54px;height:54px;flex:none;border-radius:50%;background:var(--k-action-tint);color:var(--k-action-primary);font:500 19px/24px var(--k-font-text)}
+.hotelier-invite-person>div{display:flex;flex-direction:column;gap:3px;min-width:0}
+.hotelier-invite-person small,.hotelier-invite-person>div>span{font:400 14px/20px var(--k-font-text);color:var(--k-text-secondary);overflow-wrap:anywhere}
+.hotelier-invite-person strong{font:500 18px/24px var(--k-font-text);overflow-wrap:anywhere}
+.hotelier-invite-page .hotelier-actions{padding-top:18px;gap:8px}
+.hotelier-invite-page .hotelier-actions .k-button{border-radius:16px}
+@media(max-height:740px){.hotelier-invite-art{height:235px}}

@@ -1,0 +1,4 @@
+.friendly-rate-label{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;width:max-content;max-width:100%;padding:2px 7px;border-radius:8px;background:var(--k-feature-friendly);color:#fff;font:500 11px/15px Onest;white-space:nowrap;flex:none}
+.friendly-rate-role{padding:3px 10px 3px 4px;min-height:24px;border-radius:13px;font-size:12px}
+.friendly-rate-mark{width:18px;height:18px;display:grid;place-items:center;border-radius:50%;background:#ffffff1f;flex:none}
+.room-tariff.friendly .friendly-rate-role{background:#ffffff1f;color:#b8f7e4}

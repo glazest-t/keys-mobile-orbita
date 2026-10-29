@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-29",
+  "status": "implemented",
+  "reference": "reference.png",
+  "options": [
+    {
+      "number": 1,
+      "name": "Тихая строка",
+      "image": "/Users/tatyana.glazyrina/.codex/generated_images/01a15f51-a729-7521-8664-1d3c42c39e78/exec-6b2a5b50-28bc-49c5-8154-a48375f9bcf9.png"
+    },
+    {
+      "number": 2,
+      "name": "Альбом путешествий",
+      "image": "/Users/tatyana.glazyrina/.codex/generated_images/01a15f51-a729-7521-8664-1d3c42c39e78/exec-24996649-aa94-4f58-8333-dcb99fdc9f1c.png"
+    },
+    {
+      "number": 3,
+      "name": "Орбита путешествий",
+      "image": "/Users/tatyana.glazyrina/.codex/generated_images/01a15f51-a729-7521-8664-1d3c42c39e78/exec-d789de98-8edb-42c3-8a03-751a0b77b4c6.png"
+    }
+  ],
+  "selected": 2,
+  "implementedScope": [
+    "Выбранный блок в самом низу страницы Поездки с переходом в историю",
+    "История с примерами предстоящей, завершённой и отменённой брони",
+    "Удалить бронь из приложения — отдельно от отмены бронирования в отеле",
+    "Добавить бронь по номеру бронирования",
+    "Проверить переходы, сохранение данных и мобильную вёрстку"
+  ]
+}

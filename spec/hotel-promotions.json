@@ -1,0 +1,22 @@
+{
+  "kind": "fictional-demo",
+  "description": "Демонстрационные горячие скидки по запросу пользователя; не реальные акции отелей или Ozon. Применяются к проживанию без участия в программе лояльности.",
+  "basisPoints": {
+    "moscow-izmaylovo-tvoy-otel": 1000,
+    "moscow-otel-shelterz-vdnh": 2000,
+    "moscow-ibis-moskva-kievskaya": 3000,
+    "moscow-gostinitsa-metallurg": 1000,
+    "moscow-minima-belorusskaya": 2000,
+    "moscow-moscow-marriott-imperial-plaza": 3000,
+    "moscow-pekin": 1000,
+    "moscow-palmira-business-club": 2000,
+    "spb-valo-network": 3000,
+    "spb-valo-business": 1000,
+    "spb-apart-otel-uno-by-valo": 2000,
+    "spb-apartpeydzh-nevskiy": 3000,
+    "spb-ramada-plaza-by-wyndham-st-petersburg": 1000,
+    "spb-greenwich-by-friends": 2000,
+    "spb-ligotel": 3000,
+    "spb-arkada": 1000
+  }
+}

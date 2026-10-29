@@ -1,0 +1,10 @@
+.demo-tools .trip-scenario-controls{border-top:1px solid #e4e7ef;padding-top:10px}
+.trip-scenario-controls summary{font-weight:500;color:#101320;cursor:pointer}
+.demo-tools .trip-scenario-options{display:flex;flex-direction:column;gap:5px;margin:10px 0}
+.demo-tools .trip-scenario-options button{text-align:left;display:flex;flex-direction:column;gap:2px;padding:8px 10px;color:#101320;width:100%;min-height:48px}
+.demo-tools .trip-scenario-options button small{font-size:10px;font-weight:400;line-height:14px;color:#5a6072}
+.demo-tools .trip-scenario-options button[aria-pressed=true]{background:#eef0ff;border-color:#2f5bff;color:#2f5bff}
+.demo-tools .trip-scenario-options button:disabled{opacity:.5;cursor:default}
+.demo-tools .restore-trip-data{width:100%;margin-top:8px}
+.demo-tools:has(.trip-scenario-controls){max-height:calc(100dvh - 50px);overflow-y:auto}
+@media(max-width:960px){.demo-tools:has(.trip-scenario-controls){max-height:36dvh}.demo-tools .trip-scenario-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.trip-scenario-controls{margin-top:36px}}

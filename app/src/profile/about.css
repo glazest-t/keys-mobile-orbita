@@ -1,0 +1,12 @@
+.about-app{display:flex;flex-direction:column;gap:20px}
+.about-app-brand{display:flex;flex-direction:column;align-items:center;gap:10px;padding:4px 0}
+.about-app-brand img{display:block;width:140px;height:48px;object-fit:contain}
+.about-app-brand>span{font:400 12px/18px var(--k-font-text);color:var(--k-text-secondary)}
+.about-app-description{display:flex;flex-direction:column;gap:10px}
+.about-app .about-app-description h2{margin:0;font:500 17px/24px var(--k-font-text);color:var(--k-text-primary)}
+.about-app .about-app-description p{margin:0;font:400 14px/21px var(--k-font-text);color:var(--k-text-secondary)}
+.sheet-body .about-app-links>.k-row{border:0;border-radius:0;font-family:var(--k-font-text);grid-template-columns:36px minmax(0,1fr) auto;gap:10px;padding:12px;min-height:60px}
+.sheet-body .about-app-links>.k-row>.icon-tile{width:36px;height:36px;border-radius:12px}
+.sheet-body .about-app-links>.k-row strong{font-size:14px;line-height:20px}
+.about-app .about-app-tagline{margin:0;text-align:center;font:400 12px/18px var(--k-font-text);color:var(--k-text-secondary)}
+.bottom-sheet:has(.about-app) .sheet-title{font:500 20px/26px var(--k-font-display);letter-spacing:-.5px}
