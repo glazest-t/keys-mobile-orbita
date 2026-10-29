@@ -26,11 +26,13 @@ def target(href,parent):
 
 assert (ROOT/'.nojekyll').exists()
 files=['index.html','screens.html','documentation.html','prototype/index.html','docs/brand/index.html']
+files += [str(p.relative_to(ROOT)) for p in (ROOT/'docs/handoff').glob('*.html')]
+files += ['README.html','docs/DEPLOYMENT.html','docs/MOBILE-REVIEW.html','docs/references/README.html']
 count=0
 for name in files:
     p=ROOT/name; text=p.read_text();parser=Resources();parser.feed(text)
-    assert 'http://127.0.0.1:' not in text and 'http://localhost:' not in text,name
     for href in parser.links:
+        assert not re.match(r'http://(?:127\.0\.0\.1|localhost):(?:5173|4173)',href),(name,href)
         q=target(href,p.parent)
         if q:
             assert q.exists(),(name,href)

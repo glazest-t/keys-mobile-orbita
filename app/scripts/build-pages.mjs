@@ -54,6 +54,7 @@ write('.nojekyll','');
 // Convert Markdown into navigable HTML; keep every original downloadable.
 const markdown=walk(out).filter(p=>p.endsWith('.md'));
 function documentLink(href,current){
+ href=href.replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#39;/g,"'");
  href=href.replace(/^http:\/\/(?:127\.0\.0\.1|localhost):5173\/?/,appBase).replace(/^http:\/\/(?:127\.0\.0\.1|localhost):4173\/?/,base);
  if(/^(?:https?:|mailto:|tel:|data:|#)/.test(href))return href;
  const [pathname,...fragment]=href.split('#');

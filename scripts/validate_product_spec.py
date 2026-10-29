@@ -3,6 +3,7 @@
 import hashlib
 import json
 import re
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -16,7 +17,8 @@ def main():
     inventory = read('docs/inventory/sources.json')
     source_root = ROOT / inventory['source']
     for entry in inventory['files']:
-        blob = (source_root / entry['path']).read_bytes()
+        # Git stores NFC filenames; macOS also resolves decomposed Unicode, Linux does not.
+        blob = (source_root / unicodedata.normalize('NFC', entry['path'])).read_bytes()
         assert len(blob) == entry['bytes'], entry['path']
         assert hashlib.sha256(blob).hexdigest() == entry['sha256'], entry['path']
     for entry in read('docs/inventory/user-documents.json')['documents']:
