@@ -15,3 +15,11 @@
 .payment-extra-options .radio-dot.checked{border:5px solid #2f5bff}
 
 .payment-more[aria-expanded=true] strong>.k-icon{transform:rotate(180deg)}
+
+.card-payment-plan{display:flex;flex-direction:column;gap:2px;margin-top:0;padding:8px;border:1px solid var(--k-border-subtle);border-radius:20px;background:var(--k-surface-card)}
+.keys-app .card-payment-plan h3{margin:0 4px 6px;font:500 13px/19px Onest;color:var(--k-text-secondary)}
+.card-payment-plan>button{border:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px;border-radius:12px;background:transparent;color:var(--k-text-primary);text-align:left;font:400 14px/20px Onest}
+.card-payment-plan>button[aria-pressed=true]{background:var(--k-action-tint);color:var(--k-action-primary)}
+.card-payment-plan .radio-dot.checked{border:5px solid var(--k-action-primary)}
+
+.checkout-payment:has(.card-payment-plan){row-gap:6px}

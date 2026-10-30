@@ -22,7 +22,7 @@ test('Включённый завтрак нельзя заказать повт
  const b=fixture('orbit-sea',true).bookings[0];assert.throws(()=>breakfastQuote(b,input,now));assert.equal(breakfastQuote(b,{...input,mode:'room'},now),360000);assert.equal(breakfastQuote(fixture('pine-sochi').bookings[0],input,now),300000);
 });
 test('Завтрак ограничен датами проживания, временем, количеством гостей и длиной комментария',()=>{
- const b=fixture().bookings[0];for(const change of [{date:'2026-11-13'},{date:'2026-11-16'},{date:'2026-02-30'},{time:'12:00'},{persons:0},{persons:3},{persons:1.5},{comment:'а'.repeat(501)}])assert.throws(()=>breakfastQuote(b,{...input,...change},now));assert.equal(breakfastQuote(b,{...input,date:'2026-11-15',persons:1},now),150000);assert.throws(()=>breakfastQuote(b,input,'2026-11-14T09:00:00Z'));
+ const b=fixture().bookings[0];assert.throws(()=>breakfastQuote(b,{...input,mode:'room',time:'12:00'},now));for(const change of [{date:'2026-11-13'},{date:'2026-11-16'},{date:'2026-02-30'},{persons:0},{persons:3},{persons:1.5},{comment:'а'.repeat(501)}])assert.throws(()=>breakfastQuote(b,{...input,...change},now));assert.equal(breakfastQuote(b,{...input,date:'2026-11-15',persons:1},now),150000);assert.throws(()=>breakfastQuote(b,input,'2026-11-14T09:00:00Z'));
 });
 test('После смены дат нужна проверка заявки; отмена брони прекращает активные запросы',()=>{
  let s=requestBreakfast(fixture(),owner,'service-trip',input,'b1',now);const b=structuredClone(s.bookings[0]);b.draft.search.checkOut='2026-11-13';assert.equal(requestStatus(b,b.serviceRequests[0]),'review');s=cancelBooking(s,owner,'service-trip',now);assert.equal(pendingRequests(s.bookings[0]).length,0);assert.throws(()=>requestBreakfast(s,owner,'service-trip',input,'b2',now));
@@ -41,7 +41,7 @@ test('Всё проживание исключает уже заказанные
  const original=requestBreakfast(fixture(),owner,'service-trip',input,'one',now);
  for(const status of ['pending','confirmed','paid','completed']){const s=structuredClone(original);s.bookings[0].serviceRequests[0].status=status;assert.deepEqual(breakfastStayQuote(s.bookings[0],input,now),{dates:['2026-11-15'],amountMinor:300000});assert.throws(()=>breakfastQuote(s.bookings[0],input,now));}
  const cancelled=cancelServiceRequest(original,owner,'service-trip','one');assert.equal(breakfastStayQuote(cancelled.bookings[0],input,now).dates.length,2);
- assert.deepEqual(breakfastStayQuote(fixture().bookings[0],input,'2026-11-14T06:00:00Z').dates,['2026-11-15']);
+ assert.deepEqual(breakfastStayQuote(fixture().bookings[0],input,'2026-11-14T08:00:00Z').dates,['2026-11-15']);
  assert.throws(()=>breakfastStayQuote(original.bookings[0],input,'2026-11-15T08:00:00Z'));
 });
 test('Заказ на все дни сохраняет ограничения отеля, включённого питания и владельца',()=>{

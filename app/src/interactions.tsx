@@ -1,3 +1,4 @@
+import * as Dialog from '@radix-ui/react-dialog';
 import {Children,useEffect,useRef,useState,type ComponentProps,type CSSProperties,type ReactNode,type UIEventHandler,type PointerEvent as ReactPointerEvent} from 'react';
 import {animate,AnimatePresence, motion, useIsPresent, useMotionValue,useTransform,useReducedMotion} from 'motion/react';
 import './interactions.css';
@@ -88,13 +89,16 @@ export function PointsBalance({value,children,className=''}:{value:number;childr
  </div>;
 }
 
-export function ExpandingMap({open,origin,children}:{open:boolean;origin:string;children:ReactNode}){
+export function ExpandingMap({open,origin,children,onClose}:{open:boolean;origin:string;children:ReactNode;onClose?:()=>void}){
  const reduced=useReducedMotion();
+
  return <AnimatePresence>{open&&<motion.div className="map-transition-layer"
   initial={reduced?{opacity:0}:{clipPath:origin}} animate={{opacity:1,clipPath:'inset(0px 0px 0px 0px round 0px)'}}
   exit={reduced?{opacity:0,transition:{duration:interactionMotion.tab}}:{clipPath:origin,transition:{duration:interactionMotion.pop,ease:interactionMotion.iosPush}}}
   transition={{duration:reduced?interactionMotion.tab:interactionMotion.push,ease:interactionMotion.iosPush}}>{children}</motion.div>}</AnimatePresence>;
 }
+
+
 
 /** nc4/nc5: a single idea leaves the deck; common Orbit timing, no motion when reduced. */
 export function IdeaCardChange({id,direction,children,onReady}:{id:string;direction:number;children:ReactNode;onReady:()=>void}){

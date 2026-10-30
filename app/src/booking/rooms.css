@@ -90,3 +90,19 @@
 .room-tariff.friendly .room-rate-price b{background:#b8f7e4;color:#063f3c}
 .hotel-price-value>.friendly-rate-label{align-self:center}
 .discovery-price>.friendly-rate-label{margin-top:4px}
+
+/* Hotel membership has its own dark card; Friendly Rate keeps its green identity. */
+.room-tariff.loyalty{background:linear-gradient(150deg,#1b1e33,#2d2a55);border-color:transparent;color:#fff}
+.room-loyalty-label{display:flex;align-items:center;gap:6px;font:500 11px/16px Onest;color:#D6DCFF}
+.room-tariff.loyalty .room-link{color:#D6DCFF}
+.room-tariff.loyalty .room-rate-rules>div>span{background:#ffffff24;color:#BFF0DE}
+.room-tariff.loyalty .room-rate-tags>span{background:#ffffff17;color:#fff}
+.room-tariff.loyalty .room-rate-price{border-color:#ffffff26}
+.room-tariff.loyalty .room-rate-price small{color:#D7DAE4}
+.room-tariff.loyalty .room-rate-price>button{background:#fff;color:var(--k-text-primary)}
+
+.keys-app .room-tariff.loyalty h3,.keys-app .room-tariff.loyalty .room-rate-price strong{color:#fff}
+.room-tariff.loyalty .room-loyalty-label{align-self:flex-start;background:#ffffff1f;border-radius:12px;padding:4px 8px;color:#FFD98A}
+
+/* Public prices stay white, including discounts earned through a hotel level. */
+.keys-app .room-tariff.friendly h3,.keys-app .room-tariff.friendly .room-rate-price strong{color:#fff}

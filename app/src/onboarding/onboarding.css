@@ -101,3 +101,6 @@
 .keys-app .onboarding-personal-panel h1{font-size:32px;line-height:38px;letter-spacing:-.8px}
 .onboarding-personal-panel .onboarding-accent{display:block;font-size:24px;line-height:31px;letter-spacing:-.8px}
 .keys-app .onboarding-personal-panel>p{font:400 16px/23px var(--k-font-text);color:var(--k-text-secondary)}
+
+/* A static catalogue preview must remain visible when motion is disabled. */
+@media(prefers-reduced-motion:reduce){.launch-preview .onboarding-splash{display:flex}}

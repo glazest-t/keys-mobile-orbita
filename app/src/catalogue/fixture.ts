@@ -26,6 +26,8 @@ export async function createCatalogueFixture(scene:CatalogueScene):Promise<Catal
  let state:State={...initialState(),onboarded:true,activePhone:owner,users:{[owner]:{phone:owner,name:'Анна',travelers:[{...blankTraveler('primary'),primary:true,name:'Анна',surname:'Соколова',phone:owner,email:'anna@example.test',birthDate:'1992-04-18',citizenship:'Россия'},{...blankTraveler('companion'),name:'Иван',surname:'Соколов',phone:'+79990000002',email:'ivan@example.test'}]}}};
  let commerce=activateTripScenario(initialCommerce(),owner,(scene.trip||'empty') as TripScenario,'catalogue-booking');
  commerce=ensureDemoHotelPoints(ensureDemoPointsHistory(ensureWelcomePoints(commerce,owner),owner),owner);
+ if(scene.firstFind)state.users[owner].travelStyleIntro='pending';
+ if(scene.loyalty)commerce={...commerce,hotelMemberships:{...commerce.hotelMemberships,[owner]:{...commerce.hotelMemberships?.[owner],'orbit-sea':true}}};
  if(scene.role&&scene.role!=='guest'){
   commerce=registerHotelierInterest(commerce,owner,{name:'Юра Костин',hotel:'Travelline'});
   if(scene.role!=='interested'){

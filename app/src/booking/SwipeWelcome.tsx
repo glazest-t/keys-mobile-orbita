@@ -5,13 +5,13 @@ import {swipeThemes} from './swipePreferences';
 import {BubbleOrbit,WaterRippleButton} from '../interactions';
 import './swipe-preferences.css';
 
-export function SwipePreferences({selected,onChange,onContinue,onClose,backLabel='Назад к поиску',saveMode=false}:{selected:string[];onChange:(ids:string[])=>void;onContinue:()=>void;onClose:()=>void;backLabel?:string;saveMode?:boolean}){
+export function SwipePreferences({selected,onChange,onContinue,onClose,backLabel='Назад к поиску',saveMode=false,embedded=false}:{selected:string[];onChange:(ids:string[])=>void;onContinue:()=>void;onClose:()=>void;backLabel?:string;saveMode?:boolean;embedded?:boolean}){
  const {bottomInset}=useKeyboardInsets();
  const [departing,setDeparting]=useState(false);
- return <section className="swipe-preferences" style={{'--swipe-intro-bottom':`${bottomInset}px`} as CSSProperties} aria-label="Предпочтения поездки" aria-busy={departing}>
+ return <section className={"swipe-preferences"+(embedded?" swipe-preferences-sheet":"")} style={{'--swipe-intro-bottom':`${bottomInset}px`} as CSSProperties} aria-label="Предпочтения поездки" aria-busy={departing}>
   <MobileScroll className="page-scroll"><div className="swipe-preferences-content" inert={departing}>
    <div className="swipe-preferences-orbit" aria-hidden="true"/>
-   <IconButton name="back" label={backLabel} onClick={onClose}/>
+   {!embedded&&<IconButton name="back" label={backLabel} onClick={onClose}/>}
    <h1>Ваш стиль<br/><span>путешествий</span></h1>
    <p>На основе ваших предпочтений мы подберем лучшее предложение</p>
    <BubbleOrbit departing={departing} onDeparted={onContinue}>

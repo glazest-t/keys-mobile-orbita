@@ -8,5 +8,5 @@ export function createPaymentState():PaymentState;
 export function walletIds(userId:string,hotelId:string):{keys:string;hotel:string};
 export function readWallets(state:PaymentState,userId:string,hotelId:string):Wallets;
 export function calculatePayment(input:{hotelId:string;lodgingMinor:number;services?:Service[];wallets:Wallets;usePoints:boolean;hotelBenefitsAllowed?:boolean}):Quote;
-export function confirmPayment(state:PaymentState,input:{userId:string;bookingId:string;quote:Quote;method:'online'|'at_hotel';outcome?:'success'|'failure'}):{state:PaymentState;operation:Operation|null;duplicate:boolean;error?:string};
+export function confirmPayment(state:PaymentState,input:{userId:string;bookingId:string;quote:Quote;method:'online'|'at_hotel';cashNowMinor?:number;outcome?:'success'|'failure'}):{state:PaymentState;operation:Operation|null;duplicate:boolean;error?:string};
 export function cancelFreeBooking(state:PaymentState,input:{userId:string;bookingId:string;freeCancellationAllowed:boolean}):{state:PaymentState;operation:Operation;duplicate:boolean};

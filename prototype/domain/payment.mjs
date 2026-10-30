@@ -65,7 +65,7 @@ export function readWallets(state, userId, hotelId) {
 }
 
 // Idempotency is scoped to the user and booking; retrying the same confirmation is safe.
-export function confirmPayment(state, { userId, bookingId, quote, method, outcome = 'success' }) {
+export function confirmPayment(state, { userId, bookingId, quote, method, cashNowMinor, outcome = 'success' }) {
   if (!userId || !bookingId) throw new DomainError('INVALID_ID', 'Нужны пользователь и бронь');
   const operationId = `${userId}:${bookingId}`;
   const existing = state.operations[operationId];
@@ -87,13 +87,16 @@ export function confirmPayment(state, { userId, bookingId, quote, method, outcom
       fresh.applied.pointsMinor !== quote.applied.pointsMinor) {
     throw new DomainError('QUOTE_CHANGED', 'Баланс изменился. Проверьте итог ещё раз');
   }
+  const nowMinor=method==='at_hotel'?0:(cashNowMinor??quote.cashDueMinor);
+  natural(nowMinor,'cashNowMinor');
+  if(nowMinor>quote.cashDueMinor)throw new DomainError('INVALID_AMOUNT','Предоплата превышает сумму заказа');
   const ids = walletIds(userId, quote.hotelId);
   const operation = {
     id: operationId, userId, bookingId, hotelId: quote.hotelId, status: 'confirmed', method,
     orderTotalMinor: quote.orderTotalMinor, pointsMinor: quote.applied.pointsMinor,
     debits: { [ids.hotel]: quote.applied.hotelPoints, [ids.keys]: quote.applied.keysPoints },
-    paidCashMinor: method === 'online' ? quote.cashDueMinor : 0,
-    dueAtHotelMinor: method === 'at_hotel' ? quote.cashDueMinor : 0,
+    paidCashMinor: nowMinor,
+    dueAtHotelMinor: quote.cashDueMinor-nowMinor,
   };
   return {
     state: { balances: { ...state.balances, [ids.hotel]: fresh.remaining.hotelPoints, [ids.keys]: fresh.remaining.keysPoints },

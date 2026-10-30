@@ -1,3 +1,4 @@
+import {bookingPayment} from './bookingPayment.ts';
 import {calculateBookingQuote} from '../../../prototype/domain/booking.mjs';
 import {readWallets,walletIds} from '../../../prototype/domain/payment.mjs';
 import {available,catalog,nights,searchError,type Booking,type Commerce,type Search} from './model.ts';
@@ -32,8 +33,8 @@ export function previewAmendment(state:Commerce,owner:string,id:string,input:Ame
  const hotelReturn=b.quote.applied.hotelPoints-quote.applied.hotelPoints,keysReturn=b.quote.applied.keysPoints-quote.applied.keysPoints;
  const wallets=readWallets(state.payment,owner,b.draft.hotelId);
  quote.remaining={hotelPoints:wallets.hotelPoints+hotelReturn,keysPoints:wallets.keysPoints+keysReturn};
- const nextPaid=b.operation.method==='online'?quote.cashDueMinor:0;
- return {bookingId:id,revision:b.revision||0,input:{search,services},quote,extraPaid:Math.max(0,nextPaid-b.operation.paidCashMinor),refund:Math.max(0,b.operation.paidCashMinor-nextPaid),dueAtHotel:b.operation.method==='at_hotel'?quote.cashDueMinor:0,hotelReturn,keysReturn};
+ const schedule=bookingPayment(quote,b.draft);quote.paymentSchedule=schedule;const nextPaid=schedule.nowMinor;
+ return {bookingId:id,revision:b.revision||0,input:{search,services},quote,extraPaid:Math.max(0,nextPaid-b.operation.paidCashMinor),refund:Math.max(0,b.operation.paidCashMinor-nextPaid),dueAtHotel:schedule.laterMinor,hotelReturn,keysReturn};
 }
 export type AmendmentPreview=ReturnType<typeof previewAmendment>;
 export function commitAmendment(state:Commerce,owner:string,expected:AmendmentPreview,requestId:string,outcome:'success'|'failure'='success',now=new Date().toISOString()):Commerce{
@@ -46,7 +47,7 @@ export function commitAmendment(state:Commerce,owner:string,expected:AmendmentPr
  if(JSON.stringify(fresh)!==JSON.stringify(expected))throw Error('Условия изменились. Проверьте расчёт ещё раз');
  if(fresh.extraPaid>0&&outcome==='failure')throw Error('Доплата не прошла. Исходная бронь сохранена');
  const ids=walletIds(owner,b.draft.hotelId),balances={...state.payment.balances,[ids.hotel]:fresh.quote.remaining.hotelPoints,[ids.keys]:fresh.quote.remaining.keysPoints};
- const operation={...b.operation,orderTotalMinor:fresh.quote.orderTotalMinor,pointsMinor:fresh.quote.applied.pointsMinor,debits:{[ids.hotel]:fresh.quote.applied.hotelPoints,[ids.keys]:fresh.quote.applied.keysPoints},paidCashMinor:b.operation.method==='online'?fresh.quote.cashDueMinor:0,dueAtHotelMinor:fresh.dueAtHotel};
+ const operation={...b.operation,orderTotalMinor:fresh.quote.orderTotalMinor,pointsMinor:fresh.quote.applied.pointsMinor,debits:{[ids.hotel]:fresh.quote.applied.hotelPoints,[ids.keys]:fresh.quote.applied.keysPoints},paidCashMinor:fresh.quote.cashDueMinor-fresh.dueAtHotel,dueAtHotelMinor:fresh.dueAtHotel};
  const draft={...b.draft,search:structuredClone(fresh.input.search),services:[...fresh.input.services],...trimGuests(b.draft,fresh.input.search)};
  const changed:Booking={...b,draft,quote:fresh.quote,operation,revision:(b.revision||0)+1,changes:[...(b.changes||[]),{id:requestId,at:now,fromRevision:b.revision||0,previousSearch:structuredClone(b.draft.search),paidMinor:fresh.extraPaid,refundMinor:fresh.refund,returnedHotelPoints:fresh.hotelReturn,returnedKeysPoints:fresh.keysReturn}]};
  return {...state,bookings:state.bookings.map(v=>v===b?changed:v),payment:{balances,operations:{...state.payment.operations,[operation.id]:operation}},draft:state.draft?.id===b.id&&state.draft.step==='confirmation'?{...draft,step:'confirmation'}:state.draft};

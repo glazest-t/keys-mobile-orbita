@@ -3,7 +3,7 @@ import type {Booking} from './model.ts';
 import {stayNow} from './stay.ts';
 
 export const timeServiceKind=(r:ServiceRequest)=>r.kind==='early'?'arrival' as const:r.kind==='catalog'&&r.serviceId==='late'?'departure' as const:null;
-export const serviceStartsAt=(r:ServiceRequest)=>Date.parse(`${r.date}T${r.time}:00+03:00`);
+export const serviceStartsAt=(r:ServiceRequest)=>Date.parse(`${r.date}T${r.kind==='breakfast'&&r.mode==='buffet'?'11:00':r.time}:00+03:00`);
 /** Older demo controls could mark a future stay-time service completed. */
 export function serviceWasCompleted(r:ServiceRequest,now:number){
  return r.status==='completed'&&(!timeServiceKind(r)||!Number.isFinite(serviceStartsAt(r))||serviceStartsAt(r)<=now);

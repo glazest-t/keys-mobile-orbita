@@ -109,3 +109,7 @@
 .keys-app .booking-footer:has(.booking-error){height:232px}
 .keys-app .booking-footer .booking-error{position:static;margin:0;flex:none;padding:10px 12px}
 .keys-app .booking-footer:has(.booking-error)>.k-button{margin-top:auto}
+
+/* Discounts lead, ratings support: shared offer hierarchy. */
+.keys-app .discovery-price b,.keys-app .room-rate-price b,.keys-app .hotel-price-value>b{background:#D72778;color:#fff;font:500 12px/18px Onest;padding:3px 8px;border-radius:8px;white-space:nowrap}
+.keys-app .discovery-rating>b,.keys-app .rating-badge,.keys-app .favorite-rating>b,.keys-app .map-card-rating b{background:var(--k-surface-app);color:var(--k-text-secondary);font:500 12px/18px Onest;border:1px solid var(--k-border-subtle);border-radius:8px;padding:3px 7px}

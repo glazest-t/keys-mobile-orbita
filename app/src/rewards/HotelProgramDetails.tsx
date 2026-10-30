@@ -6,7 +6,7 @@ import type {Commerce} from '../booking/model';
 import {hotelVisual} from '../booking/presentation';
 import {hasHotelProgram,hotelPrograms,hotelProgramProgress,supportsHotelPoints,type HotelLevel} from './loyalty';
 
-const money=(minor:number)=>(minor/100).toLocaleString('ru-RU')+' ₽';
+const money=(minor:number)=>Math.round(minor/100).toLocaleString('ru-RU')+' ₽';
 const levelCard=(l:HotelLevel):HotelLevelCard=>({id:l.id,name:l.name,
  condition:l.thresholdMinor?`От ${money(l.thresholdMinor)} за год`:'После подключения программы',
  benefits:[...(l.discountBasisPoints?[{label:`Скидка ${l.discountBasisPoints/100}%`,kind:'discount' as const}]:[]),

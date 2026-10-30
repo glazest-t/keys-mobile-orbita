@@ -21,6 +21,6 @@ export function prefillAdditionalGuest(draft:Draft,user:User|null,index:number):
  const next=user.travelers.find(t=>!t.primary&&t.name.trim()&&t.surname.trim()&&!used.has(key(t)));
  return next?{...draft,...updateGuest(draft,index,{name:next.name,surname:next.surname})}:draft;
 }
-export const stayWishOptions=['Тихий номер','Высокий этаж','Номера рядом'] as const;
+export const stayWishOptions=['Тихий номер','Высокий этаж'] as const;
 export const WISH_LIMIT=500;
 export function wishSummary(d:Draft){return [...(d.stayWishes?.options||[]),d.stayWishes?.note.trim()].filter(Boolean).join(' · ');}

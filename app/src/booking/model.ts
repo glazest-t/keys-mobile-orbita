@@ -1,3 +1,5 @@
+import {canBookRate} from './rateAccess.ts';
+import {bookingPayment} from './bookingPayment.ts';
 import {normalizeContactPhone} from '../travelers/contactPhone.ts';
 import {hotelProgramDiscount,hotelLoyaltySnapshot,programWallets} from '../rewards/loyalty.ts';
 import {promotionBasisPoints} from './promotions.ts';
@@ -15,7 +17,7 @@ export const catalog=data;
 export const COMMERCE_KEY='keys-orbita-booking-v1';
 export type Search={city:string;checkIn:string;checkOut:string;adults:number;childrenAges:number[];withPet?:boolean;businessTrip?:boolean;byCar?:boolean};
 export type Contact={name:string;surname:string;phone:string;email:string};
-export type Draft={returnTo?:`hotel-chat/${string}`|'profile-history'|`profile-trip/${string}`|`loyalty-program/${string}`|'swipe'|'notifications'|'price-watches'|'wish-search'|'preferences'|'favorite-list'|'favorite-map';favoriteListId?:string;preferenceMatches?:string[];id:string;hotelId:string;roomId:string;rateId:string;search:Search;services:string[];usePoints:boolean;method:'online'|'at_hotel';paymentOption?:import('./paymentOptions').OnlinePaymentOption;bookingFor?:'self'|'other';guestTravelerId?:string;contact:Contact;additionalGuest?:{name:string;surname:string};otherGuests?:{name:string;surname:string}[];stayWishes?:{options:string[];note:string};step:string};
+export type Draft={cardPaymentPlan?:import('./bookingPayment.ts').CardPaymentPlan;returnTo?:`hotel-chat/${string}`|'profile-history'|`profile-trip/${string}`|`loyalty-program/${string}`|'swipe'|'notifications'|'price-watches'|'wish-search'|'preferences'|'favorite-list'|'favorite-map';favoriteListId?:string;preferenceMatches?:string[];id:string;hotelId:string;roomId:string;rateId:string;search:Search;services:string[];usePoints:boolean;method:'online'|'at_hotel';paymentOption?:import('./paymentOptions').OnlinePaymentOption;bookingFor?:'self'|'other';guestTravelerId?:string;contact:Contact;additionalGuest?:{name:string;surname:string};otherGuests?:{name:string;surname:string}[];stayWishes?:{options:string[];note:string};step:string};
 export type Booking={hotelLoyalty?:import('../rewards/loyalty.ts').HotelLoyaltySnapshot;number?:string;timeServiceAvailability?:Partial<Record<'arrival'|'departure',boolean>>;review?:import('./stayReview.ts').StayReview;deposit?:import('./deposit.ts').Deposit;problems?:import('./stayProblems.ts').StayProblem[];stay?:import('./stay.ts').Stay;serviceRequests?:import('./serviceRequests.ts').ServiceRequest[];id:string;owner:string;draft:Draft;quote:BookingQuote;operation:Operation;createdAt:string;revision?:number;changes?:import('./amendment.ts').BookingChange[]};
 export type Commerce={hotelLoyaltySeeds?:Record<string,Record<string,{year:string;amountMinor:number}>>;hotelLoyaltyAwards?:Record<string,import('../rewards/loyalty.ts').HotelLoyaltyAward[]>;demoPointsHistory?:Record<string,import('../rewards/points.ts').PointEntry[]>;wishSearchReturnTo?:'find'|'chats';hiddenTrips?:Record<string,string[]>;historyReturnTo?:string;historyDemo?:boolean;welcomePoints?:Record<string,{amount:number;at:string}>;hotelConversations?:Record<string,Record<string,import('./chatThreads.ts').HotelConversation>>;chatReads?:Record<string,Record<string,string>>;chatReturnTo?:string;helpReturnTo?:'profile'|'chats';chatBrowse?:Record<string,{list?:string;new?:string}>;historyBrowse?:Record<string,{query:string;filter:string}>;rewardsBrowse?:Record<string,{query:string;filter:string}>;hotelMemberships?:Record<string,Record<string,boolean>>;rewardsReturnTo?:string;hotelierInviters?:Record<string,import('../hotelier/verification.ts').HotelierInvitationData>;hotelierParticipants?:Record<string,boolean>;hotelierBannerDismissed?:Record<string,string>;hotelierEmailDrafts?:Record<string,string>;hotelierVerifications?:Record<string,import('../hotelier/verification.ts').Verification>;appNotices?:import('./notifications.ts').AppNotice[];swipePreferences?:Record<string,import('./swipePreferences.ts').SwipePreferences>;demoTripSession?:import('./demoTripScenarios.ts').DemoTripSession;swipeHistories?:Record<string,import('./swipeDiscovery.ts').SwipeHistory>;notificationsReturnTo?:string;notificationHotelId?:string;notificationChatBookingId?:string;priceEvents?:import('./priceEvents.ts').PriceEvent[];priceNotices?:import('./priceEvents.ts').PriceNotice[];demoOfferPrices?:Record<string,number>;freeTextDrafts?:Record<string,import('./preferences.ts').PreferenceDraft>;favoriteLibraries?:Record<string,import('./favorites.ts').FavoriteLibrary>;preferenceDrafts?:Record<string,import('./preferences.ts').PreferenceDraft>;version:1;chatDrafts?:Record<string,string>;bookingShares?:import('./bookingShare.ts').BookingShare[];bookingManagers?:Record<string,string[]>;tripMessages?:Record<string,import('./trip.ts').TripMessage[]>;priceWatches?:Record<string,import('./priceWatch').PriceWatch>;recentSearches?:import('./filterSchema.ts').RecentSearch[];priceMode?:'stay'|'night';searchDistrict?:{city:string;name:string};viewedHotels?:string[];collection?:string;maxNightly?:number|null;priceRangeMinor?:{min:number|null;max:number|null};minRating?:number;searchFilters?:string[];searchSort?:string;savedHotels?:Record<string,string[]>;search:Search;draft:Draft|null;bookings:Booking[];payment:PaymentState;accounts:Record<string,{hotelierStatus:import('../hotelier/verification.ts').HotelierStatus;loyalty:boolean}>;selectedBooking:string|null};
 export const initialCommerce=():Commerce=>({version:1,search:{...data.search,childrenAges:[]},draft:null,bookings:[],payment:createPaymentState(),accounts:{},selectedBooking:null});
@@ -47,7 +49,7 @@ export function available(state:Commerce,roomId:string,s:Search){
 }
 export function searchHotels(state:Commerce){return data.hotels.filter(h=>matchesDestination(state.search.city,h)&&(!state.search.withPet||hotelFacets(h.id)?.booking.includes('Можно с питомцем'))&&(!state.search.childrenAges.length||hotelFacets(h.id)?.booking.includes('Можно с детьми'))&&data.rooms.some(r=>r.hotelId===h.id&&matchesRoom(state,r.id)&&available(state,r.id,state.search)&&data.rates.some(rate=>rate.roomId===r.id&&matchesRate(state,rate))));}
 export function startDraft(state:Commerce,hotelId:string,id:string,owner:string|null=null):Commerce{
- const eligible=(r:typeof data.rates[number])=>matchesRate(state,r);
+ const eligible=(r:typeof data.rates[number])=>matchesRate(state,r)&&canBookRate(state,owner||null,r);
  const room=data.rooms.find(r=>r.hotelId===hotelId&&matchesRoom(state,r.id)&&available(state,r.id,state.search)&&data.rates.some(rate=>rate.roomId===r.id&&eligible(rate)));
  const regular=data.rates.find(r=>r.roomId===room?.id&&eligible(r));
  const rate=owner&&state.accounts[owner]?.hotelierStatus==='approved'?data.rates.find(r=>r.kind==='friendly_rate'&&r.baseRateId===regular?.id)||regular:regular;
@@ -76,10 +78,12 @@ export function quoteDraft(state:Commerce,owner:string|null):BookingQuote{
  const d=state.draft;if(!d)throw Error('Выберите номер');
  const hotel=data.hotels.find(h=>h.id===d.hotelId),rate=data.rates.find(r=>r.id===d.rateId&&r.roomId===d.roomId);
  if(!hotel||!rate)throw Error('Тариф недоступен');
+ if(!canBookRate(state,owner,rate))throw Error(rate.kind==='friendly_rate'?'Friendly Rate доступен подтверждённым отельерам':'Закрытый тариф недоступен для вашего уровня');
  validateBookingTimes(d);
  const account=owner?state.accounts[owner]:undefined;
  const services=d.services.filter(id=>id!=='sea-breakfast'||rate.mealPlan!=='breakfast').map(id=>{const s=data.services.find(v=>v.id===id&&v.hotelId===d.hotelId);if(!s)throw Error('Услуга недоступна');return {...s,quantity:id==='sea-breakfast'?nights(d.search)*(d.search.adults+d.search.childrenAges.length):1};});
- return calculateBookingQuote({baseLodgingOverrideMinor:state.demoOfferPrices?.[watchKey(owner,d)],hotelId:d.hotelId,nights:nights(d.search),rate,hotelierStatus:account?.hotelierStatus||'none',hotelDiscountBasisPoints:Math.max(promotionBasisPoints(hotel.id),hotelProgramDiscount(state,owner,hotel.id)),services,wallets:programWallets(state,owner,d.hotelId),usePoints:d.usePoints});
+ const quote=calculateBookingQuote({baseLodgingOverrideMinor:state.demoOfferPrices?.[watchKey(owner,d)],hotelId:d.hotelId,nights:nights(d.search),rate,hotelierStatus:account?.hotelierStatus||'none',hotelDiscountBasisPoints:Math.max(promotionBasisPoints(hotel.id),hotelProgramDiscount(state,owner,hotel.id)),services,wallets:programWallets(state,owner,d.hotelId),usePoints:d.usePoints});
+ return {...quote,paymentSchedule:bookingPayment(quote,d)};
 }
 export function commitBooking(state:Commerce,owner:string,expected:BookingQuote,outcome:'success'|'failure',now=new Date().toISOString()):Commerce{
  const d=state.draft;if(!d||!state.accounts[owner])throw Error('Войдите в профиль');
@@ -91,7 +95,7 @@ export function commitBooking(state:Commerce,owner:string,expected:BookingQuote,
  if(searchError(d.search,now.slice(0,10))||!available(state,d.roomId,d.search))throw Error('Условия изменились. Проверьте даты и наличие');
  const fresh=quoteDraft(state,owner);
  if(JSON.stringify(fresh)!==JSON.stringify(expected))throw Error('Цена или баланс изменились. Проверьте итог ещё раз');
- const paid=confirmPayment(state.payment,{userId:owner,bookingId:d.id,quote:fresh,method:d.method,outcome});
+ const paid=confirmPayment(state.payment,{userId:owner,bookingId:d.id,quote:fresh,method:d.method,cashNowMinor:fresh.paymentSchedule?.nowMinor,outcome});
  if(!paid.operation)throw Error('Оплата не прошла. Баллы не списаны. Попробуйте ещё раз');
  return {...state,draft:{...d,step:'confirmation'},payment:paid.state,selectedBooking:d.id,bookings:[...state.bookings,{id:d.id,owner,draft:structuredClone(d),quote:fresh,operation:paid.operation,createdAt:now,hotelLoyalty:hotelLoyaltySnapshot(state,owner,d.hotelId,d.rateId)}]};
 }
@@ -120,7 +124,7 @@ export function cancellationPreview(b:Booking,now=new Date().toISOString()){
  let serviceCashReturn=0,servicePenalty=0;for(const r of b.serviceRequests||[]){const refund=serviceCancellation(r,now);serviceCashReturn+=refund.cashReturn;servicePenalty+=refund.penalty;for(const [id,n] of Object.entries(refund.pointReturns))pointReturns[id]=(pointReturns[id]||0)+n;}
  return {penalty:penalty+servicePenalty,serviceCashReturn,servicePenalty,cashReturn:b.operation.paidCashMinor-cashKept+serviceCashReturn,pointReturns,pointsReturn:Object.values(pointReturns).reduce((a,b)=>a+b,0),due};
 }
-export function formatMoney(minor:number){return new Intl.NumberFormat('ru-RU',{style:'currency',currency:'RUB',maximumFractionDigits:minor%100?2:0}).format(minor/100);}
+export function formatMoney(minor:number){return new Intl.NumberFormat('ru-RU',{style:'currency',currency:'RUB',minimumFractionDigits:0,maximumFractionDigits:0}).format(minor/100);}
 export function dateLabel(s:Search){const f=(d:string)=>new Date(d+'T12:00:00').toLocaleDateString('ru-RU',{day:'numeric',month:'short'});return `${f(s.checkIn)} — ${f(s.checkOut)}`;}
 export function guestLabel(s:Search){return `${s.adults} взр.${s.childrenAges.length?` · ${s.childrenAges.length} дет.`:''}`;}
 export const hotelPhoto=(id:string)=>hotelVisual(id).photos[0];

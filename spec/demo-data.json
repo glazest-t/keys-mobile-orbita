@@ -4510,6 +4510,16 @@
       "freeCancellationUntil": "2026-11-10T15:00:00+03:00",
       "mealPlan": "none",
       "baseRateId": "spb-mini-otel-sadovaya-loft-room-3-none"
+    },
+    {
+      "id": "sea-standard-connoisseur",
+      "hotelId": "orbit-sea",
+      "roomId": "sea-standard",
+      "kind": "hotel_loyalty",
+      "nightlyMinor": 1720000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "requiredHotelLevel": "connoisseur"
     }
   ],
   "availability": [

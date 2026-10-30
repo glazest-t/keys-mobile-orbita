@@ -1227,5 +1227,29 @@
     "title": "UI kit · реальные компоненты",
     "group": "Компоненты",
     "route": "kit"
+  },
+  {
+    "id": "find-first-style",
+    "title": "Первый поиск · Ваш стиль",
+    "group": "Поиск и подбор",
+    "route": "find",
+    "firstFind": true
+  },
+  {
+    "id": "booking-hotel-loyalty",
+    "title": "Номер · программа отеля",
+    "group": "Бронирование",
+    "route": "booking-flow",
+    "step": "rooms",
+    "loyalty": true
+  },
+  {
+    "id": "trip-breakfast-paid",
+    "title": "Проживание · завтрак оплачен",
+    "group": "Поездка и проживание",
+    "route": "trips",
+    "trip": "staying",
+    "breakfast": true,
+    "paid": true
   }
 ]

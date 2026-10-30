@@ -1,3 +1,4 @@
+import {DemoTools} from '../DemoTools';
 import {useEffect,useRef,useState,type ReactNode,type Dispatch,type SetStateAction} from 'react';
 import {createPortal} from 'react-dom';
 import {motion,useReducedMotion} from 'motion/react';
@@ -34,7 +35,7 @@ function PinCheck({state,setState,user,onSuccess,onRecovery,label='Введит�
  },[pin]);
  const change=(value:string)=>{if(busy||success)return;setPin(value);setError('');};
  const digit=(value:string)=>{const cells=pin.padEnd(4,' ').split(''),index=cells.findIndex(v=>v===' ');if(index>=0){cells[index]=value;change(cells.join('').trimEnd());}};
- return <><fieldset className="device-pin-input" disabled={busy||success}><PinCodeField key={attempt} appKeypad={quick} label={label} value={pin} onChange={change} error={error} success={success}/></fieldset>{busy&&<p className="device-access-progress" role="status">Проверяем код…</p>}
+ return <><fieldset className="device-pin-input" disabled={busy||success}><PinCodeField key={attempt} appKeypad={(quick)} label={label} value={pin} onChange={change} error={error} success={success}/></fieldset>{busy&&<p className="device-access-progress" role="status">Проверяем код…</p>}
  {quick&&<fieldset className="device-pin-keypad" disabled={busy||success} aria-label="Цифровая клавиатура PIN-кода" data-scroll-drag="ignore">
   {['1','2','3','4','5','6','7','8','9'].map(value=><button type="button" key={value} onClick={()=>digit(value)}>{value}</button>)}
   {onBiometric?<button type="button" className="pin-key-action" aria-label="Войти по биометрии" onClick={onBiometric}><Icon name="face-id" inheritColor size={26}/></button>:<span/>}
@@ -71,5 +72,5 @@ export function DeviceUnlock({state,setState,user,outcome,onOutcome,onRecovery,o
   <div className="profile-settings-intro"><p>{user.name}, с возвращением</p><h1>Введите PIN-код</h1></div>
   <PinCheck quick state={state} setState={setState} user={user} onSuccess={onUnlocked} onRecovery={onRecovery} onBiometric={biometricEnabled?()=>setPhase('biometric'):undefined}/>
  </motion.main>:null}
- </MobileScroll>{phase==='biometric'&&<LaunchSplash biometricOutcome={outcome} onPin={()=>setPhase('pin')} onDone={onUnlocked}/> }</div>{createPortal(<aside className="demo-tools"><strong>Вход в приложение</strong>{entryControls}<small>PIN проверяется локально. Биометрия имитируется, данные лица не запрашиваются.</small>{!entryControls&&<BiometricDemoControls value={outcome} onChange={onOutcome}/>}</aside>,document.body)}</>;
+ </MobileScroll>{phase==='biometric'&&<LaunchSplash biometricOutcome={outcome} onPin={()=>setPhase('pin')} onDone={onUnlocked}/> }</div>{createPortal(<DemoTools>{entryControls}{!entryControls&&<BiometricDemoControls value={outcome} onChange={onOutcome}/>}</DemoTools>,document.body)}</>;
 }

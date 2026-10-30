@@ -21,7 +21,7 @@ export function NotificationCenter({commerce,owner,onOpen,hotelId}:{commerce:Com
  </div>;
 }
 export function NotificationDemoControls({commerce,setCommerce,owner,onPreview}:{commerce:Commerce;setCommerce:Dispatch<SetStateAction<Commerce>>;owner:string;onPreview:(notice:NoticeItem)=>void}){
- return <details className="notification-demo"><summary>Уведомления · примеры</summary><small>Пять push-типов из таблицы. Примеры не меняют бронь или баланс; 300 баллов — тестовое начисление, баланс взят из кошелька. Уведомление о регистрации не отправляется пушем.</small><button onClick={()=>setCommerce(s=>addNotificationExamples(s,owner))}>Добавить примеры в историю</button>{pushKinds.map(kind=><button key={kind} onClick={()=>{const sample=appNotices(addNotificationExamples(commerce,owner),owner).find(n=>n.kind===kind)!;onPreview(sample);}}>Пуш: {pushTemplates[kind].label}</button>)}<button onClick={()=>setCommerce(s=>removeNotificationExamples(s,owner))}>Убрать примеры из истории</button></details>;
+ return <details className="notification-demo"><summary>Уведомления</summary><button onClick={()=>setCommerce(s=>addNotificationExamples(s,owner))}>Добавить примеры в историю</button>{pushKinds.map(kind=><button key={kind} onClick={()=>{const sample=appNotices(addNotificationExamples(commerce,owner),owner).find(n=>n.kind===kind)!;onPreview(sample);}}>Пуш: {pushTemplates[kind].label}</button>)}<button onClick={()=>setCommerce(s=>removeNotificationExamples(s,owner))}>Убрать примеры из истории</button></details>;
 }
 export function NotificationPush({notice,onClose,onOpen}:{notice:NoticeItem|null;onClose:()=>void;onOpen:(notice:NoticeItem)=>void}){
  const reduced=useReducedMotion();

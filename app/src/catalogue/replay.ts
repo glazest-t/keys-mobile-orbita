@@ -4,7 +4,7 @@ import {catalogueScene} from './fixture';
 export function useCatalogueReplay(){
  useEffect(()=>{
   const scene=catalogueScene;if(!scene)return;
-  document.documentElement.classList.add('catalogue-preview');
+  if(window.parent!==window)document.documentElement.classList.add('catalogue-preview');
   let index=0,tries=0,timer:ReturnType<typeof setTimeout>;
   const actions=[...(scene.onboarding?[{selector:`button[aria-label^="Шаг ${scene.onboarding+1}:"]`}]:[]),...(scene.actions||[])];
   const report=(status:string,detail='')=>{document.documentElement.dataset.catalogueStatus=status;window.parent.postMessage({type:'keys-catalogue',id:scene.id,status,detail},location.origin);};

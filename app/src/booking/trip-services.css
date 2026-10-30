@@ -49,3 +49,8 @@
 .breakfast-summary-compact>strong{flex:1;min-width:0;font:500 14px/20px Onest}
 .breakfast-summary-compact>.service-payment-badge{flex:none;align-self:center;white-space:nowrap;margin:0}
 .breakfast-summary-compact>.k-icon{flex:none;color:var(--k-text-secondary)}
+
+.breakfast-buffet-schedule{display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--k-surface-app);border-radius:16px;color:var(--k-text-secondary)}
+.breakfast-buffet-schedule>span{display:flex;flex-direction:column;gap:4px}
+.breakfast-buffet-schedule strong{font:500 15px/21px Onest;color:var(--k-text-primary)}
+.breakfast-buffet-schedule small{font:400 13px/19px Onest}

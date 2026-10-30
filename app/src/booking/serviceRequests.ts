@@ -39,7 +39,7 @@ export function breakfastQuote(b:Booking,input:BreakfastInput,now=new Date().toI
  if(b.stay?.status==='checked_out'||b.operation.status!=='confirmed'||!config.breakfastOrder||!['buffet','room'].includes(input.mode)||(input.mode==='room'&&!config.roomBreakfast))throw Error('Заказ завтрака в приложении недоступен');
  if(!input.additional&&input.mode==='buffet'&&breakfastIncluded(b))throw Error('Завтрак уже включён в бронь');
  if(!/^\d{4}-\d{2}-\d{2}$/.test(input.date)||!Number.isFinite(Date.parse(input.date))||new Date(input.date).toISOString().slice(0,10)!==input.date||input.date<=b.draft.search.checkIn||input.date>b.draft.search.checkOut)throw Error('Выберите утро в пределах проживания');
- if(!['07:00','08:00','09:00','10:00'].includes(input.time)||!Number.isFinite(Date.parse(now))||Date.parse(input.date+'T'+input.time+':00+03:00')<=Date.parse(now))throw Error('Выберите доступное время завтрака');
+ if((input.mode==='room'&&!['07:00','08:00','09:00','10:00'].includes(input.time))||!Number.isFinite(Date.parse(now))||Date.parse(input.date+'T'+(input.mode==='buffet'?'11:00':input.time)+':00+03:00')<=Date.parse(now))throw Error('Выберите доступное время завтрака');
  if(!Number.isInteger(input.persons)||input.persons<1||input.persons>b.draft.search.adults+b.draft.search.childrenAges.length)throw Error('Проверьте количество персон');
  if(input.comment.length>500)throw Error('Комментарий — до 500 символов');
  if(!input.additional&&(b.serviceRequests||[]).some(r=>r.kind==='breakfast'&&r.date===input.date&&r.mode===input.mode&&['pending','confirmed','paid','completed'].includes(requestStatus(b,r))))throw Error('На эту дату завтрак уже заказан');
@@ -48,7 +48,7 @@ export function breakfastQuote(b:Booking,input:BreakfastInput,now=new Date().toI
 export function requestBreakfast(s:Commerce,owner:string,bookingId:string,input:BreakfastInput,id:string,now=new Date().toISOString()){
  const b=ownBooking(s,owner,bookingId);if(b.serviceRequests?.some(r=>r.id===id))return s;if(!id)throw Error('Не удалось сохранить заказ');
  const amountMinor=breakfastQuote(b,input,now);
- return update(s,b,[...(b.serviceRequests||[]),{...input,comment:input.comment.trim(),id,kind:'breakfast',status:'pending',amountMinor,createdAt:now}]);
+ return update(s,b,[...(b.serviceRequests||[]),{...input,time:input.mode==='buffet'?'11:00':input.time,comment:input.comment.trim(),id,kind:'breakfast',status:'pending',amountMinor,createdAt:now}]);
 }
 export function cancelServiceRequest(s:Commerce,owner:string,bookingId:string,id:string){const b=ownBooking(s,owner,bookingId);const r=b.serviceRequests?.find(r=>r.id===id);if(!r)throw Error('Заявка не найдена');if(r.status==='cancelled')return s;if(r.settlement==='at_hotel')return cancelPaidService(s,owner,bookingId,id);if(r.operation||r.status==='completed')throw Error('Откройте заказ, чтобы проверить условия отмены');return update(s,b,b.serviceRequests!.map(v=>v.id===id?{...v,status:'cancelled'}:v));}
 
@@ -58,7 +58,7 @@ export function breakfastMornings(b:Booking){
  return dates;
 }
 export function availableBreakfastDates(b:Booking,input:BreakfastInput,now=new Date().toISOString()){
- return breakfastMornings(b).filter(date=>Date.parse(date+'T'+input.time+':00+03:00')>stayNow(b,Date.parse(now))&&(input.additional||!(b.serviceRequests||[]).some(r=>r.kind==='breakfast'&&r.date===date&&r.mode===input.mode&&['pending','confirmed','paid','completed'].includes(requestStatus(b,r)))));
+ return breakfastMornings(b).filter(date=>Date.parse(date+'T'+(input.mode==='buffet'?'11:00':input.time)+':00+03:00')>stayNow(b,Date.parse(now))&&(input.additional||!(b.serviceRequests||[]).some(r=>r.kind==='breakfast'&&r.date===date&&r.mode===input.mode&&['pending','confirmed','paid','completed'].includes(requestStatus(b,r)))));
 }
 export function breakfastStayQuote(b:Booking,input:BreakfastInput,now=new Date().toISOString()){
  const dates=availableBreakfastDates(b,input,now);
@@ -72,6 +72,6 @@ export function requestBreakfastStay(s:Commerce,owner:string,bookingId:string,in
  if(!id)throw Error('Не удалось сохранить заказ');
  if(b.serviceRequests?.some(r=>r.groupId===id||r.id===id))return s;
  const {dates}=breakfastStayQuote(b,input,now);
- const requests:ServiceRequest[]=dates.map(date=>({...input,date,comment:input.comment.trim(),id:id+':'+date,groupId:id,kind:'breakfast',status:'pending',amountMinor:breakfastQuote(b,{...input,date},now),createdAt:now}));
+ const requests:ServiceRequest[]=dates.map(date=>({...input,date,time:input.mode==='buffet'?'11:00':input.time,comment:input.comment.trim(),id:id+':'+date,groupId:id,kind:'breakfast',status:'pending',amountMinor:breakfastQuote(b,{...input,date},now),createdAt:now}));
  return update(s,b,[...(b.serviceRequests||[]),...requests]);
 }
