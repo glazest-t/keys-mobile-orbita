@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Check the deploy artifact (not source files) at its GitHub project subpath."""
 import re
+import json
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import unquote, urlsplit
@@ -48,3 +49,15 @@ for p in (ROOT/'prototype/assets').glob('*'):
         assert q.exists(),(p.name,href)
         count+=1
 print(f'OK: project base, entry pages, {count} published links/assets; no root-only app URLs')
+
+scenes=json.loads((ROOT/'screens.json').read_text())
+assert len({s['id'] for s in scenes})==len(scenes), 'Duplicate scene ID'
+html=(ROOT/'screens.html').read_text()
+assert len(re.findall('data-scene="',html))==len(scenes)
+assert all('data-scene="'+s['id']+'"' in html for s in scenes)
+for name in ['index.html','screens.html','documentation.html','docs/brand/index.html']:
+    text=(ROOT/name).read_text()
+    assert 'проект в Клоде' not in text and 'reference/f1.html' not in text, name
+for directory in ['проект в Клоде','docs/brand/reference','prototype/design-previews']:
+    assert not (ROOT/directory).exists(), directory
+print(f'OK: {len(scenes)} unique current previews; obsolete visual references absent')

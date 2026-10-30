@@ -16,11 +16,13 @@ def read(path):
 def main():
     inventory = read('docs/inventory/sources.json')
     source_root = ROOT / inventory['source']
-    for entry in inventory['files']:
+    archived=(ROOT/'publish/archived-visuals.json').exists()
+    for entry in (inventory['files'] if source_root.exists() else []):
         # Git stores NFC filenames; macOS also resolves decomposed Unicode, Linux does not.
         blob = (source_root / unicodedata.normalize('NFC', entry['path'])).read_bytes()
         assert len(blob) == entry['bytes'], entry['path']
         assert hashlib.sha256(blob).hexdigest() == entry['sha256'], entry['path']
+    assert source_root.exists() or archived, 'Missing source archive without explicit archival record'
     for entry in read('docs/inventory/user-documents.json')['documents']:
         assert hashlib.sha256((ROOT / entry['file']).read_bytes()).hexdigest() == entry['sha256']
 
@@ -62,7 +64,7 @@ def main():
             target = target.split('#')[0]
             if target and '://' not in target:
                 assert (doc.parent / target).exists(), (doc.name, target)
-    print('OK: 303 source hashes + DOCX; 99 routes; 158 designs; 23 journeys; policies and deliverable links')
+    print('OK: '+('local archive hashes; ' if source_root.exists() else 'visual sources explicitly archived; ')+'DOCX; 99 functional references; historical design mapping; 23 journeys; policies and deliverable links')
 
 
 if __name__ == '__main__':

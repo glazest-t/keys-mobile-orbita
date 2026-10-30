@@ -1,17 +1,20 @@
-const notes={
- f1:['Кобальтовый блок поиска','Светлый фон, знак в шапке, крупный заголовок и единый блок поиска. Подбор по пожеланиям и свайпы остаются отдельными карточками.'],
- h1:['Фотография и спокойная детализация','Крупное фото, карточки номера, компактные факты и закреплённое действие. Новые данные подставляются без перестройки визуальной иерархии.'],
- s2:['Проживание — вокруг номера и ключа','Кобальтовая карточка, номер, прогресс ночей и белая кнопка ключа. Этот экран доступен после заселения; до заезда ключа нет.'],
- v1:['Выгоды с раздельными балансами','Сохраняем кобальтово-фиолетовую карту и светлые градиенты. Старые проценты начислений остаются иллюстрацией, а не утверждённым правилом.'],
- fr4:['Friendly Rate — самостоятельный тариф','Зелёная карточка из исходника. Закрытый тариф показываем подтверждённому отельеру, сохраняя возможность выбрать обычный.'],
- h7:['Оплата: тот же дизайн, согласованные цифры','Белые блоки, компактная сводка и закреплённое действие. Итог вычисляется общей логикой; тумблер баллов покрывает до 100% проживания и услуг.'],
- a1:['Вход в той же айдентике','Мягкий свет, компактный логотип и ясная форма. Лишняя синяя рамка поля убрана по замечанию пользователя. SMS в демонстрации заменены тестовым кодом.'],
- t1:['Поездки без брони','Сохраняем спокойную композицию и понятный переход к поиску. Это исходный визуальный образец, а не новый стартовый сценарий.']
+const examples={
+ find:['Найти','Единый блок поиска, горячие скидки, история и персональный подбор.','find'],
+ 'booking-hotel':['Об отеле','Фото, предпочтения, цена для вас и отдельная детализация цены.','booking-flow'],
+ 'trip-staying':['Проживание','Ключ по одному нажатию: ожидание, успех и восстановление. До заселения ключ скрыт.','trips'],
+ rewards:['Выгоды','Баллы Ключей и программы отелей — отдельные системы.','rewards'],
+ 'friendly-rooms':['Friendly Rate','Тариф доступен только подтверждённому отельеру. Обычные тарифы остаются.','booking-flow'],
+ 'booking-checkout':['Подтверждение и оплата','Лояльность над способами оплаты. СБП по умолчанию; остальные способы горизонтальными карточками.','booking-flow'],
+ phone:['Вход','Телефон с маской, нейтральный фокус без синего свечения.','phone'],
+ 'trip-empty':['Нет брони','Иллюстрация выбранного варианта и баннер двойной выгоды.','trips'],
+ 'program-forest':['Уровни отеля','Текущий уровень: белая карточка, кобальтовый акцент слева, зелёный статус и таймлайн.','loyalty-program/orbit-forest'],
+ profile:['Профиль','Разделы сгруппированы по смыслу. Баллы, путешественники, предпочтения и настройки.','profile'],
+ chats:['Чаты','Приоритет текущего проживания, фотографии отелей, компактный вход в AI-подбор.','chats'],
+ kit:['Живой UI kit','Кнопки, поля, статусы, строки, плитки, уровни и переходы из текущего приложения.','kit']
 };
-const picker=document.querySelector('#screen-picker'), frame=document.querySelector('#reference-frame');
-picker.addEventListener('change',()=>{const id=picker.value;frame.src=`reference/${id}.html`;frame.title=`Исходный экран ${picker.selectedOptions[0].text}`;document.querySelector('#reference-title').textContent=notes[id][0];document.querySelector('#reference-note').textContent=notes[id][1];document.querySelector('#reference-link').href=frame.src;});
-function fitFrame(){const parent=frame.parentElement;const scale=Math.min(1,parent.clientWidth/395);frame.style.width='395px';frame.style.height=`${parent.clientHeight/scale}px`;frame.style.transform=`scale(${scale})`;}
-new ResizeObserver(fitFrame).observe(frame.parentElement);
+const picker=document.querySelector('#screen-picker'),frame=document.querySelector('#reference-frame');
+const appUrl=frame.src.split('?')[0];
+picker.addEventListener('change',()=>{const id=picker.value,[title,note,route]=examples[id];frame.src=appUrl+'?catalogue='+id+'#'+route;frame.title='Текущий экран: '+title;document.querySelector('#reference-title').textContent=title;document.querySelector('#reference-note').textContent=note;document.querySelector('#reference-link').href=frame.src;});
 const tokensReady=fetch('../../design/tokens.json').then(r=>{if(!r.ok)throw Error('tokens');return r.json();}).then(data=>{
  const palette=[['Кобальт',data.primitive.color.brand.cobalt],['Перламутр',data.primitive.color.neutral.pearl],['Карточка',data.primitive.color.neutral.white],['Основной текст',data.primitive.color.neutral.ink],['Вторичный текст',data.primitive.color.neutral.slate],['Линии',data.primitive.color.neutral.line]];
  for(const [label,color] of palette){const item=document.createElement('article');item.className='swatch';const block=document.createElement('div');block.style.background=color;const p=document.createElement('p');const name=document.createElement('strong');name.textContent=label;const code=document.createElement('code');code.textContent=color;p.append(name,code);item.append(block,p);document.querySelector('#color-grid').append(item);}

@@ -4,3 +4,7 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.arrive{animation:none!important}}@media(prefers-reduced-transparency:reduce){.topbar,.sections{background:#f4f5fb;backdrop-filter:none}}
 
 .motion-table{margin-top:28px}.motion-table table{white-space:normal;min-width:680px}.motion-table td:nth-child(3){min-width:250px}.source-status{margin:24px 0}.source-status a{color:var(--k-action-primary);text-decoration:underline}
+
+/* Live current app: preserve its own calibrated phone frame. */
+.reference-window{height:850px;overflow:hidden;background:white;border-radius:28px}.reference-window iframe{width:100%;height:100%;border:0;transform:none!important}.reference-layout{grid-template-columns:minmax(240px,1fr) minmax(350px,460px)}
+@media(max-width:760px){.reference-layout{grid-template-columns:1fr}.reference-window{height:760px}}

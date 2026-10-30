@@ -26,3 +26,6 @@
 .demo-entry-controls{border-top:1px solid #e4e7ef;padding-top:10px}.demo-entry-controls summary{font-weight:500;color:#101320;cursor:pointer}.demo-tools .demo-entry-options{display:flex;flex-direction:column;gap:6px;margin:10px 0}.demo-tools .demo-entry-options button{display:flex;flex-direction:column;gap:3px;text-align:left;padding:9px 10px;color:#101320}.demo-tools .demo-entry-options small{font-size:10px;line-height:15px;color:#5a6072;font-weight:400}
 
 .demo-tools .project-links{display:flex;gap:12px;flex-wrap:wrap;padding-bottom:8px;border-bottom:1px solid #e4e7ef}.project-links a{font:500 11px/18px Onest,sans-serif;color:#2f5bff;text-decoration:none}.project-links a:hover{text-decoration:underline}
+
+/* Publication previews use isolated fixtures; the protected phone runtime stays intact. */
+.catalogue-preview .demo-tools{display:none}

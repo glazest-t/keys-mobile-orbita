@@ -1,0 +1,1231 @@
+[
+  {
+    "id": "launch",
+    "title": "Запуск приложения",
+    "group": "Вход и онбординг",
+    "route": "welcome",
+    "launch": true
+  },
+  {
+    "id": "onboarding-1",
+    "title": "Управляйте номером",
+    "group": "Вход и онбординг",
+    "route": "welcome",
+    "onboarding": 0
+  },
+  {
+    "id": "onboarding-2",
+    "title": "Двойная выгода",
+    "group": "Вход и онбординг",
+    "route": "welcome",
+    "onboarding": 1
+  },
+  {
+    "id": "onboarding-3",
+    "title": "Персональная подборка",
+    "group": "Вход и онбординг",
+    "route": "welcome",
+    "onboarding": 2
+  },
+  {
+    "id": "phone",
+    "title": "Вход по телефону",
+    "group": "Вход и онбординг",
+    "route": "phone"
+  },
+  {
+    "id": "code",
+    "title": "Код из СМС",
+    "group": "Вход и онбординг",
+    "route": "code"
+  },
+  {
+    "id": "name",
+    "title": "Имя гостя",
+    "group": "Вход и онбординг",
+    "route": "name"
+  },
+  {
+    "id": "terms",
+    "title": "Условия сервиса",
+    "group": "Вход и онбординг",
+    "route": "terms"
+  },
+  {
+    "id": "pin-login",
+    "title": "Вход по PIN-коду",
+    "group": "Вход и онбординг",
+    "route": "trips",
+    "device": "pin"
+  },
+  {
+    "id": "biometric-login",
+    "title": "Вход по биометрии",
+    "group": "Вход и онбординг",
+    "route": "trips",
+    "device": "biometric",
+    "launch": true
+  },
+  {
+    "id": "biometric-failure",
+    "title": "Биометрия не распознана",
+    "group": "Вход и онбординг",
+    "route": "trips",
+    "device": "biometric",
+    "launch": true,
+    "biometric": "failure"
+  },
+  {
+    "id": "hotelier-invite",
+    "title": "Приглашение отельера",
+    "group": "Для отельеров",
+    "route": "hotelier-invite",
+    "role": "guest"
+  },
+  {
+    "id": "hotelier-email",
+    "title": "Подтверждение статуса",
+    "group": "Для отельеров",
+    "route": "hotelier",
+    "role": "interested"
+  },
+  {
+    "id": "hotelier-pending",
+    "title": "Ожидание подтверждения",
+    "group": "Для отельеров",
+    "route": "hotelier",
+    "role": "pending"
+  },
+  {
+    "id": "hotelier-approved",
+    "title": "Статус подтверждён",
+    "group": "Для отельеров",
+    "route": "hotelier",
+    "role": "approved"
+  },
+  {
+    "id": "hotelier-rejected",
+    "title": "Подтверждение отклонено",
+    "group": "Для отельеров",
+    "route": "hotelier",
+    "role": "rejected"
+  },
+  {
+    "id": "hotelier-banner",
+    "title": "Приложение · статус ожидает",
+    "group": "Для отельеров",
+    "route": "trips",
+    "role": "interested"
+  },
+  {
+    "id": "hotelier-profile",
+    "title": "Профиль отельера",
+    "group": "Для отельеров",
+    "route": "profile",
+    "role": "approved"
+  },
+  {
+    "id": "hotelier-share",
+    "title": "Приглашение коллеги",
+    "group": "Для отельеров",
+    "route": "hotelier-share",
+    "role": "approved"
+  },
+  {
+    "id": "friendly-info",
+    "title": "О Friendly Rate",
+    "group": "Для отельеров",
+    "route": "profile",
+    "role": "approved",
+    "hotelierInfo": true
+  },
+  {
+    "id": "find",
+    "title": "Найти",
+    "group": "Поиск и подбор",
+    "route": "find"
+  },
+  {
+    "id": "destination",
+    "title": "Куда поедем",
+    "group": "Поиск и подбор",
+    "route": "find",
+    "sheet": "city"
+  },
+  {
+    "id": "dates",
+    "title": "Даты поездки",
+    "group": "Поиск и подбор",
+    "route": "find",
+    "sheet": "dates"
+  },
+  {
+    "id": "guests",
+    "title": "Кто едет",
+    "group": "Поиск и подбор",
+    "route": "find",
+    "sheet": "guests"
+  },
+  {
+    "id": "results",
+    "title": "Выдача отелей",
+    "group": "Поиск и подбор",
+    "route": "results"
+  },
+  {
+    "id": "results-edit",
+    "title": "Изменить даты и гостей",
+    "group": "Поиск и подбор",
+    "route": "search-params"
+  },
+  {
+    "id": "filters",
+    "title": "Фильтры",
+    "group": "Поиск и подбор",
+    "route": "results",
+    "actions": [
+      {
+        "text": "Фильтры"
+      }
+    ]
+  },
+  {
+    "id": "sort",
+    "title": "Сортировка",
+    "group": "Поиск и подбор",
+    "route": "results",
+    "actions": [
+      {
+        "selector": "button[aria-label*=\"Сортир\"]"
+      }
+    ]
+  },
+  {
+    "id": "results-map",
+    "title": "Карта отелей",
+    "group": "Поиск и подбор",
+    "route": "results-map"
+  },
+  {
+    "id": "hot-deals",
+    "title": "Горячие скидки",
+    "group": "Поиск и подбор",
+    "route": "results",
+    "collection": "discount"
+  },
+  {
+    "id": "swipe-preferences",
+    "title": "Ваш стиль путешествий · первый выбор",
+    "group": "Поиск и подбор",
+    "route": "swipe",
+    "swipe": false
+  },
+  {
+    "id": "swipe",
+    "title": "Отели свайпом",
+    "group": "Поиск и подбор",
+    "route": "swipe",
+    "swipe": true
+  },
+  {
+    "id": "wish-search",
+    "title": "Подбор по пожеланию",
+    "group": "Поиск и подбор",
+    "route": "wish-search"
+  },
+  {
+    "id": "wish-results",
+    "title": "Пожелание · выдача отелей",
+    "group": "Поиск и подбор",
+    "route": "wish-search",
+    "wish": true
+  },
+  {
+    "id": "booking-hotel",
+    "title": "Об отеле",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "hotel"
+  },
+  {
+    "id": "booking-rooms",
+    "title": "Выбор номера",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "rooms"
+  },
+  {
+    "id": "booking-guest",
+    "title": "Данные бронирования",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "guest"
+  },
+  {
+    "id": "booking-services",
+    "title": "Дополнительные услуги",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "services"
+  },
+  {
+    "id": "booking-checkout",
+    "title": "Подтверждение и оплата",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "checkout"
+  },
+  {
+    "id": "booking-confirmation",
+    "title": "Бронь подтверждена",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "confirmation"
+  },
+  {
+    "id": "hotel-gallery",
+    "title": "Фото отеля",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "hotel",
+    "actions": [
+      {
+        "selector": "[aria-label=\"Открыть фотографии отеля\"]"
+      }
+    ]
+  },
+  {
+    "id": "hotel-price",
+    "title": "Расчёт цены отеля",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "hotel",
+    "actions": [
+      {
+        "text": "Цена для вас"
+      }
+    ]
+  },
+  {
+    "id": "hotel-preferences",
+    "title": "Почему подходит вам",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "hotel",
+    "actions": [
+      {
+        "selector": "[aria-label=\"Как подобраны предпочтения\"]"
+      }
+    ]
+  },
+  {
+    "id": "hotel-watch",
+    "title": "Следить за ценой",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "hotel",
+    "actions": [
+      {
+        "selector": ".watch-price"
+      }
+    ]
+  },
+  {
+    "id": "hotel-nearby",
+    "title": "Расположение отеля",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "hotel",
+    "actions": [
+      {
+        "text": "Расположение"
+      }
+    ]
+  },
+  {
+    "id": "hotel-route",
+    "title": "Маршрут до отеля",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "hotel",
+    "actions": [
+      {
+        "text": "Маршрут"
+      }
+    ]
+  },
+  {
+    "id": "hotel-reviews",
+    "title": "Все отзывы",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "hotel",
+    "actions": [
+      {
+        "selector": ".hotel-review-summary"
+      }
+    ]
+  },
+  {
+    "id": "hotel-share",
+    "title": "Поделиться отелем",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "hotel",
+    "actions": [
+      {
+        "selector": "[aria-label=\"Поделиться отелем\"]"
+      }
+    ]
+  },
+  {
+    "id": "room-equipment",
+    "title": "Оснащение номера",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "rooms",
+    "actions": [
+      {
+        "text": "Оснащение номера"
+      }
+    ]
+  },
+  {
+    "id": "room-rate",
+    "title": "Что входит в тариф",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "rooms",
+    "actions": [
+      {
+        "text": "Что входит в тариф"
+      }
+    ]
+  },
+  {
+    "id": "room-gallery",
+    "title": "Фото номера",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "rooms",
+    "actions": [
+      {
+        "selector": ".room-offer-photo button"
+      }
+    ]
+  },
+  {
+    "id": "booking-total",
+    "title": "Итого · расчёт стоимости",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "checkout",
+    "actions": [
+      {
+        "selector": "[aria-label=\"Посмотреть расчёт стоимости бронирования\"]"
+      }
+    ]
+  },
+  {
+    "id": "booking-arrival",
+    "title": "Выбор времени заезда",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "guest",
+    "actions": [
+      {
+        "text": "Заезд"
+      }
+    ]
+  },
+  {
+    "id": "booking-departure",
+    "title": "Выбор времени выезда",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "guest",
+    "actions": [
+      {
+        "text": "Выезд"
+      }
+    ]
+  },
+  {
+    "id": "booking-wishes",
+    "title": "Пожелания к проживанию",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "guest",
+    "actions": [
+      {
+        "text": "Пожелания к проживанию"
+      }
+    ]
+  },
+  {
+    "id": "booking-extra-guest",
+    "title": "Дополнительный гость",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "guest",
+    "actions": [
+      {
+        "selector": ".booking-add-guest"
+      }
+    ],
+    "adults": 2
+  },
+  {
+    "id": "payment-methods",
+    "title": "Другие способы оплаты",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "checkout",
+    "actions": [
+      {
+        "text": "Другое"
+      }
+    ]
+  },
+  {
+    "id": "friendly-hotel",
+    "title": "Об отеле · Friendly Rate",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "hotel",
+    "role": "approved"
+  },
+  {
+    "id": "friendly-rooms",
+    "title": "Номера · Friendly Rate",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "rooms",
+    "role": "approved"
+  },
+  {
+    "id": "hotel-amenities",
+    "title": "Все удобства отеля",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "hotel",
+    "actions": [
+      {
+        "selector": ".hotel-section button",
+        "contains": "Все"
+      }
+    ]
+  },
+  {
+    "id": "guest-travelers",
+    "title": "Выбор сохранённого путешественника",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "guest",
+    "adults": 2,
+    "actions": [
+      {
+        "selector": ".booking-add-guest"
+      },
+      {
+        "text": "Выбрать путешественника"
+      }
+    ]
+  },
+  {
+    "id": "room-search",
+    "title": "Изменение дат и гостей · номер",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "rooms",
+    "actions": [
+      {
+        "selector": "[aria-label=\"Изменить даты и гостей\"]"
+      }
+    ]
+  },
+  {
+    "id": "payment-error",
+    "title": "Ошибка оплаты брони",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "checkout",
+    "failPayment": true,
+    "actions": [
+      {
+        "text": "Оплатить"
+      }
+    ]
+  },
+  {
+    "id": "trip-empty",
+    "title": "Нет брони",
+    "group": "Поездки",
+    "route": "trips",
+    "trip": "empty"
+  },
+  {
+    "id": "trip-upcoming",
+    "title": "До заезда",
+    "group": "Поездки",
+    "route": "trips",
+    "trip": "upcoming"
+  },
+  {
+    "id": "trip-staying",
+    "title": "Во время проживания",
+    "group": "Поездки",
+    "route": "trips",
+    "trip": "staying"
+  },
+  {
+    "id": "trip-departure",
+    "title": "День выезда",
+    "group": "Поездки",
+    "route": "trips",
+    "trip": "departure"
+  },
+  {
+    "id": "trip-completed",
+    "title": "Поездка завершена",
+    "group": "Поездки",
+    "route": "trips",
+    "trip": "completed"
+  },
+  {
+    "id": "record",
+    "title": "Детали брони",
+    "group": "Поездки",
+    "route": "booking-record",
+    "trip": "upcoming"
+  },
+  {
+    "id": "stay-record",
+    "title": "Детали проживания",
+    "group": "Поездки",
+    "route": "booking-record",
+    "trip": "staying"
+  },
+  {
+    "id": "trip-bill",
+    "title": "Счёт проживания",
+    "group": "Поездки",
+    "route": "trip-bill",
+    "trip": "staying"
+  },
+  {
+    "id": "trip-guide",
+    "title": "Как заселиться",
+    "group": "Поездки",
+    "route": "trip-guide",
+    "trip": "upcoming"
+  },
+  {
+    "id": "trip-route",
+    "title": "Маршрут",
+    "group": "Поездки",
+    "route": "trip-route",
+    "trip": "upcoming"
+  },
+  {
+    "id": "trip-nearby",
+    "title": "Рядом с вами",
+    "group": "Поездки",
+    "route": "trip-nearby",
+    "trip": "staying"
+  },
+  {
+    "id": "trip-review",
+    "title": "Оценить проживание",
+    "group": "Поездки",
+    "route": "trip-review",
+    "trip": "completed"
+  },
+  {
+    "id": "record-edit",
+    "title": "Изменение брони",
+    "group": "Поездки",
+    "route": "booking-record",
+    "trip": "upcoming",
+    "editBooking": true
+  },
+  {
+    "id": "record-cancel",
+    "title": "Отмена брони",
+    "group": "Поездки",
+    "route": "booking-record",
+    "trip": "upcoming",
+    "actions": [
+      {
+        "selector": ".record-cancel"
+      }
+    ]
+  },
+  {
+    "id": "record-documents",
+    "title": "Документы",
+    "group": "Поездки",
+    "route": "booking-record",
+    "trip": "upcoming",
+    "recordDocuments": true
+  },
+  {
+    "id": "trip-share",
+    "title": "Поделиться бронью · QR",
+    "group": "Поездки",
+    "route": "trips",
+    "trip": "staying",
+    "share": true
+  },
+  {
+    "id": "trip-wifi",
+    "title": "Wi-Fi",
+    "group": "Поездки",
+    "route": "trips",
+    "trip": "staying",
+    "wifi": true
+  },
+  {
+    "id": "route-origin",
+    "title": "Маршрут · откуда",
+    "group": "Поездки",
+    "route": "trip-route",
+    "trip": "upcoming",
+    "actions": [
+      {
+        "text": "Изменить"
+      }
+    ]
+  },
+  {
+    "id": "services",
+    "title": "Все услуги отеля",
+    "group": "Услуги отеля",
+    "route": "trip-services",
+    "trip": "staying"
+  },
+  {
+    "id": "breakfast",
+    "title": "Завтрак",
+    "group": "Услуги отеля",
+    "route": "trip-breakfast",
+    "trip": "staying"
+  },
+  {
+    "id": "breakfast-order",
+    "title": "Добавить завтрак",
+    "group": "Услуги отеля",
+    "route": "trip-breakfast",
+    "trip": "staying",
+    "actions": [
+      {
+        "text": "Добавить завтрак"
+      }
+    ]
+  },
+  {
+    "id": "early-arrival",
+    "title": "Ранний заезд",
+    "group": "Услуги отеля",
+    "route": "trips",
+    "trip": "upcoming",
+    "early": true
+  },
+  {
+    "id": "late-departure",
+    "title": "Поздний выезд",
+    "group": "Услуги отеля",
+    "route": "trips",
+    "trip": "staying",
+    "early": true,
+    "timeServiceKind": "departure"
+  },
+  {
+    "id": "problem",
+    "title": "Сообщить о проблеме",
+    "group": "Услуги отеля",
+    "route": "trip-problem",
+    "trip": "staying"
+  },
+  {
+    "id": "service-food",
+    "title": "Еда в номер",
+    "group": "Услуги отеля",
+    "route": "trip-services",
+    "trip": "staying",
+    "actions": [
+      {
+        "selector": ".hotel-service-row",
+        "contains": "Еда в номер"
+      }
+    ]
+  },
+  {
+    "id": "service-cleaning",
+    "title": "Уборка",
+    "group": "Услуги отеля",
+    "route": "trip-services",
+    "trip": "staying",
+    "actions": [
+      {
+        "selector": ".hotel-service-row",
+        "contains": "Уборка"
+      }
+    ]
+  },
+  {
+    "id": "service-pillows",
+    "title": "Подушки",
+    "group": "Услуги отеля",
+    "route": "trip-services",
+    "trip": "staying",
+    "actions": [
+      {
+        "selector": ".hotel-service-row",
+        "contains": "Подушка на выбор"
+      }
+    ]
+  },
+  {
+    "id": "service-transfer",
+    "title": "Трансфер",
+    "group": "Услуги отеля",
+    "route": "trip-services",
+    "trip": "staying",
+    "actions": [
+      {
+        "selector": ".hotel-service-row",
+        "contains": "Трансфер"
+      }
+    ]
+  },
+  {
+    "id": "service-spa",
+    "title": "Спа",
+    "group": "Услуги отеля",
+    "route": "trip-services",
+    "trip": "staying",
+    "actions": [
+      {
+        "selector": ".hotel-service-row",
+        "contains": "Спа"
+      }
+    ]
+  },
+  {
+    "id": "service-parking",
+    "title": "Парковка",
+    "group": "Услуги отеля",
+    "route": "trip-services",
+    "trip": "staying",
+    "actions": [
+      {
+        "selector": ".hotel-service-row",
+        "contains": "Парковка"
+      }
+    ]
+  },
+  {
+    "id": "service-request",
+    "title": "Другой запрос",
+    "group": "Услуги отеля",
+    "route": "trip-services",
+    "trip": "staying",
+    "actions": [
+      {
+        "selector": ".hotel-service-row",
+        "contains": "Другой запрос"
+      }
+    ]
+  },
+  {
+    "id": "breakfast-unpaid",
+    "title": "Завтрак · к оплате",
+    "group": "Услуги отеля",
+    "route": "trip-breakfast",
+    "trip": "upcoming",
+    "breakfast": true,
+    "paid": false,
+    "order": false,
+    "pay": false
+  },
+  {
+    "id": "breakfast-paid",
+    "title": "Завтрак · оплачено",
+    "group": "Услуги отеля",
+    "route": "trip-breakfast",
+    "trip": "upcoming",
+    "breakfast": true,
+    "paid": true,
+    "order": false,
+    "pay": false
+  },
+  {
+    "id": "service-payment",
+    "title": "Оплата услуги",
+    "group": "Услуги отеля",
+    "route": "trip-breakfast",
+    "trip": "upcoming",
+    "breakfast": true,
+    "paid": false,
+    "order": true,
+    "pay": true
+  },
+  {
+    "id": "service-order",
+    "title": "Детали оплаченной услуги",
+    "group": "Услуги отеля",
+    "route": "trip-breakfast",
+    "trip": "upcoming",
+    "breakfast": true,
+    "paid": true,
+    "order": true,
+    "pay": false
+  },
+  {
+    "id": "service-towels",
+    "title": "Полотенца и бельё",
+    "group": "Услуги отеля",
+    "route": "trip-services",
+    "trip": "staying",
+    "actions": [
+      {
+        "selector": ".hotel-service-row",
+        "contains": "Полотенца и бельё"
+      }
+    ]
+  },
+  {
+    "id": "service-cot",
+    "title": "Детская кроватка",
+    "group": "Услуги отеля",
+    "route": "trip-services",
+    "trip": "staying",
+    "actions": [
+      {
+        "selector": ".hotel-service-row",
+        "contains": "Детская кроватка"
+      }
+    ]
+  },
+  {
+    "id": "favorites",
+    "title": "Подборки избранного",
+    "group": "Избранное и цены",
+    "route": "favorites"
+  },
+  {
+    "id": "favorite-list",
+    "title": "Отели подборки",
+    "group": "Избранное и цены",
+    "route": "favorite-list"
+  },
+  {
+    "id": "favorite-map",
+    "title": "Карта подборки",
+    "group": "Избранное и цены",
+    "route": "favorite-map"
+  },
+  {
+    "id": "price-watches",
+    "title": "Следим за ценами",
+    "group": "Избранное и цены",
+    "route": "price-watches"
+  },
+  {
+    "id": "favorite-create",
+    "title": "Создать подборку",
+    "group": "Избранное и цены",
+    "route": "favorites",
+    "actions": [
+      {
+        "selector": ".favorite-new"
+      }
+    ]
+  },
+  {
+    "id": "price-watch-delete",
+    "title": "Удалить наблюдение",
+    "group": "Избранное и цены",
+    "route": "price-watches",
+    "actions": [
+      {
+        "selector": "button[aria-label*=\"Удалить\"]"
+      }
+    ]
+  },
+  {
+    "id": "chats",
+    "title": "Все чаты",
+    "group": "Чаты и уведомления",
+    "route": "chats",
+    "trip": "history"
+  },
+  {
+    "id": "trip-chat",
+    "title": "Диалог с отелем",
+    "group": "Чаты и уведомления",
+    "route": "trip-chat",
+    "trip": "staying"
+  },
+  {
+    "id": "notifications",
+    "title": "Все уведомления",
+    "group": "Чаты и уведомления",
+    "route": "notifications",
+    "trip": "staying"
+  },
+  {
+    "id": "hotel-notifications",
+    "title": "Уведомления отеля",
+    "group": "Чаты и уведомления",
+    "route": "notifications",
+    "trip": "staying",
+    "hotelNotifications": true
+  },
+  {
+    "id": "rewards",
+    "title": "Выгоды",
+    "group": "Выгоды и программы",
+    "route": "rewards"
+  },
+  {
+    "id": "points",
+    "title": "Баллы Ключей · история",
+    "group": "Выгоды и программы",
+    "route": "points"
+  },
+  {
+    "id": "programs",
+    "title": "Программы отелей",
+    "group": "Выгоды и программы",
+    "route": "loyalty-programs"
+  },
+  {
+    "id": "program-sea",
+    "title": "Программа · скидка и баллы",
+    "group": "Выгоды и программы",
+    "route": "loyalty-program/orbit-sea"
+  },
+  {
+    "id": "program-forest",
+    "title": "Программа · только баллы",
+    "group": "Выгоды и программы",
+    "route": "loyalty-program/orbit-forest"
+  },
+  {
+    "id": "program-camp",
+    "title": "Программа · скидка",
+    "group": "Выгоды и программы",
+    "route": "loyalty-program/kazan-camp"
+  },
+  {
+    "id": "program-network",
+    "title": "Программа сети",
+    "group": "Выгоды и программы",
+    "route": "loyalty-network"
+  },
+  {
+    "id": "program-connect",
+    "title": "Подключение программы",
+    "group": "Выгоды и программы",
+    "route": "loyalty-connect/kazan-camp"
+  },
+  {
+    "id": "invite",
+    "title": "Пригласить друзей",
+    "group": "Выгоды и программы",
+    "route": "hotelier-share"
+  },
+  {
+    "id": "points-rules",
+    "title": "Как работают баллы",
+    "group": "Выгоды и программы",
+    "route": "points",
+    "actions": [
+      {
+        "selector": "[aria-label=\"Как работают баллы\"]"
+      }
+    ]
+  },
+  {
+    "id": "program-level",
+    "title": "Условия уровня отеля",
+    "group": "Выгоды и программы",
+    "route": "loyalty-program/orbit-sea",
+    "actions": [
+      {
+        "selector": ".hotel-level-card.is-current"
+      }
+    ]
+  },
+  {
+    "id": "rewards-hotelier",
+    "title": "Выгоды отельера",
+    "group": "Выгоды и программы",
+    "route": "rewards",
+    "role": "approved"
+  },
+  {
+    "id": "profile",
+    "title": "Профиль",
+    "group": "Профиль и история",
+    "route": "profile",
+    "trip": "empty"
+  },
+  {
+    "id": "travelers",
+    "title": "Путешественники",
+    "group": "Профиль и история",
+    "route": "travelers",
+    "trip": "empty"
+  },
+  {
+    "id": "profile-style",
+    "title": "Ваш стиль путешествий",
+    "group": "Профиль и история",
+    "route": "profile-style",
+    "trip": "empty"
+  },
+  {
+    "id": "profile-history",
+    "title": "История поездок",
+    "group": "Профиль и история",
+    "route": "profile-history",
+    "trip": "history"
+  },
+  {
+    "id": "profile-notifications",
+    "title": "Настройки уведомлений",
+    "group": "Профиль и история",
+    "route": "profile-notifications",
+    "trip": "empty"
+  },
+  {
+    "id": "profile-security",
+    "title": "Безопасность и доступ",
+    "group": "Профиль и история",
+    "route": "profile-security",
+    "trip": "empty"
+  },
+  {
+    "id": "profile-pin",
+    "title": "Установка PIN-кода",
+    "group": "Профиль и история",
+    "route": "profile-pin",
+    "trip": "empty"
+  },
+  {
+    "id": "profile-biometric",
+    "title": "Настройка биометрии",
+    "group": "Профиль и история",
+    "route": "profile-biometric",
+    "trip": "empty"
+  },
+  {
+    "id": "profile-sessions",
+    "title": "Устройства и сеансы",
+    "group": "Профиль и история",
+    "route": "profile-sessions",
+    "trip": "empty"
+  },
+  {
+    "id": "profile-data",
+    "title": "Управление данными",
+    "group": "Профиль и история",
+    "route": "profile-data",
+    "trip": "empty"
+  },
+  {
+    "id": "profile-deletion",
+    "title": "Удаление аккаунта",
+    "group": "Профиль и история",
+    "route": "profile-deletion",
+    "trip": "empty"
+  },
+  {
+    "id": "help",
+    "title": "Помощь и поддержка",
+    "group": "Профиль и история",
+    "route": "help",
+    "trip": "empty"
+  },
+  {
+    "id": "traveler",
+    "title": "Данные путешественника",
+    "group": "Профиль и история",
+    "route": "traveler"
+  },
+  {
+    "id": "edit",
+    "title": "Редактирование данных",
+    "group": "Профиль и история",
+    "route": "edit"
+  },
+  {
+    "id": "about",
+    "title": "О приложении",
+    "group": "Профиль и история",
+    "route": "profile",
+    "sheet": "about"
+  },
+  {
+    "id": "logout",
+    "title": "Выход из приложения",
+    "group": "Профиль и история",
+    "route": "profile",
+    "sheet": "logout"
+  },
+  {
+    "id": "history-add",
+    "title": "Добавить бронь по номеру",
+    "group": "Профиль и история",
+    "route": "profile-history",
+    "trip": "history",
+    "actions": [
+      {
+        "text": "Добавить бронь"
+      }
+    ]
+  },
+  {
+    "id": "history-trip",
+    "title": "Завершённая поездка · детали",
+    "group": "Профиль и история",
+    "route": "profile-trip/KEYS-102-+79990000001",
+    "trip": "history"
+  },
+  {
+    "id": "help-article",
+    "title": "Статья помощи",
+    "group": "Профиль и история",
+    "route": "help-article/change"
+  },
+  {
+    "id": "support-new",
+    "title": "Обращение в поддержку",
+    "group": "Профиль и история",
+    "route": "support-new",
+    "trip": "history"
+  },
+  {
+    "id": "support-request",
+    "title": "Детали обращения",
+    "group": "Профиль и история",
+    "route": "support-request/catalogue-support",
+    "support": true
+  },
+  {
+    "id": "profile-pin-off",
+    "title": "Отключение PIN-кода",
+    "group": "Профиль и история",
+    "route": "profile-pin-off",
+    "pinConfigured": true
+  },
+  {
+    "id": "kit",
+    "title": "UI kit · реальные компоненты",
+    "group": "Компоненты",
+    "route": "kit"
+  }
+]

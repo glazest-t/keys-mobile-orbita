@@ -1,9 +1,0 @@
-{
-  "status": "awaiting-selection",
-  "screen": "Первый шаг онбординга — Поездка под рукой",
-  "displayOrder": [
-    {"option": 1, "concept": "Номер на ладони", "image": "/Users/tatyana.glazyrina/.codex/generated_images/01a15f51-a729-7521-8664-1d3c42c39e78/exec-9019bca6-14e8-4489-80ba-18daf55c0e6a.png"},
-    {"option": 2, "concept": "Орбита поездки", "image": "/Users/tatyana.glazyrina/.codex/generated_images/01a15f51-a729-7521-8664-1d3c42c39e78/exec-d7ae1b8d-3610-4dd6-8ad6-8f0ef5f5087a.png"},
-    {"option": 3, "concept": "Карточка поездки", "image": "/Users/tatyana.glazyrina/.codex/generated_images/01a15f51-a729-7521-8664-1d3c42c39e78/exec-cea65f99-d43a-4cfc-8306-2a08dbe7fab1.png"}
-  ]
-}
