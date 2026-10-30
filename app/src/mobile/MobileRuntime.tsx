@@ -10,10 +10,9 @@ export function MobileRuntime({ children }: PropsWithChildren) {
       <PhoneFrame>
         <KeyboardProvider>
           <KeyboardPreview />
-          <StatusBar />
+          <PreviewChrome />
           <MobileAppViewport>{children}</MobileAppViewport>
-          <HomeIndicator />
-          <KeyboardDock />
+
         </KeyboardProvider>
       </PhoneFrame>
     </MobileDeviceProvider>
@@ -47,4 +46,9 @@ function KeyboardPreview() {
   }, [keyboard]);
 
   return null;
+}
+
+function PreviewChrome() {
+  const { nativePhone } = useMobileDevice();
+  return nativePhone ? null : <><StatusBar /><HomeIndicator /><KeyboardDock /></>;
 }

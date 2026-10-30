@@ -1,0 +1,13 @@
+/* Real phones use the browser viewport and keyboard; desktops retain the simulator. */
+.native-phone body { min-width: 0; overscroll-behavior: none; }
+.native-phone-stage { position: fixed; padding: 0; display: block; }
+.native-phone-stage > .device-screen { inset: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); width: auto; height: 100%; border-radius: 0; box-shadow: none; }
+.native-phone-stage .mobile-app-viewport { bottom: 0 !important; }
+.native-phone-stage input, .native-phone-stage textarea, .native-phone-stage select { font-size: max(16px, 1em) !important; }
+.native-phone .demo-launcher { top: max(2px, env(safe-area-inset-top)); right: max(8px, env(safe-area-inset-right)); left: auto; }
+.native-phone .demo-launch-button { min-height: 28px; padding: 2px 10px; font-size: 11px; }
+.native-phone-stage .sheet-content { padding-bottom: max(24px, env(safe-area-inset-bottom)); }
+@media (max-height: 740px) {
+  .native-phone-stage .login-art-source { height: 160px; }
+  .native-phone-stage .login-art-source > div { transform: scale(.66); transform-origin: center top; }
+}

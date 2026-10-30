@@ -1,6 +1,7 @@
 import { createContext, type PropsWithChildren, useContext, useMemo, useState } from "react";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { CheckIcon, ChevronDownIcon } from "@radix-ui/react-icons";
+import { useNativePhoneViewport } from "../nativePhone";
 import { mobileAssets } from "./assets";
 import { iphoneGeometry, pixelGeometry, type MobileDeviceGeometry } from "./geometry";
 
@@ -44,6 +45,8 @@ export const mobileDevices: Record<MobileDeviceId, MobileDevicePreset> = {
 
 type MobileDeviceContextValue = {
   device: MobileDevicePreset;
+  nativePhone: boolean;
+  viewportOffset: { top: number; left: number };
   deviceId: MobileDeviceId;
   setDeviceId: (deviceId: MobileDeviceId) => void;
 };
@@ -52,10 +55,19 @@ const MobileDeviceContext = createContext<MobileDeviceContextValue | null>(null)
 
 export function MobileDeviceProvider({ children }: PropsWithChildren) {
   const [deviceId, setDeviceId] = useState<MobileDeviceId>("iphone");
-  const value = useMemo(
-    () => ({ device: mobileDevices[deviceId], deviceId, setDeviceId }),
-    [deviceId],
-  );
+  const viewport = useNativePhoneViewport();
+  const value = useMemo(() => {
+    const preset = mobileDevices[deviceId];
+    const device = viewport.native ? { ...preset, camera: undefined, geometry: {
+      device: { width: viewport.width, height: viewport.height },
+      screen: { x: 0, y: 0, width: viewport.width, height: viewport.height, radius: 0 },
+      // A compact strip keeps the prototype scenario control clear of app headers.
+      safeArea: { top: Math.max(32, viewport.safeTop + 30), bottom: viewport.safeBottom },
+      keyboard: { height: 0 },
+    } } : preset;
+    return { device, deviceId, setDeviceId, nativePhone: viewport.native,
+      viewportOffset: { top: viewport.top, left: viewport.left } };
+  }, [deviceId, viewport.native, viewport.width, viewport.height, viewport.top, viewport.left, viewport.safeTop, viewport.safeBottom]);
 
   return <MobileDeviceContext.Provider value={value}>{children}</MobileDeviceContext.Provider>;
 }

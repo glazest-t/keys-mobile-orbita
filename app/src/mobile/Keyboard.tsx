@@ -6,6 +6,7 @@ import {
   type Ref,
   type TextareaHTMLAttributes,
   useContext,
+  useEffect,
   useMemo,
   useRef,
   useState,
@@ -35,12 +36,24 @@ type KeyboardInputProps = InputHTMLAttributes<HTMLInputElement> & {
 const KeyboardContext = createContext<KeyboardContextValue | null>(null);
 
 export function KeyboardProvider({ children }: PropsWithChildren) {
-  const { device } = useMobileDevice();
+  const { device, nativePhone } = useMobileDevice();
   const [visible, setVisible] = useState(false);
   const [dragOffset, setRawDragOffset] = useState(0);
   const [isDragging, setDragging] = useState(false);
   const [focusedElement, setFocusedElement] = useState<HTMLElement | null>(null);
   const fullHeight = device.geometry.keyboard.height;
+  useEffect(() => {
+    if (!nativePhone) return;
+    const blur = () => requestAnimationFrame(() => {
+      const active = document.activeElement;
+      if (!(active instanceof HTMLInputElement || active instanceof HTMLTextAreaElement)) {
+        setVisible(false);
+        setFocusedElement(null);
+      }
+    });
+    document.addEventListener('focusout', blur);
+    return () => document.removeEventListener('focusout', blur);
+  }, [nativePhone]);
   const setDragOffset = (offset: number) => {
     setRawDragOffset(Math.max(0, Math.min(fullHeight, offset)));
   };
