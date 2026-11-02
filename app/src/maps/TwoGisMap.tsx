@@ -61,7 +61,7 @@ export function TwoGisMap({points,center,selected,onSelect,interactive=true,expa
   <div className="gis-canvas" ref={canvas}/>
   {status==='loading'&&<div className="gis-state" role="status"><span className="gis-spinner"/>Загружаем карту</div>}
   {status==='error'&&<div className="gis-state gis-error" role="status"><strong>Карта недоступна</strong><span>Попробуйте загрузить ещё раз</span><button type="button" onClick={()=>setRetry(v=>v+1)}>Повторить</button></div>}
-  {status==='ready'&&missing>0&&<div className="gis-missing">{points.length?'Часть отелей пока без координат':'Адрес отеля уточняется'}</div>}
+  {status==='ready'&&missing>0&&points.length===0&&<div className="gis-missing">Адрес отеля уточняется</div>}
   {status==='ready'&&interactive&&<div className="gis-zoom"><button type="button" aria-label="Приблизить карту" onClick={()=>{const m=mapRef.current;if(m)m.setZoom(m.getZoom()+1);}}>+</button><button type="button" aria-label="Отдалить карту" onClick={()=>{const m=mapRef.current;if(m)m.setZoom(m.getZoom()-1);}}>−</button></div>}
  </div>;
 }
