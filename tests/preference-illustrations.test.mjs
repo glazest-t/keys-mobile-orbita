@@ -7,7 +7,7 @@ test('Утверждённые 32 иконки имеют уникальные I
  assert.equal(preferenceIllustrations.length,32);
  assert.equal(new Set(preferenceIllustrations.map(i=>i.id)).size,32);
  for(const icon of preferenceIllustrations){
-  assert.ok(existsSync(new URL(`../app/public/assets/preferences/set-1-${icon.sheet}.png`,import.meta.url)));
+  assert.ok(existsSync(new URL(`../app/public/assets/preferences/set-1-${icon.sheet}.webp`,import.meta.url)));
   const [x,y,w,h]=icon.rect;
   assert.ok(x>=0&&y>=0&&w>0&&h>0&&x+w<=1536&&y+h<=1024);
   assert.equal(preferenceIllustrationFor(icon.id),icon);
