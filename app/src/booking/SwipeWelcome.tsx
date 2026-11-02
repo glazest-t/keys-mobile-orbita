@@ -2,8 +2,12 @@ import {useState,type CSSProperties} from 'react';
 import {MobileScroll,useKeyboardInsets} from '../mobile';
 import {Button,Icon,IconButton} from '../ui';
 import {swipeThemes} from './swipePreferences';
+import {PreferenceIllustration} from './PreferenceIllustration';
+import {type PreferenceIllustrationId} from './preferenceIllustrations';
 import {BubbleOrbit,WaterRippleButton} from '../interactions';
 import './swipe-preferences.css';
+
+const themeIllustrations:Record<string,PreferenceIllustrationId>={family:'kids',discover:'location',romantic:'adults',culture:'historic',solo:'solo',active:'sport',nature:'nature',long:'kitchen',spa:'spa',food:'restaurant'};
 
 export function SwipePreferences({selected,onChange,onContinue,onClose,backLabel='Назад к поиску',saveMode=false,embedded=false}:{selected:string[];onChange:(ids:string[])=>void;onContinue:()=>void;onClose:()=>void;backLabel?:string;saveMode?:boolean;embedded?:boolean}){
  const {bottomInset}=useKeyboardInsets();
@@ -16,7 +20,7 @@ export function SwipePreferences({selected,onChange,onContinue,onClose,backLabel
    <p>На основе ваших предпочтений мы подберем лучшее предложение</p>
    <BubbleOrbit departing={departing} onDeparted={onContinue}>
     {swipeThemes.map(theme=>{const checked=selected.includes(theme.id);return <WaterRippleButton key={theme.id} type="button" role="checkbox" aria-checked={checked} className="swipe-theme" onClick={()=>onChange(checked?selected.filter(id=>id!==theme.id):[...selected,theme.id])}>
-     <span className="swipe-theme-symbol"><Icon name={theme.icon} size={25} inheritColor/></span><span className="swipe-theme-label">{theme.title}</span>
+     <span className="swipe-theme-symbol"><PreferenceIllustration label={themeIllustrations[theme.id]} size={36}/></span><span className="swipe-theme-label">{theme.title}</span>
      {checked&&<i className="swipe-theme-check"><Icon name="check" size={14} inheritColor/></i>}
     </WaterRippleButton>;})}
    </BubbleOrbit>

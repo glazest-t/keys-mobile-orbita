@@ -36,3 +36,9 @@
 .bottom-sheet:has(.swipe-preferences-sheet) .sheet-header{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .bottom-sheet:has(.swipe-preferences-sheet) .sheet-content{display:flex;flex-direction:column;overflow:hidden;padding:0;min-height:0}
 .swipe-preferences-sheet .swipe-preferences-footer{background:var(--k-surface-app)}
+
+/* Approved illustrated set: a white medallion preserves artwork on selected cobalt bubbles. */
+.swipe-preferences .swipe-theme{padding:6px 5px;gap:4px}
+.swipe-preferences .swipe-theme-symbol{width:42px;height:42px;background:#fff;box-shadow:0 2px 8px #1B1E3308}
+.swipe-preferences .swipe-theme[aria-checked=true] .swipe-theme-symbol{background:#fff;box-shadow:0 2px 8px #1B1E3312}
+.swipe-preferences .swipe-theme[aria-checked=true] .swipe-theme-label{color:#fff}
