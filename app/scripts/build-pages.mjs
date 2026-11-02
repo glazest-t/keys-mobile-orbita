@@ -27,7 +27,7 @@ execFileSync(process.execPath,['scripts/check-mobile-runtime.mjs'],{cwd:app,stdi
 execFileSync(path.join(app,'node_modules/.bin/tsc'),[],{cwd:app,stdio:'inherit'});
 execFileSync(path.join(app,'node_modules/.bin/vite'),['build','--base',appBase],{cwd:app,stdio:'inherit'});
 rmSync(out,{recursive:true,force:true});mkdirSync(out,{recursive:true});
-const published=['docs/handoff','docs/brand','docs/references','docs/MOBILE-REVIEW.md','docs/DEPLOYMENT.md','docs/PRODUCT.md','docs/DESIGN_SYSTEM.md','docs/iteration-9/qa-current-publication','design/assets','design/fonts','design/tokens.json','design/tokens.css','spec','prototype/domain'];
+const published=['docs/handoff','docs/brand','docs/references','docs/MOBILE-REVIEW.md','docs/DEPLOYMENT.md','docs/PRODUCT.md','docs/DESIGN_SYSTEM.md','docs/iteration-9/qa-current-publication','docs/iteration-9/qa-2gis-2026-11-02','design/assets','design/fonts','design/tokens.json','design/tokens.css','spec','prototype/domain'];
 for(const name of published){if(existsSync(path.join(root,name)))cpSync(path.join(root,name),path.join(out,name),{recursive:true,filter:p=>!excluded(p)&&!['.DS_Store','__pycache__'].includes(path.basename(p))});}
 for(const name of ['README.md'])cpSync(path.join(root,name),path.join(out,name));
 cpSync(path.join(app,'dist/client'),path.join(out,'prototype'),{recursive:true,filter:p=>!excluded(p)});

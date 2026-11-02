@@ -1,3 +1,4 @@
+import {HotelMap} from '../maps/HotelMap';
 import {RatingBadge} from './RatingBadge';
 import {SearchFilterRail} from './SearchFilterRail';
 import {FriendlyRateBadge} from '../hotelier/FriendlyRateBadge';
@@ -13,7 +14,7 @@ export {toggleFavorite as toggleSaved} from './FavoriteSaving';
 import {toggleFavorite as toggleSaved,useFavoriteSaving} from './FavoriteSaving';
 export function SavedButton({saved,onClick,hotelId}:{saved:boolean;onClick:()=>void;hotelId?:string}){const save=useFavoriteSaving();return <button className={'save-hotel '+(saved?'is-saved':'')} aria-label={saved?'Удалить из избранного':'Сохранить отель'} aria-pressed={saved} onClick={()=>hotelId&&save?save.toggle(hotelId):onClick()}><svg className="saved-heart" width="18" height="18" viewBox="0 0 24 24" fill={saved?'currentColor':'none'} stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>;}
 export function SourceMap({items,onSelect,expanded=false,onExpand,selected}:{items:{id:string;price:number}[];onSelect:(id:string)=>void;expanded?:boolean;onExpand?:()=>void;selected?:string}){
- return <div className={'source-map '+(expanded?'expanded':'')} aria-label="Карта отелей"><i className="source-map-road road-one"/><i className="source-map-road road-two"/>{items.slice(0,6).map((item,i)=><button key={item.id} style={items.length>3?{left:`${4+(i%3)*31}%`,top:`${8+Math.floor(i/3)*Math.min(22,52/Math.max(1,Math.ceil(Math.min(items.length,6)/3)-1))}%`}:undefined} className={'map-price map-price-'+i+(selected===item.id?' selected':'')} onClick={()=>onSelect(item.id)} aria-label={'Выбрать отель на карте за '+formatMoney(item.price)}>{formatMoney(item.price)}</button>)}{onExpand&&<button className="map-expand" onClick={onExpand}><Icon name="map" size={16}/>{expanded?'Списком':'Развернуть карту'}</button>}</div>;
+ return <div className={'source-map '+(expanded?'expanded':'')} aria-label="Карта отелей"><HotelMap items={items} selected={selected} onSelect={onSelect} interactive={expanded}/>{onExpand&&<button className="map-expand" onClick={onExpand}><Icon name="map" size={16}/>{expanded?'Списком':'Развернуть карту'}</button>}</div>;
 }
 export function DiscoveryResults({commerce,setCommerce,owner,onOpen,onEdit,onMap,searchHeader}:{searchHeader?:ReactNode;commerce:Commerce;setCommerce:Dispatch<SetStateAction<Commerce>>;owner:string|null;onOpen:(id:string)=>void;onEdit:(s:string)=>void;onMap:(id?:string)=>void}){
  const filters=commerce.searchFilters||[];

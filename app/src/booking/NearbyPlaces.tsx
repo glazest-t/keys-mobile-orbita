@@ -3,7 +3,7 @@ import {BottomSheet,MobileScroll} from '../mobile';
 import {Button,Icon} from '../ui';
 import {catalog} from './model';
 import {filterNearbyPlaces,nearbyPlace,nearbyPlaces,type NearbyCategory,type NearbyPlace} from './nearby';
-import mapArt from './art/nearby-map-base.html?raw';
+import {HotelMap} from '../maps/HotelMap';
 import './nearby.css';
 
 export function NearbyPreview({hotelId,onOpen}:{hotelId:string;onOpen:(id?:string)=>void}){
@@ -17,7 +17,7 @@ export function NearbyPlaces({hotelId,initialPlaceId,header}:{header?:ReactNode;
  const places=filterNearbyPlaces(hotelId,category);
  const open=(p:NearbyPlace)=>{setSelected(p);};
  return <><MobileScroll className="detail-scroll nearby page-scroll">{header}<main className="detail-content detail-nearby">
- {nearbyPlaces(hotelId).length>0&&<><div className="nearby-live-map" role="group" aria-label="Места рядом с отелем на схеме"><div className="nearby-base" aria-hidden="true" dangerouslySetInnerHTML={{__html:mapArt}}/><span className="nearby-hotel-dot" aria-label={hotel.name}/>{places.map(p=><button key={p.id} className={'nearby-marker '+(selected?.id===p.id?'selected':'')} style={{left:p.x+'%',top:p.y+'%'}} aria-label={p.name+' на карте'} aria-pressed={selected?.id===p.id} onClick={()=>open(p)}><Icon name={p.icon} size={16} inheritColor/></button>)}</div>
+ {nearbyPlaces(hotelId).length>0&&<><div className="nearby-live-map" role="group" aria-label="Карта района отеля"><HotelMap items={[{id:hotelId}]} selected={hotelId}/></div>
  <div className="detail-segments" aria-label="Категории мест">{(['Всё','Еда','Пляж','Культура'] as const).map(c=><button key={c} className={category===c?'active':''} aria-pressed={category===c} onClick={()=>{setCategory(c);setSelected(undefined);}}>{c}</button>)}</div></>}
  {places.length?<section className="nearby-places">{places.map(p=><button className="k-list-row" key={p.id} onClick={()=>open(p)}><span className="icon-tile"><Icon name={p.icon} size={22} inheritColor/></span><span><strong>{p.name}</strong><small>{p.description}</small></span><span><small>{p.distance}</small></span></button>)}</section>:<div className="nearby-empty"><Icon name="pin" size={32}/><h2>Места рядом пока не добавлены</h2><p>{hotel.name}</p></div>}
  </main></MobileScroll>

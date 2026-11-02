@@ -1,0 +1,342 @@
+{
+  "orbit-sea": {
+    "coordinates": [
+      39.937345,
+      43.410643
+    ],
+    "source": "https://2gis.ru/firm/70000001083395184",
+    "sourceName": "Mantera Resort&Congress",
+    "address": "Голубая улица, 1а",
+    "checkedAt": "2026-11-02"
+  },
+  "moscow-izmaylovo-tvoy-otel": {
+    "coordinates": [
+      37.74928,
+      55.792228
+    ],
+    "source": "https://2gis.ru/firm/70000001099174755",
+    "sourceName": "Измайлово-Твой отель, гостиница",
+    "address": "Измайловское шоссе, 71 к4г-д",
+    "checkedAt": "2026-11-02"
+  },
+  "moscow-otel-shelterz-vdnh": {
+    "coordinates": [
+      37.649914,
+      55.827662
+    ],
+    "source": "https://2gis.ru/firm/70000001037943224",
+    "sourceName": "shelterz, мини-отель",
+    "address": "проспект Мира, 184 к1",
+    "checkedAt": "2026-11-02"
+  },
+  "moscow-ibis-moskva-kievskaya": {
+    "coordinates": [
+      37.561919,
+      55.742972
+    ],
+    "source": "https://2gis.ru/firm/70000001025520179",
+    "sourceName": "ibis Москва Киевская, гостиница",
+    "address": "Киевская улица, 2",
+    "checkedAt": "2026-11-02"
+  },
+  "moscow-gostinitsa-metallurg": {
+    "coordinates": [
+      37.61184,
+      55.787478
+    ],
+    "source": "https://2gis.ru/firm/4504127908386002",
+    "sourceName": "Металлург, гостиница",
+    "address": "Октябрьский переулок, 12",
+    "checkedAt": "2026-11-02"
+  },
+  "moscow-gostevoy-dom-lesnoy-sheremetyevo": {
+    "coordinates": [
+      37.395062,
+      55.984293
+    ],
+    "source": "https://2gis.ru/firm/70000001105863852",
+    "sourceName": "Лесной Шереметьево, гостевой дом",
+    "address": "Королёк, 7",
+    "checkedAt": "2026-11-02"
+  },
+  "moscow-gostinitsa-ekonom-nasledie": {
+    "coordinates": [
+      37.644463,
+      55.820521
+    ],
+    "source": "https://2gis.ru/firm/4504127908386553",
+    "sourceName": "Наследие, гостиница",
+    "address": "улица Космонавтов, 2",
+    "checkedAt": "2026-11-02"
+  },
+  "moscow-arena": {
+    "coordinates": [
+      37.563596,
+      55.725366
+    ],
+    "source": "https://2gis.ru/firm/4504127908370018",
+    "sourceName": "Арена, гостиница",
+    "address": "улица 10-летия Октября, 11",
+    "checkedAt": "2026-11-02"
+  },
+  "moscow-hostel-guten-duck-moscow": {
+    "coordinates": [
+      37.641075,
+      55.760605
+    ],
+    "source": "https://2gis.ru/firm/70000001035060115",
+    "sourceName": "Гутен Дак, хостел",
+    "address": "Потаповский переулок, 8/12 ст2",
+    "checkedAt": "2026-11-02"
+  },
+  "moscow-minima-belorusskaya": {
+    "coordinates": [
+      37.591838,
+      55.77905
+    ],
+    "source": "https://2gis.ru/firm/4504128908668901",
+    "sourceName": "Минима Белорусская, сеть гостиниц",
+    "address": "Лесная улица, 20 ст2",
+    "checkedAt": "2026-11-02"
+  },
+  "moscow-otel-tesla": {
+    "coordinates": [
+      37.62852,
+      55.769767
+    ],
+    "source": "https://2gis.ru/firm/70000001051710019",
+    "sourceName": "Tesla, hotel",
+    "address": "Last lane, 18",
+    "checkedAt": "2026-11-02"
+  },
+  "moscow-bun-in-alley": {
+    "coordinates": [
+      37.511398,
+      55.538993
+    ],
+    "source": "https://2gis.ru/firm/70000001099352221",
+    "sourceName": "Бан-ин Эллей",
+    "address": "улица Кадырова, 8 к1",
+    "checkedAt": "2026-11-02"
+  },
+  "moscow-otel-maksima-zarya": {
+    "coordinates": [
+      37.580868,
+      55.843526
+    ],
+    "source": "https://2gis.ru/firm/4504127908385195",
+    "sourceName": "Максима Заря, гостинично-офисный комплекс",
+    "address": "Гостиничная улица, 4 к9",
+    "checkedAt": "2026-11-02"
+  },
+  "moscow-moscow-marriott-imperial-plaza": {
+    "coordinates": [
+      37.661137,
+      55.776816
+    ],
+    "source": "https://2gis.ru/firm/70000001057729636",
+    "sourceName": "Марриотт Империал Плаза, отель",
+    "address": "Краснопрудная улица, вл12 ст1",
+    "checkedAt": "2026-11-02"
+  },
+  "moscow-akvamarin-zont-hotel-group": {
+    "coordinates": [
+      37.636563,
+      55.73919
+    ],
+    "source": "https://2gis.ru/firm/4504127908892843",
+    "sourceName": "Аквамарин by Zont Hotel Group, отель",
+    "address": "Озерковская набережная, 26",
+    "checkedAt": "2026-11-02"
+  },
+  "moscow-pekin": {
+    "coordinates": [
+      37.593944,
+      55.768739
+    ],
+    "source": "https://2gis.ru/firm/4504127908391078",
+    "sourceName": "Пекин, отель",
+    "address": "Большая Садовая улица, 5",
+    "checkedAt": "2026-11-02"
+  },
+  "moscow-zvezdy-arbata-otel-i-apartamenty": {
+    "coordinates": [
+      37.580241,
+      55.753272
+    ],
+    "source": "https://2gis.ru/firm/70000001018578039",
+    "sourceName": "Звезды Арбата, отель и апартаменты",
+    "address": "улица Новый Арбат, 32",
+    "checkedAt": "2026-11-02"
+  },
+  "moscow-palmira-business-club": {
+    "coordinates": [
+      37.625261,
+      55.697702
+    ],
+    "source": "https://2gis.ru/firm/70000001019724543",
+    "sourceName": "Пальмира Бизнес Клуб, гостиница",
+    "address": "Новоданиловская набережная, 6 к2",
+    "checkedAt": "2026-11-02"
+  },
+  "moscow-otel-mandarin-moskva": {
+    "coordinates": [
+      37.667899,
+      55.774889
+    ],
+    "source": "https://2gis.ru/firm/4504127908618658",
+    "sourceName": "Мандарин, бизнес-отель",
+    "address": "Ольховская улица, 23",
+    "checkedAt": "2026-11-02"
+  },
+  "spb-valo-network": {
+    "coordinates": [
+      30.368982,
+      59.885877
+    ],
+    "source": "https://2gis.ru/firm/70000001078620398",
+    "sourceName": "Вало Нетворк, гостиница",
+    "address": "улица Салова, 61 ст1",
+    "checkedAt": "2026-11-02"
+  },
+  "spb-valo-business": {
+    "coordinates": [
+      30.367687,
+      59.885421
+    ],
+    "source": "https://2gis.ru/firm/70000001075058822",
+    "sourceName": "Вало Бизнес",
+    "address": "улица Салова, 61",
+    "checkedAt": "2026-11-02"
+  },
+  "spb-demokrat-na-kamennoostrovskom-39": {
+    "coordinates": [
+      30.311455,
+      59.96701
+    ],
+    "source": "https://2gis.ru/firm/70000001117052740",
+    "sourceName": "Демократ, отель",
+    "address": "Каменноостровский проспект, 39",
+    "checkedAt": "2026-11-02"
+  },
+  "spb-apart-otel-uno-by-valo": {
+    "coordinates": [
+      30.360447,
+      59.92351
+    ],
+    "source": "https://2gis.ru/firm/70000001058679846",
+    "sourceName": "Уно, апарт-отель",
+    "address": "Лиговский проспект, 56Б",
+    "checkedAt": "2026-11-02"
+  },
+  "spb-apartpeydzh-nevskiy": {
+    "coordinates": [
+      30.355048,
+      59.931962
+    ],
+    "source": "https://2gis.ru/firm/70000001059415000",
+    "sourceName": "АпартПейдж Невский",
+    "address": "Невский проспект, 98",
+    "checkedAt": "2026-11-02"
+  },
+  "spb-osobnyak-molvo": {
+    "coordinates": [
+      30.284583,
+      59.930591
+    ],
+    "source": "https://2gis.ru/firm/70000001029256423",
+    "sourceName": "Особняк Молво, отель",
+    "address": "Галерная улица, 75",
+    "checkedAt": "2026-11-02"
+  },
+  "spb-ramada-plaza-by-wyndham-st-petersburg": {
+    "coordinates": [
+      30.36856,
+      59.884813
+    ],
+    "source": "https://2gis.ru/firm/70000001063392801",
+    "sourceName": "Вало Рамада Плаза",
+    "address": "улица Салова, 61",
+    "checkedAt": "2026-11-02"
+  },
+  "spb-otel-rotas-city-center": {
+    "coordinates": [
+      30.362053,
+      59.941935
+    ],
+    "source": "https://2gis.ru/firm/70000001031756507",
+    "sourceName": "Rotas City Center Hotel",
+    "address": "Гродненский переулок, 12-14",
+    "checkedAt": "2026-11-02"
+  },
+  "spb-ligotel": {
+    "coordinates": [
+      30.359151,
+      59.928768
+    ],
+    "source": "https://2gis.ru/firm/5348553838526186",
+    "sourceName": "Лиготель, гостиница",
+    "address": "Лиговский проспект, 55/4",
+    "checkedAt": "2026-11-02"
+  },
+  "spb-mini-otel-demokrat-na-nevskom-107b": {
+    "coordinates": [
+      30.368455,
+      59.928713
+    ],
+    "source": "https://2gis.ru/firm/70000001032653371",
+    "sourceName": "Демократ, отель",
+    "address": "Невский проспект, 107 лит Б",
+    "checkedAt": "2026-11-02"
+  },
+  "spb-aristokrat": {
+    "coordinates": [
+      30.263536,
+      59.872854
+    ],
+    "source": "https://2gis.ru/firm/70000001032039217",
+    "sourceName": "Aristokrat, отель",
+    "address": "Краснопутиловская улица, 9 к1",
+    "checkedAt": "2026-11-02"
+  },
+  "spb-apart-otel-port-comfort-by-old-nevskiy": {
+    "coordinates": [
+      30.384756,
+      59.925811
+    ],
+    "source": "https://2gis.ru/firm/70000001056310245",
+    "sourceName": "Port Comfort by Old Nevsky",
+    "address": "улица Александра Невского, 9",
+    "checkedAt": "2026-11-02"
+  },
+  "spb-arkada": {
+    "coordinates": [
+      30.341011,
+      59.930146
+    ],
+    "source": "https://2gis.ru/firm/70000001007434007",
+    "sourceName": "Аркада, гостиница",
+    "address": "набережная реки Фонтанки, 52",
+    "checkedAt": "2026-11-02"
+  },
+  "spb-mini-otel-sadovaya-loft": {
+    "coordinates": [
+      30.328914,
+      59.931294
+    ],
+    "source": "https://2gis.ru/firm/70000001082883611",
+    "sourceName": "Sadovaya Loft, отель",
+    "address": "Садовая улица, 28-30 к1",
+    "checkedAt": "2026-11-02"
+  },
+  "spb-apartamenty-zum-1": {
+    "coordinates": [
+      30.295632,
+      59.990759
+    ],
+    "source": "https://2gis.ru/firm/70000001083635318",
+    "sourceName": "Зум Черная речка, апарт-комплекс",
+    "address": "улица Матроса Железняка, 1а ст1",
+    "checkedAt": "2026-11-02"
+  }
+}
