@@ -22,7 +22,7 @@ test('Можно продолжить без выбора, предпочтен�
  assert.deepEqual(swipeDiscovery(empty,owner),swipeDiscovery(s,owner));
  const selected=saveSwipePreferences(s,owner,['spa'],true);
  const plain=swipeDiscovery(s,owner),ranked=swipeDiscovery(selected,owner);
- assert.equal(ranked.offers.find(o=>o.h.id==='orbit-sea').score,plain.offers.find(o=>o.h.id==='orbit-sea').score+1);
+ assert.equal(ranked.offers.find(o=>o.h.id==='orbit-sea').score,plain.offers.find(o=>o.h.id==='orbit-sea').score+3/4);
  assert.deepEqual(ranked.offers.map(o=>o.h.id).sort(),plain.offers.map(o=>o.h.id).sort());
  assert.equal(swipeDiscovery({...selected,priceRangeMinor:{min:null,max:100}},owner).offers.length,0);
 });

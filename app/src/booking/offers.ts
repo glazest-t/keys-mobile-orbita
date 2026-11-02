@@ -1,3 +1,4 @@
+import {swipePreferenceScore} from './swipePreferences.ts';
 import {promotionBasisPoints} from './promotions.ts';
 import {type Commerce,catalog,searchHotels,quoteDraft,startDraft,cancellationDeadline} from './model.ts';
 import {hotelVisual} from './presentation.ts';
@@ -32,7 +33,7 @@ export function discoveryOffers(commerce:Commerce,owner:string|null){
   if(sort==='price'||sort==='price-desc')return compareNumber(a.q.lodgingMinor,b.q.lodgingMinor,sort==='price-desc');
   if(sort==='stars-asc'||sort==='stars-desc')return compareNumber(av.stars<0?NaN:av.stars,bv.stars<0?NaN:bv.stars,sort==='stars-desc');
   if(sort==='reviews-desc')return compareNumber(av.rating,bv.rating,true)||compareNumber(av.reviews,bv.reviews,true);
-  return 0;
+  return sort==='recommended'&&owner?swipePreferenceScore(commerce,owner,b.h.id)-swipePreferenceScore(commerce,owner,a.h.id):0;
  });
  return hotels;
 }
