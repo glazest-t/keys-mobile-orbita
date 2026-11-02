@@ -10,7 +10,7 @@ function loadSDK(){
  if(!sdkPromise)sdkPromise=load('https://mapgl.2gis.com/api/js/v1').catch(error=>{sdkPromise=undefined;throw error;});
  return sdkPromise;
 }
-export type MapPoint={id:string;coordinates:number[];label:string;name:string;discountPercent?:number};
+export type MapPoint={id:string;coordinates:number[];label:string;name:string;discountPercent?:number;markerOffset?:number[]};
 type Props={points:MapPoint[];center:Coordinates;selected?:string;onSelect?:(id:string)=>void;interactive?:boolean;expanded?:boolean;missing?:number;label?:string};
 export function TwoGisMap({points,center,selected,onSelect,interactive=true,expanded=false,missing=0,label='Карта 2ГИС'}:Props){
  const canvas=useRef<HTMLDivElement>(null), mapRef=useRef<MapGL|null>(null), sdk=useRef<SDK|null>(null);
@@ -49,7 +49,7 @@ export function TwoGisMap({points,center,selected,onSelect,interactive=true,expa
    if(point.discountPercent&&point.discountPercent>0){const badge=document.createElement('span');badge.className='gis-pin-discount';badge.textContent='−'+point.discountPercent+'%';button.prepend(badge);button.classList.add('has-discount');}
    button.setAttribute('aria-label',point.name+' · '+point.label+(point.discountPercent?' · скидка '+point.discountPercent+'%':''));button.dataset.hotelId=point.id;
    button.onclick=()=>selectRef.current?.(point.id);
-   const marker=new api.HtmlMarker(map,{coordinates:point.coordinates,html:button,anchor:[0,0],interactive:true,zIndex:1});
+   const marker=new api.HtmlMarker(map,{coordinates:point.coordinates,html:button,anchor:point.markerOffset||[0,0],interactive:true,zIndex:1});
    return {marker,button,id:point.id};
   });
   const bounds=locationBounds(points.map(p=>p.coordinates));
