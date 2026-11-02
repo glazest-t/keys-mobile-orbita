@@ -1,6 +1,7 @@
+import {existsSync} from 'node:fs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {nearbyPlaces,filterNearbyPlaces,nearbyPlace,nearbyJourney} from '../app/src/booking/nearby.ts';
+import {nearbyPlaces,filterNearbyPlaces,nearbyPlace,nearbyJourney,nearbyPhoto,nearbyIllustration,nearbyReason} from '../app/src/booking/nearby.ts';
 import snapshot from '../spec/nearby-places.json' with {type:'json'};
 import locations from '../spec/map-locations.json' with {type:'json'};
 import photos from '../spec/nearby-photos.json' with {type:'json'};
@@ -31,10 +32,21 @@ test('Нет подмены координат: вымышленные и неи
 });
 test('Минуты показываются только при реальном пешеходном маршруте',()=>{
  const p={...nearbyPlaces('orbit-sea')[0],radialDistanceMeters:200,walk:undefined};
- assert.equal(nearbyJourney(p),'200 м по прямой');
+ assert.equal(nearbyJourney(p),'≈ 200 м');
  assert.equal(nearbyJourney({...p,walk:{distanceMeters:328,durationSeconds:262}}),'330 м · ≈ 5 мин пешком');
 });
 test('Фото имеют подтверждённую привязку и атрибуцию',()=>{
  const ids=new Set(Object.values(snapshot.hotels).flat().map(p=>p.id));
  for(const [id,p] of Object.entries(photos)){assert.ok(ids.has(id));assert.match(p.url,/^https:\/\//);assert.match(p.source,/^https:\/\/commons.wikimedia.org\//);assert.ok(p.credit);}
+});
+
+test('Все места имеют тематическую иллюстрацию, реальные фото сохраняют приоритет',()=>{
+ for(const p of Object.values(snapshot.hotels).flat()){
+  const illustration=nearbyIllustration(p);
+  assert.ok(illustration.illustrative);assert.equal(illustration.source,undefined);
+  assert.ok(existsSync(new URL('../app/public'+illustration.url,import.meta.url)),illustration.url);
+  assert.ok(nearbyReason(p).length>30);
+  assert.deepEqual(nearbyPhoto(p.id),photos[p.id]||illustration);
+ }
+ assert.equal(nearbyPhoto('missing'),undefined);
 });

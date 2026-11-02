@@ -2,14 +2,14 @@ import {useState,type ReactNode} from 'react';
 import {BottomSheet,MobileScroll} from '../mobile';
 import {Button,Icon} from '../ui';
 import {catalog} from './model';
-import {filterNearbyPlaces,nearbyPlace,nearbyPlaces,nearbyPhoto,nearbyJourney,type NearbyCategory,type NearbyPlace} from './nearby';
+import {filterNearbyPlaces,nearbyPlace,nearbyPlaces,nearbyPhoto,nearbyIllustration,nearbyReason,nearbyJourney,type NearbyCategory,type NearbyPlace} from './nearby';
 import {TwoGisMap} from '../maps/TwoGisMap';
 import {hotelLocation,type Coordinates} from '../maps/locations';
 import './nearby.css';
 
 function PlacePhoto({place,large=false}:{place:NearbyPlace;large?:boolean}){
- const photo=nearbyPhoto(place.id),[failed,setFailed]=useState(false);
- return <figure className={large?'nearby-place-photo':'nearby-place-thumb'}>{photo&&!failed?<><img src={photo.url} alt={place.name} draggable={false} loading="lazy" onError={()=>setFailed(true)}/>{large&&<figcaption><a href={photo.source} target="_blank" rel="noreferrer">{photo.credit}</a></figcaption>}</>:<div className="nearby-photo-placeholder"><Icon name={place.icon} size={large?36:24} inheritColor/>{large&&<span>Фото пока нет</span>}</div>}</figure>;
+ const [failed,setFailed]=useState(false),photo=failed?nearbyIllustration(place):nearbyPhoto(place.id)||nearbyIllustration(place);
+ return <figure className={large?'nearby-place-photo':'nearby-place-thumb'}><img src={photo.url} alt={photo.illustrative?`Иллюстрация: ${place.categoryLabel}`:place.name} draggable={false} loading="lazy" onError={()=>{if(!photo.illustrative)setFailed(true);}}/>{large&&<figcaption>{photo.source?<a href={photo.source} target="_blank" rel="noreferrer">{photo.credit}</a>:photo.credit}</figcaption>}</figure>;
 }
 
 export function NearbyPreview({hotelId,onOpen}:{hotelId:string;onOpen:(id?:string)=>void}){
@@ -30,7 +30,7 @@ export function NearbyPlaces({hotelId,initialPlaceId,header}:{header?:ReactNode;
  {all.length>0&&<>{location&&<div className="nearby-live-map" role="group" aria-label="Места в радиусе 1,5 км от отеля"><TwoGisMap center={location.coordinates as Coordinates} points={points} selected={selected?.id||hotelId} onSelect={id=>{const p=nearbyPlace(hotelId,id);if(p)setSelected(p);}} label="Отель и места рядом"/></div>}
  <p className="nearby-radius">В радиусе 1,5 км от отеля</p>
  <div className="detail-segments" aria-label="Категории мест">{categories.map(c=><button key={c} className={category===c?'active':''} aria-pressed={category===c} onClick={()=>{setCategory(c);setSelected(undefined);}}>{c}</button>)}</div></>}
- {places.length?<section className="nearby-real-places">{places.map((p,i)=><button className="nearby-place-row" key={p.id} onClick={()=>setSelected(p)}><PlacePhoto place={p}/><span className="nearby-place-copy"><small>{p.categoryLabel}</small><strong>{p.name}</strong><span className="nearby-place-distance">{nearbyJourney(p)}</span></span><span className="nearby-place-number" aria-label={`Метка ${i+1} на карте`}>{i+1}</span></button>)}</section>:<div className="nearby-empty"><Icon name="pin" size={32}/><h2>{location?'Пока нет мест поблизости':'Места рядом пока не добавлены'}</h2><p>{hotel?.name}</p></div>}
+ {places.length?<section className="nearby-real-places">{places.map(p=><button className="nearby-place-row" key={p.id} onClick={()=>setSelected(p)}><PlacePhoto place={p}/><span className="nearby-place-copy"><small>{p.categoryLabel}</small><strong>{p.name}</strong><span className="nearby-place-distance">{nearbyJourney(p)}</span></span></button>)}</section>:<div className="nearby-empty"><Icon name="pin" size={32}/><h2>{location?'Пока нет мест поблизости':'Места рядом пока не добавлены'}</h2><p>{hotel?.name}</p></div>}
  </main></MobileScroll>
- <BottomSheet open={!!selected} onOpenChange={v=>{if(!v)setSelected(undefined);}} title={selected?.name||'Место рядом'} snap={.86}><div className="sheet-body nearby-place-sheet">{selected&&<><PlacePhoto key={selected.id} place={selected} large/><div className="nearby-place-meta"><span className="icon-tile"><Icon name={selected.icon} size={24} inheritColor/></span><span><strong>{selected.categoryLabel}</strong><small>{nearbyJourney(selected)}</small></span></div><p>{selected.about}</p><a className="nearby-source" href={selected.source} target="_blank" rel="noreferrer">Информация о месте в 2ГИС<Icon name="chevron-right" size={16} inheritColor/></a><Button onClick={()=>setSelected(undefined)}>Понятно</Button></>}</div></BottomSheet></>;
+ <BottomSheet open={!!selected} onOpenChange={v=>{if(!v)setSelected(undefined);}} title={selected?.name||'Место рядом'} snap={.86}><div className="sheet-body nearby-place-sheet">{selected&&<><PlacePhoto key={selected.id} place={selected} large/><div className="nearby-place-meta"><span className="icon-tile"><Icon name={selected.icon} size={24} inheritColor/></span><span><strong>{selected.categoryLabel}</strong><small>{nearbyJourney(selected)}</small></span></div><p>{selected.about}</p><section className="nearby-place-reason"><strong>Почему вам может понравиться</strong><p>{nearbyReason(selected)}</p></section><a className="nearby-source" href={selected.source} target="_blank" rel="noreferrer">Информация о месте в 2ГИС<Icon name="chevron-right" size={16} inheritColor/></a><Button onClick={()=>setSelected(undefined)}>Понятно</Button></>}</div></BottomSheet></>;
 }
