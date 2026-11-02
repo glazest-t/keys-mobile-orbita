@@ -1,0 +1,5 @@
+.preference-illustration{display:inline-flex;flex:none;align-items:center;justify-content:center;vertical-align:middle;pointer-events:none;mix-blend-mode:multiply}
+.preference-illustration>span{position:relative;display:block;overflow:hidden;flex:none}
+.preference-illustration img{position:absolute;display:block;max-width:none!important;object-fit:fill;user-select:none}
+.keys-app .hotel-preferences>div>span{height:auto;min-height:40px;max-width:100%;padding:3px 12px 3px 6px;gap:7px;line-height:18px}
+.preference-match li>.preference-illustration{align-self:center}
