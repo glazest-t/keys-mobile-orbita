@@ -33,7 +33,7 @@ export function previewAmendment(state:Commerce,owner:string,id:string,input:Ame
  const hotelReturn=b.quote.applied.hotelPoints-quote.applied.hotelPoints,keysReturn=b.quote.applied.keysPoints-quote.applied.keysPoints;
  const wallets=readWallets(state.payment,owner,b.draft.hotelId);
  quote.remaining={hotelPoints:wallets.hotelPoints+hotelReturn,keysPoints:wallets.keysPoints+keysReturn};
- const schedule=bookingPayment(quote,b.draft);quote.paymentSchedule=schedule;const nextPaid=schedule.nowMinor;
+ const schedule=bookingPayment(quote,b.balancePayments?.length?{...b.draft,cardPaymentPlan:'full'}:b.draft);quote.paymentSchedule=schedule;const nextPaid=schedule.nowMinor;
  return {bookingId:id,revision:b.revision||0,input:{search,services},quote,extraPaid:Math.max(0,nextPaid-b.operation.paidCashMinor),refund:Math.max(0,b.operation.paidCashMinor-nextPaid),dueAtHotel:schedule.laterMinor,hotelReturn,keysReturn};
 }
 export type AmendmentPreview=ReturnType<typeof previewAmendment>;

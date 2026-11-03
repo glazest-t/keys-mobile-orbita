@@ -1,0 +1,3 @@
+.filter-tabs{display:flex;gap:8px}
+.filter-tabs .filter-chip{height:36px;min-height:36px;border-radius:18px;padding:0 14px;font:500 13px/20px Onest;white-space:nowrap}
+.filter-tabs .filter-chip.selected{background:#2f5bff;border-color:#2f5bff;color:#fff}

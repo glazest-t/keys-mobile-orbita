@@ -1,0 +1,9 @@
+/* Shared calculation, compact mobile presentation inside the price card. */
+.keys-app:not(.desktop-app) .booking-reward{
+ display:grid;grid-template-columns:28px minmax(0,1fr) auto;align-items:center;gap:4px 8px;
+ padding:14px 0 0;margin:0;border-top:1px solid var(--k-border-subtle);min-width:0;
+}
+.keys-app:not(.desktop-app) .booking-reward .desktop-booking-reward-mark{width:28px;height:28px;object-fit:contain}
+.keys-app:not(.desktop-app) .booking-reward .desktop-booking-reward-title{font:500 14px/20px Onest,sans-serif;color:var(--k-text-primary)}
+.keys-app:not(.desktop-app) .booking-reward .desktop-booking-reward-amount{font:500 20px/26px Onest,sans-serif;white-space:nowrap;color:var(--k-action-primary);text-align:right}
+.keys-app:not(.desktop-app) .booking-reward>p{grid-column:2/-1;margin:0;font:400 12px/18px Onest,sans-serif;color:var(--k-text-secondary)}

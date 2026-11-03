@@ -74,13 +74,14 @@ test('Дети требуют разрешения и возраст, новые
  assert.ok(!ids({...state(),search:{...state().search,childrenAges:[0]}}).includes('kazan-hostel'));
  assert.deepEqual(ids({...state(),search:{...state().search,businessTrip:true,byCar:true}}),ids(state()));
 });
-test('Эксклюзивность — отдельный признак, бонусы сочетаются по OR',()=>{
- const exclusive=token('Бонусы и скидки','Эксклюзивно только в Ключах');
- assert.deepEqual(ids(filtered(exclusive)),['kazan-apart','kazan-country']);
- const all={...state(),search:{...state().search,city:'Любой город'}};
+test('Удалённый фильтр не ограничивает выдачу и не восстанавливается из истории',()=>{
+ const oldValues=['Только в Ключах','Эксклюзивно только в Ключах'];
  const hot=token('Бонусы и скидки','Горячие скидки');
- const exclusiveIds=ids({...all,searchFilters:[exclusive]}),hotIds=ids({...all,searchFilters:[hot]});
- assert.ok(hotIds.length>0);assert.ok(hotIds.some(id=>!exclusiveIds.includes(id)));
- assert.deepEqual(ids({...all,searchFilters:[exclusive,hot]}).sort(),[...new Set([...exclusiveIds,...hotIds])].sort());
- assert.deepEqual(ids(filtered(exclusive,token('Тип размещения','Загородный дом'))),['kazan-country']);
+ for(const label of oldValues)for(const value of [label,token('Бонусы и скидки',label)]){
+  assert.deepEqual(normalizeFilters([value,hot]),[hot]);
+  assert.deepEqual(ids(filtered(value)),ids(state()));
+  assert.deepEqual(ids(filtered(value,hot)),ids(filtered(hot)));
+  const restored=rememberSearch(state(),{...state().search,filtersSnapshot:{searchFilters:[value,hot]}});
+  assert.deepEqual(normalizeFilters(restored.searchFilters),[hot]);
+ }
 });

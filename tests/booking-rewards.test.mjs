@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {bookingRewardPoints} from '../app/src/booking/bookingRewards.ts';
+const quote=(lodgingMinor,pointsMinor)=>({lodgingMinor,applied:{pointsMinor,keysPoints:pointsMinor/100,hotelPoints:0}});
+assert.equal(bookingRewardPoints(quote(1000000,0)),500);
+assert.equal(bookingRewardPoints(quote(900000,200000)),350);
+assert.equal(bookingRewardPoints(quote(1000000,1000000)),0);
+assert.equal(bookingRewardPoints(quote(1000000,1500000)),0);
+assert.equal(bookingRewardPoints(quote(1999,0)),0);
+assert.equal(bookingRewardPoints({...quote(1000000,0),serviceTotalMinor:500000}),500);
+console.log('PASS reward preview: rate, discounts/points, zero, clamp, rounding, services excluded');

@@ -1,3 +1,4 @@
+import {BookingReward} from './BookingReward';
 import {BookingRecord} from './BookingRecord';
 import {BookingGuestContact} from './BookingGuestContact';
 import {interactionMotion} from '../interactions';
@@ -57,6 +58,7 @@ function BookingPage({page}:{page:string}){
  useEffect(()=>{},[ctx.error,current]);
  useEffect(()=>{if(current&&page!=='confirmation')ctx.setCommerce(s=>s.draft&&s.draft.step!==page?{...s,draft:{...s.draft,step:page}}:s);},[current,page]);
  const hotel=catalog.hotels.find(h=>h.id===d.hotelId)!,room=catalog.rooms.find(r=>r.id===d.roomId)!;
+ let rewardQuote;try{if(page==='checkout')rewardQuote=quoteDraft(ctx.commerce,ctx.user?.phone||null);}catch{}
  const account=ctx.user?ctx.commerce.accounts[ctx.user.phone]:null;
  const change=(patch:Partial<Draft>)=>{ctx.setError('');ctx.setCommerce(s=>({...s,draft:s.draft?{...s.draft,...patch}:null}));};
  const errors=ctx.error?contactErrors(d.contact):{};
@@ -66,7 +68,7 @@ function BookingPage({page}:{page:string}){
  {page==='hotel'?<HotelOverview commerce={ctx.commerce} setCommerce={ctx.setCommerce} owner={ctx.user?.phone||null} onBack={ctx.onClose} onPreferences={()=>flow.push({id:"hotel-preferences",headerHeight:0,footerHeight:0,render:()=> <HotelPreferencesEditor/>})} onDetail={kind=>flow.push(hotelDetailScreen(kind))}/>:
  page==='services'?<ServiceOptions/>:
  page==='guest'?<><BookingProgress step={1}/><Summary/>{guestFields}</>:
- page==='checkout'?<><BookingProgress step={2}/><Summary/>{ctx.user&&<HotelLoyaltyCheckout commerce={ctx.commerce} setCommerce={ctx.setCommerce} owner={ctx.user.phone} hotelId={hotel.id} friendly={d.rateId.includes('friendly')}/>}<PaymentChoices draft={d} onChange={change}/>{(<PaymentPoints wallets={programWallets(ctx.commerce,ctx.user?.phone,hotel.id)} friendly={d.rateId.includes('friendly')} checked={d.usePoints} onChange={usePoints=>change({usePoints})}/>)}{(<section className="hotel-section"><h2>Стоимость бронирования</h2><div className="k-card booking-panel"><Price/><div className="wallet-line"><span>Налоги и сборы</span><span>Включены</span></div></div></section>)}<div className="cancellation-note"><Icon name="info" size={18}/><span>Бесплатная отмена до {cancellationLabel(d.search)}. Позже удерживается стоимость одной ночи.</span></div></>:
+ page==='checkout'?<><BookingProgress step={2}/><Summary/>{ctx.user&&<HotelLoyaltyCheckout commerce={ctx.commerce} setCommerce={ctx.setCommerce} owner={ctx.user.phone} hotelId={hotel.id} friendly={d.rateId.includes('friendly')}/>}<PaymentChoices draft={d} onChange={change}/>{(<PaymentPoints wallets={programWallets(ctx.commerce,ctx.user?.phone,hotel.id)} friendly={d.rateId.includes('friendly')} checked={d.usePoints} onChange={usePoints=>change({usePoints})}/>)}{(<section className="hotel-section"><h2>Стоимость бронирования</h2><div className="k-card booking-panel"><Price/><div className="wallet-line"><span>Налоги и сборы</span><span>Включены</span></div>{rewardQuote&&<BookingReward quote={rewardQuote}/>}</div></section>)}<div className="cancellation-note"><Icon name="info" size={18}/><span>Бесплатная отмена до {cancellationLabel(d.search)}. Позже удерживается стоимость одной ночи.</span></div></>:
  null}
 
 

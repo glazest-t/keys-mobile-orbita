@@ -1,10 +1,7 @@
 import type {Commerce,Search} from './model.ts';
-export const EXCLUSIVE_BONUS_LABEL='Только в Ключах';
-// Keep the stored value stable when the visible label changes.
-export const EXCLUSIVE_BONUS='Эксклюзивно только в Ключах';
 export const filterGroups = [
  {name:'Тип размещения',mode:'or',values:['Гостиница','Квартира','Апарт-отель','Гостевой дом','Хостел','Загородный дом','База отдыха','Санаторий']},
- {name:'Бонусы и скидки',mode:'or',values:['Горячие скидки',EXCLUSIVE_BONUS,'Программа лояльности отеля','Программа лояльности «Ключи»']},
+ {name:'Бонусы и скидки',mode:'or',values:['Горячие скидки','Программа лояльности отеля','Программа лояльности «Ключи»']},
  {name:'Звездность отеля',mode:'or',values:['Без звёзд','1 звезда','2 звезды','3 звезды','4 звезды','5 звёзд']},
  {name:'Сеть отеля',mode:'or',values:['ibis','Cosmos Hotel Group','Hyatt','Novotel','Mercure','AZIMUT Hotels','Грейс','Alean Collection','Marriott','Rixos','Mövenpick','Pullman','Swissôtel','Mantera'].sort((a,b)=>a.localeCompare(b,'ru',{sensitivity:'base'}))},
  {name:'Питание',mode:'or',values:['Завтрак включён','Собственная кухня','Завтрак и ужин включены','Полный пансион','Всё включено','Без питания']},
@@ -23,7 +20,9 @@ const aliases:Record<string,string[]>={
  'С питомцем':['Возможности бронирования: Можно с питомцем'],'С детьми':['Возможности бронирования: Можно с детьми'],
  'Спецпредложения':['Бонусы и скидки: Горячие скидки'],
 };
-export function normalizeFilters(values:string[]=[]):string[]{return [...new Set(values.flatMap(value=>aliases[value]||[filterGroups.flatMap(g=>g.values.includes(value as never)?[token(g.name,value)]:[])[0]||value]))];}
+// Ignore the retired option in saved searches and persisted prototype state.
+const retiredFilters=new Set(['Только в Ключах','Эксклюзивно только в Ключах'].flatMap(value=>[value,token('Бонусы и скидки',value)]));
+export function normalizeFilters(values:string[]=[]):string[]{return [...new Set(values.filter(value=>!retiredFilters.has(value)).flatMap(value=>aliases[value]||[filterGroups.flatMap(g=>g.values.includes(value as never)?[token(g.name,value)]:[])[0]||value]))];}
 export function groupValues(filters:string[],name:string){return normalizeFilters(filters).filter(v=>v.startsWith(name+': ')).map(v=>v.slice(name.length+2));}
 export function counterValue(filters:string[],name:string){return Math.min(10,Math.max(0,Number(groupValues(filters,name)[0])||0));}
 export const normalizeQuery=(s:string)=>s.trim().toLocaleLowerCase('ru-RU').replaceAll('ё','е');
@@ -39,7 +38,7 @@ export function convertPriceRange(r:PriceRange,to:PriceMode,nights:number):Price
 export function priceCeiling(r:PriceRange,mode:PriceMode){return Math.ceil(Math.max(mode==='night'?3000000:10000000,r.min||0,r.max||0)/1000000)*1000000;}
 export type SearchOptions=Pick<Commerce,'searchFilters'|'searchSort'|'priceRangeMinor'|'priceMode'|'searchDistrict'|'maxNightly'|'minRating'|'collection'>;
 export type RecentSearch=Search&{filtersSnapshot?:SearchOptions};
-export function searchOptions(s:Commerce):SearchOptions{return structuredClone({searchFilters:s.searchFilters||[],searchSort:sortKey(s.searchSort),priceRangeMinor:priceRange(s),priceMode:priceMode(s),searchDistrict:s.searchDistrict,maxNightly:null,minRating:s.minRating||0,collection:s.collection});}
+export function searchOptions(s:Commerce):SearchOptions{return structuredClone({searchFilters:normalizeFilters(s.searchFilters),searchSort:sortKey(s.searchSort),priceRangeMinor:priceRange(s),priceMode:priceMode(s),searchDistrict:s.searchDistrict,maxNightly:null,minRating:s.minRating||0,collection:s.collection});}
 export function updateSearchOptions(s:Commerce,patch:SearchOptions):Commerce{const next={...s,...patch};return {...next,recentSearches:s.recentSearches?.map(entry=>{const {filtersSnapshot:_,...query}=entry;return JSON.stringify(query)===JSON.stringify(s.search)?{...entry,filtersSnapshot:searchOptions(next)}:entry;})};}
 export const quickFilters=[{label:'Завтрак',values:[token('Питание','Завтрак включён')]},{label:'Бассейн',values:[token('Общие удобства','Бассейн')]},{label:'Спа',values:[token('Общие удобства','Спа')]},{label:'4–5 звёзд',values:[token('Звездность отеля','4 звезды'),token('Звездность отеля','5 звёзд')]},{label:'Бесплатная отмена',values:[token('Оплата','Бесплатная отмена')]}];
 export function toggleQuick(s:Commerce,values:string[]):Commerce{let current=normalizeFilters(s.searchFilters);const selected=values.every(v=>current.includes(v));if(values.length===2)current=current.filter(v=>!v.startsWith('Звездность отеля: '));return updateSearchOptions(s,{searchFilters:selected?current.filter(v=>!values.includes(v)):[...current.filter(v=>!values.includes(v)),...values]});}

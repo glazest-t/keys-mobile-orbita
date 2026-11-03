@@ -1251,5 +1251,21 @@
     "trip": "staying",
     "breakfast": true,
     "paid": true
+  },
+  {
+    "id": "booking-partial-payment",
+    "title": "Бронь · предоплата 30% и оплата остатка",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "confirmation",
+    "paymentPlan": "percent30"
+  },
+  {
+    "id": "trip-partial-payment",
+    "title": "Поездка · частично оплачено",
+    "group": "Поездки",
+    "route": "trips",
+    "step": "confirmation",
+    "paymentPlan": "percent30"
   }
 ]

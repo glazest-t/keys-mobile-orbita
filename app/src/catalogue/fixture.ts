@@ -46,6 +46,7 @@ export async function createCatalogueFixture(scene:CatalogueScene):Promise<Catal
  if(scene.step){
   commerce=startDraft(commerce,'orbit-sea','catalogue-draft',owner);
   commerce={...commerce,draft:{...commerce.draft!,step:scene.step,contact:{name:'Анна',surname:'Соколова',phone:owner,email:'anna@example.test'}}};
+  if(scene.paymentPlan)commerce={...commerce,draft:{...commerce.draft!,method:'online',paymentOption:'card',cardPaymentPlan:scene.paymentPlan as 'night'|'percent30'}};
   if(scene.step==='confirmation')commerce=commitBooking(commerce,owner,quoteDraft(commerce,owner),'success');
  }
  if(scene.route==='notifications')commerce=addNotificationExamples(commerce,owner);

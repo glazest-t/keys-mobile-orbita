@@ -1,5 +1,5 @@
 import {useState,type Dispatch,type SetStateAction} from 'react';
-import {BottomSheet,useKeyboard} from '../mobile';
+import {BottomSheet,Carousel,useKeyboard} from '../mobile';
 import {Button,Empty,Icon,Switch} from '../ui';
 import {PriceWatchEditor} from './HotelSheets';
 import {priceWatchEntries,removePriceWatch,setWatchActive} from './priceWatch';
@@ -7,14 +7,15 @@ import {catalog,formatMoney,type Commerce} from './model';
 import {hotelVisual} from './presentation';
 import './details.css';
 import './price-watches.css';
+import '../filter-tabs.css';
 
 export function PriceWatches({previewChange=null,onExitPreview,commerce,setCommerce,owner,onOpen,onSearch}:{previewChange?:'down'|'up'|'compare'|null;onExitPreview?:()=>void;commerce:Commerce;setCommerce:Dispatch<SetStateAction<Commerce>>;owner:string;onOpen:(key:string)=>void;onSearch:()=>void}){
  const entries=priceWatchEntries(commerce,owner),[tab,setTab]=useState<'active'|'paused'>('active'),[selected,setSelected]=useState(''),[sheet,setSheet]=useState<'edit'|'delete'|''>(''),[error,setError]=useState('');
  const keyboard=useKeyboard(),entry=entries.find(e=>e.key===selected),active=entries.filter(e=>e.watch.active),paused=entries.filter(e=>!e.watch.active),shown=tab==='active'?active:paused;
  const close=()=>{keyboard.hide();setSheet('');setError('');};
  const open=(key:string,next:'edit'|'delete')=>{onExitPreview?.();keyboard.hide();setSelected(key);setSheet(next);setError('');};
- return <div className="price-watches"><h1>Следим за ценами</h1>
- {entries.length>0&&<div className="detail-segments watch-mode" aria-label="Состояние отслеживания">{(['active','paused'] as const).map(t=><button key={t} aria-pressed={tab===t} className={tab===t?'active':''} onClick={()=>{setTab(t);setError('');}}>{t==='active'?'Активные':'На паузе'} · {t==='active'?active.length:paused.length}</button>)}</div>}
+ return <div className="price-watches">{<h1>Следим за ценами</h1>}
+ {entries.length>0&&<Carousel className="watch-mode" contentClassName="filter-tabs" ariaLabel="Состояние отслеживания">{(['active','paused'] as const).map(t=><button key={t} aria-pressed={tab===t} className={'filter-chip '+(tab===t?'selected':'')} onClick={()=>{setTab(t);setError('');}}>{t==='active'?'Активные':'На паузе'} · {t==='active'?active.length:paused.length}</button>)}</Carousel>}
  {error&&!sheet&&<p className="field-error" role="alert">{error}</p>}
  {shown.map((e,index)=>{const h=catalog.hotels.find(h=>h.id===e.draft.hotelId)!,room=catalog.rooms.find(r=>r.id===e.draft.roomId)!,original=previewChange?e.currentMinor??e.watch.priceMinor:e.watch.priceMinor,delta=previewChange==='up'||(previewChange==='compare'&&(index%2===1||shown.length===1))?550000:-550000,current=e.currentMinor!==null&&previewChange&&e.currentMinor+delta>0?e.currentMinor+delta:e.currentMinor,changed=current!==null&&current!==original;return <article className="watch-card" key={e.key}>
   <div className="watch-card-heading"><button className="watch-hotel k-surface-action" disabled={!!e.unavailable} onClick={()=>{onExitPreview?.();onOpen(e.key);}}><img src={hotelVisual(h.id).photos[0]} alt=""/><span><strong>{h.name}</strong><small>{room.title}</small></span></button><button type="button" className="watch-remove k-icon-button" aria-label={`Удалить наблюдение: ${h.name}`} onClick={()=>open(e.key,'delete')}><Icon name="trash" size={18} inheritColor/></button></div>
