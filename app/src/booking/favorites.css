@@ -31,3 +31,5 @@
 .favorite-map-marker{position:absolute;transform:translate(-50%,-50%);display:flex;align-items:center;gap:4px;white-space:nowrap;pointer-events:auto;border:0;border-radius:18px;background:#fff;box-shadow:0 6px 14px #10132024;min-height:36px;padding:0 12px;color:#101320;font:500 12px/18px Onest;transition:background-color var(--interaction-release) var(--interaction-arrive),color var(--interaction-release) var(--interaction-arrive)}
 .favorite-map-marker.unavailable{background:#eef0f4;color:#5a6072}.favorite-map-marker.selected{background:#2f5bff;color:#fff}
 .favorite-map .map-selection{bottom:calc(var(--device-safe-area-bottom,34px) + 12px)}
+
+.favorite-layout-passthrough { display:contents; }

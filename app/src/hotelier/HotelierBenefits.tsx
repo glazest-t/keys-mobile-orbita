@@ -1,3 +1,4 @@
+import {isDesktop} from '../desktop/surface';
 import {useState} from 'react';
 import {BottomSheet} from '../mobile';
 import {Button,Field,Icon,IconButton,Mark} from '../ui';
@@ -32,14 +33,15 @@ export function HotelierSharePage({name,hotel,approved}:{name:string;hotel:strin
  const link=appInvitationLink(location.href,name,hotel,selected);
  const copy=async()=>{try{await navigator.clipboard.writeText(link);setCopied(true);setError('');}catch{setError('Не удалось скопировать. Выделите ссылку в поле.');}};
  const share=async()=>{if(!navigator.share){await copy();return;}try{await navigator.share({title:'Приглашение в Ключи',text:`${name} приглашает вас в Ключи`,url:link});setError('');}catch(e){if((e as Error).name!=='AbortError')setError('Не удалось открыть отправку. Скопируйте ссылку.');}};
+ const shareAction=<Button onClick={share}><Icon name="share" size={20} inheritColor/>{approved?'Поделиться ссылкой':'Поделиться'}</Button>;
  return <div className="hotelier-share-page">
   {approved?<><div className="invite-heading"><h1>Кого пригласить?</h1><p>Выберите, какую ссылку отправить</p></div>
    <div className="invite-audiences" role="group" aria-label="Кого пригласить">
     {([['hotelier','reception','Коллегу-отельера','Доступ к тарифам Friendly Rate'],['traveler','invite','Путешественника','Обычная ссылка на приложение']] as const).map(([value,icon,title,description])=><button key={value} className={'invite-audience k-surface-action '+(selected===value?'is-selected':'')} aria-pressed={selected===value} onClick={()=>{setAudience(value);setCopied(false);setError('');}}><span className="icon-tile"><Icon name={icon} size={22} inheritColor/></span><span><strong>{title}</strong><small>{description}</small>{value==='hotelier'&&<span className="invite-rate-label">Friendly Rate</span>}</span><span className="invite-radio" aria-hidden="true"/></button>)}
    </div><div className="invite-explanation"><span className="invite-info-icon"><Icon name="info" size={20} inheritColor/></span><span>{selected==='hotelier'?'Коллеге нужно будет подтвердить аккаунт в личном кабинете TravelLine. После этого откроются тарифы Friendly Rate.':'Ссылка откроет обычный вход в приложение — без подтверждения статуса отельера.'}</span></div>
-  </>:<><section className="hotelier-share-hero"><img src="/brand/assets/logo/mark-cobalt-ui.svg" alt=""/><h1>Поделитесь<br/>ссылкой на «Ключи»</h1></section><ol className="hotelier-share-steps"><li>Отправьте другу свою ссылку</li><li>Друг войдёт в приложение по номеру телефона</li><li>Выбирайте отели и планируйте новые поездки</li></ol></>}
-  <div className="hotelier-share-link"><Field label="Ссылка-приглашение" value={link} readOnly onFocus={e=>e.target.select()}/><button onClick={copy} aria-label="Скопировать ссылку-приглашение"><Icon name={copied?'check':'document'} size={18} inheritColor/>{copied?'Скопировано':'Копировать'}</button></div>
+  </>:<><section className="hotelier-share-hero"><img src="/brand/assets/logo/mark-cobalt-ui.svg" alt=""/><h1>Поделитесь{isDesktop?' ':<br/>}ссылкой на «Ключи»</h1></section><ol className="hotelier-share-steps"><li>Отправьте другу свою ссылку</li><li>Друг войдёт в приложение по номеру телефона</li><li>Выбирайте отели и планируйте новые поездки</li></ol></>}
+  <div className={isDesktop?"desktop-invite-share-row":"invite-share-row"}><div className="hotelier-share-link"><Field label="Ссылка-приглашение" value={link} readOnly onFocus={e=>e.target.select()}/><button onClick={copy} aria-label="Скопировать ссылку-приглашение"><Icon name={copied?'check':'document'} size={18} inheritColor/>{copied?'Скопировано':'Копировать'}</button></div>{isDesktop&&shareAction}</div>
   {error&&<p className="field-error" role="alert">{error}</p>}{copied&&<span className="sr-only" role="status">Ссылка скопирована</span>}
-  <div className="hotelier-actions"><Button onClick={share}><Icon name="share" size={20} inheritColor/>{approved?'Поделиться ссылкой':'Поделиться'}</Button></div>
+  {!isDesktop&&<div className="hotelier-actions">{shareAction}</div>}
  </div>;
 }

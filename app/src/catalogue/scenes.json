@@ -248,6 +248,14 @@
     "step": "hotel"
   },
   {
+    "id": "booking-nearby-cheaper",
+    "title": "Соседние даты · дешевле",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "hotel",
+    "nearbyDates": true
+  },
+  {
     "id": "booking-rooms",
     "title": "Выбор номера",
     "group": "Отель и бронирование",
@@ -283,6 +291,22 @@
     "step": "confirmation"
   },
   {
+    "id": "booking-partial-payment",
+    "title": "Бронь · предоплата 30% и оплата остатка",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "confirmation",
+    "paymentPlan": "percent30"
+  },
+  {
+    "id": "trip-partial-payment",
+    "title": "Поездка · частично оплачено",
+    "group": "Поездки",
+    "route": "trips",
+    "step": "confirmation",
+    "paymentPlan": "percent30"
+  },
+  {
     "id": "hotel-gallery",
     "title": "Фото отеля",
     "group": "Отель и бронирование",
@@ -290,7 +314,7 @@
     "step": "hotel",
     "actions": [
       {
-        "selector": "[aria-label=\"Открыть фотографии отеля\"]"
+        "selector": "[aria-label^=\"Открыть фотографии отеля\"]"
       }
     ]
   },
@@ -314,7 +338,7 @@
     "step": "hotel",
     "actions": [
       {
-        "selector": "[aria-label=\"Как подобраны предпочтения\"]"
+        "selector": "[aria-label=\"Как подобраны предпочтения\"], .desktop-preferences-heading"
       }
     ]
   },
@@ -1251,21 +1275,5 @@
     "trip": "staying",
     "breakfast": true,
     "paid": true
-  },
-  {
-    "id": "booking-partial-payment",
-    "title": "Бронь · предоплата 30% и оплата остатка",
-    "group": "Отель и бронирование",
-    "route": "booking-flow",
-    "step": "confirmation",
-    "paymentPlan": "percent30"
-  },
-  {
-    "id": "trip-partial-payment",
-    "title": "Поездка · частично оплачено",
-    "group": "Поездки",
-    "route": "trips",
-    "step": "confirmation",
-    "paymentPlan": "percent30"
   }
 ]

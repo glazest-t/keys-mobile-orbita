@@ -15,7 +15,8 @@ import {ensureDemoHotelPoints} from '../rewards/loyalty';
 import {ensureWelcomePoints,ensureDemoPointsHistory} from '../rewards/points';
 import {registerHotelierInterest,submitVerification,resolveVerification,verificationClaim} from '../hotelier/verification';
 import {saveSwipeLike,favoriteNavigation} from '../booking/favorites';
-import {savePriceWatch} from '../booking/priceWatch';
+import {savePriceWatch,watchKey} from '../booking/priceWatch';
+import {roomOffers} from '../booking/roomOffers';
 import {saveSwipePreferences} from '../booking/swipePreferences';
 import {freeTextDraft,saveFreeText} from '../booking/preferences';
 export type CatalogueScene={id:string;title:string;group:string;route:string;trip?:string;step?:string;role?:string;sheet?:string;launch?:boolean;device?:string;biometric?:string;onboarding?:number;actions?:{text?:string;selector?:string;contains?:string}[];[key:string]:unknown};
@@ -46,6 +47,19 @@ export async function createCatalogueFixture(scene:CatalogueScene):Promise<Catal
  if(scene.step){
   commerce=startDraft(commerce,'orbit-sea','catalogue-draft',owner);
   commerce={...commerce,draft:{...commerce.draft!,step:scene.step,contact:{name:'Анна',surname:'Соколова',phone:owner,email:'anna@example.test'}}};
+  if(scene.nearbyDates){
+   const d=commerce.draft!,start=Date.parse(d.search.checkIn+'T00:00:00Z'),end=Date.parse(d.search.checkOut+'T00:00:00Z');
+   const prices={...commerce.demoOfferPrices};
+   for(const [shift,factor] of [[-1,.85],[1,.8]]){
+    const search={...d.search,checkIn:new Date(start+shift*86400000).toISOString().slice(0,10),checkOut:new Date(end+shift*86400000).toISOString().slice(0,10)};
+    const preview={...commerce,draft:{...d,search}};
+    for(const offer of roomOffers(preview,owner))for(const {rate,quote} of offer.rates){
+     const key=watchKey(owner,{...d,search,roomId:rate.roomId,rateId:rate.id});
+     prices[key]=Math.round(quote.baseLodgingMinor*factor/100)*100;
+    }
+   }
+   commerce={...commerce,demoOfferPrices:prices};
+  }
   if(scene.paymentPlan)commerce={...commerce,draft:{...commerce.draft!,method:'online',paymentOption:'card',cardPaymentPlan:scene.paymentPlan as 'night'|'percent30'}};
   if(scene.step==='confirmation')commerce=commitBooking(commerce,owner,quoteDraft(commerce,owner),'success');
  }

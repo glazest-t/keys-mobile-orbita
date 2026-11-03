@@ -1,3 +1,4 @@
+import {isDesktop} from '../desktop/surface';
 import {ProfilePhoto} from '../profile/ProfilePhoto';
 import {useState,type Dispatch,type SetStateAction} from 'react';
 import {Icon,Row} from '../ui';
@@ -35,12 +36,12 @@ export function ProfilePage({user,commerce,onPhotoChange,onBenefits,onHotelier,o
   <section className="profile-navigation-group" aria-labelledby="profile-service-title"><h2 id="profile-service-title">О сервисе</h2><div className="k-card">
    <Row icon="nav-chats" title="Помощь и поддержка" onClick={onHelp}/>
    <Row icon="info" title="О приложении" onClick={onAbout}/>
-  </div></section>
-  <div className="k-card profile-logout"><Row danger icon="logout" title="Выйти" onClick={onLogout}/></div>
+  </div>{isDesktop&&<div className="k-card profile-logout"><Row danger icon="logout" title="Выйти" onClick={onLogout}/></div>}</section>
+  {!isDesktop&&<div className="k-card profile-logout"><Row danger icon="logout" title="Выйти" onClick={onLogout}/></div>}
  </div>;
 }
 
 export function ProfileStyle({commerce,setCommerce,owner,onClose}:{commerce:Commerce;setCommerce:Dispatch<SetStateAction<Commerce>>;owner:string;onClose:()=>void}){
  const [selected,setSelected]=useState(()=>[...(commerce.swipePreferences?.[owner]?.themes||[])]);
- return <SwipePreferences selected={selected} onChange={setSelected} saveMode backLabel="Назад в профиль" onClose={onClose} onContinue={()=>{setCommerce(s=>applySwipePreferences(s,owner,selected));onClose();}}/>;
+ return <SwipePreferences standardHeader={isDesktop} selected={selected} onChange={setSelected} saveMode backLabel="Назад в профиль" onClose={onClose} onContinue={()=>{setCommerce(s=>applySwipePreferences(s,owner,selected));onClose();}}/>;
 }

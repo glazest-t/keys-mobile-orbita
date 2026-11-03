@@ -1,3 +1,4 @@
+import {isDesktop} from '../desktop/surface';
 import {useEffect,useRef,useState} from 'react';
 import {BottomSheet} from '../mobile';
 import {Button,Icon} from '../ui';
@@ -32,7 +33,8 @@ function WifiSession({open,manual,onClose}:{open:boolean;manual:boolean;onClose:
  };
  const connected=view==='connect'&&status==='connected';
  const title=view==='help'?'Как подключиться':connected?'Вы в сети':'Wi-Fi отеля';
- const subtitle=view==='help'?'В настройках телефона':view==='credentials'?'Выберите сеть в настройках телефона':connected?'Телефон подключён к Wi-Fi отеля':'Подключим телефон к сети отеля';
+ const device=isDesktop?'устройства':'телефона';
+ const subtitle=view==='help'?`В настройках ${device}`:view==='credentials'?`Выберите сеть в настройках ${device}`:connected?(isDesktop?'Устройство подключено к Wi-Fi отеля':'Телефон подключён к Wi-Fi отеля'):(isDesktop?'Подключение к гостевой сети отеля':'Подключим телефон к сети отеля');
  return <BottomSheet open={open} onOpenChange={v=>{if(!v)onClose();}} title={title} snap={.64}>
   <div className={'sheet-body wifi-sheet '+(connected?'is-connected':'')} onFocusCapture={event=>{
    // Auto-focus during the sheet animation must not scroll the device shell.
@@ -51,7 +53,7 @@ function WifiSession({open,manual,onClose}:{open:boolean;manual:boolean;onClose:
     <Button variant="secondary" onClick={()=>setView('help')}>Как подключиться</Button>
     <Button variant="secondary" onClick={manual?onClose:()=>setView('connect')}>{manual?'Готово':'Назад'}</Button>
    </>:<>
-    <ol className="wifi-instructions"><li>Откройте настройки телефона и раздел Wi-Fi.</li><li>Выберите сеть <strong>{network}</strong>.</li><li>Введите пароль <strong>{password}</strong>.</li></ol>
+    <ol className="wifi-instructions"><li>Откройте настройки {device} и раздел Wi-Fi.</li><li>Выберите сеть <strong>{network}</strong>.</li><li>Введите пароль <strong>{password}</strong>.</li></ol>
     <Button variant="secondary" onClick={()=>setView('credentials')}>К сети и паролю</Button>
    </>}
   </div>

@@ -1,5 +1,5 @@
 import {HotelLevels,type HotelLevelCard} from './HotelLevels';
-import {useState} from 'react';
+import {useState,type ReactNode} from 'react';
 import {Button,Icon} from '../ui';
 import {BottomSheet} from '../mobile';
 import type {Commerce} from '../booking/model';
@@ -11,7 +11,7 @@ const levelCard=(l:HotelLevel):HotelLevelCard=>({id:l.id,name:l.name,
  condition:l.thresholdMinor?`От ${money(l.thresholdMinor)} за год`:'После подключения программы',
  benefits:[...(l.discountBasisPoints?[{label:`Скидка ${l.discountBasisPoints/100}%`,kind:'discount' as const}]:[]),
  ...(l.earnBasisPoints?[{label:`${l.earnBasisPoints/100}% баллами`,kind:'points' as const}]:[])]});
-export function HotelProgramDetails({s,owner,hotelId}:{s:Commerce;owner:string;hotelId:string}){
+export function HotelProgramDetails({s,owner,hotelId,action}:{s:Commerce;owner:string;hotelId:string;action?:ReactNode}){
  const [selected,setSelected]=useState<HotelLevel|null>(null);
  const h=hotelPrograms.find(h=>h.id===hotelId)!,connected=hasHotelProgram(s,owner,hotelId);
  const {levels,current,next,spentMinor,remainingMinor,progress,year}=hotelProgramProgress(s,owner,hotelId);
@@ -30,7 +30,7 @@ export function HotelProgramDetails({s,owner,hotelId}:{s:Commerce;owner:string;h
   </div>}
  </section>
  <section className="benefit-section"><h2>Уровни отеля</h2><HotelLevels levels={levels.map(levelCard)} currentId={connected?current.id:undefined} onDetails={id=>setSelected(levels.find(l=>l.id===id)||null)}/></section>
- <section className="benefit-section"><h2>Условия</h2><div className="benefit-card benefit-conditions">{[
+ <section className="benefit-section">{action&&<div className="desktop-program-action">{action}</div>}<h2>Условия</h2><div className="benefit-card benefit-conditions">{[
  'Уровень — по оплате проживания за календарный год. Новый год — новый расчёт.',
  'Покупки учитываем после выезда, за вычетом скидок и списанных баллов. Услуги не учитываем.',
  ...(withPoints?['Баллы начисляем после выезда по уровню на момент бронирования. 1 балл = 1 ₽.']:[]),

@@ -12,7 +12,7 @@ const app=path.join(root,'app'), out=path.join(root,'_site');
 const base=process.env.PAGES_BASE||'/keys-mobile-orbita/';
 if(!/^\/[a-zA-Z0-9_/-]*\/$/.test(base))throw Error('PAGES_BASE must be an absolute directory path');
 const repo='https://github.com/glazest-t/keys-mobile-orbita';
-const appBase=base+'prototype/';
+const appBase=base+'prototype/',desktopBase=base+'desktop/';
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const read=p=>readFileSync(path.join(root,p),'utf8');
 function walk(dir){return readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);}
@@ -21,31 +21,34 @@ const url=p=>base+p.split('/').map(encodeURIComponent).join('/');
 const scenes=JSON.parse(read('app/src/catalogue/scenes.json'));
 const archived=JSON.parse(read('publish/archived-visuals.json')).paths;
 const excluded=p=>/[/\\](?:reference|design-previews)(?:[/\\]|$)/.test(p);
-const nav=`<a class="identity" href="${base}"><img src="${base}design/assets/logo/mark-cobalt-ui.svg" alt=""/>ключи <small>проект</small></a><nav aria-label="Разделы проекта"><a href="${appBase}">Прототип</a><a href="${base}screens.html">Все экраны</a><a href="${base}docs/brand/index.html">Брендбук</a><a href="${base}documentation.html">Документация</a><a href="${base}marketing/">Материалы для маркетинга</a><a href="${repo}">GitHub ↗</a></nav>`;
-function page(title,body){return `<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>${escape(title)} · Ключи</title><link rel="icon" href="${base}design/assets/logo/mark-cobalt-ui.svg"><link rel="stylesheet" href="${base}portal.css"></head><body><header>${nav}</header><main>${body}</main><footer>Ключи от всех отелей · Мобильный прототип<span>Данные сохраняются в этом браузере. Интеграции демонстрационные.</span></footer></body></html>`;}
+const nav=`<a class="identity" href="${base}"><img src="${base}design/assets/logo/mark-cobalt-ui.svg" alt=""/>ключи <small>проект</small></a><nav aria-label="Разделы проекта"><a href="${appBase}">Мобильная версия</a><a href="${desktopBase}">Десктопная версия</a><a href="${base}screens.html">Все экраны</a><a href="${base}docs/brand/index.html">Брендбук</a><a href="${base}documentation.html">Документация</a><a href="${base}marketing/">Материалы для маркетинга</a><a href="${repo}">GitHub ↗</a></nav>`;
+function page(title,body){return `<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>${escape(title)} · Ключи</title><link rel="icon" href="${base}design/assets/logo/mark-cobalt-ui.svg"><link rel="stylesheet" href="${base}portal.css"></head><body><header>${nav}</header><main>${body}</main><footer>Ключи от всех отелей · Мобильный и десктопный прототипы<span>Данные сохраняются в этом браузере. Интеграции демонстрационные.</span></footer></body></html>`;}
 
 execFileSync(process.execPath,['scripts/check-mobile-runtime.mjs'],{cwd:app,stdio:'inherit'});
 execFileSync(path.join(app,'node_modules/.bin/tsc'),[],{cwd:app,stdio:'inherit'});
 execFileSync(path.join(app,'node_modules/.bin/vite'),['build','--base',appBase],{cwd:app,stdio:'inherit'});
+execFileSync(path.join(app,'node_modules/.bin/tsc'),['-p','../desktop/tsconfig.json'],{cwd:app,stdio:'inherit'});
+execFileSync(path.join(root,'desktop/node_modules/.bin/vite'),['build','--base',desktopBase],{cwd:path.join(root,'desktop'),stdio:'inherit'});
 rmSync(out,{recursive:true,force:true});mkdirSync(out,{recursive:true});
 const published=['docs/handoff','docs/brand','docs/references','docs/MOBILE-REVIEW.md','docs/DEPLOYMENT.md','docs/PRODUCT.md','docs/DESIGN_SYSTEM.md','docs/iteration-9/qa-current-publication','docs/iteration-9/qa-2gis-2026-11-02','design/assets','design/fonts','design/tokens.json','design/tokens.css','spec','prototype/domain'];
 for(const name of published){if(existsSync(path.join(root,name)))cpSync(path.join(root,name),path.join(out,name),{recursive:true,filter:p=>!excluded(p)&&!['.DS_Store','__pycache__'].includes(path.basename(p))});}
 for(const name of ['README.md'])cpSync(path.join(root,name),path.join(out,name));
 cpSync(path.join(app,'dist/client'),path.join(out,'prototype'),{recursive:true,filter:p=>!excluded(p)});
+cpSync(path.join(root,'desktop/dist/client'),path.join(out,'desktop'),{recursive:true,filter:p=>!excluded(p)});
 // Legacy source references sometimes point to public files through the code directory.
 cpSync(path.join(app,'public'),path.join(out,'app/public'),{recursive:true,filter:p=>!excluded(p)});
 // Vite handles imported assets. These explicit public URLs also occur in JSON,
 // inline SVG/CSS and raw HTML strings, including protected device chrome.
 let relocated=0;
-for(const file of walk(path.join(out,'prototype'))){
+for(const [surface,surfaceBase] of [['prototype',appBase],['desktop',desktopBase]])for(const file of walk(path.join(out,surface))){
  if(!/\.(js|css|html|json)$/.test(file))continue;
  let text=readFileSync(file,'utf8');
- text=text.replace(/(["'`(])\/(brand|assets|hotels|design-previews)\//g,(_,prefix,dir)=>{relocated++;return prefix+appBase+dir+'/';});
+ text=text.replace(/(["'`(])\/(brand|assets|hotels|design-previews)\//g,(_,prefix,dir)=>{relocated++;return prefix+surfaceBase+dir+'/';});
  writeFileSync(file,text);
 }
 // Root-relative links in archival pages belong under this repository's site.
 for(const file of walk(out)){
- if(!/\.(html|css|js)$/.test(file)||file.startsWith(path.join(out,'prototype')+path.sep))continue;
+ if(!/\.(html|css|js)$/.test(file)||file.startsWith(path.join(out,'prototype')+path.sep)||file.startsWith(path.join(out,'desktop')+path.sep))continue;
  let text=readFileSync(file,'utf8');
  text=text.replace(/http:\/\/(?:127\.0\.0\.1|localhost):5173\/?/g,appBase)
   .replace(/http:\/\/(?:127\.0\.0\.1|localhost):4173\/?/g,base)
@@ -88,14 +91,16 @@ for(const file of walk(path.join(out,'docs/brand')).filter(p=>p.endsWith('.html'
 
 const cards=[
  ['01','Мобильный прототип','Все сценарии входа, бронирования и проживания. iPhone и Pixel, живые переходы и сохранение данных.',appBase,'Открыть приложение'],
+ ['WEB','Десктопный прототип','Полноэкранная версия: поиск с картой, бронирование, поездки, выгоды и профиль.',desktopBase,'Открыть десктоп'],
  ['02','Все экраны','Экраны и состояния текущего приложения, собранные на одной странице. Живые компоненты вместо архивных макетов.',base+'screens.html','Смотреть экраны'],
  ['03','Брендбук и UI kit','Айдентика, токены, типографика, движение и компоненты из работающего приложения.',base+'docs/brand/index.html','Открыть брендбук'],
  ['04','Для разработки','Действующая логика, состояния компонентов, спецификации, источники и результаты проверок.',base+'documentation.html','Читать документы'],
  ['05','Материалы для маркетинга','Баннеры, иллюстрации, UI, логотипы и исходники для сайтов, лендингов и соцсетей.',base+'marketing/','Открыть материалы'],
 ];
-write('index.html',page('Пространство проекта',`<section class="hero"><p class="eyebrow">МОБИЛЬНАЯ ВЕРСИЯ · ПРОЕКТ И МАТЕРИАЛЫ</p><h1>Ключи от<br/>всех отелей</h1><p class="lead">Приложение, экраны, документация и материалы для маркетинга — в одном месте.</p><div class="actions"><a class="primary" href="${appBase}">Смотреть прототип ↗</a><a class="secondary" href="${base}screens.html">Все экраны</a></div><div class="orbit" aria-hidden="true"><i></i><b></b></div></section><section class="cards">${cards.map(([n,title,copy,href,cta])=>`<a class="card" href="${href}"><span class="number">${n}</span><h2>${title}</h2><p>${copy}</p><strong>${cta} →</strong></a>`).join('')}</section><section class="guide"><div><p class="eyebrow">КАК ПОСМОТРЕТЬ</p><h2>Выберите сценарий<br/>в настройках демонстрации</h2></div><div><p>В приложении есть шесть вариантов входа и пять состояний поездки: без брони, до заезда, проживание, день выезда и завершённая поездка.</p><p>Код СМС: <b>123456</b> · PIN: <b>1234</b>. После входа станут доступны сценарии поездок, услуг, оплаты и уведомлений.</p><a href="${appBase}#kit">Открыть живой UI kit →</a></div></section>`));
+write('index.html',page('Пространство проекта',`<section class="hero"><p class="eyebrow">МОБИЛЬНАЯ И ДЕСКТОПНАЯ ВЕРСИИ</p><h1>Ключи от<br/>всех отелей</h1><p class="lead">Приложение, экраны, документация и материалы для маркетинга — в одном месте.</p><div class="actions"><a class="primary" href="${appBase}">Мобильная версия ↗</a><a class="secondary" href="${desktopBase}">Десктопная версия ↗</a><a class="secondary" href="${base}screens.html">Все экраны</a></div><div class="orbit" aria-hidden="true"><i></i><b></b></div></section><section class="cards">${cards.map(([n,title,copy,href,cta])=>`<a class="card" href="${href}"><span class="number">${n}</span><h2>${title}</h2><p>${copy}</p><strong>${cta} →</strong></a>`).join('')}</section><section class="guide"><div><p class="eyebrow">КАК ПОСМОТРЕТЬ</p><h2>Выберите сценарий<br/>в настройках демонстрации</h2></div><div><p>В приложении есть шесть вариантов входа и пять состояний поездки: без брони, до заезда, проживание, день выезда и завершённая поездка.</p><p>Код СМС: <b>123456</b> · PIN: <b>1234</b>. После входа станут доступны сценарии поездок, услуг, оплаты и уведомлений.</p><a href="${appBase}#kit">Открыть живой UI kit →</a></div></section>`));
 
 const documents=[
+ ['Десктопная версия','docs/handoff/DESKTOP.md','Сборка, сценарии и отличия от мобильной версии'],
  ['Начать здесь','docs/handoff/README.md','Единый комплект передачи и порядок чтения'],
  ['Логика мобильного приложения','docs/handoff/MOBILE-CONTRACT.md','Сценарии, переходы, роли и расчёты'],
  ['Компоненты и состояния','docs/handoff/COMPONENTS.md','Переиспользование, визуальные правила и анимация'],
@@ -109,7 +114,7 @@ const documents=[
 
  ['Запуск и публикация','docs/DEPLOYMENT.md','Структура GitHub Pages и обновление сайта'],
 ];
-write('documentation.html',page('Документация',`<p class="eyebrow">ДЛЯ РАЗРАБОТКИ</p><h1>Одна точка входа<br/>во все документы</h1><p class="lead">Начните с актуального контракта. В публикации только актуальная мобильная версия. Архивные визуальные референсы удалены.</p><section class="doc-list" id="current">${documents.map(([title,file,description])=>`<a href="${url(file.replace(/\.md$/,'.html'))}"><div><h2>${title}</h2><p>${description}</p></div><span>↗</span></a>`).join('')}</section><details class="archive"><summary>Все документы проекта · ${markdown.length}</summary><input id="document-search" type="search" placeholder="Найти документ" aria-label="Найти документ"><ul id="documents">${markdown.map(f=>path.relative(out,f)).sort((a,b)=>a.localeCompare(b,'ru')).map(f=>`<li><a href="${url(f.replace(/\.md$/,'.html'))}">${escape(f)}</a></li>`).join('')}</ul></details><script>document.querySelector('#document-search').addEventListener('input',e=>{for(const row of document.querySelectorAll('#documents li'))row.hidden=!row.textContent.toLowerCase().includes(e.target.value.toLowerCase())})</script>`));
+write('documentation.html',page('Документация',`<p class="eyebrow">ДЛЯ РАЗРАБОТКИ</p><h1>Одна точка входа<br/>во все документы</h1><p class="lead">Начните с актуального контракта. В публикации актуальные мобильная и десктопная версии. Архивные визуальные референсы удалены.</p><section class="doc-list" id="current">${documents.map(([title,file,description])=>`<a href="${url(file.replace(/\.md$/,'.html'))}"><div><h2>${title}</h2><p>${description}</p></div><span>↗</span></a>`).join('')}</section><details class="archive"><summary>Все документы проекта · ${markdown.length}</summary><input id="document-search" type="search" placeholder="Найти документ" aria-label="Найти документ"><ul id="documents">${markdown.map(f=>path.relative(out,f)).sort((a,b)=>a.localeCompare(b,'ru')).map(f=>`<li><a href="${url(f.replace(/\.md$/,'.html'))}">${escape(f)}</a></li>`).join('')}</ul></details><script>document.querySelector('#document-search').addEventListener('input',e=>{for(const row of document.querySelectorAll('#documents li'))row.hidden=!row.textContent.toLowerCase().includes(e.target.value.toLowerCase())})</script>`));
 
 cpSync(path.join(root,'publish/catalogue.js'),path.join(out,'catalogue.js'));
 write('screens.json',JSON.stringify(scenes,null,2));

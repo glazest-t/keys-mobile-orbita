@@ -9,14 +9,15 @@ import './swipe-preferences.css';
 
 const themeIllustrations:Record<string,PreferenceIllustrationId>={family:'kids',discover:'location',romantic:'adults',culture:'historic',solo:'solo',active:'sport',nature:'nature',long:'kitchen',spa:'spa',food:'restaurant'};
 
-export function SwipePreferences({selected,onChange,onContinue,onClose,backLabel='Назад к поиску',saveMode=false,embedded=false}:{selected:string[];onChange:(ids:string[])=>void;onContinue:()=>void;onClose:()=>void;backLabel?:string;saveMode?:boolean;embedded?:boolean}){
+export function SwipePreferences({selected,onChange,onContinue,onClose,backLabel='Назад к поиску',saveMode=false,embedded=false,standardHeader=false}:{selected:string[];onChange:(ids:string[])=>void;onContinue:()=>void;onClose:()=>void;backLabel?:string;saveMode?:boolean;embedded?:boolean;standardHeader?:boolean}){
  const {bottomInset}=useKeyboardInsets();
  const [departing,setDeparting]=useState(false);
  return <section className={"swipe-preferences"+(embedded?" swipe-preferences-sheet":"")} style={{'--swipe-intro-bottom':`${bottomInset}px`} as CSSProperties} aria-label="Предпочтения поездки" aria-busy={departing}>
+  {standardHeader&&<header className="desktop-section-header"><IconButton name="back" label={backLabel} onClick={onClose}/><h1>Ваш стиль путешествий</h1></header>}
   <MobileScroll className="page-scroll"><div className="swipe-preferences-content" inert={departing}>
    <div className="swipe-preferences-orbit" aria-hidden="true"/>
-   {!embedded&&<IconButton name="back" label={backLabel} onClick={onClose}/>}
-   <h1>Ваш стиль<br/><span>путешествий</span></h1>
+   {!embedded&&!standardHeader&&<IconButton name="back" label={backLabel} onClick={onClose}/>}
+   {!standardHeader&&<h1>Ваш стиль<br/><span>путешествий</span></h1>}
    <p>На основе ваших предпочтений мы подберем лучшее предложение</p>
    <BubbleOrbit departing={departing} onDeparted={onContinue}>
     {swipeThemes.map(theme=>{const checked=selected.includes(theme.id);return <WaterRippleButton key={theme.id} type="button" role="checkbox" aria-checked={checked} className="swipe-theme" onClick={()=>onChange(checked?selected.filter(id=>id!==theme.id):[...selected,theme.id])}>
@@ -25,6 +26,6 @@ export function SwipePreferences({selected,onChange,onContinue,onClose,backLabel
     </WaterRippleButton>;})}
    </BubbleOrbit>
   </div></MobileScroll>
-  <footer className="swipe-preferences-footer"><Button busy={departing} busyLabel={saveMode?"Сохраняем предпочтения":"Подбираем отели"} onClick={()=>setDeparting(true)}>{saveMode?"Сохранить предпочтения":"Перейти к отелям"}<Icon name={saveMode?"check":"chevron-right"} size={18} inheritColor/></Button></footer>
+  <footer className="swipe-preferences-footer"><Button busy={departing} busyLabel={saveMode?"Сохраняем предпочтения":"Подбираем отели"} onClick={()=>setDeparting(true)}>{saveMode?"Сохранить предпочтения":"Перейти к отелям"}{!standardHeader&&<Icon name={saveMode?"check":"chevron-right"} size={18} inheritColor/>}</Button></footer>
  </section>;
 }

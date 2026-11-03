@@ -1,0 +1,1 @@
+{"extends":"../app/tsconfig.json","compilerOptions":{"allowJs":true,"checkJs":false,"types":["vite/client"],"noUnusedLocals":false},"include":["src/**/*.tsx","../app/src"],"exclude":["node_modules","dist"]}

@@ -49,3 +49,8 @@ tmp/
 /docs/iteration-5/qa-wifi/wf1-reference.html
 /docs/iteration-5/qa-wifi/wf1b-reference.html
 /docs/iteration-5/qa-wifi/wf2-reference.html
+
+# Local QA artifacts.
+/.desktop-work/
+/desktop/compare.html
+/desktop/dist/

@@ -1,0 +1,265 @@
+/* Desktop layouts for maps, galleries, saved collections and loyalty.
+   Kept outside the shared mobile stylesheet. */
+.desktop-app .map-transition-layer {
+  position: fixed; inset: 72px 0 0; height: auto; z-index: 40;
+}
+.desktop-app .expanded-results-map { position: absolute; inset: 0; }
+.desktop-app .expanded-results-map > header {
+  top: 24px; left: 32px; right: 32px; max-width: 620px; height: 48px;
+}
+.desktop-app .map-query { font-size: 16px; padding: 0 20px; }
+.desktop-app .map-filter-rail { top: 88px; padding: 0 32px; }
+.desktop-app .c2-prices { inset: 150px 32px 24px; }
+.desktop-app .c2-price { min-height: 40px; padding: 0 16px; border-radius: 22px; font-size: 14px; }
+.desktop-app .c2-price.marker-0 { left: 16%; top: 16%; }
+.desktop-app .c2-price.marker-1 { left: 42%; top: 40%; }
+.desktop-app .c2-price.marker-2 { left: 67%; top: 18%; }
+.desktop-app .c2-roads > i { left: -10%; top: 35%; width: 120%; height: 18px; }
+.desktop-app .c2-roads > i + i { left: 48%; top: -10%; width: 16px; height: 120%; }
+.desktop-app .c2-roads > b { left: 44%; top: 54%; }
+.desktop-app .map-selection {
+  left: auto; right: 32px; bottom: 24px; width: 380px; gap: 16px;
+}
+.desktop-app .map-list-button { align-self: flex-end; height: 44px; border-radius: 24px; padding: 0 20px; }
+.desktop-app .map-hotel-card { grid-template-columns: 120px minmax(0,1fr); padding: 12px; gap: 16px; }
+.desktop-app .map-hotel-card > img { width: 120px; height: 150px; }
+.desktop-app .map-hotel-card > span { gap: 6px; }
+.desktop-app .map-hotel-card strong { font-size: 17px; line-height: 23px; }
+.desktop-app .favorite-map-markers { inset: 130px 32px 240px; }
+
+/* Gallery: name, category tabs, then a full-width photo grid. */
+.desktop-flow:has(.detail-gallery) .desktop-flow-layout { display: flex; flex-direction: column; gap: 20px; }
+.desktop-flow:has(.detail-gallery) .desktop-flow-content,
+.desktop-flow:has(.detail-gallery) .detail-scroll { display: contents; }
+.desktop-flow:has(.detail-gallery) .scroll-gallery-header { order: 0; width: 100%; height: auto; }
+.desktop-flow:has(.detail-gallery) .detail-header { margin: 0; padding: 0; background: transparent; border: 0; }
+.desktop-flow:has(.detail-gallery) .desktop-flow-footer {
+  order: 1; position: relative; inset: auto; width: 100%; padding: 0; background: transparent; border: 0;
+}
+.desktop-flow:has(.detail-gallery) .gallery-footer { height: auto; padding: 0; border: 0; background: transparent; }
+.desktop-flow:has(.detail-gallery) .gallery-footer::after { display: none; }
+.desktop-flow:has(.detail-gallery) .detail-gallery { order: 2; width: 100%; padding: 0; }
+.desktop-app .detail-gallery h1 { padding: 0; font-size: 18px; }
+.desktop-app .hotel-photo-grid,
+.desktop-app .room-photo-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); grid-auto-rows: 240px; gap: 20px; padding: 0; }
+.desktop-app .photo-columns, .desktop-app .photo-columns > div { display: contents; }
+.desktop-app .gallery-tile { height: 100%; min-height: 0; gap: 4px; }
+.desktop-app .gallery-tile img { height: calc(100% - 28px); flex: 1; min-height: 0; aspect-ratio: auto; border-radius: 20px; }
+.desktop-app .gallery-tile.tile-0,
+.desktop-app .gallery-tile.room-photo-wide { grid-column: span 2; grid-row: span 2; }
+.desktop-app .gallery-tile span { padding: 0 4px; }
+.desktop-modal:has(.photo-viewer) { width: min(1040px,calc(100vw - 64px)); }
+.desktop-modal .photo-viewer { padding: 0; }
+.desktop-modal .photo-viewer > img { height: min(62vh,620px); max-height: none; background: var(--k-surface-app); }
+.desktop-modal .photo-viewer > div { max-width: 320px; margin: 16px auto 0; }
+
+/* Collections use complete cards; no phone-sized fixed scroll frame. */
+.desktop-app .favorite-screen { height: auto; min-height: calc(100vh - 72px); }
+.desktop-app .favorite-scroll-frame { position: relative; inset: auto; }
+.desktop-app .favorite-header, .desktop-app .favorite-content { max-width: 1280px; margin: auto; }
+.desktop-app .favorite-header { padding: 24px 0 12px; }
+.desktop-app .favorite-content { padding: 8px 0 64px; gap: 24px; }
+.desktop-app .favorite-lists { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; align-items: start; }
+.desktop-app .favorite-lists > section { display: contents; }
+.desktop-app .favorite-list.compact, .desktop-app .favorite-list.featured {
+  padding: 12px; grid-template-columns: minmax(0,1fr) 24px; gap: 16px; border: 1px solid var(--k-border-subtle); border-radius: 24px;
+}
+.desktop-app .favorite-list .favorite-cover {
+  grid-column: 1/-1; height: 220px; border-radius: 16px;
+  display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 108px 108px; gap: 4px;
+}
+.desktop-app .favorite-cover img:not(.k-icon):first-child { grid-row: 1/3; }
+.desktop-app .favorite-cover img:not(.k-icon) { display: block; }
+.desktop-app .favorite-cover.photos-1 { grid-template-columns: 1fr; }
+.desktop-app .favorite-cover.photos-2 img:nth-child(2) { grid-row: 1/3; }
+.desktop-app .favorite-cover.photos-0 { display: flex; }
+.desktop-app .favorite-list-label { padding: 0 4px 4px; }
+.desktop-app .favorite-list-label strong { font-size: 18px; line-height: 26px; }
+.desktop-app .favorite-content:has(.favorite-search) { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); align-items: start; }
+.desktop-app .favorite-heading,.desktop-app .favorite-search,.desktop-app .favorite-caption { grid-column: 1/-1; }
+.desktop-app .favorite-search { max-width: 680px; width: 100%; }
+.desktop-app .favorite-hotel-details { padding: 20px; }
+.desktop-app .favorite-hotel-title { flex-wrap: wrap; }
+.desktop-app .favorite-hotel-title > strong { font-size: 20px; line-height: 27px; }
+.desktop-app .favorite-rating { margin-top: 8px; }
+.desktop-app .favorite-note { margin: 0 20px 20px; width: calc(100% - 40px); }
+
+/* The program balance and conditions remain alongside the timeline. */
+.desktop-app[data-route^="loyalty-program/"] .benefits-page {
+  grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); align-items: start;
+}
+.desktop-app[data-route^="loyalty-program/"] .benefit-program-hero { grid-column: 1; grid-row: 1; }
+.desktop-app[data-route^="loyalty-program/"] .benefit-section:has(.hotel-level-cards) { grid-column: 2; grid-row: 1/span 2; }
+.desktop-app[data-route^="loyalty-program/"] .benefit-section:has(.benefit-conditions) { grid-column: 1; grid-row: 2; }
+.desktop-app[data-route^="loyalty-program/"] .benefit-program-photo { height: 240px; }
+.desktop-app[data-route^="loyalty-program/"] .keys-content { padding-bottom: 64px!important; }
+.desktop-app .desktop-program-action { margin-bottom: 12px; }
+.desktop-app .desktop-program-action > .k-button { width: 100%; }
+.desktop-app[data-route="points"] .benefits-page { grid-template-columns: 320px minmax(0,1fr); align-items: start; }
+.desktop-app[data-route="points"] .benefit-points-summary { grid-column: 1; grid-row: 1/span 3; position: sticky; top: 24px; }
+.desktop-app[data-route="points"] .benefit-history-filters,
+.desktop-app[data-route="points"] .benefit-history-months { grid-column: 2; }
+.desktop-app[data-route="loyalty-programs"] .benefits-page,
+.desktop-app[data-route="loyalty-network"] .benefits-page { display: flex; flex-direction: column; align-items: stretch; max-width: 1000px; margin: auto; }
+.desktop-app[data-route="loyalty-programs"] .benefits-page > .k-field { max-width: 560px; }
+.desktop-app .benefit-program-row { padding: 20px; }
+.desktop-app .benefit-program-row > img { width: 96px; height: 84px; }
+
+.desktop-app .profile-history-page { width: 100%; max-width: 960px; margin: auto; gap: 20px; }
+.desktop-app .history-search { max-width: 560px; }
+.desktop-app .history-timeline-card { padding: 16px; }
+.desktop-app .history-timeline-open { grid-template-columns: 160px minmax(0,1fr); gap: 24px; min-height: 128px; }
+.desktop-app .history-timeline-open > img { width: 160px; height: 128px; }
+.desktop-app .history-timeline-copy { padding: 8px 0 44px; }
+.desktop-app .history-timeline-copy strong { font-size: 19px; line-height: 26px; }
+.desktop-app .history-timeline-copy small { font-size: 14px; line-height: 20px; }
+.desktop-app .history-timeline-meta { left: 200px; right: 24px; bottom: 24px; }
+.desktop-app .history-timeline-meta > button { font-size: 14px; }
+.desktop-app .history-detail-hotel { display: grid; grid-template-columns: 280px minmax(0,1fr); }
+.desktop-app .history-detail-hotel > img { height: 100%; min-height: 220px; }
+.desktop-app .history-detail-hotel > div { padding: 24px; gap: 16px; }
+
+@media(max-width:1350px) {
+  .desktop-app .favorite-header,.desktop-app .favorite-content { margin-left: 32px; margin-right: 32px; }
+}
+@media(max-width:1100px) {
+  .desktop-app .favorite-lists { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .desktop-app .hotel-photo-grid,.desktop-app .room-photo-grid { grid-auto-rows: 190px; }
+  .desktop-app[data-route^="loyalty-program/"] .benefits-page { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+}
+/* Hotel discovery remains a focused card experience with accessible desktop controls. */
+.desktop-app .swipe-browser{position:relative;inset:auto;width:100%;height:calc(100dvh - 72px);min-height:640px;overflow:hidden;--swipe-photo-width:min(900px,calc(100vw - 64px))!important}
+.desktop-app .swipe-browser>.swipe-heading{position:relative;inset:auto;width:calc(100% - 64px);max-width:900px;height:88px;margin:0 auto;padding:16px 0;gap:16px}
+.desktop-app .swipe-heading h1{font-size:22px;line-height:30px}
+.desktop-app .swipe-heading p{font-size:14px;line-height:20px}
+.desktop-app .swipe-browser>.swipe-source-card,.desktop-app .swipe-browser>.swipe-back-card{top:88px;bottom:128px;left:max(32px,calc((100% - 900px)/2));right:max(32px,calc((100% - 900px)/2));border-radius:28px}
+.desktop-app .swipe-source-details{left:24px;right:24px;bottom:24px;gap:16px}
+.desktop-app .swipe-source-footer{bottom:20px}
+.desktop-app .swipe-empty{max-width:700px;margin:0 auto;padding:80px 24px!important}
+.desktop-app .swipe-preferences{position:relative;inset:auto;max-width:1000px;width:calc(100% - 64px);margin:24px auto;overflow:visible}
+.desktop-app .swipe-preferences-content{padding:0 24px;overflow:visible}
+.desktop-app .swipe-preferences-content>.k-icon-button{margin-left:0}
+.desktop-app .swipe-preferences h1{text-align:center;font-size:34px;line-height:44px;margin:0 0 12px}
+.desktop-app .swipe-preferences h1 br{display:none}
+.desktop-app .swipe-preferences h1 span:before{content:' '}
+.desktop-app .swipe-preferences-content>p{text-align:center;font-size:15px;line-height:24px;margin-bottom:32px}
+.desktop-app .swipe-preferences-cloud{grid-template-columns:repeat(5,minmax(0,1fr));gap:24px;padding-bottom:0;max-width:800px;margin:0 auto}
+.desktop-app .orbit-bubble-item:nth-child(n){grid-column:auto;width:128px}
+.desktop-app .swipe-theme{font-size:13px;line-height:18px;gap:8px}
+.desktop-app .swipe-theme-symbol{width:40px;height:40px}
+.desktop-app .swipe-preferences-footer{position:relative;inset:auto;max-width:420px;padding:32px;margin:0 auto;background:none}
+.desktop-app .swipe-preferences-orbit{right:-40px;top:-90px;pointer-events:none}
+.desktop-app .swipe-preferences-cloud:before{inset:20px -40px;border-color:#DDE0F5}
+.desktop-app .swipe-preferences{overflow:hidden}
+.desktop-app .swipe-preferences h1 span{margin-left:.25em}
+.desktop-app .text-search-content{max-width:880px;margin:0 auto;gap:24px}
+.desktop-app[data-route="wish-search"]:has(.text-search-content) .app-header{max-width:880px;width:calc(100% - 64px);margin:24px auto 0}
+.desktop-app .preference-header>span{text-align:left;font-size:20px}
+.desktop-app .text-search-content .preference-wish>.k-button{width:300px;align-self:flex-end}
+.desktop-app .text-search-content .preference-wish textarea{min-height:160px}
+.desktop-app .text-search-results{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(340px,.9fr);gap:20px 28px;align-items:start}
+.desktop-app .text-search-results>.preference-chips,.desktop-app .text-search-results>.results-controls-rail,.desktop-app .text-search-results>.field-error{grid-column:1/-1}
+.desktop-app .text-search-results>div:has(>.source-map){grid-column:2;grid-row:3;position:sticky;top:24px}
+.desktop-app .text-search-results .source-map{height:600px;margin:0}
+.desktop-app .text-search-results>.preference-results{grid-column:1;grid-row:3;display:flex;flex-direction:column;gap:20px}
+.desktop-app .preference-results>.preference-hotel{display:grid;grid-template-columns:200px minmax(0,1fr);margin:0;min-width:0}
+.desktop-app .preference-results .discovery-photo{min-height:220px;height:100%}
+.desktop-app .preference-results .hotel-list-card-info{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:20px;text-align:left}
+.desktop-app .preference-results .discovery-price{position:relative;inset:auto;order:3;text-align:left;margin-top:auto}
+.desktop-app .preference-results .preference-match{grid-column:1/-1}
+.desktop-app .preference-results h2{font:500 20px/26px Onest,sans-serif}
+@media(max-width:1100px){.desktop-app .text-search-results{grid-template-columns:minmax(0,1.4fr) minmax(300px,1fr);gap:20px}.desktop-app .preference-results>.preference-hotel{grid-template-columns:180px minmax(0,1fr)}.desktop-app .preference-results .hotel-list-card-info{padding:16px}}
+.desktop-map-title{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.desktop-map-dialog:focus{outline:none}
+
+/* Collection detail uses the standard inner-page title and one search/map toolbar. */
+.desktop-app .desktop-favorite-detail .favorite-header { justify-content: flex-start; gap: 16px; height: 48px; padding: 0; margin-top: 24px; margin-bottom: 24px; }
+.desktop-app .desktop-favorite-title { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 12px; min-width: 0; }
+.desktop-app .desktop-favorite-title h1 { margin: 0; font: 500 20px/28px Onest,sans-serif; letter-spacing: -.3px; }
+.desktop-app .desktop-favorite-title > span { font: 400 13px/19px Onest,sans-serif; color: var(--k-text-secondary,#5a6072); }
+.desktop-app .desktop-favorite-detail .favorite-content { padding-top: 8px; }
+.desktop-app .desktop-favorite-search-row { grid-column: 1/-1; display: flex; align-items: center; gap: 16px; min-width: 0; }
+.desktop-app .desktop-favorite-search-row > .favorite-search { flex: 1; }
+.desktop-app .desktop-favorite-search-row > .k-button { width: auto; min-width: 132px; height: 60px; min-height: 60px; flex: none; gap: 8px; border-radius: 18px; }
+
+/* Saved hotels and their map share the desktop search composition. */
+.desktop-app .desktop-favorite-detail .favorite-header,
+.desktop-app .desktop-favorite-detail .favorite-content { max-width:none;margin-left:24px;margin-right:24px; }
+.desktop-app .desktop-favorite-detail .favorite-content { display:flex;flex-direction:column;gap:20px; }
+.desktop-favorite-collections { display:flex;gap:8px;flex-wrap:wrap; }
+.desktop-favorites-layout { display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start;width:100%; }
+.desktop-favorites-hotels { display:flex;flex-direction:column;gap:16px;min-width:0; }
+.desktop-favorites-map { position:sticky;top:20px;height:calc(100dvh - 120px);min-height:320px;border-radius:24px;overflow:hidden; }
+.desktop-favorites-hotels .favorite-hotel { display:grid;grid-template-columns:minmax(150px,32%) minmax(0,1fr);overflow:hidden; }
+.desktop-favorites-hotels .discovery-photo { grid-column:1;grid-row:1/3;min-height:230px;height:100%; }
+.desktop-favorites-hotels .discovery-photo :is(.hotel-card-photos,.hotel-photo-carousel,.hotel-photo-track,.photo-open,img) { height:100%;min-height:230px;object-fit:cover; }
+.desktop-favorites-hotels .favorite-hotel-details { grid-column:2;min-width:0;padding:20px; }
+.desktop-favorites-hotels .favorite-hotel-title { align-items:start;gap:12px; }
+.desktop-favorites-hotels .favorite-hotel-title > strong { font:500 18px/24px Onest; }
+.desktop-favorites-hotels .favorite-note { grid-column:2;align-self:end; }
+.favorite-hotel-search { display:block;margin-top:10px;color:var(--k-text-secondary);font:400 12px/18px Onest; }
+@media(max-width:1100px) {
+ .desktop-favorites-hotels .favorite-hotel { grid-template-columns:minmax(0,1fr); }
+ .desktop-favorites-hotels .discovery-photo { grid-column:1;grid-row:auto;height:200px;min-height:200px; }
+ .desktop-favorites-hotels .favorite-hotel-details,.desktop-favorites-hotels .favorite-note { grid-column:1; }
+}
+.desktop-favorites-hotels .favorite-hotel-title { flex-direction:column;align-items:stretch; }
+.desktop-favorites-hotels .favorite-price { align-self:flex-end; }
+.desktop-favorites-hotels .favorite-price > s { font:400 12px/18px Onest;color:var(--k-text-secondary); }
+/* Favourite controls align with the list; map starts alongside the search form. */
+.desktop-favorites-hotels .desktop-favorite-search-row,
+.desktop-favorites-hotels .desktop-favorite-search-row > .favorite-search { width:100%;max-width:none; }
+.desktop-favorites-hotels .desktop-favorite-collections { gap:8px;align-items:center; }
+.desktop-favorites-hotels .favorite-new { margin-left:0; }
+.desktop-favorite-collections .text-action { display:inline-flex;align-items:center;gap:6px;min-height:36px;white-space:nowrap; }
+.desktop-favorites-hotels .favorite-hotel { grid-template-columns:minmax(140px,29%) minmax(0,1fr);min-height:220px; }
+.desktop-favorites-hotels .discovery-photo { grid-row:1;height:100%;min-height:220px; }
+.desktop-favorites-hotels .discovery-photo :is(.hotel-card-photos,.hotel-photo-carousel,.hotel-photo-track,.photo-open,img) { min-height:220px; }
+.desktop-favorites-hotels .favorite-hotel-details { display:flex;flex-direction:column;gap:8px;padding:20px; }
+.favorite-list-tag { align-self:flex-end;display:flex;align-items:center;gap:6px;max-width:100%;border:0;border-radius:12px;padding:6px 10px;background:var(--k-action-tint);color:var(--k-action-primary);font:500 12px/18px Onest; }
+.favorite-hotel-name { border:0;background:transparent;padding:0;text-align:left;color:var(--k-text-primary);font:500 18px/24px Onest; }
+.desktop-favorites-hotels .favorite-hotel-search { margin:0; }
+.favorite-hotel-bottom { display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:auto;padding-top:12px; }
+.desktop-favorites-hotels .favorite-rating { display:flex;flex-wrap:wrap;gap:4px 6px;margin:0;font:400 12px/18px Onest; }
+.favorite-price-action { border:0;background:transparent;padding:0;color:var(--k-text-primary);text-align:right;flex:none; }
+.favorite-share-url { width:100%;padding:12px;border:1px solid var(--k-border-subtle);border-radius:12px;background:var(--k-surface-app);font:400 13px/20px Onest; }
+.favorite-shared-hotels { display:flex;flex-direction:column;gap:12px; }
+.favorite-shared-hotels > div { display:flex;align-items:center;gap:12px; }
+.favorite-shared-hotels img { width:64px;height:64px;object-fit:cover;border-radius:12px; }
+@media(min-width:1501px) {
+ .desktop-favorites-layout { grid-template-columns:minmax(360px,calc(50% - 336px)) minmax(0,1fr); }
+}
+@media(min-width:1501px) and (max-width:1900px),(max-width:1100px) {
+ .desktop-favorites-hotels .favorite-hotel { grid-template-columns:minmax(0,1fr); }
+ .desktop-favorites-hotels .discovery-photo { grid-column:1;grid-row:1;height:200px;min-height:200px; }
+ .desktop-favorites-hotels .discovery-photo :is(.hotel-card-photos,.hotel-photo-carousel,.hotel-photo-track,.photo-open,img) { height:200px;min-height:200px; }
+ .desktop-favorites-hotels .favorite-hotel-details { grid-column:1;grid-row:2;min-height:190px; }
+}
+
+/* Compact favourite cards: title and collection share the first row. */
+.desktop-favorites-hotels .favorite-hotel { min-height:176px; }
+.desktop-favorites-hotels .discovery-photo { height:auto; }
+.desktop-favorites-hotels .discovery-photo > .hotel-card-photos { position:absolute;inset:0;height:100%; }
+.desktop-favorites-hotels .discovery-photo,
+.desktop-favorites-hotels .discovery-photo :is(.hotel-card-photos,.hotel-photo-carousel,.hotel-photo-track,.photo-open,img) { min-height:176px; }
+.desktop-favorites-hotels .favorite-hotel-details {
+ display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto 1fr;
+ gap:6px 12px;padding:16px;min-height:0;align-content:start;
+}
+.desktop-favorites-hotels .favorite-hotel-name {
+ grid-column:1;grid-row:1;align-self:start;min-width:0;
+ display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;
+}
+.desktop-favorites-hotels .favorite-list-tag {
+ grid-column:2;grid-row:1;align-self:start;max-width:150px;min-width:0;
+}
+.desktop-favorites-hotels .favorite-list-tag > span { overflow:hidden;text-overflow:ellipsis;white-space:nowrap; }
+.desktop-favorites-hotels .favorite-list-tag > .icon { flex-shrink:0; }
+.desktop-favorites-hotels .favorite-hotel-search { grid-column:1/-1;grid-row:2; }
+.desktop-favorites-hotels .favorite-hotel-bottom { grid-column:1/-1;grid-row:3;margin-top:0;padding-top:8px;align-self:end; }
+@media(min-width:1501px) and (max-width:1900px),(max-width:1100px) {
+ .desktop-favorites-hotels .discovery-photo,
+ .desktop-favorites-hotels .discovery-photo :is(.hotel-card-photos,.hotel-photo-carousel,.hotel-photo-track,.photo-open,img) { height:200px;min-height:200px; }
+ .desktop-favorites-hotels .favorite-hotel-details { min-height:0; }
+}
+.desktop-favorites-hotels .discovery-photo .photo-open img { height:100%;min-height:0; }

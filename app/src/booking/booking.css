@@ -113,3 +113,11 @@
 /* Discounts lead, ratings support: shared offer hierarchy. */
 .keys-app .discovery-price b,.keys-app .room-rate-price b,.keys-app .hotel-price-value>b{background:#D72778;color:#fff;font:500 12px/18px Onest;padding:3px 8px;border-radius:8px;white-space:nowrap}
 .keys-app .discovery-rating>b,.keys-app .rating-badge,.keys-app .favorite-rating>b,.keys-app .map-card-rating b{background:var(--k-surface-app);color:var(--k-text-secondary);font:500 12px/18px Onest;border:1px solid var(--k-border-subtle);border-radius:8px;padding:3px 7px}
+
+/* Discount belongs to the current price; previous price is a separate row. */
+.keys-app .discovery-price { display:grid;grid-template-columns:auto auto;justify-content:end;align-content:end;align-items:center;gap:4px 6px; }
+.keys-app .discovery-price > strong { grid-column:1;grid-row:2; }
+.keys-app .discovery-price > b { grid-column:2;grid-row:2; }
+.keys-app .discovery-price > .friendly-rate-label { grid-column:1/-1;grid-row:3; }
+.keys-app .discovery-price > s { grid-column:1/-1;grid-row:1;text-align:right; }
+.keys-app .hotel-price-value > s { flex-basis:100%; }

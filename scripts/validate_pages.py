@@ -26,7 +26,7 @@ def target(href,parent):
     return parent/p
 
 assert (ROOT/'.nojekyll').exists()
-files=['index.html','screens.html','documentation.html','prototype/index.html','docs/brand/index.html']
+files=['index.html','screens.html','documentation.html','prototype/index.html','desktop/index.html','desktop/review.html','docs/brand/index.html']
 files += [str(p.relative_to(ROOT)) for p in (ROOT/'docs/handoff').glob('*.html')]
 files += ['README.html','docs/DEPLOYMENT.html','docs/MOBILE-REVIEW.html','docs/references/README.html']
 count=0
@@ -38,16 +38,17 @@ for name in files:
         if q:
             assert q.exists(),(name,href)
             count+=1
-for p in (ROOT/'prototype/assets').glob('*'):
-    if p.suffix not in ['.js','.css']:continue
-    text=p.read_text()
-    assert not re.search(r'''["'`(]/(?:brand|assets|hotels|design-previews)/''',text),p.name
-    for href in re.findall(r'''["'(]('''+BASE+r'''prototype/[^\s"'`()<>{}]+)''',text):
-        # Dynamic template suffixes aren't statically resolvable; inspect concrete files.
-        if '$' in href or not re.search(r'\.(?:svg|png|jpe?g|webp|woff2?|ttf|mp4)$',href):continue
-        q=target(href,p.parent)
-        assert q.exists(),(p.name,href)
-        count+=1
+for surface in ['prototype','desktop']:
+ for p in (ROOT/surface/'assets').glob('*'):
+     if p.suffix not in ['.js','.css']:continue
+     text=p.read_text()
+     assert not re.search(r'''["'`(]/(?:brand|assets|hotels|design-previews)/''',text),p.name
+     for href in re.findall(r'''["'(]('''+BASE+surface+r'''/[^\s"'`()<>{}]+)''',text):
+         # Dynamic template suffixes aren't statically resolvable; inspect concrete files.
+         if '$' in href or not re.search(r'\.(?:svg|png|jpe?g|webp|woff2?|ttf|mp4)$',href):continue
+         q=target(href,p.parent)
+         assert q.exists(),(p.name,href)
+         count+=1
 print(f'OK: project base, entry pages, {count} published links/assets; no root-only app URLs')
 
 scenes=json.loads((ROOT/'screens.json').read_text())
@@ -58,6 +59,6 @@ assert all('data-scene="'+s['id']+'"' in html for s in scenes)
 for name in ['index.html','screens.html','documentation.html','docs/brand/index.html']:
     text=(ROOT/name).read_text()
     assert 'проект в Клоде' not in text and 'reference/f1.html' not in text, name
-for directory in ['проект в Клоде','docs/brand/reference','prototype/design-previews']:
+for directory in ['проект в Клоде','docs/brand/reference','prototype/design-previews','desktop/design-previews']:
     assert not (ROOT/directory).exists(), directory
 print(f'OK: {len(scenes)} unique current previews; obsolete visual references absent')

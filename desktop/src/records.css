@@ -1,0 +1,66 @@
+/* Desktop records keep the same booking model and actions as mobile. */
+.desktop-app .desktop-flow[data-step="booking-details"]{max-width:1100px}
+.desktop-app .desktop-flow[data-step="booking-details"] .record-content{max-width:none;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+.desktop-app .desktop-flow[data-step="booking-details"] .record-number,
+.desktop-app .desktop-flow[data-step="booking-details"] .record-hotel,
+.desktop-app .desktop-flow[data-step="booking-details"] .record-actions{grid-column:1/-1}
+.desktop-app .record-hotel{grid-template-columns:120px minmax(0,1fr);padding:12px;gap:20px}
+.desktop-app .record-hotel img{width:120px;height:88px;border-radius:16px}
+.desktop-app .record-hotel strong{font:500 20px/28px Onest,sans-serif}
+.desktop-app .record-hotel small{font-size:14px;line-height:22px}
+.desktop-app .record-card{padding:20px;gap:14px}
+.desktop-app .record-section h2{font:500 18px/26px Onest,sans-serif;padding:0}
+.desktop-app .record-actions{flex-direction:row;flex-wrap:wrap;align-items:center;gap:12px;padding-top:12px}
+.desktop-app .record-actions .k-button{width:auto;flex:1;min-width:180px;height:48px;min-height:48px}
+.desktop-app .desktop-flow:is([data-step^="change-booking-"],[data-step="stay-review"],[data-step="stay-problem"],[data-step="stay-bill"],[data-step^="trip-documents-"],[data-step^="document-"]){max-width:880px}
+.desktop-app .desktop-flow:is([data-step^="change-booking-"],[data-step="stay-review"],[data-step="stay-problem"],[data-step="stay-bill"],[data-step^="trip-documents-"],[data-step^="document-"])>.desktop-flow-layout{display:block}
+.desktop-app .desktop-flow:is([data-step^="change-booking-"],[data-step="stay-review"],[data-step="stay-problem"],[data-step="stay-bill"],[data-step^="trip-documents-"],[data-step^="document-"]) .desktop-flow-footer{position:relative;inset:auto;margin-top:24px;background:transparent;border:0;border-top:1px solid var(--k-border-subtle);border-radius:0;padding:24px 0 0}
+.desktop-app .desktop-flow-footer .record-footer,
+.desktop-app .desktop-flow-footer .review-footer,
+.desktop-app .desktop-flow-footer .document-footer{align-items:flex-end}
+.desktop-app .desktop-flow-footer :is(.record-footer,.review-footer,.document-footer,.bill-footer)>.k-button{width:auto;min-width:280px}
+.desktop-app .record-edit,.desktop-app .stay-review-content,.desktop-app .document-preview{padding:0!important;max-width:none}
+.desktop-app .stay-review-content{display:flex;flex-direction:column;gap:24px}
+.desktop-app .review-comment textarea{min-height:160px}
+.desktop-app .document-list-actions{position:relative;inset:auto;display:flex;flex-direction:row;flex-wrap:wrap;gap:16px;justify-content:flex-end;padding:0;background:transparent}
+.desktop-app .document-list-actions>.k-button{width:auto}
+.desktop-app .document-paper{padding:32px}
+.desktop-modal .payment-choice-track{width:100%;gap:12px}
+.desktop-modal .payment-choice{flex:1;min-width:0;width:auto}
+.desktop-modal .service-action-footer{padding-left:0;padding-right:0}
+@media(max-width:1100px){
+ .desktop-app .desktop-flow[data-step="booking-details"]{max-width:calc(100% - 64px)}
+ .desktop-app .record-actions .k-button{flex:1 1 40%}
+}
+.desktop-app .desktop-flow:is([data-step^="change-booking-"],[data-step="stay-review"],[data-step="stay-problem"],[data-step="stay-bill"],[data-step^="trip-documents-"],[data-step^="document-"]){margin-left:auto;margin-right:auto;width:calc(100% - 64px)}
+.desktop-app .desktop-flow-footer :is(.record-footer,.review-footer,.document-footer,.bill-footer){position:relative;inset:auto;background:transparent;box-shadow:none;padding:0;display:flex;flex-direction:column;gap:16px;align-items:flex-end}
+.desktop-app .desktop-flow-footer .record-footer>.field-error{align-self:stretch}
+.desktop-app .desktop-flow-footer :is(.record-footer,.review-footer,.document-footer,.bill-footer){border:0}
+.desktop-app .review-footer:after{display:none}
+.desktop-modal .booking-qr{width:196px;height:196px}
+.desktop-modal .share-permission{min-height:0}
+
+.desktop-app .bill-footer:after{display:none}
+.desktop-app .stay-bill-content{padding:0!important}
+.desktop-app .desktop-flow-footer .bill-footer{height:auto;min-height:0}
+.desktop-app .bill-footer>div{width:100%}
+.desktop-app .shared-booking-page{position:relative;inset:auto;min-height:calc(100dvh - 72px);padding:1px 0}
+.desktop-app .shared-booking-page .desktop-flow{width:calc(100% - 64px);max-width:880px;margin:24px auto 48px}
+.desktop-app .shared-booking-header{padding:0;margin-bottom:24px;font-size:18px;gap:16px}
+.desktop-app .shared-booking-content{padding:0;gap:20px}
+.desktop-app .shared-booking-photo{height:320px}
+.desktop-app .shared-booking-content>.k-button{width:300px;align-self:flex-end}
+.desktop-modal .booking-share>input{border:1px solid var(--k-border-subtle);border-radius:14px;padding:12px;font-size:13px;width:100%;color:var(--k-text-secondary);background:var(--k-surface-app)}
+
+.desktop-app .desktop-flow[data-step="stay-problem"] .problem-content{padding:0!important;max-width:none;gap:20px}
+.desktop-app .desktop-flow[data-step="stay-problem"] .problem-categories{grid-template-columns:repeat(3,minmax(0,1fr))}
+.desktop-app .desktop-flow[data-step="stay-problem"] .problem-footer{position:relative;inset:auto;padding:0;background:transparent;display:flex;align-items:flex-end;justify-content:flex-end;border:0}
+.desktop-app .desktop-flow[data-step="stay-problem"] .problem-footer>.k-button{width:280px}
+.desktop-app .desktop-flow[data-step="stay-problem"] .problem-footer:after{display:none}
+.desktop-app .desktop-flow[data-step="stay-problem"] .problem-description{min-height:144px}
+
+/* Compact hotel identity on the left, contacts on the right. */
+.desktop-app .record-hotel .record-hotel-copy { display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,38%);column-gap:28px;row-gap:4px;align-items:center; }
+.desktop-app .record-hotel-copy > strong { grid-column:1;grid-row:1;align-self:end; }
+.desktop-app .record-hotel-copy > .record-hotel-stay { grid-column:1;grid-row:2;align-self:start;margin:0; }
+.desktop-app .record-hotel-copy > .booking-hotel-contacts { grid-column:2;grid-row:1/3;margin:0; }

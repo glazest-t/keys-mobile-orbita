@@ -1,3 +1,6 @@
+import {CardPaymentPlan} from './CardPaymentPlan';
+import {isDesktop} from '../desktop/surface';
+import {DesktopPaymentChoices} from './DesktopPaymentChoices';
 import {useId,useState,useRef,useEffect} from 'react';
 import {BottomSheet,Carousel} from '../mobile';
 import {Icon,Switch} from '../ui';
@@ -5,7 +8,7 @@ import {type Draft} from './model';
 import {extraPaymentOptions,paymentSelection,visibleWallets,type PaymentChoice} from './paymentOptions';
 import './paymentChoices.css';
 
-export function PaymentChoices(props:{draft:Draft;onChange:(value:Partial<Draft>)=>void;onlineOnly?:boolean}){return (<MobilePaymentChoices {...props}/>);}
+export function PaymentChoices(props:{draft:Draft;onChange:(value:Partial<Draft>)=>void;onlineOnly?:boolean}){return isDesktop?<DesktopPaymentChoices {...props}/>:<MobilePaymentChoices {...props}/>;}
 function MobilePaymentChoices({draft,onChange,onlineOnly=false}:{onlineOnly?:boolean;draft:Draft;onChange:(value:Partial<Draft>)=>void}){
  const [expanded,setExpanded]=useState(false),id=useId(),rail=useRef<HTMLElement>(null);
  const selected=draft.method==='at_hotel'?'at_hotel':draft.paymentOption||'sbp';
@@ -22,7 +25,7 @@ function MobilePaymentChoices({draft,onChange,onlineOnly=false}:{onlineOnly?:boo
 
    <button className={'payment-choice payment-more '+(extra?'selected':'')} aria-expanded={expanded} aria-controls={id} onClick={()=>setExpanded(v=>!v)}><Icon name="more" size={26} inheritColor/><span className="payment-choice-check" aria-hidden="true">{extra&&<Icon name="check" size={12} inheritColor/>}</span><strong>Другое <Icon name="chevron-down" size={14} inheritColor/></strong><small>{extra?.label||'Ещё 3 способа'}</small></button>
   </Carousel>
-  {selected==='card'&&!onlineOnly&&<div className="card-payment-plan" role="group" aria-label="Размер оплаты картой">{([{id:'full',label:'Полностью'},{id:'night',label:'Предоплата за первые сутки'},{id:'percent30',label:'Предоплата 30%'}] as const).map(p=><button key={p.id} aria-pressed={(draft.cardPaymentPlan||'full')===p.id} onClick={()=>onChange({cardPaymentPlan:p.id})}><span>{p.label}</span><span className={'radio-dot '+((draft.cardPaymentPlan||'full')===p.id?'checked':'')}/></button>)}</div>}
+  <CardPaymentPlan draft={draft} onChange={onChange} onlineOnly={onlineOnly}/>
   <BottomSheet open={expanded} onOpenChange={setExpanded} title="Другие способы оплаты" snap={.52}><div className="sheet-body"><div id={id} className="payment-extra-options" role="group" aria-label="Другие способы оплаты">{extraPaymentOptions.map(o=><button key={o.id} aria-pressed={selected===o.id} onClick={()=>select(o.id)}><span className="icon-tile"><Icon name={o.icon} size={20} inheritColor/></span><strong>{o.label}</strong><span className={'radio-dot '+(selected===o.id?'checked':'')}/></button>)}</div></div></BottomSheet>
  </section>;
 }

@@ -1,0 +1,53 @@
+/* Desktop actions size to their label. Mobile's full-width default stays mobile. */
+.desktop-surface .k-button {
+  width: fit-content;
+  max-width: min(100%, 320px);
+  flex: 0 0 auto;
+  justify-self: start;
+}
+.desktop-app .k-empty .k-button { width: fit-content; align-self: center; justify-self: center; }
+.desktop-app .record-actions .k-button { flex: 0 0 auto; }
+.desktop-app .desktop-program-action > .k-button { width: fit-content; }
+.desktop-app .support-page > .k-button { width: fit-content; max-width: min(100%,320px); }
+/* Keep the existing 320px centered preference action and compact form actions. */
+.desktop-app .swipe-preferences-footer > .k-button { width: 100%; }
+/* Buttons belong to the right edge of desktop dialog forms, not to the entire panel. */
+.desktop-modal :is(.sheet-body,.cancellation-panel,.service-action-footer) > .k-button { align-self: flex-end; }
+.desktop-modal .k-empty .k-button { align-self: center; }
+
+/* Search submit actions fill their dedicated grid cell, with room for icon and label. */
+.desktop-app .find-search-card > .k-button,
+.desktop-app .desktop-results-search form > .k-button,
+.desktop-app .desktop-room-search > form > .k-button {
+  width: 100%;
+  justify-self: stretch;
+  padding-inline: 16px;
+  white-space: nowrap;
+}
+
+.desktop-app .desktop-hotel-summary > .desktop-hotel-select-room { width: 100%; max-width: none; align-self: stretch; }
+
+/* Primary payment action follows the full width of its cart. */
+.desktop-app .desktop-flow-footer > .desktop-checkout-submit { align-items: stretch; }
+.desktop-app .desktop-flow-footer > .desktop-checkout-submit > .k-button { width: 100%; max-width: none; min-width: 0; min-height: 60px; font-size: 17px; }
+
+/* Apply filters spans the available footer width in the sidebar and dialog. */
+.desktop-surface .filter-editor-footer > .k-button { width: 100%; max-width: none; align-self: stretch; justify-self: stretch; }
+
+/* Entry flows use form-width actions; compact desktop actions apply elsewhere. */
+.desktop-app.auth-screen .app-footer > .k-button,
+.desktop-app.auth-screen .auth-content > .k-button,
+.desktop-app .onboarding-footer > .k-button,
+.desktop-app .onboarding-secondary > .k-button,
+.desktop-app .hotelier-actions > .k-button,
+.desktop-surface .hotelier-portal .hotelier-page > .k-button,
+.desktop-surface .hotelier-portal .hotelier-actions > .k-button,
+.desktop-surface .device-lock-screen .launch-actions > .k-button,
+.desktop-surface .device-unlock-quick > .k-button,
+.desktop-surface .device-access-setup > .k-button,
+.desktop-surface .device-biometric > .k-button {
+  width: 100%;
+  max-width: none;
+  align-self: stretch;
+  justify-self: stretch;
+}

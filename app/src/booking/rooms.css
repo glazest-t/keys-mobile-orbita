@@ -106,3 +106,7 @@
 
 /* Public prices stay white, including discounts earned through a hotel level. */
 .keys-app .room-tariff.friendly h3,.keys-app .room-tariff.friendly .room-rate-price strong{color:#fff}
+
+.room-current-price { display:flex;align-items:center;gap:6px;white-space:nowrap; }
+.room-rate-price { flex-wrap:wrap; }
+.room-rate-price > button { margin-left:auto; }

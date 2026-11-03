@@ -22,4 +22,3 @@
 .history-timeline-meta .k-status>.k-icon{width:13px;height:13px}
 .history-timeline-meta>button{pointer-events:auto;display:flex;align-items:center;gap:2px;min-height:32px;border:0;padding:0;background:none;font:500 12px/18px Onest,sans-serif;color:#2f5bff;white-space:nowrap;cursor:pointer}
 .history-timeline-card:has(:focus-visible){outline:2px solid #5a6072;outline-offset:2px}
-.history-filters .filter-chip.selected{background:#2f5bff;border-color:#2f5bff;color:#fff}

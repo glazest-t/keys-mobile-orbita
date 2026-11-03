@@ -49,4 +49,5 @@
 
 .record-card > .record-payment-paid{align-self:flex-end}
 
-.record-hotel .record-hotel-stay{display:block;margin-top:4px}
+/* Keep stay facts directly below the hotel name. */
+.record-hotel .record-hotel-stay { display:block;margin-top:4px; }
