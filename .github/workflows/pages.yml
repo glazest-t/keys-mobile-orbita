@@ -38,7 +38,9 @@ jobs:
           VITE_2GIS_MAP_KEY: ${{ secrets.VITE_2GIS_MAP_KEY }}
         run: npm --prefix app run build:pages
       - name: Check published assets
-        run: python3 scripts/validate_pages.py
+        run: |
+          python3 scripts/validate_pages.py
+          python3 scripts/validate_marketing.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:

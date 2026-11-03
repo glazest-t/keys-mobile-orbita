@@ -1,0 +1,55 @@
+{
+  "base": "http://127.0.0.1:8771/keys-mobile-orbita/",
+  "pages": [
+    {
+      "route": "",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "marketing/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "marketing/",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "marketing/start.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "marketing/start.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "marketing/current-app.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "route": "marketing/current-app.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "download": "https://github.com/glazest-t/keys-mobile-orbita/releases/download/marketing-2026-11-03/keys-marketing-brand-kit-2026-11-03.zip"
+}
