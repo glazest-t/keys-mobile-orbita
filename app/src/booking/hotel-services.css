@@ -57,3 +57,5 @@
 .keys-app .mobile-service-catalog .service-catalog-featured{padding-left:16px;padding-right:16px}
 .mobile-service-catalog .service-catalog-nav button .k-icon{display:none!important}
 .mobile-service-catalog .service-catalog-featured{margin:0;padding:0 0 4px!important}
+
+.mobile-service-catalog .service-catalog-heading{display:none}

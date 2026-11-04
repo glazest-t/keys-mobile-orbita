@@ -51,3 +51,15 @@
 
 /* Keep stay facts directly below the hotel name. */
 .record-hotel .record-hotel-stay { display:block;margin-top:4px; }
+
+/* Confirmation-only tools; ordinary booking details keep their existing actions. */
+.booking-confirmation-tools{display:flex;flex-direction:column;gap:8px}
+.booking-confirmation-tools .k-button{width:100%}
+.keys-app .booking-calendar-feedback{font:400 13px/19px Onest,sans-serif;color:var(--k-text-secondary);margin:0}
+.desktop-app .booking-confirmation-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;width:100%}
+.desktop-app .booking-confirmation-tools{display:contents}
+.desktop-app .booking-confirmation-actions .k-button{flex:0 0 auto;width:auto}
+.desktop-app .booking-confirmation-actions .booking-calendar-feedback{flex-basis:100%;order:1}
+
+.trip-detail-fixed-actions .booking-confirmation-calendar-only{display:contents}
+.trip-detail-fixed-actions .booking-calendar-feedback{grid-column:1/-1}

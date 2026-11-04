@@ -1,6 +1,6 @@
 import {useEffect,useLayoutEffect,useRef,useState,type ReactNode} from 'react';
 import {load} from '@2gis/mapgl';
-import type {Map as MapGL,HtmlMarker} from '@2gis/mapgl/types';
+import type {Map as MapGL,HtmlMarker,Polyline} from '@2gis/mapgl/types';
 import {locationBounds,type Coordinates} from './locations';
 import './maps.css';
 
@@ -11,8 +11,8 @@ function loadSDK(){
  return sdkPromise;
 }
 export type MapPoint={id:string;coordinates:number[];label:string;name:string;discountPercent?:number;markerOffset?:number[]};
-type Props={points:MapPoint[];center:Coordinates;selected?:string;onSelect?:(id:string)=>void;onHover?:(id:string)=>void;onPreviewDismiss?:()=>void;onVisibleChange?:(ids:string[])=>void;preview?:ReactNode;interactive?:boolean;expanded?:boolean;missing?:number;label?:string};
-export function TwoGisMap({points,center,selected,onSelect,onHover,onPreviewDismiss,onVisibleChange,preview,interactive=true,expanded=false,missing=0,label='Карта 2ГИС'}:Props){
+type Props={route?:number[][][];points:MapPoint[];center:Coordinates;selected?:string;onSelect?:(id:string)=>void;onHover?:(id:string)=>void;onPreviewDismiss?:()=>void;onVisibleChange?:(ids:string[])=>void;preview?:ReactNode;interactive?:boolean;expanded?:boolean;missing?:number;label?:string};
+export function TwoGisMap({points,route,center,selected,onSelect,onHover,onPreviewDismiss,onVisibleChange,preview,interactive=true,expanded=false,missing=0,label='Карта 2ГИС'}:Props){
  const canvas=useRef<HTMLDivElement>(null), mapRef=useRef<MapGL|null>(null), sdk=useRef<SDK|null>(null);
  const [status,setStatus]=useState<'loading'|'ready'|'error'>('loading'),[retry,setRetry]=useState(0);
  const markers=useRef<{marker:HtmlMarker;button:HTMLButtonElement;id:string}[]>([]);
@@ -27,7 +27,9 @@ export function TwoGisMap({points,center,selected,onSelect,onHover,onPreviewDism
  const pointsRef=useRef(points);pointsRef.current=points;
  const viewportChanged=useRef(false);
  const initialCenter=useRef(center);initialCenter.current=center;
- const markerKey=JSON.stringify(points);
+ const markerKey=JSON.stringify(points),routeKey=JSON.stringify(route||[]);
+ const routeRef=useRef(route);routeRef.current=route;
+ const lines=useRef<Polyline[]>([]);
  const previewElement=useRef<HTMLDivElement>(null);
  const [previewPosition,setPreviewPosition]=useState<{left:number;top:number;above:boolean}|null>(null);
  useLayoutEffect(()=>{
@@ -69,7 +71,7 @@ export function TwoGisMap({points,center,selected,onSelect,onHover,onPreviewDism
    map.on('error',event=>{if(!disposed&&['invalidtilekey','webglcontextlost'].includes(event.type)){clearTimeout(timer);setStatus('error');}});
    observer=new ResizeObserver(()=>{if(!disposed)map.invalidateSize();});observer.observe(canvas.current);
   }).catch(()=>{if(!disposed){clearTimeout(timer);setStatus('error');}});
-  return()=>{disposed=true;clearTimeout(timer);observer?.disconnect();markers.current.forEach(m=>m.marker.destroy());markers.current=[];mapRef.current?.destroy();mapRef.current=null;};
+  return()=>{disposed=true;clearTimeout(timer);observer?.disconnect();markers.current.forEach(m=>m.marker.destroy());markers.current=[];lines.current.forEach(line=>line.destroy());lines.current=[];mapRef.current?.destroy();mapRef.current=null;};
  },[retry,interactive]);
  useEffect(()=>{
   const map=mapRef.current,api=sdk.current;if(status!=='ready'||!map||!api)return;
@@ -88,12 +90,17 @@ export function TwoGisMap({points,center,selected,onSelect,onHover,onPreviewDism
    return {marker,button,id:point.id};
   });
   viewportChanged.current=false;
-  const bounds=locationBounds(points.map(p=>p.coordinates));
-  if(bounds&&points.length>1)map.fitBounds(bounds,{padding:{top:40,bottom:48,left:55,right:55},maxZoom:16,animation:{duration:0}});
+  const bounds=locationBounds([...points.map(p=>p.coordinates),...(routeRef.current?.flat()||[])]);
+  if(bounds&&(points.length>1||routeRef.current?.length))map.fitBounds(bounds,{padding:routeRef.current?.length?{top:100,bottom:60,left:55,right:70}:{top:40,bottom:48,left:55,right:55},maxZoom:16,animation:{duration:0}});
   else {map.setCenter(points[0]?.coordinates||center,{duration:0});map.setZoom(points.length?15:11,{duration:0});}
- },[status,markerKey,center[0],center[1]]);
- useEffect(()=>{markers.current.forEach(({button,marker,id})=>{const active=id===selected;button.classList.toggle('selected',active);button.setAttribute('aria-pressed',String(active));marker.setZIndex(active?3:1);});},[selected,status,markerKey]);
- return <div className={'gis-map '+(expanded?'gis-map-expanded':'')} aria-label={label} data-map-status={status} data-scroll-drag={interactive?'ignore':undefined} onPointerDown={interactive?event=>event.stopPropagation():undefined}>
+ },[status,markerKey,routeKey,center[0],center[1]]);
+ useEffect(()=>{
+  const map=mapRef.current,api=sdk.current;if(status!=='ready'||!map||!api)return;
+  lines.current.forEach(line=>line.destroy());
+  lines.current=(routeRef.current||[]).flatMap(coordinates=>[new api.Polyline(map,{coordinates,color:'#ffffff',width:9,zIndex:10}),new api.Polyline(map,{coordinates,color:'#2F5BFF',width:5,zIndex:11})]);
+ },[status,routeKey]);
+ useEffect(()=>{markers.current.forEach(({button,marker,id})=>{const active=id===selected;button.classList.toggle('selected',active);button.setAttribute('aria-pressed',String(active));marker.setZIndex(active?3:1);});},[selected,status,markerKey,routeKey]);
+ return <div className={'gis-map '+(expanded?'gis-map-expanded':'')} aria-label={label} data-map-status={status} data-route-segments={route?.length||0} data-scroll-drag={interactive?'ignore':undefined} onPointerDown={interactive?event=>event.stopPropagation():undefined}>
   <div className="gis-canvas" ref={canvas}/>
   {preview&&<div ref={previewElement} className="gis-marker-preview" onPointerEnter={keepPreview} onPointerLeave={schedulePreviewClose} onFocusCapture={keepPreview} onBlurCapture={schedulePreviewClose} data-placement={previewPosition?.above?'above':'below'} style={{left:previewPosition?.left,top:previewPosition?.top,visibility:previewPosition?'visible':'hidden'}}>{preview}</div>}
   {status==='loading'&&<div className="gis-state" role="status"><span className="gis-spinner"/>Загружаем карту</div>}

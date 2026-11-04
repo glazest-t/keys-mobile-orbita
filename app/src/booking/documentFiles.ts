@@ -1,3 +1,4 @@
+import {bookingNumber} from './bookingNumber.ts';
 import {PDFDocument,rgb,type PDFPage} from 'pdf-lib';
 import fontkit from '@pdf-lib/fontkit';
 import {zipSync,strToU8} from 'fflate';
@@ -16,7 +17,7 @@ export async function makeDocumentPdf(data:TripDocument,fontData?:ArrayBuffer|Ui
  const clean=(s:string)=>s.replace(/[\u0000-\u0008\u000b-\u001f\u007f]/g,'').replace(/[‐‑–—]/g,'-');
  const lines=(text:string,width:number,size:number)=>{const result:string[]=[];let current='';for(const char of clean(text)){if(char==='\n'){result.push(current);current='';continue;}if(font.widthOfTextAtSize(current+char,size)>width&&current){const space=current.lastIndexOf(' ');if(space>0){result.push(current.slice(0,space));current=current.slice(space+1)+char;}else{result.push(current);current=char;}}else current+=char;}result.push(current);return result;};
  const text=(value:string,x:number,width:number,size=10,color=ink)=>{for(const part of lines(value,width,size)){if(y<74)newPage();page.drawText(part,{x,y,font,size,color});y-=size*1.5;}};
- newPage();text(data.hotel,42,510,12);text(`${data.dates} · ${data.status}`,42,510,10,muted);text(`Бронь ${data.bookingId} · версия ${data.revision}`,42,510,9,muted);y-=10;
+ newPage();text(data.hotel,42,510,12);text(`${data.dates} · ${data.status}`,42,510,10,muted);text(`Бронь № ${data.bookingNumber||data.bookingId} · версия ${data.revision}`,42,510,9,muted);y-=10;
  for(const section of data.sections){if(y<130)newPage();text(section.title,42,510,13,blue);y-=4;
   for(const [label,value] of section.rows){const left=lines(label,180,10),right=lines(value,300,10),count=Math.max(left.length,right.length);
    for(let i=0;i<count;i++){if(y<78)newPage();if(left[i])page.drawText(left[i],{x:42,y,font,size:10,color:muted});if(right[i])page.drawText(right[i],{x:240,y,font,size:10,color:ink});y-=15;}
@@ -31,6 +32,6 @@ export function downloadFile(bytes:Uint8Array,name:string,type:string){const blo
 const base64=(bytes:Uint8Array)=>{let s='';for(let i=0;i<bytes.length;i+=8192)s+=String.fromCharCode(...bytes.subarray(i,i+8192));return btoa(s);};
 export function makeDocumentEmail(email:string,b:Booking,zip:Uint8Array){
  if(!validDocumentEmail(email))throw Error('Проверьте адрес почты');
- const boundary='keys-documents-'+crypto.randomUUID(),subject=base64(strToU8('Документы поездки · '+b.id)),body=base64(strToU8('Во вложении документы поездки. Демонстрационные документы, не фискальные чеки.'));
+ const boundary='keys-documents-'+crypto.randomUUID(),subject=base64(strToU8('Документы поездки · № '+bookingNumber(b))),body=base64(strToU8('Во вложении документы поездки. Демонстрационные документы, не фискальные чеки.'));
  return strToU8([`To: ${email}`,`Subject: =?UTF-8?B?${subject}?=`,'X-Unsent: 1','MIME-Version: 1.0',`Content-Type: multipart/mixed; boundary="${boundary}"`,'',`--${boundary}`,'Content-Type: text/plain; charset=UTF-8','Content-Transfer-Encoding: base64','',body,`--${boundary}`,'Content-Type: application/zip','Content-Disposition: attachment; filename="trip-documents.zip"','Content-Transfer-Encoding: base64','',base64(zip).match(/.{1,76}/g)!.join('\r\n'),`--${boundary}--`,''].join('\r\n'));
 }

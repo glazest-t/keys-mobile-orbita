@@ -18,3 +18,22 @@
 .booking-time-total{display:flex;justify-content:space-between;align-items:center;gap:12px;font:400 14px/20px Onest}.booking-time-total strong{font-weight:500;white-space:nowrap}
 
 .service-time-order-footer{display:contents}
+
+/* Full-height hourly picker: only the list scrolls; the total and action stay visible. */
+.bottom-sheet:has(.booking-time-editor){height:100%}
+.bottom-sheet:has(.booking-time-editor) .sheet-content{display:flex;flex:1;min-height:0;overflow:hidden;padding:0 20px max(24px,var(--device-safe-area-bottom,24px))}
+.bottom-sheet:has(.booking-time-editor) .sheet-body{display:flex;flex:1;min-height:0;overflow:hidden;padding:0}
+.bottom-sheet .booking-time-editor{flex:1;min-height:0;gap:16px}
+.booking-time-editor .booking-time-options{position:relative;flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;border:0;border-radius:0}
+.booking-time-editor .booking-time-options>button{flex:none;min-height:52px;padding:10px 12px;border:0;border-radius:12px}
+.booking-time-editor .booking-time-options>button:disabled{opacity:.45;cursor:default}
+.booking-time-editor .booking-time-options>button+button{border:0}
+.booking-time-editor .booking-time-options>button[aria-checked=true]{background:var(--k-action-tint)}
+.booking-time-editor .service-time-order-footer{display:flex;flex:none;flex-direction:column;gap:14px;padding-top:4px;background:var(--k-surface-card)}
+.booking-time-editor .service-time-order-footer>.k-button{width:100%}
+.desktop-modal:has(.booking-time-editor) .desktop-modal-body{display:flex;min-height:0;overflow:hidden}
+.desktop-modal:has(.booking-time-editor) .sheet-body{display:flex;width:100%;min-height:0}
+.desktop-modal .booking-time-editor{width:100%;height:min(640px,calc(100dvh - 170px));min-height:0}
+.desktop-modal .booking-time-editor .service-time-order-footer{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:20px}
+.desktop-modal .booking-time-editor .booking-time-total{flex-direction:column;align-items:flex-start;gap:4px}
+.desktop-modal .booking-time-editor .service-time-order-footer>.k-button{width:auto;min-width:160px;justify-self:end}

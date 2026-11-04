@@ -64,3 +64,7 @@
 .mobile-trip-detail .trip-detail-number{font:400 13px/18px Onest,sans-serif}
 .mobile-trip-detail .trip-detail-dates strong{font:500 14px/21px Onest,sans-serif}
 .mobile-trip-detail .trip-detail-payment-heading{gap:8px}
+
+.mobile-trip-detail .trip-detail-bottom-actions{order:11;display:flex;justify-content:center}
+.mobile-trip-detail .trip-detail-bottom-actions .k-button{width:auto;min-width:120px;color:var(--k-text-secondary)}
+.trip-detail-fixed-actions .booking-confirmation-calendar-only .k-button{white-space:nowrap}

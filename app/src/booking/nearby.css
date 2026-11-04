@@ -26,3 +26,8 @@
 .nearby .detail-segments{display:flex;gap:6px;flex-wrap:wrap}.nearby .detail-segments button{flex:1;padding-left:10px;padding-right:10px}
 
 .nearby-place-reason p{margin:0}
+
+.stay-nearby .nearby-preview-heading{width:100%}
+.nearby-preview-link{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:44px;padding:0;border:0;border-radius:8px;background:none;color:var(--k-text-primary);font:inherit;text-align:left;cursor:pointer}
+.nearby-preview-all{display:flex;align-items:center;gap:4px;color:var(--k-action-primary);font:500 13px/18px Onest}
+.nearby-preview-link:focus-visible{outline:2px solid var(--k-action-primary);outline-offset:3px}

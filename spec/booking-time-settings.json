@@ -1,0 +1,6 @@
+{
+  "orbit-sea": {
+    "arrival": { "freeFrom": "15:00", "freeUntil": "23:00", "paidServiceId": "sea-early" },
+    "departure": { "freeFrom": "00:00", "freeUntil": "12:00", "paidServiceId": "sea-late" }
+  }
+}

@@ -1,3 +1,4 @@
+import {bookingNumber} from '../app/src/booking/bookingNumber.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {initialCommerce,ensureAccount,decodeCommerce} from '../app/src/booking/model.ts';
@@ -31,4 +32,12 @@ test('Демо-импорт по номеру: неизвестный, дубл�
 test('Удаление общей брони действует только на список текущего участника',()=>{
  const s=fixture(),b=s.bookings[0];s.bookingManagers={[b.id]:[other]};const next=removeTrip(s,other,b.id);
  assert.equal(historyTrips(next,other).length,0);assert.equal(historyTrips(next,owner).length,3);assert.deepEqual(next.bookingManagers,s.bookingManagers);
+});
+
+test('Публичный номер из подтверждения восстанавливает свою бронь, включая префикс №',()=>{
+ const s=fixture(),b=s.bookings[0],hidden=removeTrip(s,owner,b.id);
+ const restored=restoreTripByNumber(hidden,owner,'№ '+bookingNumber(b));
+ assert.equal(historyBooking(restored,owner,b.id)?.id,b.id);
+ assert.deepEqual(restored.payment,s.payment);
+ assert.throws(()=>restoreTripByNumber(hidden,other,bookingNumber(b)),/не найдена/);
 });

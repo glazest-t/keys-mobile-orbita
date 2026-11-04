@@ -17,3 +17,6 @@
 
 .upcoming-payment .booking-balance-link{color:white;text-decoration:underline;text-underline-offset:3px}
 .upcoming-payment .booking-balance-link:hover{color:#D6F1FF}
+
+.booking-payment-due{display:inline-flex;align-items:center;justify-content:flex-start;gap:8px;flex:0 0 auto;max-width:100%}
+.booking-payment-due .booking-balance-link{flex:0 0 auto;width:auto;margin:0}

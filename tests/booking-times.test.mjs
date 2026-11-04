@@ -37,3 +37,32 @@ test('Доплаты допускают баллы, но выбор времен
  const before=structuredClone(s.payment);assert.equal(quoteDraft(s,owner).cashDueMinor,0);assert.deepEqual(s.payment,before);
  assert.equal(selectedBookingTime(s.draft,'arrival').amountMinor,250000);assert.ok(balances['keys:'+owner]>0);
 });
+
+test('Почасовой выбор сохраняет точный час и применяет границу бесплатного времени',async()=>{
+ const {hourlyBookingTimeOptions}=await import('../app/src/booking/bookingTimes.ts');
+ const arrival=hourlyBookingTimeOptions('orbit-sea','arrival'),departure=hourlyBookingTimeOptions('orbit-sea','departure');
+ assert.equal(arrival.length,24);assert.equal(arrival[0].time,'00:00');assert.equal(arrival[23].time,'23:00');
+ assert.equal(arrival[14].amountMinor,250000);assert.equal(arrival[15].amountMinor,0);
+ assert.equal(departure[12].amountMinor,0);assert.equal(departure[13].amountMinor,300000);
+ let s=fixture();const base=quoteDraft(s,owner).cashDueMinor;
+ s.draft=selectBookingTime(s.draft,'arrival','time:09:00');
+ s.draft=selectBookingTime(s.draft,'arrival','time:08:00');
+ assert.equal(selectedBookingTime(s.draft,'arrival').time,'08:00');assert.equal(s.draft.services.filter(id=>id==='sea-early').length,1);
+ assert.equal(quoteDraft(s,owner).cashDueMinor,base+250000);
+ s.draft=selectBookingTime(s.draft,'arrival','time:18:00');
+ assert.equal(selectedBookingTime(s.draft,'arrival').time,'18:00');assert.equal(quoteDraft(s,owner).cashDueMinor,base);
+ s.draft=selectBookingTime(s.draft,'departure','time:17:00');
+ assert.equal(quoteDraft(s,owner).cashDueMinor,base+300000);
+ s=commitBooking(s,owner,quoteDraft(s,owner),'success','2026-10-26T12:00:00Z');s=decodeCommerce(JSON.stringify(s));
+ assert.equal(tripFacts(s.bookings[0]).checkInTime,'18:00');assert.equal(tripFacts(s.bookings[0]).checkOutTime,'17:00');
+ s=demoCheckIn(s,owner,s.bookings[0].id,'hourly-check-in',Date.parse('2026-10-26T12:00:00Z'));
+ assert.ok(s.bookings[0].stay.accessFrom.includes('T18:00:00'));assert.ok(s.bookings[0].stay.accessUntil.includes('T17:00:00'));
+});
+test('Удаление платной услуги сбрасывает её час; чужие и некорректные часы недоступны',()=>{
+ const s=fixture();s.draft=selectBookingTime(s.draft,'arrival','time:08:00');s.draft.services=[];
+ assert.equal(selectedBookingTime(s.draft,'arrival').time,'15:00');
+ assert.throws(()=>selectBookingTime(s.draft,'arrival','time:24:00'));
+ assert.throws(()=>selectBookingTime(s.draft,'arrival','time:08:30'));
+ const other={...s.draft,hotelId:'pine-sochi',services:[],stayTimes:undefined};
+ assert.throws(()=>selectBookingTime(other,'arrival','time:01:00'));
+});

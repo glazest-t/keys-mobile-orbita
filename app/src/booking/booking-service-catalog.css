@@ -1,0 +1,39 @@
+/* Checkout shares the service catalogue's visual language; its orders stay in the draft. */
+.booking-service-catalog{min-width:0}
+.booking-service-catalog.mobile-service-catalog .service-catalog-featured{overflow:visible;scroll-snap-type:none}
+.booking-service-catalog.mobile-service-catalog .service-catalog-nav{overflow:visible}
+.booking-service-catalog .hotel-service-empty{display:flex;flex-direction:column;align-items:center;gap:12px;padding:24px;text-align:center}
+.booking-service-catalog .hotel-service-empty h3{margin:0;font:500 18px/24px Onest}
+.booking-service-catalog .hotel-service-empty p{margin:0;font:400 14px/21px Onest;color:var(--k-text-secondary)}
+.bottom-sheet .booking-service-detail{display:flex;flex-direction:column;gap:16px;padding:0}
+.bottom-sheet .booking-service-detail .desktop-service-venue{display:flex;align-items:flex-start;gap:8px;margin:0;font:400 13px/19px Onest;color:var(--k-text-secondary)}
+.bottom-sheet .booking-service-detail .desktop-service-calculation{display:flex;flex-direction:column;gap:8px;padding:12px;border-radius:14px;background:var(--k-action-tint);font:400 13px/19px Onest}
+.bottom-sheet .booking-service-detail .desktop-service-calculation>div{display:flex;justify-content:space-between;gap:12px}
+.bottom-sheet .booking-service-detail .desktop-service-footer{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.bottom-sheet .booking-service-detail .desktop-service-footer>div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.bottom-sheet .booking-service-detail .desktop-service-footer small{font:400 12px/18px Onest;color:var(--k-text-secondary)}
+.bottom-sheet .booking-service-detail .desktop-service-footer strong{font:500 20px/28px Onest;white-space:nowrap}
+.bottom-sheet .booking-service-detail .desktop-service-footer>.k-button{width:auto;flex:none;min-height:48px;padding-inline:16px}
+
+/* The generic scroll grid distributes spare height between header and content. */
+.keys-app .booking-services-scroll .mobile-scroll-content{display:block}
+.keys-app .booking-services-scroll .booking-content{min-height:0;justify-content:flex-start}
+
+.booking-footer.services-cta{height:128px}
+.booking-services-total-label{display:flex;align-items:center;gap:8px;font:500 13px/18px Onest;white-space:nowrap}
+.booking-services-count{display:inline-grid;place-items:center;min-width:24px;height:24px;padding:0 6px;box-sizing:border-box;border-radius:8px;background:var(--k-action-tint);color:var(--k-action-primary);font:500 12px/18px Onest}
+.booking-services-basket,.booking-services-basket-list{display:flex;flex-direction:column;gap:16px}
+.booking-services-basket-row{display:grid;grid-template-columns:minmax(0,1fr) auto 44px;align-items:start;column-gap:8px;font:400 14px/20px Onest}
+.booking-services-basket-row>span{display:flex;flex-direction:column;gap:4px;min-width:0}
+.booking-services-basket-row strong,.booking-services-basket-row>b{font-weight:500}
+.booking-services-basket-row>b{white-space:nowrap}
+.booking-services-basket-row small{font:400 12px/18px Onest;color:var(--k-text-secondary)}
+.booking-services-basket-total{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px;border-radius:18px;background:var(--k-surface-app);font:500 14px/20px Onest}
+.booking-services-basket-total>strong{font:500 18px/26px Unbounded;white-space:nowrap}
+.booking-services-basket-empty{margin:0;font:400 14px/21px Onest;color:var(--k-text-secondary)}
+
+.booking-services-basket-row>span,.booking-services-basket-row>b{padding-top:12px}
+.booking-service-remove{display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;border-radius:12px;background:transparent;color:var(--k-text-secondary);cursor:pointer}
+.booking-service-remove:hover{background:var(--k-surface-app);color:var(--k-text-primary)}
+.booking-service-remove:focus-visible{outline:2px solid var(--k-action-primary);outline-offset:2px}
+.booking-service-remove:disabled{opacity:.5;cursor:default}

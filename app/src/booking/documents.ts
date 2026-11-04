@@ -1,3 +1,4 @@
+import {bookingNumber} from './bookingNumber.ts';
 import {depositBalance} from './deposit.ts';
 import {stayBill} from './stayBill.ts';
 import {tripFacts} from './trip.ts';
@@ -7,7 +8,7 @@ import {bookingGuests,wishSummary} from './bookingParty.ts';
 import {rateTitle} from './roomOffers.ts';
 
 export type DocumentKind='confirmation'|'cancellation'|'invoice';
-export type TripDocument={kind:DocumentKind;title:string;filename:string;bookingId:string;revision:number;hotel:string;dates:string;status:string;sections:{title:string;rows:[string,string][]}[]};
+export type TripDocument={kind:DocumentKind;title:string;filename:string;bookingId:string;bookingNumber?:string;revision:number;hotel:string;dates:string;status:string;sections:{title:string;rows:[string,string][]}[]};
 export function documentKinds(b:Booking):DocumentKind[]{return ['confirmation',...(b.stay?.status==='checked_out'?['invoice' as const]:[]),...(b.operation.status==='cancelled'?['cancellation' as const]:[])];}
 export function tripDocument(b:Booking,kind:DocumentKind):TripDocument{
  if(!documentKinds(b).includes(kind))throw Error('Этот документ пока недоступен');
@@ -21,6 +22,6 @@ export function tripDocument(b:Booking,kind:DocumentKind):TripDocument{
  if(o.status==='cancelled'&&kind!=='cancellation')sections.push({title:'Бронь отменена',rows:refund});
  if(kind==='invoice'){const bill=stayBill(b);sections.splice(0,sections.length,{title:'Проживание',rows:stay.filter(([label])=>label!=='Бесплатная отмена до')},{title:'Итоговый счёт',rows:[['Проживание и услуги в брони',formatMoney(b.quote.orderTotalMinor)],...bill.charges.map(r=>[serviceTitle(r)+' · '+r.date,formatMoney(r.amountMinor)] as [string,string]),...(b.serviceRequests||[]).filter(r=>r.operation?.penaltyMinor).map(r=>['Удержание · '+serviceTitle(r),formatMoney(r.operation!.penaltyMinor!)] as [string,string]),['Итого',formatMoney(bill.total)],['Оплачено деньгами',formatMoney(bill.cash)],['Оплачено баллами',String(bill.points/100)],['Остаток',formatMoney(bill.due)],...(b.deposit?[[b.deposit.returned?'Возвращено с депозита':'Остаток депозита',formatMoney(b.deposit.returned?.amountMinor??depositBalance(b))] as [string,string]]:[])]});}
  const safeId=b.id.replace(/[^a-zA-Z0-9_-]/g,'_');
- return {kind,title:titles[kind],filename:`${kind}-${safeId}-v${b.revision||1}.pdf`,bookingId:b.id.toUpperCase(),revision:b.revision||1,hotel:catalog.hotels.find(h=>h.id===d.hotelId)!.name,dates:dateLabel(d.search),status:o.status==='cancelled'?'Отменена':b.stay?.status==='checked_out'?'Завершена':'Подтверждена',sections};
+ return {kind,title:titles[kind],filename:`${kind}-${safeId}-v${b.revision||1}.pdf`,bookingId:b.id.toUpperCase(),bookingNumber:bookingNumber(b),revision:b.revision||1,hotel:catalog.hotels.find(h=>h.id===d.hotelId)!.name,dates:dateLabel(d.search),status:o.status==='cancelled'?'Отменена':b.stay?.status==='checked_out'?'Завершена':'Подтверждена',sections};
 }
 export function validDocumentEmail(value:string){return /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(value)&&value.length<=254;}
