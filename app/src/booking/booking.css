@@ -121,3 +121,10 @@
 .keys-app .discovery-price > .friendly-rate-label { grid-column:1/-1;grid-row:3; }
 .keys-app .discovery-price > s { grid-column:1/-1;grid-row:1;text-align:right; }
 .keys-app .hotel-price-value > s { flex-basis:100%; }
+
+/* The hotel's hero gallery is swipeable on mobile as well as desktop. */
+.hotel-hero-carousel{position:absolute;inset:0;height:100%}
+.hotel-hero-carousel .hotel-hero-track{width:100%;min-width:100%;height:100%;gap:0;padding:0}
+.hotel-hero-track>.hero-photo{position:relative;flex:0 0 100%;min-width:0}
+.source-hotel-hero .hero-actions{pointer-events:none}
+.source-hotel-hero .hero-actions button{pointer-events:auto}

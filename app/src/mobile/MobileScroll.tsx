@@ -1,3 +1,4 @@
+import { isNativePhoneBrowser } from '../nativePhone';
 import {
   useCallback,
   useEffect,
@@ -48,6 +49,7 @@ type DragSession = {
 
 export function MobileScroll({ className, children }: MobileScrollProps) {
   const { isKeyboardVisible, keyboardHeight, keyboardDragging } = useKeyboardInsets();
+  const [nativeTouch] = useState(isNativePhoneBrowser);
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const hideTimerRef = useRef<number | null>(null);
   const inertiaFrameRef = useRef<number | null>(null);
@@ -351,6 +353,8 @@ export function MobileScroll({ className, children }: MobileScrollProps) {
   }, [pushDragSample, releaseVelocity, springBack, startMomentum, suppressUpcomingClick]);
 
   const handlePointerDown = useCallback((event: React.PointerEvent<HTMLDivElement>) => {
+    // Real phones own touch scrolling, inertia, cancellation and tap suppression.
+    if (nativeTouch && event.pointerType === "touch") return;
     const scroll = scrollRef.current;
     if (!scroll || scroll.scrollHeight <= scroll.clientHeight) return;
     if (event.pointerType === "mouse" && event.button !== 0) return;
@@ -375,7 +379,7 @@ export function MobileScroll({ className, children }: MobileScrollProps) {
       startScrollTop: scroll.scrollTop,
       hasDragged: false,
     };
-  }, [pushDragSample, setRubberBand, stopInertia]);
+  }, [nativeTouch, pushDragSample, setRubberBand, stopInertia]);
 
   const handlePointerMove = useCallback((event: React.PointerEvent<HTMLDivElement>) => {
     const scroll = scrollRef.current;

@@ -1,3 +1,4 @@
+import { isNativePhoneBrowser } from '../nativePhone';
 import {
   useCallback,
   useEffect,
@@ -47,6 +48,7 @@ export function Carousel({
   draggingEnabled = true,
   children,
 }: CarouselProps) {
+  const [nativeTouch] = useState(isNativePhoneBrowser);
   const scrollRef = useRef<HTMLDivElement>(null);
   const sessionRef = useRef<DragSession | null>(null);
   const samplesRef = useRef<Sample[]>([]);
@@ -161,6 +163,8 @@ export function Carousel({
   };
 
   const onPointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
+    // Leave touch gestures to the browser; preserve simulated mouse dragging.
+    if (nativeTouch && event.pointerType === "touch") return;
     const node = scrollRef.current;
     if (!draggingEnabled || !node || maxOffset(node) <= 2 || (event.pointerType === "mouse" && event.button !== 0)) return;
     stopMotion();

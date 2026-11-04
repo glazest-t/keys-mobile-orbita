@@ -82,6 +82,8 @@ export function TwoGisMap({points,route,center,selected,onSelect,onHover,onPrevi
    if(point.discountPercent&&point.discountPercent>0){const badge=document.createElement('span');badge.className='gis-pin-discount';badge.textContent='−'+point.discountPercent+'%';button.prepend(badge);button.classList.add('has-discount');}
    button.setAttribute('aria-label',point.name+' · '+point.label+(point.discountPercent?' · скидка '+point.discountPercent+'%':''));button.dataset.hotelId=point.id;
    button.onclick=()=>{keepPreview();selectRef.current?.(point.id);};
+   // Preview markers remain tappable without letting the SDK cancel page panning.
+   if(!interactive){button.ontouchstart=event=>event.stopPropagation();button.ontouchmove=event=>event.stopPropagation();}
    button.onpointerenter=()=>{keepPreview();hoverRef.current?.(point.id);};
    button.onpointerleave=schedulePreviewClose;
    button.onfocus=()=>{keepPreview();hoverRef.current?.(point.id);};
@@ -100,7 +102,7 @@ export function TwoGisMap({points,route,center,selected,onSelect,onHover,onPrevi
   lines.current=(routeRef.current||[]).flatMap(coordinates=>[new api.Polyline(map,{coordinates,color:'#ffffff',width:9,zIndex:10}),new api.Polyline(map,{coordinates,color:'#2F5BFF',width:5,zIndex:11})]);
  },[status,routeKey]);
  useEffect(()=>{markers.current.forEach(({button,marker,id})=>{const active=id===selected;button.classList.toggle('selected',active);button.setAttribute('aria-pressed',String(active));marker.setZIndex(active?3:1);});},[selected,status,markerKey,routeKey]);
- return <div className={'gis-map '+(expanded?'gis-map-expanded':'')} aria-label={label} data-map-status={status} data-route-segments={route?.length||0} data-scroll-drag={interactive?'ignore':undefined} onPointerDown={interactive?event=>event.stopPropagation():undefined}>
+ return <div className={'gis-map '+(expanded?'gis-map-expanded':'')+(!interactive?' gis-map-static':'')} aria-label={label} data-map-status={status} data-route-segments={route?.length||0} data-scroll-drag={interactive?'ignore':undefined} onPointerDown={interactive?event=>event.stopPropagation():undefined}>
   <div className="gis-canvas" ref={canvas}/>
   {preview&&<div ref={previewElement} className="gis-marker-preview" onPointerEnter={keepPreview} onPointerLeave={schedulePreviewClose} onFocusCapture={keepPreview} onBlurCapture={schedulePreviewClose} data-placement={previewPosition?.above?'above':'below'} style={{left:previewPosition?.left,top:previewPosition?.top,visibility:previewPosition?'visible':'hidden'}}>{preview}</div>}
   {status==='loading'&&<div className="gis-state" role="status"><span className="gis-spinner"/>Загружаем карту</div>}

@@ -19,3 +19,11 @@
 .history-toolbar{display:flex;align-items:center;justify-content:space-between;margin:-6px -4px 0;min-height:44px}
 .keys-app .profile-history-page>h1{font:500 24px/30px Unbounded,sans-serif;letter-spacing:-.7px;margin:4px 0 2px}
 .history-search .k-field>label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+
+/* One mobile promo anatomy: title, description and bottom-aligned text link. */
+.keys-app:not(.desktop-app) .trip-promo{display:flex;align-items:stretch;min-height:216px;height:auto;padding:20px;border-radius:28px;box-sizing:border-box;text-align:left;color:var(--k-text-primary)}
+.keys-app:not(.desktop-app) .trip-promo-copy{display:flex;flex-direction:column;align-items:flex-start;position:relative;z-index:1;width:65%;max-width:65%;height:auto;padding:0;gap:8px}
+.keys-app:not(.desktop-app) .trip-promo-copy>strong{font:500 18px/24px var(--k-font-display);letter-spacing:-.5px;white-space:normal}
+.keys-app:not(.desktop-app) .trip-promo-copy>small{font:400 12px/18px var(--k-font-text);color:var(--k-text-secondary);white-space:normal}
+.keys-app:not(.desktop-app) .trip-promo-copy>span{display:flex;align-items:center;gap:6px;margin-top:auto;padding-top:16px;color:var(--k-action-primary);font:500 14px/20px var(--k-font-text);white-space:nowrap}
+.keys-app:not(.desktop-app) .trip-promo-copy>span .k-icon{width:16px;height:16px}

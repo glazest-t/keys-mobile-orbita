@@ -11,3 +11,18 @@
   .native-phone-stage .login-art-source { height: 160px; }
   .native-phone-stage .login-art-source > div { transform: scale(.66); transform-origin: center top; }
 }
+
+/* Native touch must own both axes, including carousels nested in vertical pages.
+   The simulator's pointer-driven inertia remains enabled for mouse previews. */
+.native-phone-stage :is(.flow-stack,.mobile-scroll,.mobile-carousel) { touch-action: pan-x pan-y pinch-zoom; }
+.native-phone-stage .mobile-carousel { overscroll-behavior-x: contain; overscroll-behavior-y: auto; }
+.native-phone-stage .bottom-sheet { touch-action: pan-x pan-y pinch-zoom; }
+/* Photo paging uses browser snapping only where simulated inertia is disabled. */
+.native-phone-stage :is(.hotel-photo-carousel,.hotel-hero-carousel) { scroll-snap-type: x mandatory; }
+.native-phone-stage :is(.hotel-photo-track>.photo-open,.hotel-hero-track>.hero-photo) { scroll-snap-align: start; }
+
+/* A collapsed map is a preview: swiping it should scroll the page. */
+.native-phone-stage .gis-map-static .gis-canvas,
+.native-phone-stage .gis-map-static .gis-canvas * { touch-action: pan-y !important; }
+.native-phone-stage .gis-map-static .gis-canvas { pointer-events: none; }
+.native-phone-stage .gis-map-static .gis-price-pin { pointer-events: auto; }

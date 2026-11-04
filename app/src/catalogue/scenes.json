@@ -535,8 +535,7 @@
     "step": "hotel",
     "actions": [
       {
-        "selector": ".hotel-section button",
-        "contains": "Все"
+        "selector": ".hotel-amenities-all"
       }
     ]
   },
