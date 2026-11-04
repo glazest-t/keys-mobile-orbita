@@ -1,0 +1,49 @@
+.desktop-app[data-route^="profile-trip/"] .profile-history-page.trip-detail-page{display:block}
+.desktop-trip-detail{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:24px;align-items:start}
+.trip-detail-main,.trip-detail-side{display:flex;flex-direction:column;gap:20px;min-width:0}
+.trip-detail-overview,.trip-detail-panel{background:#fff;border:1px solid var(--k-border,#e4e7ef);border-radius:24px;padding:24px;min-width:0}
+.trip-detail-hotel{display:flex;gap:24px;align-items:center}
+.trip-detail-hotel>img{width:180px;height:152px;object-fit:cover;border-radius:18px;flex:none}
+.trip-detail-hotel>div{display:flex;flex-direction:column;align-items:flex-start;gap:12px;min-width:0}
+.desktop-app .desktop-trip-detail h1{font:500 24px/32px Onest,sans-serif;letter-spacing:-.5px;margin:0}
+.desktop-app .desktop-trip-detail h2{font:500 18px/26px Onest,sans-serif;margin:0}
+.trip-detail-number{color:var(--k-muted,#777d90);font:400 13px/20px Onest,sans-serif;overflow-wrap:anywhere}
+.trip-detail-dates{display:grid;grid-template-columns:1fr 1fr;gap:24px;background:var(--k-action-tint,#eef0ff);border-radius:18px;padding:20px;margin:24px 0}
+.trip-detail-dates>div{display:flex;flex-direction:column;gap:5px}
+.trip-detail-dates span,.trip-detail-dates small{font:400 14px/20px Onest,sans-serif;color:var(--k-text-secondary,#5a6072)}
+.trip-detail-dates strong{font:500 18px/26px Onest,sans-serif}
+.trip-detail-room,.trip-detail-guests{display:flex;align-items:flex-start;gap:12px}
+.trip-detail-guests{margin-top:20px}
+.trip-detail-room>.k-icon,.trip-detail-guests>.k-icon{margin-top:2px;color:var(--k-text-secondary,#5a6072);flex:none}
+.desktop-app .desktop-trip-detail p{font:400 14px/22px Onest,sans-serif;color:var(--k-text-secondary,#5a6072);margin:4px 0 0;overflow-wrap:anywhere;white-space:pre-wrap}
+.trip-detail-panel>h2{margin-bottom:16px!important}
+.trip-detail-panel .booking-hotel-contacts{gap:12px;font:400 14px/22px Onest,sans-serif}
+.trip-detail-payment{background:linear-gradient(125deg,#f0f5ff,#f4f4ff 65%,#f1f8ff);border:1px solid #e1e7f7;border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:20px}
+.trip-detail-total{display:flex;flex-direction:column;gap:6px}
+.trip-detail-total>span{font:400 14px/20px Onest,sans-serif;color:#5a6072}
+.trip-detail-total>strong{font:600 30px/38px Onest,sans-serif;letter-spacing:-.6px}
+.desktop-app .trip-detail-payment .booking-payment-status{justify-content:flex-start;gap:12px;flex-wrap:wrap}
+.desktop-app .trip-detail-payment .booking-payment-remaining{font:500 15px/22px Onest,sans-serif}
+.trip-detail-money{display:flex;flex-direction:column;gap:12px;font:400 14px/21px Onest,sans-serif}
+.trip-detail-money>div{display:flex;justify-content:space-between;gap:16px}
+.trip-detail-money span{color:#5a6072}
+.trip-detail-money strong{font-weight:500;white-space:nowrap}
+.trip-detail-money h3{font:500 16px/24px Onest,sans-serif;margin:0}
+.desktop-app .trip-detail-payment>.k-button{width:100%;max-width:none;align-self:stretch}
+.trip-detail-resources{padding:8px 24px}
+.trip-detail-resources .k-row,.trip-detail-resources .k-list-row{padding-left:0;padding-right:0}
+.trip-detail-service-list{display:flex;flex-direction:column;gap:16px}
+.trip-detail-service-list>div{display:flex;align-items:center;justify-content:space-between;gap:16px;font:400 14px/22px Onest,sans-serif}
+.trip-detail-service-list small{font:400 12px/18px Onest,sans-serif;color:#777d90;text-align:right}
+.trip-detail-review{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.trip-detail-rating{display:flex;gap:6px;align-items:center}
+.trip-detail-remove{display:flex;gap:8px;align-items:center;align-self:center;background:none;border:0;padding:8px 4px;color:#777d90;font:400 13px/20px Onest,sans-serif;cursor:pointer}
+.trip-detail-remove:hover{color:#b53853}
+.trip-detail-remove:focus-visible{outline:2px solid #2f5bff;outline-offset:4px;border-radius:8px}
+@media(max-width:1100px){.desktop-trip-detail{grid-template-columns:minmax(0,1fr) 340px;gap:20px}.trip-detail-hotel>img{width:130px;height:130px}.trip-detail-hotel{gap:16px}.trip-detail-overview,.trip-detail-panel,.trip-detail-payment{padding:20px}}
+@media(max-width:900px){.desktop-trip-detail{grid-template-columns:minmax(0,1fr)}.trip-detail-hotel>img{width:160px;height:140px}}
+.desktop-app .trip-detail-hotel .k-status{align-self:flex-start}
+
+/* Standard app tiles: shared icon assets, 22 px on the common 44 px surface. */
+.desktop-trip-detail :is(.trip-detail-room,.trip-detail-guests,.trip-detail-resources) .icon-tile{color:var(--k-action-primary);background:var(--k-action-tint)}
+.desktop-trip-detail :is(.trip-detail-room,.trip-detail-guests){align-items:center}

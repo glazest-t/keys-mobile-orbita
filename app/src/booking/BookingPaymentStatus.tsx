@@ -7,6 +7,11 @@ import {isPartiallyPaid,payBookingBalance,quoteBookingBalance} from './bookingBa
 import './booking-payment-status.css';
 
 type Props={booking:Booking;commerce:Commerce;setCommerce:Dispatch<SetStateAction<Commerce>>;showAmount?:boolean;hideStatus?:boolean;failNext?:boolean;onPaymentAttempt?:()=>void};
+export function BookingPaymentBadge({booking:b}:{booking:Booking}){
+ const due=b.operation.dueAtHotelMinor,partial=isPartiallyPaid(b);
+ if(b.operation.status!=='confirmed')return null;
+ return <StatusBadge tone={due?(partial?'warning':'info'):'success'} icon={due?'pending':'check'}>{due?(partial?'Частично оплачено':'Оплата в отеле'):'Оплачено'}</StatusBadge>;
+}
 export function BookingPaymentStatus(props:Props){
  const {booking:b,showAmount=false}=props,partial=isPartiallyPaid(b),due=b.operation.dueAtHotelMinor;
  const [open,setOpen]=useState(false),[expected,setExpected]=useState<ReturnType<typeof quoteBookingBalance>|null>(null),[busy,setBusy]=useState(false),[success,setSuccess]=useState(false),[error,setError]=useState('');
@@ -19,9 +24,9 @@ export function BookingPaymentStatus(props:Props){
   timer.current=setTimeout(()=>{try{const p=latest.current;p.setCommerce(payBookingBalance(p.commerce,p.booking.owner,expected,event.current,outcome));setSuccess(true);}catch(e){setError((e as Error).message);}finally{lock.current=false;setBusy(false);}},interactionMotion.paymentWaitMs);
  };
  if(b.operation.status!=='confirmed')return null;
- return <><div className="booking-payment-status">{!props.hideStatus&&<StatusBadge tone={due?(partial?'warning':'info'):'success'} icon={due?'pending':'check'}>{due?(partial?'Частично оплачено':'Оплата в отеле'):'Оплачено'}</StatusBadge>}{showAmount&&due>0&&<strong className="booking-payment-remaining">К оплате {formatMoney(due)}</strong>}{partial&&b.stay?.status!=='checked_out'&&<button type="button" className="text-action booking-balance-link" onClick={start}>Оплатить</button>}</div>
+ return <><div className="booking-payment-status">{!props.hideStatus&&<BookingPaymentBadge booking={b}/>}{showAmount&&due>0&&<strong className="booking-payment-remaining">К оплате {formatMoney(due)}</strong>}{partial&&b.stay?.status!=='checked_out'&&<button type="button" className="text-action booking-balance-link" onClick={start}>Оплатить</button>}</div>
  {!open&&error&&<p className="field-error" role="alert">{error}</p>}
  <BottomSheet open={open} onOpenChange={v=>{if(!lock.current)setOpen(v);}} title={success?'Оплата прошла':'Оплата бронирования'}><div className="sheet-body booking-balance-payment">
- {success?<><StatusBadge tone="success" icon="check">Оплачено</StatusBadge><h2>Бронь полностью оплачена</h2><p>Остаток {formatMoney(expected?.amountMinor||0)} оплачен. Доплачивать за эту бронь не нужно.</p><Button onClick={()=>setOpen(false)}>Готово</Button></>:<><p className="booking-balance-hotel">{catalog.hotels.find(h=>h.id===b.draft.hotelId)?.name}</p><div className="booking-balance-amount"><span>Осталось оплатить</span><strong>{formatMoney(expected?.amountMinor||0)}</strong></div><div className="booking-balance-card"><Icon name="card" size={24} inheritColor/><span>Банковская карта<small>Тестовая карта ···· 4242</small></span></div><p className="booking-balance-demo">Демонстрационный эквайринг. Деньги не списываются.</p>{error&&<p className="field-error" role="alert">{error}</p>}<Button busy={busy} onClick={pay}>Оплатить {formatMoney(expected?.amountMinor||0)}</Button></>}
+ {success?<><StatusBadge tone="success" icon="check">Оплачено</StatusBadge><h2>Бронь полностью оплачена</h2><p>Остаток {formatMoney(expected?.amountMinor||0)} оплачен. Доплачивать за эту бронь не нужно.</p><Button dismissOnly onClick={()=>setOpen(false)}>Готово</Button></>:<><p className="booking-balance-hotel">{catalog.hotels.find(h=>h.id===b.draft.hotelId)?.name}</p><div className="booking-balance-amount"><span>Осталось оплатить</span><strong>{formatMoney(expected?.amountMinor||0)}</strong></div><div className="booking-balance-card"><Icon name="card" size={24} inheritColor/><span>Банковская карта<small>Тестовая карта ···· 4242</small></span></div><p className="booking-balance-demo">Демонстрационный эквайринг. Деньги не списываются.</p>{error&&<p className="field-error" role="alert">{error}</p>}<Button busy={busy} onClick={pay}>Оплатить {formatMoney(expected?.amountMinor||0)}</Button></>}
  </div></BottomSheet></>;
 }

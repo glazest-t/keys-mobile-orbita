@@ -8,7 +8,7 @@ export function Trips({commerce,owner,onOpen}:{commerce:Commerce;owner:string;on
  return <>{bookings.map(b=><article className="k-card trip-card" key={b.id}><StatusBadge tone={b.operation.status==='cancelled'?'neutral':'info'} icon={b.operation.status==='cancelled'?'close':'calendar'}>{b.operation.status==='cancelled'?'Бронь отменена':'Предстоящая поездка'}</StatusBadge><h2>{catalog.hotels.find(h=>h.id===b.draft.hotelId)?.name}</h2><p>{dateLabel(b.draft.search)} · {guestLabel(b.draft.search)}</p><Button variant="secondary" onClick={()=>onOpen(b.id)}>Детали поездки</Button></article>)}</>;
 }
 export function CancellationPanel({booking,onConfirm,onClose}:{booking:Booking;onConfirm:()=>void;onClose:()=>void}){
- const [error,setError]=useState('');let preview;try{preview=cancellationPreview(booking);}catch(e){return <><p>{(e as Error).message}</p><Button onClick={onClose}>Вернуться к поездке</Button></>;}
+ const [error,setError]=useState('');let preview;try{preview=cancellationPreview(booking);}catch(e){return <><p>{(e as Error).message}</p><Button dismissOnly onClick={onClose}>Вернуться к поездке</Button></>;}
  const keys=preview.pointReturns[`keys:${booking.owner}`]||0,hotelPoints=preview.pointReturns[`hotel:${booking.draft.hotelId}:${booking.owner}`]||0;
  const servicePaid=(booking.serviceRequests||[]).filter(r=>r.operation?.status==='confirmed');
  const refundLabel=servicePaid.length?'К возврату деньгами':booking.draft.paymentOption==='sbp'?'К возврату через СБП':booking.draft.paymentOption==='card'?'К возврату на карту':'К возврату деньгами';

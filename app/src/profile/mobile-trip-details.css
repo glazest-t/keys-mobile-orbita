@@ -1,0 +1,66 @@
+/* One mobile detail composition for history, an existing booking and confirmation. */
+.desktop-trip-detail.mobile-trip-detail{display:flex;flex-direction:column;align-items:stretch;gap:12px;min-width:0}
+.mobile-trip-detail .trip-detail-main,.mobile-trip-detail .trip-detail-side{display:contents}
+.mobile-trip-detail .trip-detail-overview,.mobile-trip-detail .trip-detail-panel,.mobile-trip-detail .trip-detail-payment{padding:16px;border-radius:22px}
+.mobile-trip-detail .trip-detail-overview{order:1}
+.mobile-trip-detail .trip-detail-payment{order:10;gap:16px;background:#fff;border-color:var(--k-border,#e4e7ef)}
+.mobile-trip-detail .trip-detail-contacts{order:3}
+.mobile-trip-detail .trip-detail-terms{order:4}
+.mobile-trip-detail .trip-detail-services{order:5}
+.mobile-trip-detail .trip-detail-wishes{order:6}
+.mobile-trip-detail .trip-detail-changes{order:7}
+.mobile-trip-detail .trip-detail-review{order:8}
+.mobile-trip-detail .trip-detail-resources{order:9}
+.mobile-trip-detail .trip-detail-remove{order:11;min-height:44px;align-self:center}
+.mobile-trip-detail .trip-detail-hotel{gap:12px;align-items:flex-start}
+.mobile-trip-detail .trip-detail-hotel>img{width:76px;height:88px;border-radius:14px}
+.mobile-trip-detail .trip-detail-hotel>div{gap:7px;flex:1}
+.keys-app .mobile-trip-detail h1{font:500 18px/24px Onest,sans-serif;letter-spacing:-.3px;margin:0}
+.keys-app .mobile-trip-detail h2{font:500 16px/22px Onest,sans-serif;margin:0}
+.keys-app .mobile-trip-detail p{font:400 14px/21px Onest,sans-serif;color:#5a6072;white-space:pre-wrap;overflow-wrap:anywhere;margin:4px 0 0}
+.mobile-trip-detail .trip-detail-hotel .k-status{align-self:flex-start}
+.mobile-trip-detail .trip-detail-number{font-size:12px;line-height:17px}
+.mobile-trip-detail .trip-detail-dates{gap:12px;padding:14px;margin:16px 0;background:var(--k-action-tint,#eef0ff);border-radius:18px}
+.mobile-trip-detail .trip-detail-dates strong{font:500 15px/21px Onest,sans-serif}
+.mobile-trip-detail .trip-detail-dates span,.mobile-trip-detail .trip-detail-dates small{font:400 14px/20px Onest,sans-serif}
+.mobile-trip-detail .trip-detail-room,.mobile-trip-detail .trip-detail-guests{gap:10px}
+.mobile-trip-detail .trip-detail-guests{margin-top:14px}
+.mobile-trip-detail .trip-detail-total{flex-direction:row;justify-content:space-between;align-items:center;gap:10px}
+.mobile-trip-detail .trip-detail-total>strong{font:600 20px/26px Onest,sans-serif;white-space:nowrap}
+.mobile-trip-detail .trip-detail-payment .booking-payment-status{justify-content:flex-end}
+.mobile-trip-detail .trip-detail-money>div{align-items:flex-start;gap:12px}
+.mobile-trip-detail .trip-detail-money strong{white-space:normal;text-align:right;max-width:60%;overflow-wrap:anywhere}
+.mobile-trip-detail .trip-detail-payment>.k-button,.mobile-trip-detail .trip-detail-action-group>.k-button{width:100%;max-width:none}
+.mobile-trip-detail .trip-detail-action-group{display:flex;flex-direction:column;gap:8px}
+.mobile-trip-detail .trip-detail-action-group .record-cancel{color:#b53853}
+.mobile-trip-detail .trip-detail-panel>h2{margin-bottom:12px!important}
+.mobile-trip-detail .trip-detail-service-list>div{align-items:flex-start}
+.mobile-trip-detail .trip-detail-service-state{display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex:none}
+.mobile-trip-detail .trip-detail-service-state .k-status{white-space:normal;max-width:130px;text-align:right}
+.mobile-trip-detail .trip-detail-resources{padding:4px 0}
+.mobile-trip-detail .trip-detail-resources>h2{padding:0 16px}
+.mobile-trip-detail .trip-detail-resources .k-row,.mobile-trip-detail .trip-detail-resources .k-list-row{padding-left:16px;padding-right:16px}
+.mobile-trip-detail .trip-detail-payment .booking-reward{margin:0}
+.record-content:has(>.mobile-trip-detail){padding-top:16px;gap:0}
+.profile-history-page:has(>.mobile-trip-detail){gap:0}
+.mobile-trip-detail .trip-detail-action-group:empty{display:none}
+/* Payment concludes the details; booking management stays within thumb reach. */
+.trip-detail-payment-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.mobile-trip-detail .trip-detail-payment-heading h2{flex:1;min-width:0}
+.mobile-trip-detail .trip-detail-payment-heading .k-status{flex:none;max-width:48%;white-space:normal;text-align:center;align-self:center}
+.mobile-trip-detail .booking-payment-status:empty{display:none}
+.trip-detail-actions-spacer{order:12;flex:none;pointer-events:none}
+.trip-detail-fixed-actions{position:absolute;bottom:0;left:0;right:0;z-index:12;padding:12px 16px;background:#fff;box-shadow:0 -4px 20px #10132008;font:400 15px/22px Onest,sans-serif}
+.trip-detail-fixed-actions .trip-detail-action-group{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.trip-detail-fixed-actions .k-button{width:100%;max-width:none;min-width:0;padding-inline:12px;font:500 15px/20px Onest,sans-serif}
+
+.mobile-trip-detail .trip-detail-resources{overflow:hidden}
+
+/* A single reading scale and icon treatment across all mobile detail sections. */
+.keys-app .mobile-trip-detail .booking-hotel-contacts{font:400 14px/21px Onest,sans-serif;margin:0;gap:12px}
+.mobile-trip-detail .trip-detail-resources .k-row{gap:10px;min-height:48px;border:0}
+.mobile-trip-detail .trip-detail-resources .k-row strong{font:400 14px/21px Onest,sans-serif}
+.mobile-trip-detail .trip-detail-service-list small{font:400 14px/21px Onest,sans-serif}
+.mobile-trip-detail .trip-detail-number{font:400 13px/18px Onest,sans-serif}
+.mobile-trip-detail .trip-detail-dates strong{font:500 14px/21px Onest,sans-serif}
+.mobile-trip-detail .trip-detail-payment-heading{gap:8px}

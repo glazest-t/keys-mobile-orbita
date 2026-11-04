@@ -26,6 +26,6 @@ export function ServiceGroupPayment(props:Props){
  {(error||validation)&&<p role="alert" className="field-error">{error||validation}</p>}
  <div><span>{done?'Оплачено':atHotel?hotelServicePaymentLabel(b):'К оплате'}</span><strong>{done||atHotel?formatMoney(rows.filter(r=>done||!r.operation).reduce((sum,r)=>sum+r.amountMinor,0)):quote?formatMoney(quote.cash):'—'}</strong></div>
  {!done&&!!quote?.points&&<small>Списать {quote.points/100} баллов</small>}
- {done||atHotel?<Button onClick={props.onClose}>Готово</Button>:<><DialogActions><Button busy={busy} disabled={!quote} onClick={pay}>{quote?.cash===0?'Подтвердить списание баллов':'Оплатить'}</Button><Button variant="secondary" disabled={busy} onClick={props.onClose}>К поездке</Button></DialogActions></>}
+ {done||atHotel?<Button dismissOnly onClick={props.onClose}>Готово</Button>:<><DialogActions><Button busy={busy} disabled={!quote} onClick={pay}>{quote?.cash===0?'Подтвердить списание баллов':'Оплатить'}</Button><Button variant="secondary" disabled={busy} onClick={props.onClose}>К поездке</Button></DialogActions></>}
  </div></div></BottomSheet></>;
 }

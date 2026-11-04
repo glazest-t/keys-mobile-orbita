@@ -45,14 +45,14 @@ function WifiSession({open,manual,onClose}:{open:boolean;manual:boolean;onClose:
    <header className="wifi-heading"><span className={'wifi-symbol '+(view!=='connect'?'soft':'')}><Icon name={connected?'check':'wifi'} size={26} inheritColor/></span><div><strong aria-hidden="true">{title}</strong><p>{subtitle}</p></div></header>
    {view==='connect'?<>
     <section className="wifi-network"><span className="wifi-network-icon"><Icon name="wifi" size={22} inheritColor/></span><div><strong>{network}</strong><small aria-live="polite">{connected?'Подключено':status==='connecting'?'Подключаемся…':'Гостевая сеть отеля'}</small></div><Icon name={connected?'check':'key'} size={18} inheritColor/></section>
-    <DialogActions>{connected?<Button variant="secondary" onClick={onClose}>Готово</Button>:<Button busy={status==='connecting'} busyLabel="Подключаемся…" onClick={()=>setStatus('connecting')}><Icon name="wifi" size={20} inheritColor/>Подключиться</Button>}
+    <DialogActions>{connected?<Button dismissOnly variant="secondary" onClick={onClose}>Готово</Button>:<Button busy={status==='connecting'} busyLabel="Подключаемся…" onClick={()=>setStatus('connecting')}><Icon name="wifi" size={20} inheritColor/>Подключиться</Button>}
     {status!=='connecting'&&<Button variant="secondary" onClick={()=>setView('credentials')}>Сеть и пароль</Button>}</DialogActions>
    </>:view==='credentials'?<>
     <section className="wifi-credentials">{[['Сеть',network],['Пароль',password]].map(([label,value])=><div key={label}><span><small>{label}</small><strong>{value}</strong></span><button className="wifi-copy" aria-label={copied===label?`${label}: скопировано`:`Скопировать ${label==='Сеть'?'название сети':'пароль'}`} onClick={()=>copy(label,value)}>{copied===label?<Icon name="check" size={18} inheritColor/>:<img src="/assets/details/copy.svg" width="18" height="18" alt=""/>}</button></div>)}</section>
     <span className="wifi-copy-status" role="status">{copied?`${copied==='Сеть'?'Название сети':'Пароль'} скопирован${copied==='Сеть'?'о':''}`:''}</span>
     {error&&<p className="field-error" role="alert">{error}</p>}
     <DialogActions><Button variant="secondary" onClick={()=>setView('help')}>Как подключиться</Button>
-    <Button variant="secondary" onClick={manual?onClose:()=>setView('connect')}>{manual?'Готово':'Назад'}</Button></DialogActions>
+    <Button dismissOnly={manual} variant="secondary" onClick={manual?onClose:()=>setView('connect')}>{manual?'Готово':'Назад'}</Button></DialogActions>
    </>:<>
     <ol className="wifi-instructions"><li>Откройте настройки {device} и раздел Wi-Fi.</li><li>Выберите сеть <strong>{network}</strong>.</li><li>Введите пароль <strong>{password}</strong>.</li></ol>
     <Button variant="secondary" onClick={()=>setView('credentials')}>К сети и паролю</Button>

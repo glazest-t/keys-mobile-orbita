@@ -1226,20 +1226,6 @@
     "route": "help-article/change"
   },
   {
-    "id": "support-new",
-    "title": "Обращение в поддержку",
-    "group": "Профиль и история",
-    "route": "support-new",
-    "trip": "history"
-  },
-  {
-    "id": "support-request",
-    "title": "Детали обращения",
-    "group": "Профиль и история",
-    "route": "support-request/catalogue-support",
-    "support": true
-  },
-  {
     "id": "profile-pin-off",
     "title": "Отключение PIN-кода",
     "group": "Профиль и история",
