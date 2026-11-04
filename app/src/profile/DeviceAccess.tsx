@@ -1,3 +1,4 @@
+import {DialogActions} from '../dialogActions';
 import {DemoTools} from '../DemoTools';
 import {isDesktop} from '../desktop/surface';
 import {useEffect,useRef,useState,type ReactNode,type Dispatch,type SetStateAction} from 'react';
@@ -24,7 +25,7 @@ export function BiometricSheet({open,onClose,onSuccess,outcome,unlock=false}:{op
   <span style={{animationDuration:`${interactionMotion.bubbleOrbit}s`}} className={'device-access-mark '+(phase==='checking'?'is-checking':'')+(phase==='success'?'is-success':'')}><Icon name={phase==='success'?'check':'face-id'} size={40} inheritColor/></span>
   <h2>{phase==='intro'?'Подтвердите, что это вы':phase==='checking'?'Проверяем биометрию':phase==='success'?'Готово':phase==='failure'?'Не удалось распознать':'Биометрия недоступна'}</h2>
   <p>{phase==='intro'?(unlock?'Подтвердите вход в «Ключи».':'В следующий раз сможете войти без ввода PIN-кода.'):phase==='checking'?'Посмотрите на экран':phase==='success'?(unlock?'Вход подтверждён':'Биометрия включена'):phase==='failure'?'Попробуйте ещё раз или используйте PIN-код.':'Используйте PIN-код для входа.'}</p>
-  {phase==='success'?<StatusBadge tone="success" icon="check">Подтверждено</StatusBadge>:unlock&&(phase==='failure'||phase==='unavailable')?<><Button onClick={onClose}>Ввести PIN-код</Button>{phase==='failure'&&<Button variant="secondary" onClick={()=>setPhase('checking')}>Попробовать снова</Button>}</>:<>{phase!=='unavailable'&&<Button busy={phase==='checking'} busyLabel="Проверяем" onClick={()=>setPhase('checking')}>{phase==='failure'?'Попробовать снова':'Подтвердить'}</Button>}<Button variant="secondary" onClick={onClose}>{unlock?'Ввести PIN-код':'Не сейчас'}</Button></>}
+  {phase==='success'?<StatusBadge tone="success" icon="check">Подтверждено</StatusBadge>:unlock&&(phase==='failure'||phase==='unavailable')?<><DialogActions><Button onClick={onClose}>Ввести PIN-код</Button>{phase==='failure'&&<Button variant="secondary" onClick={()=>setPhase('checking')}>Попробовать снова</Button>}</DialogActions></>:<><DialogActions>{phase!=='unavailable'&&<Button busy={phase==='checking'} busyLabel="Проверяем" onClick={()=>setPhase('checking')}>{phase==='failure'?'Попробовать снова':'Подтвердить'}</Button>}<Button variant="secondary" onClick={onClose}>{unlock?'Ввести PIN-код':'Не сейчас'}</Button></DialogActions></>}
  </div></BottomSheet>;
 }
 
@@ -59,8 +60,8 @@ export function DeviceAccessSetup({state,setState,user,outcome,onRecovery,mode,o
   <div className="profile-settings-intro"><span className="device-access-mark"><Icon name={mode==='biometric'?'face-id':'secure'} size={32} inheritColor/></span><h1>{stage==='verify'?(mode==='disable'?'Отключить PIN-код?':'Текущий PIN-код'):stage==='create'?'Придумайте PIN-код':stage==='repeat'?'Повторите PIN-код':'Быстрый вход'}</h1><p>{stage==='verify'?(mode==='disable'?'Вход по биометрии тоже будет отключён.':'Подтвердите код, чтобы задать новый.'):stage==='biometric'?'Используйте биометрию или PIN-код.':mode==='biometric'?'PIN-код пригодится, если биометрия не сработает.':'Четыре цифры для входа в приложение'}</p></div>
   {stage==='verify'?<PinCheck state={state} setState={setState} user={user} onRecovery={onRecovery} onSuccess={next=>{if(mode==='disable'){setState(clearDeviceAccess(next,user.phone));onDone('PIN-код отключён');}else setStage('create');}}/>:stage==='biometric'?<BiometricSheet open outcome={outcome} onClose={()=>onDone('')} onSuccess={()=>{setState(updateSettings(current,user.phone,{biometric:true}));onDone('Биометрия включена');}}/>:<>
    <fieldset className="device-pin-input" disabled={busy||success}><PinCodeField key={stage} label={stage==='create'?'Новый PIN-код':'Повтор PIN-кода'} value={stage==='create'?pin:repeat} success={success} error={error} onChange={v=>{stage==='create'?setPin(v):setRepeat(v);setError('');}}/></fieldset>
-   <Button busy={busy} success={success} disabled={!/^\d{4}$/.test(stage==='create'?pin:repeat)} onClick={()=>{if(stage==='create'){keyboard.hide();setError('');setStage('repeat');}else void save();}}>{success?'PIN-код настроен':stage==='create'?'Продолжить':'Сохранить PIN-код'}</Button>
-   {stage==='repeat'&&!success&&<Button variant="ghost" disabled={busy} onClick={()=>{setStage('create');setPin('');setRepeat('');setError('');}}>Ввести другой код</Button>}
+   <DialogActions><Button busy={busy} success={success} disabled={!/^\d{4}$/.test(stage==='create'?pin:repeat)} onClick={()=>{if(stage==='create'){keyboard.hide();setError('');setStage('repeat');}else void save();}}>{success?'PIN-код настроен':stage==='create'?'Продолжить':'Сохранить PIN-код'}</Button>
+   {stage==='repeat'&&!success&&<Button variant="ghost" disabled={busy} onClick={()=>{setStage('create');setPin('');setRepeat('');setError('');}}>Ввести другой код</Button>}</DialogActions>
   </>}
  </div>;
 }

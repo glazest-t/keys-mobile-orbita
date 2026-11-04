@@ -1,3 +1,4 @@
+import {DialogActions} from '../dialogActions';
 import {isDesktop} from '../desktop/surface';
 import {useState,type Dispatch,type SetStateAction} from 'react';
 import {BottomSheet,Carousel,useKeyboard} from '../mobile';
@@ -27,6 +28,6 @@ export function PriceWatches({previewChange=null,onExitPreview,commerce,setComme
  </article>;})}
  {!shown.length&&<Empty icon="bell" title={!entries.length?'Пока не следим за ценами':tab==='active'?'Нет активных наблюдений':'Нет наблюдений на паузе'} action={!entries.length?<Button onClick={onSearch}>Найти отель</Button>:<Button variant="secondary" onClick={()=>setTab(tab==='active'?'paused':'active')}>{tab==='active'?'Посмотреть на паузе':'Посмотреть активные'}</Button>}>{!entries.length?'Выберите «Следить за ценой» на странице отеля.':tab==='active'?'Возобновите отслеживание, когда будете готовы.':'Приостановленные наблюдения останутся здесь.'}</Empty>}
  <BottomSheet open={!!sheet&&!!entry} onOpenChange={value=>{if(!value)close();}} title={sheet==='delete'?'Удалить наблюдение?':'Следить за ценой'} snap={sheet==='delete'?.42:.82}>
- <div className="sheet-body">{entry&&sheet==='edit'?<PriceWatchEditor key={entry.key} commerce={commerce} setCommerce={setCommerce} owner={owner} draft={entry.draft} onClose={close}/>:entry&&sheet==='delete'?<><p>Отслеживание цены на {catalog.hotels.find(h=>h.id===entry.draft.hotelId)?.name} будет удалено.</p><Button variant="danger" onClick={()=>{setCommerce(removePriceWatch(commerce,owner,entry.key));close();}}>Удалить</Button><Button variant="secondary" onClick={close}>Оставить</Button></>:null}</div>
+ <div className="sheet-body">{entry&&sheet==='edit'?<PriceWatchEditor key={entry.key} commerce={commerce} setCommerce={setCommerce} owner={owner} draft={entry.draft} onClose={close}/>:entry&&sheet==='delete'?<><p>Отслеживание цены на {catalog.hotels.find(h=>h.id===entry.draft.hotelId)?.name} будет удалено.</p><DialogActions><Button variant="danger" onClick={()=>{setCommerce(removePriceWatch(commerce,owner,entry.key));close();}}>Удалить</Button><Button variant="secondary" onClick={close}>Оставить</Button></DialogActions></>:null}</div>
  </BottomSheet></div>;
 }

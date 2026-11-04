@@ -1,3 +1,4 @@
+import {ServiceDetailIntro} from './ServiceDetailIntro';
 import {useState,type Dispatch,type SetStateAction} from 'react';
 import {BottomSheet} from '../mobile';
 import {Button,Icon,StatusBadge} from '../ui';
@@ -39,8 +40,7 @@ export function DesktopBookingServices({commerce,setCommerce,disabled=false}:{co
   </div>;})}</div>
   <BottomSheet open={!!service} onOpenChange={open=>{if(!open)setOpened(null);}} title={info?.title||'Услуга'}>
    {service&&info&&<div className="desktop-service-detail">
-    {info.image?<img className="desktop-service-image" style={{objectPosition:service.id==='sea-breakfast'?'center 25%':'center 35%'}} src={import.meta.env.BASE_URL+info.image} alt={info.title}/>:<div className="desktop-service-art" role="img" aria-label="Трансфер из аэропорта в отель"><span><Icon name="car" size={76} inheritColor/></span></div>}
-    <p className="desktop-service-description">{info.description}</p>
+    <ServiceDetailIntro kind={service.id.replace('sea-','')} image={info.image} icon={info.icon} description={info.description} unit={info.unit}/>
     {service.id==='sea-breakfast'&&<p className="desktop-service-venue"><Icon name="breakfast" size={18}/>{venue.hours} · {venue.restaurant} · {venue.floor}</p>}
     <div className="desktop-service-calculation"><div><span>{info.unit}</span><strong>{formatMoney(service.unitPriceMinor)}</strong></div>{service.id==='sea-breakfast'&&<div><span>Гостей: {people} · дней: {days}</span><span>{formatMoney(service.unitPriceMinor)} × {quantity}</span></div>}</div>
     <div className="desktop-service-footer"><div><small>{selected?'Добавлено в бронирование':'Стоимость услуги'}</small><strong>{formatMoney(service.unitPriceMinor*quantity)}</strong></div><Button variant={selected?'secondary':'primary'} disabled={disabled} onClick={apply}>{selected?'Убрать из брони':'Добавить'}</Button></div>

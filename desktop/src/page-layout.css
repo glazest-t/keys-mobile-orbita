@@ -246,3 +246,35 @@
 @media(min-width:1101px) {
  .desktop-navigation > nav { margin-left:clamp(16px,calc((100vw - 1200px) * .12),80px); }
 }
+
+/* Booking subpages use the same frame as other internal desktop pages. */
+.desktop-app .record-flow > .desktop-flow:is([data-step="booking-details"],[data-step^="change-booking-"],[data-step^="trip-documents-"],[data-step^="document-"]) {
+  width: calc(100% - 2 * var(--desktop-page-gutter));
+  max-width: var(--desktop-page-width);
+  margin: 24px auto 64px;
+}
+.desktop-app .record-flow :is(.record-content,.document-preview) {
+  width: 100%;
+  max-width: none;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+.desktop-app .record-flow .record-content.record-documents { padding: 0; }
+.desktop-app .record-flow > .desktop-flow > .desktop-flow-layout > .desktop-flow-footer {
+  border: 0;
+  box-shadow: none;
+  margin-top: 24px;
+  padding: 0;
+}
+.desktop-app .record-flow .document-list-row,
+.desktop-app .record-flow .document-unavailable { padding: 20px 24px; }
+.desktop-app .record-flow .document-list strong { font: 500 16px/24px Onest,sans-serif; }
+.desktop-app .record-flow .document-list small { font: 400 14px/22px Onest,sans-serif; }
+.desktop-app[data-route^="profile-trip/"] :is(.app-header,.keys-content) {
+  width: calc(100% - 2 * var(--desktop-page-gutter));
+  max-width: var(--desktop-page-width);
+  margin-inline: auto;
+}
+.desktop-app[data-route^="profile-trip/"] .keys-content { padding-top: 24px!important; }
+.desktop-app .record-flow .document-open { padding: 0; }

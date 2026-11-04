@@ -32,9 +32,9 @@ test('Заказ на всё проживание: у каждого дня со
  const cancelled=cancelPaidService(s,owner,id,ids[1],'2026-11-13T17:00:01Z');assert.equal(cancelled.bookings[0].serviceRequests[0].status,'paid');assert.equal(cancelled.bookings[0].serviceRequests[1].status,'cancelled');
 });
 
-test('Повторный оплаченный завтрак имеет независимую оплату, отказ и отмену',()=>{
+test('Завтрак на другой день имеет независимую оплату, отказ и отмену',()=>{
  const original=paid(fixture(),false),first=structuredClone(r(original));
- let s=requestBreakfast(original,owner,id,{mode:'room',date:'2026-11-14',time:'08:00',persons:2,comment:'',additional:true},'extra',now);
+ let s=requestBreakfast(original,owner,id,{mode:'room',date:'2026-11-15',time:'08:00',persons:2,comment:'',additional:true},'extra',now);
  s=respondToService(s,owner,id,'extra','confirm',now);
  const q=serviceQuote(s,owner,id,'extra',false,now);
  assert.throws(()=>payService(s,owner,id,'extra',q,'sbp','failure',now));

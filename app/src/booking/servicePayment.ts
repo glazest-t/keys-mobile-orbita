@@ -12,9 +12,22 @@ export function confirmPricedServices(s:Commerce,owner:string,bookingId:string,i
  for(const id of ids){const {rows}=group(next,owner,bookingId,id);for(const r of rows.filter(r=>r.settlement!=='at_hotel'))next=respondToService(next,owner,bookingId,r.id,'confirm',now);}
  return next;
 }
+/** Add a new service without charging; settlement happens at reception. */
+export function addServicesForHotelPayment(s:Commerce,owner:string,bookingId:string,ids:string[],now=new Date().toISOString()){
+ let next=s;
+ for(const id of ids){
+  const {rows}=group(next,owner,bookingId,id);
+  for(const row of rows){
+   if(row.status==='pending')next=respondToService(next,owner,bookingId,row.id,'confirm',now);
+   const {b}=group(next,owner,bookingId,id),r=b.serviceRequests!.find(v=>v.id===row.id)!;
+   if(r.status==='confirmed'&&r.amountMinor>0&&!r.operation&&r.settlement!=='at_hotel')next={...next,bookings:next.bookings.map(v=>v.id===b.id?{...v,serviceRequests:v.serviceRequests!.map(item=>item.id===r.id?{...item,settlement:'at_hotel' as const}:item)}:v)};
+  }
+ }
+ return next;
+}
 export function quoteServiceGroup(s:Commerce,owner:string,bookingId:string,groupId:string,usePoints:boolean,now=new Date().toISOString()){
  const {b,rows}=group(s,owner,bookingId,groupId);let preview=s;const wallets=walletIds(owner,b.draft.hotelId);
- const items=rows.filter(r=>r.status==='confirmed'&&!r.operation).map(r=>{const quote=serviceQuote(preview,owner,bookingId,r.id,usePoints,now);preview={...preview,payment:{...preview.payment,balances:{...preview.payment.balances,[wallets.hotel]:quote.remaining.hotelPoints,[wallets.keys]:quote.remaining.keysPoints}}};return {id:r.id,quote};});
+ const items=rows.filter(r=>r.status==='confirmed'&&!r.operation&&r.settlement!=='at_hotel').map(r=>{const quote=serviceQuote(preview,owner,bookingId,r.id,usePoints,now);preview={...preview,payment:{...preview.payment,balances:{...preview.payment.balances,[wallets.hotel]:quote.remaining.hotelPoints,[wallets.keys]:quote.remaining.keysPoints}}};return {id:r.id,quote};});
  if(!items.length)throw Error('Нет заказов к оплате');
  return {bookingId,groupId,usePoints,items,total:items.reduce((n,i)=>n+i.quote.orderTotalMinor,0),cash:items.reduce((n,i)=>n+i.quote.cashDueMinor,0),points:items.reduce((n,i)=>n+i.quote.applied.pointsMinor,0)};
 }

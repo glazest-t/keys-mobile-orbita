@@ -1,3 +1,4 @@
+import {ServiceDetailIntro} from './ServiceDetailIntro';
 import {useState} from 'react';
 import {Button,Icon} from '../ui';
 import {formatMoney,quoteDraft,type Commerce,type Draft} from './model';
@@ -23,7 +24,7 @@ export function BookingTimeEditor({commerce,owner,kind,onApply}:{commerce:Commer
   // Keep browser auto-focus inside the sheet from scrolling the device shell.
   const screen=event.currentTarget.closest<HTMLElement>('[data-phone-screen]');
   if(screen)screen.scrollTop=0;
- }}><div className="booking-time-options" role="radiogroup" aria-label={kind==='arrival'?'Время заезда':'Время выезда'}>{options.map(o=><button key={o.id} role="radio" aria-checked={o.id===selected} onClick={()=>setSelected(o.id)}>
+ }}><ServiceDetailIntro kind={kind==='arrival'?'early':'late'} description={kind==='arrival'?'Выберите стандартное время заезда или добавьте ранний заезд к бронированию.':'Выберите стандартное время выезда или добавьте поздний выезд к бронированию.'}/><div className="booking-time-options" role="radiogroup" aria-label={kind==='arrival'?'Время заезда':'Время выезда'}>{options.map(o=><button key={o.id} role="radio" aria-checked={o.id===selected} onClick={()=>setSelected(o.id)}>
   <span><strong>{kind==='arrival'?'С':'До'} {o.time}</strong><small>{o.title}</small></span><span className="booking-time-price">{o.amountMinor?`+ ${formatMoney(o.amountMinor)}`:'Без доплаты'}</span><span className="booking-time-radio">{o.id===selected&&<i/>}</span>
- </button>)}</div>{options.length===1&&<p className="room-detail-caption">Другое время в этом отеле пока недоступно.</p>}{error&&<p role="alert" className="field-error">{error}</p>}<div className="booking-time-total"><span>Итого за бронирование</span><strong>{total!==undefined?formatMoney(total):'—'}</strong></div><Button disabled={total===undefined} onClick={()=>onApply(selected)}>Применить</Button></div>;
+ </button>)}</div>{options.length===1&&<p className="room-detail-caption">Другое время в этом отеле пока недоступно.</p>}{error&&<p role="alert" className="field-error">{error}</p>}<div className="service-time-order-footer"><div className="booking-time-total"><span>Итого за бронирование</span><strong>{total!==undefined?formatMoney(total):'—'}</strong></div><Button disabled={total===undefined} onClick={()=>onApply(selected)}>Применить</Button></div></div>;
 }

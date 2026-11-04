@@ -1,0 +1,58 @@
+/* One desktop service dialog: visual, explanation, settings, price and action. */
+.desktop-modal:has(.service-detail-intro) { width:min(720px,calc(100vw - 48px)); }
+.desktop-modal .service-detail-intro { display:flex;flex-direction:column;gap:12px;min-width:0; }
+.desktop-modal .service-detail-cover { display:block;width:100%;height:210px;object-fit:cover;object-position:center 35%;border-radius:20px; }
+.desktop-modal .service-detail-art { display:grid;place-items:center;height:180px;border-radius:20px;background:linear-gradient(125deg,#d6f1ff,#eef0ff 60%,#fff);overflow:hidden; }
+.desktop-modal .service-detail-art > span { display:grid;place-items:center;width:112px;height:112px;border-radius:50%;background:#ffffffcc;box-shadow:0 8px 32px #2f5bff12;color:var(--k-action-primary); }
+.desktop-modal .service-detail-intro p { font:400 15px/23px Onest,sans-serif;color:var(--k-text-secondary);margin:0; }
+.desktop-modal .service-detail-unit { font:500 13px/20px Onest,sans-serif;color:var(--k-action-primary); }
+.desktop-modal .service-detail-note { font:400 14px/22px Onest,sans-serif;color:var(--k-text-secondary); }
+.desktop-modal:has(.service-detail-intro) :is(.service-sheet-layout,.service-sheet-fields,.breakfast-order-sheet,.breakfast-order-fields) { max-height:none;overflow:visible; }
+.desktop-modal:has(.service-detail-intro) :is(.catalog-service-detail,.booking-time-editor,.desktop-service-detail,.service-choice-fields,.breakfast-order-fields) { gap:20px;padding:0; }
+.desktop-modal .service-detail-comment { display:flex;flex-direction:column;gap:8px;font:500 15px/22px Onest,sans-serif; }
+.desktop-modal:has(.service-detail-intro) .catalog-comment { width:100%;min-height:88px;resize:vertical; }
+.desktop-modal:has(.service-detail-intro) :is(.service-action-footer,.catalog-order-footer,.desktop-service-footer,.service-time-order-footer) {
+ display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:12px 24px;
+ margin-top:20px;padding:20px 0 0;border:0;border-top:1px solid var(--k-border-subtle);background:white;
+}
+.desktop-modal:has(.service-detail-intro) :is(.service-action-footer,.catalog-order-footer,.desktop-service-footer,.service-time-order-footer) > :is(p,small,.field-error,.dialog-actions) { grid-column:1/-1; }
+.desktop-modal:has(.service-detail-intro) :is(.service-action-footer,.catalog-order-footer,.desktop-service-footer,.service-time-order-footer) > div:not(.dialog-actions) { display:flex;flex-direction:column;gap:4px;align-items:flex-start;justify-content:flex-start;border:0;margin:0;padding:0; }
+.desktop-modal:has(.service-detail-intro) :is(.service-action-footer,.catalog-order-footer,.desktop-service-footer,.service-time-order-footer) > .k-button { justify-self:end;align-self:center;width:auto;min-width:160px;max-width:100%;min-height:48px;margin:0; }
+.desktop-modal:has(.service-detail-intro) :is(.service-action-footer,.catalog-order-footer,.desktop-service-footer,.service-time-order-footer) strong { font:500 20px/28px Unbounded,sans-serif;white-space:nowrap; }
+.desktop-modal:has(.service-detail-intro) .booking-time-total span { max-width:210px;font:400 13px/20px Onest,sans-serif; }
+.desktop-modal:has(.service-detail-intro) .breakfast-segments { flex:none; }
+.desktop-modal:has(.service-detail-intro) .breakfast-form-card { flex:none; }
+/* Dialog actions align left across the desktop prototype. */
+.desktop-modal .dialog-actions { justify-content:flex-start; }
+.desktop-modal :is(.sheet-body,.cancellation-panel,.service-action-footer) > .k-button,
+.desktop-modal .desktop-flow-footer :is(.record-footer,.document-footer,.review-footer) { align-self:flex-start;align-items:flex-start; }
+.desktop-modal .k-button { justify-self:start; }
+.desktop-modal.keys-app .k-button { align-self:flex-start; }
+.desktop-modal .service-detail-intro { flex:none; }
+/* Keep the total and order action visible while reading long service details. */
+.desktop-modal:has(.service-detail-intro) :is(.service-action-footer,.catalog-order-footer,.desktop-service-footer,.service-time-order-footer) {
+ position:sticky;bottom:-28px;z-index:2;padding-bottom:20px;box-shadow:0 -12px 18px #ffffffee;
+}
+
+/* Breakfast uses a short form, with no stacked segmented controls. */
+.desktop-modal .desktop-breakfast-settings { display:flex;flex-direction:column;gap:20px; }
+.desktop-modal .desktop-breakfast-field { display:flex;flex-direction:column;gap:8px;min-width:0;font:500 15px/22px Onest,sans-serif; }
+.desktop-modal .desktop-breakfast-field select,
+.desktop-modal .desktop-breakfast-date-range { box-sizing:border-box;width:100%;min-height:48px;padding:12px 14px;border:0;border-radius:14px;background:#f3f6fa;color:var(--k-text-primary);font:400 15px/22px Onest,sans-serif; }
+.desktop-modal .desktop-breakfast-field select:focus-visible { outline:2px solid var(--k-action-primary);outline-offset:2px; }
+.desktop-modal .desktop-breakfast-schedule { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start; }
+.desktop-modal .desktop-breakfast-schedule > .desktop-breakfast-date:only-child { grid-column:1/-1; }
+.desktop-modal .desktop-breakfast-date { display:flex;flex-direction:column;gap:10px; }
+.desktop-modal .desktop-breakfast-all { display:flex;align-items:center;gap:8px;font:400 14px/20px Onest,sans-serif;cursor:pointer; }
+.desktop-modal .desktop-breakfast-all input { width:18px;height:18px;margin:0;accent-color:var(--k-action-primary); }
+.desktop-modal .desktop-breakfast-field small { font:400 13px/18px Onest,sans-serif;color:var(--k-text-secondary); }
+.desktop-modal .desktop-breakfast-settings .service-detail-note { margin:0; }
+
+/* Quiet breakfast fields and one compact cost summary. */
+.desktop-modal .desktop-breakfast-select { display:block;position:relative; }
+.desktop-modal .desktop-breakfast-select select { appearance:none;padding-right:44px;cursor:pointer; }
+.desktop-modal .desktop-breakfast-select > .k-icon { position:absolute;right:16px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--k-text-secondary); }
+.desktop-modal .desktop-breakfast-select select:hover { background:#edf2f8; }
+.desktop-modal .desktop-breakfast-settings .guest-counter { border:0;padding-bottom:0; }
+.desktop-modal:has(.service-detail-intro) .breakfast-order-sheet > .service-action-footer { border:0; }
+.desktop-modal .breakfast-cost-summary small { color:var(--k-text-secondary);font:400 13px/18px Onest,sans-serif; }

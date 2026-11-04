@@ -11,7 +11,9 @@
     "typecheck": "../app/node_modules/.bin/tsc -p tsconfig.json",
     "test:access": "node --test tests/access.test.mjs",
     "qa:browser": "node scripts/qa-browser.mjs targeted",
-    "qa:catalogue": "node scripts/qa-browser.mjs catalogue"
+    "qa:catalogue": "node scripts/qa-browser.mjs catalogue",
+    "test:dialogs": "node scripts/qa-dialogs.mjs",
+    "test:services": "node scripts/qa-services.mjs"
   },
   "dependencies": {
     "@fontsource/roboto": "5.2.10",

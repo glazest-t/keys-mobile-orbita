@@ -5,7 +5,7 @@ import {catalog,type Booking,type Commerce} from './model.ts';
 import {requestStatus,type ServiceRequest} from './serviceRequests.ts';
 import {serviceStartsAt,serviceWasCompleted,serviceCancellationAvailability,timeServiceKind} from './serviceLifecycle.ts';
 
-export const serviceTitle=(r:ServiceRequest)=>r.kind==='catalog'?(r.title||'Услуга отеля'):r.kind==='early'?'Ранний заезд':r.mode==='room'?'Завтрак в номер':'Завтрак';
+export const serviceTitle=(r:ServiceRequest)=>r.kind==='catalog'?(r.title||'Услуга отеля'):r.kind==='early'?'Ранний заезд':r.mode==='room'?'Завтрак в номер':'Завтрак «шведский стол»';
 export const serviceIcon=(r:ServiceRequest)=>r.kind==='catalog'?(r.icon||'room-service'):r.kind==='early'?'early-check-in':'breakfast';
 export function serviceStatusPresentation(b:Booking,r:ServiceRequest):{label:string;tone:'neutral'|'success'|'warning'|'info'|'error';icon:string}{
  const status=requestStatus(b,r);
@@ -15,7 +15,7 @@ export function serviceStatusPresentation(b:Booking,r:ServiceRequest):{label:str
  if(timeServiceKind(r)&&['confirmed','paid','completed'].includes(status))return {label:'Добавлено',tone:'success',icon:'check'};
  if(status==='paid'||r.operation?.status==='confirmed')return {label:'Оплачено',tone:'success',icon:'check'};
  if(status==='pending')return {label:'Ждёт ответа',tone:'warning',icon:'pending'};
- if(r.settlement==='at_hotel'&&r.amountMinor>0)return {label:'Оплата в отеле',tone:'info',icon:'info'};
+ if(r.settlement==='at_hotel'&&r.amountMinor>0)return {label:'Добавлено',tone:'success',icon:'check'};
  const timeService=r.kind==='early'||r.kind==='catalog'&&r.serviceId==='late';
  if(status==='completed')return {label:timeService?'Добавлено':'Выполнено',tone:'success',icon:'check'};
  return r.amountMinor>0?{label:'К оплате',tone:'warning',icon:'pending'}:{label:timeService?'Добавлено':'Заказано',tone:'success',icon:'check'};

@@ -1,0 +1,6 @@
+.bottom-sheet:has(.adaptive-service-sheet)>.sheet-header,
+.bottom-sheet:has(.adaptive-service-sheet)>.sheet-handle-zone{flex-shrink:0}
+.adaptive-service-sheet{display:contents}
+.bottom-sheet:has(.adaptive-service-sheet) .service-sheet-layout,
+.bottom-sheet:has(.adaptive-service-sheet) .breakfast-order-sheet{max-height:none}
+.bottom-sheet:has(.adaptive-service-sheet) .service-sheet-fields>*{flex-shrink:0}

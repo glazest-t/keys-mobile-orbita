@@ -11,8 +11,8 @@
 .desktop-app .support-page > .k-button { width: fit-content; max-width: min(100%,320px); }
 /* Keep the existing 320px centered preference action and compact form actions. */
 .desktop-app .swipe-preferences-footer > .k-button { width: 100%; }
-/* Buttons belong to the right edge of desktop dialog forms, not to the entire panel. */
-.desktop-modal :is(.sheet-body,.cancellation-panel,.service-action-footer) > .k-button { align-self: flex-end; }
+/* Dialog actions align to the left edge of the content. */
+.desktop-modal :is(.sheet-body,.cancellation-panel,.service-action-footer) > .k-button { align-self: flex-start; }
 .desktop-modal .k-empty .k-button { align-self: center; }
 
 /* Search submit actions fill their dedicated grid cell, with room for icon and label. */
@@ -51,3 +51,40 @@
   align-self: stretch;
   justify-self: stretch;
 }
+
+/* Dialog actions share one row. Selection rows and close icons keep their UI. */
+.desktop-modal .dialog-actions {
+ display:flex;
+ flex-direction:row;
+ flex-wrap:nowrap;
+ align-items:stretch;
+ justify-content:flex-start;
+ gap:12px;
+ width:100%;
+ min-width:0;
+ grid-column:1 / -1;
+}
+.desktop-modal.keys-app .dialog-actions > .k-button {
+ width:auto;
+ max-width:none;
+ min-width:0;
+ flex:0 1 auto;
+ align-self:stretch;
+ justify-self:auto;
+ min-height:48px;
+ height:auto;
+ border-radius:16px;
+ font:500 15px/22px var(--k-font-text);
+ margin:0;
+ padding:12px 20px;
+ white-space:normal;
+ text-align:center;
+}
+.desktop-modal:has(.dialog-actions > .k-button:nth-child(3)) {
+ width:min(720px,calc(100vw - 48px));
+}
+
+.desktop-modal.keys-app .k-button.primary { background:var(--k-action-primary); color:#fff; }
+.desktop-modal.keys-app .k-button.primary:active { background:var(--k-action-pressed); }
+.desktop-modal.keys-app .k-button.secondary { background:var(--k-action-tint); color:var(--k-action-primary); }
+.desktop-modal:has(.dialog-actions > .k-button:nth-child(4)) { width:min(860px,calc(100vw - 48px)); }

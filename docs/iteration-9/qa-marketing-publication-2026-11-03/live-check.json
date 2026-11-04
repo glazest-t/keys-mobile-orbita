@@ -1,0 +1,58 @@
+{
+  "checks": [
+    {
+      "path": "",
+      "status": 200,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "marketing/",
+      "status": 200,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "marketing/start.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "marketing/current-app.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "marketing/png/brandbook-orbit-caption.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "path": "marketing/png/ui-promo-deals.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "path": "marketing/outlined/new-weekend-hero.svg",
+      "status": 200,
+      "type": "image/svg+xml"
+    },
+    {
+      "path": "marketing/fonts/Onest-Variable.ttf",
+      "status": 200,
+      "type": "font/ttf"
+    },
+    {
+      "path": "marketing/keys-brand-style.pdf",
+      "status": 200,
+      "type": "application/pdf"
+    },
+    {
+      "path": "marketing/current-app/assets/brand/illustrations/hot-deals-ticket.png",
+      "status": 200,
+      "type": "image/png"
+    }
+  ],
+  "homepageLink": true,
+  "assets": 124,
+  "pdfPages": 28,
+  "archiveSha256": "e52357caefcc2d983503e3e3745098c50ac2a5834fdf5d18ba47a3f032ccf060"
+}

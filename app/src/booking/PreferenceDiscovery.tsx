@@ -1,3 +1,4 @@
+import {DialogActions} from '../dialogActions';
 import {useState,type CSSProperties} from 'react';
 import {KeyboardTextarea,useKeyboard,useKeyboardInsets} from '../mobile';
 import {Button,Icon} from '../ui';
@@ -11,7 +12,7 @@ export function PreferenceIdeas({draft:d,onChange}:{draft:PreferenceDraft;onChan
  return <section className="preference-ideas" style={{'--idea-available-height':`${availableHeight}px`} as CSSProperties}>
   {idea?<><div className="preference-idea-stack"><i/><i/><IdeaCardChange id={idea.id} direction={direction} onReady={()=>setBusy(false)}><img src={'/brand/ideas/covers/'+idea.cover+'.webp'} alt=""/><span className="preference-idea-tag">{idea.tag}</span><div className="preference-idea-copy"><h2>{idea.title}</h2><p>{idea.text}</p></div></IdeaCardChange></div>
   <div className="preference-idea-actions"><button className="text-action" disabled={busy} onClick={()=>respond('no')}><span><Icon name="close" size={26} inheritColor/></span>Не моё</button><button className="text-action want" disabled={busy} onClick={()=>respond('want')}><span><Icon name="heart" size={26} inheritColor/></span>Хочу</button></div>
-  <div className="preference-idea-meta"><button onClick={()=>{setBusy(true);setDirection(-1);onChange(undoHolidayIdea(d));}} disabled={busy||!d.ideaHistory?.length}>Вернуть предыдущую</button><span>{Object.keys(d.ideaAnswers||{}).length+1} / {holidayIdeas.length}</span><button disabled={busy} onClick={()=>respond('skip')}>Пропустить</button></div></>:<div className="preference-ideas-complete"><Icon name="check" size={32}/><h2>Идеи закончились</h2><p>Посмотрите подобранные отели или уточните интересы в темах.</p><Button variant="secondary" onClick={()=>onChange({...d,discoveryMode:'themes'})}>Перейти к темам</Button><Button variant="ghost" onClick={()=>{setBusy(false);onChange(undoHolidayIdea(d));}}>Вернуть предыдущую</Button></div>}
+  <div className="preference-idea-meta"><button onClick={()=>{setBusy(true);setDirection(-1);onChange(undoHolidayIdea(d));}} disabled={busy||!d.ideaHistory?.length}>Вернуть предыдущую</button><span>{Object.keys(d.ideaAnswers||{}).length+1} / {holidayIdeas.length}</span><button disabled={busy} onClick={()=>respond('skip')}>Пропустить</button></div></>:<div className="preference-ideas-complete"><Icon name="check" size={32}/><h2>Идеи закончились</h2><p>Посмотрите подобранные отели или уточните интересы в темах.</p><DialogActions><Button variant="secondary" onClick={()=>onChange({...d,discoveryMode:'themes'})}>Перейти к темам</Button><Button variant="ghost" onClick={()=>{setBusy(false);onChange(undoHolidayIdea(d));}}>Вернуть предыдущую</Button></DialogActions></div>}
  </section>;
 }
 
@@ -23,7 +24,7 @@ export function PreferenceWish({draft:d,onChange,onClose,submitLabel='Приме
   <small className="preference-wish-count">{(d.wishText||'').length} / {WISH_LIMIT}</small>
   {parsed.interests.length>0&&<section><h3>Учтём в подборе</h3><div className="preference-wish-options">{parsed.interests.map(id=><button type="button" key={id} aria-pressed={selected.includes(id)} onClick={()=>setUnchecked(unchecked.includes(id)?unchecked.filter(v=>v!==id):[...unchecked,id])}><Icon name={selected.includes(id)?'check':'plus'} size={16} inheritColor/>{interests.find(i=>i.id===id)?.title}</button>)}</div></section>}
   {error&&<p role="alert" className="field-error">{error}</p>}
-  <Button type="submit" disabled={!d.wishText?.trim()||(!parsed.interests.length&&!d.wishInterests?.length)}>{submitLabel}</Button>
-  {d.source!=='text'&&!!d.wishInterests?.length&&<Button type="button" variant="ghost" onClick={()=>{keyboard.hide();onChange({...d,wishAppliedText:'',wishInterests:[]});onClose();}}>Не учитывать текст</Button>}
+  <DialogActions><Button type="submit" disabled={!d.wishText?.trim()||(!parsed.interests.length&&!d.wishInterests?.length)}>{submitLabel}</Button>
+  {d.source!=='text'&&!!d.wishInterests?.length&&<Button type="button" variant="ghost" onClick={()=>{keyboard.hide();onChange({...d,wishAppliedText:'',wishInterests:[]});onClose();}}>Не учитывать текст</Button>}</DialogActions>
  </form>;
 }

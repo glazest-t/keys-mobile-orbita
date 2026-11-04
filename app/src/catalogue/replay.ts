@@ -17,6 +17,8 @@ export function useCatalogueReplay(){
     const panel=document.querySelector<HTMLElement>('.desktop-results-filters');
     if(panel&&panel.getBoundingClientRect().width>0){index++;tries=0;timer=setTimeout(next,200);return;}
    }
+   // Desktop breakfast settings are already open in the service dialog.
+   if(scene.id==='breakfast-order'&&action.text==='Добавить завтрак'&&document.querySelector('.breakfast-order-sheet')){index++;tries=0;timer=setTimeout(next,200);return;}
    const candidates=action.selector?Array.from(document.querySelectorAll<HTMLElement>(action.selector)).filter(e=>!('contains' in action)||e.textContent?.includes(String(action.contains))):Array.from(document.querySelectorAll<HTMLElement>('button,[role="button"]')).filter(e=>(e.textContent||'').trim().includes(action.text||'\0'));
    const element=candidates.find(e=>!e.closest('[inert],[aria-hidden="true"]')&&e.getBoundingClientRect().width>0&&!(e as HTMLButtonElement).disabled);
    if(!element){if(++tries>40){report('error',action.selector||action.text);return;}timer=setTimeout(next,200);return;}

@@ -23,7 +23,7 @@
 
 ## Материалы для маркетинга
 
-[Открыть каталог](https://glazest-t.github.io/keys-mobile-orbita/marketing/) · [Как использовать материалы](https://glazest-t.github.io/keys-mobile-orbita/marketing/start.html). Иллюстрации, баннеры, UI, шрифты, SVG/PNG и полный ZIP для сайтов, лендингов и соцсетей.
+[Открыть каталог](https://glazest-t.github.io/keys-mobile-orbita/marketing/) · [Как использовать материалы](https://glazest-t.github.io/keys-mobile-orbita/marketing/start.html). Баннеры, иллюстрации, UI, логотипы, шрифты, SVG/PNG и полный ZIP для сайтов, лендингов и соцсетей.
 
 ## Рабочие документы
 

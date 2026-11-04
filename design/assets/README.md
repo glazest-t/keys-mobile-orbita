@@ -2,6 +2,8 @@
 
 Эти материалы соответствуют опубликованной мобильной версии. Используйте их для задач дизайна, разработки и маркетинга.
 
+- **[Маркетинговый комплект — v1.1: 124 макета и страниц, актуальная графика и PDF](https://glazest-t.github.io/keys-mobile-orbita/marketing/)** · 929 исходных файлов приложения, 13 композиций, 4 новые иллюстрации и 12 баннеров; 03.11.2026. [Скачать ZIP](https://github.com/glazest-t/keys-mobile-orbita/releases/download/marketing-2026-11-03/keys-marketing-brand-kit-2026-11-03.zip).
+
 - **[Объёмные иконки предпочтений — 32 PNG, превью и ZIP](icons/preferences/README.md)** · утверждённый сет, 02.11.2026.
 - [Контурные UI-иконки](https://github.com/glazest-t/keys-mobile-orbita/tree/main/design/assets/icons) · навигация, действия и статусы.
 - [Логотипы](https://github.com/glazest-t/keys-mobile-orbita/tree/main/design/assets/logo).
@@ -9,7 +11,3 @@
 - [Материалы для разработки](../../docs/handoff/README.md).
 
 Прототип и живые экраны — текущий эталон интерфейса. Старые дизайн-варианты в эту библиотеку не включаются. Фотографии отелей и демонстрационные данные не являются универсальными рекламными материалами.
-
-## Материалы для маркетинга
-
-[Полный каталог и скачивание](https://glazest-t.github.io/keys-mobile-orbita/marketing/) · [Как создавать сайты, лендинги и баннеры](https://glazest-t.github.io/keys-mobile-orbita/marketing/start.html).

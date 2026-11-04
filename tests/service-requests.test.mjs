@@ -1,3 +1,4 @@
+import {breakfastSummary} from '../app/src/booking/breakfastSummary.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {initialCommerce,ensureAccount,startDraft,quoteDraft,commitBooking,cancelBooking,decodeCommerce,catalog} from '../app/src/booking/model.ts';
@@ -51,17 +52,33 @@ test('Заказ на все дни сохраняет ограничения о
  assert.equal(breakfastStayQuote(fixture('orbit-sea',true).bookings[0],{...input,mode:'room'},now).amountMinor,720000);
 });
 
-test('Добавить ещё создаёт отдельные завтраки, включая уже оплаченный день и включённый тариф',()=>{
+test('Повторный завтрак запрещён даже с устаревшим additional; доступны только свободные дни',()=>{
  const original=requestBreakfast(fixture(),owner,'service-trip',input,'first',now);
  original.bookings[0].serviceRequests[0].status='paid';
  const repeat={...input,additional:true};
- const next=requestBreakfast(original,owner,'service-trip',repeat,'extra',now);
+ assert.throws(()=>requestBreakfast(original,owner,'service-trip',repeat,'extra',now),/уже заказан/);
+ assert.deepEqual(breakfastStayQuote(original.bookings[0],repeat,now).dates,['2026-11-15']);
+ const next=requestBreakfast(original,owner,'service-trip',{...repeat,date:'2026-11-15'},'next-day',now);
  assert.equal(next.bookings[0].serviceRequests.length,2);
- assert.equal(next.bookings[0].serviceRequests[0].status,'paid');
- assert.equal(next.bookings[0].serviceRequests[1].status,'pending');
- assert.deepEqual(next.payment,original.payment);
- assert.equal(requestBreakfast(next,owner,'service-trip',repeat,'extra',now),next);
- assert.equal(breakfastStayQuote(next.bookings[0],repeat,now).dates.length,2);
- assert.equal(breakfastQuote(fixture('orbit-sea',true).bookings[0],repeat,now),300000);
- assert.throws(()=>breakfastQuote(next.bookings[0],repeat,'2026-11-16T10:00:00Z'));
+ assert.throws(()=>breakfastStayQuote(next.bookings[0],repeat,now),/Нет доступных дат/);
+ assert.equal(requestBreakfast(next,owner,'service-trip',{...repeat,date:'2026-11-15'},'next-day',now),next);
+ assert.throws(()=>breakfastQuote(fixture('orbit-sea',true).bookings[0],repeat,now),/включён/);
+});
+
+test('trip breakfast summary does not treat room delivery as buffet',()=>{
+ const b=fixture().bookings[0];
+ b.serviceRequests=[{id:'room-only',kind:'breakfast',mode:'room',status:'paid',date:'2026-11-14',time:'09:00',persons:1,amountMinor:180000,operation:{status:'confirmed'}}];
+ assert.equal(breakfastSummary(b).present,false);
+ assert.equal(breakfastSummary(b).details,'Не добавлена');
+ b.serviceRequests.push({...b.serviceRequests[0],id:'buffet',mode:'buffet'});
+ assert.equal(breakfastSummary(b).present,true);
+ assert.equal(breakfastSummary(b).label,'Добавлено');
+ assert.match(breakfastSummary(b).details,/07:00–11:00/);
+ assert.match(breakfastSummary(b).details,/1 этаж/);
+ assert.doesNotMatch(breakfastSummary(b).details,/оплат/i);
+ assert.match(breakfastSummary(b).details,/Гренадин/);
+ assert.doesNotMatch(breakfastSummary(b).details,/Доставка/);
+ b.serviceRequests[1].status='cancelled';
+ assert.equal(breakfastSummary(b).present,false);
+ assert.equal(breakfastSummary(b).details,'Не добавлена');
 });

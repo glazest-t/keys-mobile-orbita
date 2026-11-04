@@ -1,3 +1,4 @@
+import {DialogActions} from '../dialogActions';
 import {useEffect,useRef,useState} from 'react';
 import {BottomSheet} from '../mobile';
 import {Button} from '../ui';
@@ -28,6 +29,6 @@ export function BirthDatePicker({value,onSave,onClose}:{value:string;onSave:(val
  const iso=`${year}-${String(selectedMonth).padStart(2,'0')}-${String(selectedDay).padStart(2,'0')}`;
  return <BottomSheet open onOpenChange={open=>{if(!open)onClose();}} title="Дата рождения" snap={.55}><div className="sheet-body birth-date-sheet">
   <div className="birth-wheels"><div className="birth-wheel-highlight" aria-hidden="true"/><DateWheel label="День" items={Array.from({length:dayCount},(_,i)=>String(i+1))} index={selectedDay-1} onChange={i=>setDay(i+1)}/><DateWheel label="Месяц" items={months.slice(0,monthCount)} index={selectedMonth-1} onChange={i=>setMonth(i+1)}/><DateWheel label="Год" items={Array.from({length:maxYear-1899},(_,i)=>String(1900+i))} index={year-1900} onChange={i=>setYear(1900+i)}/></div>
-  <Button type="button" onClick={()=>onSave(iso)}>Готово</Button><Button type="button" variant="ghost" onClick={onClose}>Отмена</Button>
+  <DialogActions><Button type="button" onClick={()=>onSave(iso)}>Готово</Button><Button type="button" variant="ghost" onClick={onClose}>Отмена</Button></DialogActions>
  </div></BottomSheet>;
 }

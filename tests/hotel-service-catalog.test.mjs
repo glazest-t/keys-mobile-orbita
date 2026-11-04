@@ -10,8 +10,8 @@ const owner='+79001234567',now=Date.parse('2026-10-23T09:00:00Z'),stamp=new Date
 function fixture(){let s=ensureAccount(initialCommerce(),owner);s.search={...s.search,checkIn:'2026-11-13',checkOut:'2026-11-15'};s=startDraft(s,'pine-sochi',id);s.draft.contact={name:'Анна',surname:'Примерова',phone:owner,email:'anna@example.test'};s.draft.usePoints=false;return commitBooking(s,owner,quoteDraft(s,owner),'success',stamp);}
 const request=(s,service='cleaning',requestId='r',date='2026-11-14',time='10:00')=>requestCatalogService(s,owner,id,service,date,time,'',requestId,now);
 test('Полный каталог доступен демоотелю: категории, поиск, заявка без списания, сохранение и дубликаты',()=>{
- const s=fixture(),next=request(s);assert.equal(hotelServices.length,12);assert.deepEqual(filterHotelServices('Транспорт','').map(v=>v.id),['transfer','parking']);assert.equal(filterHotelServices('Популярное','ПОДУШКА')[0].id,'pillow');
- assert.deepEqual(next.payment,s.payment);assert.equal(next.bookings[0].serviceRequests[0].status,'pending');assert.equal(request(next),next);assert.equal(request(next,'cleaning','another').bookings[0].serviceRequests.length,2);assert.equal(decodeCommerce(JSON.stringify(next)).bookings[0].serviceRequests[0].serviceId,'cleaning');
+ const s=fixture(),next=request(s);assert.equal(hotelServices.length,13);assert.deepEqual(filterHotelServices('Транспорт','').map(v=>v.id),['transfer','parking']);assert.equal(filterHotelServices('Популярное','ПОДУШКА')[0].id,'pillow');
+ assert.deepEqual(next.payment,s.payment);assert.equal(next.bookings[0].serviceRequests[0].status,'pending');assert.equal(request(next),next);assert.throws(()=>request(next,'cleaning','another'),/уже заказана/);assert.equal(decodeCommerce(JSON.stringify(next)).bookings[0].serviceRequests[0].serviceId,'cleaning');
  assert.throws(()=>requestCatalogService(s,'other',id,'cleaning','2026-11-14','10:00','','bad',now),/доступа/);
 });
 test('Даты и время услуг ограничены проживанием; поздний выезд выбирается в день выезда',()=>{

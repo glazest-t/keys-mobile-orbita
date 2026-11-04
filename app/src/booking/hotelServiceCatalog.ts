@@ -2,11 +2,12 @@ import {addStayTimeService,stayTimeServiceOptions,guaranteedTimeService} from '.
 import {type Booking,type Commerce} from './model.ts';
 import {canManageBooking} from './bookingShare.ts';
 import {stayNow,stayCheckoutTime} from './stay.ts';
-import type {ServiceRequest} from './serviceRequests.ts';
+import {requestStatus,type ServiceRequest} from './serviceRequests.ts';
 
 // Approved full demo assortment. These are editable demonstration hotel settings, not real hotel offers.
 export const hotelServices=[
- {id:'breakfast',title:'Завтрак в номер',icon:'breakfast',category:'Еда',section:'Популярное',description:'Завтрак с доставкой в номер',amountMinor:180000},
+ {id:'breakfast-buffet',title:'Завтрак «шведский стол»',icon:'breakfast',category:'Еда',section:'Популярное',description:'Завтрак в ресторане отеля',amountMinor:150000},
+ {id:'breakfast',title:'Завтрак в номер',icon:'room-service',category:'Еда',section:'Популярное',description:'Завтрак с доставкой в номер',amountMinor:180000},
  {id:'cleaning',title:'Уборка',icon:'cleaning',category:'Номер',section:'Популярное',description:'Выберите удобное время',amountMinor:0},
  {id:'early',title:'Ранний заезд',icon:'early-check-in',category:'Номер',section:'Популярное',description:'С 09:00 до 12:00',amountMinor:250000},
  {id:'late',title:'Поздний выезд',icon:'late-check-out',category:'Номер',section:'Популярное',description:'До 15:00 или 18:00',amountMinor:300000},
@@ -47,7 +48,8 @@ export function requestCatalogService(s:Commerce,actor:string,bookingId:string,s
  if(!b||!canManageBooking(s,actor,b))throw Error('Нет доступа к поездке');
  if(b.operation.status!=='confirmed'||b.stay?.status==='checked_out')throw Error('Поездка завершена');
  if(b.serviceRequests?.some(r=>r.id===id))return s;
- if(!id||!item||item.id==='breakfast'||!catalogServiceDays(b,serviceId,now).includes(date)||!catalogServiceTimes(b,serviceId,date,now).includes(time))throw Error('Выберите доступные дату и время');
+ if(b.serviceRequests?.some(r=>r.serviceId===serviceId&&!['cancelled','declined','completed'].includes(requestStatus(b,r))))throw Error('Услуга уже заказана. Откройте существующий заказ, чтобы отменить его.');
+ if(!id||!item||item.id==='breakfast'||item.id==='breakfast-buffet'||!catalogServiceDays(b,serviceId,now).includes(date)||!catalogServiceTimes(b,serviceId,date,now).includes(time))throw Error('Выберите доступные дату и время');
  if(comment.length>500)throw Error('Комментарий — до 500 символов');
  if(item.id==='late'&&b.draft.services.includes('sea-late'))throw Error('Поздний выезд уже включён в бронь');
  if(item.id==='late'&&b.serviceRequests?.some(r=>r.serviceId===serviceId&&r.date===date&&['pending','confirmed','paid'].includes(r.status)))throw Error('На эту дату уже есть заявка');

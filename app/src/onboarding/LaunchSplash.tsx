@@ -1,3 +1,4 @@
+import {DialogActions} from '../dialogActions';
 import {useEffect,useRef,useState} from 'react';
 import {useReducedMotion} from 'motion/react';
 import {Button,Mark,StatusBadge} from '../ui';
@@ -32,6 +33,6 @@ export function LaunchSplash({onDone,biometricOutcome,onPin,preview=false}:{prev
   <div className="launch-feedback" aria-live="polite">
    {phase==='success'?<StatusBadge tone="success" icon="check">Вход выполнен</StatusBadge>:failed?<p>{phase==='failure'?'Не удалось распознать':'Биометрия недоступна'}</p>:phase==='checking'?<p>Проверяем биометрию</p>:<p className="onboarding-tagline">Ключи от всех отелей</p>}
   </div>
-  {biometricOutcome&&phase!=='success'&&<div className="launch-actions">{failed&&<p>Войдите с помощью PIN-кода.</p>}<Button variant={failed?'primary':'ghost'} onClick={onPin}>Ввести PIN-код</Button>{phase==='failure'&&<Button variant="secondary" onClick={()=>setPhase('checking')}>Попробовать снова</Button>}</div>}
+  {biometricOutcome&&phase!=='success'&&<div className="launch-actions">{failed&&<p>Войдите с помощью PIN-кода.</p>}<DialogActions><Button variant={failed?'primary':'ghost'} onClick={onPin}>Ввести PIN-код</Button>{phase==='failure'&&<Button variant="secondary" onClick={()=>setPhase('checking')}>Попробовать снова</Button>}</DialogActions></div>}
  </div></div>;
 }

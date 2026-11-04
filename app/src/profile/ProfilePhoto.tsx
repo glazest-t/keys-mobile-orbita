@@ -1,3 +1,4 @@
+import {DialogActions} from '../dialogActions';
 import {useEffect,useRef,useState} from 'react';
 import {BottomSheet} from '../mobile';
 import {Button,Icon} from '../ui';
@@ -18,9 +19,9 @@ export function ProfilePhoto({name,photo,onSave}:{name:string;photo?:string;onSa
    <div className="profile-photo-preview" aria-label="Предпросмотр фото профиля">{draft?<img src={draft} alt="Фото профиля"/>:<span>{initials}</span>}</div>
    <input ref={file} hidden type="file" accept="image/jpeg,image/png,image/webp" aria-label="Выбрать фото профиля" onChange={e=>{const image=e.target.files?.[0];e.target.value='';if(image)void choose(image);}}/>
    {error&&<p className="field-error" role="alert">{error}</p>}
-   <Button variant="secondary" busy={busy} busyLabel="Обрабатываем фото" onClick={()=>file.current?.click()}><Icon name="camera" size={20} inheritColor/>{draft?'Выбрать другое фото':'Выбрать фото'}</Button>
+   <DialogActions><Button variant="secondary" busy={busy} busyLabel="Обрабатываем фото" onClick={()=>file.current?.click()}><Icon name="camera" size={20} inheritColor/>{draft?'Выбрать другое фото':'Выбрать фото'}</Button>
    <Button disabled={busy||draft===photo} onClick={save}>Сохранить</Button>
-   {draft&&<Button variant="ghost" disabled={busy} onClick={()=>{setDraft(undefined);setError('');}}>Удалить фото</Button>}
+   {draft&&<Button variant="ghost" disabled={busy} onClick={()=>{setDraft(undefined);setError('');}}>Удалить фото</Button>}</DialogActions>
   </div></BottomSheet>
  </>;
 }

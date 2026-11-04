@@ -20,3 +20,6 @@ import './buttons.css';
 import "./checkout-reward.css";
 
 import "./page-background.css";
+import './service-dialogs.css';
+
+import "./service-catalog.css";

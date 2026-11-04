@@ -23,16 +23,17 @@ test('Денежные значения округляются до рубля, 
   assert.equal(actual,new Intl.NumberFormat('ru-RU',{style:'currency',currency:'RUB',maximumFractionDigits:0}).format(expected));
  }
 });
-test('Завтрак: включён, ожидает оплаты, оплачен, отменён и доставка',()=>{
+test('Завтрак в поездке: добавлен, включён, отменён; доставка учитывается отдельно',()=>{
  const s=activateTripScenario(initialCommerce(),owner,'staying','breakfast-summary');const b=s.bookings[0];
  assert.equal(breakfastSummary(b).present,false);
- assert.equal(breakfastSummary({...b,draft:{...b.draft,services:['sea-breakfast']}}).label,'Оплачен');
+ assert.equal(breakfastSummary({...b,draft:{...b.draft,services:['sea-breakfast']}}).label,'Добавлено');
  const r={id:'x',kind:'breakfast',status:'confirmed',date:b.draft.search.checkOut,time:'09:00',persons:1,mode:'room',comment:'',amountMinor:150000,createdAt:b.createdAt};
- const added={...b,serviceRequests:[r]};assert.equal(breakfastSummary(added).label,'Ожидает оплаты');
- assert.equal(breakfastSummary(added).details,'09:00 · Доставка в номер');
- assert.equal(breakfastSummary({...b,serviceRequests:[{...r,status:'paid',operation:{status:'confirmed'}}]}).label,'Оплачен');
+ const added={...b,serviceRequests:[r]};assert.equal(breakfastSummary(added).present,false);
+ assert.equal(breakfastSummary(added).details,'Не добавлена');
+ assert.equal(breakfastSummary({...b,serviceRequests:[{...r,mode:'buffet',settlement:'at_hotel'}]}).label,'Добавлено');
+ assert.equal(breakfastSummary({...b,serviceRequests:[{...r,mode:'buffet',status:'paid',operation:{status:'confirmed'}}]}).label,'Добавлено');
  assert.equal(breakfastSummary({...b,serviceRequests:[{...r,status:'cancelled'}]}).present,false);
  const included={...b,draft:{...b.draft,rateId:'sea-standard-breakfast'}};
- assert.equal(breakfastSummary(included).label,'Включён');
+ assert.equal(breakfastSummary(included).label,'Включено');
  assert.match(breakfastSummary(included).details,/07:00–11:00.*Гренадин.*1 этаж/);
 });

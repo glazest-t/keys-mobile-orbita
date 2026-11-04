@@ -1,3 +1,4 @@
+import {DialogActions} from '../dialogActions';
 import {useState} from 'react';
 import {StatusBadge,Button,Icon} from '../ui';
 import './cancellation.css';
@@ -27,7 +28,7 @@ export function CancellationPanel({booking,onConfirm,onClose}:{booking:Booking;o
   </p>
   {servicePaid.length>0&&<p className="cancellation-subtitle">Дополнительные услуги отменяются вместе с бронью. Возврат по каждой услуге рассчитан с учётом её бесплатного срока.</p>}
   {error&&<p className="field-error" role="alert">{error}</p>}
-  <Button className="cancellation-confirm" variant="danger" onClick={()=>{try{onConfirm();}catch(e){setError((e as Error).message);}}}>Отменить бронь</Button>
-  <Button className="cancellation-keep" variant="ghost" onClick={onClose}>Оставить бронь</Button>
+  <DialogActions><Button className="cancellation-confirm" variant="danger" onClick={()=>{try{onConfirm();}catch(e){setError((e as Error).message);}}}>Отменить бронь</Button>
+  <Button className="cancellation-keep" variant="ghost" onClick={onClose}>Оставить бронь</Button></DialogActions>
  </div>;
 }
