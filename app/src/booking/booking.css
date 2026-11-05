@@ -57,7 +57,7 @@
 .hotel-loyalty-note>.icon-tile{width:44px;height:44px;border-radius:15px;color:#7a5a32}
 .hotel-loyalty-note .loyalty-check{color:#16865a}
 .booking-extras{border:1px solid #e4e7ef;border-radius:22px;background:#fff;padding:12px 14px;display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:12px;align-items:center;text-align:left;color:#101320}
-.booking-extras>.icon-tile{width:44px;height:44px;border-radius:15px;background:#eef0ff;color:#2f5bff}
+.booking-extras>.icon-tile{width:44px;height:44px;border-radius:15px;background:var(--k-icon-surface,#eaf2ff);color:#2f5bff}
 .booking-extras>span:nth-child(2){display:flex;flex-direction:column}
 .booking-extras strong{font:500 15px/21px Onest}
 .booking-extras small{font:400 12px/17px Onest;color:#5a6072}
@@ -72,7 +72,7 @@
 .booking-total-label{display:flex;flex-direction:column;gap:2px;font:500 13px/18px Onest}
 .booking-total-details .booking-total-label small{font:400 11px/15px Onest;color:#5a6072;text-align:left}
 .booking-total-details>strong{font:500 19px/25px Unbounded;letter-spacing:-.6px;white-space:nowrap}
-.booking-total-arrow{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#eef0ff;color:#2f5bff}
+.booking-total-arrow{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--k-icon-surface,#eaf2ff);color:#2f5bff}
 .booking-total-arrow .k-icon{transform:rotate(180deg)}
 .booking-total-details:focus-visible{outline:2px solid #5a6072;outline-offset:3px;border-radius:8px}
 .booking-price-details{display:flex;flex-direction:column;gap:20px}
@@ -128,3 +128,13 @@
 .hotel-hero-track>.hero-photo{position:relative;flex:0 0 100%;min-width:0}
 .source-hotel-hero .hero-actions{pointer-events:none}
 .source-hotel-hero .hero-actions button{pointer-events:auto}
+
+/* Compact hotel price summary: price and discount share a baseline. */
+.hotel-price-card>button:first-child{padding:12px 16px;gap:12px;align-items:center}
+.hotel-price-card>button:first-child>span{flex:1;min-width:0;gap:4px}
+.hotel-price-card>button:first-child>.k-icon{flex:none}
+.hotel-price-card .personal-price{align-items:center;line-height:18px}
+.hotel-price-card .hotel-price-value{align-items:center;gap:6px 8px}
+.hotel-price-card .hotel-price-value strong{font:500 20px/28px Unbounded,sans-serif;letter-spacing:-.6px;white-space:nowrap}
+.keys-app .hotel-price-card .hotel-price-value>s{flex-basis:auto;margin-left:0;font:400 12px/18px Onest,sans-serif;white-space:nowrap}
+.hotel-price-card>.watch-price{min-height:40px;padding:9px 16px;gap:6px;line-height:20px}

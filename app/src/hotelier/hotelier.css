@@ -74,7 +74,7 @@
 .invite-audiences{display:flex;flex-direction:column;gap:10px}
 .invite-audience{display:grid;grid-template-columns:44px minmax(0,1fr) 22px;gap:12px;align-items:center;padding:14px 16px;border:1.5px solid #e4e7ef;border-radius:20px;background:#fff;text-align:left;color:#101320}
 .invite-audience.is-selected{border-color:#2f5bff;box-shadow:0 0 0 4px #eef0ff}
-.invite-audience .icon-tile{width:44px;height:44px;border-radius:15px;background:#eef0ff;color:#2f5bff}
+.invite-audience .icon-tile{width:44px;height:44px;border-radius:15px;background:var(--k-icon-surface,#eaf2ff);color:#2f5bff}
 .invite-audience>span:nth-child(2){display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-width:0}
 .invite-audience strong{font:500 15px/21px Onest}
 .invite-audience small{font:400 12px/17px Onest;color:#5a6072}

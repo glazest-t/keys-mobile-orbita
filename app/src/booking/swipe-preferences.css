@@ -14,7 +14,7 @@
 .orbit-bubble-item:nth-child(5),.orbit-bubble-item:nth-child(10){grid-column:4 / span 2}
 .orbit-bubble-item:nth-child(6){grid-column:1 / span 2}
 .orbit-bubble-item:nth-child(3n+2) .swipe-theme{background:linear-gradient(145deg,#FFF 0%,#E9EAFF 100%)}
-.swipe-theme-symbol{display:grid;place-items:center;flex:none;width:36px;height:36px;border-radius:50%;color:var(--k-action-primary);background:var(--k-action-tint);box-shadow:inset 0 1px 0 #FFFFFF}
+.swipe-theme-symbol{display:grid;place-items:center;flex:none;width:36px;height:36px;border-radius:50%;color:var(--k-action-primary);background:var(--k-icon-surface,#eaf2ff);box-shadow:inset 0 1px 0 #FFFFFF}
 .swipe-theme-label{position:relative;max-width:100%;font-weight:500}
 .swipe-preferences .swipe-theme[aria-checked=true]{background:linear-gradient(145deg,var(--k-action-primary),var(--k-action-pressed));border-color:var(--k-action-primary);box-shadow:inset 0 0 0 3px #FFFFFF26,0 6px 16px #2F5BFF26;color:white}
 .swipe-theme[aria-checked=true] .swipe-theme-symbol{color:white;background:#FFFFFF1F;box-shadow:inset 0 1px 0 #FFFFFF33}

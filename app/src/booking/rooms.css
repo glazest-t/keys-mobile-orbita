@@ -28,7 +28,7 @@
 .room-tariff.friendly .room-rate-price{border-color:#ffffff1f}
 .room-tariff.friendly .room-rate-price>button{background:#fff;color:#101320}
 .room-rate-badge,.room-detail-badge{align-self:flex-start;border-radius:11px;background:#ffffff1f;color:#ffd98a;padding:4px 7px;font:500 11px/15px Onest}
-.room-detail-badge{background:#eef0ff;color:#2f5bff}
+.room-detail-badge{background:var(--k-icon-surface,#eaf2ff);color:#2f5bff}
 .room-equipment,.room-rate-detail,.room-filters-sheet{display:flex;flex-direction:column;gap:18px;padding:0 20px 28px}
 .room-specs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .room-specs>span{display:flex;gap:8px;align-items:center;font:400 13px/19px Onest}

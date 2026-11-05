@@ -31,3 +31,14 @@
 .nearby-preview-link{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:44px;padding:0;border:0;border-radius:8px;background:none;color:var(--k-text-primary);font:inherit;text-align:left;cursor:pointer}
 .nearby-preview-all{display:flex;align-items:center;gap:4px;color:var(--k-action-primary);font:500 13px/18px Onest}
 .nearby-preview-link:focus-visible{outline:2px solid var(--k-action-primary);outline-offset:3px}
+
+.detail-header>.nearby-header-title{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0}
+.detail-header>.nearby-header-title>small{font:400 12px/18px Onest,sans-serif;color:var(--k-text-secondary,#5a6072)}
+
+/* Trip preview remains useful without place photography. */
+.keys-app .stay-nearby-row.k-list-row{grid-template-columns:44px minmax(0,1fr);gap:12px;padding:6px 0}
+.stay-nearby-row>.nearby-category-tile{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:var(--k-icon-surface,#eaf2ff);color:#2f5bff}
+.stay-nearby-row>.nearby-category-tile.nature{background:#e8f5ef;color:#237f60}
+.stay-nearby-row>.nearby-category-tile.museum{background:#fff3df;color:#98671e}
+.stay-nearby-row>span:last-child{min-width:0;gap:4px}
+.stay-nearby-row strong{overflow-wrap:anywhere}

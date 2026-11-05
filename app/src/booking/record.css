@@ -23,7 +23,7 @@
 .record-edit-options{border:1px solid #e4e7ef;border-radius:22px;background:#fff;overflow:hidden}
 .record-edit-options>button,.record-edit-options>div{width:100%;display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:center;gap:12px;padding:11px 16px;border:0;background:transparent;color:#101320;text-align:left;font:400 15px/21px Onest}
 .record-edit-options>*+*{border-top:1px solid #eef0f4}
-.record-edit-options .icon-tile{width:44px;height:44px;border-radius:15px;background:#eef0ff;color:#2f5bff}
+.record-edit-options .icon-tile{width:44px;height:44px;border-radius:15px;background:var(--k-icon-surface,#eaf2ff);color:#2f5bff}
 .record-edit-options>*>span:nth-child(2){display:flex;flex-direction:column;gap:3px}.record-edit-options strong{font-weight:500}.record-edit-options small{font:400 12px/17px Onest;color:#5a6072}.record-edit-options .record-edit-link{font:500 12px/17px Onest;color:#2f5bff}
 .record-footer{padding:16px 16px 38px;background:#fff;border-top:1px solid #e4e7ef}.record-footer .field-error{margin:0 0 8px}
 .bottom-sheet:has(.record-cancellation){border-radius:30px 30px 0 0}.bottom-sheet:has(.record-cancellation) .sheet-title{font:500 20px/26px Unbounded;letter-spacing:-.5px}

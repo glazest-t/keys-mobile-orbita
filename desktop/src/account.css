@@ -135,7 +135,7 @@
 .desktop-app[data-route="loyalty-network"] .benefit-network-name small,
 .desktop-app[data-route="loyalty-network"] .benefit-network-value > span,
 .desktop-app[data-route="loyalty-network"] .benefit-network-hero > p { color: var(--k-text-secondary,#5a6072); }
-.desktop-app[data-route="loyalty-network"] .benefit-network-name .icon-tile { background: var(--k-action-tint,#eef0ff); color: var(--k-action-primary,#2f5bff); }
+.desktop-app[data-route="loyalty-network"] .benefit-network-name .icon-tile { background: var(--k-icon-surface,#eaf2ff); color: var(--k-action-primary,#2f5bff); }
 
 .desktop-app .desktop-program-search { grid-row: 1; display: flex; align-items: center; gap: 12px; width: min(100%,628px); height: 52px; padding: 0 16px; border: 1px solid var(--k-border-subtle,#e4e7ef); border-radius: 16px; background: #fff; color: var(--k-text-secondary,#5a6072); }
 .desktop-app .desktop-program-search:focus-within { border-color: #8990a2; }

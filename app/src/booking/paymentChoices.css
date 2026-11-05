@@ -9,7 +9,7 @@
 .payment-extra-options{border:1px solid #e4e7ef;border-radius:20px;background:#fff;overflow:hidden}
 .payment-extra-options>button{display:grid;grid-template-columns:36px minmax(0,1fr) 18px;gap:12px;align-items:center;width:100%;padding:12px 14px;border:0;background:transparent;text-align:left;color:#101320}
 .payment-extra-options>button+button{border-top:1px solid #eef0f4}
-.payment-extra-options .icon-tile{width:36px;height:36px;border-radius:12px;background:#eef0ff;color:#2f5bff}
+.payment-extra-options .icon-tile{width:36px;height:36px;border-radius:12px;background:var(--k-icon-surface,#eaf2ff);color:#2f5bff}
 .payment-extra-options strong{font:500 14px/20px Onest}
 .payment-extra-options [aria-pressed=true]{background:#eef0ff}
 .payment-extra-options .radio-dot.checked{border:5px solid #2f5bff}

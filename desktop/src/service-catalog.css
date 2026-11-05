@@ -22,7 +22,7 @@
 .desktop-app .service-catalog-card.hotel-service-row{border:1px solid #e3e8f0;border-radius:20px;background:#fff;overflow:hidden;padding:18px;min-height:136px;display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:14px;row-gap:14px;align-items:start;cursor:pointer;transition:box-shadow .18s,border-color .18s}
 .desktop-app .service-catalog-card.hotel-service-row:hover{border-color:#b9caff;box-shadow:0 6px 20px #1938750c;background:#fbfcff}
 .service-catalog-card:focus-visible,.service-catalog-nav button:focus-visible,.service-orders-tabs button:focus-visible{outline:2px solid #2f5bff;outline-offset:3px}
-.desktop-app .service-catalog-card>.icon-tile{border-radius:14px;background:#edf3ff;color:#2f5bff}
+.desktop-app .service-catalog-card>.icon-tile{border-radius:14px;background:var(--k-icon-surface,#eaf2ff);color:#2f5bff}
 .desktop-app .service-catalog-card .service-catalog-copy{display:flex;flex-direction:column;gap:5px;min-width:0}
 .desktop-app .service-catalog-card strong{font:500 16px/23px Onest;color:#101320}
 .desktop-app .service-catalog-card small{font:400 13px/19px Onest;color:#717787}

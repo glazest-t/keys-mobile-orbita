@@ -8,7 +8,7 @@
 .bill-line+.bill-line{border-top:1px solid #eef0f4}
 .bill-line>span:nth-child(2){display:flex;flex-direction:column;min-width:0;gap:1px}
 .bill-line strong{font:500 15px/21px Onest}.bill-line small{font:400 12px/17px Onest;color:#5a6072}.bill-line>b{font:500 14px/20px Onest;white-space:nowrap}
-.bill-line .icon-tile{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:15px;color:#2f5bff;background:#eef0ff}
+.bill-line .icon-tile{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:15px;color:#2f5bff;background:var(--k-icon-surface,#eaf2ff)}
 .bill-breakdown{display:flex;flex-direction:column;gap:8px;padding:8px 4px;font:400 14px/20px Onest;color:#5a6072}
 .bill-breakdown>span{display:flex;justify-content:space-between;gap:12px}.bill-breakdown strong{font-weight:500;color:#101320}
 .bill-footer{padding:12px 16px;background:#fff;display:flex;flex-direction:column;justify-content:center;gap:10px;height:112px;border-top:1px solid #e4e7ef}

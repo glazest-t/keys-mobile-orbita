@@ -1,0 +1,26 @@
+/* Hotel facilities are informational; only the final row opens the full list. */
+.hotel-facilities-card{background:var(--k-surface-card,#fff);border-radius:24px;overflow:hidden;padding:8px 20px 0}
+.hotel-facilities-list{display:grid;grid-template-columns:minmax(0,1fr);list-style:none;margin:0;padding:0}
+.hotel-facilities-list>li{display:flex;align-items:center;gap:16px;min-height:42px;padding:7px 0;color:var(--k-action-primary,#2f5bff);font:400 15px/22px Onest,sans-serif;overflow-wrap:anywhere}
+.hotel-facilities-list>li>.k-icon{flex:none;color:var(--k-action-primary,#2f5bff)}
+.hotel-facilities-card>.hotel-facilities-all{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:52px;width:100%;margin-top:8px;padding:12px 0;border:0;border-top:1px solid var(--k-border-subtle,#e4e7ef);border-radius:0;background:none;color:var(--k-action-primary,#2f5bff);font:500 15px/22px Onest,sans-serif;text-align:left;cursor:pointer}
+.hotel-facilities-card>.hotel-facilities-all>.k-icon{flex:none}
+.hotel-facilities-card:not(:has(.hotel-facilities-all)){padding-bottom:8px}
+.keys-app .source-hotel-body .hotel-section h2,.keys-app .hotel-preferences>header>small,.keys-app .desktop-preferences-heading>span:first-child{margin:0;font:500 18px/26px Unbounded,sans-serif;letter-spacing:-.4px;color:var(--k-text-primary,#101320)}
+.hotel-section.hotel-arrival-section{gap:10px}
+.hotel-arrival-times{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:0;padding:0 4px 4px;border:0}
+.hotel-arrival-times>div{display:grid;grid-template-columns:24px minmax(0,1fr);column-gap:12px;row-gap:2px;align-items:center;color:var(--k-text-secondary,#5a6072)}
+.hotel-arrival-times .k-icon{grid-row:1/3;color:var(--k-text-secondary,#5a6072)}
+.hotel-arrival-times dt{font:400 13px/19px Onest,sans-serif;color:var(--k-text-secondary,#5a6072)}
+.hotel-arrival-times dd{margin:0;font:500 17px/24px Onest,sans-serif;color:var(--k-text-primary,#101320)}
+.desktop-hotel-information>.hotel-amenities-section,.desktop-hotel-information>.hotel-arrival-section{padding:0;border:0;border-radius:0;background:none}
+.desktop-hotel-information .hotel-facilities-card{padding:12px 24px;border:1px solid var(--k-border-subtle,#e4e7ef)}
+.desktop-hotel-information .hotel-facilities-list{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:24px}
+.desktop-hotel-information .hotel-arrival-times{max-width:600px}
+@media(min-width:801px) and (max-width:1100px){.desktop-hotel-information .hotel-facilities-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:380px){.hotel-arrival-times{gap:10px}.hotel-arrival-times>div{column-gap:8px}.hotel-arrival-times dd{font-size:16px}}
+.hotel-facilities-list>li>span:last-child{color:var(--k-text-primary,#101320)}
+
+/* Separate sections more clearly while keeping each heading with its content. */
+.source-hotel-body:not(.desktop-hotel-information){gap:24px}
+.source-hotel-body:not(.desktop-hotel-information)>.hotel-section{margin-top:8px;gap:10px}

@@ -49,7 +49,7 @@
 .room-control-panel{position:absolute;left:12px;right:12px;bottom:15px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:22px 7px 24px;border-radius:25px;background:#fff;box-shadow:0 12px 28px #1013201f;transform:var(--sum-t);opacity:var(--sum-o);transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .45s ease;transition-delay:var(--sum-d)}
 .room-control-feature{position:relative;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;font:500 14px/18px var(--k-font-text);color:var(--k-text-primary);transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .45s ease}
 .room-control-feature+.room-control-feature:before{content:'';position:absolute;left:0;top:15px;width:1px;height:68px;background:var(--k-border-subtle)}
-.room-control-icon{position:relative;display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#eeeaff;color:#6842df}
+.room-control-icon{position:relative;display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--k-icon-surface,#eaf2ff);color:#6842df}
 .room-control-feature--door{transform:var(--c1-t);opacity:var(--c1-o);transition-delay:var(--c1-d)}
 .room-control-feature--service{transform:var(--c2-t);opacity:var(--c2-o);transition-delay:var(--c2-d)}
 .room-control-feature--wifi{transform:var(--c3-t);opacity:var(--c3-o);transition-delay:var(--c3-d)}
@@ -75,9 +75,9 @@
 .onboarding-benefit{display:flex;align-items:flex-start;gap:18px;transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .45s ease}
 .onboarding-benefit--keys{transform:var(--c1-t);opacity:var(--c1-o);transition-delay:var(--c1-d)}
 .onboarding-benefit--hotel{transform:var(--c2-t);opacity:var(--c2-o);transition-delay:var(--c2-d)}
-.onboarding-benefit-icon{display:grid;place-items:center;flex:none;width:70px;height:70px;border-radius:50%;background:var(--k-action-tint);color:#8064a9}
+.onboarding-benefit-icon{display:grid;place-items:center;flex:none;width:70px;height:70px;border-radius:50%;background:var(--k-icon-surface,#eaf2ff);color:#8064a9}
 .onboarding-benefit-icon>img{width:34px;height:34px}
-.onboarding-benefit--hotel .onboarding-benefit-icon{background:#eee8fa}
+.onboarding-benefit--hotel .onboarding-benefit-icon{background:var(--k-icon-surface,#eaf2ff)}
 .onboarding-benefit>div{min-width:0;padding-top:4px}
 .keys-app .onboarding-benefit h2{margin:0 0 7px;font:600 18px/24px var(--k-font-text)}
 .keys-app .onboarding-benefit p{margin:0;font:400 16px/22px var(--k-font-text);color:var(--k-text-secondary)}

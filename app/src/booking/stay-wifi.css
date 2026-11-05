@@ -4,7 +4,7 @@
 .sheet-body.wifi-sheet{padding:0;gap:16px}
 .wifi-heading{display:flex;align-items:center;gap:14px}
 .wifi-symbol{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#2f5bff;color:#fff;box-shadow:0 10px 22px #2f5bff40;flex:none}
-.wifi-symbol.soft{background:#eef0ff;color:#2f5bff;box-shadow:none}
+.wifi-symbol.soft{background:var(--k-icon-surface,#eaf2ff);color:#2f5bff;box-shadow:none}
 .wifi-heading>div{display:flex;flex-direction:column;gap:4px}
 .wifi-heading strong{font:500 20px/26px Unbounded;letter-spacing:-.5px}
 .wifi-heading p{font:400 14px/20px Onest;color:#5a6072;margin:0}
