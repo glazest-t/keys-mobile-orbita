@@ -1,4 +1,5 @@
 @import url('/brand/tokens.css');
+:root{--k-filter-gap:4px}
 /* Use the surrounding text color instead of iOS Safari's native button blue.
    Keep specificity below component styles so semantic action colors win. */
 :where(.keys-app) button{color:inherit;}

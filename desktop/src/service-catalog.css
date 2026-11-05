@@ -38,7 +38,7 @@
 .service-catalog-more{display:flex;flex-direction:column;gap:14px}
 .desktop-app .service-catalog-more h3{font:500 18px/26px Onest;margin:0}
 .service-catalog-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.service-orders-tabs{display:flex;gap:8px}
+.service-orders-tabs{display:flex;gap:var(--k-filter-gap)}
 .service-orders-tabs button{min-height:38px;border:1px solid #e4e8f0;border-radius:20px;padding:8px 14px;background:#fff;font:500 13px/20px Onest;color:#5a6072;cursor:pointer}
 .service-orders-tabs button[aria-pressed=true]{background:#edf3ff;color:#2f5bff;border-color:#cad8ff}
 .service-catalog-orders{border:1px solid #e4e8f0;border-radius:22px;padding:8px 22px}

@@ -15,7 +15,7 @@
 .price-slider input::-webkit-slider-thumb{appearance:none;width:24px;height:24px;border-radius:50%;background:#fff;border:6px solid #2f5bff;box-shadow:0 2px 8px #10132033;pointer-events:auto;cursor:grab}
 .price-slider input:focus-visible{outline:0}
 .price-slider input:focus-visible::-webkit-slider-thumb{outline:2px solid #5a6072;outline-offset:3px}
-.filter-styles{display:flex;flex-wrap:wrap;gap:8px}
+.filter-styles{display:flex;flex-wrap:wrap;gap:var(--k-filter-gap)}
 .filters-panel .filter-chip{height:36px;min-height:36px;padding:0 14px;border-radius:18px;font:500 13px Onest;border:1px solid #e4e7ef;background:#fff;color:#101320}
 .filters-panel .filter-chip.selected{background:#2f5bff;border-color:#2f5bff;color:white}
 .filter-rating{display:grid;grid-template-columns:repeat(3,1fr);padding:4px;border-radius:14px;background:#e9ecf4;gap:4px}

@@ -49,7 +49,7 @@
 .room-detail-price strong{font:500 18px/24px Unbounded;white-space:nowrap}
 .room-detail-price small{font:400 12px/17px Onest;color:#5a6072}
 .room-detail-price .k-button{width:auto;flex:none;padding:0 24px}
-.room-bed-filters{display:flex;flex-wrap:wrap;gap:8px}
+.room-bed-filters{display:flex;flex-wrap:wrap;gap:var(--k-filter-gap)}
 .room-filters-sheet h3{margin:0;font:500 14px/20px Onest}
 .room-empty{display:flex;flex-direction:column;gap:12px;padding:28px 12px;text-align:center}
 .room-gallery{padding-bottom:calc(var(--flow-footer-height) + var(--mobile-safe-area-height) + 24px)!important}

@@ -22,7 +22,7 @@
 .desktop-results-filters .filter-section:last-child{border:0;padding-bottom:0}
 .desktop-results-filters .filter-section-heading{font-size:14px}
 .desktop-results-filters .filter-section-body{gap:12px;padding-top:12px}
-.desktop-results-filters .filter-styles{gap:6px}
+.desktop-results-filters .filter-styles{gap:var(--k-filter-gap)}
 .desktop-results-filters .filter-chip{font-size:12px;line-height:17px;min-height:32px;height:auto;white-space:normal;text-align:left;padding:6px 10px}
 .desktop-results-filters .filter-chip.selected{background:#eef0ff;border-color:#c9d2ff;color:#2f5bff}
 .desktop-results-filters .filter-price-heading{gap:4px;flex-wrap:wrap}
@@ -107,7 +107,7 @@
 .desktop-results-search form>button:not(.k-button){padding:8px 12px;gap:10px}
 .desktop-results-search strong{font-size:14px}
 .desktop-results-list>.results-controls-rail{min-width:0;width:100%;overflow:hidden}
-.desktop-results-list .results-controls-rail .discovery-chip-track{padding:0;gap:8px;flex-wrap:wrap;width:100%;box-sizing:border-box}
+.desktop-results-list .results-controls-rail .discovery-chip-track{padding:0;gap:var(--k-filter-gap);flex-wrap:wrap;width:100%;box-sizing:border-box}
 .desktop-results-list .results-controls-rail .filter-chip{height:34px;min-height:34px;font-size:12px;padding:0 12px}
 .desktop-results-list .results-controls-rail .sort-icon-chip{padding:0;width:36px}
 @media(max-width:1050px){
@@ -134,7 +134,7 @@
 .desktop-results-filters .filter-section{padding:20px 0;border-color:var(--k-border-subtle)}
 .desktop-results-filters .filter-section-heading{font:500 15px/22px Onest,sans-serif;min-height:32px}
 .desktop-results-filters .filter-section-body{padding-top:12px;gap:16px}
-.desktop-results-filters .filter-styles{gap:8px}
+.desktop-results-filters .filter-styles{gap:var(--k-filter-gap)}
 .desktop-results-filters .filter-chip{font:400 13px/18px Onest,sans-serif;min-height:36px;padding:8px 12px;border-radius:18px;border-color:var(--k-border-subtle)}
 .desktop-results-filters .filter-chip.selected{font-weight:500;background:var(--k-action-tint);color:var(--k-action-primary)}
 .desktop-results-filters .filter-price-heading{min-height:36px;margin:0;gap:8px}

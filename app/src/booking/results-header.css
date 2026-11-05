@@ -26,3 +26,6 @@
 .results-sort-option[aria-pressed=true]{background:var(--k-action-tint);color:var(--k-action-primary);font-weight:500}
 .results-sort-check{display:grid;place-items:center;width:22px;height:22px;border:1px solid var(--k-border-subtle);border-radius:50%;flex:none}
 .results-sort-option[aria-pressed=true] .results-sort-check{background:var(--k-action-primary);border-color:var(--k-action-primary);color:#fff}
+
+/* Shared spacing for quick filters and full filter settings. */
+.results-controls-rail .discovery-chip-track,.map-filter-rail .discovery-chip-track{column-gap:var(--k-filter-gap)}

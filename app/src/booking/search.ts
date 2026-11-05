@@ -12,7 +12,7 @@ export function rememberSearch(state:Commerce,value:RecentSearch):Commerce{
 export function destinationSuggestions(query:string,state:Commerce){
  const q=normalizeQuery(query);
  const cities=popularCities.filter(city=>!!q&&city.toLocaleLowerCase('ru-RU').includes(q)).map(city=>({id:city,title:city,city,hotelId:undefined as string|undefined,subtitle:cityCount(city)}));
- const hotels=q?catalog.hotels.filter(h=>normalizeQuery(h.name+' '+h.city+' '+hotelFacets(h.id)?.district).includes(q)).map(h=>({id:h.id,title:h.name,city:h.city,hotelId:h.id,subtitle:`${hotelFacets(h.id)?.type||'Отель'} · ${h.city}${searchHotels({...state,search:{...state.search,city:h.city}}).some(v=>v.id===h.id)?'':' · нет мест на эти даты'}`})):[];
+ const hotels=q?catalog.hotels.filter(h=>normalizeQuery(h.name+' '+h.city+' '+hotelFacets(h.id)?.district).includes(q)).map(h=>({id:h.id,title:h.name,city:h.city,hotelId:h.id,subtitle:`${hotelFacets(h.id)?.type||'Отель'} · ${h.city}${!state.search.checkIn||!state.search.checkOut||searchHotels({...state,search:{...state.search,city:h.city}}).some(v=>v.id===h.id)?'':' · нет мест на эти даты'}`})):[];
  return [...cities,...hotels];
 }
 export function collectionSearch(search:Search,kind:string):Search{

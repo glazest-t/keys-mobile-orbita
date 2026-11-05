@@ -9,8 +9,7 @@
 .gis-zoom{position:absolute;right:12px;top:50%;transform:translateY(-50%);z-index:3;display:flex;flex-direction:column;border:1px solid #E4E7EF;border-radius:14px;background:white;box-shadow:0 4px 14px #10132018;overflow:hidden}.gis-zoom button{width:42px;height:42px;border:0;background:white;color:#101320;font:400 24px/1 Onest}.gis-zoom button+button{border-top:1px solid #E4E7EF}
 .gis-missing{position:absolute;top:8px;left:8px;right:8px;z-index:2;pointer-events:none;text-align:center;font:400 11px/16px Onest;color:#5A6072}.gis-missing:not(:empty){background:#ffffffeb;border-radius:8px;padding:4px 8px;width:fit-content;max-width:calc(100% - 16px);margin:auto}
 .source-map>.gis-map{position:absolute;inset:0;min-height:0}.source-map .map-expand{z-index:5}
-.expanded-results-map>.gis-map{position:absolute;inset:calc(var(--device-safe-area-top,54px) + 104px) 0 238px;width:auto;height:auto;border-radius:0;min-height:100px}
-.expanded-results-map.favorite-map>.gis-map{top:calc(var(--device-safe-area-top,54px) + 60px)}
+.expanded-results-map>.gis-map{position:absolute;inset:0;width:auto;height:auto;border-radius:0;min-height:0}
 .expanded-results-map>header,.expanded-results-map>.map-filter-rail,.expanded-results-map>.map-selection{z-index:5}
 .route-hero>.gis-map{position:absolute;inset:0}.nearby-live-map>.gis-map{position:absolute;inset:0;min-height:0}
 @media(prefers-reduced-motion:reduce){.gis-spinner{animation:none}}
@@ -22,3 +21,7 @@
 .gis-map .gis-price-pin.selected{background:#2F5BFF;border-color:#fff;color:#fff}
 .gis-map .gis-price-pin.selected .gis-pin-discount{background:#fff;color:#B61A6B}
 .gis-zoom button:active{background:#EEF0FF;color:#2F5BFF}
+
+/* Floating controls do not reserve space or block map gestures in the gaps. */
+.expanded-results-map>.map-selection{pointer-events:none}
+.expanded-results-map>.map-selection>*{pointer-events:auto}
