@@ -1,3 +1,5 @@
+import {LanguageSetting} from '../profile/LanguageSetting';
+import {useNovember} from '../usePrototypeVariant';
 import {isDesktop} from '../desktop/surface';
 import {ProfilePhoto} from '../profile/ProfilePhoto';
 import {useState,type Dispatch,type SetStateAction} from 'react';
@@ -9,7 +11,8 @@ import {applySwipePreferences} from '../booking/swipePreferences';
 import {HotelierProfileBadge} from './HotelierBenefits';
 import './profile.css';
 
-export function ProfilePage({user,commerce,onPhotoChange,onBenefits,onHotelier,onGuests,onStyle,onNotifications,onSecurity,onData,onHistory,onHelp,onWatches,onInvite,onAbout,onLogout}:{user:User;commerce:Commerce;onPhotoChange:(photo?:string)=>void;onBenefits:()=>void;onHotelier:()=>void;onGuests:()=>void;onStyle:()=>void;onNotifications:()=>void;onSecurity:()=>void;onData:()=>void;onHistory:()=>void;onHelp:()=>void;onWatches:()=>void;onInvite:()=>void;onAbout:()=>void;onLogout:()=>void}){
+export function ProfilePage({user,commerce,onPhotoChange,onBenefits,onHotelier,onGuests,onStyle,onNotifications,onSecurity,onData,onHistory,onHelp,onWatches,onInvite,onAbout,onLogout,onLanguage,onSupport}:{user:User;commerce:Commerce;onPhotoChange:(photo?:string)=>void;onBenefits:()=>void;onHotelier:()=>void;onGuests:()=>void;onStyle:()=>void;onNotifications:()=>void;onSecurity:()=>void;onData:()=>void;onHistory:()=>void;onHelp:()=>void;onWatches:()=>void;onInvite:()=>void;onAbout:()=>void;onLogout:()=>void;onLanguage:(language:'ru'|'en')=>void;onSupport:()=>void}){
+ const november=useNovember();
  const approved=commerce.accounts[user.phone]?.hotelierStatus==='approved';
  const surname=user.travelers.find(t=>t.primary)?.surname||'';
  const name=[user.name,surname].filter(Boolean).join(' ');
@@ -21,20 +24,22 @@ export function ProfilePage({user,commerce,onPhotoChange,onBenefits,onHotelier,o
   <section className="profile-navigation-group" aria-labelledby="profile-travel-title"><h2 id="profile-travel-title">Мои поездки</h2><div className="k-card">
    <Row icon="nav-trips" title="История поездок" onClick={onHistory}/>
    <Row icon="guests" title="Путешественники" onClick={onGuests}/>
-   <Row icon="style-match" title="Мой стиль" onClick={onStyle}/>
+   {!november&&<Row icon="style-match" title="Мой стиль" onClick={onStyle}/>}
   </div></section>
   <section className="profile-navigation-group" aria-labelledby="profile-benefits-title"><h2 id="profile-benefits-title">Моя выгода</h2><div className="k-card">
    <Row icon="discount" title="Следим за ценами" onClick={onWatches}/>
-   <Row icon="invite" title="Пригласить друзей" subtitle="1 000 баллов за друга" onClick={onInvite}/>
+   <Row icon="invite" title="Пригласить друзей" subtitle={november?"Поделитесь ссылкой на приложение":"1 000 баллов за друга"} onClick={onInvite}/>
    {!approved&&commerce.hotelierParticipants?.[user.phone]&&<Row icon="reception" title="Подтвердить статус отельера" onClick={onHotelier}/>}
   </div></section>
   <section className="profile-navigation-group" aria-labelledby="profile-settings-title"><h2 id="profile-settings-title">Настройки аккаунта</h2><div className="k-card">
-   <Row icon="bell" title="Уведомления" onClick={onNotifications}/>
+   {!november&&<Row icon="bell" title="Уведомления" onClick={onNotifications}/>}
+   {november&&<LanguageSetting value={user.language} onChange={onLanguage}/>}
    <Row icon="secure" title="Безопасность и доступ" onClick={onSecurity}/>
    <Row icon="settings" title="Управление данными" onClick={onData}/>
   </div></section>
   <section className="profile-navigation-group" aria-labelledby="profile-service-title"><h2 id="profile-service-title">О сервисе</h2><div className="k-card">
    <Row icon="nav-chats" title="Помощь и поддержка" onClick={onHelp}/>
+   {november&&<Row icon="chat-hotel" title="Написать в техподдержку" onClick={onSupport}/>}
    <Row icon="info" title="О приложении" onClick={onAbout}/>
   </div>{isDesktop&&<div className="k-card profile-logout"><Row danger icon="logout" title="Выйти" onClick={onLogout}/></div>}</section>
   {!isDesktop&&<div className="k-card profile-logout"><Row danger icon="logout" title="Выйти" onClick={onLogout}/></div>}

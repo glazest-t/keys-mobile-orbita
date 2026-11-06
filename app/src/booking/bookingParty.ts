@@ -1,3 +1,4 @@
+import {getPrototypeVariant} from '../prototypeVariant.ts';
 import type {Draft,Search} from './model.ts';
 import type {User} from '../state.ts';
 
@@ -23,4 +24,4 @@ export function prefillAdditionalGuest(draft:Draft,user:User|null,index:number):
 }
 export const stayWishOptions=['Тихий номер','Высокий этаж'] as const;
 export const WISH_LIMIT=500;
-export function wishSummary(d:Draft){return [...(d.stayWishes?.options||[]),d.stayWishes?.note.trim()].filter(Boolean).join(' · ');}
+export function wishSummary(d:Draft){return [...(getPrototypeVariant()==='november'?[]:d.stayWishes?.options||[]),d.stayWishes?.note.trim()].filter(Boolean).join(' · ');}

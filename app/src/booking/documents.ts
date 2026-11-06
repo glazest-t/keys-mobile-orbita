@@ -1,3 +1,4 @@
+import {getPrototypeVariant} from '../prototypeVariant.ts';
 import {bookingNumber} from './bookingNumber.ts';
 import {depositBalance} from './deposit.ts';
 import {stayBill} from './stayBill.ts';
@@ -9,7 +10,7 @@ import {rateTitle} from './roomOffers.ts';
 
 export type DocumentKind='confirmation'|'cancellation'|'invoice';
 export type TripDocument={kind:DocumentKind;title:string;filename:string;bookingId:string;bookingNumber?:string;revision:number;hotel:string;dates:string;status:string;sections:{title:string;rows:[string,string][]}[]};
-export function documentKinds(b:Booking):DocumentKind[]{return ['confirmation',...(b.stay?.status==='checked_out'?['invoice' as const]:[]),...(b.operation.status==='cancelled'?['cancellation' as const]:[])];}
+export function documentKinds(b:Booking):DocumentKind[]{return ['confirmation',...(b.stay?.status==='checked_out'&&getPrototypeVariant()!=='november'?['invoice' as const]:[]),...(b.operation.status==='cancelled'?['cancellation' as const]:[])];}
 export function tripDocument(b:Booking,kind:DocumentKind):TripDocument{
  if(!documentKinds(b).includes(kind))throw Error('Этот документ пока недоступен');
  const d=b.draft,o=b.operation,room=catalog.rooms.find(r=>r.id===d.roomId)!,rate=catalog.rates.find(r=>r.id===d.rateId)!;

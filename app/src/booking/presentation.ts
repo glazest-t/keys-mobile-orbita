@@ -37,3 +37,11 @@ export function hotelReviews(id:string){
 }
 export function hotelReviewHighlights(id:string){return hotelReviewTags(id).filter(tag=>tag!=='Все').slice(0,3).map(tag=>tag.toLocaleLowerCase('ru-RU')).join(', ');}
 export function hotelReviewTags(id:string){return ['Все',...new Set(hotelReviews(id).flatMap(r=>r.tags))];}
+
+// Short summaries of the prototype's positive review examples.
+export function hotelReviewPraise(id:string){
+ if(id==='orbit-sea')return 'завтраки, спа и близость к морю';
+ const labels:Record<string,string>={'Еда':'питание','Тишина':'спокойную атмосферу','Номера':'комфортные номера','Спа':'спа','Транспорт':'удобное расположение','Бассейн':'бассейн','Сервис':'внимательный персонал','Чистота':'чистоту','Расположение':'расположение','Завтрак':'завтраки'};
+ const points=[...new Set(hotelReviews(id).filter(r=>Number(r.score.replace(',','.'))>=4.5).flatMap(r=>r.tags).map(tag=>labels[tag]).filter(Boolean))].slice(0,3);
+ return points.length>1?points.slice(0,-1).join(', ')+' и '+points[points.length-1]:points[0]||'';
+}

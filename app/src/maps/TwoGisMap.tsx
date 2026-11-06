@@ -10,7 +10,7 @@ function loadSDK(){
  if(!sdkPromise)sdkPromise=load('https://mapgl.2gis.com/api/js/v1').catch(error=>{sdkPromise=undefined;throw error;});
  return sdkPromise;
 }
-export type MapPoint={id:string;coordinates:number[];label:string;name:string;discountPercent?:number;markerOffset?:number[]};
+export type MapPoint={id:string;coordinates:number[];label:string;name:string;discountPercent?:number;icon?:string;markerOffset?:number[]};
 type Props={route?:number[][][];points:MapPoint[];center:Coordinates;selected?:string;onSelect?:(id:string)=>void;onHover?:(id:string)=>void;onPreviewDismiss?:()=>void;onVisibleChange?:(ids:string[])=>void;preview?:ReactNode;interactive?:boolean;expanded?:boolean;missing?:number;label?:string};
 export function TwoGisMap({points,route,center,selected,onSelect,onHover,onPreviewDismiss,onVisibleChange,preview,interactive=true,expanded=false,missing=0,label='Карта 2ГИС'}:Props){
  const canvas=useRef<HTMLDivElement>(null), mapRef=useRef<MapGL|null>(null), sdk=useRef<SDK|null>(null);
@@ -79,6 +79,7 @@ export function TwoGisMap({points,route,center,selected,onSelect,onHover,onPrevi
   markers.current=points.map(point=>{
    const button=document.createElement('button');button.type='button';button.className='gis-price-pin';
    button.textContent=point.label;
+   if(point.icon&&['spa','hotel-building','pin'].includes(point.icon)){const icon=document.createElement('span');icon.className='gis-place-icon';icon.style.maskImage=`url(${import.meta.env.BASE_URL}brand/assets/icons/${point.icon}.svg)`;button.replaceChildren(icon);button.classList.add('gis-place-pin');}
    if(point.discountPercent&&point.discountPercent>0){const badge=document.createElement('span');badge.className='gis-pin-discount';badge.textContent='−'+point.discountPercent+'%';button.prepend(badge);button.classList.add('has-discount');}
    button.setAttribute('aria-label',point.name+' · '+point.label+(point.discountPercent?' · скидка '+point.discountPercent+'%':''));button.dataset.hotelId=point.id;
    button.onclick=()=>{keepPreview();selectRef.current?.(point.id);};

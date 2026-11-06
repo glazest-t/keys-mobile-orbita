@@ -1,0 +1,9 @@
+{
+  "purpose": "Map application identification in provider chooser. Brand assets remain owned by their respective providers.",
+  "sources": {
+    "yandex.svg": "https://yandex.ru/maps/favicon.svg",
+    "2gis.png": "https://d-assets.2gis.ru/favicon.png",
+    "google.ico": "https://www.google.com/images/branding/product/ico/web_maps_icon_32dp.ico",
+    "apple.png": "https://maps.apple.com/static/maps-app-web-client/images/maps-app-icon-120x120.png"
+  }
+}

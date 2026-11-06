@@ -1,6 +1,6 @@
 import {normalizeContactPhone} from './travelers/contactPhone.ts';
 export type Traveler = {id:string; name:string; surname:string; patronymic:string; birthDate:string; citizenship:string; phone:string; email:string; primary?:boolean};
-export type User = {travelStyleIntro?:'pending'|'seen';demoDeviceAccess?:boolean;photo?:string;helpBrowse?:{query:string;category:string};supportRequests?:import('./profile/support').SupportRequest[];supportDraft?:import('./profile/support').SupportDraft;settings?:import('./profile/settings').ProfileSettings;phone:string; name:string; travelers:Traveler[]};
+export type User = {language?:'ru'|'en';travelStyleIntro?:'pending'|'seen';demoDeviceAccess?:boolean;photo?:string;helpBrowse?:{query:string;category:string};supportRequests?:import('./profile/support').SupportRequest[];supportDraft?:import('./profile/support').SupportDraft;settings?:import('./profile/settings').ProfileSettings;phone:string; name:string; travelers:Traveler[]};
 export type CodeRequest = {phone:string; issuedAt:number; expiresAt:number; resendAt:number};
 export type State = {hotelierTourTarget?:'hotelier'|'trips';securityRecoveryPhone?:string;demoRegistrationPhone?:string;hotelierInviter?:{name:string;hotel:string};hotelierOnboarding?:boolean;hotelierReturnTo?:string;version:1; onboarded:boolean; users:Record<string,User>; activePhone:string|null; request:CodeRequest|null; verifiedPhone:string|null; returnTo:string; selectedTravelerId?:string};
 export const STORAGE_KEY='keys-orbita-demo-v1';

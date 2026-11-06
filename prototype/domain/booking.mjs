@@ -6,7 +6,7 @@ function nonNegativeInteger(value, name) {
 }
 
 export function calculateBookingQuote({ hotelId, nights, rate, hotelierStatus, hotelDiscountBasisPoints = 0,
-  services = [], wallets, usePoints, baseLodgingOverrideMinor }) {
+  services = [], wallets, usePoints, pointsLimit, baseLodgingOverrideMinor }) {
   nonNegativeInteger(nights,'nights');
   if (nights === 0) throw new DomainError('INVALID_NIGHTS','Нужна хотя бы одна ночь');
   if (rate.hotelId !== hotelId) throw new DomainError('WRONG_RATE_HOTEL','Тариф принадлежит другому отелю');
@@ -23,7 +23,7 @@ export function calculateBookingQuote({ hotelId, nights, rate, hotelierStatus, h
   const bps = hotelBenefitsAllowed ? hotelDiscountBasisPoints : 0;
   const discountMinor = Number((BigInt(baseLodgingMinor)*BigInt(bps)+5000n)/10000n);
   const payment = calculatePayment({hotelId,lodgingMinor:baseLodgingMinor-discountMinor,
-    services,wallets,usePoints,hotelBenefitsAllowed});
+    services,wallets,usePoints,pointsLimit,hotelBenefitsAllowed});
   return {...payment,rateId:rate.id,rateKind:rate.kind,nights,baseLodgingMinor,hotelDiscountMinor:discountMinor};
 }
 

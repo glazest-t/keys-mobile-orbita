@@ -18,10 +18,11 @@ function total(values, field) {
   return natural(values.reduce((sum, value) => sum + natural(value, field), 0), field);
 }
 
-export function calculatePayment({ hotelId, lodgingMinor, services = [], wallets, usePoints, hotelBenefitsAllowed = true }) {
+export function calculatePayment({ hotelId, lodgingMinor, services = [], wallets, usePoints, pointsLimit, hotelBenefitsAllowed = true }) {
   if (typeof hotelId !== 'string' || !hotelId) throw new DomainError('INVALID_HOTEL', 'Нужен отель заказа');
   if (typeof usePoints !== 'boolean') throw new DomainError('INVALID_SWITCH', 'Использование баллов задаётся переключателем');
   if (typeof hotelBenefitsAllowed !== 'boolean') throw new DomainError('INVALID_BENEFIT_RULE', 'Нужно правило применения программы отеля');
+  if(pointsLimit!==undefined)natural(pointsLimit,'pointsLimit');
   natural(lodgingMinor, 'lodgingMinor');
   natural(wallets.keysPoints, 'keysPoints');
   natural(wallets.hotelPoints, 'hotelPoints');
@@ -37,7 +38,7 @@ export function calculatePayment({ hotelId, lodgingMinor, services = [], wallets
   }), 'serviceTotalMinor');
   const orderTotalMinor = total([lodgingMinor, serviceTotalMinor], 'orderTotalMinor');
   // One point = one rouble. Whole points never overpay a kopeck-denominated order.
-  const limitPoints = Math.floor(orderTotalMinor / 100);
+  const limitPoints = Math.min(Math.floor(orderTotalMinor / 100), pointsLimit ?? Number.MAX_SAFE_INTEGER);
   const eligibleHotelPoints = hotelBenefitsAllowed && wallets.hotelId === hotelId ? wallets.hotelPoints : 0;
   // Spend the hotel-specific balance first, preserving points usable at other hotels.
   const hotelPoints = usePoints ? Math.min(eligibleHotelPoints, limitPoints) : 0;
@@ -46,7 +47,7 @@ export function calculatePayment({ hotelId, lodgingMinor, services = [], wallets
   const cashDueMinor = orderTotalMinor - pointsMinor;
   return {
     hotelId, lodgingMinor, serviceTotalMinor, orderTotalMinor, hotelBenefitsAllowed,
-    usePoints, applied: { hotelPoints, keysPoints, pointsMinor }, cashDueMinor,
+    usePoints, ...(pointsLimit===undefined?{}:{pointsLimit}), applied: { hotelPoints, keysPoints, pointsMinor }, cashDueMinor,
     remaining: { hotelPoints: wallets.hotelPoints - hotelPoints, keysPoints: wallets.keysPoints - keysPoints },
   };
 }
@@ -81,7 +82,7 @@ export function confirmPayment(state, { userId, bookingId, quote, method, cashNo
   const current = readWallets(state, userId, quote.hotelId);
   const fresh = calculatePayment({ hotelId: quote.hotelId, lodgingMinor: quote.lodgingMinor,
     services: quote.serviceTotalMinor ? [{ id: 'quoted-services', quantity: 1, unitPriceMinor: quote.serviceTotalMinor }] : [],
-    wallets: current, usePoints: quote.usePoints, hotelBenefitsAllowed: quote.hotelBenefitsAllowed });
+    wallets: current, usePoints: quote.usePoints, pointsLimit: quote.pointsLimit, hotelBenefitsAllowed: quote.hotelBenefitsAllowed });
   if (fresh.applied.hotelPoints !== quote.applied.hotelPoints || fresh.applied.keysPoints !== quote.applied.keysPoints ||
       fresh.orderTotalMinor !== quote.orderTotalMinor || fresh.cashDueMinor !== quote.cashDueMinor ||
       fresh.applied.pointsMinor !== quote.applied.pointsMinor) {

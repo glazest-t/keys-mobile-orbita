@@ -11,3 +11,13 @@ test('Документы читают актуальную бронь; чек и
 test('Отмена добавляет документ возврата и статус во все документы',()=>{const s=fixture(),next=cancelBooking(s,owner,s.bookings[0].id,'2026-10-22T12:00:00Z'),b=next.bookings[0];assert.deepEqual(documentKinds(b),['confirmation','cancellation']);for(const kind of documentKinds(b))assert.equal(tripDocument(b,kind).status,'Отменена');assert.match(JSON.stringify(tripDocument(b,'cancellation')),/Возврат денег/);});
 test('Письмо - локальный черновик с ZIP, адрес защищён от переноса заголовков',()=>{assert.equal(validDocumentEmail('anna@example.test'),true);assert.equal(validDocumentEmail('anna@example.test\r\nBcc: x@y.test'),false);const b=fixture().bookings[0];assert.throws(()=>makeDocumentEmail('invalid',b,new Uint8Array([1])),/Проверьте/);const text=new TextDecoder().decode(makeDocumentEmail('anna@example.test',b,new Uint8Array([80,75,3,4])));assert.match(text,/X-Unsent: 1/);assert.match(text,/Content-Type: application\/zip/);assert.match(text,/UEsDBA==/);});
 test('PDF с кириллицей формируется и длинные пожелания переносятся на новые страницы',async()=>{const doc=tripDocument(fixture().bookings[0],'confirmation');doc.sections.push({title:'Длинные пожелания',rows:[['Пожелания','Тихий номер рядом с лифтом. '.repeat(240)]]});const font=await readFile(new URL('../app/public/brand/fonts/Onest-Variable.ttf',import.meta.url));const bytes=await makeDocumentPdf(doc,font),pdf=await PDFDocument.load(bytes);assert.ok(pdf.getPageCount()>1);assert.equal(pdf.getTitle(),'Подтверждение брони');for(const page of pdf.getPages())assert.ok(page.getHeight()>800);});
+
+test('November excludes reporting invoice, Full keeps it after checkout',()=>{
+ const descriptor=Object.getOwnPropertyDescriptor(globalThis,'location');
+ try{
+  const b=fixture().bookings[0];b.stay={status:'checked_out'};
+  globalThis.location={href:'http://localhost/?variant=november'};
+  assert.deepEqual(documentKinds(b),['confirmation']);assert.throws(()=>tripDocument(b,'invoice'),/недоступен/);
+  globalThis.location.href='http://localhost/?variant=full';assert.deepEqual(documentKinds(b),['confirmation','invoice']);
+ }finally{if(descriptor)Object.defineProperty(globalThis,'location',descriptor);else delete globalThis.location;}
+});

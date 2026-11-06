@@ -1,3 +1,4 @@
+import {useNovember} from '../usePrototypeVariant';
 import {useEffect,useRef,useState,type Dispatch,type SetStateAction} from 'react';
 import {BottomSheet} from '../mobile';
 import {Button,Icon,StatusBadge} from '../ui';
@@ -8,9 +9,10 @@ import './booking-payment-status.css';
 
 type Props={booking:Booking;commerce:Commerce;setCommerce:Dispatch<SetStateAction<Commerce>>;showAmount?:boolean;hideStatus?:boolean;failNext?:boolean;onPaymentAttempt?:()=>void};
 export function BookingPaymentBadge({booking:b}:{booking:Booking}){
- const due=b.operation.dueAtHotelMinor,partial=isPartiallyPaid(b);
+ const november=useNovember(),due=b.operation.dueAtHotelMinor,partial=isPartiallyPaid(b);
  if(b.operation.status!=='confirmed')return null;
- return <StatusBadge tone={due?(partial?'warning':'info'):'success'} icon={due?'pending':'check'}>{due?(partial?'Частично оплачено':'Оплата в отеле'):'Оплачено'}</StatusBadge>;
+ if(november&&(!due||partial))return <span className="november-paid-status"><span className={partial?'november-partial-clock':'november-paid-check'}><Icon name={partial?'pending':'check'} size={16} inheritColor/></span><span>{partial?'Оплачено частично':'Оплачено'}</span></span>;
+ return <StatusBadge tone={due?(partial?'warning':'info'):(november?'neutral':'success')} icon={due?'pending':'check'}>{due?(partial?'Частично оплачено':'Оплата в отеле'):'Оплачено'}</StatusBadge>;
 }
 export function BookingPaymentStatus(props:Props){
  const {booking:b,showAmount=false}=props,partial=isPartiallyPaid(b),due=b.operation.dueAtHotelMinor;

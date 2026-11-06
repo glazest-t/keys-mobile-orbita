@@ -1,3 +1,4 @@
+import {getPrototypeVariant} from '../prototypeVariant.ts';
 import {swipePreferenceScore} from './swipePreferences.ts';
 import {promotionBasisPoints} from './promotions.ts';
 import {type Commerce,catalog,searchHotels,quoteDraft,startDraft,cancellationDeadline} from './model.ts';
@@ -5,6 +6,7 @@ import {hotelVisual} from './presentation.ts';
 import {hotelFacets} from './searchFacets.ts';
 import {filterGroups,normalizeFilters,groupValues,priceRange,priceMode,priceError,sortKey,compareNumber,updateSearchOptions} from './filterSchema.ts';
 export function discoveryOffers(commerce:Commerce,owner:string|null){
+ if(getPrototypeVariant()==='november')commerce={...commerce,searchDistrict:undefined,searchFilters:commerce.searchFilters?.filter(f=>!f.startsWith('Сеть отеля: '))};
  const filters=normalizeFilters(commerce.searchFilters),range=priceRange(commerce),sort=sortKey(commerce.searchSort);
  if(priceError(range))return [];
  const matches=(id:string,group:string,value:string)=>{
@@ -41,4 +43,4 @@ export function districtsFor(commerce:Commerce){return [...new Set(catalog.hotel
 // Retained for old consumers; the filter editor validates reversed input instead of silently swapping it.
 export function normalizePriceRange(min:number|null,max:number|null){const clean=(v:number|null)=>v===null||!Number.isFinite(v)?null:Math.max(0,Math.round(v));let a=clean(min),b=clean(max);if(a!==null&&b!==null&&a>b)[a,b]=[b,a];return {min:a,max:b};}
 export function clearFilters(s:Commerce):Commerce{return updateSearchOptions(s,{searchFilters:[],priceRangeMinor:undefined,priceMode:'stay',searchDistrict:undefined,minRating:0,maxNightly:null,collection:undefined});}
-export function filterCount(s:Commerce){const r=priceRange(s);return normalizeFilters(s.searchFilters).length+(s.minRating?1:0)+(r.min!==null||r.max!==null?1:0)+(s.searchDistrict?.city===s.search.city?1:0);}
+export function filterCount(s:Commerce){if(getPrototypeVariant()==='november')s={...s,searchDistrict:undefined,searchFilters:s.searchFilters?.filter(f=>!f.startsWith('Сеть отеля: '))};const r=priceRange(s);return normalizeFilters(s.searchFilters).length+(s.minRating?1:0)+(r.min!==null||r.max!==null?1:0)+(s.searchDistrict?.city===s.search.city?1:0);}

@@ -37,3 +37,8 @@ dialog.demo-tools-dialog[open]{display:flex;flex-direction:column;gap:0}
 .demo-tools .demo-version a:hover{color:#2F5BFF}
 .demo-tools .demo-version a[aria-current="page"]{color:#2F5BFF;background:white;box-shadow:0 2px 6px #1013200a}
 .demo-tools .demo-version a:focus-visible{outline:2px solid #2F5BFF;outline-offset:2px}
+
+.demo-tools .demo-variant-options{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;border:1px solid #E4E7EF;border-radius:14px;background:#F4F5FB}
+.demo-tools .demo-variant-options button{display:flex;align-items:center;justify-content:center;min-height:44px;width:100%;margin:0;padding:8px 6px;border:0;border-radius:10px;color:#5A6072;background:transparent;font:500 13px/18px Onest,sans-serif;cursor:pointer;box-sizing:border-box}
+.demo-tools .demo-variant-options button[aria-pressed="true"]{color:#2F5BFF;background:#fff;box-shadow:0 2px 6px #1013200a}
+.demo-tools .demo-variant-options button:focus-visible{outline:2px solid #2F5BFF;outline-offset:2px}

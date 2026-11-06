@@ -263,3 +263,4 @@
  .desktop-favorites-hotels .favorite-hotel-details { min-height:0; }
 }
 .desktop-favorites-hotels .discovery-photo .photo-open img { height:100%;min-height:0; }
+.desktop-app .favorite-header>.favorite-share-button{margin-left:auto;display:inline-flex;align-items:center;gap:8px;min-height:44px;flex:none;white-space:nowrap}

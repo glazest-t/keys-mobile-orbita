@@ -18,8 +18,9 @@ export function historyFixture(owner:string,hotelId:string,number:string,status:
  }
  return {...s.bookings[0],number};
 }
-export function addTripByNumber(s:Commerce,owner:string,number:string):Commerce{
+export function addTripByNumber(s:Commerce,owner:string,number:string,voucherCode?:string):Commerce{
  if(!s.accounts[owner])throw Error('Войдите в приложение');
+ if(voucherCode!==undefined&&voucherCode.trim()!=='1234')throw Error('Неверный код из ваучера');
  const code=number.trim().toUpperCase();
  if(code!=='KEYS-2026')return restoreTripByNumber(s,owner,code);
  const existing=s.bookings.find(b=>b.owner===owner&&b.number===code);

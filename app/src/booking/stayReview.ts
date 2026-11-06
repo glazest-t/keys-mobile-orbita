@@ -2,7 +2,7 @@ import type {Commerce} from './model.ts';
 import {canManageBooking} from './bookingShare.ts';
 import {stayNow} from './stay.ts';
 export const reviewTopics={liked:['Номер','Пляж','Завтрак','Персонал','Тишина','СПА','Расположение'],improve:['Wi-Fi','Шумоизоляция','Парковка','Заселение']};
-export type ReviewInput={rating:number;liked:string[];improve:string[];text:string;photos:string[]};
+export type ReviewInput={rating:number;liked:string[];improve:string[];text:string;photos:string[];anonymous?:boolean};
 export type StayReview=ReviewInput&{id:string;author:string;createdAt:string};
 export function reviewInputError(input:ReviewInput){
  if(!Number.isInteger(input.rating)||input.rating<1||input.rating>5)return 'Выберите оценку от 1 до 5';
@@ -18,6 +18,6 @@ export function sendStayReview(s:Commerce,actor:string,bookingId:string,id:strin
  if(b.review){if(b.review.id===id)return s;throw Error('Отзыв о поездке уже сохранён');}
  const error=reviewInputError(input);if(error)throw Error(error);
  if(!id||!Number.isFinite(now))throw Error('Не удалось сохранить отзыв');
- const review:StayReview={...input,liked:[...new Set(input.liked)],improve:[...new Set(input.improve)],photos:[...input.photos],text:input.text.trim(),id,author:actor,createdAt:new Date(stayNow(b,now)).toISOString()};
+ const review:StayReview={...input,anonymous:input.anonymous===true,liked:[...new Set(input.liked)],improve:[...new Set(input.improve)],photos:[...input.photos],text:input.text.trim(),id,author:actor,createdAt:new Date(stayNow(b,now)).toISOString()};
  return {...s,bookings:s.bookings.map(item=>item.id===b.id?{...item,review}:item)};
 }

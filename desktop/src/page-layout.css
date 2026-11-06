@@ -278,3 +278,61 @@
 }
 .desktop-app[data-route^="profile-trip/"] .keys-content { padding-top: 24px!important; }
 .desktop-app .record-flow .document-open { padding: 0; }
+
+/* Technical support follows the shared profile-subpage frame. */
+.desktop-app[data-route="support-new"] :is(.app-header,.keys-content){
+  width:calc(100% - 64px);
+  max-width:1280px;
+  margin-inline:auto;
+}
+.desktop-app[data-route="support-new"] .header-title{
+  font:500 20px/28px Onest,sans-serif;
+  letter-spacing:-.3px;
+  text-align:left;
+}
+.desktop-app[data-route="support-new"] .support-page{
+  width:100%;max-width:none;margin:0;
+}
+.desktop-app[data-route="support-new"] .technical-support-form{gap:24px}
+.desktop-app[data-route="support-new"] .technical-support-fields{
+  padding:24px;gap:12px;
+}
+.desktop-app[data-route="support-new"] .technical-support-fields label{
+  font:500 18px/26px Onest,sans-serif;
+}
+.desktop-app[data-route="support-new"] .technical-support-fields>p{
+  font:400 15px/22px Onest,sans-serif;margin-top:-8px;
+}
+.desktop-app[data-route="support-new"] .technical-support-fields textarea{
+  min-height:240px;resize:vertical;
+}
+.desktop-app[data-route="support-new"] .technical-support-form>.k-button,
+.desktop-app[data-route="support-new"] .technical-support-success>.k-button{
+  align-self:flex-start;width:auto;min-height:48px;padding-inline:24px;
+}
+.desktop-app[data-route="support-new"] .technical-support-success{
+  padding:32px;gap:16px;
+}
+.desktop-app[data-route="support-new"] .technical-support-success h2{
+  font:500 22px/30px Onest,sans-serif;margin:0;
+}
+.desktop-app[data-route="support-new"] .technical-support-fields{border:0;box-shadow:none}
+
+/* Hotel loyalty details: one alignment for title, city, benefits and action. */
+.desktop-modal:has(.hotel-program-summary)>.desktop-modal-header{
+  align-items:flex-start;padding:24px 28px 6px;
+}
+.desktop-modal:has(.hotel-program-summary)>.desktop-modal-header h2{
+  min-width:0;padding-top:5px;line-height:28px;
+}
+.desktop-modal:has(.hotel-program-summary) .desktop-modal-close{flex:none}
+.desktop-modal:has(.hotel-program-summary)>.desktop-modal-header+p{
+  margin:0;padding:0 28px 20px;color:var(--k-text-secondary);
+  font:400 15px/22px Onest,sans-serif;flex:none;
+}
+.desktop-modal .hotel-program-summary{display:flex;flex-direction:column;gap:20px}
+.desktop-modal .hotel-program-summary-values{padding:20px;gap:16px}
+.desktop-modal .hotel-program-summary-values>div{font:400 16px/24px Onest,sans-serif}
+.desktop-modal .hotel-program-summary-values dd{font:500 18px/26px Onest,sans-serif}
+.desktop-modal .hotel-program-site-note{font:400 14px/22px Onest,sans-serif;margin:0;color:var(--k-text-secondary)}
+.desktop-modal .hotel-program-summary>.k-button{align-self:flex-start;width:auto;min-height:48px;padding-inline:24px}

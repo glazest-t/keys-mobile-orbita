@@ -1,3 +1,4 @@
+import {useNovember} from '../usePrototypeVariant';
 import {ServiceDetailIntro} from './ServiceDetailIntro';
 import {useState,type Dispatch,type SetStateAction} from 'react';
 import {Carousel} from '../mobile';
@@ -19,6 +20,7 @@ const details:Record<string,{title:string;category:'Еда'|'Отдых'|'Тра
 };
 
 export function DesktopBookingServices({commerce,setCommerce,disabled=false,catalogue=false}:{commerce:Commerce;setCommerce:Dispatch<SetStateAction<Commerce>>;disabled?:boolean;catalogue?:boolean}){
+ const november=useNovember();
  const [opened,setOpened]=useState<string|null>(null),draft=commerce.draft!;
  const services=catalog.services.filter(s=>s.hotelId===draft.hotelId&&!!details[s.id]&&!isBookingTimeService(s.id)&&(s.id!=='sea-breakfast'||catalog.rates.find(r=>r.id===draft.rateId)?.mealPlan!=='breakfast'));
  const service=services.find(s=>s.id===opened),selected=!!service&&draft.services.includes(service.id);
@@ -39,7 +41,7 @@ export function DesktopBookingServices({commerce,setCommerce,disabled=false,cata
  return <>
   {catalogue?<BookingServiceCatalogue services={services} selected={draft.services} disabled={disabled} onOpen={setOpened}/>:<div className="desktop-service-list">{services.map(s=>{const item=view(s),added=draft.services.includes(s.id);return <div className="desktop-service-row" key={s.id}>
    <button type="button" className="desktop-service-details-trigger" disabled={disabled} aria-label={`Подробнее: ${item.title}`} aria-haspopup="dialog" onClick={()=>setOpened(s.id)}/>
-   <span className="icon-tile"><Icon name={item.icon} size={22}/></span><span className="desktop-service-copy"><strong>{item.title}</strong><small>{item.caption} · {formatMoney(s.unitPriceMinor)}</small></span>
+   <span className="icon-tile"><Icon name={november&&item.category!=='Еда'?'room-service':item.icon} size={22}/></span><span className="desktop-service-copy"><strong>{item.title}</strong><small>{!november||item.category==='Еда'?item.caption+' · ':''}{formatMoney(s.unitPriceMinor)}</small></span>
    {added?<StatusBadge tone="success" icon="check">Добавлено</StatusBadge>:<Button className="desktop-service-add" variant="secondary" disabled={disabled} aria-label={`Добавить: ${item.title}`} onClick={()=>setAdded(s,true)}>Добавить</Button>}
   </div>;})}</div>}
   <BottomSheet open={!!service} onOpenChange={open=>{if(!open)setOpened(null);}} title={info?.title||'Услуга'}>
@@ -56,17 +58,21 @@ export function DesktopBookingServices({commerce,setCommerce,disabled=false,cata
 
 type BookingService=typeof catalog.services[number];
 function BookingServiceCatalogue({services,selected,disabled,onOpen}:{services:BookingService[];selected:string[];disabled:boolean;onOpen:(id:string)=>void}){
+ const november=useNovember();
  const [category,setCategory]=useState('Все');
- const categories=['Все',...['Еда','Отдых','Транспорт'].filter(c=>services.some(s=>details[s.id].category===c))];
- const visible=services.filter(s=>category==='Все'||details[s.id].category===category);
- const featured=visible.filter(s=>details[s.id].image),compact=visible.filter(s=>!details[s.id].image);
- const categoryIcons:Record<string,string>={'Все':'menu','Еда':'restaurant','Отдых':'spa','Транспорт':'transfer'};
- const card=(s:BookingService)=>{const item=details[s.id],added=selected.includes(s.id);return <button type="button" key={s.id} className={'hotel-service-row service-catalog-card'+(item.image?' is-featured':'')} disabled={disabled} aria-label={`Подробнее: ${item.title}`} aria-haspopup="dialog" onClick={()=>onOpen(s.id)}>
-  {item.image?<span className="service-catalog-photo"><img src={import.meta.env.BASE_URL+item.image} alt=""/>{added&&<span className="service-added-badge"><Icon name="check" size={14} inheritColor/>Добавлено</span>}</span>:<span className="icon-tile"><Icon name={item.icon} size={22} inheritColor/></span>}
-  <span className="service-catalog-copy"><strong>{item.title}</strong><small>{item.caption}</small></span>
+ const categories=november?['Все','Общие','Питание']:['Все',...['Еда','Отдых','Транспорт'].filter(c=>services.some(s=>details[s.id].category===c))];
+ const categoryOf=(s:BookingService)=>november?(details[s.id].category==='Еда'?'Питание':'Общие'):details[s.id].category;
+ const imageOf=(s:BookingService)=>november&&categoryOf(s)==='Общие'?undefined:details[s.id].image;
+ const activeCategory=categories.includes(category)?category:'Все';
+ const visible=services.filter(s=>activeCategory==='Все'||categoryOf(s)===activeCategory);
+ const featured=visible.filter(s=>imageOf(s)),compact=visible.filter(s=>!imageOf(s));
+ const categoryIcons:Record<string,string>={'Общие':'room-service','Питание':'restaurant','Все':'menu','Еда':'restaurant','Отдых':'spa','Транспорт':'transfer'};
+ const card=(s:BookingService)=>{const item={...details[s.id],image:imageOf(s)},added=selected.includes(s.id);return <button type="button" key={s.id} className={'hotel-service-row service-catalog-card'+(item.image?' is-featured':'')} disabled={disabled} aria-label={`Подробнее: ${item.title}`} aria-haspopup="dialog" onClick={()=>onOpen(s.id)}>
+  {item.image?<span className="service-catalog-photo"><img src={import.meta.env.BASE_URL+item.image} alt=""/>{added&&<span className="service-added-badge"><Icon name="check" size={14} inheritColor/>Добавлено</span>}</span>:<span className="icon-tile"><Icon name={november&&item.category!=='Еда'?'room-service':item.icon} size={22} inheritColor/></span>}
+  <span className="service-catalog-copy"><strong>{item.title}</strong>{(!november||item.category==='Еда')&&<small>{item.caption}</small>}</span>
   <span className="hotel-service-action"><b>{formatMoney(s.unitPriceMinor)}</b><span>{added?'Добавлено':'Подробнее'}<Icon name={added?'check':'chevron-right'} size={16} inheritColor/></span></span>
  </button>;};
- const filters=<nav aria-label="Категории услуг">{categories.map(c=><button type="button" key={c} aria-current={category===c?'page':undefined} onClick={()=>setCategory(c)}><Icon name={categoryIcons[c]} size={18} inheritColor/>{c}</button>)}</nav>;
+ const filters=<nav aria-label="Категории услуг">{categories.map(c=><button type="button" key={c} aria-current={activeCategory===c?'page':undefined} onClick={()=>setCategory(c)}><Icon name={categoryIcons[c]} size={18} inheritColor/>{c}</button>)}</nav>;
  return <div className={'service-catalog-layout booking-service-catalog'+(!isDesktop?' mobile-service-catalog':'')}>
   <aside className="service-catalog-nav">{isDesktop?filters:<Carousel ariaLabel="Категории услуг">{filters}</Carousel>}</aside>
   <section className="service-catalog-main">

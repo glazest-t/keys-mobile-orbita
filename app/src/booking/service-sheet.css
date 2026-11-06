@@ -4,3 +4,11 @@
 .bottom-sheet:has(.adaptive-service-sheet) .service-sheet-layout,
 .bottom-sheet:has(.adaptive-service-sheet) .breakfast-order-sheet{max-height:none}
 .bottom-sheet:has(.adaptive-service-sheet) .service-sheet-fields>*{flex-shrink:0}
+
+/* The service's intrinsic content sets the height; the runtime supplies only
+   the screen limit. Do not inherit the full-height booking time picker. */
+.bottom-sheet:has(> .sheet-content > .adaptive-service-sheet){height:auto;min-height:0}
+.bottom-sheet:has(> .sheet-content > .adaptive-service-sheet)>.sheet-content{flex:0 1 auto;min-height:0}
+.bottom-sheet:has(> .sheet-content > .adaptive-service-sheet) .booking-time-editor,
+.bottom-sheet:has(> .sheet-content > .adaptive-service-sheet) .booking-time-options{flex:0 1 auto}
+.bottom-sheet:has(> .sheet-content > .adaptive-service-sheet) .booking-time-editor>p{flex-shrink:0}

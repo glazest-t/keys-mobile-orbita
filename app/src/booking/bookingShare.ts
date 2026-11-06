@@ -22,6 +22,6 @@ export function acceptBookingShare(s:Commerce,actor:string,token:string):Commerc
  if(b.operation.status!=='confirmed'||b.stay?.status==='checked_out')throw Error('Поездка уже завершена');
  return {...s,selectedBooking:b.id,bookingManagers:canManageBooking(s,actor,b)?s.bookingManagers:{...s.bookingManagers,[b.id]:[...(s.bookingManagers?.[b.id]||[]),actor]}};
 }
-export function bookingShareUrl(base:string,token:string){const url=new URL(base);url.search='';url.searchParams.set('trip',token);url.hash='shared-booking';return url.toString();}
+export function bookingShareUrl(base:string,token:string){const url=new URL(base);const variant=url.searchParams.get('variant');url.search='';if(variant)url.searchParams.set('variant',variant);url.searchParams.set('trip',token);url.hash='shared-booking';return url.toString();}
 
 export function visibleBooking(s:Commerce,actor:string,b:Booking){return canManageBooking(s,actor,b)&&!s.hiddenTrips?.[actor]?.includes(b.id);}

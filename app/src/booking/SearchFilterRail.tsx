@@ -1,3 +1,4 @@
+import {useNovember} from '../usePrototypeVariant';
 import {useState,type Dispatch,type SetStateAction} from 'react';
 import {BottomSheet,Carousel} from '../mobile';
 import {Icon} from '../ui';
@@ -6,7 +7,8 @@ import {FiltersSheet,filterCount} from './Filters';
 import {districtsFor} from './offers';
 import {normalizeFilters,quickFilters,toggleQuick,sortKey,sortOptions,updateSearchOptions,priceRange,priceMode} from './filterSchema';
 export function SearchFilterRail({commerce,setCommerce,owner,map=false,getResultCount,hideAllFilters=false}:{hideAllFilters?:boolean;commerce:Commerce;setCommerce:Dispatch<SetStateAction<Commerce>>;owner:string|null;map?:boolean;getResultCount?:(s:Commerce)=>number}){
- const [sheet,setSheet]=useState<'filters'|'sort'|'district'|null>(null),filters=normalizeFilters(commerce.searchFilters),sort=sortKey(commerce.searchSort),count=filterCount(commerce),districts=districtsFor(commerce),district=commerce.searchDistrict?.city===commerce.search.city?commerce.searchDistrict.name:undefined;
+ const november=useNovember();
+ const [sheet,setSheet]=useState<'filters'|'sort'|'district'|null>(null),filters=normalizeFilters(commerce.searchFilters).filter(f=>!november||!f.startsWith('Сеть отеля: ')),sort=sortKey(commerce.searchSort),count=filterCount(commerce),districts=districtsFor(commerce),district=commerce.searchDistrict?.city===commerce.search.city?commerce.searchDistrict.name:undefined;
  const selectedQuick=quickFilters.filter(q=>q.values.every(v=>filters.includes(v))),extra=filters.filter(v=>!selectedQuick.some(q=>q.values.includes(v)));
  const range=priceRange(commerce),hasRange=range.min!==null||range.max!==null;const money=(v:number)=>Math.round(v/100).toLocaleString('ru');
  const rangeLabel=[range.min!==null?`от ${money(range.min)}`:'',range.max!==null?`до ${money(range.max)}`:''].filter(Boolean).join(' ')+` ₽ ${priceMode(commerce)==='night'?'за ночь':'за проживание'}`;
@@ -14,7 +16,7 @@ export function SearchFilterRail({commerce,setCommerce,owner,map=false,getResult
  return <><Carousel ariaLabel={map?'Фильтры карты':'Фильтры отелей'} className={map?'map-filter-rail':'results-controls-rail'} contentClassName="discovery-chip-track">
  {!hideAllFilters&&<button className="filter-chip all-filters-chip" aria-haspopup="dialog" aria-expanded={sheet==='filters'} onClick={()=>setSheet('filters')}><Icon name="filter" size={16}/>Фильтры{count>0&&<b>{count}</b>}</button>}
  <button className={'filter-chip sort-icon-chip '+(sort!=='recommended'?'selected':'')} aria-label={`Сортировка: ${sortLabel}`} aria-haspopup="dialog" aria-expanded={sheet==='sort'} onClick={()=>setSheet('sort')}><Icon name="sort" size={18} inheritColor/></button>
- {districts.length>0&&<button className={'filter-chip '+(district?'selected':'')} aria-label={`Район: ${district||'Все районы'}`} onClick={()=>setSheet('district')}>{district||'Район'}<Icon name="chevron-down" size={14}/></button>}
+ {!november&&districts.length>0&&<button className={'filter-chip '+(district?'selected':'')} aria-label={`Район: ${district||'Все районы'}`} onClick={()=>setSheet('district')}>{district||'Район'}<Icon name="chevron-down" size={14}/></button>}
  {quickFilters.map(q=><button className={'filter-chip '+(selectedQuick.includes(q)?'selected':'')} key={q.label} aria-pressed={selectedQuick.includes(q)} onClick={()=>setCommerce(s=>toggleQuick(s,q.values))}>{q.label}</button>)}
  {hasRange&&<button className="filter-chip selected" aria-label={"Убрать фильтр цены: "+rangeLabel} onClick={()=>setCommerce(s=>updateSearchOptions(s,{priceRangeMinor:undefined,maxNightly:null}))}>{rangeLabel}<Icon name="close" size={12}/></button>}
  {!!commerce.minRating&&<button className="filter-chip selected" onClick={()=>setCommerce(s=>updateSearchOptions(s,{minRating:0}))}>Рейтинг от {commerce.minRating}<Icon name="close" size={12}/></button>}

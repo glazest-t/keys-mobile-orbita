@@ -1,7 +1,7 @@
 import {CardPaymentPlan} from './CardPaymentPlan';
 import {isDesktop} from '../desktop/surface';
 import {DesktopPaymentChoices} from './DesktopPaymentChoices';
-import {useId,useState,useRef,useEffect} from 'react';
+import {useId,useState,useRef,useEffect,type ReactNode} from 'react';
 import {BottomSheet,Carousel} from '../mobile';
 import {Icon,Switch} from '../ui';
 import {type Draft} from './model';
@@ -29,7 +29,7 @@ function MobilePaymentChoices({draft,onChange,onlineOnly=false}:{onlineOnly?:boo
   <BottomSheet open={expanded} onOpenChange={setExpanded} title="Другие способы оплаты" snap={.52}><div className="sheet-body"><div id={id} className="payment-extra-options" role="group" aria-label="Другие способы оплаты">{extraPaymentOptions.map(o=><button key={o.id} aria-pressed={selected===o.id} onClick={()=>select(o.id)}><span className="icon-tile"><Icon name={o.icon} size={20} inheritColor/></span><strong>{o.label}</strong><span className={'radio-dot '+(selected===o.id?'checked':'')}/></button>)}</div></div></BottomSheet>
  </section>;
 }
-export function PaymentPoints({wallets,friendly,checked,onChange}:{wallets:{keysPoints:number;hotelPoints:number};friendly:boolean;checked:boolean;onChange:(value:boolean)=>void}){
+export function PaymentPoints({wallets,friendly,checked,onChange,children}:{children?:ReactNode;wallets:{keysPoints:number;hotelPoints:number};friendly:boolean;checked:boolean;onChange:(value:boolean)=>void}){
  const rows=visibleWallets(wallets,friendly),available=rows.some(w=>w.available);
- return <div className="points-payment-card"><Switch checked={available&&checked} disabled={!available} onChange={onChange}><span className="points-label"><span className="icon-tile"><Icon name="points" size={22}/></span><span><strong>Списать баллы</strong><small>{available?'До 100% проживания и услуг':'Нет доступных баллов'}</small></span></span></Switch>{available&&checked&&rows.length>0&&<div className="payment-wallets">{rows.map(w=><span key={w.id}>{w.label}<b>{w.points.toLocaleString('ru-RU')}</b></span>)}</div>}</div>;
+ return <div className="points-payment-card"><Switch checked={available&&checked} disabled={!available} onChange={onChange}><span className="points-label"><span className="icon-tile"><Icon name="points" size={22}/></span><span><strong>Списать баллы</strong><small>{available?'До 100% проживания и услуг':'Нет доступных баллов'}</small></span></span></Switch>{available&&checked&&rows.length>0&&<div className="payment-wallets">{rows.map(w=><span key={w.id}>{w.label}<b>{w.points.toLocaleString('ru-RU')}</b></span>)}</div>}{available&&checked&&children}</div>;
 }
