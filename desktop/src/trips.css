@@ -57,7 +57,7 @@
 .desktop-app .nearby-embedded .detail-segments { display: flex; flex-wrap: wrap; gap: 6px; padding: 0; background: none; }
 .desktop-app .nearby-embedded .detail-segments button { flex: 0 0 auto; min-height: 36px; padding: 8px 14px; border-radius: 12px; }
 .desktop-app .nearby-embedded .nearby-real-places { max-height: 224px; overflow-y: auto; overscroll-behavior-y: contain; scrollbar-width: thin; padding: 0 6px 0 0; border: 0; border-radius: 0; }
-.desktop-app .nearby-embedded .nearby-place-row { grid-template-columns: 80px minmax(0,1fr); gap: 12px; padding: 12px 0; }
+.desktop-app .nearby-embedded .nearby-place-row { grid-template-columns: max-content minmax(0,1fr); gap: 12px; padding: 12px 0; }
 .desktop-app .nearby-embedded .nearby-place-thumb { width: 80px; height: 80px; border-radius: 14px; }
 .desktop-app .nearby-embedded .nearby-place-copy strong { font: 500 14px/20px Onest,sans-serif; }
 .desktop-app .nearby-embedded .nearby-place-copy small,
