@@ -22,3 +22,5 @@
 .wifi-copy-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .wifi-instructions{margin:0;padding:16px 16px 16px 36px;border-radius:20px;background:#f4f5fb;font:400 14px/21px Onest;display:flex;flex-direction:column;gap:12px}
 .wifi-instructions strong{font-weight:500}
+.wifi-reception{align-items:flex-start;gap:16px}
+.wifi-reception p{margin:0;color:var(--k-text-secondary);font:400 15px/23px Onest}

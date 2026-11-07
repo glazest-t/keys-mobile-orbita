@@ -1,3 +1,4 @@
+import {useDemoIntegrations} from '../demoIntegrations';
 import {DialogActions} from '../dialogActions';
 import {isDesktop} from '../desktop/surface';
 import {useEffect,useRef,useState} from 'react';
@@ -11,9 +12,11 @@ import './stay-wifi.css';
 // P-020: fictional credentials; the connection state never changes the OS network.
 const network='Hotel_Guest',password='welcome2026';
 export function StayWifiSheet({booking,open,onClose}:{booking:Booking;open:boolean;onClose:()=>void}){
+ const integrations=useDemoIntegrations();
  const manual=checkoutDay(booking);
  // A new stay, hotel, or demo clock starts an independent connection scenario.
  const session=[booking.id,booking.draft.hotelId,booking.stay?.eventId,booking.stay?.demoTimeOffsetMs,manual].join(':');
+ if(!integrations.wifi)return <BottomSheet open={open&&booking.operation.status==='confirmed'&&booking.stay?.status==='in_house'} onOpenChange={value=>{if(!value)onClose();}} title="Wi-Fi отеля" snap={.32}><div className="sheet-body wifi-reception"><span className="wifi-symbol soft"><Icon name="wifi" size={26} inheritColor/></span><p>За информацией о подключении к Wi-Fi обратитесь на ресепшн гостиницы.</p></div></BottomSheet>;
  return <WifiSession key={session} open={open&&booking.operation.status==='confirmed'&&booking.stay?.status==='in_house'} manual={manual} onClose={onClose}/>;
 }
 function WifiSession({open,manual,onClose}:{open:boolean;manual:boolean;onClose:()=>void}){

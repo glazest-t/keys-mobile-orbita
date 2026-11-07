@@ -4,3 +4,19 @@
 .bottom-sheet:has(.digital-key),.bottom-sheet:has(.stay-wifi){border-radius:30px 30px 0 0;color:#101320;font-family:Onest,sans-serif}.bottom-sheet:has(.digital-key) .sheet-title,.bottom-sheet:has(.stay-wifi) .sheet-title{font:500 20px/27px Unbounded;letter-spacing:-.5px}.digital-key{align-items:stretch;text-align:center;gap:14px}.key-symbol{align-self:center;display:grid;place-items:center;width:88px;height:88px;border-radius:28px;background:var(--k-icon-surface,#eaf2ff);color:#2f5bff}.key-symbol.success{background:#bff0de;color:#11734d}.key-room{display:flex;flex-direction:column;gap:4px}.key-room strong{font:500 22px/28px Unbounded}.key-room span,.digital-key p,.key-validity{font:400 13px/20px Onest;color:#5a6072}.key-validity{font-size:12px}.digital-key p{margin:0}.stay-wifi>div{display:flex;justify-content:space-between;gap:12px;padding:14px 0;font:400 15px/22px Onest}.stay-wifi>div>span{color:#5a6072}.stay-wifi strong{font-weight:500}
 
 .stay-card .k-button.primary:active:not(:disabled){background:var(--k-action-tint);color:var(--k-action-pressed)}
+.stay-room.stay-room-unavailable{grid-template-columns:minmax(0,1fr) 88px}
+.stay-room.stay-room-unavailable>.stay-progress{display:block;width:88px;height:88px;padding:7px}
+.stay-room>.stay-dates:first-child{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0;min-width:0}
+.stay-dates time{white-space:nowrap}
+.stay-dates>.stay-date-direction{display:none}
+.desktop-app .stay-room.stay-room-unavailable{grid-template-columns:minmax(0,1fr) 104px;column-gap:32px}
+.desktop-app .stay-room.stay-room-unavailable>.stay-progress{width:104px;height:104px;padding:9px}
+.desktop-app .stay-room>.stay-dates:first-child{grid-template-columns:max-content minmax(24px,120px) max-content;justify-content:start;gap:16px}
+.desktop-app .stay-dates>.stay-date-direction{display:flex;width:100%}
+@media(max-width:360px){
+ .stay-room.stay-room-unavailable{grid-template-columns:minmax(0,1fr) 64px;gap:10px}
+ .stay-room.stay-room-unavailable>.stay-progress{width:64px;height:64px;padding:5px}
+ .stay-room-unavailable .stay-progress strong{font-size:20px;line-height:22px}
+ .stay-room-unavailable .stay-progress small{font-size:9px;line-height:11px}
+}
+.desktop-app .stay-card>.k-button.door-button{width:calc((100% - 8px)/2);max-width:none;align-self:flex-start}

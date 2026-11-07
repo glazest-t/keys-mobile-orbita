@@ -188,3 +188,8 @@ export function Toast({message,bottom}:{message:string;bottom:number}) {
   initial={{opacity:0,y:reduced?0:16}} animate={{opacity:1,y:0}} exit={{opacity:0,y:reduced?0:16}}
   transition={{duration:reduced?.2:interactionMotion.toast,ease:interactionMotion.arrive}}>{message}</motion.div>}</AnimatePresence>;
 }
+
+/** Brand orbit: the mark stays still while a satellite travels along its orbit. */
+export function BrandOrbitLoader(){
+ return <span className="brand-orbit-loader" aria-hidden="true"><span className="brand-orbit-halo"/><span className="brand-orbit-ring"/><span className="brand-orbit-ring outer"/><span className="brand-orbit-satellite"><i/></span><img src="/brand/assets/logo/mark-cobalt-ui.svg" alt="" width="36" height="36"/></span>;
+}

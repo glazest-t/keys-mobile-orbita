@@ -17,6 +17,7 @@ export function DesktopNavigation({route,name,photo,points=0,unread=false,onNavi
   ['help','nav-chats','Помощь и поддержка'],
  ];
  useEffect(()=>{window.scrollTo(0,0);},[route]);
+ useEffect(()=>{const close=()=>setDemo(false);window.addEventListener('keys-demo-tools-close',close);return()=>window.removeEventListener('keys-demo-tools-close',close);},[]);
  useEffect(()=>{document.body.classList.toggle('desktop-demo-open',demo);return()=>document.body.classList.remove('desktop-demo-open');},[demo]);
  return <header className="desktop-navigation">
   <button className="desktop-brand" onClick={()=>onNavigate('find')} aria-label="Ключи — найти отель"><Mark/></button>

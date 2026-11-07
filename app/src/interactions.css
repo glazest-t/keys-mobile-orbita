@@ -77,3 +77,14 @@
 .chat-typing-dots i:nth-child(2){animation-delay:var(--k-duration-instant)}.chat-typing-dots i:nth-child(3){animation-delay:var(--k-duration-quick)}
 @keyframes chat-typing{from{opacity:.3;transform:translateY(0)}to{opacity:1;transform:translateY(-3px)}}
 @media(prefers-reduced-motion:reduce){.hotel-chat-message,.chat-typing-dots i{animation:none}}
+
+/* Shared loading motion follows the brand orbit and existing splash timing. */
+.brand-orbit-loader{position:relative;display:grid;place-items:center;width:160px;height:160px;color:var(--k-action-primary,#2f5bff)}
+.brand-orbit-halo{position:absolute;inset:-32px;border-radius:50%;background:radial-gradient(circle,#ffffffd9 0%,#ffffff70 35%,#ffffff00 70%)}
+.brand-orbit-ring{position:absolute;inset:24px;border:1px solid #2f5bff26;border-radius:50%}
+.brand-orbit-ring.outer{inset:2px;border-color:#2f5bff12}
+.brand-orbit-loader>img{position:relative;display:block}
+.brand-orbit-satellite{position:absolute;inset:24px;animation:brand-orbit-travel var(--k-duration-splash,2400ms) linear infinite}
+.brand-orbit-satellite>i{position:absolute;top:-4px;left:calc(50% - 4px);width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 0 5px #2f5bff0d}
+@keyframes brand-orbit-travel{from{transform:rotate(-35deg)}to{transform:rotate(325deg)}}
+@media(prefers-reduced-motion:reduce){.brand-orbit-satellite{animation:none;transform:rotate(-35deg)}}

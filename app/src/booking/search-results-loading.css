@@ -1,0 +1,36 @@
+.search-results-loading,.search-loading-cards{display:flex;flex-direction:column;gap:16px;min-width:0;width:100%}
+/* Keep the skeleton within the visible results area. */
+.search-results-loading{position:relative;height:calc(100dvh - 200px);min-height:320px;max-height:900px;overflow:hidden;border-radius:22px}
+.search-loading-announcement{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.search-map-loading-content{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:var(--k-text-secondary);font:400 14px/20px var(--k-font-text);text-align:center}
+.desktop-app .search-results-loading{height:calc(100dvh - 280px)}
+.search-loading-card{overflow:hidden;border:1px solid var(--k-border-subtle);border-radius:22px;background:var(--k-surface-card,#fff)}
+.search-loading-card .skeleton{background:var(--k-icon-surface,#eaf2ff);border-radius:8px}
+.search-loading-card .search-loading-photo{height:180px;border-radius:0}
+.search-loading-copy{display:flex;flex-direction:column;gap:12px;padding:16px}
+.search-loading-copy .search-loading-title{width:78%;height:20px}
+.search-loading-copy .search-loading-line{width:60%;height:14px}
+.search-loading-copy .search-loading-rating{width:38%;height:20px}
+.search-loading-copy .search-loading-price{align-self:flex-end;width:35%;height:24px}
+.desktop-app .search-loading-card{display:grid;grid-template-columns:42% minmax(0,1fr);min-height:190px}
+.desktop-app .search-loading-card .search-loading-photo{height:100%}
+.desktop-app .search-loading-copy .search-loading-price{margin-top:auto}
+.search-loading-map{position:relative;height:100%;min-height:220px;border-radius:22px;background:radial-gradient(ellipse at 50% 45%,#f9fcff 0%,#edf5ff 55%,#e7f0fc 100%)}
+@media(prefers-reduced-motion:reduce){.search-results-loading .skeleton{animation:none}}
+.desktop-app .search-loading-map{height:calc(100dvh - 120px)}
+@media(max-width:1100px),(min-width:1501px) and (max-width:1900px){
+ .desktop-app .search-loading-card{display:block}
+ .desktop-app .search-loading-card .search-loading-photo{height:200px}
+}
+
+.search-results-loading-mobile{background:radial-gradient(ellipse at center,#edf5ff 0%,#f7fbff 45%,transparent 75%)}
+
+/* The phone loader is centred in the screen, independent of result-list padding. */
+.keys-app:not(.desktop-app) .results-scroll:has(.search-results-loading-mobile){top:0!important;bottom:0!important}
+.results-scroll:has(.search-results-loading-mobile) .mobile-scroll{overflow:hidden;overscroll-behavior:none;touch-action:none}
+.results-scroll:has(.search-results-loading-mobile) .mobile-scroll-content{position:relative;height:100%;min-height:0;padding-top:var(--device-safe-area-top,54px);box-sizing:border-box;transform:none!important}
+.results-scroll:has(.search-results-loading-mobile) .results-main{position:static;min-height:0!important;padding:0!important}
+.results-scroll:has(.search-results-loading-mobile) .collection-banner{display:none}
+.results-scroll .search-results-loading-mobile{position:absolute;inset:0;width:100%;height:100%;min-height:0;max-height:none;border-radius:0}
+.results-scroll .search-results-loading-mobile .search-map-loading-content{gap:0}
+.results-scroll .search-results-loading-mobile .search-map-loading-content>span:last-child{position:absolute;top:calc(50% + 94px)}

@@ -42,3 +42,32 @@ dialog.demo-tools-dialog[open]{display:flex;flex-direction:column;gap:0}
 .demo-tools .demo-variant-options button{display:flex;align-items:center;justify-content:center;min-height:44px;width:100%;margin:0;padding:8px 6px;border:0;border-radius:10px;color:#5A6072;background:transparent;font:500 13px/18px Onest,sans-serif;cursor:pointer;box-sizing:border-box}
 .demo-tools .demo-variant-options button[aria-pressed="true"]{color:#2F5BFF;background:#fff;box-shadow:0 2px 6px #1013200a}
 .demo-tools .demo-variant-options button:focus-visible{outline:2px solid #2F5BFF;outline-offset:2px}
+.demo-tools .demo-loading-preview{width:100%;min-height:40px;padding:8px 12px;border:0;border-radius:12px;background:#eaf2ff;color:#2f5bff;font:500 13px/18px Onest,sans-serif}
+
+/* Compact secondary tools; edition, platform, entry and trip scenarios keep their layout. */
+.demo-tools .demo-compact-controls{position:static;display:flex;flex-direction:column;align-items:stretch;gap:0;width:100%;max-width:none;margin-top:12px;padding:0;border-top:1px solid #e4e7ef}
+.demo-tools .demo-compact-controls>details{flex-shrink:0;margin:0!important;padding:0!important;border:0!important;border-bottom:1px solid #e4e7ef!important;border-radius:0;background:transparent;overflow:hidden}
+.demo-tools .demo-compact-controls>details>summary{display:flex;align-items:center;gap:8px;min-height:42px;padding:8px 0;box-sizing:border-box;list-style:none;cursor:pointer;color:#101320;font:500 13px/18px Onest,sans-serif}
+.demo-compact-controls>details>summary::-webkit-details-marker{display:none}
+.demo-compact-controls>details>summary::after{content:'';width:6px;height:6px;flex:none;border-right:1.5px solid #7b8190;border-bottom:1.5px solid #7b8190;transform:rotate(45deg);margin:0 3px 3px auto}
+.demo-compact-controls>details[open]>summary::after{transform:rotate(225deg);margin-bottom:0}
+.demo-tools .demo-compact-controls>details[open]{padding-bottom:10px!important}
+.demo-tools .demo-compact-controls>details>button,.demo-tools .demo-compact-controls>details>a,.demo-tools .demo-compact-controls>details>div,.demo-tools .demo-compact-controls>details>small{margin:0 0 6px;max-width:100%}
+.demo-tools .demo-compact-controls button,.demo-tools .demo-compact-controls a{display:inline-flex;align-items:center;justify-content:flex-start;min-height:36px;height:auto;padding:8px 10px;box-sizing:border-box;font:400 12px/18px Onest,sans-serif;border-radius:10px;text-align:left;white-space:normal}
+.demo-tools .demo-compact-controls>details>button{width:auto;margin:0 4px 6px 0}
+.demo-tools .demo-compact-controls>details>a{display:flex;width:100%;color:#2f5bff;text-decoration:none;background:#f2f7fc}
+.demo-tools .demo-compact-controls>details>small{display:block;padding:0;font:400 12px/18px Onest,sans-serif;color:#5a6072}
+.demo-tools .demo-compact-controls>details>div{display:flex;flex-wrap:wrap;gap:6px}
+.demo-tools .demo-compact-controls .demo-action-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.demo-tools .demo-compact-controls .demo-action-grid button{width:100%}
+.demo-tools .demo-compact-controls select{min-width:0;max-width:100%;min-height:36px;border:1px solid #e4e7ef;border-radius:10px;background:white;padding:6px;font:400 12px/18px Onest;color:#101320}
+.demo-tools .demo-compact-controls .demo-compact-body{display:flex;flex-direction:column;gap:6px}
+.demo-tools .demo-compact-controls .demo-variant-options button{justify-content:center;min-height:36px;font-size:12px}
+.demo-tools .demo-compact-controls .demo-loading-preview{justify-content:center;font-weight:500}
+.demo-tools .demo-setting-value{margin-left:auto;color:#2f5bff;font:400 11px/16px Onest;background:#eaf2ff;padding:2px 6px;border-radius:6px}
+.demo-compact-controls>details>summary:has(.demo-setting-value)::after{margin-left:2px}
+.demo-tools .demo-compact-controls .project-links{padding:8px 0;margin:0;border:0;gap:4px}
+@media(pointer:coarse){.demo-tools .demo-compact-controls button,.demo-tools .demo-compact-controls a,.demo-tools .demo-compact-controls>details>summary{min-height:44px}}
+.demo-tools .demo-integration-options{display:flex;gap:4px!important}
+.demo-tools .demo-integration-options button{flex:1;justify-content:center;white-space:nowrap;padding:8px 6px;border:1px solid #e4e7ef;background:white;color:#5a6072}
+.demo-tools .demo-integration-options button[aria-pressed=true]{background:#eaf2ff;border-color:#2f5bff;color:#2f5bff}
