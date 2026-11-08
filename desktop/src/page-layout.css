@@ -137,6 +137,8 @@
 .desktop-account-menu [role="menuitem"][data-highlighted] { background: #eaf2ff; color: #2f5bff; }
 .desktop-account-menu [role="separator"] { height: 1px; margin: 6px 4px; background: #e4e7ef; }
 .desktop-account-menu .desktop-account-logout { color: #b53853; }
+.desktop-account-menu .icon-tile { display:grid; place-items:center; flex:none; width:36px; height:36px; border-radius:12px; background:var(--k-icon-surface,#eaf2ff); color:var(--k-action-primary,#2f5bff); }
+.desktop-account-menu .desktop-account-logout .icon-tile { background:#fde8e8; color:#e5484d; }
 
 /* Place list actions beside the controls they affect. */
 .desktop-app .desktop-history-controls { display: flex; align-items: center; justify-content: space-between; gap: 24px; }

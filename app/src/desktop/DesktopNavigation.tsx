@@ -28,11 +28,11 @@ export function DesktopNavigation({route,name,photo,points=0,unread=false,onNavi
    {!november&&<button className="desktop-notification-button" aria-label={unread?'Уведомления: есть новые':'Уведомления'} onClick={()=>onNavigate('notifications')}><Icon name="bell" size={20}/>{unread&&<span className="notification-dot" aria-hidden="true"/>}</button>}
    {name&&<button className="desktop-points-link" aria-label={`Баллы «Ключей»: ${pointsLabel}. Открыть выгоды`} onClick={()=>onNavigate('rewards')}><Icon name="gift" size={20} inheritColor/><span>{pointsLabel}</span></button>}
    {name?<DropdownMenu.Root><DropdownMenu.Trigger asChild><button className="desktop-profile-link" aria-label={`Меню профиля: ${name}`}>{photo?<img className="desktop-profile-avatar" src={photo} alt=""/>:<span className="desktop-profile-avatar">{name.slice(0,1)}</span>}<strong>{name}</strong><Icon name="menu" size={18} inheritColor/></button></DropdownMenu.Trigger><DropdownMenu.Portal><DropdownMenu.Content className="desktop-account-menu" align="end" sideOffset={8} collisionPadding={16} onCloseAutoFocus={()=>{const action=pendingMenuAction.current;if(action){pendingMenuAction.current=null;requestAnimationFrame(action);}}}>
-    <DropdownMenu.Item onSelect={()=>onNavigate('profile')}><Icon name="nav-profile" size={18} inheritColor/>Мой профиль</DropdownMenu.Item>
+    <DropdownMenu.Item onSelect={()=>onNavigate('profile')}><span className="icon-tile"><Icon name="nav-profile" size={22} inheritColor/></span>Мой профиль</DropdownMenu.Item>
     <DropdownMenu.Separator/>
-    {menuItems.map(([target,icon,label])=><DropdownMenu.Item key={target} onSelect={()=>onNavigate(target)}><Icon name={icon} size={18} inheritColor/>{label}</DropdownMenu.Item>)}
+    {menuItems.map(([target,icon,label])=><DropdownMenu.Item key={target} onSelect={()=>onNavigate(target)}><span className="icon-tile"><Icon name={icon} size={22} inheritColor/></span>{label}</DropdownMenu.Item>)}
     <DropdownMenu.Separator/>
-    <DropdownMenu.Item className="desktop-account-logout" onSelect={()=>{pendingMenuAction.current=onLogout;}}><Icon name="logout" size={18} inheritColor/>Выйти</DropdownMenu.Item>
+    <DropdownMenu.Item className="desktop-account-logout" onSelect={()=>{pendingMenuAction.current=onLogout;}}><span className="icon-tile"><Icon name="logout" size={22} inheritColor/></span>Выйти</DropdownMenu.Item>
    </DropdownMenu.Content></DropdownMenu.Portal></DropdownMenu.Root>:<button className="desktop-signin" onClick={onLogin}>Войти</button>}
   </div>
  </header>;
