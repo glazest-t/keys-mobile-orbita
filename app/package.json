@@ -12,7 +12,8 @@
     "dev": "vite",
     "prebuild": "npm run check:runtime",
     "build": "tsc && vite build && node scripts/prepare-sites-build.mjs",
-    "build:pages": "node scripts/build-pages.mjs"
+    "build:pages": "node scripts/build-pages.mjs",
+    "check:icons": "node scripts/check-icons.mjs"
   },
   "dependencies": {
     "@2gis/mapgl": "^1.80.0",

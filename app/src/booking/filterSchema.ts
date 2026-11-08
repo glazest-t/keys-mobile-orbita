@@ -5,23 +5,27 @@ export const filterGroups = [
  {name:'Звездность отеля',mode:'or',values:['Без звёзд','1 звезда','2 звезды','3 звезды','4 звезды','5 звёзд']},
  {name:'Сеть отеля',mode:'or',values:['ibis','Cosmos Hotel Group','Hyatt','Novotel','Mercure','AZIMUT Hotels','Грейс','Alean Collection','Marriott','Rixos','Mövenpick','Pullman','Swissôtel','Mantera'].sort((a,b)=>a.localeCompare(b,'ru',{sensitivity:'base'}))},
  {name:'Питание',mode:'or',values:['Завтрак включён','Собственная кухня','Завтрак и ужин включены','Полный пансион','Всё включено','Без питания']},
- {name:'Выбор кровати',mode:'or',values:['Две односпальные','Одна двуспальная']},
+ {name:'Выбор кровати',mode:'or',values:['Одна двуспальная','Две односпальные','Диван-кровать','Двухъярусная','Детская кроватка']},
+ {name:'Комнаты',mode:'and',values:['2 спальни и больше','Своя ванная','Две ванные и больше']},
  {name:'Возможности бронирования',mode:'and',values:['Можно с питомцем','Можно с детьми','Доступная среда','Можно курить']},
  {name:'Парковка',mode:'and',values:['Есть парковка','Бесплатная парковка']},
- {name:'Общие удобства',mode:'and',values:['Бассейн','Wi-Fi','Круглосуточная стойка регистрации','Камера хранения','Лифт','Ресторан','Спа','Фитнес-центр']},
- {name:'Удобства в номере',mode:'and',values:['Ванная комната в номере','Балкон','Телевизор','Кофемашина','Кондиционер','Холодильник','Стиральная машина','Сейф']},
+ {name:'Общие удобства',mode:'and',values:['Бассейн','Спа','Ресторан','Фитнес-центр','Wi-Fi','Лифт','Камера хранения','Детская комната']},
+ {name:'Удобства в номере',mode:'and',values:['Балкон','Телевизор','Кофемашина','Кондиционер','Холодильник','Стиральная машина','Сейф']},
  {name:'Оплата',mode:'and',values:['Бесплатная отмена','Оплата картой','Оплата на месте']},
 ] as const;
-export const countFilters=['Спальни','Кровати','Ванные комнаты'] as const;
+export const roomAreaGroup='Площадь номера от';
+export function minimumRoomArea(filters:string[]){const value=Number(groupValues(filters,roomAreaGroup)[0]);return Number.isFinite(value)?Math.max(0,value):0;}
 export const token=(group:string,value:string)=>`${group}: ${value}`;
 const aliases:Record<string,string[]>={
+ 'Удобства в номере: Ванная комната в номере':['Комнаты: Своя ванная'],
+ 'Ванная комната в номере':['Комнаты: Своя ванная'],
  '4–5 звёзд':['Звездность отеля: 4 звезды','Звездность отеля: 5 звёзд'], 'От 4 звёзд':['Звездность отеля: 4 звезды','Звездность отеля: 5 звёзд'],
  'С завтраком':['Питание: Завтрак включён'],'С бассейном':['Общие удобства: Бассейн'],'Со спа':['Общие удобства: Спа'],
  'С питомцем':['Возможности бронирования: Можно с питомцем'],'С детьми':['Возможности бронирования: Можно с детьми'],
  'Спецпредложения':['Бонусы и скидки: Горячие скидки'],
 };
 // Ignore the retired option in saved searches and persisted prototype state.
-const retiredFilters=new Set(['Только в Ключах','Эксклюзивно только в Ключах'].flatMap(value=>[value,token('Бонусы и скидки',value)]));
+const retiredFilters=new Set(['Круглосуточная стойка регистрации','Общие удобства: Круглосуточная стойка регистрации',...['Только в Ключах','Эксклюзивно только в Ключах'].flatMap(value=>[value,token('Бонусы и скидки',value)])]);
 export function normalizeFilters(values:string[]=[]):string[]{return [...new Set(values.filter(value=>!retiredFilters.has(value)).flatMap(value=>aliases[value]||[filterGroups.flatMap(g=>g.values.includes(value as never)?[token(g.name,value)]:[])[0]||value]))];}
 export function groupValues(filters:string[],name:string){return normalizeFilters(filters).filter(v=>v.startsWith(name+': ')).map(v=>v.slice(name.length+2));}
 export function counterValue(filters:string[],name:string){return Math.min(10,Math.max(0,Number(groupValues(filters,name)[0])||0));}

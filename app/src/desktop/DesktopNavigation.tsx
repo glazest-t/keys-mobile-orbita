@@ -14,7 +14,7 @@ export function DesktopNavigation({route,name,photo,points=0,unread=false,onNavi
   ['profile-history','nav-trips','История поездок'],
   ['travelers','guests','Путешественники'],
   ['price-watches','discount','Следим за ценами'],
-  ['help','nav-chats','Помощь и поддержка'],
+  ['help','help','Помощь и поддержка'],
  ];
  useEffect(()=>{window.scrollTo(0,0);},[route]);
  useEffect(()=>{const close=()=>setDemo(false);window.addEventListener('keys-demo-tools-close',close);return()=>window.removeEventListener('keys-demo-tools-close',close);},[]);
@@ -26,7 +26,7 @@ export function DesktopNavigation({route,name,photo,points=0,unread=false,onNavi
   <div className="desktop-navigation-actions">
    <button aria-label="Избранное" onClick={()=>onNavigate('favorites')}><Icon name="heart" size={20}/></button>
    {!november&&<button className="desktop-notification-button" aria-label={unread?'Уведомления: есть новые':'Уведомления'} onClick={()=>onNavigate('notifications')}><Icon name="bell" size={20}/>{unread&&<span className="notification-dot" aria-hidden="true"/>}</button>}
-   {name&&<button className="desktop-points-link" aria-label={`Баллы «Ключей»: ${pointsLabel}. Открыть выгоды`} onClick={()=>onNavigate('rewards')}><Icon name="nav-rewards" size={20} inheritColor/><span>{pointsLabel}</span></button>}
+   {name&&<button className="desktop-points-link" aria-label={`Баллы «Ключей»: ${pointsLabel}. Открыть выгоды`} onClick={()=>onNavigate('rewards')}><Icon name="gift" size={20} inheritColor/><span>{pointsLabel}</span></button>}
    {name?<DropdownMenu.Root><DropdownMenu.Trigger asChild><button className="desktop-profile-link" aria-label={`Меню профиля: ${name}`}>{photo?<img className="desktop-profile-avatar" src={photo} alt=""/>:<span className="desktop-profile-avatar">{name.slice(0,1)}</span>}<strong>{name}</strong><Icon name="menu" size={18} inheritColor/></button></DropdownMenu.Trigger><DropdownMenu.Portal><DropdownMenu.Content className="desktop-account-menu" align="end" sideOffset={8} collisionPadding={16} onCloseAutoFocus={()=>{const action=pendingMenuAction.current;if(action){pendingMenuAction.current=null;requestAnimationFrame(action);}}}>
     <DropdownMenu.Item onSelect={()=>onNavigate('profile')}><Icon name="nav-profile" size={18} inheritColor/>Мой профиль</DropdownMenu.Item>
     <DropdownMenu.Separator/>

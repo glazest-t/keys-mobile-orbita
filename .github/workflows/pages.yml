@@ -30,6 +30,8 @@ jobs:
           python-version: '3.12'
       - run: npm --prefix app ci
       - run: npm --prefix desktop ci
+      - name: Validate icon sets
+        run: npm --prefix app run check:icons
       - name: Test logic
         run: node --experimental-strip-types --test tests/*.test.mjs app/tests/auth.test.mjs app/tests/maps.test.mjs desktop/tests/access.test.mjs
       - name: Validate references

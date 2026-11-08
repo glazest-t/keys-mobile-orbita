@@ -5,7 +5,7 @@ import {type Search,dateLabel,guestLabel,nights} from './model';
 import {validDateRange,guestCountLabel} from './search';
 
 export function Counter({label,hint,value,onChange,min=0,max=4}:{label:string;hint?:string;value:number;onChange:(n:number)=>void;min?:number;max?:number}){
- return <div className="guest-counter"><span><strong>{label}</strong>{hint&&<small>{hint}</small>}</span><div><button type="button" className="counter-button" aria-label={`Уменьшить: ${label}`} disabled={value<=min} onClick={()=>onChange(value-1)}>−</button><strong key={value} className="count-pop" aria-live="polite">{value}</strong><button type="button" className="counter-button" aria-label={`Увеличить: ${label}`} disabled={value>=max} onClick={()=>onChange(value+1)}><Icon name="plus" size={18}/></button></div></div>;
+ return <div className="guest-counter"><span><strong>{label}</strong>{hint&&<small>{hint}</small>}</span><div><button type="button" className="counter-button" aria-label={`Уменьшить: ${label}`} disabled={value<=min} onClick={()=>onChange(value-1)}><Icon name="minus" size={18} inheritColor/></button><strong key={value} className="count-pop" aria-live="polite">{value}</strong><button type="button" className="counter-button" aria-label={`Увеличить: ${label}`} disabled={value>=max} onClick={()=>onChange(value+1)}><Icon name="plus" size={18}/></button></div></div>;
 }
 export function GuestFields({value:draft,onChange:setDraft,showTripFeatures=false}:{value:Search;onChange:(s:Search)=>void;showTripFeatures?:boolean}){
  const [ageIndex,setAgeIndex]=useState<number|null>(null);

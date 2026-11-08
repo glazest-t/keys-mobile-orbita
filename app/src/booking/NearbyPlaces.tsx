@@ -9,7 +9,7 @@ import {TwoGisMap} from '../maps/TwoGisMap';
 import {hotelLocation,type Coordinates} from '../maps/locations';
 import './nearby.css';
 
-const placeIcon=(p:NearbyPlace)=>p.category==='Прогулки'?'spa':p.category==='Музеи'?'hotel-building':'pin';
+const placeIcon=(p:NearbyPlace)=>p.category==='Прогулки'?'park':p.category==='Музеи'?'museum':'pin';
 function PlaceIcon({place}:{place:NearbyPlace}){return <span className={'nearby-category-tile '+(place.category==='Прогулки'?'nature':place.category==='Музеи'?'museum':'landmark')}><Icon name={placeIcon(place)} size={24} inheritColor/></span>;}
 
 function PlacePhoto({place,large=false}:{place:NearbyPlace;large?:boolean}){
@@ -20,7 +20,7 @@ function PlacePhoto({place,large=false}:{place:NearbyPlace;large?:boolean}){
 export function NearbyPreview({hotelId,onOpen}:{hotelId:string;onOpen:(id?:string)=>void}){
  if(isDesktop)return <section className="stay-nearby stay-nearby-expanded"><header><h2>Рядом с вами</h2>{nearbyPlaces(hotelId).length>0&&<p className="nearby-radius">В радиусе 1,5 км от отеля</p>}</header><NearbyPlaces key={hotelId} hotelId={hotelId} embedded/></section>;
  const places=nearbyPlaces(hotelId).slice(0,2);
- return <section className="stay-nearby"><header><h2 className="nearby-preview-heading"><button type="button" className="nearby-preview-link" onClick={()=>onOpen()}><span>Рядом с вами</span><span className="nearby-preview-all">Все<Icon name="chevron-right" size={16} inheritColor/></span></button></h2></header>{places.length?places.map(p=><button className="stay-nearby-row k-list-row" key={p.id} onClick={()=>onOpen(p.id)}><span className={"nearby-category-tile "+(p.category==='Прогулки'?'nature':p.category==='Музеи'?'museum':'landmark')}><Icon name={p.category==='Прогулки'?'spa':p.category==='Музеи'?'hotel-building':'pin'} size={24} inheritColor/></span><span><strong>{p.name}</strong><small>{p.categoryLabel} · {nearbyJourney(p)}</small></span></button>):<p>Места рядом с отелем пока не добавлены</p>}</section>;
+ return <section className="stay-nearby"><header><h2 className="nearby-preview-heading"><button type="button" className="nearby-preview-link" onClick={()=>onOpen()}><span>Рядом с вами</span><span className="nearby-preview-all">Все<Icon name="chevron-right" size={16} inheritColor/></span></button></h2></header>{places.length?places.map(p=><button className="stay-nearby-row k-list-row" key={p.id} onClick={()=>onOpen(p.id)}><span className={"nearby-category-tile "+(p.category==='Прогулки'?'nature':p.category==='Музеи'?'museum':'landmark')}><Icon name={p.category==='Прогулки'?'park':p.category==='Музеи'?'museum':'pin'} size={24} inheritColor/></span><span><strong>{p.name}</strong><small>{p.categoryLabel} · {nearbyJourney(p)}</small></span></button>):<p>Места рядом с отелем пока не добавлены</p>}</section>;
 }
 
 export function NearbyPlaces({hotelId,initialPlaceId,header,embedded=false}:{header?:ReactNode;hotelId:string;initialPlaceId?:string;embedded?:boolean}){

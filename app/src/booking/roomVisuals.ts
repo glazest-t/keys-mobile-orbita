@@ -1,5 +1,5 @@
 import {importedRoom} from './importedHotels.ts';
-import {roomFacets} from './searchFacets.ts';
+import {roomFacets,roomArea} from './searchFacets.ts';
 import {catalog} from './model.ts';
 const photo=(id:string)=>`https://directus.manteratravel.ru/assets/${id}?fit=cover&width=800&quality=80`;
 export type RoomPhoto={src:string;label:string;category:string};
@@ -20,6 +20,6 @@ export function roomVisual(id:string){
  const room=catalog.rooms.find(r=>r.id===id)!;
  const deluxe=id==='sea-deluxe',suite=id==='sea-suite';
  const photos:RoomPhoto[]=deluxe?deluxePhotos:room.hotelId==='orbit-sea'?(suite?suitePhotos:standardPhotos).map((id,i)=>({src:photo(id),label:`Фото номера · ${i+1}`,category:'Все фото'})):[{src:'/brand/assets/assets/maidens-premium-king.jpg',label:'Спальня',category:'Спальня'},{src:'/brand/assets/assets/room-suite-2.jpg',label:'Интерьер',category:'Интерьер'}];
- if(id.startsWith('kazan-')){const f=roomFacets(id);return {photos,area:f.bedrooms*24,view:'Вид на территорию',floor:'1–4 этаж',balcony:f.amenities.includes('Балкон'),description:room.title,amenities:f.amenities.map(label=>['check',label])};}
- return {photos,area:suite?65:id==='forest-family'?48:32,view:deluxe||suite?'Вид на море':id==='sea-standard'?'Вид на горы':'Вид на территорию',floor:suite?'7 этаж':'1–4 этаж',balcony:room.hotelId!=='orbit-city',description:suite?'Спальня и отдельная гостиная, меблированный балкон.':'Светлая спальня, рабочая зона и место для отдыха.',amenities:[['safe','Сейф'],['minibar','Мини-бар по запросу'],['coffee-to-go','Кофемашина и чай'],['wifi','Wi-Fi'],['climate','Кондиционер'],['tv','Телевизор'],['towels','Халаты и тапочки'],['cleaning','Косметика']]};
+ if(id.startsWith('kazan-')){const f=roomFacets(id);return {photos,area:roomArea(id),view:'Вид на территорию',floor:'1–4 этаж',balcony:f.amenities.includes('Балкон'),description:room.title,amenities:f.amenities.map(label=>['check',label])};}
+ return {photos,area:roomArea(id),view:deluxe||suite?'Вид на море':id==='sea-standard'?'Вид на горы':'Вид на территорию',floor:suite?'7 этаж':'1–4 этаж',balcony:room.hotelId!=='orbit-city',description:suite?'Спальня и отдельная гостиная, меблированный балкон.':'Светлая спальня, рабочая зона и место для отдыха.',amenities:[['safe','Сейф'],['minibar','Мини-бар по запросу'],['coffee-to-go','Кофемашина и чай'],['wifi','Wi-Fi'],['climate','Кондиционер'],['tv','Телевизор'],['towels','Халаты и тапочки'],['cleaning','Косметика']]};
 }

@@ -8,7 +8,7 @@ export function BookingTimes({draft,onEdit}:{draft:Draft;onEdit:(kind:StayTimeKi
  return <section className="hotel-section"><h2>Заезд и выезд</h2><div className="booking-times">{(['arrival','departure'] as const).map(kind=>{
   const option=selectedBookingTime(draft,kind);
   return <button key={kind} onClick={()=>onEdit(kind)} aria-label={`Изменить время ${kind==='arrival'?'заезда':'выезда'}: ${option.time}`}>
-   <span className="booking-time-label"><Icon name={kind==='arrival'?'early-check-in':'late-check-out'} size={18} inheritColor/>{kind==='arrival'?'Заезд':'Выезд'}</span>
+   <span className="booking-time-label"><Icon name={kind==='arrival'?'check-in':'check-out'} size={18} inheritColor/>{kind==='arrival'?'Заезд':'Выезд'}</span>
    <span className="booking-time-value"><strong>{kind==='arrival'?'С':'До'} {option.time}</strong><Icon name="edit" size={16} inheritColor/></span>
    <small>{option.amountMinor?`+ ${formatMoney(option.amountMinor)}`:'Без доплаты'}</small>
   </button>;

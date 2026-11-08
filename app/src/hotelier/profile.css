@@ -24,3 +24,11 @@
 .keys-app:has(.profile-page) .app-header{justify-content:flex-start;gap:14px}
 .keys-app:has(.profile-page) .app-header .header-title{font:500 19px/26px var(--k-font-text);text-align:left}
 .keys-app:has(.profile-page) .app-header .header-spacer{display:none}
+
+.keys-app .profile-page .profile-person-details{flex:1;min-width:0;gap:2px}
+.keys-app .profile-page .profile-person-details h1{width:100%;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:left;text-wrap:nowrap}
+.profile-page .profile-phone-row{display:flex;align-items:center;gap:6px;max-width:100%}
+.profile-page .profile-phone-row .k-icon-button{position:relative;display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;flex:none;padding:0;border:0;border-radius:6px;background:transparent}
+.profile-page .profile-phone-row .k-icon-button::after{content:'';position:absolute;inset:-10px}
+.profile-page .profile-phone-row .k-icon-button .k-icon{width:18px;height:18px}
+.profile-page .profile-person-details>.hotelier-profile-badge{margin-top:2px}

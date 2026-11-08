@@ -51,9 +51,6 @@
 .filter-price-fields label>span{color:#5a6072}
 .filter-price-fields input{min-width:0;width:100%;padding:0;border:0;background:transparent;outline:none;font:500 14px/20px Onest;color:#101320}
 .filter-price-fields input::placeholder{font-size:12px;font-weight:400}
-.filter-counter{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:14px;min-height:48px}
-.filter-counter>div{display:flex;align-items:center;gap:8px}
-.filter-counter strong{min-width:46px;text-align:center;font-size:13px;font-weight:400}
 .filter-editor-footer{position:absolute;left:0;right:0;padding:12px 16px;background:#f4f5fb;border-top:1px solid #e4e7ef}
 .filter-editor-footer .k-button{width:100%}
 .filter-empty{font:400 14px/20px Onest;color:#5a6072;margin:4px 0}
@@ -79,3 +76,9 @@
 
 .discovery-chip-track .sort-icon-chip{width:36px;justify-content:center;padding:0;position:relative}
 .sort-icon-chip:before{content:"";position:absolute;inset:-6px -4px}
+
+.filter-area-field{display:flex;flex-direction:column;gap:8px;font:500 14px/20px var(--k-font-text);color:var(--k-text-primary)}
+.filter-area-input{display:flex;align-items:center;gap:8px;min-height:48px;padding:12px 14px;border:1px solid var(--k-border-subtle);border-radius:14px;background:#fff}
+.filter-area-input:focus-within{border-color:#9299aa}
+.filter-area-input input{width:100%;min-width:0;border:0;padding:0;background:transparent;outline:none;font:400 15px/22px var(--k-font-text);color:var(--k-text-primary)}
+.filter-area-input>span{color:var(--k-text-secondary)}

@@ -1,0 +1,2220 @@
+{
+  "styleContract": {
+    "viewBox": "0 0 24 24",
+    "paint": "currentColor",
+    "primaryOpacity": 1,
+    "secondaryOpacity": 0.45,
+    "construction": "solid silhouettes with optional secondary objects",
+    "strokeWidth": 2,
+    "strokeLinecap": "round",
+    "strokeLinejoin": "round",
+    "straightCornerTrim": 0.65
+  },
+  "assetCount": 169,
+  "catalogueCount": 159,
+  "excluded": [
+    "Фирменный логотип Ключей",
+    "Логотипы сторонних приложений и банков",
+    "Декоративные иллюстрации",
+    "Системные индикаторы телефона"
+  ],
+  "items": [
+    {
+      "id": "nav-trips",
+      "label": "Поездки",
+      "group": "Основная навигация",
+      "number": "001",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/booking/EmptyTrip.tsx",
+        "app/src/booking/HotelDetails.tsx",
+        "app/src/booking/SearchScreens.tsx",
+        "app/src/booking/SearchControls.tsx",
+        "app/src/desktop/DesktopNavigation.tsx",
+        "app/src/profile/SupportPage.tsx",
+        "app/src/hotelier/ProfilePage.tsx"
+      ]
+    },
+    {
+      "id": "nav-search",
+      "label": "Найти отель",
+      "group": "Основная навигация",
+      "number": "002",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/booking/DesktopBookingServices.tsx",
+        "app/src/booking/ChatList.tsx",
+        "app/src/booking/HotelDetails.tsx",
+        "app/src/booking/SearchJourney.tsx",
+        "app/src/booking/SearchScreens.tsx",
+        "app/src/booking/Discovery.tsx",
+        "app/src/booking/DesktopRoomSearch.tsx",
+        "app/src/booking/FindPage.tsx",
+        "app/src/booking/ResultsHeader.tsx",
+        "app/src/booking/Explore.tsx",
+        "app/src/booking/RouteOrigin.tsx",
+        "app/src/booking/PreferenceJourney.tsx",
+        "app/src/rewards/Rewards.tsx",
+        "app/src/profile/SupportPage.tsx"
+      ]
+    },
+    {
+      "id": "nav-chats",
+      "label": "Чаты",
+      "group": "Основная навигация",
+      "number": "003",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/booking/UpcomingTrip.tsx",
+        "app/src/booking/CompletedTrip.tsx",
+        "app/src/booking/notifications.ts",
+        "app/src/booking/ChatList.tsx",
+        "app/src/booking/HotelDetails.tsx"
+      ]
+    },
+    {
+      "id": "nav-rewards",
+      "label": "Выгоды",
+      "group": "Основная навигация",
+      "number": "004",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/booking/HotelDetails.tsx"
+      ]
+    },
+    {
+      "id": "nav-profile",
+      "label": "Профиль",
+      "group": "Основная навигация",
+      "number": "005",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/booking/swipePreferences.ts",
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/desktop/DesktopNavigation.tsx",
+        "app/src/profile/SupportPage.tsx"
+      ]
+    },
+    {
+      "id": "heart",
+      "label": "Избранное",
+      "group": "Основная навигация",
+      "number": "006",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/booking/PreferenceDiscovery.tsx",
+        "app/src/booking/swipePreferences.ts",
+        "app/src/booking/Discovery.tsx",
+        "app/src/booking/FavoritesScreen.tsx",
+        "app/src/booking/Explore.tsx",
+        "app/src/booking/FavoriteSaving.tsx",
+        "app/src/desktop/DesktopNavigation.tsx"
+      ]
+    },
+    {
+      "id": "favorite-outline",
+      "label": "Не в избранном",
+      "group": "Основная навигация",
+      "number": "007",
+      "uses": [
+        "app/src/booking/Discovery.tsx",
+        "app/src/booking/Explore.tsx"
+      ]
+    },
+    {
+      "id": "hotel-building",
+      "label": "Отель",
+      "group": "Отель и номер",
+      "number": "008",
+      "uses": [
+        "app/src/maps/TwoGisMap.tsx",
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/BookingFlow.tsx",
+        "app/src/rewards/NovemberNetwork.tsx",
+        "app/src/onboarding/BenefitsIntro.tsx"
+      ]
+    },
+    {
+      "id": "hotel-network",
+      "label": "Сеть отелей",
+      "group": "Отель и номер",
+      "number": "009",
+      "uses": [
+        "app/src/rewards/NovemberNetwork.tsx"
+      ]
+    },
+    {
+      "id": "room",
+      "label": "Номер",
+      "group": "Отель и номер",
+      "number": "010",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/DemoTools.tsx",
+        "app/src/demoIntegrations.ts",
+        "app/src/booking/swipePreferences.ts",
+        "app/src/booking/serviceSettlement.ts",
+        "app/src/booking/TripPreparation.tsx",
+        "app/src/booking/BookingRecord.tsx",
+        "app/src/booking/ServiceGroupPayment.tsx",
+        "app/src/booking/StayAccount.tsx",
+        "app/src/booking/BookingFlow.tsx",
+        "app/src/booking/serviceRequests.ts",
+        "app/src/booking/SearchJourney.tsx",
+        "app/src/booking/breakfastSummary.ts",
+        "app/src/booking/Breakfast.tsx",
+        "app/src/booking/HotelServices.tsx",
+        "app/src/rewards/Rewards.tsx",
+        "app/src/profile/TripDetails.tsx",
+        "spec/imported-hotels.json",
+        "spec/routes.json"
+      ]
+    },
+    {
+      "id": "bed-double",
+      "label": "Двуспальная",
+      "group": "Отель и номер",
+      "number": "011",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/roomOffers.ts"
+      ]
+    },
+    {
+      "id": "bed-single",
+      "label": "Односпальная",
+      "group": "Отель и номер",
+      "number": "012",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/roomOffers.ts"
+      ]
+    },
+    {
+      "id": "bed-twin",
+      "label": "Две односпальные",
+      "group": "Отель и номер",
+      "number": "013",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/roomOffers.ts"
+      ]
+    },
+    {
+      "id": "baby-cot",
+      "label": "Детская кроватка",
+      "group": "Отель и номер",
+      "number": "014",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/ServiceDetailIntro.tsx",
+        "app/src/booking/hotelServiceCatalog.ts",
+        "app/src/booking/roomOffers.ts"
+      ]
+    },
+    {
+      "id": "floor",
+      "label": "Этаж",
+      "group": "Отель и номер",
+      "number": "015",
+      "uses": [
+        "app/src/booking/Rooms.tsx",
+        "spec/imported-hotels.json"
+      ]
+    },
+    {
+      "id": "door",
+      "label": "Дверь",
+      "group": "Отель и номер",
+      "number": "016",
+      "uses": [
+        "app/src/booking/stayProblems.ts",
+        "app/src/profile/support.ts",
+        "app/src/onboarding/RoomControlArt.tsx"
+      ]
+    },
+    {
+      "id": "key",
+      "label": "Ключ",
+      "group": "Отель и номер",
+      "number": "017",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/DemoTools.tsx",
+        "app/src/demoIntegrations.ts",
+        "app/src/booking/UpcomingTrip.tsx",
+        "app/src/booking/notifications.ts",
+        "app/src/booking/ChatList.tsx",
+        "app/src/booking/StayExperience.tsx",
+        "app/src/booking/StayWifi.tsx",
+        "app/src/profile/HistoryTimeline.tsx",
+        "spec/routes.json"
+      ]
+    },
+    {
+      "id": "calendar",
+      "label": "Даты",
+      "group": "Отель и номер",
+      "number": "018",
+      "uses": [
+        "app/src/travelers/TravelerFields.tsx",
+        "app/src/booking/ShareBookingPanel.tsx",
+        "app/src/booking/Catalog.tsx",
+        "app/src/booking/BookingRecord.tsx",
+        "app/src/booking/ChatList.tsx",
+        "app/src/booking/BookingConfirmationTools.tsx",
+        "app/src/booking/FavoritesScreen.tsx",
+        "app/src/booking/DesktopRoomSearch.tsx",
+        "app/src/booking/FindPage.tsx",
+        "app/src/booking/TextSearchContent.tsx",
+        "app/src/booking/ResultsHeader.tsx",
+        "app/src/booking/PreferenceJourney.tsx",
+        "app/src/booking/HotelServices.tsx",
+        "app/src/kit/CurrentComponents.tsx",
+        "app/src/profile/TripDetails.tsx",
+        "app/src/profile/HistoryTimeline.tsx",
+        "app/src/profile/ProfileHistory.tsx"
+      ]
+    },
+    {
+      "id": "guests",
+      "label": "Гости",
+      "group": "Отель и номер",
+      "number": "019",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/booking/UpcomingTrip.tsx",
+        "app/src/booking/swipePreferences.ts",
+        "app/src/booking/BookingGuestContact.tsx",
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/booking/BookingRecord.tsx",
+        "app/src/booking/BookingFlow.tsx",
+        "app/src/booking/SearchJourney.tsx",
+        "app/src/booking/GuestDetails.tsx",
+        "app/src/booking/FavoritesScreen.tsx",
+        "app/src/booking/DesktopRoomSearch.tsx",
+        "app/src/booking/FindPage.tsx",
+        "app/src/booking/TextSearchContent.tsx",
+        "app/src/booking/ResultsHeader.tsx",
+        "app/src/booking/Rooms.tsx",
+        "app/src/booking/PreferenceJourney.tsx",
+        "app/src/kit/CurrentComponents.tsx",
+        "app/src/desktop/DesktopNavigation.tsx",
+        "app/src/profile/TripDetails.tsx",
+        "app/src/hotelier/ProfilePage.tsx",
+        "app/src/catalogue/scenes.json"
+      ]
+    },
+    {
+      "id": "reception",
+      "label": "Ресепшн",
+      "group": "Проживание и сервис",
+      "number": "020",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/TripPreparation.tsx",
+        "app/src/booking/DesktopPaymentChoices.tsx",
+        "app/src/booking/PaymentChoices.tsx",
+        "app/src/profile/SupportPage.tsx",
+        "app/src/hotelier/ProfilePage.tsx",
+        "app/src/hotelier/HotelierBenefits.tsx"
+      ]
+    },
+    {
+      "id": "room-service",
+      "label": "Рум-сервис",
+      "group": "Проживание и сервис",
+      "number": "021",
+      "uses": [
+        "app/src/booking/UpcomingTrip.tsx",
+        "app/src/booking/serviceSettlement.ts",
+        "app/src/booking/ServiceDetailIntro.tsx",
+        "app/src/booking/DesktopBookingServices.tsx",
+        "app/src/booking/hotelServiceCatalog.ts",
+        "app/src/kit/CurrentComponents.tsx",
+        "app/src/onboarding/RoomControlArt.tsx"
+      ]
+    },
+    {
+      "id": "concierge",
+      "label": "Консьерж",
+      "group": "Проживание и сервис",
+      "number": "022",
+      "uses": [
+        "app/src/booking/ServiceDetailIntro.tsx",
+        "app/src/booking/hotelServiceCatalog.ts"
+      ]
+    },
+    {
+      "id": "check-in",
+      "label": "Заезд",
+      "group": "Проживание и сервис",
+      "number": "023",
+      "uses": [
+        "app/src/booking/notifications.ts",
+        "app/src/booking/StayTimeFields.tsx",
+        "app/src/booking/HotelOverview.tsx"
+      ]
+    },
+    {
+      "id": "check-out",
+      "label": "Выезд",
+      "group": "Проживание и сервис",
+      "number": "024",
+      "uses": [
+        "app/src/booking/StayTimeFields.tsx",
+        "app/src/booking/HotelOverview.tsx"
+      ]
+    },
+    {
+      "id": "early-check-in",
+      "label": "Ранний заезд",
+      "group": "Проживание и сервис",
+      "number": "025",
+      "uses": [
+        "app/src/booking/UpcomingTrip.tsx",
+        "app/src/booking/serviceSettlement.ts",
+        "app/src/booking/ServiceDetailIntro.tsx",
+        "app/src/booking/BookingRecord.tsx",
+        "app/src/booking/hotelServiceCatalog.ts",
+        "app/src/booking/RouteOrigin.tsx",
+        "app/src/booking/Breakfast.tsx",
+        "app/src/kit/CurrentComponents.tsx"
+      ]
+    },
+    {
+      "id": "late-check-out",
+      "label": "Поздний выезд",
+      "group": "Проживание и сервис",
+      "number": "026",
+      "uses": [
+        "app/src/booking/UpcomingTrip.tsx",
+        "app/src/booking/ServiceDetailIntro.tsx",
+        "app/src/booking/stayTimeServices.ts",
+        "app/src/booking/hotelServiceCatalog.ts",
+        "app/src/kit/CurrentComponents.tsx"
+      ]
+    },
+    {
+      "id": "time",
+      "label": "Время",
+      "group": "Проживание и сервис",
+      "number": "027",
+      "uses": [
+        "spec/demo-data.json",
+        "spec/routes.json"
+      ]
+    },
+    {
+      "id": "do-not-disturb",
+      "label": "Не беспокоить",
+      "group": "Проживание и сервис",
+      "number": "028",
+      "uses": [
+        "app/src/booking/PreferenceIllustration.tsx"
+      ]
+    },
+    {
+      "id": "cleaning",
+      "label": "Уборка",
+      "group": "Проживание и сервис",
+      "number": "029",
+      "uses": [
+        "app/src/booking/roomVisuals.ts",
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/ServiceDetailIntro.tsx",
+        "app/src/booking/stayProblems.ts",
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/booking/ServiceChoicesSheet.tsx",
+        "app/src/booking/serviceChoices.ts",
+        "app/src/booking/hotelServiceCatalog.ts",
+        "app/src/booking/ServiceOrders.tsx",
+        "app/src/booking/Rooms.tsx",
+        "app/src/booking/HotelServices.tsx"
+      ]
+    },
+    {
+      "id": "towels",
+      "label": "Полотенца",
+      "group": "Проживание и сервис",
+      "number": "030",
+      "uses": [
+        "app/src/booking/roomVisuals.ts",
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/ServiceDetailIntro.tsx",
+        "app/src/booking/ServiceChoicesSheet.tsx",
+        "app/src/booking/serviceChoices.ts",
+        "app/src/booking/hotelServiceCatalog.ts",
+        "app/src/booking/HotelServices.tsx"
+      ]
+    },
+    {
+      "id": "laundry",
+      "label": "Прачечная",
+      "group": "Проживание и сервис",
+      "number": "031",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/booking/preferenceIllustrations.ts"
+      ]
+    },
+    {
+      "id": "iron",
+      "label": "Утюг",
+      "group": "Проживание и сервис",
+      "number": "032",
+      "uses": [
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "luggage",
+      "label": "Багаж",
+      "group": "Проживание и сервис",
+      "number": "033",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/profile/ProfileHistory.tsx"
+      ]
+    },
+    {
+      "id": "wifi",
+      "label": "Wi-Fi",
+      "group": "Удобства и питание",
+      "number": "034",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/DemoTools.tsx",
+        "app/src/demoIntegrations.ts",
+        "app/src/booking/UpcomingTrip.tsx",
+        "app/src/booking/roomVisuals.ts",
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/stayProblems.ts",
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/booking/StayWifi.tsx",
+        "app/src/booking/preferenceIllustrations.ts",
+        "app/src/booking/Rooms.tsx",
+        "app/src/booking/Explore.tsx",
+        "app/src/kit/CurrentComponents.tsx",
+        "app/src/catalogue/scenes.json",
+        "app/src/onboarding/RoomControlArt.tsx",
+        "spec/imported-hotels.json",
+        "spec/routes.json"
+      ]
+    },
+    {
+      "id": "climate",
+      "label": "Кондиционер",
+      "group": "Удобства и питание",
+      "number": "035",
+      "uses": [
+        "app/src/booking/roomVisuals.ts",
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/stayProblems.ts",
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/booking/StayProblemFlow.tsx",
+        "spec/imported-hotels.json"
+      ]
+    },
+    {
+      "id": "tv",
+      "label": "Телевизор",
+      "group": "Удобства и питание",
+      "number": "036",
+      "uses": [
+        "app/src/booking/roomVisuals.ts",
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "safe",
+      "label": "Сейф",
+      "group": "Удобства и питание",
+      "number": "037",
+      "uses": [
+        "app/src/booking/roomVisuals.ts",
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "minibar",
+      "label": "Холодильник",
+      "group": "Удобства и питание",
+      "number": "038",
+      "uses": [
+        "app/src/booking/roomVisuals.ts"
+      ]
+    },
+    {
+      "id": "plug",
+      "label": "Розетка",
+      "group": "Удобства и питание",
+      "number": "039",
+      "uses": [
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "bulb",
+      "label": "Освещение",
+      "group": "Удобства и питание",
+      "number": "040",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/stayProblems.ts"
+      ]
+    },
+    {
+      "id": "pillow",
+      "label": "Подушка",
+      "group": "Удобства и питание",
+      "number": "041",
+      "uses": [
+        "app/src/booking/ServiceDetailIntro.tsx",
+        "app/src/booking/ServiceChoicesSheet.tsx",
+        "app/src/booking/serviceChoices.ts",
+        "app/src/booking/hotelServiceCatalog.ts",
+        "app/src/booking/ServiceOrders.tsx",
+        "app/src/booking/HotelServices.tsx"
+      ]
+    },
+    {
+      "id": "pet",
+      "label": "С животными",
+      "group": "Удобства и питание",
+      "number": "042",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/SearchControls.tsx"
+      ]
+    },
+    {
+      "id": "pool",
+      "label": "Бассейн",
+      "group": "Удобства и питание",
+      "number": "043",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/booking/preferenceIdeas.ts",
+        "app/src/booking/preferences.ts",
+        "app/src/booking/preferenceIllustrations.ts",
+        "app/src/booking/Explore.tsx"
+      ]
+    },
+    {
+      "id": "spa",
+      "label": "Спа",
+      "group": "Удобства и питание",
+      "number": "044",
+      "uses": [
+        "app/src/maps/TwoGisMap.tsx",
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/SwipeWelcome.tsx",
+        "app/src/booking/swipePreferences.ts",
+        "app/src/booking/ServiceDetailIntro.tsx",
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/booking/DesktopBookingServices.tsx",
+        "app/src/booking/preferenceIdeas.ts",
+        "app/src/booking/hotelServiceCatalog.ts",
+        "app/src/booking/preferences.ts",
+        "app/src/booking/preferenceIllustrations.ts",
+        "app/src/booking/Explore.tsx",
+        "app/src/booking/HotelServices.tsx",
+        "app/src/catalogue/fixture.ts"
+      ]
+    },
+    {
+      "id": "fitness",
+      "label": "Фитнес",
+      "group": "Удобства и питание",
+      "number": "045",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/swipePreferences.ts",
+        "app/src/booking/PreferenceIllustration.tsx"
+      ]
+    },
+    {
+      "id": "parking",
+      "label": "Парковка",
+      "group": "Удобства и питание",
+      "number": "046",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/TripPreparation.tsx",
+        "app/src/booking/ServiceDetailIntro.tsx",
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/booking/HotelDetails.tsx",
+        "app/src/booking/hotelServiceCatalog.ts",
+        "app/src/booking/preferenceIllustrations.ts",
+        "spec/search-facets.json"
+      ]
+    },
+    {
+      "id": "restaurant",
+      "label": "Ресторан",
+      "group": "Удобства и питание",
+      "number": "047",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/SwipeWelcome.tsx",
+        "app/src/booking/swipePreferences.ts",
+        "app/src/booking/ServiceDetailIntro.tsx",
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/booking/DesktopBookingServices.tsx",
+        "app/src/booking/preferenceIdeas.ts",
+        "app/src/booking/serviceChoices.ts",
+        "app/src/booking/hotelServiceCatalog.ts",
+        "app/src/booking/preferences.ts",
+        "app/src/booking/preferenceIllustrations.ts",
+        "app/src/booking/HotelServices.tsx"
+      ]
+    },
+    {
+      "id": "breakfast",
+      "label": "Завтрак",
+      "group": "Удобства и питание",
+      "number": "048",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/booking/UpcomingTrip.tsx",
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/serviceSettlement.ts",
+        "app/src/booking/TripPreparation.tsx",
+        "app/src/booking/BreakfastStayOrder.tsx",
+        "app/src/booking/ServiceDetailIntro.tsx",
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/booking/chatAssistant.ts",
+        "app/src/booking/DesktopBookingServices.tsx",
+        "app/src/booking/preferenceIdeas.ts",
+        "app/src/booking/ServiceGroupPayment.tsx",
+        "app/src/booking/serviceLifecycle.ts",
+        "app/src/booking/serviceChoices.ts",
+        "app/src/booking/model.ts",
+        "app/src/booking/BookingFlow.tsx",
+        "app/src/booking/hotelServiceCatalog.ts",
+        "app/src/booking/serviceRequests.ts",
+        "app/src/booking/ServiceOrders.tsx",
+        "app/src/booking/preferences.ts",
+        "app/src/booking/trip.ts",
+        "app/src/booking/roomOffers.ts",
+        "app/src/booking/amendment.ts",
+        "app/src/booking/preferenceIllustrations.ts",
+        "app/src/booking/Rooms.tsx",
+        "app/src/booking/Explore.tsx",
+        "app/src/booking/breakfastSummary.ts",
+        "app/src/booking/ConfirmationServices.tsx",
+        "app/src/booking/Breakfast.tsx",
+        "app/src/booking/HotelServices.tsx",
+        "app/src/catalogue/scenes.json",
+        "spec/demo-data.json",
+        "spec/routes.json"
+      ]
+    },
+    {
+      "id": "cafe",
+      "label": "Кафе",
+      "group": "Удобства и питание",
+      "number": "049",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/PreferenceIllustration.tsx"
+      ]
+    },
+    {
+      "id": "coffee-to-go",
+      "label": "Кофе с собой",
+      "group": "Удобства и питание",
+      "number": "050",
+      "uses": [
+        "app/src/booking/roomVisuals.ts"
+      ]
+    },
+    {
+      "id": "bar",
+      "label": "Бар",
+      "group": "Удобства и питание",
+      "number": "051",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/booking/preferenceIllustrations.ts"
+      ]
+    },
+    {
+      "id": "wine",
+      "label": "Вино",
+      "group": "Удобства и питание",
+      "number": "052",
+      "uses": []
+    },
+    {
+      "id": "pin",
+      "label": "Расположение",
+      "group": "Места и транспорт",
+      "number": "053",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/demoEntry.ts",
+        "app/src/maps/TwoGisMap.tsx",
+        "app/src/booking/TripPreparation.tsx",
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/booking/HotelDetails.tsx",
+        "app/src/booking/NearbyPlaces.tsx",
+        "app/src/booking/SearchJourney.tsx",
+        "app/src/booking/SearchScreens.tsx",
+        "app/src/booking/Discovery.tsx",
+        "app/src/booking/TextSearchContent.tsx",
+        "app/src/booking/ResultsHeader.tsx",
+        "app/src/booking/Rooms.tsx",
+        "app/src/booking/RouteOrigin.tsx",
+        "app/src/booking/HotelOverview.tsx",
+        "app/src/booking/PreferenceJourney.tsx",
+        "app/src/profile/ProfileSettings.tsx",
+        "app/src/profile/DeviceAccess.tsx",
+        "app/src/catalogue/scenes.json",
+        "app/src/catalogue/fixture.ts",
+        "spec/imported-hotels.json",
+        "spec/nearby-places.json",
+        "spec/routes.json"
+      ]
+    },
+    {
+      "id": "nearby",
+      "label": "Рядом",
+      "group": "Места и транспорт",
+      "number": "054",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/booking/UpcomingTrip.tsx",
+        "app/src/booking/swipePreferences.ts",
+        "app/src/booking/TripPreparation.tsx",
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/booking/HotelDetails.tsx",
+        "app/src/booking/NearbyPlaces.tsx",
+        "app/src/booking/HotelOverview.tsx",
+        "spec/routes.json"
+      ]
+    },
+    {
+      "id": "museum",
+      "label": "Музей",
+      "group": "Места и транспорт",
+      "number": "055",
+      "uses": [
+        "app/src/maps/TwoGisMap.tsx",
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/booking/NearbyPlaces.tsx",
+        "app/src/booking/nearby.ts"
+      ]
+    },
+    {
+      "id": "park",
+      "label": "Парк",
+      "group": "Места и транспорт",
+      "number": "056",
+      "uses": [
+        "app/src/maps/TwoGisMap.tsx",
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/booking/NearbyPlaces.tsx",
+        "app/src/booking/nearby.ts",
+        "app/src/booking/preferenceIllustrations.ts",
+        "app/src/booking/HotelOverview.tsx"
+      ]
+    },
+    {
+      "id": "map",
+      "label": "Карта",
+      "group": "Места и транспорт",
+      "number": "057",
+      "uses": [
+        "app/src/booking/swipePreferences.ts",
+        "app/src/booking/Discovery.tsx",
+        "app/src/booking/FavoritesScreen.tsx",
+        "spec/routes.json"
+      ]
+    },
+    {
+      "id": "route",
+      "label": "Маршрут",
+      "group": "Места и транспорт",
+      "number": "058",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/booking/UpcomingTrip.tsx",
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/TripPreparation.tsx",
+        "app/src/booking/chatAssistant.ts",
+        "app/src/booking/HotelDetails.tsx",
+        "app/src/booking/trip.ts",
+        "app/src/booking/TripChat.tsx",
+        "app/src/booking/HotelOverview.tsx",
+        "app/src/catalogue/scenes.json",
+        "spec/routes.json"
+      ]
+    },
+    {
+      "id": "car",
+      "label": "Автомобиль",
+      "group": "Места и транспорт",
+      "number": "059",
+      "uses": [
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/booking/Explore.tsx",
+        "app/src/booking/SearchControls.tsx"
+      ]
+    },
+    {
+      "id": "taxi",
+      "label": "Такси",
+      "group": "Места и транспорт",
+      "number": "060",
+      "uses": [
+        "app/src/maps/routing.ts",
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/HotelDetails.tsx"
+      ]
+    },
+    {
+      "id": "transfer",
+      "label": "Трансфер",
+      "group": "Места и транспорт",
+      "number": "061",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/ServiceDetailIntro.tsx",
+        "app/src/booking/DesktopBookingServices.tsx",
+        "app/src/booking/hotelServiceCatalog.ts",
+        "app/src/booking/HotelServices.tsx"
+      ]
+    },
+    {
+      "id": "plane",
+      "label": "Самолёт",
+      "group": "Места и транспорт",
+      "number": "062",
+      "uses": [
+        "app/src/booking/RouteOrigin.tsx"
+      ]
+    },
+    {
+      "id": "train",
+      "label": "Поезд",
+      "group": "Места и транспорт",
+      "number": "063",
+      "uses": [
+        "app/src/booking/RouteOrigin.tsx"
+      ]
+    },
+    {
+      "id": "weather",
+      "label": "Погода",
+      "group": "Места и транспорт",
+      "number": "064",
+      "uses": [
+        "app/src/booking/swipePreferences.ts"
+      ]
+    },
+    {
+      "id": "card",
+      "label": "Банковская карта",
+      "group": "Оплата и выгоды",
+      "number": "065",
+      "uses": [
+        "app/src/booking/BookingPaymentStatus.tsx",
+        "app/src/booking/Catalog.tsx",
+        "app/src/booking/DesktopPaymentChoices.tsx",
+        "app/src/booking/bookingPayment.ts",
+        "app/src/booking/CardPaymentPlan.tsx",
+        "app/src/booking/paymentOptions.ts",
+        "app/src/booking/PaymentChoices.tsx",
+        "app/src/booking/deposit.ts",
+        "app/src/booking/Rooms.tsx",
+        "app/src/rewards/Rewards.tsx",
+        "app/src/rewards/HotelCardConnection.tsx",
+        "app/src/catalogue/fixture.ts"
+      ]
+    },
+    {
+      "id": "wallet",
+      "label": "Кошелёк",
+      "group": "Оплата и выгоды",
+      "number": "066",
+      "uses": [
+        "app/src/booking/paymentOptions.ts",
+        "app/src/booking/PreferenceJourney.tsx",
+        "app/src/rewards/Rewards.tsx"
+      ]
+    },
+    {
+      "id": "deposit",
+      "label": "Баланс поездки",
+      "group": "Оплата и выгоды",
+      "number": "067",
+      "uses": [
+        "app/src/booking/serviceSettlement.ts",
+        "app/src/booking/servicePayment.ts",
+        "app/src/booking/model.ts",
+        "app/src/booking/serviceRequests.ts",
+        "app/src/booking/demoServices.ts",
+        "app/src/booking/documents.ts",
+        "app/src/booking/deposit.ts",
+        "app/src/booking/stayBill.ts",
+        "app/src/booking/stay.ts"
+      ]
+    },
+    {
+      "id": "points",
+      "label": "Баллы",
+      "group": "Оплата и выгоды",
+      "number": "068",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/booking/notifications.ts",
+        "app/src/booking/model.ts",
+        "app/src/booking/BookingFlow.tsx",
+        "app/src/booking/BookingReward.tsx",
+        "app/src/booking/PaymentChoices.tsx",
+        "app/src/rewards/Rewards.tsx",
+        "app/src/rewards/HotelCardConnection.tsx",
+        "app/src/rewards/HotelProgramDetails.tsx",
+        "app/src/rewards/HotelLevels.tsx",
+        "app/src/rewards/HotelProgramSheet.tsx",
+        "app/src/kit/CurrentComponents.tsx",
+        "app/src/desktop/DesktopNavigation.tsx",
+        "app/src/profile/support.ts",
+        "app/src/catalogue/scenes.json",
+        "app/src/catalogue/fixture.ts",
+        "desktop/src/collections.css",
+        "spec/policies.json"
+      ]
+    },
+    {
+      "id": "discount",
+      "label": "Скидка",
+      "group": "Оплата и выгоды",
+      "number": "069",
+      "uses": [
+        "app/src/booking/offers.ts",
+        "app/src/booking/Discovery.tsx",
+        "app/src/booking/FindPage.tsx",
+        "app/src/rewards/HotelCardConnection.tsx",
+        "app/src/rewards/HotelProgramDetails.tsx",
+        "app/src/rewards/HotelLevels.tsx",
+        "app/src/kit/CurrentComponents.tsx",
+        "app/src/desktop/DesktopNavigation.tsx",
+        "app/src/profile/SupportPage.tsx",
+        "app/src/hotelier/ProfilePage.tsx",
+        "app/src/catalogue/scenes.json"
+      ]
+    },
+    {
+      "id": "best-price",
+      "label": "Лучшая цена",
+      "group": "Оплата и выгоды",
+      "number": "070",
+      "uses": []
+    },
+    {
+      "id": "gift",
+      "label": "Подарок",
+      "group": "Оплата и выгоды",
+      "number": "071",
+      "uses": [
+        "app/src/rewards/Rewards.tsx",
+        "app/src/desktop/DesktopNavigation.tsx"
+      ]
+    },
+    {
+      "id": "invite",
+      "label": "Пригласить",
+      "group": "Оплата и выгоды",
+      "number": "072",
+      "uses": [
+        "app/src/rewards/Rewards.tsx",
+        "app/src/rewards/points.ts",
+        "app/src/hotelier/ProfilePage.tsx",
+        "app/src/hotelier/HotelierBenefits.tsx",
+        "app/src/catalogue/scenes.json"
+      ]
+    },
+    {
+      "id": "flame",
+      "label": "Горячие скидки",
+      "group": "Оплата и выгоды",
+      "number": "073",
+      "uses": []
+    },
+    {
+      "id": "receipt",
+      "label": "Чек",
+      "group": "Оплата и выгоды",
+      "number": "074",
+      "uses": []
+    },
+    {
+      "id": "bill",
+      "label": "Счёт",
+      "group": "Оплата и выгоды",
+      "number": "075",
+      "uses": [
+        "app/src/booking/UpcomingTrip.tsx",
+        "app/src/booking/BookingRecord.tsx",
+        "spec/routes.json"
+      ]
+    },
+    {
+      "id": "orbit",
+      "label": "Орбита",
+      "group": "Оплата и выгоды",
+      "number": "076",
+      "uses": [
+        "app/src/rewards/Rewards.tsx"
+      ]
+    },
+    {
+      "id": "document",
+      "label": "Документы",
+      "group": "Документы и общение",
+      "number": "077",
+      "uses": [
+        "app/src/booking/CompletedTrip.tsx",
+        "app/src/booking/ShareBookingPanel.tsx",
+        "app/src/booking/TripPreparation.tsx",
+        "app/src/booking/BookingCardActions.tsx",
+        "app/src/booking/BookingRecord.tsx",
+        "app/src/booking/TripDocuments.tsx",
+        "app/src/profile/TripDetails.tsx",
+        "app/src/profile/ProfileHistory.tsx",
+        "app/src/profile/AboutApp.tsx",
+        "app/src/hotelier/HotelierBenefits.tsx"
+      ]
+    },
+    {
+      "id": "ticket",
+      "label": "Ваучер",
+      "group": "Документы и общение",
+      "number": "078",
+      "uses": [
+        "app/src/booking/notifications.ts",
+        "app/src/rewards/Rewards.tsx",
+        "app/src/hotelier/HotelierFlow.tsx",
+        "spec/nearby-places.json"
+      ]
+    },
+    {
+      "id": "passport",
+      "label": "Паспорт",
+      "group": "Документы и общение",
+      "number": "079",
+      "uses": []
+    },
+    {
+      "id": "chat-hotel",
+      "label": "Чат с отелем",
+      "group": "Документы и общение",
+      "number": "080",
+      "uses": [
+        "app/src/booking/ChatList.tsx"
+      ]
+    },
+    {
+      "id": "mail",
+      "label": "Почта",
+      "group": "Документы и общение",
+      "number": "081",
+      "uses": [
+        "app/src/booking/TripDocuments.tsx"
+      ]
+    },
+    {
+      "id": "phone",
+      "label": "Телефон",
+      "group": "Документы и общение",
+      "number": "082",
+      "uses": [
+        "app/src/state.ts",
+        "app/src/Prototype.tsx",
+        "app/src/access.ts",
+        "app/src/demoEntry.ts",
+        "app/src/travelers/TravelerFields.tsx",
+        "app/src/booking/BookingGuestContact.tsx",
+        "app/src/booking/paymentOptions.ts",
+        "app/src/booking/TripChat.tsx",
+        "app/src/profile/ProfileSettings.tsx",
+        "app/src/hotelier/verification.ts",
+        "app/src/catalogue/scenes.json",
+        "app/src/catalogue/fixture.ts",
+        "spec/routes.json"
+      ]
+    },
+    {
+      "id": "share",
+      "label": "Поделиться",
+      "group": "Документы и общение",
+      "number": "083",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/booking/UpcomingTrip.tsx",
+        "app/src/booking/ShareBookingPanel.tsx",
+        "app/src/booking/ShareBookingButton.tsx",
+        "app/src/booking/BookingRecord.tsx",
+        "app/src/booking/BookingConfirmationTools.tsx",
+        "app/src/booking/FavoritesScreen.tsx",
+        "app/src/booking/HotelOverview.tsx",
+        "app/src/hotelier/HotelierBenefits.tsx",
+        "app/src/catalogue/scenes.json",
+        "spec/routes.json"
+      ]
+    },
+    {
+      "id": "download",
+      "label": "Скачать",
+      "group": "Документы и общение",
+      "number": "084",
+      "uses": [
+        "app/src/booking/TripDocuments.tsx"
+      ]
+    },
+    {
+      "id": "camera",
+      "label": "Фото",
+      "group": "Документы и общение",
+      "number": "085",
+      "uses": [
+        "app/src/booking/ServiceChoicesSheet.tsx",
+        "app/src/booking/HotelDetails.tsx",
+        "app/src/booking/StayProblemFlow.tsx",
+        "app/src/booking/RoomPhotoGallery.tsx",
+        "app/src/booking/HotelOverview.tsx",
+        "app/src/booking/StayReviewFlow.tsx",
+        "app/src/profile/ProfilePhoto.tsx"
+      ]
+    },
+    {
+      "id": "attach",
+      "label": "Вложение",
+      "group": "Документы и общение",
+      "number": "086",
+      "uses": []
+    },
+    {
+      "id": "send",
+      "label": "Отправить",
+      "group": "Документы и общение",
+      "number": "087",
+      "uses": [
+        "app/src/booking/TripChat.tsx"
+      ]
+    },
+    {
+      "id": "review",
+      "label": "Отзыв",
+      "group": "Документы и общение",
+      "number": "088",
+      "uses": [
+        "app/src/booking/UpcomingTrip.tsx",
+        "app/src/booking/CompletedTrip.tsx",
+        "app/src/booking/serviceSettlement.ts",
+        "app/src/booking/chatAssistant.ts",
+        "app/src/booking/serviceRequests.ts",
+        "app/src/booking/ServiceOrders.tsx",
+        "app/src/booking/trip.ts",
+        "app/src/booking/Rooms.tsx",
+        "app/src/booking/Explore.tsx",
+        "app/src/booking/stayBill.ts",
+        "app/src/profile/TripDetails.tsx",
+        "spec/routes.json"
+      ]
+    },
+    {
+      "id": "star",
+      "label": "Оценка",
+      "group": "Документы и общение",
+      "number": "089",
+      "uses": [
+        "app/src/booking/StayReviewFlow.tsx",
+        "app/src/profile/ProfileHistory.tsx"
+      ]
+    },
+    {
+      "id": "bell",
+      "label": "Уведомления",
+      "group": "Документы и общение",
+      "number": "090",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/booking/NotificationCenter.tsx",
+        "app/src/booking/PriceWatches.tsx",
+        "app/src/booking/HotelSheets.tsx",
+        "app/src/booking/TripChat.tsx",
+        "app/src/booking/HotelOverview.tsx",
+        "app/src/desktop/DesktopNavigation.tsx",
+        "app/src/hotelier/ProfilePage.tsx"
+      ]
+    },
+    {
+      "id": "language",
+      "label": "Язык",
+      "group": "Профиль и доступ",
+      "number": "091",
+      "uses": [
+        "app/src/profile/LanguageSetting.tsx"
+      ]
+    },
+    {
+      "id": "globe",
+      "label": "Гражданство",
+      "group": "Профиль и доступ",
+      "number": "092",
+      "uses": []
+    },
+    {
+      "id": "preferences",
+      "label": "Предпочтения",
+      "group": "Профиль и доступ",
+      "number": "093",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/booking/PreferenceDiscovery.tsx",
+        "app/src/booking/preferenceIdeas.ts",
+        "app/src/booking/model.ts",
+        "app/src/booking/preferences.ts",
+        "app/src/booking/TextSearchContent.tsx",
+        "app/src/booking/Explore.tsx",
+        "app/src/booking/HotelOverview.tsx",
+        "app/src/booking/PreferenceJourney.tsx",
+        "app/src/catalogue/fixture.ts",
+        "spec/routes.json"
+      ]
+    },
+    {
+      "id": "style-match",
+      "label": "Совпадение",
+      "group": "Профиль и доступ",
+      "number": "094",
+      "uses": [
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/hotelier/ProfilePage.tsx"
+      ]
+    },
+    {
+      "id": "secure",
+      "label": "Безопасность",
+      "group": "Профиль и доступ",
+      "number": "095",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/profile/AboutApp.tsx",
+        "app/src/profile/ProfileSettings.tsx",
+        "app/src/profile/DeviceAccess.tsx",
+        "app/src/hotelier/ProfilePage.tsx",
+        "app/src/hotelier/HotelierBenefits.tsx"
+      ]
+    },
+    {
+      "id": "lock",
+      "label": "Закрыто",
+      "group": "Профиль и доступ",
+      "number": "096",
+      "uses": [
+        "app/src/booking/Catalog.tsx",
+        "app/src/booking/stayProblems.ts"
+      ]
+    },
+    {
+      "id": "face-id",
+      "label": "Face ID",
+      "group": "Профиль и доступ",
+      "number": "097",
+      "uses": [
+        "app/src/profile/DeviceAccess.tsx"
+      ]
+    },
+    {
+      "id": "bluetooth",
+      "label": "Bluetooth",
+      "group": "Профиль и доступ",
+      "number": "098",
+      "uses": []
+    },
+    {
+      "id": "nfc",
+      "label": "NFC",
+      "group": "Профиль и доступ",
+      "number": "099",
+      "uses": []
+    },
+    {
+      "id": "qr",
+      "label": "QR-код",
+      "group": "Профиль и доступ",
+      "number": "100",
+      "uses": [
+        "app/src/booking/ShareBookingButton.tsx",
+        "app/src/booking/DesktopPaymentChoices.tsx",
+        "app/src/booking/PaymentChoices.tsx"
+      ]
+    },
+    {
+      "id": "logout",
+      "label": "Выйти",
+      "group": "Профиль и доступ",
+      "number": "101",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/desktop/DesktopNavigation.tsx",
+        "app/src/hotelier/ProfilePage.tsx",
+        "app/src/catalogue/scenes.json"
+      ]
+    },
+    {
+      "id": "check",
+      "label": "Галочка",
+      "group": "Статусы",
+      "number": "102",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/SmsCodeField.tsx",
+        "app/src/ui.tsx",
+        "app/src/travelers/TravelerFields.tsx",
+        "app/src/travelers/CitizenshipField.tsx",
+        "app/src/booking/PreferenceDiscovery.tsx",
+        "app/src/booking/UpcomingTrip.tsx",
+        "app/src/booking/roomVisuals.ts",
+        "app/src/booking/SwipeWelcome.tsx",
+        "app/src/booking/PartialPoints.tsx",
+        "app/src/booking/BookingPaymentStatus.tsx",
+        "app/src/booking/serviceSettlement.ts",
+        "app/src/booking/BreakfastStayOrder.tsx",
+        "app/src/booking/DesktopPaymentChoices.tsx",
+        "app/src/booking/DesktopBookingServices.tsx",
+        "app/src/booking/BookingRecord.tsx",
+        "app/src/booking/ServiceChoicesSheet.tsx",
+        "app/src/booking/HotelDetails.tsx",
+        "app/src/booking/SearchFilterRail.tsx",
+        "app/src/booking/HotelSheets.tsx",
+        "app/src/booking/BookingFlow.tsx",
+        "app/src/booking/ServiceOrders.tsx",
+        "app/src/booking/GuestDetails.tsx",
+        "app/src/booking/StayProblemFlow.tsx",
+        "app/src/booking/StayWifi.tsx",
+        "app/src/booking/PaymentChoices.tsx",
+        "app/src/booking/Rooms.tsx",
+        "app/src/booking/Explore.tsx",
+        "app/src/booking/RouteOrigin.tsx",
+        "app/src/booking/DesktopNearbyDates.tsx",
+        "app/src/booking/StayReviewFlow.tsx",
+        "app/src/booking/PreferenceJourney.tsx",
+        "app/src/booking/ReviewSort.tsx",
+        "app/src/booking/HotelServices.tsx",
+        "app/src/rewards/HotelCardConnection.tsx",
+        "app/src/rewards/HotelProgramDetails.tsx",
+        "app/src/rewards/HotelLevels.tsx",
+        "app/src/kit/CurrentComponents.tsx",
+        "app/src/profile/HistoryTimeline.tsx",
+        "app/src/profile/LanguageSetting.tsx",
+        "app/src/profile/TechnicalSupportForm.tsx",
+        "app/src/profile/ProfileSettings.tsx",
+        "app/src/profile/DeviceAccess.tsx",
+        "app/src/hotelier/HotelierBenefits.tsx",
+        "app/src/hotelier/HotelierFlow.tsx",
+        "app/src/onboarding/LaunchSplash.tsx",
+        "app/src/onboarding/PersonalizationArt.tsx",
+        "app/src/onboarding/RoomControlArt.tsx"
+      ]
+    },
+    {
+      "id": "success",
+      "label": "Успешно",
+      "group": "Статусы",
+      "number": "103",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/ui.tsx",
+        "app/src/booking/UpcomingTrip.tsx",
+        "app/src/booking/doorAttempt.ts",
+        "app/src/booking/BookingPaymentStatus.tsx",
+        "app/src/booking/serviceSettlement.ts",
+        "app/src/booking/BreakfastStayOrder.tsx",
+        "app/src/booking/notifications.ts",
+        "app/src/booking/DesktopBookingServices.tsx",
+        "app/src/booking/BookingRecord.tsx",
+        "app/src/booking/servicePayment.ts",
+        "app/src/booking/ServiceGroupPayment.tsx",
+        "app/src/booking/StayAccount.tsx",
+        "app/src/booking/bookingBalance.ts",
+        "app/src/booking/model.ts",
+        "app/src/booking/BookingFlow.tsx",
+        "app/src/booking/ServiceOrders.tsx",
+        "app/src/booking/StayProblemFlow.tsx",
+        "app/src/booking/amendment.ts",
+        "app/src/booking/deposit.ts",
+        "app/src/booking/breakfastSummary.ts",
+        "app/src/booking/stayBill.ts",
+        "app/src/booking/demoTripScenarios.ts",
+        "app/src/booking/stay.ts",
+        "app/src/rewards/HotelLevels.tsx",
+        "app/src/kit/CurrentComponents.tsx",
+        "app/src/profile/historyDemo.ts",
+        "app/src/profile/HistoryTimeline.tsx",
+        "app/src/profile/ProfileSettings.tsx",
+        "app/src/profile/DeviceAccess.tsx",
+        "app/src/hotelier/HotelierFlow.tsx",
+        "app/src/catalogue/fixture.ts",
+        "app/src/onboarding/LaunchSplash.tsx",
+        "spec/routes.json"
+      ]
+    },
+    {
+      "id": "pending",
+      "label": "Ожидание",
+      "group": "Статусы",
+      "number": "104",
+      "uses": [
+        "app/src/state.ts",
+        "app/src/Prototype.tsx",
+        "app/src/booking/BookingPaymentStatus.tsx",
+        "app/src/booking/serviceSettlement.ts",
+        "app/src/booking/chatAssistant.ts",
+        "app/src/booking/stayTimeServices.ts",
+        "app/src/booking/ChatList.tsx",
+        "app/src/booking/servicePayment.ts",
+        "app/src/booking/FindStyleIntro.tsx",
+        "app/src/booking/StayAccount.tsx",
+        "app/src/booking/hotelServiceCatalog.ts",
+        "app/src/booking/serviceRequests.ts",
+        "app/src/booking/ServiceOrders.tsx",
+        "app/src/booking/trip.ts",
+        "app/src/booking/StayProblemFlow.tsx",
+        "app/src/booking/TripChat.tsx",
+        "app/src/booking/TripDocuments.tsx",
+        "app/src/booking/chatThreads.ts",
+        "app/src/booking/stayBill.ts",
+        "app/src/profile/ProfileSettings.tsx",
+        "app/src/hotelier/HotelierFlow.tsx",
+        "app/src/hotelier/verification.ts",
+        "app/src/catalogue/scenes.json",
+        "app/src/catalogue/fixture.ts"
+      ]
+    },
+    {
+      "id": "info",
+      "label": "Информация",
+      "group": "Статусы",
+      "number": "105",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/ui.tsx",
+        "app/src/booking/UpcomingTrip.tsx",
+        "app/src/booking/ShareBookingPanel.tsx",
+        "app/src/booking/BookingPaymentStatus.tsx",
+        "app/src/booking/serviceSettlement.ts",
+        "app/src/booking/Catalog.tsx",
+        "app/src/booking/notifications.ts",
+        "app/src/booking/CheckoutReminder.tsx",
+        "app/src/booking/StayAccount.tsx",
+        "app/src/booking/BookingFlow.tsx",
+        "app/src/booking/StayProblemFlow.tsx",
+        "app/src/booking/HotelOverview.tsx",
+        "app/src/booking/ServiceHotelPaymentNote.tsx",
+        "app/src/rewards/Rewards.tsx",
+        "app/src/rewards/HotelLevels.tsx",
+        "app/src/kit/CurrentComponents.tsx",
+        "app/src/profile/HistoryTimeline.tsx",
+        "app/src/profile/SupportPage.tsx",
+        "app/src/hotelier/ProfilePage.tsx",
+        "app/src/hotelier/HotelierBenefits.tsx"
+      ]
+    },
+    {
+      "id": "warning",
+      "label": "Предупреждение",
+      "group": "Статусы",
+      "number": "106",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/ui.tsx",
+        "app/src/booking/UpcomingTrip.tsx",
+        "app/src/booking/BookingPaymentStatus.tsx",
+        "app/src/booking/serviceSettlement.ts",
+        "app/src/booking/StayProblemFlow.tsx",
+        "app/src/hotelier/HotelierFlow.tsx"
+      ]
+    },
+    {
+      "id": "error",
+      "label": "Ошибка",
+      "group": "Статусы",
+      "number": "107",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/ui.tsx",
+        "app/src/maps/TwoGisMap.tsx",
+        "app/src/booking/serviceSettlement.ts",
+        "app/src/hotelier/HotelierFlow.tsx",
+        "app/src/catalogue/replay.ts"
+      ]
+    },
+    {
+      "id": "problem",
+      "label": "Проблема",
+      "group": "Статусы",
+      "number": "108",
+      "uses": [
+        "app/src/booking/UpcomingTrip.tsx",
+        "app/src/booking/StayProblemFlow.tsx",
+        "app/src/catalogue/scenes.json",
+        "spec/routes.json"
+      ]
+    },
+    {
+      "id": "back",
+      "label": "Назад",
+      "group": "Действия",
+      "number": "109",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/booking/ShareBookingPanel.tsx",
+        "app/src/booking/SwipeWelcome.tsx",
+        "app/src/booking/NotificationCenter.tsx",
+        "app/src/booking/Filters.tsx",
+        "app/src/booking/TripPreparation.tsx",
+        "app/src/booking/BookingRecord.tsx",
+        "app/src/booking/StayAccount.tsx",
+        "app/src/booking/HotelDetails.tsx",
+        "app/src/booking/HotelSheets.tsx",
+        "app/src/booking/BookingFlow.tsx",
+        "app/src/booking/FullscreenPhotoGallery.tsx",
+        "app/src/booking/SearchScreens.tsx",
+        "app/src/booking/FavoritesScreen.tsx",
+        "app/src/booking/StayProblemFlow.tsx",
+        "app/src/booking/TripChat.tsx",
+        "app/src/booking/TripDocuments.tsx",
+        "app/src/booking/ResultsHeader.tsx",
+        "app/src/booking/Rooms.tsx",
+        "app/src/booking/FavoritesMap.tsx",
+        "app/src/booking/Explore.tsx",
+        "app/src/booking/RoomPhotoGallery.tsx",
+        "app/src/booking/HotelOverview.tsx",
+        "app/src/booking/StayReviewFlow.tsx",
+        "app/src/booking/PreferenceJourney.tsx",
+        "app/src/booking/ResultsMap.tsx",
+        "app/src/booking/SearchControls.tsx",
+        "app/src/profile/ProfileHistory.tsx",
+        "app/src/profile/DeviceAccess.tsx",
+        "app/src/onboarding/PersonalizationArt.tsx"
+      ]
+    },
+    {
+      "id": "chevron-right",
+      "label": "Вперёд",
+      "group": "Действия",
+      "number": "110",
+      "uses": [
+        "app/src/ui.tsx",
+        "app/src/booking/UpcomingTrip.tsx",
+        "app/src/booking/CompletedTrip.tsx",
+        "app/src/booking/SwipeWelcome.tsx",
+        "app/src/booking/NotificationCenter.tsx",
+        "app/src/booking/BookingGuestContact.tsx",
+        "app/src/booking/DesktopBookingServices.tsx",
+        "app/src/booking/BookingRecord.tsx",
+        "app/src/booking/ChatList.tsx",
+        "app/src/booking/ServiceGroupPayment.tsx",
+        "app/src/booking/ServiceChoicesSheet.tsx",
+        "app/src/booking/StayAccount.tsx",
+        "app/src/booking/HotelDetails.tsx",
+        "app/src/booking/NearbyPlaces.tsx",
+        "app/src/booking/HotelSheets.tsx",
+        "app/src/booking/BookingFlow.tsx",
+        "app/src/booking/MapAppChooser.tsx",
+        "app/src/booking/BenefitsBannerComparison.tsx",
+        "app/src/booking/GuestDetails.tsx",
+        "app/src/booking/FullscreenPhotoGallery.tsx",
+        "app/src/booking/FavoritesScreen.tsx",
+        "app/src/booking/FindPage.tsx",
+        "app/src/booking/TripChat.tsx",
+        "app/src/booking/Rooms.tsx",
+        "app/src/booking/Explore.tsx",
+        "app/src/booking/FavoriteSaving.tsx",
+        "app/src/booking/RoomPhotoGallery.tsx",
+        "app/src/booking/HotelOverview.tsx",
+        "app/src/booking/PreferenceJourney.tsx",
+        "app/src/booking/Breakfast.tsx",
+        "app/src/booking/HotelServices.tsx",
+        "app/src/booking/SearchControls.tsx",
+        "app/src/rewards/Rewards.tsx",
+        "app/src/rewards/HotelCardConnection.tsx",
+        "app/src/rewards/HotelLevels.tsx",
+        "app/src/rewards/NovemberNetwork.tsx",
+        "app/src/profile/TripHistoryEntry.tsx",
+        "app/src/profile/HistoryTimeline.tsx",
+        "app/src/hotelier/ProfilePage.tsx",
+        "app/src/hotelier/HotelierBenefits.tsx",
+        "app/src/hotelier/HotelierFlow.tsx"
+      ]
+    },
+    {
+      "id": "chevron-down",
+      "label": "Раскрыть",
+      "group": "Действия",
+      "number": "111",
+      "uses": [
+        "app/src/travelers/TravelerFields.tsx",
+        "app/src/travelers/CitizenshipField.tsx",
+        "app/src/booking/Filters.tsx",
+        "app/src/booking/DesktopPaymentChoices.tsx",
+        "app/src/booking/ServiceGroupPayment.tsx",
+        "app/src/booking/StayAccount.tsx",
+        "app/src/booking/HotelDetails.tsx",
+        "app/src/booking/SearchFilterRail.tsx",
+        "app/src/booking/BookingFlow.tsx",
+        "app/src/booking/SearchJourney.tsx",
+        "app/src/booking/FavoritesScreen.tsx",
+        "app/src/booking/DesktopRoomSearch.tsx",
+        "app/src/booking/TextSearchContent.tsx",
+        "app/src/booking/PaymentChoices.tsx",
+        "app/src/booking/PreferenceJourney.tsx",
+        "app/src/booking/Breakfast.tsx",
+        "app/src/booking/ReviewSort.tsx",
+        "app/src/booking/SearchControls.tsx"
+      ]
+    },
+    {
+      "id": "close",
+      "label": "Закрыть",
+      "group": "Действия",
+      "number": "112",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/DemoTools.tsx",
+        "app/src/booking/PreferenceDiscovery.tsx",
+        "app/src/booking/NotificationCenter.tsx",
+        "app/src/booking/ResultsSearch.tsx",
+        "app/src/booking/serviceSettlement.ts",
+        "app/src/booking/Catalog.tsx",
+        "app/src/booking/BookingRecord.tsx",
+        "app/src/booking/ChatList.tsx",
+        "app/src/booking/ServiceChoicesSheet.tsx",
+        "app/src/booking/SearchFilterRail.tsx",
+        "app/src/booking/SearchJourney.tsx",
+        "app/src/booking/SearchScreens.tsx",
+        "app/src/booking/StayProblemFlow.tsx",
+        "app/src/booking/TextSearchContent.tsx",
+        "app/src/booking/Rooms.tsx",
+        "app/src/booking/Explore.tsx",
+        "app/src/booking/StayReviewFlow.tsx",
+        "app/src/booking/PreferenceJourney.tsx",
+        "app/src/kit/CurrentComponents.tsx",
+        "app/src/profile/HistoryTimeline.tsx",
+        "app/src/hotelier/HotelierBenefits.tsx",
+        "app/src/hotelier/HotelierFlow.tsx",
+        "desktop/src/platform.tsx"
+      ]
+    },
+    {
+      "id": "plus",
+      "label": "Добавить",
+      "group": "Действия",
+      "number": "113",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/maps/TwoGisMap.tsx",
+        "app/src/booking/PreferenceDiscovery.tsx",
+        "app/src/booking/EmptyTrip.tsx",
+        "app/src/booking/ServiceChoicesSheet.tsx",
+        "app/src/booking/BookingFlow.tsx",
+        "app/src/booking/GuestDetails.tsx",
+        "app/src/booking/FavoritesScreen.tsx",
+        "app/src/booking/FavoriteSaving.tsx",
+        "app/src/booking/SearchControls.tsx",
+        "app/src/profile/ProfileHistory.tsx"
+      ]
+    },
+    {
+      "id": "minus",
+      "label": "Уменьшить",
+      "group": "Действия",
+      "number": "114",
+      "uses": [
+        "app/src/maps/TwoGisMap.tsx",
+        "app/src/booking/ServiceChoicesSheet.tsx",
+        "app/src/booking/SearchControls.tsx"
+      ]
+    },
+    {
+      "id": "edit",
+      "label": "Редактировать",
+      "group": "Действия",
+      "number": "115",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/booking/BookingRecord.tsx",
+        "app/src/booking/PriceWatches.tsx",
+        "app/src/booking/BookingFlow.tsx",
+        "app/src/booking/GuestDetails.tsx",
+        "app/src/booking/StayTimeFields.tsx",
+        "app/src/booking/ResultsHeader.tsx",
+        "app/src/booking/HotelOverview.tsx",
+        "app/src/booking/PreferenceJourney.tsx",
+        "app/src/profile/ProfileHistory.tsx",
+        "app/src/hotelier/ProfilePage.tsx",
+        "app/src/catalogue/scenes.json",
+        "desktop/src/account.css",
+        "desktop/src/page-layout.css",
+        "spec/routes.json"
+      ]
+    },
+    {
+      "id": "trash",
+      "label": "Удалить",
+      "group": "Действия",
+      "number": "116",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/booking/PriceWatches.tsx",
+        "app/src/booking/BookingFlow.tsx",
+        "app/src/profile/TripDetails.tsx",
+        "app/src/profile/ProfileSettings.tsx"
+      ]
+    },
+    {
+      "id": "filter",
+      "label": "Фильтры",
+      "group": "Действия",
+      "number": "117",
+      "uses": [
+        "app/src/booking/HotelDetails.tsx",
+        "app/src/booking/SearchFilterRail.tsx",
+        "app/src/booking/PreferenceJourney.tsx"
+      ]
+    },
+    {
+      "id": "sort",
+      "label": "Сортировка",
+      "group": "Действия",
+      "number": "118",
+      "uses": [
+        "app/src/booking/SearchFilterRail.tsx",
+        "app/src/booking/PreferenceJourney.tsx",
+        "app/src/catalogue/scenes.json"
+      ]
+    },
+    {
+      "id": "settings",
+      "label": "Настройки",
+      "group": "Действия",
+      "number": "119",
+      "uses": [
+        "app/src/state.ts",
+        "app/src/Prototype.tsx",
+        "app/src/DemoTools.tsx",
+        "app/src/demoEntry.ts",
+        "app/src/profile/ProfileSettings.tsx",
+        "app/src/profile/DeviceAccess.tsx",
+        "app/src/hotelier/ProfilePage.tsx",
+        "app/src/catalogue/fixture.ts"
+      ]
+    },
+    {
+      "id": "menu",
+      "label": "Меню",
+      "group": "Действия",
+      "number": "120",
+      "uses": [
+        "app/src/booking/DesktopBookingServices.tsx",
+        "app/src/booking/FavoritesMap.tsx",
+        "app/src/booking/ResultsMap.tsx",
+        "app/src/booking/HotelServices.tsx",
+        "app/src/desktop/DesktopNavigation.tsx"
+      ]
+    },
+    {
+      "id": "more",
+      "label": "Ещё",
+      "group": "Действия",
+      "number": "121",
+      "uses": [
+        "app/src/booking/DesktopPaymentChoices.tsx",
+        "app/src/booking/stayProblems.ts",
+        "app/src/booking/PaymentChoices.tsx"
+      ]
+    },
+    {
+      "id": "sofa-bed",
+      "label": "Диван-кровать",
+      "group": "Оснащение и удобства · новые",
+      "number": "122",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/roomOffers.ts"
+      ]
+    },
+    {
+      "id": "bunk-bed",
+      "label": "Двухъярусная кровать",
+      "group": "Оснащение и удобства · новые",
+      "number": "123",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/roomOffers.ts"
+      ]
+    },
+    {
+      "id": "room-area",
+      "label": "Площадь номера",
+      "group": "Оснащение и удобства · новые",
+      "number": "124",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/Rooms.tsx"
+      ]
+    },
+    {
+      "id": "bedrooms",
+      "label": "Отдельные спальни",
+      "group": "Оснащение и удобства · новые",
+      "number": "125",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "spec/search-facets.json"
+      ]
+    },
+    {
+      "id": "bathroom",
+      "label": "Своя ванная",
+      "group": "Оснащение и удобства · новые",
+      "number": "126",
+      "uses": [
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "shared-bathroom",
+      "label": "Общая ванная",
+      "group": "Оснащение и удобства · новые",
+      "number": "127",
+      "uses": [
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "shower",
+      "label": "Душ",
+      "group": "Оснащение и удобства · новые",
+      "number": "128",
+      "uses": [
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "hairdryer",
+      "label": "Фен",
+      "group": "Оснащение и удобства · новые",
+      "number": "129",
+      "uses": [
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "bathrobe",
+      "label": "Халат",
+      "group": "Оснащение и удобства · новые",
+      "number": "130",
+      "uses": [
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "slippers",
+      "label": "Тапочки",
+      "group": "Оснащение и удобства · новые",
+      "number": "131",
+      "uses": [
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "toiletries",
+      "label": "Косметика",
+      "group": "Оснащение и удобства · новые",
+      "number": "132",
+      "uses": [
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "coffee-machine",
+      "label": "Кофемашина",
+      "group": "Оснащение и удобства · новые",
+      "number": "133",
+      "uses": [
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "kettle",
+      "label": "Чайник",
+      "group": "Оснащение и удобства · новые",
+      "number": "134",
+      "uses": [
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "balcony",
+      "label": "Балкон",
+      "group": "Оснащение и удобства · новые",
+      "number": "135",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "spec/imported-hotels.json"
+      ]
+    },
+    {
+      "id": "desk",
+      "label": "Рабочее место",
+      "group": "Оснащение и удобства · новые",
+      "number": "136",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/PreferenceIllustration.tsx"
+      ]
+    },
+    {
+      "id": "wardrobe",
+      "label": "Шкаф",
+      "group": "Оснащение и удобства · новые",
+      "number": "137",
+      "uses": [
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "kitchen",
+      "label": "Кухня",
+      "group": "Оснащение и удобства · новые",
+      "number": "138",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/SwipeWelcome.tsx",
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/booking/preferenceIllustrations.ts",
+        "spec/search-facets.json"
+      ]
+    },
+    {
+      "id": "microwave",
+      "label": "Микроволновая печь",
+      "group": "Оснащение и удобства · новые",
+      "number": "139",
+      "uses": [
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "washing-machine",
+      "label": "Стиральная машина",
+      "group": "Оснащение и удобства · новые",
+      "number": "140",
+      "uses": [
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "refrigerator",
+      "label": "Холодильник",
+      "group": "Оснащение и удобства · новые",
+      "number": "141",
+      "uses": [
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "elevator",
+      "label": "Лифт",
+      "group": "Оснащение и удобства · новые",
+      "number": "142",
+      "uses": [
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "kids-room",
+      "label": "Детская комната",
+      "group": "Оснащение и удобства · новые",
+      "number": "143",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/PreferenceIllustration.tsx"
+      ]
+    },
+    {
+      "id": "beach",
+      "label": "Пляж",
+      "group": "Оснащение и удобства · новые",
+      "number": "144",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/booking/preferenceIllustrations.ts"
+      ]
+    },
+    {
+      "id": "sauna",
+      "label": "Сауна",
+      "group": "Оснащение и удобства · новые",
+      "number": "145",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/booking/preferenceIllustrations.ts"
+      ]
+    },
+    {
+      "id": "terrace",
+      "label": "Терраса",
+      "group": "Оснащение и удобства · новые",
+      "number": "146",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/preferenceIdeas.ts"
+      ]
+    },
+    {
+      "id": "picnic",
+      "label": "Зона для пикника",
+      "group": "Оснащение и удобства · новые",
+      "number": "147",
+      "uses": [
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "board-games",
+      "label": "Настольные игры",
+      "group": "Оснащение и удобства · новые",
+      "number": "148",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/PreferenceIllustration.tsx"
+      ]
+    },
+    {
+      "id": "water-dispenser",
+      "label": "Питьевая вода",
+      "group": "Оснащение и удобства · новые",
+      "number": "149",
+      "uses": [
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "no-smoking",
+      "label": "Без курения",
+      "group": "Оснащение и удобства · новые",
+      "number": "150",
+      "uses": [
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "accessible",
+      "label": "Доступная среда",
+      "group": "Оснащение и удобства · новые",
+      "number": "151",
+      "uses": [
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "contactless-check-in",
+      "label": "Бесконтактное заселение",
+      "group": "Оснащение и удобства · новые",
+      "number": "152",
+      "uses": [
+        "app/src/booking/amenityIcons.ts"
+      ]
+    },
+    {
+      "id": "linen",
+      "label": "Смена белья",
+      "group": "Оснащение и удобства · новые",
+      "number": "153",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/serviceChoices.ts"
+      ]
+    },
+    {
+      "id": "sea-view",
+      "label": "Вид на море",
+      "group": "Оснащение и удобства · новые",
+      "number": "154",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/PreferenceIllustration.tsx",
+        "app/src/booking/HotelOverview.tsx"
+      ]
+    },
+    {
+      "id": "mountain-view",
+      "label": "Вид на горы",
+      "group": "Оснащение и удобства · новые",
+      "number": "155",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/PreferenceIllustration.tsx"
+      ]
+    },
+    {
+      "id": "garden-view",
+      "label": "Вид на сад",
+      "group": "Оснащение и удобства · новые",
+      "number": "156",
+      "uses": [
+        "app/src/booking/amenityIcons.ts",
+        "app/src/booking/PreferenceIllustration.tsx"
+      ]
+    },
+    {
+      "id": "help",
+      "label": "Помощь и поддержка",
+      "group": "Помощь и обращения",
+      "number": "157",
+      "uses": [
+        "app/src/Prototype.tsx",
+        "app/src/booking/StayWifi.tsx",
+        "app/src/desktop/DesktopNavigation.tsx",
+        "app/src/profile/SupportPage.tsx",
+        "app/src/profile/AboutApp.tsx",
+        "app/src/hotelier/ProfilePage.tsx",
+        "app/src/catalogue/scenes.json",
+        "desktop/src/account.css",
+        "desktop/src/page-layout.css"
+      ]
+    },
+    {
+      "id": "support-write",
+      "label": "Написать в техподдержку",
+      "group": "Помощь и обращения",
+      "number": "158",
+      "uses": [
+        "app/src/hotelier/ProfilePage.tsx"
+      ]
+    },
+    {
+      "id": "moon",
+      "label": "Ночи",
+      "group": "Проживание · ночь",
+      "number": "159",
+      "uses": [
+        "app/src/booking/UpcomingTrip.tsx"
+      ]
+    }
+  ]
+}

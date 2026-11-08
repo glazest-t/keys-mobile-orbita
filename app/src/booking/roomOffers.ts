@@ -5,7 +5,8 @@ import {available,catalog,cancellationDeadline,quoteDraft,type Commerce,type Sea
 
 export type RoomFilters={bed:'any'|'double'|'twin';breakfast:boolean;freeCancellation:boolean;payment:'any'|'at_hotel'|'online'};
 export const emptyRoomFilters:RoomFilters={bed:'any',breakfast:false,freeCancellation:false,payment:'any'};
-export const roomBeds=(id:string):('double'|'twin'|'single')[]=>roomFacets(id)?.beds.map(b=>b==='Одна двуспальная'?'double':b==='Одна односпальная'?'single':'twin')||['double','twin'];
+export const bedOptions={double:{label:'Одна двуспальная',icon:'bed-double'},twin:{label:'Две односпальные',icon:'bed-twin'},single:{label:'Одна односпальная',icon:'bed-single'},sofa:{label:'Диван-кровать',icon:'sofa-bed'},bunk:{label:'Двухъярусная',icon:'bunk-bed'},cot:{label:'Детская кроватка',icon:'baby-cot'}} as const;
+export const roomBeds=(id:string):(keyof typeof bedOptions)[]=>roomFacets(id)?.beds.flatMap(label=>(Object.keys(bedOptions) as (keyof typeof bedOptions)[]).filter(key=>bedOptions[key].label===label))||['double','twin'];
 // Все тарифы текущего демонстрационного каталога допускают оба способа оплаты.
 export const roomPaymentMethods = ['at_hotel','online'] as const;
 export function rateTitle(rate:typeof catalog.rates[number]){return rate.kind==='hotel_loyalty'?'Закрытый тариф'+(rate.mealPlan==='breakfast'?' с завтраком':''):rate.kind==='friendly_rate'?(rate.mealPlan==='breakfast'?'Friendly Rate с завтраком':rate.mealPlan==='none'?'Friendly Rate без питания':'Friendly Rate · '+mealLabel(rate.mealPlan)):rate.mealPlan==='breakfast'?'Гибкий с завтраком':rate.mealPlan==='none'?'Гибкий без питания':mealLabel(rate.mealPlan);}

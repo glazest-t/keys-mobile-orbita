@@ -2,731 +2,10 @@
   "version": 1,
   "assets": [
     {
-      "path": "design/assets/icons/_sprite.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/_sprite.svg",
-      "sha256": "25ae2c4abd2c5213ee89f2fd61dfe43fb9e28f5ff43aa9707161ce37ea79e8be",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/baby-cot.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/baby-cot.svg",
-      "sha256": "8c28ba09f73a82ba142bc63c5f063fa016f98ce19c732ef8c350283ea2eae2e5",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/back.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/back.svg",
-      "sha256": "815e1ad641fe2c983402894cac78c96f9f0277c88b877b3d5eb09c826c059f30",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/bar.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/bar.svg",
-      "sha256": "0b5a8068618abb30310933e646bf8a19c60ee40cb862b3f77e30688b47cbed5b",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/bell.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/bell.svg",
-      "sha256": "f82192e461795ac28546f0a9fc26b956720755871dcaabf433e32631a448cebe",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/best-price.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/best-price.svg",
-      "sha256": "565b79ec647af3ae71d57755cbc6020172bf045cd992f2362ea2ec5e1f24d3ad",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/bill.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/bill.svg",
-      "sha256": "2f7f0b2cc61dd68846dbbe667b6eb165effade074382cba2d55c0265d3ff0ba1",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/bluetooth.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/bluetooth.svg",
-      "sha256": "2d98a2386a41f59635852906de3a384f33fdf408f023855148119081c0d889fe",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/breakfast.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/breakfast.svg",
-      "sha256": "4095d67861709d4252c238ee38137bc81819020dfecf524c3b0987349506fb00",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/bulb.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/bulb.svg",
-      "sha256": "15b6822b3fd45f5b5b7e432bd3af1f8be919d664b70f51bad4c48778b1f30632",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/calendar.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/calendar.svg",
-      "sha256": "c4b232de84187ffd174ab1c71d645100910139dd17cf7b6af75d3d63b4848ede",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/camera.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/camera.svg",
-      "sha256": "c20e4c2ff53a65f7aaea1a4709ce89ca6e95557e7a3e569ab80f615484420c5b",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/car.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/car.svg",
-      "sha256": "ab6a10e950d9bb968f10d7e76611b2f9c6fcbdb520718a4a39f24995602eddd5",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/card.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/card.svg",
-      "sha256": "a7d996293ebec0ff77d7f6e75f2f14d89ce9e4b00afab56a1826fb5ff45624be",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/chat-hotel.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/chat-hotel.svg",
-      "sha256": "6013e10cdfeafaad495d9f3c8c5ed5ed1563303bbcda67919f084bca545f9a8e",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/check-in.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/check-in.svg",
-      "sha256": "d1c723591798af0b2fcc43607c4257c2ce3c45587b2216026f47706e62060f2b",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/check-out.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/check-out.svg",
-      "sha256": "528fe17254e8b39fa1a0d37f298101e62db349f0168b085887e8776aebcaee76",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/check.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/check.svg",
-      "sha256": "29d6b1d0c31772759ec722e6fc9e719324d5eba604709ab6b2d1beaa0cb1e3e1",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/chevron-down.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/chevron-down.svg",
-      "sha256": "63b3f71631c7e7c7a112d721f2cefe5f3b17bc3054c27ea7175313a6a2f4696c",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/chevron-right.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/chevron-right.svg",
-      "sha256": "8ffb810da15bf6eabfd87f1ac65053dcea2e66ffb3bb2e6d646843302adf621c",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/cleaning.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/cleaning.svg",
-      "sha256": "3f5a3c8372df6fb0edf709ee8fdf72e9e907f320cd0ecca2c268becb64fc270d",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/climate.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/climate.svg",
-      "sha256": "cb915b2b48ea6ad8551b503b4ca9cd75eed144f948554b1304694994106a9d3d",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/close.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/close.svg",
-      "sha256": "366b84cbd34c609d0803d7beb1a261b51f687356efa881f29d9622da66cde9cd",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/coffee-to-go.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/coffee-to-go.svg",
-      "sha256": "3c3256b7c93e6bfffb741667ae905873dec6ad76ba51af8179dac68e7e6bbb7c",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/concierge.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/concierge.svg",
-      "sha256": "b17ba348ddce7d1158e92ef3e6d9eb3626e827cb63104f00d452a711aee61f9d",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/deposit.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/deposit.svg",
-      "sha256": "e69263de102f29e0236cf71adab044387fbdd497c335eaaac39ac22d7aa4657b",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/discount.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/discount.svg",
-      "sha256": "eddf9f3c6a8303ae6a69bf73f09b162ace1b5bb6a6a1a9cddd1bebb3b6850c49",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/do-not-disturb.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/do-not-disturb.svg",
-      "sha256": "a5607b71bc7cc3751529933bd844da60517a0b7add7271e3b21c49e7d15b911b",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/document.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/document.svg",
-      "sha256": "5051ea7144f2aaf2d789b13b3fab45a4ad6d994a10791b1fcadad1951665d1cf",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/door.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/door.svg",
-      "sha256": "2d0ec3e8a7dd1bfb3a8c9b1b53ba76d0cf40cca4cff559646e7a83294c7b7646",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/early-check-in.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/early-check-in.svg",
-      "sha256": "26bb0477a7fb6061f7bbf6a2a1e4891b11cc7a0222ecfb333ed5103acd1b595c",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/edit.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/edit.svg",
-      "sha256": "790aafbfee900c7b8e38c8253037d0882639c5003b500bcdf6f43243913e4259",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/error.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/error.svg",
-      "sha256": "8be18f8ba41e883873535c2f9e4262f98a271afe90703a658223f13c8a4d8ba5",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/face-id.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/face-id.svg",
-      "sha256": "a6c1ccdc1467e2ed2fbe477187e49cd3732be38d2e4a896604d1e3d43a5a9106",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/filter.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/filter.svg",
-      "sha256": "8090dd3bbff6a72c8c4de4ddcdfc30e4182bc840c8d3628b50b3d43e3bd65850",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/fitness.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/fitness.svg",
-      "sha256": "d44f105b288a79512f3e62ee2520529d1a6916b600fde0c4cf4db1a6fe46a16b",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/floor.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/floor.svg",
-      "sha256": "16c1a75615113e8d474160b658688f67ddccfae5f251464d9cace09f61d14361",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/gift.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/gift.svg",
-      "sha256": "1e98410706c0eb32d0fc4573a7f0c794e1812ca91bd1ae754b4ba7a5b87299ef",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/globe.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/globe.svg",
-      "sha256": "73e053729751d25cfae31eed2fdb7869360e1ddf6ccc450ae1e7757e85bdd493",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/guests.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/guests.svg",
-      "sha256": "1fe82f491ebf27f4877c2c3ea4061f5b7d327c0af261b1f844fdd68d02f86dc0",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/heart.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/heart.svg",
-      "sha256": "804929091157ee11cd427baf7a20d7e2270a65b5e7cc11c95577a2fe31e8053f",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
       "path": "design/assets/icons/icons.json",
       "source": "проект в Клоде/project/brand-kit/icons/icons.json",
       "sha256": "c0d44012b40f8cc25030d90234f2c954936e85be9086af3502c9ff136c99b65d",
       "transformation": "source icon dictionary preserved; added project icons flame and sort in the same 24px stroke style",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/info.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/info.svg",
-      "sha256": "975b15fe3d5b91fb9732537f97644c5c54e815ad6ac2f106803ff84732204268",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/invite.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/invite.svg",
-      "sha256": "156b905577322d3fcfe93871a646f76b1dea51fed5fb3fcad1065116e3fb2ba7",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/iron.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/iron.svg",
-      "sha256": "7445982bac173fcdf0327f60344b8b818b67269271f3219d135d5e308b507ebf",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/key.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/key.svg",
-      "sha256": "847f6e098d56c6d5f54ddce96b1ef5ae9f76493e7abccce91d75523af0bb1d16",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/language.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/language.svg",
-      "sha256": "c8f1333c0349aaa3310e201059eb4ff22fb44c628c311f5398d8935c556371c9",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/late-check-out.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/late-check-out.svg",
-      "sha256": "3110aa4639f156ae2a167d8d826b9e205fbae83fc07037492c0ebb472bf894c0",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/laundry.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/laundry.svg",
-      "sha256": "249113bda01a155bb5ccdfdd3707bbd617412a7c37c8ca1bc65aa287cad99de0",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/logout.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/logout.svg",
-      "sha256": "c8b0ac3d6cd1943700422f1cb012197647f3bbb5642b431435d5e1023d56bec8",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/luggage.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/luggage.svg",
-      "sha256": "a7c872f954d3e78d14d28714a7fc1cef352b71535670df6124d3f403a47c3c80",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/mail.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/mail.svg",
-      "sha256": "7124df7e0e1fed21f8a71ab6e3dd85bae7fdbc731d355b12da099f9088e88a42",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/map.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/map.svg",
-      "sha256": "22460a2a443f2c11bbf38dcbfb7fd76d61bf2119cc2e987343d2b9e68cf3997b",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/menu.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/menu.svg",
-      "sha256": "f47d28659c601f1e55ffb64e257f75ce8825338d90bdc767e172c04c000884c9",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/minibar.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/minibar.svg",
-      "sha256": "7f5306e1c7b9672fe2cba369467fcb28ad6e0637f55d2779aa98690a80064e85",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/more.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/more.svg",
-      "sha256": "844802f794d658348147fb1ae3157b0cf9aaea4d210af04a194ed72a7f70dc4b",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/nav-chats.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/nav-chats.svg",
-      "sha256": "6887fa9420adafdd77da772259737ebb101d3019f105275cf41f56619815d4c1",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/nav-profile.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/nav-profile.svg",
-      "sha256": "372366a1e09dee53275fd0a6c60434f66a729451e4919fec5110b9403e34b612",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/nav-rewards.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/nav-rewards.svg",
-      "sha256": "773e8c807167d887a5c1373b9f38525b3f50d752aab808538d2188ca074e6fa6",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/nav-search.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/nav-search.svg",
-      "sha256": "69c0ddb22a292990eb619b36a0e54042c32d9909d59bdc6bf7ac4d5929ecab37",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/nav-trips.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/nav-trips.svg",
-      "sha256": "d1ece625e10c459695d5ee0358ed6dbac4760c52532b6ac8fa37e311c9f1a06f",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/nearby.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/nearby.svg",
-      "sha256": "c8fc096d04e07ffd669559514cba017ad62b46280ace37543ae97e5f8756ea53",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/nfc.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/nfc.svg",
-      "sha256": "189c71c3be62143756e475d4bc29cc83bbc0b1e93f80ccbe0e2430ad56997719",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/orbit.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/orbit.svg",
-      "sha256": "5864136316f8fcb3c67354bae44f277b4a57a6e84bf2b2b36f679e0424dc730b",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/parking.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/parking.svg",
-      "sha256": "e3c9f5ba8aa0064aba49fedc52787eb4d6c7c1f327cfef34a17584334c661290",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/passport.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/passport.svg",
-      "sha256": "dda50ee0d7ed1dcd7f0e56ec50bb8efe78dd97114ec0e252c8e63ed606dfb61c",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/pending.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/pending.svg",
-      "sha256": "297870e767da11b93b642114c465e7428760532c4b8ee9d994088f6ef9bae112",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/pet.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/pet.svg",
-      "sha256": "22eb537e506db9c00df5387b5ebb6bdf6b7508dfdf54528851d542baad1cf4c7",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/phone.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/phone.svg",
-      "sha256": "ef4cde57994b007afbaea99677f567887dde45b662b9bd83b55317d8ae0ba043",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/pillow.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/pillow.svg",
-      "sha256": "2a38683350acb8918d9ed475b34a296bd37418f92f9a57e4afffadc40b5e930d",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/pin.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/pin.svg",
-      "sha256": "4cd2a3630140fa5c645e8b54822f628efe149053bac72f151d10f5ed28c24cd4",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/plane.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/plane.svg",
-      "sha256": "b603fc2ba30318f55db5c1ba5c09766d2dc20c64b0ad83ea38328c869af0d9c8",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/plus.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/plus.svg",
-      "sha256": "54b28fbb78e75c95122d5ee122dce46070112b4e8a07b1b52681fcbc7c5ac094",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/points.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/points.svg",
-      "sha256": "065536e3995f70dc2081949d8fbb9f425b8b1c59632c44328adc59bd9e741b08",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/pool.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/pool.svg",
-      "sha256": "93c7397ff4630672d4da1b2663abad619f1105d9dee10ec51a60209478f63406",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/preferences.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/preferences.svg",
-      "sha256": "a675a88a0c1758c13c33cae644d9dfb8e1a399732a765d643e90634adbc94897",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/problem.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/problem.svg",
-      "sha256": "7cb2f0ce92776412253ea0d254d7a0d1bc6f58d5a7cbfa9fc6b8d334faaff581",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/qr.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/qr.svg",
-      "sha256": "1a34fe074bcf488f70d4b387d517399f1a06ba7aebba8ac74a998c0b5792e008",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/receipt.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/receipt.svg",
-      "sha256": "0307207e50d479e9d5f9feac2928d03f15f48fc5901e7d61b8cfad5d01590d2a",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/reception.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/reception.svg",
-      "sha256": "b986a536cacc35b53d74c1a769049b690401a0691e0ba3da46d61983089905c9",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/restaurant.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/restaurant.svg",
-      "sha256": "b2de8d49c2c2133c27cb739951eca499dbd2f3f8ebd30a215163c02cac7c3a0a",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/review.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/review.svg",
-      "sha256": "c1988442817ea4811b2e57f4dec8980a3c6b5bafbaf777c71d4e84c5b446ab43",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/room-service.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/room-service.svg",
-      "sha256": "bd480ae7857a2e3f2b1319d368ef3faedc3a77163d7dc42523902d51d91c14af",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/room.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/room.svg",
-      "sha256": "c120b4da2d0c9e48a2af1ab8c416903f007912fc3ffca66b3e1df3e627ebc9e2",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/route.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/route.svg",
-      "sha256": "3cbfc382eaf3ea15af29693b9a186fb742587af5af67519b8283c854faa522ff",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/safe.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/safe.svg",
-      "sha256": "0649b07cd88a53e7154167f59d7d5f2f0f4412b70d90ca184989adb385d8babf",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/secure.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/secure.svg",
-      "sha256": "20974d4c5347f87cbe2b10341f8a491c4d3b01e3e82bb7125a1e8c5011fd3144",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/settings.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/settings.svg",
-      "sha256": "e3554d0ebb41cd0d52989f04c5a74b973385ffa52502f38bd18837653bc3d60a",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/share.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/share.svg",
-      "sha256": "dcda674af6bbb563ee5dbce624c12afe3eed101d8708d0fd2a851ee9d2922c13",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/spa.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/spa.svg",
-      "sha256": "3e1934fa8233959daefcad80b1b00f3c5db4f9ff11eaf95833431af97fb00a65",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/style-match.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/style-match.svg",
-      "sha256": "6997239b14ce28abbcb1cbb9a26b834a75dd5b68c0c8e54e0118a2e0a7535f99",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/success.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/success.svg",
-      "sha256": "afeae4dc93a1bf8db843bf75f68adb3dc3be502e591a70376a60e265143f3f57",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/taxi.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/taxi.svg",
-      "sha256": "14280851756a73f699c6e8c457e99ae02771d8ce019065e271de604d895e5acf",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/ticket.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/ticket.svg",
-      "sha256": "9cab15f60c5c26eaf6b83ebf39b65970d8e7680f742e797a92cd242f33eda622",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/towels.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/towels.svg",
-      "sha256": "aa2b2752d681b88bcb1a62f13fa5392972b5eab755258bcb69736c82c133ce6b",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/train.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/train.svg",
-      "sha256": "639189c1de2aa8fe6c8e63843f7278e21240a230a389ad03b316e1354933a720",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/transfer.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/transfer.svg",
-      "sha256": "bbe1764bf1dddfef93c6e0c25b3ce0c2cd0e4b5960161896044d0f2ab8143565",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/trash.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/trash.svg",
-      "sha256": "b2674f238c4fba43a91f5282d3ebafaa3bef383ef9151c7605d9c84f19f73819",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/tv.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/tv.svg",
-      "sha256": "3ee49f3ad66879c74798cbce916332467df0f5ef7cd7f08ba5f1e6eca08d364e",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/wallet.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/wallet.svg",
-      "sha256": "61f821a49f1dcf26b5f5ac29345de0f7474e4adc4e1cf3ad9be524803f722a03",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/warning.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/warning.svg",
-      "sha256": "7773a7d071ddf6f44cd6371b482e631bf61adc535ea437a85a010ee1ec6a5f12",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/weather.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/weather.svg",
-      "sha256": "25d93f7f558f2b5b37a4be4c0d6bb2558c45fe364f4fa81b497e08e5c3029d9d",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/wifi.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/wifi.svg",
-      "sha256": "b27dd3ebdfc8980dc1947b22a221aa01dfef02d0c13f0aebabad66104cc5c5bb",
-      "transformation": "unchanged_copy",
-      "rights": "provided_by_user_not_independently_verified"
-    },
-    {
-      "path": "design/assets/icons/wine.svg",
-      "source": "проект в Клоде/project/brand-kit/icons/wine.svg",
-      "sha256": "1fff2f56aed248bafa205991693f4ff47497d62b9dbe4bd06b122e3392b6811f",
-      "transformation": "unchanged_copy",
       "rights": "provided_by_user_not_independently_verified"
     },
     {
@@ -980,6 +259,1196 @@
       "transformation": "tight viewBox; explicit mask extent; transparent background; original ring and dot geometry",
       "sha256": "05a55bedd6db012a83132fe26119238d2563341a83d3621acdf422be7bb142c9",
       "rights": "provided_by_user_not_independently_verified"
+    },
+    {
+      "path": "design/assets/icons/_sprite.svg",
+      "source": "design/assets/icons-soft/manifest.json",
+      "sha256": "23f33ff70b56f8537a1c5448b6869565ed9a0cf9e3905aa1e41652cce8f2aec9",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/accessible.svg",
+      "source": "design/assets/icons-soft/accessible.svg",
+      "sha256": "e7b21176758ebf67aa2a62c8ca94a0dac7a932ac590abd12e01e7387f25386db",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/attach.svg",
+      "source": "design/assets/icons-soft/attach.svg",
+      "sha256": "d055db07bd62919e49e8caaa621dd54438a87a18a0a71f047528554834f2e548",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/baby-cot.svg",
+      "source": "design/assets/icons-soft/baby-cot.svg",
+      "sha256": "99137df3d8f024faf9c82daab9c94489c58369cbb4ce13b81e5406fa38c12273",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/back.svg",
+      "source": "design/assets/icons-soft/back.svg",
+      "sha256": "4f8e73263e082d5144a0881ca598fce843ee910e29f5a11935437abc4c40b93d",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/balcony.svg",
+      "source": "design/assets/icons-soft/balcony.svg",
+      "sha256": "ab63ee58bfc24fef2ba0ed83688cbdc22093a67076fa02644e8771bb9fdb43e8",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/bar.svg",
+      "source": "design/assets/icons-soft/bar.svg",
+      "sha256": "93f77849061520f9271ec6c0a31a748a9d75d365a7910f64ad3e848f49f27e26",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/bathrobe.svg",
+      "source": "design/assets/icons-soft/bathrobe.svg",
+      "sha256": "abafc8410865b2c06cef5af6d783dadaeadce90568caa757babd52d44d2d1d10",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/bathroom.svg",
+      "source": "design/assets/icons-soft/bathroom.svg",
+      "sha256": "449bf5a777d917c24a9728e7e09fb7342f497a1727ee9fa18a9db27a541f5370",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/beach.svg",
+      "source": "design/assets/icons-soft/beach.svg",
+      "sha256": "51ffa3ac90f112bbb333aae4894219274d00133a539d3e68b28c31e3965c3510",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/bed-double.svg",
+      "source": "design/assets/icons-soft/bed-double.svg",
+      "sha256": "6efe8cbb966da81b91255c0ac7f68b92a90bb891b564ff313e58021c0a0976d8",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/bed-single.svg",
+      "source": "design/assets/icons-soft/bed-single.svg",
+      "sha256": "9dd19751b165c9cbf85e3ee18c63e7d71f2374cb54812caad63c2fa4f0bb82e8",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/bed-twin.svg",
+      "source": "design/assets/icons-soft/bed-twin.svg",
+      "sha256": "7171ebeb46503702f9f38061d780ebdc29930d87b7bb3ce4d7b6e61977ee287b",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/bed.svg",
+      "source": "design/assets/icons-soft/bed.svg",
+      "sha256": "6efe8cbb966da81b91255c0ac7f68b92a90bb891b564ff313e58021c0a0976d8",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/bedrooms.svg",
+      "source": "design/assets/icons-soft/bedrooms.svg",
+      "sha256": "b7d07bc8c95d085b175c61f0688b0bce1668e6074cc7a13995ec8279068cce07",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/bell.svg",
+      "source": "design/assets/icons-soft/bell.svg",
+      "sha256": "3aa07860a65d305833703f21fd41f197be06b7e72851f4851e1c19a1df528e0b",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/best-price.svg",
+      "source": "design/assets/icons-soft/best-price.svg",
+      "sha256": "f04a368819a89a5969e7cad306b08c6d199b61a0c2632c610c9f10f955fc92ff",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/bill.svg",
+      "source": "design/assets/icons-soft/bill.svg",
+      "sha256": "8defe0b6b263e3815bd35b6447d3040981fdbd6543fed4dee09a4024a6043b9a",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/bluetooth.svg",
+      "source": "design/assets/icons-soft/bluetooth.svg",
+      "sha256": "27acae08da0ff8bdbd73b47fd35278238a092cb53f12000e172509c5ab75d589",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/board-games.svg",
+      "source": "design/assets/icons-soft/board-games.svg",
+      "sha256": "c65d70fcfd3daf8383123fb3268999ef2159ba407dbe3f19e609702029dd50f4",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/breakfast.svg",
+      "source": "design/assets/icons-soft/breakfast.svg",
+      "sha256": "9679d6ab1a6dbbf4a5ced9bbf29c32946078b5a75ebff72d01234bedbda2a3f6",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/bulb.svg",
+      "source": "design/assets/icons-soft/bulb.svg",
+      "sha256": "7366e50d74afa248b36ec3105c88c2baab134459879e2a539f6390a6be836d18",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/bunk-bed.svg",
+      "source": "design/assets/icons-soft/bunk-bed.svg",
+      "sha256": "f2513035d745a1f0578d7927de414ca1885bc5571f0770341b185d5ac590df32",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/cafe.svg",
+      "source": "design/assets/icons-soft/cafe.svg",
+      "sha256": "04bae7e4770176c9a512edc36993a0046d1655e5b4b4fa72446173edec50d221",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/calendar.svg",
+      "source": "design/assets/icons-soft/calendar.svg",
+      "sha256": "0dcf0ed50a7dae84f309a2fabc050e75e6e21dff9cb74e91277a508ce30adfc9",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/camera.svg",
+      "source": "design/assets/icons-soft/camera.svg",
+      "sha256": "7f3e848dd37cb75eb9d989069cbaca4b194da50d4d1f394d3ad02485509606e1",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/car.svg",
+      "source": "design/assets/icons-soft/car.svg",
+      "sha256": "d25754c43007b291511fed6cf323c50521bfc986be9a9895c7d4c041059bd3dc",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/card.svg",
+      "source": "design/assets/icons-soft/card.svg",
+      "sha256": "1cae4b1fc5ba78bb275bf493e6d2baac586d143f58255908e3b9f73ad89e4116",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/chat-hotel.svg",
+      "source": "design/assets/icons-soft/chat-hotel.svg",
+      "sha256": "511954d5c45ff39b703cd272a8bb9c1a4596e1f748dd277a725ddd981cb6e699",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/chats.svg",
+      "source": "design/assets/icons-soft/chats.svg",
+      "sha256": "511954d5c45ff39b703cd272a8bb9c1a4596e1f748dd277a725ddd981cb6e699",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/check-in.svg",
+      "source": "design/assets/icons-soft/check-in.svg",
+      "sha256": "233fbb507ba7af867f5ba83ee93ee1d96459536233799facd49fe2d848a7d0bd",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/check-out.svg",
+      "source": "design/assets/icons-soft/check-out.svg",
+      "sha256": "70da0d5f020d4217275310646351cbee1a0e2ab0c28238b4b5c3ebd21ce64358",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/check.svg",
+      "source": "design/assets/icons-soft/check.svg",
+      "sha256": "29fadef6279a8ea441e3bdd9dfe68363bbac30a22a3ec2a807f21e328effa879",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/chevron-down.svg",
+      "source": "design/assets/icons-soft/chevron-down.svg",
+      "sha256": "cce002f1ee68033df85c332cad0d8b3c299d4cc69bd3cbfe4bf5c4a6458abe46",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/chevron-right.svg",
+      "source": "design/assets/icons-soft/chevron-right.svg",
+      "sha256": "c20ab1f48c7c1307710838c05ebbfae6e198f82d81fab56e5ff2277839385463",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/cleaning.svg",
+      "source": "design/assets/icons-soft/cleaning.svg",
+      "sha256": "54e12c4df4b350c9324c56e5d434d542b21b2cc010618ba3517da89f8cb9d3b4",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/climate.svg",
+      "source": "design/assets/icons-soft/climate.svg",
+      "sha256": "3f35b1a47cdc21f7cba7ae74556c09b6cb8054ed40817f3fa9340ca0539afda3",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/clock.svg",
+      "source": "design/assets/icons-soft/clock.svg",
+      "sha256": "ecb422feb1da08d32739d25a1585f5b0a59a9cdbe327231250c99abaa2eb16cd",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/close.svg",
+      "source": "design/assets/icons-soft/close.svg",
+      "sha256": "510307406a3a51a5e298195524e07b7766829d0366aa756a35368b03416562dc",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/coffee-machine.svg",
+      "source": "design/assets/icons-soft/coffee-machine.svg",
+      "sha256": "bb431d6065f89382cfda761be946df9cee8e8c22c583d5548907006dbfa06f2e",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/coffee-to-go.svg",
+      "source": "design/assets/icons-soft/coffee-to-go.svg",
+      "sha256": "0dfcf6892970e674e312c22f27711c9d5cbc616c7df4c8d4a4f52c96d28f0821",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/concierge.svg",
+      "source": "design/assets/icons-soft/concierge.svg",
+      "sha256": "120dc3caa85edfb089ad58875f5a1b3f10db0716d15cf9a5e747dfc6d2d7b472",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/contactless-check-in.svg",
+      "source": "design/assets/icons-soft/contactless-check-in.svg",
+      "sha256": "d8ac65f8dc0c95a5d70e26d25ee1f0ec3ca284f0a47fa2a7a92afa7198112eed",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/deposit.svg",
+      "source": "design/assets/icons-soft/deposit.svg",
+      "sha256": "cbf8b01d7a80cf7fcb79cfacaea6a114a8f1b391ae6f2eea41d4153271bb825f",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/desk.svg",
+      "source": "design/assets/icons-soft/desk.svg",
+      "sha256": "c9d3fb57e4fb8c9722cc8f69fa6c6e8f40b41185f8e06d6a40e3d727d635cff8",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/discount.svg",
+      "source": "design/assets/icons-soft/discount.svg",
+      "sha256": "7e1ea1e689b995e0310154c392277c3f65082d17de9e7c8f92403c5d110c0563",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/do-not-disturb.svg",
+      "source": "design/assets/icons-soft/do-not-disturb.svg",
+      "sha256": "f37c2691f82244285f7a7291a0c7b8da59464afa511dc9269721f16db932c8b1",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/document.svg",
+      "source": "design/assets/icons-soft/document.svg",
+      "sha256": "0d5076049f2c4036e06fd2738cc17954a0be7be48c6a61e2a143c54d99db7c54",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/door.svg",
+      "source": "design/assets/icons-soft/door.svg",
+      "sha256": "b347a7a11a7de92e85147ce05eeaab0405672a0f48979956cb104dc29eb305fe",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/download.svg",
+      "source": "design/assets/icons-soft/download.svg",
+      "sha256": "15aabe83eb7ae0575ea3004be9b43ccce581d32567b7fd9c556510b873b98876",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/early-check-in.svg",
+      "source": "design/assets/icons-soft/early-check-in.svg",
+      "sha256": "75d4921e0de5237482ccd10a28665f3152b656b3166ef2bf8dd859ce9e6ed79a",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/edit.svg",
+      "source": "design/assets/icons-soft/edit.svg",
+      "sha256": "cde0176053d4620c551826c50b493da715d2da51ae3d647c7109660bfe5cfccc",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/elevator.svg",
+      "source": "design/assets/icons-soft/elevator.svg",
+      "sha256": "8c4ed03add67ea902642e0682f6cfe17ce2414b3e18dd498fcf973ea44e4a464",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/error.svg",
+      "source": "design/assets/icons-soft/error.svg",
+      "sha256": "1d9170988d4d43d0b6b50f64fa5a65de1fd40089707064c42052d5b9cffa77d8",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/face-id.svg",
+      "source": "design/assets/icons-soft/face-id.svg",
+      "sha256": "419608fdf66fb1dec900fbd2dec4994c20e6707916634fe2f305d0217ac568ba",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/favorite-outline.svg",
+      "source": "design/assets/icons-soft/favorite-outline.svg",
+      "sha256": "2d7a2b1aea90112655b9720210f0ceb1a8c8e7b98040740eb602bfd03cfc0c3f",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/filter.svg",
+      "source": "design/assets/icons-soft/filter.svg",
+      "sha256": "1187e5494eb04cc09ca2fd12dd14eb93fda95b9edce34d75f5e72c49c1158c3d",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/fitness.svg",
+      "source": "design/assets/icons-soft/fitness.svg",
+      "sha256": "5bc5d77ec48224855f6ad7db0d6eb489b5aa7284bf067003e1e86c70d6e2fd45",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/flame.svg",
+      "source": "design/assets/icons-soft/flame.svg",
+      "sha256": "6c66fdb1a148dcc10e828cb30e8b0cd410ec77076bf8278dffd30ed625a9fcbf",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/floor.svg",
+      "source": "design/assets/icons-soft/floor.svg",
+      "sha256": "ba903b6ebae979749bcf4be33871008d5293590d25abd23cb630b64fb4987336",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/garden-view.svg",
+      "source": "design/assets/icons-soft/garden-view.svg",
+      "sha256": "08f64c25ca2a8e9573830c51c319f29fe47178f032fca81713b175c441a789c8",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/gift.svg",
+      "source": "design/assets/icons-soft/gift.svg",
+      "sha256": "fcf8f6240abf5821af687cf4ff85e7358aa895475a0ece7803084ff4fe2c25fa",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/globe.svg",
+      "source": "design/assets/icons-soft/globe.svg",
+      "sha256": "e6e2e9ba3b942522a43af7fb8f4f49ef059d4c09c63160f0a1a752faecd3a885",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/guests.svg",
+      "source": "design/assets/icons-soft/guests.svg",
+      "sha256": "4708bd5f83bbed5d8dccb4b3c6953ad3f81ec684f5f2ba7b9fd3456f2a1be83d",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/hairdryer.svg",
+      "source": "design/assets/icons-soft/hairdryer.svg",
+      "sha256": "4df481c8d0a4bd6eedaf24d2777419dcf7b4141a3a07a240d9a9fc8cc9945d78",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/heart.svg",
+      "source": "design/assets/icons-soft/heart.svg",
+      "sha256": "ebdbbe4def19f8f3fea70d2b40fc726e29d87439175e5bbc92df52d9d8e6d568",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/help.svg",
+      "source": "design/assets/icons-soft/help.svg",
+      "sha256": "2465f77709d54bcce7f616831514e658902f31953e65e833bd03eef3c1dd1220",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/hotel-building.svg",
+      "source": "design/assets/icons-soft/hotel-building.svg",
+      "sha256": "1d602b5ee72acd52814be18557eedfe5b38a563f617fcb4ac1913ce9cbf39861",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/hotel-network.svg",
+      "source": "design/assets/icons-soft/hotel-network.svg",
+      "sha256": "51f93878191a575a97cd35405ca0b34e84a3d021951599cfc7cba75b2f2ecd4e",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/hotel.svg",
+      "source": "design/assets/icons-soft/hotel.svg",
+      "sha256": "1d602b5ee72acd52814be18557eedfe5b38a563f617fcb4ac1913ce9cbf39861",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/info.svg",
+      "source": "design/assets/icons-soft/info.svg",
+      "sha256": "070a6142302349fcbf2aab90511437a30e03a6fef050dd7e46fae5c84ef09589",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/invite.svg",
+      "source": "design/assets/icons-soft/invite.svg",
+      "sha256": "f7ab940030a06df72dc5e70398287f9e96aa7acf79a0b6a242b0be7223ef78b8",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/iron.svg",
+      "source": "design/assets/icons-soft/iron.svg",
+      "sha256": "b18bd23570a2e97db9222d18a6f6fd7bb3c3abdbf9a8920e3eee374781f13aa1",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/kettle.svg",
+      "source": "design/assets/icons-soft/kettle.svg",
+      "sha256": "cb1883b188ff1a93ef6bf7d86fe8a846df030d0e12c4296e549d7aab78cbd025",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/key.svg",
+      "source": "design/assets/icons-soft/key.svg",
+      "sha256": "0f99734641fdd1b5336bf7a158dd8d687b151907f6a2356697eb0ec5b889c57e",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/kids-room.svg",
+      "source": "design/assets/icons-soft/kids-room.svg",
+      "sha256": "4888fea4f60dc0045c0b309755f53c580a7b01d9b56d8e77d5e59973a2fe9282",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/kitchen.svg",
+      "source": "design/assets/icons-soft/kitchen.svg",
+      "sha256": "51285268c78723723c187a0225bbc160eeb5aab9ef220cac6108d068956db18e",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/language.svg",
+      "source": "design/assets/icons-soft/language.svg",
+      "sha256": "13d4890d63177e63855dc906781417cc81e65fe90b3e74bf896bb92202032231",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/late-check-out.svg",
+      "source": "design/assets/icons-soft/late-check-out.svg",
+      "sha256": "ecb422feb1da08d32739d25a1585f5b0a59a9cdbe327231250c99abaa2eb16cd",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/laundry.svg",
+      "source": "design/assets/icons-soft/laundry.svg",
+      "sha256": "4089ad2fb69e45df81ba2a0141123438ca3fba4fea45b36e34fdae358a86dfca",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/linen.svg",
+      "source": "design/assets/icons-soft/linen.svg",
+      "sha256": "01eef27017073545fab80f6576ac134b070e33ce94a5296dc3e67ec4ba51e3a3",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/location.svg",
+      "source": "design/assets/icons-soft/location.svg",
+      "sha256": "e9dd73f4a4be2a2894b51399e2cfdb4d0ea22eff33cdbd99335558e554b05059",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/lock.svg",
+      "source": "design/assets/icons-soft/lock.svg",
+      "sha256": "dcbbab95fee7b0480a712dcf53e5b1c8cd4638a9dc355bb68e6320b33c687773",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/logout.svg",
+      "source": "design/assets/icons-soft/logout.svg",
+      "sha256": "8a56ef5344c24a69bfca956b3b0e95688d8c0e09b89d2f15b92cc14daf2ef16e",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/luggage.svg",
+      "source": "design/assets/icons-soft/luggage.svg",
+      "sha256": "1429e68e3df025159b0eec7550e22bec0c93c39f019e9646bca5ef5bd63a43de",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/mail.svg",
+      "source": "design/assets/icons-soft/mail.svg",
+      "sha256": "a28b70d1562b7c97b19488134ee3247a68679281ffe8bf116bd8ae35f8f56230",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/map.svg",
+      "source": "design/assets/icons-soft/map.svg",
+      "sha256": "fb8f91fabdf50199e649ed921308094d8acf015e7c9eec63a38b6a6a5aacb312",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/menu.svg",
+      "source": "design/assets/icons-soft/menu.svg",
+      "sha256": "4e7927a8365b7fc710924d19aa96541b706005e2a79ffda10c044fd23bc0233b",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/microwave.svg",
+      "source": "design/assets/icons-soft/microwave.svg",
+      "sha256": "dd2bcdc42eba1915a96572f6c9c00687b8757372c8b42ed491bf5f233a360b02",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/minibar.svg",
+      "source": "design/assets/icons-soft/minibar.svg",
+      "sha256": "de951d0e329f9a2a55644ea181efc39148cd2431513a079d8e3e5dd7af7542bd",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/minus.svg",
+      "source": "design/assets/icons-soft/minus.svg",
+      "sha256": "2c957f1d6cf5dcb67f91abbaa7c895167f8da310dd90f80fad7635015e46392f",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/moon.svg",
+      "source": "design/assets/icons-soft/moon.svg",
+      "sha256": "e1e71dbff036188c6eaaa2e6a415f8013caa9702bba926935607eb7f2669f6f7",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/more.svg",
+      "source": "design/assets/icons-soft/more.svg",
+      "sha256": "3a2a8913b8ca7a6b380aa91e258e2974e96143ceb9c91cc6b900f7c6454b8679",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/mountain-view.svg",
+      "source": "design/assets/icons-soft/mountain-view.svg",
+      "sha256": "6e28ebdd959db5e096ed138e3698ed69db1e26aa68479769899ec416c3921abb",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/museum.svg",
+      "source": "design/assets/icons-soft/museum.svg",
+      "sha256": "88e1e584b959527ce3784363051dab455f37b4a447d673d240e357fba2ccafb7",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/nav-chats.svg",
+      "source": "design/assets/icons-soft/nav-chats.svg",
+      "sha256": "511954d5c45ff39b703cd272a8bb9c1a4596e1f748dd277a725ddd981cb6e699",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/nav-profile.svg",
+      "source": "design/assets/icons-soft/nav-profile.svg",
+      "sha256": "0731116d32dcae398feb9d45c6b0691a17270cf13fbc068c002bdcb6b72ce70a",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/nav-rewards.svg",
+      "source": "design/assets/icons-soft/nav-rewards.svg",
+      "sha256": "fcf8f6240abf5821af687cf4ff85e7358aa895475a0ece7803084ff4fe2c25fa",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/nav-search.svg",
+      "source": "design/assets/icons-soft/nav-search.svg",
+      "sha256": "e20345b9ccb8ab149200b46a5e0f48d40895913e3532eef37a5bc88f316a2cf2",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/nav-trips.svg",
+      "source": "design/assets/icons-soft/nav-trips.svg",
+      "sha256": "76e5b68b9a70fb94abf599d731e4fef9a1b628f330c013e417fc998efe16f6d3",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/nearby.svg",
+      "source": "design/assets/icons-soft/nearby.svg",
+      "sha256": "4d1c879d589871765b9d8468254ae8ad272220c8fd33b6e11b5c97a4cc4f1ac7",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/network.svg",
+      "source": "design/assets/icons-soft/network.svg",
+      "sha256": "51f93878191a575a97cd35405ca0b34e84a3d021951599cfc7cba75b2f2ecd4e",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/nfc.svg",
+      "source": "design/assets/icons-soft/nfc.svg",
+      "sha256": "819b46d8d4c5aabfe092a506c17815618787c261a915746c01ab1e5426a2c116",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/no-smoking.svg",
+      "source": "design/assets/icons-soft/no-smoking.svg",
+      "sha256": "f445f56cdbfdc24f71dcaab4af2c841ae6b34b043f9cef3b52a1f9fcfb556cd0",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/orbit.svg",
+      "source": "design/assets/icons-soft/orbit.svg",
+      "sha256": "d6850637d21ba9726e4ef3ce688f9313d2ab7d5cdbb1f2784e72c9ee9d6ea884",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/park.svg",
+      "source": "design/assets/icons-soft/park.svg",
+      "sha256": "2bfe308f8632cf17404c8a93e7826e4b4a3e1c32899d5db149f258cbb87f5d7f",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/parking.svg",
+      "source": "design/assets/icons-soft/parking.svg",
+      "sha256": "b47df56a4f8a0044bcd741f90050ef23f2ccdf426f6cb4e8806e39f059a18295",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/passport.svg",
+      "source": "design/assets/icons-soft/passport.svg",
+      "sha256": "b4a776554d902460d6b89342fb8884264aa9a5990a429b1fa6af9e6e76eee3d2",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/pending.svg",
+      "source": "design/assets/icons-soft/pending.svg",
+      "sha256": "00ca3139690ffd48b5a8aa8a773a22c8152090633f5eb905584e4ff54022faa7",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/pet.svg",
+      "source": "design/assets/icons-soft/pet.svg",
+      "sha256": "927148122c0694c81fd7e0bb521f34af6b0f4d86bf12554cc29e2a03272a4203",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/phone.svg",
+      "source": "design/assets/icons-soft/phone.svg",
+      "sha256": "1ed633567067b80f71ead86e7a3240e990bd956f85355552e53430be0c3caafa",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/picnic.svg",
+      "source": "design/assets/icons-soft/picnic.svg",
+      "sha256": "48c3eee4e6fd347897e4d18f986d36c7d13262e4f9089d2a5a542df5f90fc23f",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/pillow.svg",
+      "source": "design/assets/icons-soft/pillow.svg",
+      "sha256": "4e01fc5f0af48857ca4dfa590cc7e5d9955c4e012cfcc4e5b8a80a0b5b774303",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/pin.svg",
+      "source": "design/assets/icons-soft/pin.svg",
+      "sha256": "e9dd73f4a4be2a2894b51399e2cfdb4d0ea22eff33cdbd99335558e554b05059",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/plane.svg",
+      "source": "design/assets/icons-soft/plane.svg",
+      "sha256": "becb5647705e30ceae0d0dd7480a008e69cb6bbfb69d17d5337f28a82e206736",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/plug.svg",
+      "source": "design/assets/icons-soft/plug.svg",
+      "sha256": "a6a1afa0faf40cd19d838b1af388e7ff18ebf4b632fa6a7a888dba98b2f0d229",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/plus.svg",
+      "source": "design/assets/icons-soft/plus.svg",
+      "sha256": "ca447cf8d92ea5d8035584f693040edfd7023522138fb3410c44578aaeb62d70",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/points.svg",
+      "source": "design/assets/icons-soft/points.svg",
+      "sha256": "7414e98f73b2330f4609ebbd1bdb5686d06426ec8ef2975d01d77eb4fc88a0cf",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/pool.svg",
+      "source": "design/assets/icons-soft/pool.svg",
+      "sha256": "98c7b8b8564a029521d21578153fd6ee13510ed9bd065ca0fb31d65314efbc1b",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/preferences.svg",
+      "source": "design/assets/icons-soft/preferences.svg",
+      "sha256": "7a2ebb119fb5c0cdd3fb7a3bf4465309fb5a41e70fa877df53d15455b10a1105",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/problem.svg",
+      "source": "design/assets/icons-soft/problem.svg",
+      "sha256": "2b5034b58dc5a27dfb13e9d038426ee5364bb1a4d1a318403bee96aeef596577",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/profile.svg",
+      "source": "design/assets/icons-soft/profile.svg",
+      "sha256": "0731116d32dcae398feb9d45c6b0691a17270cf13fbc068c002bdcb6b72ce70a",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/qr.svg",
+      "source": "design/assets/icons-soft/qr.svg",
+      "sha256": "0fb8b14f88c56b9cdfb7567eedd0716ebe9ba9d66571ef99b36ae39f41498609",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/receipt.svg",
+      "source": "design/assets/icons-soft/receipt.svg",
+      "sha256": "20f60603c40bcd8b9ab63daab9e73f5aed8e3d4b54073a9096791cce6b2dfc6a",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/reception.svg",
+      "source": "design/assets/icons-soft/reception.svg",
+      "sha256": "f118b21680d0cf525d9a3684b35782d0b4e9b929c7916ebfaa242b2ab5170c07",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/refrigerator.svg",
+      "source": "design/assets/icons-soft/refrigerator.svg",
+      "sha256": "6e9955d03cec32d5aa04c4a71116fe8745d97c29557f73ee9c0c7b986896ca18",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/restaurant.svg",
+      "source": "design/assets/icons-soft/restaurant.svg",
+      "sha256": "8b5899360b949997bf34508f182b10ac684db39f8fd8074451146315be1e40ae",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/review.svg",
+      "source": "design/assets/icons-soft/review.svg",
+      "sha256": "2429bfc5debf20ae9d017c15d4ed6e6fd58870048427b5577b7cd8c00d1b3f0d",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/rewards.svg",
+      "source": "design/assets/icons-soft/rewards.svg",
+      "sha256": "fcf8f6240abf5821af687cf4ff85e7358aa895475a0ece7803084ff4fe2c25fa",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/room-area.svg",
+      "source": "design/assets/icons-soft/room-area.svg",
+      "sha256": "0bfd391028a7551b830857d6f7e6c12ab8b5d427169854ef2a7c2577abbb0963",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/room-service.svg",
+      "source": "design/assets/icons-soft/room-service.svg",
+      "sha256": "497af868947e18189b92f5c87b0e81dc1442c70d2850d7727ab71ef78da1931d",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/room.svg",
+      "source": "design/assets/icons-soft/room.svg",
+      "sha256": "fe034e271b9aa6b80de419daa0e8c126edd749ccf95217cdac2ca21a29db5daf",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/route.svg",
+      "source": "design/assets/icons-soft/route.svg",
+      "sha256": "1f21d52ccff93e6e804fe1347e07a6f8072ed3320fa8e45961dbe3aed40d953b",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/safe.svg",
+      "source": "design/assets/icons-soft/safe.svg",
+      "sha256": "c037eb8bafebf125fe3332828690fbcccb4669688f315bea2d486b41218b4950",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/sauna.svg",
+      "source": "design/assets/icons-soft/sauna.svg",
+      "sha256": "cd663fe542ba0e9db176dcb1d815deede70159aed451947047d920a82666896c",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/sea-view.svg",
+      "source": "design/assets/icons-soft/sea-view.svg",
+      "sha256": "7fd9b69b21abcd973876f796bad75f524ab5838518d4dbe1e01018851038334f",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/search.svg",
+      "source": "design/assets/icons-soft/search.svg",
+      "sha256": "e20345b9ccb8ab149200b46a5e0f48d40895913e3532eef37a5bc88f316a2cf2",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/secure.svg",
+      "source": "design/assets/icons-soft/secure.svg",
+      "sha256": "7fd8d665459a30e960acb53a496a7f0664599d96b645edc617424efc8e618b1c",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/send.svg",
+      "source": "design/assets/icons-soft/send.svg",
+      "sha256": "b7441d7a99f711fb150814cbaf2e5465916ed505468302782b146e4f86c751ec",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/settings.svg",
+      "source": "design/assets/icons-soft/settings.svg",
+      "sha256": "a173aaf9b0ed28aecac03f409e401de5cb582be77338bf728b2ec05b2a187a8f",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/share.svg",
+      "source": "design/assets/icons-soft/share.svg",
+      "sha256": "a209e92e392599935c7aad5de66be152b08c20296501d2a1d2924d3e5b940ba4",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/shared-bathroom.svg",
+      "source": "design/assets/icons-soft/shared-bathroom.svg",
+      "sha256": "93e604696d870316e76168062d56619e4bfe3b60c5e6f35d408adaf1f3f91140",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/shower.svg",
+      "source": "design/assets/icons-soft/shower.svg",
+      "sha256": "9ceec0504443bdbd0431ed7af5a2e8d56f05f3d0ca82dd81d30264a338f72444",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/slippers.svg",
+      "source": "design/assets/icons-soft/slippers.svg",
+      "sha256": "c219d2558274ca3a1c2dd82626839db13b79a2db3facf1cf3af42b281a334f3c",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/sofa-bed.svg",
+      "source": "design/assets/icons-soft/sofa-bed.svg",
+      "sha256": "2c147df02f9dee40ed305c01cc8ac10dfca1820e529e0b9dc326b71843c1fe06",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/sort.svg",
+      "source": "design/assets/icons-soft/sort.svg",
+      "sha256": "b8029a4b9632ad3a7e5015f907d304951d784c6c2629afe2d64881f84c89f43c",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/spa.svg",
+      "source": "design/assets/icons-soft/spa.svg",
+      "sha256": "a08698aeba1524fd22f985a73caf713d88c1dad0c55c24892d6245c5aa3c528a",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/star.svg",
+      "source": "design/assets/icons-soft/star.svg",
+      "sha256": "2429bfc5debf20ae9d017c15d4ed6e6fd58870048427b5577b7cd8c00d1b3f0d",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/style-match.svg",
+      "source": "design/assets/icons-soft/style-match.svg",
+      "sha256": "979aca3dcba58f47adaf63e3ca835fdaba4b2eaa46abde64b603b4810fdf846c",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/success.svg",
+      "source": "design/assets/icons-soft/success.svg",
+      "sha256": "753a22fb36bfd06ffcd5b74a5e56d2cf1eaf5a14cfc06083ef4a9a380aac005f",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/support-write.svg",
+      "source": "design/assets/icons-soft/support-write.svg",
+      "sha256": "fe729fc3091473afe3ac885de3dcdd4cc73347da69a0acf7fb80ec8c6d138d14",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/taxi.svg",
+      "source": "design/assets/icons-soft/taxi.svg",
+      "sha256": "e3e96051a88b559522d37fe54318c213933fd791c8daf17680f6edc74e41026c",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/terrace.svg",
+      "source": "design/assets/icons-soft/terrace.svg",
+      "sha256": "ad5cba86a4eab698a8862ebc36df2b81255081ff064e9f2bcca7c3ed4fd4c8a1",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/ticket.svg",
+      "source": "design/assets/icons-soft/ticket.svg",
+      "sha256": "6b8d27d6e552dbabcf0377a10dbac85b66ea82e52aecee08a97800c41dc4eb89",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/time.svg",
+      "source": "design/assets/icons-soft/time.svg",
+      "sha256": "00ca3139690ffd48b5a8aa8a773a22c8152090633f5eb905584e4ff54022faa7",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/toiletries.svg",
+      "source": "design/assets/icons-soft/toiletries.svg",
+      "sha256": "928e2fd9c289c1dafac4b82f78e890581e71d5c19ccf03d22596a4bfe62c3e6c",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/towels.svg",
+      "source": "design/assets/icons-soft/towels.svg",
+      "sha256": "331657092ec56f98d324c91c1fa7cdd44d8b54774c8acfa1bf20c7673ae89924",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/train.svg",
+      "source": "design/assets/icons-soft/train.svg",
+      "sha256": "d90f850ccfad297a5b16c805c18b65e3ccdc501fba5c26e0b8832ddd6a98bf20",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/transfer.svg",
+      "source": "design/assets/icons-soft/transfer.svg",
+      "sha256": "9f973c813d1259b5b97ac060d0b778245f7e840990a3a78c2f0c51bc5fe206ca",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/trash.svg",
+      "source": "design/assets/icons-soft/trash.svg",
+      "sha256": "0cb994820f1461ddb9e6b68b35605c6af2e304aa229362b326ea1635896f32f5",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/trips.svg",
+      "source": "design/assets/icons-soft/trips.svg",
+      "sha256": "76e5b68b9a70fb94abf599d731e4fef9a1b628f330c013e417fc998efe16f6d3",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/tv.svg",
+      "source": "design/assets/icons-soft/tv.svg",
+      "sha256": "e200e71b41417635c1948645cd2b5c602319a9320dc8de5f9160cf8b42f02b38",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/wallet.svg",
+      "source": "design/assets/icons-soft/wallet.svg",
+      "sha256": "cbf8b01d7a80cf7fcb79cfacaea6a114a8f1b391ae6f2eea41d4153271bb825f",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/wardrobe.svg",
+      "source": "design/assets/icons-soft/wardrobe.svg",
+      "sha256": "98d52fe111eb0fc4742d8b2c7ca2227fd27db5dd39da561dd0fa12f624dd3143",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/warning.svg",
+      "source": "design/assets/icons-soft/warning.svg",
+      "sha256": "7410f051538a96d9013780e96aae51d1ee57547f01cf0998cc9ad595d984b71d",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/washing-machine.svg",
+      "source": "design/assets/icons-soft/washing-machine.svg",
+      "sha256": "63c134ddb2f2ef51d7f6e94db85cd8c039e652612b8b313fcda6d3eb25214774",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/water-dispenser.svg",
+      "source": "design/assets/icons-soft/water-dispenser.svg",
+      "sha256": "c371bca98c06b2630f958821505f965bd4586e8423b766f5e6b4c37781efc006",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/weather.svg",
+      "source": "design/assets/icons-soft/weather.svg",
+      "sha256": "1479bcf5d86df212b61a65ae75f99de2eacc4b1896593d5327405fca43cb1674",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/wifi.svg",
+      "source": "design/assets/icons-soft/wifi.svg",
+      "sha256": "d25ae35211e242d32f0a21755f988350dd814171ac1ebdf6a4844425d859ef4d",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/wine.svg",
+      "source": "design/assets/icons-soft/wine.svg",
+      "sha256": "e29036d16f59f8ade1df2a63a19edecd6ad686e0ca27e6a0d88e31ad68e00bda",
+      "transformation": "approved_soft_icons_revision_16",
+      "rights": "created_for_project"
     }
   ]
 }

@@ -23,7 +23,7 @@ export function CancellationPanel({booking,onConfirm,onClose}:{booking:Booking;o
    {preview.due>0&&<div><span>К доплате за отмену</span><strong>{formatMoney(preview.due)}</strong></div>}
   </div>
   <p className={'cancellation-policy '+(preview.penalty?'with-penalty':'')}>
-   {preview.penalty?<Icon name="info" size={18} inheritColor/>:<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>}
+   {preview.penalty?<Icon name="info" size={18} inheritColor/>:<Icon name="lock" size={18} inheritColor/>}
    <span>{preview.penalty?(preview.servicePenalty?'Удержание за проживание и услуги рассчитано по их условиям отмены.':'Бесплатный срок закончился. Удержание — одна ночь проживания.'):`Бесплатная отмена до ${cancellationLabel(booking.draft.search)}`}</span>
   </p>
   {servicePaid.length>0&&<p className="cancellation-subtitle">Дополнительные услуги отменяются вместе с бронью. Возврат по каждой услуге рассчитан с учётом её бесплатного срока.</p>}

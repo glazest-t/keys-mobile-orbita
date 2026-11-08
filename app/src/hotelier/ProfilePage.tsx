@@ -3,7 +3,7 @@ import {useNovember} from '../usePrototypeVariant';
 import {isDesktop} from '../desktop/surface';
 import {ProfilePhoto} from '../profile/ProfilePhoto';
 import {useState,type Dispatch,type SetStateAction} from 'react';
-import {Icon,Row} from '../ui';
+import {Icon,IconButton,Row} from '../ui';
 import {displayPhone,type User} from '../state';
 import {type Commerce} from '../booking/model';
 import {SwipePreferences} from '../booking/SwipeWelcome';
@@ -11,7 +11,7 @@ import {applySwipePreferences} from '../booking/swipePreferences';
 import {HotelierProfileBadge} from './HotelierBenefits';
 import './profile.css';
 
-export function ProfilePage({user,commerce,onPhotoChange,onBenefits,onHotelier,onGuests,onStyle,onNotifications,onSecurity,onData,onHistory,onHelp,onWatches,onInvite,onAbout,onLogout,onLanguage,onSupport}:{user:User;commerce:Commerce;onPhotoChange:(photo?:string)=>void;onBenefits:()=>void;onHotelier:()=>void;onGuests:()=>void;onStyle:()=>void;onNotifications:()=>void;onSecurity:()=>void;onData:()=>void;onHistory:()=>void;onHelp:()=>void;onWatches:()=>void;onInvite:()=>void;onAbout:()=>void;onLogout:()=>void;onLanguage:(language:'ru'|'en')=>void;onSupport:()=>void}){
+export function ProfilePage({user,commerce,onPhotoChange,onEdit,onBenefits,onHotelier,onGuests,onStyle,onNotifications,onSecurity,onData,onHistory,onHelp,onWatches,onInvite,onAbout,onLogout,onLanguage,onSupport}:{user:User;commerce:Commerce;onPhotoChange:(photo?:string)=>void;onEdit:()=>void;onBenefits:()=>void;onHotelier:()=>void;onGuests:()=>void;onStyle:()=>void;onNotifications:()=>void;onSecurity:()=>void;onData:()=>void;onHistory:()=>void;onHelp:()=>void;onWatches:()=>void;onInvite:()=>void;onAbout:()=>void;onLogout:()=>void;onLanguage:(language:'ru'|'en')=>void;onSupport:()=>void}){
  const november=useNovember();
  const approved=commerce.accounts[user.phone]?.hotelierStatus==='approved';
  const surname=user.travelers.find(t=>t.primary)?.surname||'';
@@ -19,7 +19,7 @@ export function ProfilePage({user,commerce,onPhotoChange,onBenefits,onHotelier,o
  const balance=commerce.payment.balances['keys:'+user.phone]||0;
  const pointsWord=new Intl.PluralRules('ru').select(balance);
  return <div className="profile-page">
-  <div className="profile-identity hotelier-profile-identity"><ProfilePhoto key={user.phone} name={name} photo={user.photo} onSave={onPhotoChange}/><div><h1>{name}</h1><p>{displayPhone(user.phone)}</p>{approved&&<HotelierProfileBadge onClick={onHotelier}/>}</div></div>
+  <div className="profile-identity hotelier-profile-identity"><ProfilePhoto key={user.phone} name={name} photo={user.photo} onSave={onPhotoChange}/><div className="profile-person-details"><h1 title={name}>{name}</h1><div className="profile-phone-row"><p>{displayPhone(user.phone)}</p><IconButton name="edit" label="Редактировать мои данные" onClick={onEdit}/></div>{approved&&<HotelierProfileBadge onClick={onHotelier}/>}</div></div>
   <button className="profile-points k-surface-action" onClick={onBenefits} aria-label={`Баллы «Ключей»: ${balance.toLocaleString('ru-RU')}. Открыть выгоды`}><span><small>Баллы «Ключей»</small><strong>{balance.toLocaleString('ru-RU')} <span>{pointsWord==='one'?'балл':pointsWord==='few'?'балла':'баллов'}</span></strong></span><span className="profile-points-link">Выгоды<Icon name="chevron-right" size={16} inheritColor/></span></button>
   <section className="profile-navigation-group" aria-labelledby="profile-travel-title"><h2 id="profile-travel-title">Мои поездки</h2><div className="k-card">
    <Row icon="nav-trips" title="История поездок" onClick={onHistory}/>
@@ -38,8 +38,8 @@ export function ProfilePage({user,commerce,onPhotoChange,onBenefits,onHotelier,o
    <Row icon="settings" title="Управление данными" onClick={onData}/>
   </div></section>
   <section className="profile-navigation-group" aria-labelledby="profile-service-title"><h2 id="profile-service-title">О сервисе</h2><div className="k-card">
-   <Row icon="nav-chats" title="Помощь и поддержка" onClick={onHelp}/>
-   {november&&<Row icon="chat-hotel" title="Написать в техподдержку" onClick={onSupport}/>}
+   <Row icon="help" title="Помощь и поддержка" onClick={onHelp}/>
+   {november&&<Row icon="support-write" title="Написать в техподдержку" onClick={onSupport}/>}
    <Row icon="info" title="О приложении" onClick={onAbout}/>
   </div>{isDesktop&&<div className="k-card profile-logout"><Row danger icon="logout" title="Выйти" onClick={onLogout}/></div>}</section>
   {!isDesktop&&<div className="k-card profile-logout"><Row danger icon="logout" title="Выйти" onClick={onLogout}/></div>}

@@ -1,0 +1,26 @@
+{
+  "base": "http://127.0.0.1:5197/keys-mobile-orbita",
+  "errors": [],
+  "report": [
+    {
+      "surface": "prototype",
+      "icons": "new",
+      "count": 24
+    },
+    {
+      "surface": "prototype",
+      "icons": "old",
+      "count": 24
+    },
+    {
+      "surface": "desktop",
+      "icons": "new",
+      "count": 32
+    },
+    {
+      "surface": "desktop",
+      "icons": "old",
+      "count": 32
+    }
+  ]
+}
