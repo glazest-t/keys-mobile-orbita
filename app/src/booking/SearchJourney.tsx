@@ -55,7 +55,7 @@ export function SearchJourney({commerce,initialStep,onApply,onClose}:{commerce:C
   <footer className="search-journey-footer">
    {(error||(step==='guests'&&guestsError))&&<p role="alert" className="field-error">{error||'Укажите возраст каждого ребёнка'}</p>}
    {step==='guests'&&tripFeaturesLabel(draft)&&<small>{tripFeaturesLabel(draft)}</small>}
-   <Button disabled={disabled} onClick={next}>{step==='guests'?<><Icon name="nav-search" size={18} inheritColor/>Найти отели</>:step==='dates'&&!draft.checkOut?(draft.checkIn?'Выберите дату выезда':'Выберите дату заезда'):'Далее'}</Button>
+   <Button disabled={disabled} onClick={next}>{step==='guests'?<><Icon name="nav-search" size={18} inheritColor/>Найти</>:step==='dates'&&!draft.checkOut?(draft.checkIn?'Выберите дату выезда':'Выберите дату заезда'):'Далее'}</Button>
   </footer>
  </div>;
 }

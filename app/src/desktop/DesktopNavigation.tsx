@@ -21,7 +21,7 @@ export function DesktopNavigation({route,name,photo,points=0,unread=false,onNavi
  useEffect(()=>{document.body.classList.toggle('desktop-demo-open',demo);return()=>document.body.classList.remove('desktop-demo-open');},[demo]);
  return <header className="desktop-navigation">
   <button className="desktop-brand" onClick={()=>onNavigate('find')} aria-label="Ключи — найти отель"><Mark/></button>
-  <nav aria-label="Главные разделы">{[['find','Найти отель'],['trips','Поездки'],['chats','Чаты'],['rewards','Выгоды']].map(([id,label])=><button key={id} aria-current={active===id?'page':undefined} onClick={()=>onNavigate(id)}>{label}</button>)}</nav>
+  <nav aria-label="Главные разделы">{[['find','Найти'],['trips','Поездки'],['chats','Чаты'],['rewards','Выгоды']].map(([id,label])=><button key={id} aria-current={active===id?'page':undefined} onClick={()=>onNavigate(id)}>{label}</button>)}</nav>
   <button className="desktop-demo-toggle" aria-expanded={demo} aria-controls="desktop-demo-tools" onClick={()=>setDemo(v=>!v)}>Сценарии{demo?' ×':''}</button>
   <div className="desktop-navigation-actions">
    <button aria-label="Избранное" onClick={()=>onNavigate('favorites')}><Icon name="heart" size={20}/></button>

@@ -29,6 +29,6 @@ try{for(const width of [390,1440]){
  await open();await page.getByRole('button',{name:'Брони ещё нет',exact:true}).click();await page.getByRole('button',{name:'Брони не было',exact:true}).click();await close();
  await expect(page.getByRole('button',{name:'У меня есть бронь',exact:true})).toHaveCount(0);
  await page.locator('.k-empty').count().catch(()=>0);
- await page.getByRole('button',{name:'Найти отель',exact:true}).last().click();await expect(page).toHaveURL(/#find$/);
+ await page.getByRole('button',{name:'Найти',exact:true}).last().click();await expect(page).toHaveURL(/#find$/);
  console.log('PASS',width,'empty variants, direct add, voucher error, added booking, unchanged search');await page.close();
 }}finally{await browser.close();}
