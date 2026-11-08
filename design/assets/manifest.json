@@ -11,22 +11,22 @@
     {
       "path": "design/assets/logo/horizontal-cobalt.svg",
       "source": "проект в Клоде/project/brand-kit/logo/horizontal-cobalt.svg",
-      "sha256": "8c3ae5557257e1f724eacb45be616fd89de50bad93f543b271c45bc26c6af81a",
-      "transformation": "unchanged_copy",
+      "sha256": "c43d304cba727aadabc66ee23367a57ebbcb1fc74e0e11cbeac8b3b7155de514",
+      "transformation": "Horizontal canvas extended to 608 × 200 to include final glyph and right clear space; glyph geometry unchanged; signed source metadata removed",
       "rights": "provided_by_user_not_independently_verified"
     },
     {
       "path": "design/assets/logo/horizontal-ink.svg",
       "source": "проект в Клоде/project/brand-kit/logo/horizontal-ink.svg",
-      "sha256": "57a6bbdb18e00a3fc768b26545e81ad239e0c67c638c22e7e25697acefd21d50",
-      "transformation": "unchanged_copy",
+      "sha256": "2dc3ebff77d3d057db791d5c2959da8c08de97deb7d91fdf820559b6b1acdaab",
+      "transformation": "Horizontal canvas extended to 608 × 200 to include final glyph and right clear space; glyph geometry unchanged; signed source metadata removed",
       "rights": "provided_by_user_not_independently_verified"
     },
     {
       "path": "design/assets/logo/horizontal-white.svg",
       "source": "проект в Клоде/project/brand-kit/logo/horizontal-white.svg",
-      "sha256": "1a0bc1824c07cb4f9e8afee0dd60253e5fc535c93c83abcdc5a2005aa58a54e8",
-      "transformation": "unchanged_copy",
+      "sha256": "deb3bae3a0f9b45c9fa1ef808add4d2cb9613a028e3f9ee2adbde1874e681240",
+      "transformation": "Horizontal canvas extended to 608 × 200 to include final glyph and right clear space; glyph geometry unchanged; signed source metadata removed",
       "rights": "provided_by_user_not_independently_verified"
     },
     {
@@ -200,22 +200,22 @@
     {
       "path": "design/assets/logo/horizontal-cobalt-outlined.svg",
       "source": "проект в Клоде/project/brand-kit/logo/horizontal-cobalt.svg",
-      "transformation": "Unbounded 500 shaped with HarfBuzz; glyph outlines; source geometry preserved",
-      "sha256": "e2586edad03773731f804bb51838cc349cedf26aa54abee225eef845257cbc73",
+      "transformation": "Horizontal canvas extended to 608 × 200 to include final glyph and right clear space; glyph geometry unchanged; signed source metadata removed",
+      "sha256": "73a0508cf4bb09083c3ee3bcddaaa050edd0044afb2ea9dd88a333229ddcd1b5",
       "rights": "user_source_plus_font_OFL"
     },
     {
       "path": "design/assets/logo/horizontal-ink-outlined.svg",
       "source": "проект в Клоде/project/brand-kit/logo/horizontal-ink.svg",
-      "transformation": "Unbounded 500 shaped with HarfBuzz; glyph outlines; source geometry preserved",
-      "sha256": "388dc670759284b31fbc9e83b9dbed3c559f9b6bfd96400df698633679d38c89",
+      "transformation": "Horizontal canvas extended to 608 × 200 to include final glyph and right clear space; glyph geometry unchanged; signed source metadata removed",
+      "sha256": "02c94c146a23da9e5112b8e49244c029be50960af99f044c432f20b9361d54c2",
       "rights": "user_source_plus_font_OFL"
     },
     {
       "path": "design/assets/logo/horizontal-white-outlined.svg",
       "source": "проект в Клоде/project/brand-kit/logo/horizontal-white.svg",
-      "transformation": "Unbounded 500 shaped with HarfBuzz; glyph outlines; source geometry preserved",
-      "sha256": "73d4f2b7891fc39f8121984543694306253b0660d0a34ca7a8260f6250efadef",
+      "transformation": "Horizontal canvas extended to 608 × 200 to include final glyph and right clear space; glyph geometry unchanged; signed source metadata removed",
+      "sha256": "6a2ab4b8b87eda049e112ef4d6770b81df6e23502633beddadfcc94eddec6475",
       "rights": "user_source_plus_font_OFL"
     },
     {

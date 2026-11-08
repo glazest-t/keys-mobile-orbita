@@ -11,6 +11,8 @@ from urllib.parse import quote
 from lxml import etree, html
 from fontTools.ttLib import TTFont
 from fontTools.pens.svgPathPen import SVGPathPen
+from fontTools.pens.boundsPen import BoundsPen
+from math import ceil
 from fontTools.pens.transformPen import TransformPen
 import uharfbuzz as hb
 
@@ -135,6 +137,7 @@ def assets():
         if not texts:continue
         # A derived file must not carry the original signed provenance metadata.
         for metadata in tree.findall(SVG+'metadata'):tree.remove(metadata)
+        text_right = 0
         for text in texts:
             buf=hb.Buffer();buf.add_str(text.text);buf.guess_segment_properties();hb.shape(font,buf)
             scale=float(text.get('font-size'))/face.upem
@@ -146,9 +149,29 @@ def assets():
             for info,pos in zip(buf.glyph_infos,buf.glyph_positions):
                 pen=SVGPathPen(glyphs)
                 glyphs[tt.getGlyphName(info.codepoint)].draw(TransformPen(pen,(scale,0,0,-scale,x+pos.x_offset*scale,y-pos.y_offset*scale)))
+                bounds = BoundsPen(glyphs)
+                glyphs[tt.getGlyphName(info.codepoint)].draw(TransformPen(bounds,(scale,0,0,-scale,x+pos.x_offset*scale,y-pos.y_offset*scale)))
+                if bounds.bounds: text_right = max(text_right, bounds.bounds[2])
                 etree.SubElement(group,SVG+'path',d=pen.getCommands())
                 x+=pos.x_advance*scale+tracking
             tree.replace(text,group)
+        # Preserve glyph geometry; keep at least 40 units after the final glyph.
+        if source.name.startswith('horizontal-'):
+            canvas_width = max(float(tree.get('width')), ceil((text_right + 40) / 8) * 8)
+            def fit_canvas(svg):
+                old_width = svg.get('width')
+                svg.set('width', str(int(canvas_width)))
+                svg.set('viewBox', f'0 0 {int(canvas_width)} 200')
+                for rect in svg.findall(SVG+'rect'):
+                    if rect.get('width') == old_width: rect.set('width', str(int(canvas_width)))
+                for metadata in svg.findall(SVG+'metadata'): svg.remove(metadata)
+            fit_canvas(tree)
+            original = etree.fromstring(source.read_bytes())
+            fit_canvas(original)
+            original_target = OUT/'assets/logo'/source.name
+            original_target.write_bytes(etree.tostring(original, encoding='utf-8', xml_declaration=True))
+            entry = next(e for e in entries if e['path'] == str(original_target.relative_to(ROOT)))
+            entry.update(sha256=hashlib.sha256(original_target.read_bytes()).hexdigest(), transformation='Horizontal canvas fits complete wordmark plus 40-unit right clear space; signed source metadata removed')
         target=OUT/'assets/logo'/source.name.replace('.svg','-outlined.svg')
         target.write_bytes(etree.tostring(tree,encoding='utf-8',xml_declaration=True))
         entries.append({'path':str(target.relative_to(ROOT)),'source':str(source.relative_to(ROOT)),
