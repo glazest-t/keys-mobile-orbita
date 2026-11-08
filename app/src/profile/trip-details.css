@@ -8,7 +8,7 @@
 .desktop-app .desktop-trip-detail h1{font:500 24px/32px Onest,sans-serif;letter-spacing:-.5px;margin:0}
 .desktop-app .desktop-trip-detail h2{font:500 18px/26px Onest,sans-serif;margin:0}
 .trip-detail-number{color:var(--k-muted,#777d90);font:400 13px/20px Onest,sans-serif;overflow-wrap:anywhere}
-.trip-detail-dates{display:grid;grid-template-columns:1fr 1fr;gap:24px;background:var(--k-action-tint,#eef0ff);border-radius:18px;padding:20px;margin:24px 0}
+.trip-detail-dates{display:grid;grid-template-columns:1fr 1fr;gap:24px;background:var(--k-icon-surface,#eaf2ff);border-radius:18px;padding:20px;margin:24px 0}
 .trip-detail-dates>div{display:flex;flex-direction:column;gap:5px}
 .trip-detail-dates span,.trip-detail-dates small{font:400 14px/20px Onest,sans-serif;color:var(--k-text-secondary,#5a6072)}
 .trip-detail-dates strong{font:500 18px/26px Onest,sans-serif}
@@ -18,7 +18,7 @@
 .desktop-app .desktop-trip-detail p{font:400 14px/22px Onest,sans-serif;color:var(--k-text-secondary,#5a6072);margin:4px 0 0;overflow-wrap:anywhere;white-space:pre-wrap}
 .trip-detail-panel>h2{margin-bottom:16px!important}
 .trip-detail-panel .booking-hotel-contacts{gap:12px;font:400 14px/22px Onest,sans-serif}
-.trip-detail-payment{background:linear-gradient(125deg,#f0f5ff,#f4f4ff 65%,#f1f8ff);border:1px solid #e1e7f7;border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:20px}
+.trip-detail-payment{background:linear-gradient(125deg,#f0f5ff,#eaf2ff 65%,#f1f8ff);border:1px solid #e1e7f7;border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:20px}
 .trip-detail-total{display:flex;flex-direction:column;gap:6px}
 .trip-detail-total>span{font:400 14px/20px Onest,sans-serif;color:#5a6072}
 .trip-detail-total>strong{font:600 30px/38px Onest,sans-serif;letter-spacing:-.6px}

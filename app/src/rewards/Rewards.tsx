@@ -25,7 +25,7 @@ function ProgramRow({id,s,owner,onClick}:{id:string;s:Commerce;owner:string;onCl
  return <button className="benefit-program-row k-surface-action" onClick={onClick}>
  <img src={hotelVisual(id).photos[0]} alt=""/>
  <span className="benefit-program-copy"><strong>{h.name}</strong><small>{h.city}{!connected&&' · Карта не подключена'}</small>
- {connected&&<span className="benefit-program-perks">{discount>0&&<span className="benefit-discount-badge" aria-label={`Скидка ${discount/100}%`}>−{discount/100}%</span>}{supportsHotelPoints(id)&&<span className="benefit-hotel-points"><b>{number(balance)}</b> {pointsLabel(balance)}</span>}</span>}
+ {connected&&<span className="benefit-program-perks">{discount>0&&<span className="benefit-discount-badge" aria-label={`Скидка ${discount/100}%`}>−{discount/100}%</span>}{supportsHotelPoints(id)&&<span className="benefit-hotel-points" aria-label={`${number(balance)} ${pointsLabel(balance)}`}><Icon name="points" size={14}/><b>{number(balance)}</b></span>}</span>}
  </span><Icon name="chevron-right" size={16} inheritColor/>
  </button>;
 }

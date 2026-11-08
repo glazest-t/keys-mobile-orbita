@@ -1,3 +1,4 @@
+import {SortSheet} from './SortSheet';
 import {useNovember} from '../usePrototypeVariant';
 import {useState,type Dispatch,type SetStateAction} from 'react';
 import {BottomSheet,Carousel} from '../mobile';
@@ -23,7 +24,7 @@ export function SearchFilterRail({commerce,setCommerce,owner,map=false,getResult
  {extra.map(value=><button className="filter-chip selected" key={value} aria-label={'Убрать фильтр: '+value} onClick={()=>setCommerce(s=>updateSearchOptions(s,{searchFilters:normalizeFilters(s.searchFilters).filter(f=>f!==value)}))}>{value.startsWith('Площадь номера от: ')?`От ${value.split(': ').at(-1)} м²`:value.startsWith('Спальни:')||value.startsWith('Кровати:')||value.startsWith('Ванные комнаты:')?value:value.split(': ').at(-1)}<Icon name="close" size={12}/></button>)}
  </Carousel>
  <FiltersSheet open={sheet==='filters'} onClose={()=>setSheet(null)} commerce={commerce} setCommerce={setCommerce} owner={owner} getResultCount={getResultCount}/>
- <BottomSheet open={sheet==='sort'} onOpenChange={open=>{if(!open)setSheet(null);}} title="Сортировка" snap={.68}><div className="results-sort-panel" role="group" aria-label="Порядок отелей">{sortOptions.map(([key,label])=><button className="results-sort-option" key={key} aria-pressed={key===sort} onClick={()=>{setCommerce(s=>updateSearchOptions(s,{searchSort:key}));setSheet(null);}}><span>{label}</span><span className="results-sort-check" aria-hidden="true">{key===sort&&<Icon name="check" size={14} inheritColor/>}</span></button>)}</div></BottomSheet>
+ <SortSheet open={sheet==='sort'} onOpenChange={open=>{if(!open)setSheet(null);}} label="Порядок отелей" options={sortOptions} value={sort} onChange={key=>setCommerce(s=>updateSearchOptions(s,{searchSort:key}))}/>
  <BottomSheet open={sheet==='district'} onOpenChange={open=>{if(!open)setSheet(null);}} title="Район" snap={.68}><div className="results-sort-panel" role="group" aria-label="Район проживания">{['Все районы',...districts].map((name,i)=>{const selected=i===0?!district:district===name;return <button className="results-sort-option" key={name} aria-pressed={selected} onClick={()=>{setCommerce(s=>updateSearchOptions(s,{searchDistrict:i?{city:s.search.city,name}:undefined}));setSheet(null);}}><span>{name}</span><span className="results-sort-check" aria-hidden="true">{selected&&<Icon name="check" size={14} inheritColor/>}</span></button>;})}</div></BottomSheet>
  </>;
 }

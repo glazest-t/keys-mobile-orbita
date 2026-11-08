@@ -67,7 +67,7 @@ export function TwoGisMap({points,route,center,selected,onSelect,onHover,onPrevi
    const map=new api.Map(canvas.current,{key,lang:'ru',center:initialCenter.current,zoom:12,zoomControl:false,
     styleOptions:{stylePath:new URL(import.meta.env.BASE_URL+'maps/keys-light.json',window.location.origin).href,iconsPath:'https://disk.2gis.com/styles/assets/icons/',fontsPath:'https://mapgl.2gis.com/api/fonts/',modelsPath:'https://disk.2gis.com/styles/assets/models/'},
     disableZoomOnScroll:!interactive,disableDragging:!interactive,disablePitchByUserInteraction:true,disableRotationByUserInteraction:true,
-    copyright:'bottomLeft',controlsLayoutPadding:{left:6,right:6,bottom:6,top:6},defaultBackgroundColor:'#F4F3FA'});
+    copyright:'bottomLeft',controlsLayoutPadding:{left:6,right:6,bottom:6,top:6},defaultBackgroundColor:'#eaf2ff'});
    mapRef.current=map;viewportChanged.current=false;
    map.on('moveend',event=>{if(disposed)return;if(event.isUser)viewportChanged.current=true;if(viewportChanged.current){const bounds=map.getBounds();visibleRef.current?.(pointsRef.current.filter(p=>bounds.containsPoint(p.coordinates)).map(p=>p.id));}});
    map.on('styleload',()=>{if(!disposed){clearTimeout(timer);setStatus('ready');}});

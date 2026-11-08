@@ -22,7 +22,7 @@ export function SourceFinish(){
     return E('div', { key: 'finish', style: { position: 'relative', width: 96, height: 96, animation: 'obPop .6s cubic-bezier(.34,1.56,.64,1) both' } },
       E('div', { style: { position: 'absolute', inset: 0, borderRadius: '50%', border: '18px solid #2f5bff', boxSizing: 'border-box' } }),
       E('div', { style: { position: 'absolute', inset: 0, animation: 'obSpin 1.2s cubic-bezier(.65,0,.35,1) .2s both' } },
-        E('div', { style: { position: 'absolute', left: 32, top: -7, width: 32, height: 32, borderRadius: '50%', background: '#2f5bff', boxShadow: '0 0 0 6px #eef0ff' } })));
+        E('div', { style: { position: 'absolute', left: 32, top: -7, width: 32, height: 32, borderRadius: '50%', background: '#2f5bff', boxShadow: '0 0 0 6px #eaf2ff' } })));
 }
 
 export function SourceSweep(){

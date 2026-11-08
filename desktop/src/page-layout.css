@@ -120,11 +120,11 @@
 .desktop-navigation .desktop-brand { margin-right: 0; }
 .desktop-navigation .desktop-profile-link {
   gap: 10px; padding: 6px 12px 6px 8px; min-height: 44px;
-  border: 1px solid var(--k-border-subtle); background: var(--k-surface-app,#f4f5fb);
+  border: 1px solid var(--k-border-subtle); background: var(--k-surface-app,#eaf2ff);
   border-radius: 16px;
 }
 .desktop-navigation .desktop-profile-link:hover,
-.desktop-navigation .desktop-profile-link[data-state="open"] { background: var(--k-action-tint,#eef0ff); border-color: #cdd5ff; }
+.desktop-navigation .desktop-profile-link[data-state="open"] { background: var(--k-action-tint,#eaf2ff); border-color: #cdd5ff; }
 .desktop-profile-link strong { font: 500 14px/20px Onest,sans-serif; max-width: 140px; overflow: hidden; text-overflow: ellipsis; }
 .desktop-profile-link .desktop-profile-avatar { flex: none; }
 .desktop-profile-link .k-icon { border-radius: 0; flex: none; }
@@ -134,7 +134,7 @@
   box-shadow: 0 12px 36px #1013201a; font: 400 15px/22px Onest,sans-serif;
 }
 .desktop-account-menu [role="menuitem"] { display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 10px 12px; border-radius: 12px; cursor: pointer; outline: none; }
-.desktop-account-menu [role="menuitem"][data-highlighted] { background: #eef0ff; color: #2f5bff; }
+.desktop-account-menu [role="menuitem"][data-highlighted] { background: #eaf2ff; color: #2f5bff; }
 .desktop-account-menu [role="separator"] { height: 1px; margin: 6px 4px; background: #e4e7ef; }
 .desktop-account-menu .desktop-account-logout { color: #b53853; }
 

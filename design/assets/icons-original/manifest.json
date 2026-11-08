@@ -170,7 +170,8 @@
     "terrace": "room",
     "heart": "heart",
     "nav-profile": "nav-profile",
-    "cleaning": "cleaning"
+    "cleaning": "cleaning",
+    "points-earned": "points + accrual plus"
   },
   "files": {
     "accessible.svg": "50f7b078d6ea1f972a0a9fd4bed5cfde9159867971521aab563719609d66f460",
@@ -341,6 +342,7 @@
     "water-dispenser.svg": "fb97ea0746320c11e0bd9e6e2ad939ffbf0db0ec90d7305ddc285a15401d156e",
     "weather.svg": "d87909402145e2b1a18a15f1b2d7f11410bb7ff380c03617eceb4c26e1229000",
     "wifi.svg": "25f6af0e66e4595f892c72f3962fadb1e3fb844ca8aa144e31222644ef07cac3",
-    "wine.svg": "53f739b7899a9c700c9f65307fb68f8543700398fa335fddd075942a59efb36c"
+    "wine.svg": "53f739b7899a9c700c9f65307fb68f8543700398fa335fddd075942a59efb36c",
+    "points-earned.svg": "1fa704b413300f46e24a6f76a2c2c6dbc05446354f2e6b17fb7791de189b8e0c"
   }
 }

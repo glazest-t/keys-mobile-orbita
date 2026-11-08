@@ -1,6 +1,6 @@
 .payment-choice-track{gap:10px;padding:2px 0}
 .payment-choice{position:relative;flex:0 0 136px;min-height:146px;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:14px;border:1px solid #e4e7ef;border-radius:20px;background:#fff;color:#101320;text-align:left}
-.payment-choice.selected{border-color:#2f5bff;background:#eef0ff;box-shadow:inset 0 0 0 1px #2f5bff}
+.payment-choice.selected{border-color:#2f5bff;background:#eaf2ff;box-shadow:inset 0 0 0 1px #2f5bff}
 .payment-choice>.k-icon{color:#2f5bff;margin-bottom:8px}
 .payment-choice strong{font:500 14px/20px Onest;display:flex;align-items:center;gap:4px}
 .payment-choice small{font:400 12px/17px Onest;color:#5a6072}
@@ -11,7 +11,7 @@
 .payment-extra-options>button+button{border-top:1px solid #eef0f4}
 .payment-extra-options .icon-tile{width:36px;height:36px;border-radius:12px;background:var(--k-icon-surface,#eaf2ff);color:#2f5bff}
 .payment-extra-options strong{font:500 14px/20px Onest}
-.payment-extra-options [aria-pressed=true]{background:#eef0ff}
+.payment-extra-options [aria-pressed=true]{background:#eaf2ff}
 .payment-extra-options .radio-dot.checked{border:5px solid #2f5bff}
 
 .payment-more[aria-expanded=true] strong>.k-icon{transform:rotate(180deg)}

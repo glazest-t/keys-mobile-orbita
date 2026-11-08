@@ -8,7 +8,7 @@
 .cancellation-panel{display:flex;flex-direction:column;gap:14px}
 .cancellation-panel p{margin:0}
 .cancellation-subtitle{font:400 14px/21px Onest;color:#5a6072}
-.cancellation-summary{display:flex;flex-direction:column;gap:10px;padding:12px 14px;border-radius:18px;background:#f4f5fb}
+.cancellation-summary{display:flex;flex-direction:column;gap:10px;padding:12px 14px;border-radius:18px;background:#eaf2ff}
 .cancellation-summary>div{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;font:400 14px/20px Onest}
 .cancellation-summary span{min-width:0;color:#5a6072}
 .cancellation-summary strong{flex:none;font-weight:500;text-align:right}

@@ -10,8 +10,8 @@
     "strokeLinejoin": "round",
     "straightCornerTrim": 0.65
   },
-  "assetCount": 169,
-  "catalogueCount": 159,
+  "assetCount": 170,
+  "catalogueCount": 160,
   "excluded": [
     "Фирменный логотип Ключей",
     "Логотипы сторонних приложений и банков",
@@ -377,8 +377,6 @@
         "app/src/booking/ServiceDetailIntro.tsx",
         "app/src/booking/BookingRecord.tsx",
         "app/src/booking/hotelServiceCatalog.ts",
-        "app/src/booking/RouteOrigin.tsx",
-        "app/src/booking/Breakfast.tsx",
         "app/src/kit/CurrentComponents.tsx"
       ]
     },
@@ -401,6 +399,8 @@
       "group": "Проживание и сервис",
       "number": "027",
       "uses": [
+        "app/src/booking/RouteOrigin.tsx",
+        "app/src/booking/Breakfast.tsx",
         "spec/demo-data.json",
         "spec/routes.json"
       ]
@@ -1015,7 +1015,9 @@
       "label": "Лучшая цена",
       "group": "Оплата и выгоды",
       "number": "070",
-      "uses": []
+      "uses": [
+        "app/src/booking/HotelOverview.tsx"
+      ]
     },
     {
       "id": "gift",
@@ -1397,6 +1399,7 @@
         "app/src/booking/HotelDetails.tsx",
         "app/src/booking/SearchFilterRail.tsx",
         "app/src/booking/HotelSheets.tsx",
+        "app/src/booking/SortSheet.tsx",
         "app/src/booking/BookingFlow.tsx",
         "app/src/booking/ServiceOrders.tsx",
         "app/src/booking/GuestDetails.tsx",
@@ -1409,7 +1412,6 @@
         "app/src/booking/DesktopNearbyDates.tsx",
         "app/src/booking/StayReviewFlow.tsx",
         "app/src/booking/PreferenceJourney.tsx",
-        "app/src/booking/ReviewSort.tsx",
         "app/src/booking/HotelServices.tsx",
         "app/src/rewards/HotelCardConnection.tsx",
         "app/src/rewards/HotelProgramDetails.tsx",
@@ -1788,7 +1790,6 @@
       "group": "Действия",
       "number": "117",
       "uses": [
-        "app/src/booking/HotelDetails.tsx",
         "app/src/booking/SearchFilterRail.tsx",
         "app/src/booking/PreferenceJourney.tsx"
       ]
@@ -2214,6 +2215,15 @@
       "number": "159",
       "uses": [
         "app/src/booking/UpcomingTrip.tsx"
+      ]
+    },
+    {
+      "id": "points-earned",
+      "label": "Начисление баллов",
+      "group": "Начисление баллов",
+      "number": "160",
+      "uses": [
+        "app/src/booking/BookingReward.tsx"
       ]
     }
   ]

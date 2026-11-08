@@ -2,7 +2,7 @@
 @font-face{font-family:Onest;src:url("fonts/Onest-Variable.ttf") format("truetype");font-weight:100 900;font-display:swap}
 @font-face{font-family:Unbounded;src:url("fonts/Unbounded-Variable.ttf") format("truetype");font-weight:200 900;font-display:swap}
 :root{
-  --k-surface-app:#F4F5FB;
+  --k-surface-app:#F6F9FF;
   --k-surface-card:#FFFFFF;
   --k-text-primary:#101320;
   --k-text-secondary:#5A6072;
@@ -10,7 +10,7 @@
   --k-text-onAccent:#FFFFFF;
   --k-action-primary:#2F5BFF;
   --k-action-pressed:#1E44DB;
-  --k-action-tint:#EEF0FF;
+  --k-action-tint:#EAF2FF;
   --k-border-subtle:#E4E7EF;
   --k-status-success:#16865A;
   --k-status-errorText:#BE3040;
@@ -19,7 +19,7 @@
   --k-feature-friendly:linear-gradient(155deg,#063F3C 0%,#0B6B63 55%,#13A08D 100%);
   --k-feature-rewards:linear-gradient(140deg,#2F5BFF,#5B48FF);
   --k-feature-search:#2f5bff;
-  --k-feature-loyaltySoft:linear-gradient(110deg,#FFFFFF,#EEF0FF 45%,#DCD8FF 80%,#CDEFFF);
+  --k-feature-loyaltySoft:linear-gradient(110deg,#FFFFFF,#eaf2ff 45%,#eaf2ff 80%,#CDEFFF);
   --k-header-markSize:28px;
   --k-header-padding:20px;
   --k-screen-padding:16px;

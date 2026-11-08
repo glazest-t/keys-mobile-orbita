@@ -25,7 +25,7 @@ function BreakfastBooked(){
 }
 function BuffetSchedule({hotelId}:{hotelId:string}){
  const venue=breakfastVenue(hotelId);
- return <div className="breakfast-buffet-schedule"><Icon name="early-check-in" size={20} inheritColor/><span><strong>{venue.hours}</strong><small>{venue.restaurant} · {venue.floor}</small></span></div>;
+ return <div className="breakfast-buffet-schedule"><Icon name="time" size={20} inheritColor/><span><strong>{venue.hours}</strong><small>{venue.restaurant} · {venue.floor}</small></span></div>;
 }
 function BreakfastOrder({open,onClose,onSubmit}:{open:boolean;onClose:()=>void;onSubmit:(all:boolean)=>void}){
  const c=useBreakfast(),b=c.booking,input=c.input,config=settingsFor(b),[allSelected,setAll]=useState(false),november=useNovember(),wholeStay=november&&input.mode==='buffet',all=wholeStay||allSelected;

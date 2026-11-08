@@ -51,5 +51,5 @@
 .desktop-modal:has(.search-journey) .desktop-modal-header{justify-content:flex-end;border:0}
 .desktop-modal:has(.search-journey) .desktop-modal-header h2{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .desktop-modal:has(.search-journey) .desktop-modal-close{background:white}
-.sheet-overlay:has(+ .bottom-sheet .search-journey){background:rgba(244,245,251,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.sheet-overlay:has(+ .bottom-sheet .search-journey){background:rgba(234,242,255,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 .keys-app.desktop-modal:has(.search-journey){background:transparent;box-shadow:none;border:0}

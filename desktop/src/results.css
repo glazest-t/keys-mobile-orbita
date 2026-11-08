@@ -4,7 +4,7 @@
 .desktop-results-search{margin:24px 24px 0}
 .desktop-results-search form{display:grid;grid-template-columns:minmax(180px,1.3fr) minmax(240px,1fr) minmax(160px,.8fr) 180px;align-items:center;gap:8px;padding:8px;background:#fff;border:1px solid #e4e7ef;border-radius:24px}
 .desktop-results-search form>button:not(.k-button){display:flex;align-items:center;gap:14px;min-width:0;min-height:60px;padding:8px 20px;border:0;border-right:1px solid #e4e7ef;border-radius:0;background:transparent;color:#101320;text-align:left}
-.desktop-results-search form>button:not(.k-button):hover{background:#f4f5fb;border-radius:16px}
+.desktop-results-search form>button:not(.k-button):hover{background:#eaf2ff;border-radius:16px}
 .desktop-results-search button>span{display:flex;flex-direction:column;gap:3px;min-width:0}
 .desktop-results-search small{font:400 12px/18px Onest;color:#5a6072}
 .desktop-results-search strong{font:500 16px/22px Onest;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -24,7 +24,7 @@
 .desktop-results-filters .filter-section-body{gap:12px;padding-top:12px}
 .desktop-results-filters .filter-styles{gap:var(--k-filter-gap)}
 .desktop-results-filters .filter-chip{font-size:12px;line-height:17px;min-height:32px;height:auto;white-space:normal;text-align:left;padding:6px 10px}
-.desktop-results-filters .filter-chip.selected{background:#eef0ff;border-color:#c9d2ff;color:#2f5bff}
+.desktop-results-filters .filter-chip.selected{background:#eaf2ff;border-color:#c9d2ff;color:#2f5bff}
 .desktop-results-filters .filter-price-heading{gap:4px;flex-wrap:wrap}
 .desktop-results-filters .filter-price-heading h3{font-size:14px}
 .desktop-results-filters .filter-price-heading .switch-row{min-height:32px;padding:0;border:0;width:auto;gap:6px;font-size:11px}

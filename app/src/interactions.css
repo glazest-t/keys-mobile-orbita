@@ -47,7 +47,7 @@
 
 /* C5: rows and tiles respond with a surface change, never a scale jump. */
 :is(.keys-app,.sheet-body) :is(.k-list-row,.k-surface-action,.k-service-tile,.document-list-row,.hotel-service-row,.hotel-service-order,.bill-line){transition:background-color var(--interaction-release) var(--interaction-arrive);transform:none}
-:is(.keys-app,.sheet-body) :is(.k-list-row,.k-surface-action,.k-service-tile,.hotel-service-row,.hotel-service-order,.bill-line):active:not(:disabled),.keys-app .document-list-row:has(button:active:not(:disabled)){background:#F4F5FB;transition-duration:var(--interaction-press);transform:none}
+:is(.keys-app,.sheet-body) :is(.k-list-row,.k-surface-action,.k-service-tile,.hotel-service-row,.hotel-service-order,.bill-line):active:not(:disabled),.keys-app .document-list-row:has(button:active:not(:disabled)){background:#eaf2ff;transition-duration:var(--interaction-press);transform:none}
 :is(.keys-app,.sheet-body) :is(.k-list-row,.k-surface-action,.k-service-tile):disabled{opacity:.48;cursor:default}
 :is(.keys-app,.sheet-body) .k-surface-action:focus-visible,:is(.keys-app,.sheet-body) .k-list-row:focus-visible,:is(.keys-app,.sheet-body) .k-service-tile:focus-visible{outline:2px solid var(--k-focus-ring);outline-offset:-2px}
 @media(prefers-reduced-motion:reduce){:is(.keys-app,.sheet-body) :is(.k-list-row,.k-surface-action,.k-service-tile,.document-list-row,.hotel-service-row,.hotel-service-order,.bill-line){transition:none}}

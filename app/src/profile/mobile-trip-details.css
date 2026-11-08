@@ -20,7 +20,7 @@
 .keys-app .mobile-trip-detail p{font:400 14px/21px Onest,sans-serif;color:#5a6072;white-space:pre-wrap;overflow-wrap:anywhere;margin:4px 0 0}
 .mobile-trip-detail .trip-detail-hotel .k-status{align-self:flex-start}
 .mobile-trip-detail .trip-detail-number{font-size:12px;line-height:17px}
-.mobile-trip-detail .trip-detail-dates{gap:12px;padding:14px;margin:16px 0;background:var(--k-action-tint,#eef0ff);border-radius:18px}
+.mobile-trip-detail .trip-detail-dates{gap:12px;padding:14px;margin:16px 0;background:var(--k-icon-surface,#eaf2ff);border-radius:18px}
 .mobile-trip-detail .trip-detail-dates strong{font:500 15px/21px Onest,sans-serif}
 .mobile-trip-detail .trip-detail-dates span,.mobile-trip-detail .trip-detail-dates small{font:400 14px/20px Onest,sans-serif}
 .mobile-trip-detail .trip-detail-room,.mobile-trip-detail .trip-detail-guests{gap:10px}

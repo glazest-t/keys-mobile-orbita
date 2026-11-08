@@ -3,6 +3,6 @@
 .benefits-banner-preview img{position:absolute;display:block;max-width:none;height:auto;pointer-events:none}
 
 /* Keep the selected orbit artwork, while the copy uses shared live typography. */
-.benefits-banner-preview.trip-promo{border:1px solid #e0e3f3;background:radial-gradient(ellipse at 0% 100%,#d5f1ff 0%,transparent 62%),radial-gradient(ellipse at 100% 100%,#dedbfa 0%,transparent 68%),linear-gradient(120deg,#ececff,#f7f7ff)}
+.benefits-banner-preview.trip-promo{border:1px solid #e0e3f3;background:radial-gradient(ellipse at 0% 100%,#d5f1ff 0%,transparent 62%),radial-gradient(ellipse at 100% 100%,#eaf2ff 0%,transparent 68%),linear-gradient(120deg,#eaf2ff,#eaf2ff)}
 .trip-promo-art{position:absolute;right:3%;top:50%;transform:translateY(-50%);width:32%;aspect-ratio:1;overflow:hidden;mask-image:radial-gradient(circle,#000 66%,transparent 72%);pointer-events:none}
 .benefits-banner-preview .trip-promo-art img{position:absolute;width:355.5%;max-width:none;height:auto;left:-224%;top:-55%}

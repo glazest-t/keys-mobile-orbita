@@ -75,6 +75,15 @@ def tokens():
         style=el.get('style')
         if 'Знаете, куда едете' in ''.join(el.itertext()):
             base['color']['gradient']['search']=next(r.split(':',1)[1] for r in style.split(';') if r.startswith('background:'))
+    # 08.11.2026: one cool-blue tint for app surfaces, matching icon tiles.
+    base['color']['brand']['cobaltTint'] = '#EAF2FF'
+    base['color']['neutral']['pearl'] = '#F6F9FF'
+    data['provenance']['overrides']['surface.app'] = '08.11.2026: lighter page background #F6F9FF; component tint remains #EAF2FF'
+    for name, gradient in base['color']['gradient'].items():
+        for lavender in ['#EEF0FF', '#B9B2FF', '#DFE3FF', '#DCD8FF']:
+            gradient = gradient.replace(lavender, '#EAF2FF')
+        base['color']['gradient'][name] = gradient
+    data['provenance']['overrides']['surface.tint'] = '08.11.2026: pale lavender surfaces use the approved icon-tile blue #EAF2FF'
     write_json(OUT/'tokens.json',data)
     def resolve(value):
         if isinstance(value,str) and value.startswith('{'):

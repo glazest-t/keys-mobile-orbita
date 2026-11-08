@@ -21,7 +21,7 @@
 .room-rate-price>div{display:flex;flex-direction:column;gap:2px;min-width:0}
 .room-rate-price strong{font:500 16px/22px Unbounded;letter-spacing:-.4px;white-space:nowrap}
 .room-rate-price small{display:flex;align-items:center;gap:4px;font:400 11px/16px Onest;color:#8a90a2}
-.room-rate-price b{padding:1px 5px;border-radius:7px;background:#eef0ff;color:#2f5bff;font-weight:500;font-size:10px}
+.room-rate-price b{padding:1px 5px;border-radius:7px;background:#eaf2ff;color:#2f5bff;font-weight:500;font-size:10px}
 .room-rate-price>button{width:100%;border:0;border-radius:12px;padding:0 10px;min-height:44px;background:#2f5bff;color:#fff;font:500 14px/20px Onest;flex:none}
 .room-tariff.friendly{background:linear-gradient(150deg,#1b1e33,#2d2a55);border-color:transparent;color:#fff}
 .room-tariff.friendly .room-link{color:#c9d2ff}
@@ -35,7 +35,7 @@
 .room-equipment section,.room-rate-detail section{display:flex;flex-direction:column;gap:10px}
 .room-equipment h3,.room-rate-detail h3{font:500 12px/18px Onest;text-transform:uppercase;color:#5a6072;letter-spacing:.3px;margin:0}
 .room-bed-options{display:flex;flex-wrap:wrap;gap:8px}
-.room-bed-options>span{display:flex;gap:8px;align-items:center;padding:10px;border-radius:14px;background:#f4f5fb;font:400 13px/19px Onest}
+.room-bed-options>span{display:flex;gap:8px;align-items:center;padding:10px;border-radius:14px;background:#eaf2ff;font:400 13px/19px Onest}
 .room-equipment-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .room-feature{display:flex;align-items:center;gap:12px}
 .room-feature>.icon-tile{color:#2f5bff;width:36px;height:36px;border-radius:12px;flex:none}
@@ -70,7 +70,7 @@
 .bottom-sheet:has(.room-detail-panel) .sheet-content{padding:0 20px 30px}
 .room-detail-panel{padding:0;gap:14px}
 .room-detail-panel .room-detail-caption{font:400 14px/20px Onest;color:#5a6072;margin:0}
-.room-detail-panel section,.room-detail-panel .room-specs{padding:12px 14px;background:#f4f5fb;border-radius:18px}
+.room-detail-panel section,.room-detail-panel .room-specs{padding:12px 14px;background:#eaf2ff;border-radius:18px}
 .room-detail-panel h3{font:500 14px/20px Onest;text-transform:none;letter-spacing:0;color:#101320}
 .room-detail-panel .room-feature>.icon-tile{width:24px;height:24px;border-radius:0;background:none}
 .room-detail-panel .room-feature strong{font-weight:400}
