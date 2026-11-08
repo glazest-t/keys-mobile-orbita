@@ -16,6 +16,7 @@ import './hotel.css';
 
 import './page-layout.css';
 import './buttons.css';
+import './find-search.css';
 
 import "./checkout-reward.css";
 
