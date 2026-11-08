@@ -336,3 +336,13 @@
 .desktop-modal .hotel-program-summary-values dd{font:500 18px/26px Onest,sans-serif}
 .desktop-modal .hotel-program-site-note{font:400 14px/22px Onest,sans-serif;margin:0;color:var(--k-text-secondary)}
 .desktop-modal .hotel-program-summary>.k-button{align-self:flex-start;width:auto;min-height:48px;padding-inline:24px}
+
+/* Header favorites: a navigation icon, not a saved-hotel status. */
+.desktop-navigation .desktop-favorites-link {
+ display:grid;place-items:center;flex:none;width:44px;height:44px;min-height:44px;
+ padding:0;border:1px solid var(--k-border-subtle);border-radius:50%;
+ background:#fff;color:var(--k-action-primary);line-height:0;
+}
+.desktop-navigation .desktop-favorites-link .k-icon {display:block;flex:none;}
+.desktop-navigation .desktop-favorites-link:hover,
+.desktop-navigation .desktop-favorites-link[aria-current="page"] {background:var(--k-action-tint);}
