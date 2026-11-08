@@ -10,7 +10,7 @@ const titles={city:'Куда поедем?',dates:'Когда планирует
 export function DesktopSearchBar({commerce,onSearch}:{commerce:Commerce;onSearch:(search:Search,hotelId?:string)=>void}){
  const [draft,setDraft]=useState<Search>(()=>structuredClone(commerce.search));
  const [step,setStep]=useState<Step|null>(null),[query,setQuery]=useState(''),[hotelId,setHotelId]=useState<string>(),[error,setError]=useState('');
- const [maxHeight,setMaxHeight]=useState(560);
+ const [maxHeight,setMaxHeight]=useState(560),[guestRight,setGuestRight]=useState(0);
  const root=useRef<HTMLDivElement>(null),panel=useRef<HTMLDivElement>(null),input=useRef<HTMLInputElement>(null);
  const triggers=useRef<Partial<Record<Step,HTMLButtonElement|null>>>({}),id=useId();
  const selectedHotel=catalog.hotels.find(h=>h.id===hotelId);
@@ -20,13 +20,13 @@ export function DesktopSearchBar({commerce,onSearch}:{commerce:Commerce;onSearch
  function open(next:Step){setError('');setStep(next);}
  useEffect(()=>{
   if(!step)return;
-  const update=()=>{if(root.current)setMaxHeight(Math.max(180,window.innerHeight-root.current.getBoundingClientRect().bottom-28));};
+  const update=()=>{if(!root.current)return;const bounds=root.current.getBoundingClientRect();setMaxHeight(Math.max(180,window.innerHeight-bounds.bottom-28));const anchor=triggers.current.guests?.getBoundingClientRect();if(anchor)setGuestRight(Math.min(Math.max(0,bounds.width-440),Math.max(0,bounds.right-anchor.right)));};
   const outside=(e:PointerEvent)=>{if(root.current&&!root.current.contains(e.target as Node))setStep(null);};
   const escape=(e:KeyboardEvent)=>{if(e.key==='Escape'){e.preventDefault();setStep(null);triggers.current[step]?.focus();}};
-  update();document.addEventListener('pointerdown',outside);document.addEventListener('keydown',escape);
+  update();const observer=new ResizeObserver(update);if(root.current)observer.observe(root.current);document.addEventListener('pointerdown',outside);document.addEventListener('keydown',escape);
   window.addEventListener('resize',update);window.addEventListener('scroll',update,true);
   if(step==='city')input.current?.focus();else panel.current?.focus({preventScroll:true});
-  return()=>{document.removeEventListener('pointerdown',outside);document.removeEventListener('keydown',escape);window.removeEventListener('resize',update);window.removeEventListener('scroll',update,true);};
+  return()=>{observer.disconnect();document.removeEventListener('pointerdown',outside);document.removeEventListener('keydown',escape);window.removeEventListener('resize',update);window.removeEventListener('scroll',update,true);};
  },[step]);
  function select(city:string,hotel?:string){setDraft(s=>({...s,city}));setHotelId(hotel);setQuery('');open('dates');}
  function submit(){
@@ -46,7 +46,7 @@ export function DesktopSearchBar({commerce,onSearch}:{commerce:Commerce;onSearch
  return <div className={'desktop-search-bar'+(step?' is-editing':'')} ref={root} onBlur={e=>{if(e.relatedTarget&&!e.currentTarget.contains(e.relatedTarget as Node))setStep(null);}}>
   <div className="desktop-search-fields">{fields.map(f=><button key={f.key} ref={el=>{triggers.current[f.key]=el;}} type="button" className={step===f.key?'is-active':''} aria-haspopup="dialog" aria-expanded={step===f.key} aria-controls={step===f.key?id:undefined} onClick={()=>step===f.key?close():open(f.key)}><Icon name={f.icon} size={20}/><span><small>{f.label}</small><strong>{f.value}</strong></span></button>)}</div>
   <Button onClick={submit}><Icon name="nav-search" size={20} inheritColor/>Найти</Button>
-  {step&&<div className={'desktop-search-popover desktop-search-popover-'+step} id={id} ref={panel} role="dialog" aria-label={titles[step]} tabIndex={-1} style={{maxHeight}}>
+  {step&&<div className={'desktop-search-popover desktop-search-popover-'+step} id={id} ref={panel} role="dialog" aria-label={titles[step]} tabIndex={-1} style={{maxHeight,...(step==='guests'?{right:guestRight}: {})}}>
    <header><h2>{titles[step]}</h2><IconButton name="close" label="Закрыть параметры поиска" onClick={()=>close(true)} inheritColor/></header>
    {step==='city'&&<><div className="desktop-destination-input"><Icon name="nav-search" size={20}/><input ref={input} aria-label="город или название отеля" placeholder="город или название отеля" value={query} onChange={e=>{setQuery(e.target.value);setError('');}} onKeyDown={e=>{if(e.key==='Enter'&&!e.nativeEvent.isComposing){e.preventDefault();const match=suggestions[0];if(match)select(match.city,match.hotelId);else setError('Ничего не найдено. Попробуйте другое название.');}}}/>{query&&<IconButton name="close" label="Очистить направление" onClick={()=>{setQuery('');input.current?.focus();}}/>}</div>
     <p className="desktop-destination-label">{query.trim()?'Города и отели':'Популярные направления'}</p>

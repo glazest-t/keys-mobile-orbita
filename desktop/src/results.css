@@ -5,10 +5,10 @@
 .desktop-results-search form{display:grid;grid-template-columns:minmax(180px,1.3fr) minmax(240px,1fr) minmax(160px,.8fr) 180px;align-items:center;gap:8px;padding:8px;background:#fff;border:1px solid #e4e7ef;border-radius:24px}
 .desktop-results-search form>button:not(.k-button){display:flex;align-items:center;gap:14px;min-width:0;min-height:60px;padding:8px 20px;border:0;border-right:1px solid #e4e7ef;border-radius:0;background:transparent;color:#101320;text-align:left}
 .desktop-results-search form>button:not(.k-button):hover{background:#eaf2ff;border-radius:16px}
-.desktop-results-search button>span{display:flex;flex-direction:column;gap:3px;min-width:0}
-.desktop-results-search small{font:400 12px/18px Onest;color:#5a6072}
-.desktop-results-search strong{font:500 16px/22px Onest;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.desktop-results-search .k-button{min-height:56px;border-radius:16px}
+.desktop-results-search form>button>span{display:flex;flex-direction:column;gap:3px;min-width:0}
+.desktop-results-search form>button small{font:400 12px/18px Onest;color:#5a6072}
+.desktop-results-search form>button strong{font:500 16px/22px Onest;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.desktop-results-search form>.k-button{min-height:56px;border-radius:16px}
 .desktop-results-layout{display:grid;grid-template-columns:320px minmax(0,1fr) minmax(280px,26%);gap:24px;align-items:start}
 .desktop-results-filters{position:sticky;top:20px;display:flex;flex-direction:column;min-width:0;height:var(--filter-available-height,calc(100dvh - 220px));min-height:0;border:1px solid #e4e7ef;border-radius:24px;background:#fff;overflow:hidden}
 .desktop-results-filters .filter-editor-scroll{flex:1 1 0;height:auto;min-height:0;overflow:auto!important;overscroll-behavior:contain;scrollbar-width:thin}
@@ -105,7 +105,7 @@
 .desktop-results-layout>.desktop-results-map .source-map{height:calc(100dvh - 120px)}
 .desktop-results-search form{grid-template-columns:minmax(130px,1fr) minmax(190px,1.15fr) minmax(115px,.7fr) 150px}
 .desktop-results-search form>button:not(.k-button){padding:8px 12px;gap:10px}
-.desktop-results-search strong{font-size:14px}
+.desktop-results-search form>button strong{font-size:14px}
 .desktop-results-list>.results-controls-rail{min-width:0;width:100%;overflow:hidden}
 .desktop-results-list .results-controls-rail .discovery-chip-track{padding:0;gap:var(--k-filter-gap);flex-wrap:wrap;width:100%;box-sizing:border-box}
 .desktop-results-list .results-controls-rail .filter-chip{height:34px;min-height:34px;font-size:12px;padding:0 12px}
@@ -120,7 +120,7 @@
  .desktop-results-search form{grid-template-columns:1fr 1fr}
  .desktop-results-layout>.desktop-results-map .source-map{height:420px}
 }
-.desktop-results-search .k-button{padding:0 12px;gap:8px;white-space:nowrap;font-size:14px}
+.desktop-results-search form>.k-button{padding:0 12px;gap:8px;white-space:nowrap;font-size:14px}
 
 /* Explicit choice action, sibling of the clickable details (no nested buttons). */
 .desktop-results-list .hotel-list-card{position:relative}
