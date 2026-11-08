@@ -24,3 +24,5 @@ import "./page-background.css";
 import './service-dialogs.css';
 
 import "./service-catalog.css";
+
+import './search-popover.css';
