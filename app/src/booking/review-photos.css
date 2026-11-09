@@ -1,0 +1,7 @@
+.review-photo-strip{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0}
+.review-photo-strip>button{display:block;flex:none;width:68px;height:68px;padding:0;border:0;border-radius:12px;overflow:hidden;background:var(--k-icon-surface,#eaf2ff)}
+.review-photo-strip img{display:block;width:100%;height:100%;object-fit:cover}
+.review-photo-viewer{display:flex;flex-direction:column;gap:16px}
+.review-photo-viewer>img{display:block;width:100%;max-height:60dvh;object-fit:contain;border-radius:14px}
+.review-photo-viewer>div{display:flex;align-items:center;justify-content:space-between;gap:16px;font:400 14px/20px Onest}
+.desktop-app .review-photo-strip>button{width:88px;height:88px;border-radius:14px}

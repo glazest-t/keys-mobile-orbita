@@ -12,7 +12,8 @@ export const visuals:Record<string,{styles:string[];location:string;address:stri
 };
 Object.assign(visuals,addedVisuals);
 export const hotelVisual=(id:string)=>visuals[id]||visuals['orbit-sea'];
-export const reviewExamples=[
+export type HotelReview = {name:string;date:string;score:string;text:string;tags:string[];photos?:string[]};
+export const reviewExamples:HotelReview[]=[
  {name:'Анна',date:'18 августа · пара · 5 ночей',score:'4,8',text:'Завтраки отличные, море в двух шагах. Номер тихий, хотя окна на парк.',tags:['Еда','Тишина','Номера']},
  {name:'Максим',date:'2 августа · с детьми · 7 ночей',score:'4,5',text:'Спа с термами — лучшее в отеле. До Олимпийского парка дошли пешком.',tags:['Спа','Транспорт']},
  {name:'Ирина',date:'21 июля · одна · 3 ночи',score:'4,2',text:'Хороший номер, но вечером у бассейна шумно.',tags:['Номера','Тишина','Бассейн']},
@@ -22,7 +23,7 @@ export const reviewExamples=[
 ];
 
 // Fictional review samples explicitly requested for the local prototype; never sourced reviews.
-export function hotelReviews(id:string){
+function reviewSamples(id:string):HotelReview[]{
  const imported=(editorial as Record<string,{reviews:typeof reviewExamples}>)[id]?.reviews;if(imported)return imported;
  if(id==='orbit-sea')return reviewExamples;
  const v=hotelVisual(id),breakfast=v.amenities.includes('Завтрак'),pool=v.amenities.includes('Бассейн');
@@ -34,6 +35,11 @@ export function hotelReviews(id:string){
  {name:'Денис',date:'4 июля · пара · 2 ночи',score:'4,6',text:'Все вопросы по проживанию удалось быстро решить. Комната соответствовала ожиданиям.',tags:['Сервис','Номера']},
  {name:'Ольга',date:'28 июня · одна · 3 ночи',score:'4,7',text:'Спокойно отдохнула и хорошо выспалась. Вернулась бы ещё.',tags:['Номера','Тишина']},
  ];
+}
+// Demo attachments reuse this hotel's gallery; they are not real guest uploads.
+export function hotelReviews(id:string):HotelReview[]{
+ const photos=[...new Set(hotelVisual(id).photos)];
+ return reviewSamples(id).map((review,index)=>({...review,photos:review.photos??(index===0?photos.slice(0,3):index===1?photos.slice(-2):[])}));
 }
 export function hotelReviewHighlights(id:string){return hotelReviewTags(id).filter(tag=>tag!=='Все').slice(0,3).map(tag=>tag.toLocaleLowerCase('ru-RU')).join(', ');}
 export function hotelReviewTags(id:string){return ['Все',...new Set(hotelReviews(id).flatMap(r=>r.tags))];}
