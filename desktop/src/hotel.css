@@ -37,8 +37,8 @@
 .desktop-hotel-information .hotel-amenities>span{display:flex;align-items:center;gap:10px}
 .desktop-hotel-information .hotel-location .source-map{height:320px}
 .desktop-hotel-information #hotel-reviews{scroll-margin-top:24px}
-.desktop-hotel-reviews{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:20px}
-.desktop-hotel-reviews>.review-card{width:auto;min-width:0;max-width:none;margin:0;background:var(--k-surface-app);padding:20px;border-radius:20px}
+.desktop-hotel-reviews{display:block;column-count:2;column-gap:16px;margin-top:20px}
+.desktop-hotel-reviews>.review-card{break-inside:avoid;page-break-inside:avoid;width:100%;min-width:0;max-width:none;margin:0 0 16px;background:var(--k-surface-app);padding:20px;border-radius:20px}
 .desktop-hotel-reviews .review-card p{white-space:normal;overflow:visible;display:block;-webkit-line-clamp:unset;font-size:15px;line-height:24px}
 .desktop-hotel-back{display:inline-flex;align-items:center;align-self:flex-start;gap:12px;margin-bottom:-16px;padding:0;border:0;border-radius:22px;background:transparent;color:var(--k-text-primary);font:500 14px/20px Onest,sans-serif;cursor:pointer}
 .desktop-hotel-back-icon{display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--k-border-subtle);border-radius:50%;background:var(--k-surface-card)}
@@ -63,7 +63,7 @@
  .desktop-hotel-top{grid-template-columns:1fr}
  .desktop-hotel-top>.source-hotel-hero{height:360px;min-height:0}
  .desktop-hotel-rooms-heading{align-items:flex-start;flex-direction:column;gap:12px}
- .desktop-hotel-reviews{grid-template-columns:1fr}
+ .desktop-hotel-reviews{column-count:1}
  .desktop-room-search>form{grid-template-columns:1fr 1fr}
  .desktop-room-search>form>.k-button{grid-column:1/-1}
  .desktop-room-search-field{padding:12px}
@@ -219,3 +219,7 @@
 .desktop-review-sort-option[data-state=checked]{background:#f2f7fc}
 .desktop-review-sort-option[data-highlighted]{background:#e8f1fc}
 .desktop-review-sort-check{display:flex;align-items:center;justify-content:center;width:18px;flex:none;color:#2f5bff}
+
+.desktop-hotel-reviews .review-hotel-reply{padding:14px 16px;border-radius:14px;background:var(--k-icon-surface,#eaf2ff);margin-top:4px}
+.desktop-hotel-reviews .review-hotel-reply strong{font:500 13px/19px Onest}
+.desktop-hotel-reviews .review-hotel-reply p{margin:4px 0 0;font:400 14px/21px Onest;color:var(--k-text-secondary)}

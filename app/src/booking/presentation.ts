@@ -12,9 +12,9 @@ export const visuals:Record<string,{styles:string[];location:string;address:stri
 };
 Object.assign(visuals,addedVisuals);
 export const hotelVisual=(id:string)=>visuals[id]||visuals['orbit-sea'];
-export type HotelReview = {name:string;date:string;score:string;text:string;tags:string[];photos?:string[]};
+export type HotelReview = {name:string;date:string;score:string;text:string;tags:string[];photos?:string[];reply?:string};
 export const reviewExamples:HotelReview[]=[
- {name:'Анна',date:'18 августа · пара · 5 ночей',score:'4,8',text:'Завтраки отличные, море в двух шагах. Номер тихий, хотя окна на парк.',tags:['Еда','Тишина','Номера']},
+ {name:'Анна',date:'18 августа · пара · 5 ночей',score:'4,8',text:'Завтраки отличные, море в двух шагах. Номер тихий, хотя окна на парк.',reply:'Анна, спасибо за отзыв! Рады, что вам понравились завтраки и расположение отеля. Будем ждать вас снова.',tags:['Еда','Тишина','Номера']},
  {name:'Максим',date:'2 августа · с детьми · 7 ночей',score:'4,5',text:'Спа с термами — лучшее в отеле. До Олимпийского парка дошли пешком.',tags:['Спа','Транспорт']},
  {name:'Ирина',date:'21 июля · одна · 3 ночи',score:'4,2',text:'Хороший номер, но вечером у бассейна шумно.',tags:['Номера','Тишина','Бассейн']},
  {name:'Мария',date:'10 июля · пара · 4 ночи',score:'5,0',text:'Светлый номер и удобная кровать. Понравились бассейн и забота сотрудников.',tags:['Номера','Бассейн']},
