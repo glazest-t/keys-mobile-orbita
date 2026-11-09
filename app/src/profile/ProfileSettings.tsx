@@ -1,3 +1,4 @@
+import {useNovember} from '../usePrototypeVariant';
 import {DialogActions} from '../dialogActions';
 import {DeviceAccessSetup,type BiometricResult} from './DeviceAccess';
 import {useState,type Dispatch,type SetStateAction,type ReactNode} from 'react';
@@ -14,13 +15,30 @@ export const settingsBack=(route:string)=>['profile-pin','profile-pin-off','prof
 function Group({title,children}:{title?:string;children:ReactNode}){return <section className="profile-settings-group">{title&&<h2>{title}</h2>}<div className="k-card">{children}</div></section>;}
 
 export function ProfileSettingsPage({state,setState,user,route,onNavigate:go,onEmail,onHistory,onToast,onLock,onRecovery,biometricOutcome}:{onLock:()=>void;onRecovery:()=>void;biometricOutcome:BiometricResult;state:State;setState:Dispatch<SetStateAction<State>>;user:User;route:string;onNavigate:(route:string)=>void;onEmail:()=>void;onHistory:()=>void;onToast:(message:string)=>void}){
+ const november=useNovember();
  const settings=profileSettings(user),keyboard=useKeyboard();
  const timeInput=(value:string)=>{const digits=value.replace(/\D/g,'').slice(0,4);return digits.length>2?digits.slice(0,2)+':'+digits.slice(2):digits;};
  const [sheet,setSheet]=useState<'quiet'|'email'|'session'|'deletion'|null>(route==='profile-deletion'?'deletion':null),[error,setError]=useState(''),[quietStart,setQuietStart]=useState(settings.quietStart),[quietEnd,setQuietEnd]=useState(settings.quietEnd);
  const apply=(patch:Partial<Settings>)=>{try{const next=updateSettings(state,user.phone,patch);setState(next);setError('');return true;}catch(e){setError((e as Error).message);return false;}};
  const toggle=(key:keyof Settings,title:string,subtitle?:string)=><Switch checked={!!settings[key]} onChange={value=>{if(key==='email'&&value&&!user.travelers.find(t=>t.primary)?.email){setError('');setSheet('email');return;}apply({[key]:value});}}><span><strong>{title}</strong>{subtitle&&<small>{subtitle}</small>}</span></Switch>;
  let content;
- if(route==='profile-notifications')content=<><Group title="Как получать">{toggle('push','Push-уведомления')}{toggle('email','Электронная почта',user.travelers.find(t=>t.primary)?.email)}{toggle('sms','SMS')}</Group><Group title="О чём сообщать">{toggle('booking','Бронь и проживание','Заезд, изменения и выезд')}{toggle('messages','Сообщения отеля')}{toggle('services','Заказы услуг')}{toggle('benefits','Баллы и снижение цен')}{toggle('offers','Акции и подборки')}</Group><Group title="Тихие часы">{toggle('quiet','Не беспокоить',`${settings.quietStart}–${settings.quietEnd}`)}{settings.quiet&&<Row icon="pending" title="Время тишины" subtitle={`${settings.quietStart}–${settings.quietEnd}`} onClick={()=>{setQuietStart(settings.quietStart);setQuietEnd(settings.quietEnd);setError('');setSheet('quiet');}}/>}</Group>{!isDesktop&&<><p className="profile-settings-note">Важная информация о поездке останется в приложении.</p><Button variant="secondary" onClick={onHistory}>История уведомлений</Button></>}</>;
+ if(route==='profile-notifications')content=<>
+  <Group title="Как получать">
+   {toggle('push','Push-уведомления')}
+   {!november&&<>{toggle('email','Электронная почта',user.travelers.find(t=>t.primary)?.email)}{toggle('sms','SMS')}</>}
+  </Group>
+  <Group title="О чём сообщать">
+   {toggle('booking','Поездки и бронирования','Напоминания о заезде и выезде')}
+   {toggle('messages','Сообщения от отелей','Ответы и важная информация от отеля')}
+   {toggle('services','Услуги во время проживания','Статусы заказов и запросов')}
+   {toggle('benefits','Баллы и привилегии','Начисления, списания и срок действия')}
+   {toggle('offers','Предложения и вдохновение','Подборки отелей и специальные цены')}
+  </Group>
+  {!november&&<>
+   <Group title="Тихие часы">{toggle('quiet','Не беспокоить',`${settings.quietStart}–${settings.quietEnd}`)}{settings.quiet&&<Row icon="pending" title="Время тишины" subtitle={`${settings.quietStart}–${settings.quietEnd}`} onClick={()=>{setQuietStart(settings.quietStart);setQuietEnd(settings.quietEnd);setError('');setSheet('quiet');}}/>}</Group>
+   {!isDesktop&&<><p className="profile-settings-note">Важная информация о поездке останется в приложении.</p><Button variant="secondary" onClick={onHistory}>История уведомлений</Button></>}
+  </>}
+ </>;
  else if(route==='profile-security')content=<><Group title="Вход в приложение"><Switch checked={settings.biometric} onChange={value=>{if(value)go('profile-biometric');else apply({biometric:false});}}>Вход по биометрии</Switch><Row icon="secure" title={settings.pinEnabled?'Изменить PIN-код':'Установить PIN-код'} subtitle={settings.pinEnabled?'Включён':'Четыре цифры'} onClick={()=>go('profile-pin')}/>{settings.pinEnabled&&<Row icon="secure" title="Отключить PIN-код" onClick={()=>go('profile-pin-off')}/>}</Group><Group><Row icon="phone" title="Устройства и сеансы" subtitle={settings.otherSession?'Этот браузер и ещё одно устройство':'Только этот браузер'} onClick={()=>go('profile-sessions')}/></Group>{hasDevicePin(user)&&<Button variant="secondary" onClick={onLock}><Icon name="secure" size={20}/>Заблокировать приложение</Button>}</>;
  else if(['profile-pin','profile-pin-off','profile-biometric'].includes(route))content=<DeviceAccessSetup mode={route==='profile-biometric'?'biometric':route==='profile-pin-off'?'disable':'pin'} state={state} setState={setState} user={user} outcome={biometricOutcome} onRecovery={onRecovery} onDone={message=>{if(message)onToast(message);go('profile-security');}}/>;
  else if(route==='profile-sessions')content=<><Group title="Текущий сеанс"><div className="profile-session"><span className="icon-tile"><Icon name="phone"/></span><div><strong>Этот браузер</strong><StatusBadge tone="success" icon="check">Активен сейчас</StatusBadge></div></div></Group><Group title="Другие устройства">{settings.otherSession?<><div className="profile-session"><span className="icon-tile"><Icon name="phone"/></span><div><strong>Pixel 10</strong><small>Пример другого устройства</small></div></div><Button variant="ghost" onClick={()=>setSheet('session')}>Завершить сеанс</Button></>:<p className="profile-settings-empty">Других активных сеансов нет</p>}</Group>{settings.otherSession&&<Button variant="secondary" onClick={()=>setSheet('session')}>Завершить остальные сеансы</Button>}</>;

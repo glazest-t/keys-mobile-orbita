@@ -32,7 +32,7 @@ export function ProfilePage({user,commerce,onPhotoChange,onEdit,onBenefits,onHot
    {!approved&&commerce.hotelierParticipants?.[user.phone]&&<Row icon="reception" title="Подтвердить статус отельера" onClick={onHotelier}/>}
   </div></section>
   <section className="profile-navigation-group" aria-labelledby="profile-settings-title"><h2 id="profile-settings-title">Настройки аккаунта</h2><div className="k-card">
-   {!november&&<Row icon="bell" title="Уведомления" onClick={onNotifications}/>}
+   <Row icon="bell" title="Уведомления" onClick={onNotifications}/>
    {november&&<LanguageSetting value={user.language} onChange={onLanguage}/>}
    <Row icon="secure" title="Безопасность и доступ" onClick={onSecurity}/>
    <Row icon="settings" title="Управление данными" onClick={onData}/>

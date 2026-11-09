@@ -134,7 +134,7 @@ function Prototype({fixture}:{fixture?:CatalogueFixture}){usePrototypeIcons();
  const [sheet,setSheet]=useState<string|null>(catalogueScene?.sheet||null),[toast,setToast]=useState(''),[selected,setSelected]=useState(seed.data.selectedTravelerId||'primary'),[draft,setDraft]=useState<Traveler>(catalogueScene&&fixture?{...fixture.state.users[fixture.state.activePhone||'']?.travelers[0]}:blankTraveler('new')),[dirty,setDirty]=useState(false),[formErrors,setFormErrors]=useState<Record<string,string>>({});
  const [kitText,setKitText]=useState(''),[kitSwitch,setKitSwitch]=useState(false),[offline,setOffline]=useState(false);
  const user=state.activePhone?state.users[state.activePhone]:null;
- const novemberHidden=['notifications','profile-notifications','profile-style','preferences','help-article/notifications'];
+ const novemberHidden=['notifications','profile-style','preferences','help-article/notifications'];
  const route=surfaceRoute(november&&novemberHidden.includes(routeState)?'profile':november&&(routeState.startsWith('loyalty-program/')||routeState.startsWith('loyalty-connect/'))?'loyalty-programs':routeState,!!user);
  const recoverAccess=()=>{if(!user)return;setAccessLocked(false);setSheet(null);setPhone(user.phone.slice(2));setCode('');setState(s=>({...s,activePhone:null,request:null,verifiedPhone:null,hotelierOnboarding:false,hotelierTourTarget:undefined,securityRecoveryPhone:user.phone,returnTo:'profile-security'}));go('phone',true);};
  const preference=route==='wish-search'?freeTextDraft(commerce,user?.phone||'guest'):preferenceDraft(commerce,user?.phone||'guest');
