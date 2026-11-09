@@ -109,7 +109,7 @@
 .desktop-nearby-dates>header{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:0 0 12px;padding:0 4px}
 .keys-app .desktop-nearby-dates h2{font:500 16px/22px Onest,sans-serif}
 .desktop-nearby-dates p{font:400 13px/20px Onest,sans-serif}
-.desktop-nearby-dates-carousel{width:994px;max-width:100%;margin-inline:auto;overscroll-behavior-x:contain;mask-image:linear-gradient(to right,transparent,#000 100px,#000 calc(100% - 100px),transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 100px,#000 calc(100% - 100px),transparent)}
+.desktop-nearby-dates-carousel{width:994px;max-width:100%;margin-inline:auto;overscroll-behavior-x:contain;mask-image:linear-gradient(to right,transparent 88px,#000 102px,#000 calc(100% - 102px),transparent calc(100% - 88px));-webkit-mask-image:linear-gradient(to right,transparent 88px,#000 102px,#000 calc(100% - 102px),transparent calc(100% - 88px))}
 .desktop-nearby-dates-track{display:flex;gap:10px;padding:16px 102px 2px}
 .desktop-nearby-dates-carousel{scrollbar-width:none}
 .desktop-nearby-dates-carousel::-webkit-scrollbar{display:none}
