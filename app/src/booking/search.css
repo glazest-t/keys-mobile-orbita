@@ -101,3 +101,6 @@
 
 /* Active navigation shares the label accent; inactive glyphs stay soft graphite. */
 .keys-app .bottom-navigation button.active .nav-icon{color:var(--k-action-primary,#2f5bff)}
+
+/* Mirror the same arrow for both month navigation controls. */
+.calendar-heading>.k-icon-button:last-child .k-icon{transform:rotate(180deg)}

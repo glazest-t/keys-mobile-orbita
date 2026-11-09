@@ -27,6 +27,9 @@
 .search-journey-destinations strong{font-weight:500;overflow-wrap:anywhere}
 .search-journey-destinations small{font:400 12px/17px Onest;color:var(--k-text-secondary,#5a6072)}
 .search-journey-destinations .icon-tile{width:40px;height:40px;border-radius:12px;background:var(--k-icon-surface,#eaf2ff);color:var(--k-action-primary,#2f5bff);flex:none}
+/* Keep all six destinations and the next steps visible on the mobile sheet. */
+.bottom-sheet .search-journey-destinations{gap:2px}
+.bottom-sheet .search-journey-destinations>button{min-height:44px;padding:2px 0}
 .search-journey .date-calendar{padding:0;border:0;border-radius:0;background:none}
 .search-journey .calendar-heading{gap:8px}
 .search-journey .calendar-heading strong{font-size:14px}
