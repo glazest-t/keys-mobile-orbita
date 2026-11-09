@@ -110,18 +110,15 @@
 .keys-app .desktop-nearby-dates h2{font:500 16px/22px Onest,sans-serif}
 .desktop-nearby-dates p{font:400 13px/20px Onest,sans-serif}
 .desktop-nearby-dates-carousel{width:994px;max-width:100%;margin-inline:auto;overscroll-behavior-x:contain;mask-image:linear-gradient(to right,transparent,#000 100px,#000 calc(100% - 100px),transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 100px,#000 calc(100% - 100px),transparent)}
-.desktop-nearby-dates-track{display:flex;gap:10px;padding:2px 102px}
+.desktop-nearby-dates-track{display:flex;gap:10px;padding:16px 102px 2px}
 .desktop-nearby-dates-carousel{scrollbar-width:none}
 .desktop-nearby-dates-carousel::-webkit-scrollbar{display:none}
-.desktop-nearby-date{display:flex;flex:0 0 190px;flex-direction:column;align-items:flex-start;gap:8px;min-height:112px;padding:14px 16px;border:1px solid var(--k-border-subtle);border-radius:18px;background:var(--k-surface-card);color:var(--k-text-primary);text-align:left}
+.desktop-nearby-date{position:relative;display:flex;flex:0 0 190px;flex-direction:column;align-items:flex-start;gap:4px;min-height:84px;padding:20px 16px 12px;border:1px solid var(--k-border-subtle);border-radius:18px;background:var(--k-surface-card);color:var(--k-text-primary);text-align:left}
 .desktop-nearby-date[aria-pressed=true]{border-color:var(--k-action-primary);box-shadow:inset 0 0 0 1px var(--k-action-primary);background:var(--k-action-tint)}
 .desktop-nearby-date:hover:not(:disabled){border-color:var(--k-action-primary)}
 .desktop-nearby-date:disabled{color:var(--k-text-secondary);background:transparent}
 .desktop-nearby-date-label{font:400 13px/18px Onest,sans-serif;white-space:nowrap}
 .desktop-nearby-date strong{font:500 16px/22px Onest,sans-serif;white-space:nowrap}
-.desktop-nearby-date-status,.desktop-nearby-date-cheaper{display:inline-flex;align-items:center;gap:4px;font:500 11px/16px Onest,sans-serif;white-space:nowrap}
-.desktop-nearby-date-status{color:var(--k-action-primary)}
-.desktop-nearby-date-cheaper{padding:2px 7px;border-radius:7px;background:#D72778;color:white}
 
 /* Only the large photo scrolls; the two smaller previews stay in place. */
 .desktop-hotel-main-photo{position:absolute;inset:0;overflow:hidden}
@@ -225,3 +222,5 @@
 .desktop-hotel-reviews .review-hotel-reply{padding:14px 16px;border-radius:14px;background:var(--k-icon-surface,#eaf2ff);margin-top:4px}
 .desktop-hotel-reviews .review-hotel-reply strong{font:500 13px/19px Onest}
 .desktop-hotel-reviews .review-hotel-reply p{margin:4px 0 0;font:400 14px/21px Onest;color:var(--k-text-secondary)}
+
+.keys-app .desktop-nearby-date>.desktop-nearby-date-badge{position:absolute;top:0;left:14px;transform:translateY(-50%);box-shadow:0 0 0 3px #fff}
