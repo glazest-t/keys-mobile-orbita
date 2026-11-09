@@ -109,8 +109,10 @@
 .desktop-nearby-dates>header{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:0 0 12px;padding:0 4px}
 .keys-app .desktop-nearby-dates h2{font:500 16px/22px Onest,sans-serif}
 .desktop-nearby-dates p{font:400 13px/20px Onest,sans-serif}
-.desktop-nearby-dates-carousel{max-width:100%;overscroll-behavior-x:contain}
-.desktop-nearby-dates-track{display:flex;gap:10px;padding:2px}
+.desktop-nearby-dates-carousel{width:994px;max-width:100%;margin-inline:auto;overscroll-behavior-x:contain;mask-image:linear-gradient(to right,transparent,#000 100px,#000 calc(100% - 100px),transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 100px,#000 calc(100% - 100px),transparent)}
+.desktop-nearby-dates-track{display:flex;gap:10px;padding:2px 102px}
+.desktop-nearby-dates-carousel{scrollbar-width:none}
+.desktop-nearby-dates-carousel::-webkit-scrollbar{display:none}
 .desktop-nearby-date{display:flex;flex:0 0 190px;flex-direction:column;align-items:flex-start;gap:8px;min-height:112px;padding:14px 16px;border:1px solid var(--k-border-subtle);border-radius:18px;background:var(--k-surface-card);color:var(--k-text-primary);text-align:left}
 .desktop-nearby-date[aria-pressed=true]{border-color:var(--k-action-primary);box-shadow:inset 0 0 0 1px var(--k-action-primary);background:var(--k-action-tint)}
 .desktop-nearby-date:hover:not(:disabled){border-color:var(--k-action-primary)}
