@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {initialCommerce,ensureAccount,startDraft,quoteDraft,commitBooking,cancelBooking,decodeCommerce} from '../app/src/booking/model.ts';
+import {catalog,initialCommerce,ensureAccount,startDraft,quoteDraft,commitBooking,cancelBooking,decodeCommerce} from '../app/src/booking/model.ts';
 import {previewAmendment,commitAmendment} from '../app/src/booking/amendment.ts';
 const owner='+79001234567',now='2026-10-22T12:00:00Z';
 function fixture(method='online',points=true,services=[]){let s=ensureAccount(initialCommerce(),owner);s.search={...s.search,checkIn:'2026-11-13',checkOut:'2026-11-15',adults:2};s=startDraft(s,'orbit-sea','amend-test');s.draft={...s.draft,contact:{name:'Анна',surname:'Примерова',phone:owner,email:'anna@example.test'},method,usePoints:points,services,additionalGuest:{name:'Иван',surname:'Примеров'},stayWishes:{options:['Тихий номер'],note:'Подальше от лифта'}};return commitBooking(s,owner,quoteDraft(s,owner),'success',now);}
@@ -51,4 +51,33 @@ test('FR сохраняет забронированный тариф и не п
 test('Бесплатная смена состава онлайн-брони не требует оплаты и не трогает деньги',()=>{
  const s=fixture(),p=previewAmendment(s,owner,'amend-test',input(s,{adults:1}),now);assert.equal(p.extraPaid,0);
  const next=commitAmendment(s,owner,p,'free-guest','failure',now);assert.equal(next.bookings[0].operation.paidCashMinor,s.bookings[0].operation.paidCashMinor);assert.deepEqual(next.payment.balances,s.payment.balances);
+});
+
+test('Номер и тариф: только тот же отель, доступный тариф и атомарная доплата',()=>{
+ const s=fixture(),before=structuredClone(s),base=input(s),nextRate={...base,roomId:'sea-deluxe',rateId:'sea-deluxe-flex'};
+ // Pick an available public alternative from the same local catalogue.
+ const rates=catalog.rates.filter(r=>r.hotelId===s.bookings[0].draft.hotelId&&r.kind==='standard'&&r.id!==s.bookings[0].draft.rateId);
+ const rate=rates.find(r=>{try{previewAmendment(s,owner,'amend-test',{...base,roomId:r.roomId,rateId:r.id},now);return true;}catch{return false;}});
+ assert.ok(rate);Object.assign(nextRate,{roomId:rate.roomId,rateId:rate.id});
+ const p=previewAmendment(s,owner,'amend-test',nextRate,now);assert.deepEqual(s,before);
+ assert.equal(p.quote.rateId,rate.id);
+ const next=commitAmendment(s,owner,p,'room-change','success',now);
+ assert.equal(next.bookings[0].draft.roomId,rate.roomId);assert.equal(next.bookings[0].draft.rateId,rate.id);
+ assert.deepEqual(next.bookings[0].changes[0].previousDraft,before.bookings[0].draft);
+ assert.throws(()=>previewAmendment(s,owner,'amend-test',{...base,roomId:'unknown',rateId:rate.id},now),/этого отеля/);
+ assert.throws(()=>previewAmendment(s,owner,'amend-test',{...base,rateId:'sea-friendly-rate'},now),/недоступен/);
+});
+test('Данные гостей и пожелания применяются вместе, не меняют деньги и не трогают профиль',()=>{
+ const s=fixture(),before=structuredClone(s),i={...input(s),contact:{...s.bookings[0].draft.contact,name:'Мария'},guests:[{name:'Павел',surname:'Тестовый'}],wishes:'Номер подальше от лифта'};
+ const p=previewAmendment(s,owner,'amend-test',i,now);assert.equal(p.extraPaid,0);assert.equal(p.refund,0);assert.deepEqual(s,before);
+ const next=commitAmendment(s,owner,p,'people-change','success',now);assert.equal(next.bookings[0].draft.contact.name,'Мария');assert.equal(next.bookings[0].draft.additionalGuest.name,'Павел');assert.equal(next.bookings[0].draft.stayWishes.note,i.wishes);assert.deepEqual(next.accounts,s.accounts);assert.deepEqual(next.payment.balances,s.payment.balances);
+ assert.throws(()=>previewAmendment(s,owner,'amend-test',{...i,contact:{...i.contact,email:'invalid'}},now),/Проверьте/);
+ assert.throws(()=>previewAmendment(s,owner,'amend-test',{...i,guests:[{name:'Павел',surname:''}]},now),/фамилию/);
+ assert.throws(()=>previewAmendment(s,owner,'amend-test',{...i,wishes:'а'.repeat(501)},now),/500/);
+});
+test('Подтверждение защищено от устаревшей версии и сохраняет черновик при неудачной доплате',()=>{
+ const s=fixture(),i={...input(s,{checkOut:'2026-11-16'}),contact:{...s.bookings[0].draft.contact,name:'Мария'}},p=previewAmendment(s,owner,'amend-test',i,now),before=structuredClone(s);
+ assert.throws(()=>commitAmendment(s,owner,p,'atomic','failure',now),/Исходная бронь/);assert.deepEqual(s,before);
+ const revised={...s,bookings:s.bookings.map(b=>({...b,revision:2}))};assert.throws(()=>commitAmendment(revised,owner,p,'stale','success',now),/уже изменилась/);
+ const next=commitAmendment(s,owner,p,'atomic','success',now);assert.equal(next.bookings[0].draft.contact.name,'Мария');assert.equal(next.bookings[0].draft.search.checkOut,'2026-11-16');assert.equal(commitAmendment(next,owner,p,'atomic','success',now),next);
 });
