@@ -138,3 +138,7 @@
 .hotel-price-card .hotel-price-value strong{font:500 20px/28px Unbounded,sans-serif;letter-spacing:-.6px;white-space:nowrap}
 .keys-app .hotel-price-card .hotel-price-value>s{flex-basis:auto;margin-left:0;font:400 12px/18px Onest,sans-serif;white-space:nowrap}
 .hotel-price-card>.watch-price{min-height:40px;padding:9px 16px;gap:6px;line-height:20px}
+
+/* Room selection reuses the search summary header: dates and party stay visible. */
+.booking-header.rooms-search-header{height:auto;min-height:56px;gap:8px;padding:4px 12px}
+.booking-header.rooms-search-header>.k-icon-button{flex:none}
