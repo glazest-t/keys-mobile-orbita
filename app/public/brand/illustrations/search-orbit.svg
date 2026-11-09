@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="168" viewBox="0 0 1280 168" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1280" y2="168" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E4F1FF"/><stop offset=".6" stop-color="#D5E9FC"/><stop offset="1" stop-color="#CEE2FC"/>
+    </linearGradient>
+    <linearGradient id="ribbon" x1="806" y1="92" x2="1171" y2="19" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5FAFF" stop-opacity="0"/><stop offset=".38" stop-color="#F5FAFF" stop-opacity=".85"/><stop offset=".68" stop-color="#EDF6FF" stop-opacity=".66"/><stop offset="1" stop-color="#EAF4FF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="821" y1="68" x2="1155" y2="34" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" stop-opacity="0"/><stop offset=".4" stop-color="white" stop-opacity=".75"/><stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="sphere" cx="0" cy="0" r="1" gradientTransform="translate(1148 24) rotate(48) scale(29)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F2F8FF"/><stop offset=".38" stop-color="#C4E0FF"/><stop offset=".76" stop-color="#91C4FA"/><stop offset="1" stop-color="#77AFE9"/>
+    </radialGradient>
+  </defs>
+  <path fill="url(#sky)" d="M0 0h1280v168H0z"/>
+  <path d="M790 109C886 30 1014-28 1158 32L1155 39C1025 0 909 42 790 109Z" fill="url(#ribbon)"/>
+  <path d="M801 99C894 28 1017-26 1158 32" stroke="url(#rim)" stroke-width="1.25" stroke-linecap="round"/>
+  <circle cx="1155" cy="34" r="14" fill="url(#sphere)"/>
+</svg>

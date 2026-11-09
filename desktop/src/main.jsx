@@ -26,3 +26,5 @@ import './service-dialogs.css';
 import "./service-catalog.css";
 
 import './search-popover.css';
+
+import './hover.css';

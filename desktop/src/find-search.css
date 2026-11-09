@@ -1,6 +1,6 @@
 /* Approved compact search form: quiet orbital artwork, one supporting line. */
 .desktop-app .find-search-card {
- background: var(--k-action-tint) url('/brand/illustrations/search-orbit.webp') right top / cover no-repeat;
+ background: var(--k-action-tint) url('/brand/illustrations/search-orbit.svg') right top / cover no-repeat;
  padding: 28px 36px;
  border-radius: 28px;
  gap: 20px;

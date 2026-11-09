@@ -1,0 +1,42 @@
+/* Desktop pointer feedback: shared brand colors and motion, without layout shifts. */
+@media (hover: hover) and (pointer: fine) {
+ .desktop-surface :is(.desktop-navigation button,.desktop-search-trigger,.desktop-destination-list>button,.counter-button,.filter-chip,.k-list-row,.k-surface-action,.k-service-tile,.recent-search-track>button,.viewed-hotels>button,.desktop-modal-close) {
+  transition:background-color var(--k-duration-instant) var(--k-ease-arrive),border-color var(--k-duration-instant) var(--k-ease-arrive),color var(--k-duration-instant) var(--k-ease-arrive),box-shadow var(--k-duration-instant) var(--k-ease-arrive);
+ }
+ .desktop-surface .keys-app button.k-button.primary:hover:not(:disabled):not(:active):not([aria-busy=true]):not(.is-success),
+ .desktop-surface .desktop-navigation .desktop-signin:hover:not(:active) {
+  background:color-mix(in srgb,var(--k-action-primary) 65%,var(--k-action-pressed));
+  color:var(--k-text-onAccent);
+ }
+ .desktop-surface .keys-app button.k-button.secondary:hover:not(:disabled):not(:active),
+ .desktop-surface .keys-app :is(.k-icon-button,.counter-button,.desktop-modal-close):hover:not(:disabled):not(:active) {
+  background:color-mix(in srgb,var(--k-action-tint) 90%,var(--k-action-primary));
+  border-color:color-mix(in srgb,var(--k-action-primary) 35%,var(--k-border-subtle));
+ }
+ .desktop-surface .keys-app button.k-button.ghost:hover:not(:disabled):not(:active),
+ .desktop-surface .desktop-navigation button:not(.desktop-brand):not(.desktop-signin):hover:not(:disabled),
+ .desktop-surface .desktop-app .desktop-search-trigger:hover:not(.is-active),
+ .desktop-surface .desktop-app .desktop-destination-list>button:hover,
+ .desktop-surface .keys-app :is(.k-list-row,.k-surface-action,.k-service-tile):hover:not(:disabled),
+ .desktop-surface .desktop-account-menu [role=menuitem]:hover {
+  background:var(--k-action-tint);
+ }
+ .desktop-surface .keys-app .filter-chip:hover:not(:disabled):not(:active) {
+  border-color:var(--k-action-primary);
+  background:var(--k-action-tint);
+ }
+ .desktop-surface .keys-app .recent-search-track>button:hover:not(:disabled),
+ .desktop-surface .keys-app .hotel-list-card:hover,
+ .desktop-surface .keys-app .rate-card:hover {
+  border-color:color-mix(in srgb,var(--k-action-primary) 45%,var(--k-border-subtle));
+  box-shadow:0 4px 16px #1938750d;
+ }
+ .desktop-surface .keys-app .viewed-hotels>button:hover {color:var(--k-action-primary);}
+ .desktop-surface .keys-app .viewed-hotels>button:hover>img {outline:2px solid var(--k-action-primary);outline-offset:-2px;}
+ .desktop-surface .keys-app :is(.text-action,.booking-link,.desktop-hotel-back):hover:not(:disabled) {color:var(--k-action-primary);text-decoration:underline;text-underline-offset:3px;}
+ .desktop-surface .keys-app .calendar-grid button:not(.selected):not(:disabled):hover {box-shadow:inset 0 0 0 1px var(--k-action-primary);}
+ .desktop-surface .keys-app .switch-row:hover:not(:disabled) .switch {box-shadow:0 0 0 3px color-mix(in srgb,var(--k-action-primary) 15%,transparent);}
+}
+@media (prefers-reduced-motion: reduce) {
+ .desktop-surface :is(.desktop-navigation button,.desktop-search-trigger,.desktop-destination-list>button,.counter-button,.filter-chip,.k-list-row,.k-surface-action,.k-service-tile,.recent-search-track>button,.viewed-hotels>button,.desktop-modal-close) {transition:none;}
+}
