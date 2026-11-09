@@ -1,4 +1,4 @@
-import {confirmPin,updateSettings} from './profile/settings.ts';
+import {confirmPin,hasDevicePin,updateSettings} from './profile/settings.ts';
 import {blankTraveler,type State} from './state.ts';
 import {ensureAccount,type Commerce} from './booking/model.ts';
 import {submitVerification,resolveVerification,verificationClaim} from './hotelier/verification.ts';
@@ -37,4 +37,10 @@ export async function prepareDeviceEntry(state:State,kind:DeviceEntry,commerce:C
  const next:State={...state,users:{...state.users,[phone]:user},activePhone:phone,request:null,verifiedPhone:null,securityRecoveryPhone:undefined,onboarded:true,hotelierOnboarding:false,hotelierTourTarget:undefined,hotelierInviter:undefined,hotelierReturnTo:'trips',returnTo:'trips',demoRegistrationPhone:undefined};
  const configured=await confirmPin(next,phone,DEMO_PIN,DEMO_PIN);
  return {state:updateSettings(configured,phone,{biometric:kind==='biometric'}),commerce:ensureAccount(commerce,phone),route:'trips'};
+}
+
+/** A device-entry demo is explicit, not a persistent startup mode for the website. */
+export function shouldLockOnStartup(state:State,desktop:boolean,cataloguePinConfigured=false){
+ const user=state.activePhone?state.users[state.activePhone]:undefined;
+ return !desktop&&!cataloguePinConfigured&&!!user&&!user.demoDeviceAccess&&hasDevicePin(user);
 }

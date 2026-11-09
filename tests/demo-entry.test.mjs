@@ -2,7 +2,7 @@ import {checkPin,confirmPin,profileSettings} from '../app/src/profile/settings.t
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {initialCommerce,ensureAccount} from '../app/src/booking/model.ts';
-import {prepareDemoEntry,prepareDeviceEntry} from '../app/src/demoEntry.ts';
+import {prepareDemoEntry,prepareDeviceEntry,shouldLockOnStartup} from '../app/src/demoEntry.ts';
 import {initialState,requestCode,verifyCode,completeName,decodeState} from '../app/src/state.ts';
 const existing=()=>completeName(verifyCode(requestCode(initialState(),'9990000001'),'123456'),'Мария');
 test('Новая регистрация стартует с онбординга и не заменяет сохранённый профиль',()=>{
@@ -72,4 +72,26 @@ test('Биометрия использует тот же демопрофиль
  assert.equal(profileSettings(first.state.users[phone]).biometric,true);assert.equal((await checkPin(first.state,phone,'1234')).valid,true);
  const again=await prepareDeviceEntry(first.state,'pin',first.commerce);assert.equal(again.state.activePhone,phone);assert.equal(Object.keys(again.state.users).length,2);assert.equal(profileSettings(again.state.users[phone]).biometric,false);
  assert.deepEqual(again.state.users[owner],before.users[owner]);
+});
+
+test('PIN запускается автоматически только для защищённого мобильного профиля',async()=>{
+ const empty=initialState();
+ assert.equal(shouldLockOnStartup(empty,false),false);
+ let state=existing();
+ assert.equal(shouldLockOnStartup(state,false),false);
+ state=await confirmPin(state,state.activePhone,'5678','5678');
+ const before=JSON.stringify(state);
+ assert.equal(shouldLockOnStartup(state,false),true);
+ assert.equal(shouldLockOnStartup(state,true),false);
+ assert.equal(shouldLockOnStartup(state,false,true),false);
+ assert.equal(JSON.stringify(state),before);
+});
+test('Демонстрационный PIN и биометрия не захватывают запуск после обновления или смены версии',async()=>{
+ for(const kind of ['pin','biometric']){
+  const demo=await prepareDeviceEntry(existing(),kind,initialCommerce());
+  const restored=decodeState(JSON.stringify(demo.state));
+  assert.equal(shouldLockOnStartup(restored,false),false);
+  assert.equal(shouldLockOnStartup(restored,true),false);
+  assert.equal((await checkPin(restored,restored.activePhone,'1234')).valid,true);
+ }
 });

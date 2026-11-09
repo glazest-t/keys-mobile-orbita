@@ -74,5 +74,5 @@ export function DeviceUnlock({state,setState,user,outcome,onOutcome,onRecovery,o
   <div className="profile-settings-intro"><p>{user.name}, с возвращением</p><h1>Введите PIN-код</h1></div>
   <PinCheck quick state={state} setState={setState} user={user} onSuccess={onUnlocked} onRecovery={onRecovery} onBiometric={biometricEnabled?()=>setPhase('biometric'):undefined}/>
  </motion.main>:null}
- </MobileScroll>{phase==='biometric'&&<LaunchSplash biometricOutcome={outcome} onPin={()=>setPhase('pin')} onDone={onUnlocked}/> }</div>{createPortal(<DemoTools primaryControls={entryControls}>{!entryControls&&<BiometricDemoControls value={outcome} onChange={onOutcome}/>}</DemoTools>,document.body)}</>;
+ </MobileScroll>{phase==='biometric'&&<LaunchSplash biometricOutcome={outcome} onPin={()=>setPhase('pin')} onDone={onUnlocked}/> }</div>{createPortal(<DemoTools desktop={isDesktop} floating primaryControls={entryControls}>{!entryControls&&<BiometricDemoControls value={outcome} onChange={onOutcome}/>}</DemoTools>,document.body)}</>;
 }

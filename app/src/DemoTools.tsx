@@ -37,15 +37,15 @@ function IntegrationSettings(){
 }
 
 /** Demonstration controls live outside the product and stay closed until requested. */
-export function DemoTools({children,primaryControls,desktop=false}:{children:ReactNode;primaryControls:ReactNode;desktop?:boolean}){
+export function DemoTools({children,primaryControls,desktop=false,floating=false}:{children:ReactNode;primaryControls:ReactNode;desktop?:boolean;floating?:boolean}){
  const dialog=useRef<HTMLDialogElement>(null);
  const close=()=>{dialog.current?.close();window.dispatchEvent(new Event('keys-demo-tools-close'));};
- if(desktop)return <aside id="desktop-demo-tools" className="demo-tools" aria-label="Инструменты демонстрации"><PrototypeVersion desktop/>{primaryControls}<div className="demo-compact-controls" role="group" aria-label="Дополнительные настройки"><IconSettings/><IntegrationSettings/><SearchLoadingSetting onPreview={close}/>{children}</div></aside>;
+ if(desktop&&!floating)return <aside id="desktop-demo-tools" className="demo-tools" aria-label="Инструменты демонстрации"><PrototypeVersion desktop/>{primaryControls}<div className="demo-compact-controls" role="group" aria-label="Дополнительные настройки"><IconSettings/><IntegrationSettings/><SearchLoadingSetting onPreview={close}/>{children}</div></aside>;
  return <div className="demo-launcher">
   <button className="demo-launch-button" aria-label="Открыть настройки прототипа" aria-haspopup="dialog" onClick={()=>dialog.current?.showModal()}><Icon name="settings" size={16} inheritColor/><span>Сценарии</span></button>
   <dialog ref={dialog} className="demo-tools demo-tools-dialog" aria-labelledby="demo-tools-title" onClick={e=>{if(e.target===e.currentTarget)close();}}>
    <header className="demo-tools-heading"><h2 id="demo-tools-title">Настройки прототипа</h2><button aria-label="Закрыть настройки" onClick={close}><Icon name="close" size={20} inheritColor/></button></header>
-   <div className="demo-tools-content" onClick={e=>{const target=(e.target as Element).closest('button,a');if(target&&!target.closest('.biometric-demo-controls,.demo-variant,.demo-search-loading,.demo-integration-settings,.demo-empty-trip-settings,[data-demo-keep-open]'))close();}}><PrototypeVersion desktop={false}/>{primaryControls}<div className="demo-compact-controls" role="group" aria-label="Дополнительные настройки"><IconSettings/><IntegrationSettings/><SearchLoadingSetting onPreview={close}/>{new URLSearchParams(location.search).has('catalogue')&&<a className="demo-return" href="?review=mobile#trips">Выйти из примера</a>}{children}</div></div>
+   <div className="demo-tools-content" onClick={e=>{const target=(e.target as Element).closest('button,a');if(target&&!target.closest('.biometric-demo-controls,.demo-variant,.demo-search-loading,.demo-integration-settings,.demo-empty-trip-settings,[data-demo-keep-open]'))close();}}><PrototypeVersion desktop={desktop}/>{primaryControls}<div className="demo-compact-controls" role="group" aria-label="Дополнительные настройки"><IconSettings/><IntegrationSettings/><SearchLoadingSetting onPreview={close}/>{new URLSearchParams(location.search).has('catalogue')&&<a className="demo-return" href="?review=mobile#trips">Выйти из примера</a>}{children}</div></div>
   </dialog>
  </div>;
 }
