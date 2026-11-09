@@ -62,3 +62,13 @@ for name in ['index.html','screens.html','documentation.html','docs/brand/index.
 for directory in ['проект в Клоде','docs/brand/reference','prototype/design-previews','desktop/design-previews']:
     assert not (ROOT/directory).exists(), directory
 print(f'OK: {len(scenes)} unique current previews; obsolete visual references absent')
+
+# Verify both blur declarations in the actual search-overlay rules, not a
+# substring match ("backdrop-filter" also occurs in "-webkit-backdrop-filter").
+for surface in ['prototype','desktop']:
+    css=''.join(p.read_text() for p in (ROOT/surface/'assets').glob('*.css'))
+    rules=[body for selector,body in re.findall(r'([^{}]+)\{([^{}]*)\}',css)
+           if '.sheet-overlay' in selector and '.search-journey' in selector]
+    for prop in ['backdrop-filter','-webkit-backdrop-filter']:
+        assert any(re.search(r'(?:^|;)\s*'+re.escape(prop)+r':\s*blur\(14px\)(?:;|$)',body) for body in rules), (surface, 'Missing search blur', prop)
+print('OK: search backdrop blur retained for standard browsers and Safari')
