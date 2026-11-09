@@ -223,4 +223,6 @@
 .desktop-hotel-reviews .review-hotel-reply strong{font:500 13px/19px Onest}
 .desktop-hotel-reviews .review-hotel-reply p{margin:4px 0 0;font:400 14px/21px Onest;color:var(--k-text-secondary)}
 
-.keys-app .desktop-nearby-date>.desktop-nearby-date-badge{position:absolute;top:0;left:14px;transform:translateY(-50%);box-shadow:0 0 0 3px #fff}
+.keys-app .desktop-nearby-date>.desktop-nearby-date-badge{position:absolute;top:0;left:14px;transform:translateY(-50%)}
+
+.keys-app .desktop-nearby-date[aria-pressed=true]>.desktop-nearby-date-badge{background:var(--k-action-primary);color:#fff}

@@ -32,7 +32,7 @@ export function DesktopNearbyDates({commerce,owner,onApply}:{commerce:Commerce;o
    {offers.map(offer=><button type="button" key={offer.search.checkIn} className="desktop-nearby-date" disabled={offer.priceMinor===null} aria-pressed={offer.selected} onClick={()=>{if(!offer.selected)setError(onApply(offer.search,pricedCommerce)||'');}}>
     <span className="desktop-nearby-date-label">{dateLabel(offer.search)}</span>
     <strong>{offer.priceMinor===null?'Нет номеров':`от ${formatMoney(offer.priceMinor)}`}</strong>
-    {offer.selected?<StatusBadge className="desktop-nearby-date-badge" tone="info" icon="check">Выбрано</StatusBadge>:offer.cheaper?<StatusBadge className="desktop-nearby-date-badge" tone="success" icon="discount">Дешевле</StatusBadge>:null}
+    {offer.selected?<StatusBadge className="desktop-nearby-date-badge" tone="info" icon={null}>Ваши даты</StatusBadge>:offer.cheaper?<StatusBadge className="desktop-nearby-date-badge" tone="success" icon={null}>Дешевле</StatusBadge>:null}
    </button>)}
   </Carousel>
   {error&&<p className="field-error" role="alert">{error}</p>}
