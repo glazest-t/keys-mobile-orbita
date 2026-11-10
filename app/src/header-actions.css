@@ -1,12 +1,15 @@
 /* Shared hotel and booking header controls, across mobile and desktop. */
-.keys-app :is(.hotel-page .hero-actions,.desktop-hotel-heading-actions,.record-details-header) :is(.k-icon-button,.save-hotel),
+.keys-app :is(.hotel-page .hero-actions,.desktop-hotel-heading-actions,.record-details-header,.trip-details-header) :is(.k-icon-button,.save-hotel),
 .keys-app .desktop-hotel-back .desktop-hotel-back-icon{
  width:44px;height:44px;min-width:44px;min-height:44px;flex:none;
  display:grid;place-items:center;padding:0;border:1px solid var(--k-border-subtle);
  border-radius:50%;background:#fff;color:var(--k-action-primary,#2f5bff);
  backdrop-filter:none;box-shadow:none;
 }
-.keys-app :is(.hotel-page .hero-actions,.desktop-hotel-heading-actions,.record-details-header) :is(.k-icon-button,.save-hotel) .k-icon,
+.keys-app :is(.hotel-page .hero-actions,.desktop-hotel-heading-actions,.record-details-header,.trip-details-header) :is(.k-icon-button,.save-hotel) .k-icon,
 .keys-app .desktop-hotel-back .desktop-hotel-back-icon .k-icon{
  width:20px!important;height:20px!important;color:inherit;
 }
+
+/* History trip details use the same trailing action as booking details. */
+.desktop-app .app-header.trip-details-header .header-title{flex:1;min-width:0}

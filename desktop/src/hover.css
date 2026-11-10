@@ -19,11 +19,20 @@
  .desktop-surface .desktop-app .desktop-destination-list>button:hover,
  .desktop-surface .keys-app :is(.k-list-row,.k-surface-action,.k-service-tile):hover:not(:disabled),
  .desktop-surface .desktop-account-menu [role=menuitem]:hover {
-  background:var(--k-action-tint);
+  background:var(--k-surface-hover,var(--k-action-tint));
+ }
+ /* Accent surfaces keep their white foreground and darken on hover. */
+ .desktop-surface .profile-points {
+  --k-surface-hover:linear-gradient(140deg,var(--k-action-pressed),#4938db);
  }
  .desktop-surface .keys-app .filter-chip:hover:not(:disabled):not(:active) {
   border-color:var(--k-action-primary);
   background:var(--k-action-tint);
+ }
+ .desktop-surface .keys-app :is(.filters-panel,.filter-tabs) .filter-chip.selected:hover:not(:disabled):not(:active) {
+  background:var(--k-action-pressed);
+  border-color:var(--k-action-pressed);
+  color:var(--k-text-onAccent);
  }
  .desktop-surface .keys-app .recent-search-track>button:hover:not(:disabled),
  .desktop-surface .keys-app .hotel-list-card:hover,

@@ -27,3 +27,13 @@
 .keys-app:not(.desktop-app) .trip-promo-copy>small{font:400 12px/18px var(--k-font-text);color:var(--k-text-secondary);white-space:normal}
 .keys-app:not(.desktop-app) .trip-promo-copy>span{display:flex;align-items:center;gap:6px;margin-top:auto;padding-top:16px;color:var(--k-action-primary);font:500 14px/20px var(--k-font-text);white-space:nowrap}
 .keys-app:not(.desktop-app) .trip-promo-copy>span .k-icon{width:16px;height:16px}
+
+/* Loading failure is distinct from an empty history and keeps the back action. */
+.keys-app .history-load-error{display:grid;place-items:center;min-height:380px;padding:24px 0}
+.keys-app .history-load-error .k-empty{width:100%;max-width:360px;margin:0 auto;padding:24px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px}
+.keys-app .history-load-error .icon-tile{width:72px;height:72px;border-radius:24px;background:var(--k-icon-surface,#eaf2ff)}
+.keys-app .history-load-error .icon-tile .k-icon{width:36px!important;height:36px!important}
+.keys-app .history-load-error h2{font:500 20px/28px Unbounded,sans-serif;letter-spacing:-.4px;margin:0}
+.keys-app .history-load-error p{font:400 15px/22px Onest,sans-serif;color:var(--k-text-secondary,#5a6072);margin:0}
+.keys-app .history-load-error .k-button{min-width:180px;margin-top:8px}
+.keys-app.desktop-app .history-load-error{min-height:440px}

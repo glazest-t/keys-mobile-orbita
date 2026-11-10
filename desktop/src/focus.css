@@ -1,0 +1,24 @@
+/* Keep keyboard focus visible inside clipped cards and horizontal rails. */
+.desktop-surface {
+ --k-focus-ring:var(--k-action-primary,#2f5bff);
+}
+.desktop-surface :is(.keys-app,.desktop-navigation,.desktop-account-menu,.demo-tools) :is(button,a,summary,[role="button"],[role="menuitem"],[role="option"],[role="tab"],[tabindex]:not([tabindex="-1"])):not(input,textarea,select):focus-visible {
+ outline:2px solid var(--k-focus-ring);
+ outline-offset:-3px;
+}
+/* Highlight the trip card once; secondary actions keep their own ring. */
+.desktop-surface .keys-app .history-timeline-card:has(:focus-visible) {
+ outline:none;
+}
+.desktop-surface .keys-app .history-trip-card:has(.history-trip-open:focus-visible),
+.desktop-surface .keys-app .history-timeline-card:has(.history-timeline-open:focus-visible) {
+ outline:2px solid var(--k-focus-ring);
+ outline-offset:-2px;
+}
+.desktop-surface .keys-app :is(.history-trip-card,.history-timeline-card) button:is(.history-trip-open,.history-timeline-open):focus-visible {
+ outline:none;
+}
+/* A light inset separates the cobalt focus ring from the accent surface. */
+.desktop-surface .keys-app :is(.profile-points,.k-button.primary,.filter-chip.selected):focus-visible {
+ box-shadow:inset 0 0 0 5px #fff;
+}

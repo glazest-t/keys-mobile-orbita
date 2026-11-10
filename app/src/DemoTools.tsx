@@ -1,3 +1,4 @@
+import {useDemoHistoryLoading,setDemoHistoryLoading} from './demoHistoryLoading';
 import {usePrototypeIcons} from './usePrototypeIcons';
 import {setPrototypeIcons} from './prototypeIcons';
 import {useDemoEmptyTrip} from './demoEmptyTrip';
@@ -26,6 +27,11 @@ function SearchLoadingSetting({onPreview}:{onPreview:()=>void}){
  return <details className="demo-search-loading"><summary>Загрузка выдачи{slow&&<span className="demo-setting-value">5 сек</span>}</summary><div className="demo-compact-body"><div className="demo-variant-options" role="group" aria-label="Скорость загрузки выдачи"><button type="button" aria-pressed={!slow} onClick={()=>setDemoSearchLoading(false)}>Обычная</button><button type="button" aria-pressed={slow} onClick={()=>setDemoSearchLoading(true)}>Медленная · 5 сек</button></div><button type="button" className="demo-loading-preview" onClick={()=>{setDemoSearchLoading(true);onPreview();location.hash='results';}}>Показать прелоудер</button></div></details>;
 }
 
+function HistoryLoadingSetting({onPreview}:{onPreview:()=>void}){
+ const {failed}=useDemoHistoryLoading();
+ return <details className="demo-history-loading" data-demo-keep-open><summary>История поездок{failed&&<span className="demo-setting-value">Ошибка</span>}</summary><div className="demo-compact-body"><div className="demo-variant-options" role="group" aria-label="Загрузка истории поездок"><button type="button" aria-pressed={!failed} onClick={()=>setDemoHistoryLoading(false)}>Загружена</button><button type="button" aria-pressed={failed} onClick={()=>setDemoHistoryLoading(true)}>Ошибка загрузки</button></div><small>«Повторить» восстановит список. Брони сохраняются.</small><button type="button" className="demo-loading-preview" onClick={()=>{setDemoHistoryLoading(true);onPreview();location.hash='profile-history';}}>Показать ошибку</button></div></details>;
+}
+
 function IconSettings(){
  const icons=usePrototypeIcons();
  return <details className="demo-icon-settings" data-demo-keep-open><summary>Иконки<span className="demo-setting-value">{icons==='new'?'Новые':'Старые'}</span></summary><div className="demo-compact-body"><div className="demo-variant-options" role="group" aria-label="Набор иконок">{([['old','Старые иконки'],['new','Новые иконки']] as const).map(([value,label])=><button key={value} type="button" aria-pressed={icons===value} onClick={()=>setPrototypeIcons(value)}>{label}</button>)}</div></div></details>;
@@ -40,12 +46,12 @@ function IntegrationSettings(){
 export function DemoTools({children,primaryControls,desktop=false,floating=false}:{children:ReactNode;primaryControls:ReactNode;desktop?:boolean;floating?:boolean}){
  const dialog=useRef<HTMLDialogElement>(null);
  const close=()=>{dialog.current?.close();window.dispatchEvent(new Event('keys-demo-tools-close'));};
- if(desktop&&!floating)return <aside id="desktop-demo-tools" className="demo-tools" aria-label="Инструменты демонстрации"><PrototypeVersion desktop/>{primaryControls}<div className="demo-compact-controls" role="group" aria-label="Дополнительные настройки"><IconSettings/><IntegrationSettings/><SearchLoadingSetting onPreview={close}/>{children}</div></aside>;
+ if(desktop&&!floating)return <aside id="desktop-demo-tools" className="demo-tools" aria-label="Инструменты демонстрации"><PrototypeVersion desktop/>{primaryControls}<div className="demo-compact-controls" role="group" aria-label="Дополнительные настройки"><IconSettings/><IntegrationSettings/><SearchLoadingSetting onPreview={close}/><HistoryLoadingSetting onPreview={close}/>{children}</div></aside>;
  return <div className="demo-launcher">
   <button className="demo-launch-button" aria-label="Открыть настройки прототипа" aria-haspopup="dialog" onClick={()=>dialog.current?.showModal()}><Icon name="settings" size={16} inheritColor/><span>Сценарии</span></button>
   <dialog ref={dialog} className="demo-tools demo-tools-dialog" aria-labelledby="demo-tools-title" onClick={e=>{if(e.target===e.currentTarget)close();}}>
    <header className="demo-tools-heading"><h2 id="demo-tools-title">Настройки прототипа</h2><button aria-label="Закрыть настройки" onClick={close}><Icon name="close" size={20} inheritColor/></button></header>
-   <div className="demo-tools-content" onClick={e=>{const target=(e.target as Element).closest('button,a');if(target&&!target.closest('.biometric-demo-controls,.demo-variant,.demo-search-loading,.demo-integration-settings,.demo-empty-trip-settings,[data-demo-keep-open]'))close();}}><PrototypeVersion desktop={desktop}/>{primaryControls}<div className="demo-compact-controls" role="group" aria-label="Дополнительные настройки"><IconSettings/><IntegrationSettings/><SearchLoadingSetting onPreview={close}/>{new URLSearchParams(location.search).has('catalogue')&&<a className="demo-return" href="?review=mobile#trips">Выйти из примера</a>}{children}</div></div>
+   <div className="demo-tools-content" onClick={e=>{const target=(e.target as Element).closest('button,a');if(target&&!target.closest('.biometric-demo-controls,.demo-variant,.demo-search-loading,.demo-integration-settings,.demo-empty-trip-settings,[data-demo-keep-open]'))close();}}><PrototypeVersion desktop={desktop}/>{primaryControls}<div className="demo-compact-controls" role="group" aria-label="Дополнительные настройки"><IconSettings/><IntegrationSettings/><SearchLoadingSetting onPreview={close}/><HistoryLoadingSetting onPreview={close}/>{new URLSearchParams(location.search).has('catalogue')&&<a className="demo-return" href="?review=mobile#trips">Выйти из примера</a>}{children}</div></div>
   </dialog>
  </div>;
 }

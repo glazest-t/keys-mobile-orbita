@@ -28,3 +28,4 @@ import "./service-catalog.css";
 import './search-popover.css';
 
 import './hover.css';
+import './focus.css';

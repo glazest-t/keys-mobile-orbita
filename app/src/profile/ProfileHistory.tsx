@@ -1,3 +1,4 @@
+import {useDemoHistoryLoading,setDemoHistoryLoading} from '../demoHistoryLoading';
 import {AddBookingSheet} from './AddBookingSheet';
 import {canManageBooking} from '../booking/bookingShare';
 import {CancellationPanel} from '../booking/Catalog';
@@ -5,7 +6,7 @@ import {TripDetails} from './TripDetails';
 import {DialogActions} from '../dialogActions';
 import {isDesktop} from '../desktop/surface';
 import {HistoryTimeline} from './HistoryTimeline';
-import {useState,type Dispatch,type SetStateAction} from 'react';
+import {useEffect,useState,type Dispatch,type SetStateAction} from 'react';
 import {BottomSheet,Carousel,KeyboardTextarea,useKeyboard} from '../mobile';
 import {Button,Empty,Field,Icon,IconButton,Row} from '../ui';
 import {cancelBooking,type Commerce} from '../booking/model';
@@ -21,9 +22,19 @@ export function ProfileHistory({commerce:s,setCommerce,owner,route,onNavigate:go
  const [adding,setAdding]=useState(false),[remove,setRemove]=useState(false),[cancel,setCancel]=useState(false),[cancelError,setCancelError]=useState('');
  const trips=historyTrips(s,owner,isDesktop?'':query,filter);
  const filteredEmpty=isDesktop&&filter!=='Все';
+ const {failed:historyFailed,key:historyLoadKey}=useDemoHistoryLoading();
+ const [retryKey,setRetryKey]=useState<string|null>(null);
+ const retrying=historyFailed&&retryKey===historyLoadKey;
+ useEffect(()=>{
+  if(!retrying)return;
+  const timer=setTimeout(()=>setDemoHistoryLoading(false),900);
+  return()=>clearTimeout(timer);
+ },[retrying,historyLoadKey]);
+
 
  const download=()=>{if(!b)return;const url=URL.createObjectURL(new Blob([historySummary(b)],{type:'text/plain;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='keys-trip-'+b.id.slice(0,8)+'.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);onToast('Сводка сохранена');};
  const addBookingAction=<button className="favorite-new text-action" onClick={()=>{keyboard.hide();setError('');setAdding(true);}}><Icon name="plus" size={18} inheritColor/>Добавить бронь</button>;
+ if(route==='profile-history'&&historyFailed)return <div className="profile-history-page history-load-failed"><header className="history-toolbar"><IconButton name="back" label="Назад" onClick={()=>go(s.historyReturnTo||'profile')}/>{isDesktop&&<h1>История поездок</h1>}</header>{!isDesktop&&<h1>История поездок</h1>}<div className="history-load-error" role="status" aria-live="polite"><Empty icon="error" title="Не удалось загрузить поездки" action={<Button busy={retrying} busyLabel="Загружаем…" onClick={()=>setRetryKey(historyLoadKey)}>Повторить</Button>}>Проверьте подключение к интернету и попробуйте ещё раз.</Empty></div></div>;
  if(route==='profile-history')return <div className="profile-history-page"><header className="history-toolbar"><IconButton name="back" label="Назад" onClick={()=>go(s.historyReturnTo||'profile')}/>{isDesktop&&<h1>История поездок</h1>}{!isDesktop&&addBookingAction}</header>{!isDesktop&&<h1>История поездок</h1>}{!isDesktop&&<div className="history-search"><Field label="Отель или город" placeholder="Поиск поездки" value={query} onChange={e=>browse({query:e.target.value})}/></div>}<div className={isDesktop?"desktop-history-controls":"history-controls"}><Carousel ariaLabel="Статус поездки" contentClassName="history-filters filter-tabs">{['Все','Предстоящие','Завершённые','Отменённые'].map(t=><button className={'filter-chip '+(filter===t?'selected':'')} key={t} aria-pressed={filter===t} onClick={()=>{keyboard.hide();browse({filter:t});}}>{t}</button>)}</Carousel>{isDesktop&&addBookingAction}</div>{trips.length?<HistoryTimeline trips={trips} onOpen={id=>go('profile-trip/'+id)} onRepeat={onHotel}/>:<Empty icon="luggage" title={filteredEmpty?'Нет поездок по этим условиям':query?'Поездка не найдена':'Здесь будет история'} action={<Button variant="secondary" onClick={()=>filteredEmpty?browse({query:'',filter:'Все'}):go('find')}>{filteredEmpty?'Сбросить фильтры':'Найти'}</Button>}>{filteredEmpty?'Измените поиск или посмотрите все поездки.':query?'Попробуйте другое название отеля или города.':'Предстоящие и прошлые поездки появятся здесь.'}</Empty>}<AddBookingSheet commerce={s} setCommerce={setCommerce} owner={owner} open={adding} onClose={()=>setAdding(false)} onAdded={()=>{setQuery('');setFilter('Все');onToast('Бронь добавлена');}}/></div>;
  if(!b)return <Empty icon="luggage" title="Поездка недоступна" action={<Button onClick={()=>go('profile-history')}>К истории</Button>}>Откройте поездку из своего профиля.</Empty>;
  const canChange=canManageBooking(s,owner,b)&&!b.stay&&b.operation.status!=='cancelled'&&Date.now()<Date.parse(b.draft.search.checkIn+'T15:00:00+03:00');
