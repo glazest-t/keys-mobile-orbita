@@ -53,6 +53,7 @@
 /* Actions on the blue trip card need their own contrasting surface. */
 @media (hover: hover) and (pointer: fine) {
  .desktop-surface .keys-app button.k-button.secondary.booking-card-action:hover:not(:disabled):not(:active){background:#2944c6;color:#fff;border-color:#ffffff80}
+ .desktop-surface .keys-app .upcoming-payment .booking-balance-link:hover:not(:disabled){color:#eaf2ff;background:transparent;text-decoration:none}
 }
 @media (hover:hover) and (pointer:fine){
  .desktop-surface .keys-app .room-rate-price>button:hover:not(:disabled):not(:active){background:var(--k-action-pressed);color:#fff}
