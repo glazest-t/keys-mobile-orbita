@@ -1,13 +1,19 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {initialCommerce,ensureAccount,startDraft,quoteDraft,commitBooking,cancellationPreview} from '../app/src/booking/model.ts';
-import {cancellationSettings,cancellationPolicyFor,bookingCancellationPolicy,policyDeadline,policyPenalty,cancellationTerms} from '../app/src/booking/bookingCancellation.ts';
+import {cancellationSettings,cancellationPolicyFor,bookingCancellationPolicy,policyDeadline,policyPenalty,cancellationSummary,cancellationTerms} from '../app/src/booking/bookingCancellation.ts';
 const policy={daysBefore:1,time:'08:00:00',utcOffset:'+03:00',penalty:{kind:'first_night'}};
 test('Точный срок и UTC смещение, как в примере пользователя',()=>{
  assert.equal(policyDeadline('2026-11-15',policy),'2026-11-14T05:00:00.000Z');
- assert.match(cancellationTerms('2026-11-15',policy)[0],/14\.11\.2026 08:00:00 \(UTC \+03:00\)/);
+ assert.match(cancellationTerms('2026-11-15',policy)[0],/14\.11\.2026 08:00 \(UTC \+03:00\)/);
  assert.match(cancellationTerms('2026-11-15',policy)[1],/стоимость первых суток/);
  assert.equal(policyDeadline('2026-11-15',{...policy,utcOffset:'+05:30'}),'2026-11-14T02:30:00.000Z');
+});
+test('Краткий срок совпадает с подробным в часовом поясе отеля',()=>{
+ const p={...policy,time:'23:59:00',utcOffset:'-04:00'};
+ assert.equal(cancellationSummary('2026-12-07',p),'Бесплатная отмена до 6 декабря, 23:59');
+ assert.match(cancellationTerms('2026-12-07',p)[0],/06\.12\.2026 23:59 \(UTC -04:00\)/);
+ assert.equal(cancellationSummary('2026-12-07',{...p,penalty:{kind:'none'}}),'Бесплатная отмена до заезда');
 });
 test('Варианты удержания: первые сутки, процент, сумма, всё проживание и бесплатно',()=>{
  for(const [penalty,want] of [[{kind:'first_night'},10000],[{kind:'percent',value:30},6000],[{kind:'fixed',value:4500},4500],[{kind:'full_stay'},20000],[{kind:'none'},0]])assert.equal(policyPenalty(20000,2,{...policy,penalty}),want);

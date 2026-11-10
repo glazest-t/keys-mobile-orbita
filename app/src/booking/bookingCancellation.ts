@@ -12,11 +12,20 @@ export function policyPenalty(lodgingMinor:number,nights:number,p:CancellationPo
  const value=p.penalty.value??0;
  return Math.min(lodgingMinor,Math.max(0,Math.round(p.penalty.kind==='none'?0:p.penalty.kind==='full_stay'?lodgingMinor:p.penalty.kind==='percent'?lodgingMinor*value/100:p.penalty.kind==='fixed'?value:lodgingMinor/nights)));
 }
+function localDeadline(checkIn:string,p:CancellationPolicy){
+ const sign=p.utcOffset.startsWith('-')?-1:1,[hours,minutes]=p.utcOffset.slice(1).split(':').map(Number);
+ return new Date(Date.parse(policyDeadline(checkIn,p))+sign*(hours*60+minutes)*60000);
+}
+export function cancellationSummary(checkIn:string,p:CancellationPolicy){
+ if(p.penalty.kind==='none')return 'Бесплатная отмена до заезда';
+ const date=localDeadline(checkIn,p),iso=date.toISOString();
+ const day=new Intl.DateTimeFormat('ru-RU',{day:'numeric',month:'long',timeZone:'UTC'}).format(date);
+ return `Бесплатная отмена до ${day}, ${iso.slice(11,16)}`;
+}
 export function cancellationTerms(checkIn:string,p:CancellationPolicy){
  if(p.penalty.kind==='none')return ['Бесплатная отмена бронирования возможна до заезда.'];
- const sign=p.utcOffset.startsWith('-')?-1:1,[hours,minutes]=p.utcOffset.slice(1).split(':').map(Number);
- const local=new Date(Date.parse(policyDeadline(checkIn,p))+sign*(hours*60+minutes)*60000).toISOString();
- const [year,month,day]=local.slice(0,10).split('-'),time=local.slice(11,19),deadline=`${day}.${month}.${year} ${time} (UTC ${p.utcOffset})`;
+ const local=localDeadline(checkIn,p).toISOString();
+ const [year,month,day]=local.slice(0,10).split('-'),time=local.slice(11,local.slice(17,19)==='00'?16:19),deadline=`${day}.${month}.${year} ${time} (UTC ${p.utcOffset})`;
  const fee=p.penalty.kind==='first_night'?'стоимость первых суток':p.penalty.kind==='full_stay'?'полная стоимость проживания':p.penalty.kind==='percent'?`${p.penalty.value}% стоимости проживания`:new Intl.NumberFormat('ru-RU',{style:'currency',currency:'RUB',maximumFractionDigits:2}).format((p.penalty.value??0)/100);
  return [`Бесплатная отмена бронирования возможна до ${deadline}.`,`При отмене бронирования после ${deadline} взимается ${fee}.`];
 }

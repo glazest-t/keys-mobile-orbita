@@ -11,6 +11,9 @@
 .desktop-app .record-card{padding:20px;gap:14px}
 .desktop-app .record-section h2{font:500 18px/26px Onest,sans-serif;padding:0}
 .desktop-app .record-actions{flex-direction:row;flex-wrap:wrap;align-items:center;gap:12px;padding-top:12px}
+.desktop-app .record-details-column{display:flex;flex-direction:column;gap:24px;min-width:0}
+.desktop-app .record-confirmation-documents .k-row{padding:0;min-height:44px;gap:12px}
+.desktop-app .record-confirmation-documents .icon-tile{color:var(--k-action-primary)}
 .desktop-app .record-actions .k-button{width:auto;flex:1;min-width:180px;height:48px;min-height:48px}
 .desktop-app .desktop-flow:is([data-step^="change-booking-"],[data-step="stay-review"],[data-step="stay-problem"],[data-step="stay-bill"],[data-step^="trip-documents-"],[data-step^="document-"]){max-width:880px}
 .desktop-app .desktop-flow:is([data-step^="change-booking-"],[data-step="stay-review"],[data-step="stay-problem"],[data-step="stay-bill"],[data-step^="trip-documents-"],[data-step^="document-"])>.desktop-flow-layout{display:block}

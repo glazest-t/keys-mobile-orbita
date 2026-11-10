@@ -3,7 +3,7 @@ import type {BookingQuote} from '../../../prototype/domain/booking.mjs';
 import {formatMoney,type Draft,type Booking,type Commerce} from './model';
 import {bookingCostLines,bookingPaymentView} from './bookingPaymentView';
 import {BookingPaymentStatus} from './BookingPaymentStatus';
-import {Icon} from '../ui';
+import {StatusBadge} from '../ui';
 import './payment-summary.css';
 
 export function MoneyRow({label,amount,detail,tone='',children}:{label:string;amount?:number;detail?:string;tone?:string;children?:ReactNode}){
@@ -17,11 +17,11 @@ function CostLines({draft,quote,headings=true}:{draft:Draft;quote:BookingQuote;h
 }
 function PointsLines({quote,extra=0,confirmed=false}:{quote:BookingQuote;extra?:number;confirmed?:boolean}){
  if(!quote.applied.pointsMinor&&!extra)return null;
- return <section className="payment-summary-group"><h3>{confirmed?'Списано баллов':'Оплата баллами'}</h3>
- {quote.applied.hotelPoints>0&&<MoneyRow label="Баллы отеля" amount={-quote.applied.hotelPoints*100} tone="saving"/>}
- {quote.applied.keysPoints>0&&<MoneyRow label="Баллы «Ключей»" amount={-quote.applied.keysPoints*100} tone="saving"/>}
+ return <section className="payment-summary-group">{!confirmed&&<h3>Оплата баллами</h3>}
+ {quote.applied.hotelPoints>0&&<MoneyRow label={confirmed?'Списано баллов отеля':'Баллы отеля'} amount={-quote.applied.hotelPoints*100} tone="saving"/>}
+ {quote.applied.keysPoints>0&&<MoneyRow label={confirmed?'Списано баллов «Ключей»':'Баллы «Ключей»'} amount={-quote.applied.keysPoints*100} tone="saving"/>}
  {extra>0&&<MoneyRow label="Баллы за услуги вне брони" amount={-extra} tone="saving"/>}
- <p className="payment-summary-note">1 балл = 1 ₽</p></section>;
+ {!confirmed&&<p className="payment-summary-note">1 балл = 1 ₽</p>}</section>;
 }
 export function PaymentSchedule({draft,quote}:{draft:Draft;quote:BookingQuote}){
  const now=quote.paymentSchedule?.nowMinor??(draft.method==='at_hotel'?0:quote.cashDueMinor),later=quote.cashDueMinor-now;
@@ -35,7 +35,7 @@ export function DraftPaymentSummary({draft,quote,pointsControl,showSettlement=tr
 }
 export function BookingPaymentSummary({booking:b,commerce,setCommerce,failNext,onPaymentAttempt,children}:{booking:Booking;commerce:Commerce;setCommerce:Dispatch<SetStateAction<Commerce>>;failNext?:boolean;onPaymentAttempt?:()=>void;children?:ReactNode}){
  const v=bookingPaymentView(b),q=b.quote;
- return <section className="booking-payment-card"><header><h2>Оплата бронирования</h2><span className={'payment-summary-status '+(v.cancelled?'neutral':v.due?'pending':'paid')}><Icon name={v.cancelled?'close':v.due?'pending':'check'} size={16} inheritColor/>{v.status}</span></header>
+ return <section className="booking-payment-card"><header><h2>Оплата бронирования</h2><StatusBadge tone={v.cancelled?'neutral':v.due?'warning':'success'} icon={v.cancelled?'close':v.due?'pending':'check'}>{v.status}</StatusBadge></header>
  <div className="payment-summary"><CostLines draft={b.draft} quote={q} headings={false}/>
  {v.groups.length>0&&<section className="payment-summary-group"><h3>Услуги вне брони</h3>{v.groups.map(s=><MoneyRow key={s.id} label={s.title} detail={s.status} amount={s.amount}/>)}{!v.cancelled&&v.serviceRefunds.cash>0&&<MoneyRow label="Возвращено за отменённые услуги" amount={v.serviceRefunds.cash}/>} {!v.cancelled&&v.serviceRefunds.points>0&&<MoneyRow label="Возвращено баллов за услуги">{(v.serviceRefunds.points/100).toLocaleString('ru-RU')} баллов</MoneyRow>}{v.retained>0&&<MoneyRow label="Удержано за отмену услуг" amount={v.retained}/>}{v.groups.some(g=>["Ждёт подтверждения","Нужна проверка","Отменено","Отклонено"].includes(g.status))&&<p className="payment-summary-note">В итог входят только подтверждённые услуги и удержания за отмену.</p>}</section>}
  {v.serviceTotal>0&&!v.cancelled&&<MoneyRow label="Всего с услугами" amount={v.total} tone="subtotal"/>}

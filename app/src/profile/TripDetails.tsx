@@ -9,12 +9,9 @@ import {mealLabel} from '../booking/searchFacets';
 import {wishSummary} from '../booking/bookingParty';
 import {Button,Icon,Row} from '../ui';
 import {BookingHotelContacts} from '../booking/BookingHotelContacts';
-import {BookingPaymentStatus,BookingPaymentBadge} from '../booking/BookingPaymentStatus';
-import {catalog,cancellationDeadline,formatMoney,guestLabel,hotelPhoto,type Booking,type Commerce} from '../booking/model';
+import {catalog,formatMoney,guestLabel,hotelPhoto,type Booking,type Commerce} from '../booking/model';
 import {rateTitle} from '../booking/roomOffers';
 import {tripFacts} from '../booking/trip';
-import {serviceTitle} from '../booking/serviceSettlement';
-import {ServiceStatus} from '../booking/ServiceStatus';
 import {HistoryStatus} from './HistoryTimeline';
 import {isPastTrip} from './history';
 import './trip-details.css';
@@ -25,7 +22,6 @@ const date=(value:string)=>new Date(value+'T12:00:00').toLocaleDateString('ru-RU
 export function TripDetails({booking:b,commerce,setCommerce,onBooking,onRepeat,onDownload,onReview,onRemove,bottomActions,actions,stickyActions,resources,failNext,onPaymentAttempt}:Props){
  const hotel=catalog.hotels.find(h=>h.id===b.draft.hotelId),room=catalog.rooms.find(r=>r.id===b.draft.roomId),rate=catalog.rates.find(r=>r.id===b.draft.rateId),facts=tripFacts(b);
  const cancelled=b.operation.status==='cancelled',completed=b.stay?.status==='checked_out',past=isPastTrip(b);
- const included=b.draft.services.map(id=>catalog.services.find(s=>s.id===id)).filter(Boolean);
  const overview=<section className="trip-detail-overview" aria-label="О поездке">
     <div className="trip-detail-hotel"><img src={hotelPhoto(b.draft.hotelId)} alt={hotel?.name||'Отель'}/><div><HistoryStatus booking={b}/><h1>{hotel?.name}</h1><span className="trip-detail-number">№ {bookingNumber(b)}</span></div></div>
     <div className="trip-detail-dates"><div><span>Заезд</span><strong>{date(b.draft.search.checkIn)}</strong><small>с {facts.checkInTime}</small></div><div><span>Выезд</span><strong>{date(b.draft.search.checkOut)}</strong><small>до {facts.checkOutTime}</small></div></div>
@@ -33,7 +29,6 @@ export function TripDetails({booking:b,commerce,setCommerce,onBooking,onRepeat,o
     <div className="trip-detail-guests"><span className="icon-tile"><Icon name="guests" size={22} inheritColor/></span><div><h2>{guestLabel(b.draft.search)}</h2><p>{[b.draft.contact,...(b.draft.additionalGuest?[b.draft.additionalGuest]:[]),...(b.draft.otherGuests||[])].map(g=>[g.name,g.surname].filter(Boolean).join(' ')).filter(Boolean).join(', ')}</p></div></div>
    </section>;
  const contacts=<section className="trip-detail-panel trip-detail-contacts"><h2>Контакты отеля</h2><BookingHotelContacts hotelId={b.draft.hotelId}/></section>;
- const services=(included.length>0||!!b.serviceRequests?.length)&&<section className="trip-detail-panel trip-detail-services"><h2>Услуги в поездке</h2><div className="trip-detail-service-list">{included.map(s=><div key={s!.id}><span>{s!.title}</span><small>В составе брони</small></div>)}{b.serviceRequests?.map(r=><div key={r.id}><span>{serviceTitle(r)}</span><span className="trip-detail-service-state"><ServiceStatus booking={b} request={r}/><small>{r.amountMinor?formatMoney(r.amountMinor):'Бесплатно'}</small></span></div>)}</div></section>;
  const terms=!isDesktop&&<section className="trip-detail-panel trip-detail-terms"><h2>Условия проживания</h2><div className="trip-detail-money"><div><span>Питание</span><strong>{rate&&mealLabel(rate.mealPlan)}</strong></div><div><span>Wi-Fi</span><strong>Включён</strong></div></div><CancellationTerms booking={b}/></section>;
  const wishes=!isDesktop&&wishSummary(b.draft)&&<section className="trip-detail-panel trip-detail-wishes"><h2>Пожелания к проживанию</h2><p>{wishSummary(b.draft)}</p><p>Отель учтёт пожелания при наличии возможности.</p></section>;
  const changes=!isDesktop&&!!b.changes?.length&&<section className="trip-detail-panel trip-detail-changes"><h2>Изменения брони</h2>{b.changes.map(c=><div key={c.id}><p>{new Date(c.at).toLocaleDateString('ru-RU')}</p><p>{c.paidMinor?`Доплачено ${formatMoney(c.paidMinor)}`:c.refundMinor?`Возврат ${formatMoney(c.refundMinor)}`:'Изменения сохранены'}{c.returnedHotelPoints+c.returnedKeysPoints>0?` · возвращено ${c.returnedHotelPoints+c.returnedKeysPoints} баллов`:''}</p></div>)}</section>;
@@ -45,6 +40,6 @@ export function TripDetails({booking:b,commerce,setCommerce,onBooking,onRepeat,o
  const documents=<section className="trip-detail-panel trip-detail-resources" aria-label="Документы поездки">{resources??(onDownload&&<Row icon="document" title="Документы поездки" onClick={onDownload}/>)}</section>;
  const remove=onRemove&&<button className="trip-detail-remove" onClick={onRemove}><Icon name="trash" size={18} inheritColor/>Удалить бронь</button>;
  // Mobile DOM order matches the visual reading and keyboard navigation order.
- if(!isDesktop)return <div className="desktop-trip-detail mobile-trip-detail">{overview}{contacts}{terms}{services}{wishes}{changes}{review}{documents}{payment}{bottomActions&&<div className="trip-detail-bottom-actions">{bottomActions}</div>}{remove}{stickyActions&&<TripDetailsActions>{stickyActions}</TripDetailsActions>}</div>;
- return <div className="desktop-trip-detail"><div className="trip-detail-main">{overview}{contacts}{services}{review}</div><aside className="trip-detail-side" aria-label="Оплата и действия">{payment}{documents}{remove}</aside></div>;
+ if(!isDesktop)return <div className="desktop-trip-detail mobile-trip-detail">{overview}{contacts}{terms}{payment}{wishes}{changes}{review}{documents}{bottomActions&&<div className="trip-detail-bottom-actions">{bottomActions}</div>}{remove}{stickyActions&&<TripDetailsActions>{stickyActions}</TripDetailsActions>}</div>;
+ return <div className="desktop-trip-detail"><div className="trip-detail-main">{overview}{contacts}{review}</div><aside className="trip-detail-side" aria-label="Оплата и действия">{payment}{documents}{remove}</aside></div>;
 }
