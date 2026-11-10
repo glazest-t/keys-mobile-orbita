@@ -9,9 +9,11 @@ import {setPrototypeVariant} from './prototypeVariant';
 import {usePrototypeVariant} from './usePrototypeVariant';
 import {useEffect,useRef,type ReactNode} from 'react';
 import {Icon} from './ui';
+import {FULL_EDITION_NOTICE} from './PrototypeEditionNotice';
 import './demo-tools.css';
 
 function PrototypeVersion({desktop}:{desktop:boolean}){
+ const warning=useRef<HTMLDialogElement>(null);
  const variant=usePrototypeVariant();
  const icons=usePrototypeIcons();
  useDemoSearchLoading();
@@ -19,7 +21,7 @@ function PrototypeVersion({desktop}:{desktop:boolean}){
  useDemoEmptyTrip();
  useEffect(()=>{setPrototypeVariant(variant);},[variant]);
  const href=(desktop:boolean)=>{const url=new URL(location.href);url.searchParams.set('variant',variant);url.searchParams.set('icons',icons);return prototypeVersionUrl(url.href,import.meta.env.BASE_URL,desktop,import.meta.env.DEV);};
- return <><section className="demo-version demo-variant"><h3>Вариант прототипа</h3><div className="demo-variant-options" role="group" aria-label="Вариант прототипа">{([['full','Полный'],['november','Ноябрь']] as const).map(([value,label])=><button key={value} type="button" aria-pressed={variant===value} onClick={()=>setPrototypeVariant(value)}>{label}</button>)}</div></section><section className="demo-version"><h3>Версия прототипа</h3><nav aria-label="Версия прототипа"><a href={href(false)} aria-current={!desktop?'page':undefined} onClick={e=>{if(!desktop)e.preventDefault();}}>Мобильная версия</a><a href={href(true)} aria-current={desktop?'page':undefined} onClick={e=>{if(desktop)e.preventDefault();}}>Десктопная</a></nav></section></>;
+ return <><section className="demo-version demo-variant"><h3>Вариант прототипа</h3><div className="demo-variant-options" role="group" aria-label="Вариант прототипа">{([['full','Полный'],['november','Ноябрь']] as const).map(([value,label])=><button key={value} type="button" aria-pressed={variant===value} onClick={()=>{setPrototypeVariant(value);if(value==='full')warning.current?.showModal();}}>{label}</button>)}</div><dialog ref={warning} className="prototype-edition-warning" aria-labelledby="prototype-edition-warning-title" aria-describedby="prototype-edition-warning-text"><h2 id="prototype-edition-warning-title">Полная версия</h2><p id="prototype-edition-warning-text">{FULL_EDITION_NOTICE}</p><button type="button" onClick={()=>warning.current?.close()}>Понятно</button></dialog></section><section className="demo-version"><h3>Версия прототипа</h3><nav aria-label="Версия прототипа"><a href={href(false)} aria-current={!desktop?'page':undefined} onClick={e=>{if(!desktop)e.preventDefault();}}>Мобильная версия</a><a href={href(true)} aria-current={desktop?'page':undefined} onClick={e=>{if(desktop)e.preventDefault();}}>Десктопная</a></nav></section></>;
 }
 
 function SearchLoadingSetting({onPreview}:{onPreview:()=>void}){
