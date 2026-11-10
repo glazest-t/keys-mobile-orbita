@@ -29,3 +29,5 @@ import './search-popover.css';
 
 import './hover.css';
 import './focus.css';
+
+import './payment-summary.css';

@@ -1,7 +1,7 @@
 .booking-payment-status{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px 12px;min-width:0;width:100%}
 .booking-payment-status .k-status{white-space:nowrap;flex-shrink:0}
 .booking-payment-status .booking-balance-link{font:500 13px/18px Onest,sans-serif;white-space:nowrap;padding:6px 0;min-height:32px;color:var(--k-action-primary);background:none;border:0}
-.booking-payment-status .booking-balance-link:hover{text-decoration:underline}
+.booking-payment-status .booking-balance-link:hover{color:var(--k-action-pressed);text-decoration:none}
 .booking-payment-status .booking-payment-remaining{font:500 13px/18px Onest,sans-serif;white-space:nowrap}
 .booking-balance-payment{display:flex;flex-direction:column;gap:20px}
 .booking-balance-payment h2{font:500 22px/30px Onest,sans-serif;margin:0}

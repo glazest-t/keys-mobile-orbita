@@ -1,0 +1,28 @@
+.keys-app .payment-summary{display:flex;flex-direction:column;gap:18px;min-width:0;width:100%;font:400 14px/21px Onest,sans-serif;color:var(--k-text-primary)}
+.keys-app .payment-summary-group{display:flex;flex-direction:column;gap:10px;margin:0;padding:0;min-width:0}
+.keys-app .payment-summary h3{margin:0;font:600 14px/20px Onest,sans-serif;color:var(--k-text-primary)}
+.keys-app .payment-summary-row{display:flex;align-items:baseline;justify-content:space-between;gap:16px;min-width:0}
+.keys-app .payment-summary-row>span{text-align:left;min-width:0;overflow-wrap:anywhere;color:var(--k-text-secondary)}
+.keys-app .payment-summary-row>span>small{text-align:left;display:block;margin-top:3px;font:400 12px/17px Onest,sans-serif;color:var(--k-text-secondary)}
+.keys-app .payment-summary-row>strong{flex:none;white-space:nowrap;font:500 14px/21px Onest,sans-serif;text-align:right;letter-spacing:0}
+.keys-app .payment-summary-row.saving>strong{color:#21805b}
+.keys-app .payment-summary-row.subtotal{padding-top:14px;border-top:1px solid var(--k-border-subtle)}
+.keys-app .payment-summary-row.subtotal>span{color:var(--k-text-primary);font-weight:500}
+.keys-app .payment-summary-row.total>span{color:var(--k-text-primary);font-weight:600}
+.keys-app .payment-summary-row.total>strong{font:600 22px/28px Onest,sans-serif;letter-spacing:-.4px}
+.keys-app .payment-summary-settlement{display:flex;flex-direction:column;gap:12px;padding:16px;border-radius:16px;background:var(--k-icon-surface,#eaf2ff)}
+.keys-app .payment-summary p.payment-summary-note{margin:0;font:400 12px/18px Onest,sans-serif;color:var(--k-text-secondary);white-space:normal}
+.keys-app .booking-payment-card{padding:24px;border:1px solid var(--k-border-subtle);border-radius:24px;background:#fff;display:flex;flex-direction:column;gap:20px;min-width:0}
+.keys-app .booking-payment-card>header{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.keys-app .booking-payment-card>header>h2{font:500 18px/26px Onest,sans-serif;letter-spacing:0;margin:0}
+.keys-app .payment-summary-status{display:inline-flex;align-items:center;gap:5px;font:400 12px/18px Onest,sans-serif;color:var(--k-text-secondary)}
+.keys-app .payment-summary-status .k-icon{flex:none}
+.keys-app .payment-summary-status.paid .k-icon{color:#21805b}
+.keys-app .payment-summary-status.pending .k-icon{color:#b77b08}
+.keys-app .booking-payment-card>.k-button{width:100%;max-width:none}
+.keys-app .payment-summary .booking-payment-status{justify-content:flex-start}
+.keys-app .payment-summary .booking-payment-status .booking-balance-link{font-weight:500;font-size:14px}
+.keys-app .mobile-trip-detail>.booking-payment-card{order:10;padding:16px;border-radius:22px}
+.keys-app .booking-panel:has(>.payment-summary){padding:16px}
+.desktop-app .booking-payment-card .booking-reward{margin:0}
+@media(max-width:370px){.keys-app .payment-summary-row{gap:8px}.keys-app .payment-summary-row.total>strong{font-size:20px}.keys-app .payment-summary-settlement{padding:12px}}

@@ -226,3 +226,49 @@
 .keys-app .desktop-nearby-date>.desktop-nearby-date-badge{position:absolute;top:0;left:14px;transform:translateY(-50%)}
 
 .keys-app .desktop-nearby-date[aria-pressed=true]>.desktop-nearby-date-badge{background:var(--k-action-primary);color:#fff}
+
+/* Four neighbouring prices fill the room section; navigation reveals the next four. */
+.desktop-app .desktop-nearby-dates-carousel{width:100%;max-width:none;mask-image:none;-webkit-mask-image:none;scroll-snap-type:x mandatory}
+.desktop-app .desktop-nearby-dates-track{width:100%;gap:10px;padding:16px 0 2px}
+.desktop-app .desktop-nearby-date{flex:0 0 calc((100% - 30px)/4);min-width:0;scroll-snap-align:start}
+.desktop-app .desktop-nearby-dates>header{align-items:center;padding:0;margin-bottom:2px}
+.desktop-app .desktop-nearby-dates>header p{margin:0;text-align:right;white-space:nowrap}
+.desktop-nearby-dates-slider{position:relative;isolation:isolate}
+.desktop-nearby-date-controls{position:absolute;inset:16px 0 2px;z-index:1;display:flex;justify-content:space-between;pointer-events:none}
+.desktop-nearby-date-edge{display:flex;align-items:center;width:88px;background:linear-gradient(to right,rgba(255,255,255,.98),rgba(255,255,255,.8) 42%,rgba(255,255,255,0))}
+.desktop-nearby-date-edge.previous{padding-left:4px}
+.desktop-nearby-date-edge.next{justify-content:flex-end;padding-right:4px;background:linear-gradient(to left,rgba(255,255,255,.98),rgba(255,255,255,.8) 42%,rgba(255,255,255,0))}
+.desktop-nearby-date-edge>button{pointer-events:auto;color:var(--k-action-primary);box-shadow:0 2px 8px #162b5014}
+.desktop-nearby-date-edge.next .k-icon{transform:rotate(180deg)}
+.desktop-nearby-date-edge>button:disabled{opacity:.35;cursor:default}
+.desktop-app .desktop-hotel-location-address{display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:20px;padding:0}
+.desktop-app .desktop-hotel-location-address>p{flex:1;min-width:0}
+.desktop-hotel-location-actions{display:flex;flex:none;gap:8px;flex-wrap:nowrap}
+.desktop-hotel-location-actions>.k-button{width:auto;min-height:40px;padding:0 14px}
+.desktop-app .nearby-real-places{scrollbar-width:thin;scrollbar-color:#a8b9d4 transparent;scrollbar-gutter:stable}
+.desktop-app .nearby-real-places::-webkit-scrollbar{width:8px}
+.desktop-app .nearby-real-places::-webkit-scrollbar-track{background:transparent}
+.desktop-app .nearby-real-places::-webkit-scrollbar-thumb{border:2px solid #fff;border-radius:12px;background:#a8b9d4}
+.desktop-app .nearby-real-places::-webkit-scrollbar-thumb:hover{background:#6987b3}
+/* Expanded hotel map uses the full page, with an independent nearby list. */
+.desktop-app .desktop-flow[data-step="hotel-nearby"]>.desktop-flow-layout{display:block}
+.desktop-app .desktop-flow[data-step="hotel-nearby"]>.desktop-flow-layout>.desktop-flow-footer{display:none}
+.desktop-app .desktop-flow[data-step="hotel-nearby"] .detail-nearby{display:grid;grid-template-columns:minmax(0,1fr) 380px;grid-template-rows:auto minmax(0,1fr);gap:12px 24px;height:calc(100dvh - 190px);min-height:440px;padding:0;max-width:none}
+.desktop-app .desktop-flow[data-step="hotel-nearby"] .nearby-live-map{grid-column:1;grid-row:1/3;height:100%;min-height:0;border-radius:24px}
+.desktop-app .desktop-flow[data-step="hotel-nearby"] .detail-segments{grid-column:2;grid-row:1;gap:4px}
+.desktop-app .desktop-flow[data-step="hotel-nearby"] .nearby-real-places{grid-column:2;grid-row:2;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:0 12px;border:1px solid var(--k-border-subtle);border-radius:20px}
+.desktop-app .desktop-flow[data-step="hotel-nearby"] .nearby-place-row{grid-template-columns:48px minmax(0,1fr);gap:12px}
+.desktop-app .desktop-flow[data-step="hotel-nearby"] .nearby-empty{grid-column:2;grid-row:1/3}
+
+/* Dates and guests stay in a modal over the unfinished booking. */
+.keys-app.desktop-modal:has(.desktop-booking-search-editor){width:min(820px,calc(100vw - 48px))}
+.desktop-booking-search-editor{display:flex;flex-direction:column;gap:16px}
+.desktop-booking-search-fields{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:24px;align-items:start}
+.desktop-booking-search-fields>section{min-width:0}
+.keys-app .desktop-booking-search-fields h3{font:500 16px/24px Onest,sans-serif;margin:0 0 12px}
+.desktop-booking-search-fields .date-calendar{padding:0;border:0;background:transparent}
+.desktop-booking-search-fields .guest-count-group{padding:0 12px;background:var(--k-surface-app);border-radius:16px}
+.desktop-booking-search-fields .guest-counter{padding:16px 0}
+.desktop-booking-search-actions{display:flex;justify-content:flex-end;padding-top:16px;border-top:1px solid var(--k-border-subtle)}
+.desktop-booking-search-actions>.k-button{width:auto;min-width:220px}
+@media(max-width:700px){.desktop-booking-search-fields{grid-template-columns:1fr}.desktop-booking-search-actions>.k-button{width:100%}}

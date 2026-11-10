@@ -1,0 +1,4 @@
+.keys-app .booking-cancellation-terms{display:flex;flex-direction:column;gap:8px;padding-top:16px;margin-top:2px;border-top:1px solid var(--k-border-subtle)}
+.keys-app .booking-cancellation-terms h3{margin:0;font:500 14px/21px Onest,sans-serif;color:var(--k-text-primary)}
+.keys-app .booking-cancellation-terms p{margin:0;font:400 14px/21px Onest,sans-serif;color:var(--k-text-secondary);overflow-wrap:anywhere}
+.keys-app .trip-detail-terms>.booking-cancellation-terms{margin-top:16px}

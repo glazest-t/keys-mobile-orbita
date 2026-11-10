@@ -182,11 +182,11 @@ export function TabContent({route,children}:{route:string;children:ReactNode}) {
  </AnimatePresence></div>;
 }
 
-export function Toast({message,bottom}:{message:string;bottom:number}) {
+export function Toast({message,bottom,action}:{message:string;bottom:number;action?:{label:string;onClick:()=>void}}) {
  const reduced=useReducedMotion();
- return <AnimatePresence>{message&&<motion.div key={message} className="toast" role="status" style={{bottom}}
+ return <AnimatePresence>{message&&<motion.div key={message} className={'toast'+(action?' toast-with-action':'')} role="status" style={{bottom}}
   initial={{opacity:0,y:reduced?0:16}} animate={{opacity:1,y:0}} exit={{opacity:0,y:reduced?0:16}}
-  transition={{duration:reduced?.2:interactionMotion.toast,ease:interactionMotion.arrive}}>{message}</motion.div>}</AnimatePresence>;
+  transition={{duration:reduced?.2:interactionMotion.toast,ease:interactionMotion.arrive}}><span>{message}</span>{action&&<button type="button" onClick={action.onClick}>{action.label}</button>}</motion.div>}</AnimatePresence>;
 }
 
 /** Brand orbit: the mark stays still while a satellite travels along its orbit. */

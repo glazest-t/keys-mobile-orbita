@@ -33,3 +33,7 @@
 .favorite-map .map-selection{bottom:calc(var(--device-safe-area-bottom,34px) + 12px)}
 
 .favorite-layout-passthrough { display:contents; }
+.keys-app .toast.toast-with-action{display:flex;align-items:center;justify-content:space-between;gap:16px;pointer-events:auto;text-align:left}
+.keys-app .toast-with-action>span{min-width:0;overflow-wrap:anywhere}
+.keys-app .toast-with-action>button{flex:none;background:transparent;border:0;padding:8px 0;color:#fff;font:500 13px/20px Onest,sans-serif;text-decoration:underline;text-underline-offset:3px}
+.keys-app .toast-with-action>button:focus-visible{outline:2px solid #fff;outline-offset:4px;border-radius:3px}

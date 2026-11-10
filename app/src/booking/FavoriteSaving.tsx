@@ -24,17 +24,17 @@ export function FavoriteDestination({commerce,setCommerce,owner,onSelect,search}
  return creating?<><p className="muted">Следующие отели попадут сюда же</p><FavoriteName onSave={name=>{const id=crypto.randomUUID(),next=saveFavoriteList(commerce,owner,id,name,search);setCommerce(next);onSelect(id,next);}}/><Button variant="ghost" onClick={()=>setCreating(false)}>К спискам</Button></>:<div className="favorite-destinations">{lib.lists.map(list=><button className="favorite-destination k-surface-action" key={list.id} onClick={()=>onSelect(list.id)}><Icon name="heart" size={20}/><span><strong>{list.name}</strong><small>{favoriteCountLabel(favoriteItems(commerce,owner,list.id).length)}</small></span><Icon name="chevron-right" size={16}/></button>)}<Button variant="secondary" onClick={()=>setCreating(true)}><Icon name="plus" size={18} inheritColor/>Новый список</Button></div>;
 }
 
-export function FavoriteSavingProvider({commerce,setCommerce,owner,children,onToast,search}:{children:ReactNode;onToast:(text:string)=>void}&StateProps){
+export function FavoriteSavingProvider({commerce,setCommerce,owner,children,onToast,search}:{children:ReactNode;onToast:(text:string,action?:{label:string;onClick:()=>void})=>void}&StateProps){
  const [destination,setDestination]=useState<string|null>(null),[pending,setPending]=useState<string|null>(null);
  const keyboard=useKeyboard();
  const choose=(id:string,next=commerce)=>{
   if(!pending)return;setCommerce(setFavorite(next,owner,pending,id));setDestination(id);setPending(null);keyboard.hide();
-  onToast('Сохранено в «'+favoriteLibrary(next,owner).lists.find(l=>l.id===id)!.name+'»');
+  onToast('Сохранено в «'+favoriteLibrary(next,owner).lists.find(l=>l.id===id)!.name+'»',{label:'Изменить',onClick:()=>{onToast('');setPending(pending);}});
  };
  const toggle=(hotelId:string)=>{
   if(commerce.savedHotels?.[owner]?.includes(hotelId)){setCommerce(s=>setFavorite(s,owner,hotelId,null));onToast('Отель удалён из избранного');return;}
   if(destination&&favoriteLibrary(commerce,owner).lists.some(l=>l.id===destination)){
-   setCommerce(s=>setFavorite(s,owner,hotelId,destination));onToast('Сохранено в «'+favoriteLibrary(commerce,owner).lists.find(l=>l.id===destination)!.name+'»');
+   setCommerce(s=>setFavorite(s,owner,hotelId,destination));onToast('Сохранено в «'+favoriteLibrary(commerce,owner).lists.find(l=>l.id===destination)!.name+'»',{label:'Изменить',onClick:()=>{onToast('');setPending(hotelId);}});
   }else {keyboard.hide();setPending(hotelId);}
  };
  return <FavoriteSaving.Provider value={{toggle,selectList:setDestination}}>{children}<BottomSheet open={!!pending} onOpenChange={open=>{if(!open){keyboard.hide();setPending(null);}}} title="Сохранить в список" snap={.72}><div className="sheet-body favorite-sheet">{pending&&<FavoriteDestination key={pending} commerce={commerce} setCommerce={setCommerce} owner={owner} search={search} onSelect={choose}/>}</div></BottomSheet></FavoriteSaving.Provider>;

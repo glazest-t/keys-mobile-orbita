@@ -17,7 +17,7 @@
  .desktop-surface .desktop-navigation button:not(.desktop-brand):not(.desktop-signin):hover:not(:disabled),
  .desktop-surface .desktop-app .desktop-search-trigger:hover:not(.is-active),
  .desktop-surface .desktop-app .desktop-destination-list>button:hover,
- .desktop-surface .keys-app :is(.k-list-row,.k-surface-action,.k-service-tile):hover:not(:disabled),
+ .desktop-surface .keys-app .profile-points:hover:not(:disabled),
  .desktop-surface .desktop-account-menu [role=menuitem]:hover {
   background:var(--k-surface-hover,var(--k-action-tint));
  }
@@ -42,10 +42,26 @@
  }
  .desktop-surface .keys-app .viewed-hotels>button:hover {color:var(--k-action-primary);}
  .desktop-surface .keys-app .viewed-hotels>button:hover>img {outline:2px solid var(--k-action-primary);outline-offset:-2px;}
- .desktop-surface .keys-app :is(.text-action,.booking-link,.desktop-hotel-back):hover:not(:disabled) {color:var(--k-action-primary);text-decoration:underline;text-underline-offset:3px;}
+ .desktop-surface .keys-app :is(.text-action,.booking-link,.desktop-hotel-back):hover:not(:disabled) {color:var(--k-action-pressed);text-decoration:none;}
  .desktop-surface .keys-app .calendar-grid button:not(.selected):not(:disabled):hover {box-shadow:inset 0 0 0 1px var(--k-action-primary);}
  .desktop-surface .keys-app .switch-row:hover:not(:disabled) .switch {box-shadow:0 0 0 3px color-mix(in srgb,var(--k-action-primary) 15%,transparent);}
 }
 @media (prefers-reduced-motion: reduce) {
  .desktop-surface :is(.desktop-navigation button,.desktop-search-trigger,.desktop-destination-list>button,.counter-button,.filter-chip,.k-list-row,.k-surface-action,.k-service-tile,.recent-search-track>button,.viewed-hotels>button,.desktop-modal-close) {transition:none;}
+}
+
+/* Actions on the blue trip card need their own contrasting surface. */
+@media (hover: hover) and (pointer: fine) {
+ .desktop-surface .keys-app button.k-button.secondary.booking-card-action:hover:not(:disabled):not(:active){background:#2944c6;color:#fff;border-color:#ffffff80}
+}
+@media (hover:hover) and (pointer:fine){
+ .desktop-surface .keys-app .room-rate-price>button:hover:not(:disabled):not(:active){background:var(--k-action-pressed);color:#fff}
+ .desktop-surface .keys-app .room-tariff:is(.friendly,.loyalty) .room-rate-price>button:hover:not(:disabled):not(:active){background:var(--k-action-tint);color:var(--k-text-primary)}
+}
+
+/* Service rows keep their original surface; only their title and action respond. */
+@media (hover:hover) and (pointer:fine){
+ .desktop-surface .keys-app :is(.k-list-row,.k-service-tile,.k-surface-action:not(.profile-points)):hover:not(:disabled):not(:active):not([aria-pressed=true]) :is(.service-tile-label,strong){color:var(--k-action-primary)}
+ .desktop-surface .keys-app .trip-service:hover:not(:disabled):not(:active)>b:not(.included){color:var(--k-action-pressed)}
+ .desktop-surface .keys-app :is(.k-list-row,.k-service-tile,.k-surface-action:not(.profile-points)):hover:not(:disabled):not(:active):not([aria-pressed=true])>.k-icon:last-child{color:var(--k-action-primary)}
 }
