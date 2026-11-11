@@ -1,3 +1,4 @@
+import {entryEditorialText} from '../entryEditorialText.ts';
 import {DialogActions} from '../dialogActions';
 import {useEffect,useRef,useState} from 'react';
 import {useReducedMotion} from 'motion/react';
@@ -31,8 +32,8 @@ export function LaunchSplash({onDone,biometricOutcome,onPin,preview=false}:{prev
  return <div className={'onboarding-flow'+(preview?' launch-preview':'')+(biometricOutcome?' biometric-launch':'')} role="status" aria-label="Запуск Ключей"><div className="onboarding-splash" data-visible={visible}>
   <div className="launch-artwork" aria-hidden="true">{reduced?<Mark/>:<SourceSplash/>}</div>
   <div className="launch-feedback" aria-live="polite">
-   {phase==='success'?<StatusBadge tone="success" icon="check">Вход выполнен</StatusBadge>:failed?<p>{phase==='failure'?'Не удалось распознать':'Биометрия недоступна'}</p>:phase==='checking'?<p>Проверяем биометрию</p>:<p className="onboarding-tagline">Ключи от всех отелей</p>}
+   {phase==='success'?<StatusBadge tone="success" icon="check">Вход выполнен</StatusBadge>:failed?<p>{phase==='failure'?'Не удалось распознать':entryEditorialText("ДОП-064", "Биометрия недоступна", "Распознавание лица недоступно")}</p>:phase==='checking'?<p>{entryEditorialText("ДОП-062", "Проверяем биометрию", "Проверяем…")}</p>:<p className="onboarding-tagline">{entryEditorialText("ДОП-001", "Ключи от всех отелей", "Ключи к вашему отдыху")}</p>}
   </div>
-  {biometricOutcome&&phase!=='success'&&<div className="launch-actions">{failed&&<p>Войдите с помощью PIN-кода.</p>}<DialogActions><Button variant={failed?'primary':'ghost'} onClick={onPin}>Ввести PIN-код</Button>{phase==='failure'&&<Button variant="secondary" onClick={()=>setPhase('checking')}>Попробовать снова</Button>}</DialogActions></div>}
+  {biometricOutcome&&phase!=='success'&&<div className="launch-actions">{failed&&<p>{entryEditorialText("ДОП-063", "Войдите с помощью PIN-кода.", "Войдите с помощью PIN-кода")}</p>}<DialogActions><Button variant={failed?'primary':'ghost'} onClick={onPin}>Ввести PIN-код</Button>{phase==='failure'&&<Button variant="secondary" onClick={()=>setPhase('checking')}>Попробовать снова</Button>}</DialogActions></div>}
  </div></div>;
 }

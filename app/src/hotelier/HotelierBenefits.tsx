@@ -1,3 +1,4 @@
+import {editorialText} from '../../../prototype/domain/editorialText.mjs';
 import {isDesktop} from '../desktop/surface';
 import {useState} from 'react';
 import {BottomSheet} from '../mobile';
@@ -15,9 +16,9 @@ export function HotelierProfileBadge({onClick}:{onClick:()=>void}){
 
 /** fr6: one explanation surface for the trip banner, profile and benefits. */
 export function HotelierInfoSheet({open,onClose,onHotels,inviter}:{open:boolean;onClose:()=>void;onHotels:()=>void;inviter?:HotelierInvitationData}){
- return <BottomSheet open={open} onOpenChange={v=>{if(!v)onClose();}} title="Friendly Rate" description="Дружественный тариф для отельеров">
+ return <BottomSheet open={open} onOpenChange={v=>{if(!v)onClose();}} title={editorialText('ОТ-011','Friendly Rate','Friendly Rate: скидки для своих')} description="Дружественный тариф для отельеров">
   <div className="hotelier-info">
-   <p>Тариф для отельеров партнёрской программы TravelLine. Даёт скидку на бронирование отелей в «Ключах».</p>
+   <p>{editorialText('ОТ-012','Тариф для отельеров партнёрской программы TravelLine. Даёт скидку на бронирование отелей в «Ключах».','Бронируйте объекты коллег на закрытых условиях — доступ по профилю TravelLine')}</p>
    {inviter&&<section className="hotelier-inviter"><small>Вас пригласил</small><div><span className="hotelier-inviter-avatar">{inviter.name.split(' ').map(n=>n[0]).slice(0,2).join('')}</span><span><strong>{inviter.name}</strong><small>{inviter.hotel}</small></span></div></section>}
    <p className="hotelier-eligibility"><Icon name="secure" size={20} inheritColor/><span>Доступно только отельерам с подтверждённым статусом</span></p>
    <Button onClick={onHotels}>К отелям с Friendly Rate</Button>

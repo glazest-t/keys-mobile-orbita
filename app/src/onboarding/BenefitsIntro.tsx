@@ -1,3 +1,4 @@
+import {entryEditorialText} from '../entryEditorialText.ts';
 import {memo,useState} from 'react';
 import {Icon,Mark} from '../ui';
 import {motionVars} from './motion';
@@ -16,11 +17,11 @@ export function BenefitsIntro(){
  return <div className="onboarding-benefits-copy">
   <div className="onboarding-benefit onboarding-benefit--keys">
    <span className="onboarding-benefit-icon" aria-hidden="true"><Mark/></span>
-   <div><h2>Баллы «Ключей»</h2><p>Копите и тратьте на любые брони.</p></div>
+   <div><h2>{entryEditorialText("ДОП-004", "Баллы «Ключей»", "Баллы Ключей")}</h2><p>{entryEditorialText("ДОП-005", "Копите и тратьте на любые брони.", "Копите и тратьте на новые поездки")}</p></div>
   </div>
   <div className="onboarding-benefit onboarding-benefit--hotel">
    <span className="onboarding-benefit-icon" aria-hidden="true"><Icon name="hotel-building" size={32} inheritColor/></span>
-   <div><h2>Ваша программа отеля</h2><p>Пользуйтесь её скидками, баллами и привилегиями.</p></div>
+   <div><h2>{entryEditorialText("ДОП-006", "Ваша программа отеля", "Программа лояльности")}</h2><p>{entryEditorialText("ДОП-007", "Пользуйтесь её скидками, баллами и привилегиями.", "Пользуйтесь скидками и привилегиями там, где уже бывали")}</p></div>
   </div>
  </div>;
 }

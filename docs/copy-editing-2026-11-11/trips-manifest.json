@@ -1,0 +1,702 @@
+[
+  {
+    "id": "HIS-344",
+    "group": "ОК-01",
+    "scenario": "История путешествий",
+    "screen": "Бонусы за бронирование",
+    "original": "Баллы «Ключей»",
+    "edited": "Баллы Ключей",
+    "file": "app/src/booking/BookingReward.tsx",
+    "matches": [
+      {
+        "group": "РШ-333",
+        "line": 12
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "HIS-362",
+    "group": "ОК-02",
+    "scenario": "История путешествий",
+    "screen": "Системные состояния",
+    "original": "Нет подключения к сети. Сохранённые данные доступны.",
+    "edited": "Нет интернета. Сохранённые данные доступны",
+    "file": "app/src/Prototype.tsx",
+    "matches": [
+      {
+        "group": "РШ-351",
+        "line": 334
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "HIS-363",
+    "group": "ОК-03",
+    "scenario": "История путешествий",
+    "screen": "Системные состояния",
+    "original": "Данные хранятся только до закрытия страницы.",
+    "edited": "Не храним данные после закрытия экрана",
+    "file": "app/src/Prototype.tsx",
+    "matches": [
+      {
+        "group": "РШ-352",
+        "line": 334
+      }
+    ],
+    "status": "Обновлено",
+    "note": "Заменена предыдущая редактура «Данные не сохранятся после закрытия страницы». Исходный текст и условие сохранены."
+  },
+  {
+    "id": "EMPTY-005",
+    "group": "ОК-04",
+    "scenario": "Брони ещё нет",
+    "screen": "Брони ещё нет → Пустое состояние",
+    "original": "Бронь, ключ и услуги — в одном месте",
+    "edited": "Бронь, ключ и услуги — всегда под рукой",
+    "file": "app/src/booking/EmptyTrip.tsx",
+    "matches": [
+      {
+        "group": "РШ-362",
+        "line": 11
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "EMPTY-007",
+    "group": "ОК-05",
+    "scenario": "Брони ещё нет",
+    "screen": "Брони ещё нет → Выгоды",
+    "original": "Копите баллы «Ключей» и пользуйтесь программой лояльности отеля",
+    "edited": "Копите баллы Ключей плюс и пользуйтесь скидками в программах лояльности",
+    "file": "app/src/booking/BenefitsBannerComparison.tsx",
+    "matches": [
+      {
+        "group": "РШ-364",
+        "line": 10
+      },
+      {
+        "group": "РШ-364",
+        "line": 10
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "EMPTY-008",
+    "group": "ОК-06",
+    "scenario": "Брони ещё нет",
+    "screen": "Брони ещё нет → Выгоды",
+    "original": "Все выгоды",
+    "edited": "Мои выгоды",
+    "file": "app/src/booking/BenefitsBannerComparison.tsx",
+    "matches": [
+      {
+        "group": "РШ-365",
+        "line": 10
+      },
+      {
+        "group": "РШ-365",
+        "line": 10
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "EMPTY-009",
+    "group": "ОК-07",
+    "scenario": "Брони ещё нет",
+    "screen": "Главный экран → История",
+    "original": "Все поездки",
+    "edited": "Мои поездки",
+    "file": "app/src/profile/TripHistoryEntry.tsx",
+    "matches": [
+      {
+        "group": "РШ-366",
+        "line": 6
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "EMPTY-010",
+    "group": "ОК-08",
+    "scenario": "Брони ещё нет",
+    "screen": "Главный экран → История",
+    "original": "Прошлые и предстоящие",
+    "edited": "Прошлые и будущие",
+    "file": "app/src/profile/TripHistoryEntry.tsx",
+    "matches": [
+      {
+        "group": "РШ-367",
+        "line": 6
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "EMPTY-011",
+    "group": "ОК-09",
+    "scenario": "Брони ещё нет",
+    "screen": "Главный экран → История",
+    "original": "Открыть историю",
+    "edited": "Смотреть все",
+    "file": "app/src/profile/TripHistoryEntry.tsx",
+    "matches": [
+      {
+        "group": "РШ-368",
+        "line": 6
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "EMPTY-028",
+    "group": "ОК-02",
+    "scenario": "Брони ещё нет",
+    "screen": "Системные состояния",
+    "original": "Нет подключения к сети. Сохранённые данные доступны.",
+    "edited": "Нет интернета. Сохранённые данные доступны",
+    "file": "app/src/Prototype.tsx",
+    "matches": [
+      {
+        "group": "РШ-351",
+        "line": 334
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "EMPTY-029",
+    "group": "ОК-03",
+    "scenario": "Брони ещё нет",
+    "screen": "Системные состояния",
+    "original": "Данные хранятся только до закрытия страницы.",
+    "edited": "Не храним данные после закрытия экрана",
+    "file": "app/src/Prototype.tsx",
+    "matches": [
+      {
+        "group": "РШ-352",
+        "line": 334
+      }
+    ],
+    "status": "Обновлено",
+    "note": "Заменена предыдущая редактура «Данные не сохранятся после закрытия страницы». Исходный текст и условие сохранены."
+  },
+  {
+    "id": "BEFORE-030",
+    "group": "ОК-07",
+    "scenario": "До заезда",
+    "screen": "Главный экран → История",
+    "original": "Все поездки",
+    "edited": "Мои поездки",
+    "file": "app/src/profile/TripHistoryEntry.tsx",
+    "matches": [
+      {
+        "group": "РШ-366",
+        "line": 6
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "BEFORE-031",
+    "group": "ОК-08",
+    "scenario": "До заезда",
+    "screen": "Главный экран → История",
+    "original": "Прошлые и предстоящие",
+    "edited": "Прошлые и будущие",
+    "file": "app/src/profile/TripHistoryEntry.tsx",
+    "matches": [
+      {
+        "group": "РШ-367",
+        "line": 6
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "BEFORE-032",
+    "group": "ОК-09",
+    "scenario": "До заезда",
+    "screen": "Главный экран → История",
+    "original": "Открыть историю",
+    "edited": "Смотреть все",
+    "file": "app/src/profile/TripHistoryEntry.tsx",
+    "matches": [
+      {
+        "group": "РШ-368",
+        "line": 6
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "BEFORE-498",
+    "group": "ОК-10",
+    "scenario": "До заезда",
+    "screen": "Услуги → Детали, оплата и отмена → Детали заказа",
+    "original": "Баллы «Ключей»",
+    "edited": "Баллы Ключей",
+    "file": "app/src/booking/ServiceOrders.tsx",
+    "matches": [
+      {
+        "group": "РШ-374",
+        "line": 41
+      },
+      {
+        "group": "РШ-374",
+        "line": 41
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "BEFORE-782",
+    "group": "ОК-01",
+    "scenario": "До заезда",
+    "screen": "Бонусы за бронирование",
+    "original": "Баллы «Ключей»",
+    "edited": "Баллы Ключей",
+    "file": "app/src/booking/BookingReward.tsx",
+    "matches": [
+      {
+        "group": "РШ-333",
+        "line": 12
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "BEFORE-800",
+    "group": "ОК-02",
+    "scenario": "До заезда",
+    "screen": "Системные состояния",
+    "original": "Нет подключения к сети. Сохранённые данные доступны.",
+    "edited": "Нет интернета. Сохранённые данные доступны",
+    "file": "app/src/Prototype.tsx",
+    "matches": [
+      {
+        "group": "РШ-351",
+        "line": 334
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "BEFORE-801",
+    "group": "ОК-03",
+    "scenario": "До заезда",
+    "screen": "Системные состояния",
+    "original": "Данные хранятся только до закрытия страницы.",
+    "edited": "Не храним данные после закрытия экрана",
+    "file": "app/src/Prototype.tsx",
+    "matches": [
+      {
+        "group": "РШ-352",
+        "line": 334
+      }
+    ],
+    "status": "Обновлено",
+    "note": "Заменена предыдущая редактура «Данные не сохранятся после закрытия страницы». Исходный текст и условие сохранены."
+  },
+  {
+    "id": "STAY-033",
+    "group": "ОК-07",
+    "scenario": "Во время проживания",
+    "screen": "Главный экран → История",
+    "original": "Все поездки",
+    "edited": "Мои поездки",
+    "file": "app/src/profile/TripHistoryEntry.tsx",
+    "matches": [
+      {
+        "group": "РШ-366",
+        "line": 6
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "STAY-034",
+    "group": "ОК-08",
+    "scenario": "Во время проживания",
+    "screen": "Главный экран → История",
+    "original": "Прошлые и предстоящие",
+    "edited": "Прошлые и будущие",
+    "file": "app/src/profile/TripHistoryEntry.tsx",
+    "matches": [
+      {
+        "group": "РШ-367",
+        "line": 6
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "STAY-035",
+    "group": "ОК-09",
+    "scenario": "Во время проживания",
+    "screen": "Главный экран → История",
+    "original": "Открыть историю",
+    "edited": "Смотреть все",
+    "file": "app/src/profile/TripHistoryEntry.tsx",
+    "matches": [
+      {
+        "group": "РШ-368",
+        "line": 6
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "STAY-349",
+    "group": "ОК-10",
+    "scenario": "Во время проживания",
+    "screen": "Услуги → Детали, оплата и отмена → Детали заказа",
+    "original": "Баллы «Ключей»",
+    "edited": "Баллы Ключей",
+    "file": "app/src/booking/ServiceOrders.tsx",
+    "matches": [
+      {
+        "group": "РШ-374",
+        "line": 41
+      },
+      {
+        "group": "РШ-374",
+        "line": 41
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "STAY-554",
+    "group": "ОК-11",
+    "scenario": "Во время проживания",
+    "screen": "Счёт проживания → Содержание",
+    "original": "Баллы «Ключей»",
+    "edited": "Баллы Ключей",
+    "file": "app/src/booking/StayAccount.tsx",
+    "matches": [
+      {
+        "group": "РШ-380",
+        "line": 21
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "STAY-725",
+    "group": "ОК-01",
+    "scenario": "Во время проживания",
+    "screen": "Бонусы за бронирование",
+    "original": "Баллы «Ключей»",
+    "edited": "Баллы Ключей",
+    "file": "app/src/booking/BookingReward.tsx",
+    "matches": [
+      {
+        "group": "РШ-333",
+        "line": 12
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "STAY-743",
+    "group": "ОК-02",
+    "scenario": "Во время проживания",
+    "screen": "Системные состояния",
+    "original": "Нет подключения к сети. Сохранённые данные доступны.",
+    "edited": "Нет интернета. Сохранённые данные доступны",
+    "file": "app/src/Prototype.tsx",
+    "matches": [
+      {
+        "group": "РШ-351",
+        "line": 334
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "STAY-744",
+    "group": "ОК-03",
+    "scenario": "Во время проживания",
+    "screen": "Системные состояния",
+    "original": "Данные хранятся только до закрытия страницы.",
+    "edited": "Не храним данные после закрытия экрана",
+    "file": "app/src/Prototype.tsx",
+    "matches": [
+      {
+        "group": "РШ-352",
+        "line": 334
+      }
+    ],
+    "status": "Обновлено",
+    "note": "Заменена предыдущая редактура «Данные не сохранятся после закрытия страницы». Исходный текст и условие сохранены."
+  },
+  {
+    "id": "OUT-035",
+    "group": "ОК-07",
+    "scenario": "День выезда",
+    "screen": "Главный экран → История",
+    "original": "Все поездки",
+    "edited": "Мои поездки",
+    "file": "app/src/profile/TripHistoryEntry.tsx",
+    "matches": [
+      {
+        "group": "РШ-366",
+        "line": 6
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "OUT-036",
+    "group": "ОК-08",
+    "scenario": "День выезда",
+    "screen": "Главный экран → История",
+    "original": "Прошлые и предстоящие",
+    "edited": "Прошлые и будущие",
+    "file": "app/src/profile/TripHistoryEntry.tsx",
+    "matches": [
+      {
+        "group": "РШ-367",
+        "line": 6
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "OUT-037",
+    "group": "ОК-09",
+    "scenario": "День выезда",
+    "screen": "Главный экран → История",
+    "original": "Открыть историю",
+    "edited": "Смотреть все",
+    "file": "app/src/profile/TripHistoryEntry.tsx",
+    "matches": [
+      {
+        "group": "РШ-368",
+        "line": 6
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "OUT-351",
+    "group": "ОК-10",
+    "scenario": "День выезда",
+    "screen": "Услуги → Детали, оплата и отмена → Детали заказа",
+    "original": "Баллы «Ключей»",
+    "edited": "Баллы Ключей",
+    "file": "app/src/booking/ServiceOrders.tsx",
+    "matches": [
+      {
+        "group": "РШ-374",
+        "line": 41
+      },
+      {
+        "group": "РШ-374",
+        "line": 41
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "OUT-556",
+    "group": "ОК-11",
+    "scenario": "День выезда",
+    "screen": "Счёт проживания → Содержание",
+    "original": "Баллы «Ключей»",
+    "edited": "Баллы Ключей",
+    "file": "app/src/booking/StayAccount.tsx",
+    "matches": [
+      {
+        "group": "РШ-380",
+        "line": 21
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "OUT-727",
+    "group": "ОК-01",
+    "scenario": "День выезда",
+    "screen": "Бонусы за бронирование",
+    "original": "Баллы «Ключей»",
+    "edited": "Баллы Ключей",
+    "file": "app/src/booking/BookingReward.tsx",
+    "matches": [
+      {
+        "group": "РШ-333",
+        "line": 12
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "OUT-745",
+    "group": "ОК-02",
+    "scenario": "День выезда",
+    "screen": "Системные состояния",
+    "original": "Нет подключения к сети. Сохранённые данные доступны.",
+    "edited": "Нет интернета. Сохранённые данные доступны",
+    "file": "app/src/Prototype.tsx",
+    "matches": [
+      {
+        "group": "РШ-351",
+        "line": 334
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "OUT-746",
+    "group": "ОК-03",
+    "scenario": "День выезда",
+    "screen": "Системные состояния",
+    "original": "Данные хранятся только до закрытия страницы.",
+    "edited": "Не храним данные после закрытия экрана",
+    "file": "app/src/Prototype.tsx",
+    "matches": [
+      {
+        "group": "РШ-352",
+        "line": 334
+      }
+    ],
+    "status": "Обновлено",
+    "note": "Заменена предыдущая редактура «Данные не сохранятся после закрытия страницы». Исходный текст и условие сохранены."
+  },
+  {
+    "id": "AFTER-017",
+    "group": "ОК-07",
+    "scenario": "После выезда",
+    "screen": "Главный экран → История",
+    "original": "Все поездки",
+    "edited": "Мои поездки",
+    "file": "app/src/profile/TripHistoryEntry.tsx",
+    "matches": [
+      {
+        "group": "РШ-366",
+        "line": 6
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "AFTER-018",
+    "group": "ОК-08",
+    "scenario": "После выезда",
+    "screen": "Главный экран → История",
+    "original": "Прошлые и предстоящие",
+    "edited": "Прошлые и будущие",
+    "file": "app/src/profile/TripHistoryEntry.tsx",
+    "matches": [
+      {
+        "group": "РШ-367",
+        "line": 6
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "AFTER-019",
+    "group": "ОК-09",
+    "scenario": "После выезда",
+    "screen": "Главный экран → История",
+    "original": "Открыть историю",
+    "edited": "Смотреть все",
+    "file": "app/src/profile/TripHistoryEntry.tsx",
+    "matches": [
+      {
+        "group": "РШ-368",
+        "line": 6
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "AFTER-235",
+    "group": "ОК-01",
+    "scenario": "После выезда",
+    "screen": "Бонусы за бронирование",
+    "original": "Баллы «Ключей»",
+    "edited": "Баллы Ключей",
+    "file": "app/src/booking/BookingReward.tsx",
+    "matches": [
+      {
+        "group": "РШ-333",
+        "line": 12
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "AFTER-239",
+    "group": "ОК-02",
+    "scenario": "После выезда",
+    "screen": "Системные состояния",
+    "original": "Нет подключения к сети. Сохранённые данные доступны.",
+    "edited": "Нет интернета. Сохранённые данные доступны",
+    "file": "app/src/Prototype.tsx",
+    "matches": [
+      {
+        "group": "РШ-351",
+        "line": 334
+      }
+    ],
+    "status": "Уже совпадало",
+    "note": ""
+  },
+  {
+    "id": "AFTER-240",
+    "group": "ОК-03",
+    "scenario": "После выезда",
+    "screen": "Системные состояния",
+    "original": "Данные хранятся только до закрытия страницы.",
+    "edited": "Не храним данные после закрытия экрана",
+    "file": "app/src/Prototype.tsx",
+    "matches": [
+      {
+        "group": "РШ-352",
+        "line": 334
+      }
+    ],
+    "status": "Обновлено",
+    "note": "Заменена предыдущая редактура «Данные не сохранятся после закрытия страницы». Исходный текст и условие сохранены."
+  }
+]

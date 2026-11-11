@@ -1,19 +1,20 @@
+import {entryEditorialText} from '../entryEditorialText.ts';
 import type {Commerce} from '../booking/model.ts';
 export type HotelierStatus='none'|'pending'|'approved'|'rejected';
 export type Verification={id:string;token:string;phone:string;email:string;hotelName:string;status:HotelierStatus;requestedAt:string;resolvedAt?:string};
 export type VerificationClaim=Pick<Verification,'id'|'token'|'phone'|'email'>;
-export const hotelierLabels:Record<HotelierStatus,string>={none:'Подтвердить статус отельера',pending:'Ожидаем подтверждение',approved:'Отельер · Friendly Rate',rejected:'Привязка отклонена'};
+export const hotelierLabels:Record<HotelierStatus,string>={none:'Подтвердить статус отельера',pending:'Ожидаем подтверждение',get approved(){return entryEditorialText("ДОП-048", "Отельер · Friendly Rate", "Отельер · Friendly Rates")},get rejected(){return entryEditorialText("ДОП-050", "Привязка отклонена", "Запрос отклонён")}};
 export const verificationClaim=(r:Verification):VerificationClaim=>({id:r.id,token:r.token,phone:r.phone,email:r.email});
 export function matchesClaim(request:Verification|undefined,owner:string,claim:VerificationClaim){return !!request&&!!claim.token&&request.id===claim.id&&request.token===claim.token&&request.email===claim.email&&request.phone===claim.phone&&owner===claim.phone;}
 export function submitVerification(s:Commerce,owner:string,email:string,id:string,now=Date.now(),token=crypto.randomUUID()):Commerce{
- if(!/^\+7\d{10}$/.test(owner)||!s.accounts[owner])throw Error('Сначала войдите по телефону');
- const value=email.trim().toLowerCase();if(value.length>254||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))throw Error('Проверьте рабочий email');
+ if(!/^\+7\d{10}$/.test(owner)||!s.accounts[owner])throw Error(entryEditorialText("ДОП-027", "Сначала войдите по телефону", "Сначала подтвердите телефон"));
+ const value=email.trim().toLowerCase();if(value.length>254||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))throw Error(entryEditorialText("ДОП-026", "Проверьте рабочий email", "Проверьте почту"));
  if(s.hotelierVerifications?.[owner]?.status==='pending')throw Error('Запрос уже отправлен. Чтобы изменить почту, отмените его');
  return {...s,hotelierParticipants:{...s.hotelierParticipants,[owner]:true},hotelierEmailDrafts:{...s.hotelierEmailDrafts,[owner]:value},hotelierVerifications:{...s.hotelierVerifications,[owner]:{id,token,phone:owner,email:value,hotelName:'Maidens Hotel',status:'pending',requestedAt:new Date(now).toISOString()}},accounts:{...s.accounts,[owner]:{...s.accounts[owner],hotelierStatus:'pending'}}};
 }
 export function resolveVerification(s:Commerce,owner:string,claim:VerificationClaim,status:'approved'|'rejected',now=Date.now()):Commerce{
  const request=s.hotelierVerifications?.[owner];
- if(!matchesClaim(request,owner,claim)||request?.status!=='pending')throw Error('Запрос недоступен: уже обработан или устарел');
+ if(!matchesClaim(request,owner,claim)||request?.status!=='pending')throw Error(entryEditorialText("ДОП-056", "Запрос недоступен: уже обработан или устарел", "Не удалось подтвердить запрос. Попробуйте ещё раз"));
  return {...s,hotelierVerifications:{...s.hotelierVerifications,[owner]:{...request,status,resolvedAt:new Date(now).toISOString()}},accounts:{...s.accounts,[owner]:{...s.accounts[owner],hotelierStatus:status}}};
 }
 export function clearVerification(s:Commerce,owner:string):Commerce{

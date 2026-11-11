@@ -1,3 +1,4 @@
+import {entryEditorialText} from './entryEditorialText.ts';
 import {normalizeContactPhone} from './travelers/contactPhone.ts';
 export type Traveler = {id:string; name:string; surname:string; patronymic:string; birthDate:string; citizenship:string; phone:string; email:string; primary?:boolean};
 export type User = {language?:'ru'|'en';travelStyleIntro?:'pending'|'seen';demoDeviceAccess?:boolean;photo?:string;helpBrowse?:{query:string;category:string};supportRequests?:import('./profile/support').SupportRequest[];supportDraft?:import('./profile/support').SupportDraft;settings?:import('./profile/settings').ProfileSettings;phone:string; name:string; travelers:Traveler[]};
@@ -9,20 +10,20 @@ export function normalizePhone(raw:string){let digits=raw.replace(/\D/g,'');if(d
 export function displayPhone(value:string){const n=value.replace(/\D/g,'').slice(-10);return n.length===10?`+7 ${n.slice(0,3)} ${n.slice(3,6)}-${n.slice(6,8)}-${n.slice(8)}`:value;}
 export function validName(value:string){const v=value.trim();return v.length>=2&&v.length<=40&&/^[\p{L}]+(?:[ '\-’][\p{L}]+)*$/u.test(v);}
 export function requestCode(state:State,raw:string,now=Date.now()):State{
- const phone=normalizePhone(raw);if(!phone)throw Error('Введите 10 цифр номера после +7');
- if(state.request?.phone===phone&&state.request.resendAt>now)throw Error('Подождите перед повторной отправкой');
+ const phone=normalizePhone(raw);if(!phone)throw Error(entryEditorialText("ДОП-010", "Введите 10 цифр номера после +7", "Должно быть 10 цифр после +7"));
+ if(state.request?.phone===phone&&state.request.resendAt>now)throw Error(entryEditorialText("ДОП-011", "Подождите перед повторной отправкой", "Попробуйте ещё раз"));
  return {...state,request:{phone,issuedAt:now,expiresAt:now+300000,resendAt:now+30000},verifiedPhone:null};
 }
 export function verifyCode(state:State,code:string,now=Date.now()):State{
  if(!state.request)throw Error('Запросите новый код');
- if(now>=state.request.expiresAt)throw Error('Срок кода истёк. Запросите новый');
- if(code!=='123456')throw Error('Код не подходит. Проверьте шесть цифр');
+ if(now>=state.request.expiresAt)throw Error(entryEditorialText("ДОП-013", "Срок кода истёк. Запросите новый", "Запросите новый код"));
+ if(code!=='123456')throw Error(entryEditorialText("ДОП-012", "Код не подходит. Проверьте шесть цифр", "Неверный код"));
  const phone=state.request.phone;
  if(state.securityRecoveryPhone===phone&&state.users[phone]){const user=state.users[phone];state={...state,securityRecoveryPhone:undefined,users:{...state.users,[phone]:{...user,settings:user.settings?{...user.settings,pinEnabled:false,pinCredential:undefined,biometric:false,pinFailures:0,pinBlockedUntil:0}:undefined}}};}
  return {...state,securityRecoveryPhone:undefined,request:null,verifiedPhone:state.users[phone]&&!state.hotelierOnboarding?null:phone,activePhone:state.users[phone]&&!state.hotelierOnboarding?phone:null,onboarded:true};
 }
 export function completeName(state:State,name:string):State{
- name=name.trim().replace(/\s+/g,' ');if(!state.verifiedPhone)throw Error('Сначала подтвердите телефон');if(!validName(name))throw Error('Введите имя: от 2 до 40 букв');
+ name=name.trim().replace(/\s+/g,' ');if(!state.verifiedPhone)throw Error('Сначала подтвердите телефон');if(!validName(name))throw Error(entryEditorialText("ДОП-015", "Введите имя: от 2 до 40 букв", "Должно быть от 2 до 40 букв"));
  const phone=state.verifiedPhone;const clean=name.trim();
  state={...state,hotelierTourTarget:state.hotelierOnboarding?(state.returnTo==='hotelier'?'hotelier':'trips'):undefined};
  const existing=state.users[phone];if(existing)return {...state,demoRegistrationPhone:undefined,verifiedPhone:null,activePhone:phone,users:{...state.users,[phone]:{...existing,name:clean,travelers:existing.travelers.map(t=>t.primary?{...t,name:clean}:t)}}};

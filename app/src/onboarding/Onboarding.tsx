@@ -1,4 +1,4 @@
-import {useNovember} from '../usePrototypeVariant';
+import {entryEditorialText} from '../entryEditorialText.ts';
 import {useEffect,useState,useRef,type CSSProperties} from 'react';
 import {useReducedMotion} from 'motion/react';
 import {MobileScroll,useKeyboardInsets} from '../mobile';
@@ -11,14 +11,14 @@ import {PersonalizationArt} from './PersonalizationArt';
 import './source-motion.css';
 import './onboarding.css';
 
-const allSlides=[
- {id:'room-control',art:'',title:'Управляйте номером',lead:'Управляйте ',accent:'номером',text:'Все возможности — в вашем телефоне.'},
+function onboardingSlides(){return [
+ {id:'room-control',art:'',title:entryEditorialText('ДОП-002','Управляйте номером','Управляйте проживанием'),lead:'Управляйте ',accent:entryEditorialText('ДОП-002','номером','проживанием'),text:entryEditorialText('ДОП-003','Все возможности — в вашем телефоне.','Без звонков на ресепшн и очередей на стойке')},
  {id:'dual-benefits',art:'',title:'Двойная выгода',lead:'Двойная ',accent:'выгода',text:''},
  {id:'personal-selection',art:'',title:'Подборка, которая понимает вас',lead:'Подборка, ',accent:'которая понимает вас',text:'Учимся на ваших поездках и выборе, учитываем избранное — и находим отели под ваши пожелания.'},
-];
+];}
 
 export function Onboarding({onStart,onLogin,registered=false}:{onStart:()=>void;onLogin:()=>void;registered?:boolean}){
- const november=useNovember(),slides=november?allSlides.filter(s=>s.id!=='personal-selection'):allSlides,last=slides.length-1;
+ const slides=onboardingSlides(),last=slides.length-1;
  const reduced=useReducedMotion();
  const actions=useRef({onStart,onLogin});actions.current={onStart,onLogin};
  const {bottomInset}=useKeyboardInsets();
