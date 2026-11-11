@@ -9,7 +9,9 @@ import {setPrototypeVariant} from './prototypeVariant';
 import {usePrototypeVariant} from './usePrototypeVariant';
 import {useEffect,useRef,type ReactNode} from 'react';
 import {Icon} from './ui';
-import {FULL_EDITION_NOTICE} from './PrototypeEditionNotice';
+import './prototype-edition-notice.css';
+
+const FULL_EDITION_NOTICE='Внимание, вы открыли полную версию, которая будет реализована только в марте.';
 import './demo-tools.css';
 
 function PrototypeVersion({desktop}:{desktop:boolean}){
