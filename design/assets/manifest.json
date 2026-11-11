@@ -263,8 +263,8 @@
     {
       "path": "design/assets/icons/_sprite.svg",
       "source": "design/assets/icons-soft/manifest.json",
-      "sha256": "65fc08f80b6da17e9af77d29dc4e383d35d6d3d9d3484576d6c2580b5b06a823",
-      "transformation": "approved Soft icon set, revision 24",
+      "sha256": "d647dd3f8d1bae9f7a4b0010d9c9b5b53fb2a4a364b5de8f722cb983b347cbbf",
+      "transformation": "Soft sprite extended with microphone for voice input, 2026-11-11",
       "rights": "created_for_project"
     },
     {
@@ -1455,6 +1455,13 @@
       "source": "design/assets/icons-soft/wine.svg",
       "sha256": "e29036d16f59f8ade1df2a63a19edecd6ad686e0ca27e6a0d88e31ad68e00bda",
       "transformation": "approved Soft icon set, revision 24",
+      "rights": "created_for_project"
+    },
+    {
+      "path": "design/assets/icons/microphone.svg",
+      "source": "design/assets/icons-soft/microphone.svg",
+      "sha256": "b10ce8a0ed1a881f89a3684169baea8b8ae8e6d0cc56d5d8798f275a687921a4",
+      "transformation": "Soft microphone; currentColor master with cobalt runtime color",
       "rights": "created_for_project"
     }
   ]
