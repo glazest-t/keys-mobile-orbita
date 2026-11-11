@@ -1,8 +1,10 @@
-import test from 'node:test';import assert from 'node:assert/strict';
+import test,{beforeEach} from 'node:test';import assert from 'node:assert/strict';
 import {initialCommerce,ensureAccount,startDraft,nights,catalog} from '../app/src/booking/model.ts';
 import {nearbyDateOffers,withDemoNearbyDate} from '../app/src/booking/nearbyDates.ts';
 import {roomOffers,updateRoomSearch} from '../app/src/booking/roomOffers.ts';
 import {watchKey} from '../app/src/booking/priceWatch.ts';
+// Keep the demo calendar stable regardless of the day CI runs.
+beforeEach(t=>t.mock.timers.enable({apis:['Date'],now:new Date('2026-11-10T12:00:00Z')}));
 const owner='+79990005566';
 const base=()=>{const s=ensureAccount(initialCommerce(),owner);s.search={...s.search,checkIn:'2026-11-13',checkOut:'2026-11-15',adults:2,childrenAges:[]};return startDraft(s,'orbit-sea','nearby',owner);};
 test('Соседние даты сохраняют гостей и длительность, цена совпадает с карточками после выбора',()=>{
