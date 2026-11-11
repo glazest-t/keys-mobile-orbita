@@ -1,3 +1,4 @@
+import {createFinderChat,sendFinderMessage,completeFinderReply} from '../assistant/model';
 import {submitSupport} from '../profile/support';
 import {confirmPin} from '../profile/settings';
 import {addNotificationExamples} from '../booking/notifications';
@@ -82,5 +83,6 @@ export async function createCatalogueFixture(scene:CatalogueScene):Promise<Catal
  if(scene.device==='pin'||scene.device==='biometric'){
   const configured=await prepareDeviceEntry(state,scene.device,commerce);state=configured.state;commerce=configured.commerce;
  }
+ if(scene.route==='ai-assistant'){commerce=createFinderChat(commerce,owner,'catalogue-assistant');if(scene.assistantResults){commerce=sendFinderMessage(commerce,owner,'catalogue-assistant',`Хочу в Сочи у моря, с бассейном, для двоих. ${commerce.search.checkIn} — ${commerce.search.checkOut}`,'catalogue-assistant-reply');commerce=completeFinderReply(commerce,owner,'catalogue-assistant','catalogue-assistant-reply');}}
  return {state,commerce};
 }

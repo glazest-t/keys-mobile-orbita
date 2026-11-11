@@ -20,6 +20,8 @@ export const interactionMotion = {
  successHoldMs: 1500,
  paymentWaitMs: 800,
  chatReplyMs: 1200,
+ assistantReplyMs: 20000,
+ assistantPhraseMs: 4000,
  wifiConnectingMs: 1200,
  keyOpeningMs: 1100,
  keySuccessHoldMs: 3000,

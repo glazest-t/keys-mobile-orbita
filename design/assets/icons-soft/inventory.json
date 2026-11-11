@@ -10,8 +10,8 @@
     "strokeLinejoin": "round",
     "straightCornerTrim": 0.65
   },
-  "assetCount": 170,
-  "catalogueCount": 160,
+  "assetCount": 171,
+  "catalogueCount": 161,
   "excluded": [
     "Фирменный логотип Ключей",
     "Логотипы сторонних приложений и банков",
@@ -2224,6 +2224,15 @@
       "number": "160",
       "uses": [
         "app/src/booking/BookingReward.tsx"
+      ]
+    },
+    {
+      "id": "microphone",
+      "label": "Голосовой ввод",
+      "group": "Действия",
+      "number": "161",
+      "uses": [
+        "app/src/assistant/HotelFinder.tsx"
       ]
     }
   ]

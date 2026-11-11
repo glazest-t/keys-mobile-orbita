@@ -5,7 +5,7 @@ import {Icon,Mark} from '../ui';
 
 export function DesktopNavigation({route,name,photo,points=0,unread=false,onNavigate,onLogin,onLogout}:{route:string;name?:string;photo?:string;points?:number;unread?:boolean;onNavigate:(route:string)=>void;onLogin:()=>void;onLogout:()=>void}){
  const november=useNovember();
- const active=route==='trip-chat'||route.startsWith('hotel-chat/')?'chats':route.startsWith('trip')||route==='booking-record'?'trips':route==='points'||route.startsWith('loyalty-')?'rewards':['results','results-map','booking-flow','swipe','wish-search','search-params'].includes(route)?'find':route;
+ const active=route==='ai-assistant'||route==='trip-chat'||route.startsWith('hotel-chat/')?'chats':route.startsWith('trip')||route==='booking-record'?'trips':route==='points'||route.startsWith('loyalty-')?'rewards':['results','results-map','booking-flow','swipe','wish-search','search-params'].includes(route)?'find':route;
  const pointsWord=new Intl.PluralRules('ru').select(points);
  const pointsLabel=points.toLocaleString('ru-RU')+' '+(pointsWord==='one'?'балл':pointsWord==='few'?'балла':'баллов');
  const [demo,setDemo]=useState(false);

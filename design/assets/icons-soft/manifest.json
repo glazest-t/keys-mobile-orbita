@@ -1,9 +1,9 @@
 {
   "name": "Ключи · Мягкие",
   "revision": "soft-20261108-25",
-  "catalogueCount": 160,
+  "catalogueCount": 161,
   "files": {
-    "_sprite.svg": "65fc08f80b6da17e9af77d29dc4e383d35d6d3d9d3484576d6c2580b5b06a823",
+    "_sprite.svg": "d647dd3f8d1bae9f7a4b0010d9c9b5b53fb2a4a364b5de8f722cb983b347cbbf",
     "accessible.svg": "e7b21176758ebf67aa2a62c8ca94a0dac7a932ac590abd12e01e7387f25386db",
     "attach.svg": "d055db07bd62919e49e8caaa621dd54438a87a18a0a71f047528554834f2e548",
     "baby-cot.svg": "99137df3d8f024faf9c82daab9c94489c58369cbb4ce13b81e5406fa38c12273",
@@ -173,7 +173,8 @@
     "water-dispenser.svg": "c371bca98c06b2630f958821505f965bd4586e8423b766f5e6b4c37781efc006",
     "weather.svg": "1479bcf5d86df212b61a65ae75f99de2eacc4b1896593d5327405fca43cb1674",
     "wifi.svg": "d25ae35211e242d32f0a21755f988350dd814171ac1ebdf6a4844425d859ef4d",
-    "wine.svg": "e29036d16f59f8ade1df2a63a19edecd6ad686e0ca27e6a0d88e31ad68e00bda"
+    "wine.svg": "e29036d16f59f8ade1df2a63a19edecd6ad686e0ca27e6a0d88e31ad68e00bda",
+    "microphone.svg": "b10ce8a0ed1a881f89a3684169baea8b8ae8e6d0cc56d5d8798f275a687921a4"
   },
   "excluded": [
     "Логотипы Ключей и сторонних сервисов",

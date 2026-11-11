@@ -8,6 +8,8 @@
 
 ## Актуальный UI-кит
 
+11.11.2026: [AI-ассистент: интерфейс, общие компоненты и границы подключения](AI-ASSISTANT.md).
+
 [Мобильный UI-кит](https://glazest-t.github.io/keys-mobile-orbita/prototype/?variant=november&icons=new&catalogue=kit#kit) · [Десктопный UI-кит](https://glazest-t.github.io/keys-mobile-orbita/desktop/?variant=november&icons=new&catalogue=kit#kit). Каталог использует реальные компоненты приложения и актуальные SVG. Для разработки: `app/src/ui.tsx`, `app/src/kit/`, `app/src/header-actions.css`, `design/tokens.json`, `design/assets/icons-soft/`. Последние правила собраны в начале [COMPONENTS](COMPONENTS.md); датированные записи ниже — история уточнений, а не параллельные варианты.
 
 ## Порядок чтения
