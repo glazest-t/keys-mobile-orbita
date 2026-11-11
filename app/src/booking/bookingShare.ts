@@ -1,3 +1,4 @@
+import {editorialText} from '../../../prototype/domain/editorialText.mjs';
 import {type Booking,type Commerce} from './model.ts';
 export type BookingShare={token:string;bookingId:string;mode:'read'|'manage'};
 export function canManageBooking(s:Commerce,actor:string,b:Booking){return b.owner===actor||!!s.bookingManagers?.[b.id]?.includes(actor);}
@@ -18,7 +19,7 @@ export function acceptBookingShare(s:Commerce,actor:string,token:string):Commerc
  const entry=sharedBooking(s,token);
  if(!entry||!s.accounts[actor])throw Error('Ссылка недоступна');
  const {booking:b,share}=entry;
- if(share.mode!=='manage')throw Error('Эта ссылка даёт только просмотр');
+ if(share.mode!=='manage')throw Error(editorialText("РШ-246", "Эта ссылка даёт только просмотр", "Эта ссылка только для просмотра"));
  if(b.operation.status!=='confirmed'||b.stay?.status==='checked_out')throw Error('Поездка уже завершена');
  return {...s,selectedBooking:b.id,bookingManagers:canManageBooking(s,actor,b)?s.bookingManagers:{...s.bookingManagers,[b.id]:[...(s.bookingManagers?.[b.id]||[]),actor]}};
 }

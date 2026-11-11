@@ -1,3 +1,4 @@
+import {editorialText} from './editorialText.mjs';
 import { DomainError, calculatePayment } from './payment.mjs';
 
 function nonNegativeInteger(value, name) {
@@ -9,10 +10,10 @@ export function calculateBookingQuote({ hotelId, nights, rate, hotelierStatus, h
   services = [], wallets, usePoints, pointsLimit, baseLodgingOverrideMinor }) {
   nonNegativeInteger(nights,'nights');
   if (nights === 0) throw new DomainError('INVALID_NIGHTS','Нужна хотя бы одна ночь');
-  if (rate.hotelId !== hotelId) throw new DomainError('WRONG_RATE_HOTEL','Тариф принадлежит другому отелю');
+  if (rate.hotelId !== hotelId) throw new DomainError('WRONG_RATE_HOTEL',editorialText("РШ-108", "Тариф принадлежит другому отелю", "Тариф другого объекта"));
   if (!['standard','hotel_loyalty','friendly_rate'].includes(rate.kind)) throw new DomainError('INVALID_RATE','Неизвестный тип тарифа');
   if (rate.kind === 'friendly_rate' && hotelierStatus !== 'approved') {
-    throw new DomainError('FRIENDLY_RATE_UNAVAILABLE','Friendly Rate доступен подтверждённым отельерам');
+    throw new DomainError('FRIENDLY_RATE_UNAVAILABLE',editorialText("РШ-110", "Friendly Rate доступен подтверждённым отельерам", "Нужно подтвердить статус отельера"));
   }
   nonNegativeInteger(rate.nightlyMinor,'nightlyMinor');
   nonNegativeInteger(hotelDiscountBasisPoints,'hotelDiscountBasisPoints');

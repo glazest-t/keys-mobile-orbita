@@ -1,3 +1,4 @@
+import {editorialText} from './editorialText.mjs';
 // Framework-independent demo logic. No external requests or real payments.
 export class DomainError extends Error {
   constructor(code, message) {
@@ -9,7 +10,7 @@ export class DomainError extends Error {
 
 function natural(value, field) {
   if (!Number.isSafeInteger(value) || value < 0) {
-    throw new DomainError('INVALID_AMOUNT', `${field}: требуется целое неотрицательное число`);
+    throw new DomainError('INVALID_AMOUNT', editorialText("РШ-336", `${field}: требуется целое неотрицательное число`, `${field}: нужно целое неотрицательное число`));
   }
   return value;
 }
@@ -21,7 +22,7 @@ function total(values, field) {
 export function calculatePayment({ hotelId, lodgingMinor, services = [], wallets, usePoints, pointsLimit, hotelBenefitsAllowed = true }) {
   if (typeof hotelId !== 'string' || !hotelId) throw new DomainError('INVALID_HOTEL', 'Нужен отель заказа');
   if (typeof usePoints !== 'boolean') throw new DomainError('INVALID_SWITCH', 'Использование баллов задаётся переключателем');
-  if (typeof hotelBenefitsAllowed !== 'boolean') throw new DomainError('INVALID_BENEFIT_RULE', 'Нужно правило применения программы отеля');
+  if (typeof hotelBenefitsAllowed !== 'boolean') throw new DomainError('INVALID_BENEFIT_RULE', editorialText("РШ-339", "Нужно правило применения программы отеля", "Нужно правило применения программы лояльности объекта"));
   if(pointsLimit!==undefined)natural(pointsLimit,'pointsLimit');
   natural(lodgingMinor, 'lodgingMinor');
   natural(wallets.keysPoints, 'keysPoints');
@@ -29,7 +30,7 @@ export function calculatePayment({ hotelId, lodgingMinor, services = [], wallets
   const ids = new Set();
   const serviceTotalMinor = total(services.map(service => {
     if (typeof service.id !== 'string' || !service.id || ids.has(service.id)) {
-      throw new DomainError('DUPLICATE_SERVICE', 'У каждой позиции должен быть уникальный идентификатор');
+      throw new DomainError('DUPLICATE_SERVICE', editorialText("РШ-340", "У каждой позиции должен быть уникальный идентификатор", "У каждой позиции должен быть свой ID"));
     }
     ids.add(service.id);
     natural(service.quantity, 'quantity');

@@ -1,3 +1,4 @@
+import {editorialText} from '../../../prototype/domain/editorialText.mjs';
 import {bookingNumber} from '../booking/bookingNumber.ts';
 import {catalog,dateLabel,formatMoney,guestLabel,type Booking,type Commerce} from '../booking/model.ts';
 import {canManageBooking,visibleBooking} from '../booking/bookingShare.ts';
@@ -9,7 +10,7 @@ export function pastTrips(s:Commerce,owner:string,query='',filter='Все'){
 }
 export function historyBooking(s:Commerce,owner:string,id:string){return s.bookings.find(b=>b.id===id&&visibleBooking(s,owner,b));}
 export function saveHistoryReview(s:Commerce,owner:string,id:string,rating:number,text:string,now=new Date().toISOString()):Commerce{
- const b=historyBooking(s,owner,id);if(!b||b.operation.status==='cancelled'||b.stay?.status!=='checked_out')throw Error('Оценить можно завершённую поездку');
+ const b=historyBooking(s,owner,id);if(!b||b.operation.status==='cancelled'||b.stay?.status!=='checked_out')throw Error(editorialText("РШ-307", "Оценить можно завершённую поездку", "Оценить можно только завершённую поездку"));
  const input={rating,text,liked:b.review?.liked||[],improve:b.review?.improve||[],photos:b.review?.photos||[]};const error=reviewInputError(input);if(error)throw Error(error);
  return {...s,bookings:s.bookings.map(item=>item.id===id?{...item,review:{...input,text:text.trim(),id:b.review?.id||'history-'+id,author:b.review?.author||owner,createdAt:b.review?.createdAt||now}}:item)};
 }
@@ -27,9 +28,9 @@ export function removeTrip(s:Commerce,owner:string,id:string):Commerce{
  return {...s,hiddenTrips:{...s.hiddenTrips,[owner]:[...(s.hiddenTrips?.[owner]||[]),id]},selectedBooking:s.selectedBooking===id?null:s.selectedBooking};
 }
 export function restoreTripByNumber(s:Commerce,owner:string,number:string):Commerce{
- const code=number.trim().replace(/^№\s*/, '').toUpperCase();if(!code)throw Error('Введите номер бронирования');
+ const code=number.trim().replace(/^№\s*/, '').toUpperCase();if(!code)throw Error(editorialText("РШ-309", "Введите номер бронирования", "Укажите номер брони"));
  const b=s.bookings.find(b=>[(b.number||b.id).toUpperCase(),bookingNumber(b)].includes(code)&&canManageBooking(s,owner,b));
- if(!b)throw Error('Бронь не найдена. Проверьте номер бронирования');
+ if(!b)throw Error(editorialText("РШ-310", "Бронь не найдена. Проверьте номер бронирования", "Бронь не найдена. Проверьте, что ввели её правильно"));
  if(!s.hiddenTrips?.[owner]?.includes(b.id))throw Error('Эта бронь уже есть в приложении');
  return {...s,hiddenTrips:{...s.hiddenTrips,[owner]:s.hiddenTrips[owner].filter(id=>id!==b.id)},selectedBooking:b.id};
 }

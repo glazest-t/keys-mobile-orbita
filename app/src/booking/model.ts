@@ -1,3 +1,4 @@
+import {editorialText} from '../../../prototype/domain/editorialText.mjs';
 import {cancellationPolicyFor,bookingCancellationPolicy,policyDeadline,policyPenalty} from './bookingCancellation.ts';
 import {getPrototypeVariant} from '../prototypeVariant.ts';
 import {canBookRate} from './rateAccess.ts';
@@ -115,9 +116,9 @@ export function cancelBooking(state:Commerce,owner:string,id:string,now=new Date
 export function cancellationDeadline(s:Search){return new Date(Date.parse(s.checkIn+'T15:00:00+03:00')-3*86400000).toISOString();}
 export function cancellationLabel(s:Search){return new Date(cancellationDeadline(s)).toLocaleString('ru-RU',{timeZone:'Europe/Moscow',day:'numeric',month:'long',hour:'2-digit',minute:'2-digit'})+' мск';}
 export function cancellationPreview(b:Booking,now=new Date().toISOString()){
- if(b.stay)throw Error('Проживание уже началось. Обратитесь в отель');
+ if(b.stay)throw Error(editorialText("РШ-231", "Проживание уже началось. Обратитесь в отель", "Проживание уже началось. Для отмены свяжитесь с отелем"));
  if(!Number.isFinite(Date.parse(now)))throw Error('Не удалось определить срок отмены');
- if(Date.parse(now)>=Date.parse(b.draft.search.checkIn+'T15:00:00+03:00'))throw Error('Срок заезда наступил. Для отмены свяжитесь с отелем');
+ if(Date.parse(now)>=Date.parse(b.draft.search.checkIn+'T15:00:00+03:00'))throw Error(editorialText("РШ-233", "Срок заезда наступил. Для отмены свяжитесь с отелем", "Время заезда наступило. Для отмены свяжитесь с отелем"));
  const policy=bookingCancellationPolicy(b);
  const penalty=Date.parse(now)<=Date.parse(policyDeadline(b.draft.search.checkIn,policy))?0:policyPenalty(b.quote.lodgingMinor,b.quote.nights,policy);
  const cashKept=Math.min(penalty,b.operation.paidCashMinor);

@@ -1,3 +1,4 @@
+import {editorialText} from '../../../prototype/domain/editorialText.mjs';
 import data from '../../../spec/demo-data.json' with {type:'json'};
 import settings from '../../../spec/booking-time-settings.json' with {type:'json'};
 import type {Draft} from './model.ts';
@@ -6,7 +7,7 @@ export type StayTimeKind='arrival'|'departure';
 export type StayTimeOption={id:string;time:string;title:string;amountMinor:number;serviceId?:string};
 export function bookingTimeOptions(hotelId:string,kind:StayTimeKind):StayTimeOption[]{
  const hotel=data.hotels.find(h=>h.id===hotelId);
- if(!hotel)throw Error('Отель не найден');
+ if(!hotel)throw Error(editorialText("РШ-212", "Отель не найден", "Объект не найден"));
  return [{id:'standard',time:kind==='arrival'?hotel.checkInTime:hotel.checkOutTime,title:kind==='arrival'?'Стандартный заезд':'Стандартный выезд',amountMinor:0},
   ...data.services.filter(s=>s.hotelId===hotelId&&s.stayTime?.kind===kind).map(s=>({id:s.id,time:s.stayTime!.time,title:s.title,amountMinor:s.unitPriceMinor}))];
 }
@@ -35,7 +36,7 @@ export function selectedBookingTime(d:Draft,kind:StayTimeKind){
 export function selectBookingTime(d:Draft,kind:StayTimeKind,id:string):Draft{
  const base=bookingTimeOptions(d.hotelId,kind);
  const option=id.startsWith('time:')?hourlyBookingTimeOptions(d.hotelId,kind).find(o=>o.id===id&&o.available):base.find(o=>o.id===id);
- if(!option)throw Error('Это время недоступно в выбранном отеле');
+ if(!option)throw Error(editorialText("РШ-213", "Это время недоступно в выбранном отеле", "Это время недоступно в выбранном объекте"));
  const serviceId=option.id.startsWith('time:')?option.serviceId:(option.id==='standard'?undefined:option.id);
  const services=d.services.filter(s=>!data.services.some(item=>item.id===s&&item.stayTime?.kind===kind));
  return {...d,stayTimes:{...d.stayTimes,[kind]:option.time},services:serviceId?[...services,serviceId]:services};
