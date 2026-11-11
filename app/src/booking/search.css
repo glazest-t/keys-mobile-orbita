@@ -104,14 +104,3 @@
 
 /* Mirror the same arrow for both month navigation controls. */
 .calendar-heading>.k-icon-button:last-child .k-icon{transform:rotate(180deg)}
-
-/* Compact mobile find page: keep recent activity clear of the bottom navigation. */
-.keys-app:not(.desktop-app) .find-page{gap:14px}
-.keys-app:not(.desktop-app) .find-search-card{padding:12px;gap:10px}
-.keys-app:not(.desktop-app) .find-search-heading{line-height:18px;padding-top:0}
-.keys-app:not(.desktop-app) .find-search-fields button{min-height:52px;padding:8px 14px}
-.keys-app:not(.desktop-app) .find-search-card>.k-button{min-height:46px}
-.keys-app:not(.desktop-app) .find-section{gap:8px}
-.keys-app:not(.desktop-app) .recent-search-track>button{padding:9px 14px}
-.keys-app:not(.desktop-app) .viewed-hotels img{height:88px;border-radius:16px}
-.keys-app:not(.desktop-app) .viewed-hotels>button{gap:4px}
