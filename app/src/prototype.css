@@ -38,3 +38,7 @@
 
 /* Shared cool-blue surface for informational icon tiles. */
 :root{--k-icon-surface:#eaf2ff}
+
+/* Input text baseline; component rules may use larger type (phone, PIN, amounts). */
+:is(.keys-app,.bottom-sheet) :where(input,textarea,select){font-size:16px;line-height:1.5}
+:is(.keys-app,.bottom-sheet) :where(input,textarea)::placeholder{font-size:inherit}

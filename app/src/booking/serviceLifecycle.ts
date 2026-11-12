@@ -1,3 +1,4 @@
+import {tripEditorialText} from '../../../prototype/domain/tripEditorialText.mjs';
 import type {ServiceRequest} from './serviceRequests.ts';
 import type {Booking} from './model.ts';
 import {stayNow} from './stay.ts';
@@ -14,6 +15,6 @@ export function serviceCancellationAvailability(b:Booking,r:ServiceRequest,now=D
  if(b.stay?.status==='checked_out')return {allowed:false,reason:'Проживание завершено'};
  if(r.status==='cancelled'||r.status==='declined')return {allowed:false,reason:r.status==='cancelled'?'Заказ отменён':'Заказ отклонён'};
  if(!Number.isFinite(current)||!Number.isFinite(start))return {allowed:false,reason:'Не удалось определить срок отмены'};
- if(r.kind==='early'&&b.stay||serviceWasCompleted(r,current)||start<=current&&(!!r.operation||r.settlement==='at_hotel'))return {allowed:false,reason:'Услуга уже началась. Обратитесь в отель'};
+ if(r.kind==='early'&&b.stay||serviceWasCompleted(r,current)||start<=current&&(!!r.operation||r.settlement==='at_hotel'))return {allowed:false,reason:tripEditorialText("ПР-171", 'Услуга уже началась. Обратитесь в отель', "Услуга уже началась. Свяжитесь с администратором")};
  return {allowed:true,reason:''};
 }

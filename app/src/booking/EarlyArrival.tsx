@@ -1,3 +1,4 @@
+import {tripEditorialText} from '../../../prototype/domain/tripEditorialText.mjs';
 import {ServiceDetailIntro} from './ServiceDetailIntro';
 import {useEffect,useRef,useState,type Dispatch,type SetStateAction} from 'react';
 import {ServiceSheet as BottomSheet} from './ServiceSheet';
@@ -15,10 +16,10 @@ export function EarlyArrival({open,onClose,booking:b,commerce,setCommerce,onOrde
  const submit=()=>{try{const requestId=id.current;setCommerce(addStayTimeService(commerce,b.owner,b.id,kind,time,requestId));setError('');onAdded();}catch(e){setError((e as Error).message);}};
  if(added)return null;
  return <BottomSheet open={open} onOpenChange={v=>{if(!v)onClose();}} title={title} snap={.7}><div className="sheet-body booking-time-editor"><ServiceDetailIntro kind={kind==='arrival'?'early':'late'}/>
- {included?<><p>{prefix} {selectedBookingTime(b.draft,kind).time} · включено в бронь</p><Button dismissOnly onClick={onClose}>Готово</Button></>:<>
+ {included?<><p>{tripEditorialText("ПР-172", `${prefix} ${selectedBookingTime(b.draft,kind).time} · включено в бронь`, `${prefix} ${selectedBookingTime(b.draft,kind).time} · Включено в бронь`)}</p><Button dismissOnly onClick={onClose}>Готово</Button></>:<>
  <p className="room-detail-caption">{new Date(timeServiceDate(b,kind)+'T12:00:00').toLocaleDateString('ru-RU',{day:'numeric',month:'long'})}</p>
  <div className="booking-time-options" role="radiogroup" aria-label={kind==='arrival'?'Время раннего заезда':'Время позднего выезда'}>{options.map(o=><button key={o.time} role="radio" aria-checked={o.time===time} onClick={()=>{setTime(o.time);setError('');}}><strong>{prefix} {o.time}</strong><span className="booking-time-price">{formatMoney(o.amountMinor)}</span><span className="booking-time-radio">{o.time===time&&<i/>}</span></button>)}</div>
- {!options.length&&<p>Доступного времени больше нет.</p>}{error&&<p role="alert" className="field-error">{error}</p>}
+ {!options.length&&<p>{tripEditorialText("ПР-173", "Доступного времени больше нет.", "Свободного времени нет")}</p>}{error&&<p role="alert" className="field-error">{error}</p>}
  <div className="service-time-order-footer"><div className="booking-time-total"><span>{kind==='arrival'?'Оплата при заселении':'Оплата при выезде'}</span><strong>{selected?formatMoney(selected.amountMinor):'—'}</strong></div><Button disabled={!selected} onClick={submit}>Добавить в бронь</Button></div>
  </>}
  </div></BottomSheet>;

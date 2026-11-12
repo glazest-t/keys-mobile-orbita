@@ -21,7 +21,7 @@
 .mobile-service-catalog .service-catalog-toolbar h2{display:none}
 .mobile-service-catalog .service-catalog-toolbar p{margin:0;font:400 12px/18px Onest;color:#717787;order:2}
 .mobile-service-catalog .service-catalog-search{display:flex;align-items:center;gap:10px;border:1px solid #e4e8f0;border-radius:14px;background:#fff;padding:0 12px;min-height:46px;color:#717787}
-.mobile-service-catalog .service-catalog-search input{width:100%;min-width:0;border:0;outline:0;background:none;font:400 14px/22px Onest;color:#101320}
+.mobile-service-catalog .service-catalog-search input{width:100%;min-width:0;border:0;outline:0;background:none;font:400 16px/22px Onest;color:#101320}
 .mobile-service-catalog .service-catalog-search:focus-within{outline:2px solid #a3a8b3;outline-offset:-2px}
 .mobile-service-catalog .service-catalog-search button{border:0;background:none;display:grid;place-items:center;min-width:30px;min-height:38px}
 .mobile-service-catalog .service-catalog-featured{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;margin:0 -16px;padding:0 16px 4px}

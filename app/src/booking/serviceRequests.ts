@@ -1,3 +1,4 @@
+import {tripEditorialText} from '../../../prototype/domain/tripEditorialText.mjs';
 import {mealIncludesBreakfast} from './searchFacets.ts';
 import {cancelPaidService} from './serviceSettlement.ts';
 import {addStayTimeService} from './stayTimeServices.ts';
@@ -46,7 +47,7 @@ export function breakfastQuote(b:Booking,input:BreakfastInput,now=new Date().toI
  return (input.mode==='room'?config.roomBreakfastMinor:config.breakfastMinor)*input.persons;
 }
 export function requestBreakfast(s:Commerce,owner:string,bookingId:string,input:BreakfastInput,id:string,now=new Date().toISOString()){
- const b=ownBooking(s,owner,bookingId);if(b.serviceRequests?.some(r=>r.id===id))return s;if(!id)throw Error('Не удалось сохранить заказ');
+ const b=ownBooking(s,owner,bookingId);if(b.serviceRequests?.some(r=>r.id===id))return s;if(!id)throw Error(tripEditorialText("ПР-166", 'Не удалось сохранить заказ', "Не удалось сохранить заказ. Попробуйте ещё раз"));
  const amountMinor=breakfastQuote(b,input,now);
  return update(s,b,[...(b.serviceRequests||[]),{...input,time:input.mode==='buffet'?'11:00':input.time,comment:input.comment.trim(),id,kind:'breakfast',status:'pending',amountMinor,createdAt:now}]);
 }
@@ -70,7 +71,7 @@ export function breakfastStayQuote(b:Booking,input:BreakfastInput,now=new Date()
 // One atomic submission; daily entries retain their own hotel response and refund deadline.
 export function requestBreakfastStay(s:Commerce,owner:string,bookingId:string,input:BreakfastInput,id:string,now=new Date().toISOString()){
  const b=ownBooking(s,owner,bookingId);
- if(!id)throw Error('Не удалось сохранить заказ');
+ if(!id)throw Error(tripEditorialText("ПР-166", 'Не удалось сохранить заказ', "Не удалось сохранить заказ. Попробуйте ещё раз"));
  if(b.serviceRequests?.some(r=>r.groupId===id||r.id===id))return s;
  const {dates}=breakfastStayQuote(b,input,now);
  const requests:ServiceRequest[]=dates.map(date=>({...input,date,time:input.mode==='buffet'?'11:00':input.time,comment:input.comment.trim(),id:id+':'+date,groupId:id,kind:'breakfast',status:'pending',amountMinor:breakfastQuote(b,{...input,date},now),createdAt:now}));

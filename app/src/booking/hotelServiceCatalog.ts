@@ -1,3 +1,4 @@
+import {tripEditorialText} from '../../../prototype/domain/tripEditorialText.mjs';
 import {addStayTimeService,stayTimeServiceOptions,guaranteedTimeService} from './stayTimeServices.ts';
 import {type Booking,type Commerce} from './model.ts';
 import {canManageBooking} from './bookingShare.ts';
@@ -6,7 +7,7 @@ import {requestStatus,type ServiceRequest} from './serviceRequests.ts';
 
 // Approved full demo assortment. These are editable demonstration hotel settings, not real hotel offers.
 export const hotelServices=[
- {id:'breakfast-buffet',title:'Завтрак «шведский стол»',icon:'breakfast',category:'Еда',section:'Популярное',description:'Завтрак в ресторане отеля',amountMinor:150000},
+ {id:'breakfast-buffet',title:'Завтрак «шведский стол»',icon:'breakfast',category:'Еда',section:'Популярное',get description(){return tripEditorialText("ПР-122", 'Завтрак в ресторане отеля', "Завтрак в ресторане");},amountMinor:150000},
  {id:'breakfast',title:'Завтрак в номер',icon:'room-service',category:'Еда',section:'Популярное',description:'Завтрак с доставкой в номер',amountMinor:180000},
  {id:'cleaning',title:'Уборка',icon:'cleaning',category:'Номер',section:'Популярное',description:'Выберите удобное время',amountMinor:0},
  {id:'early',title:'Ранний заезд',icon:'early-check-in',category:'Номер',section:'Популярное',description:'С 09:00 до 12:00',amountMinor:250000},
@@ -18,7 +19,7 @@ export const hotelServices=[
  {id:'cot',title:'Детская кроватка',icon:'baby-cot',category:'Номер',section:'Номер',description:'Поставим в вашем номере',amountMinor:0},
  {id:'transfer',title:'Трансфер в аэропорт',icon:'transfer',category:'Транспорт',section:'Транспорт',description:'Поездка от отеля',amountMinor:290000},
  {id:'other',title:'Другой запрос',icon:'concierge',category:'Номер',section:'Номер',description:'Расскажите, что вам нужно',amountMinor:0},
- {id:'parking',title:'Парковка',icon:'parking',category:'Транспорт',section:'Транспорт',description:'Место для автомобиля',amountMinor:0},
+ {id:'parking',title:'Парковка',icon:'parking',category:'Транспорт',section:'Транспорт',get description(){return tripEditorialText("ПР-123", 'Место для автомобиля', "Место для машины");},amountMinor:0},
 ] as const;
 export type CatalogServiceId=typeof hotelServices[number]['id'];
 export const serviceCategories=['Популярное','Еда','Номер','Отдых','Транспорт'] as const;
@@ -48,7 +49,7 @@ export function requestCatalogService(s:Commerce,actor:string,bookingId:string,s
  if(!b||!canManageBooking(s,actor,b))throw Error('Нет доступа к поездке');
  if(b.operation.status!=='confirmed'||b.stay?.status==='checked_out')throw Error('Поездка завершена');
  if(b.serviceRequests?.some(r=>r.id===id))return s;
- if(b.serviceRequests?.some(r=>r.serviceId===serviceId&&!['cancelled','declined','completed'].includes(requestStatus(b,r))))throw Error('Услуга уже заказана. Откройте существующий заказ, чтобы отменить его.');
+ if(b.serviceRequests?.some(r=>r.serviceId===serviceId&&!['cancelled','declined','completed'].includes(requestStatus(b,r))))throw Error(tripEditorialText("ПР-124", 'Услуга уже заказана. Откройте существующий заказ, чтобы отменить его.', "Услуга уже заказана. Откройте существующий заказ, чтобы отменить его"));
  if(!id||!item||item.id==='breakfast'||item.id==='breakfast-buffet'||!catalogServiceDays(b,serviceId,now).includes(date)||!catalogServiceTimes(b,serviceId,date,now).includes(time))throw Error('Выберите доступные дату и время');
  if(comment.length>500)throw Error('Комментарий — до 500 символов');
  if(item.id==='late'&&b.draft.services.includes('sea-late'))throw Error('Поздний выезд уже включён в бронь');

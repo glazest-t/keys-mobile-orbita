@@ -4,7 +4,7 @@
 .help-search>.k-icon{position:absolute;left:16px;top:18px;z-index:1;pointer-events:none}
 .help-search .k-field>label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .help-search .k-field-box{min-height:56px;background:var(--k-surface-card,#fff);border-radius:18px}
-.help-search .k-field-box input{padding-left:46px;font-size:15px;line-height:24px}
+.help-search .k-field-box input{padding-left:46px;font-size:16px;line-height:24px}
 .help-filters{display:flex;align-items:center;gap:var(--k-filter-gap);padding:1px 0}
 .help-filters .filter-chip{min-height:36px;height:36px;padding:0 14px;white-space:nowrap;font:500 13px/20px var(--k-font-text);border-radius:18px}
 .support-page .history-section{gap:10px}

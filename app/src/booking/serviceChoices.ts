@@ -1,3 +1,4 @@
+import {tripEditorialText} from '../../../prototype/domain/tripEditorialText.mjs';
 import type {Commerce} from './model.ts';
 import {requestCatalogService} from './hotelServiceCatalog.ts';
 export type ServiceLine={id:string;title:string;quantity:number;unitPriceMinor:number};
@@ -21,8 +22,8 @@ export type ServiceChoicesInput={date:string;time:string;quantities:Record<strin
 export const pillowTypes=[{id:'down',title:'Пуховая'},{id:'latex',title:'Латексная'},{id:'buckwheat',title:'С гречихой'}] as const;
 export type ChoiceKind='food'|'towels'|'cleaning'|'pillow'|'other';
 export function choiceLines(kind:ChoiceKind,input:ServiceChoicesInput):ServiceLine[]{
- if(kind==='cleaning'||kind==='pillow') {const item=(kind==='cleaning'?cleaningTypes:pillowTypes).find(v=>v.id===input.cleaning);if(!item)throw Error('Выберите вариант услуги');return [{id:item.id,title:kind==='cleaning'?item.title+' уборка':item.id==='buckwheat'?'Подушка с гречихой':item.title+' подушка',quantity:1,unitPriceMinor:0}];}
- if(kind==='other'){if(!input.comment.trim()||input.comment.length>500)throw Error('Опишите запрос: до 500 символов');return [];}
+ if(kind==='cleaning'||kind==='pillow') {const item=(kind==='cleaning'?cleaningTypes:pillowTypes).find(v=>v.id===input.cleaning);if(!item)throw Error(tripEditorialText("ПР-146", 'Выберите вариант услуги', "Выберите вариант"));return [{id:item.id,title:kind==='cleaning'?item.title+' уборка':item.id==='buckwheat'?'Подушка с гречихой':item.title+' подушка',quantity:1,unitPriceMinor:0}];}
+ if(kind==='other'){if(!input.comment.trim()||input.comment.length>500)throw Error(tripEditorialText("ПР-147", 'Опишите запрос: до 500 символов', "Опишите запрос — до 500 символов"));return [];}
  const catalog=kind==='food'?foodMenu:roomItems;
  if(Object.keys(input.quantities).some(id=>!catalog.some(item=>item.id===id)))throw Error('Позиция больше недоступна');
  const lines=catalog.map(item=>({id:item.id,title:item.title,quantity:input.quantities[item.id]||0,unitPriceMinor:item.amount}));
@@ -32,7 +33,7 @@ export function choiceLines(kind:ChoiceKind,input:ServiceChoicesInput):ServiceLi
 export const choiceTotal=(lines:ServiceLine[])=>lines.reduce((sum,line)=>sum+line.quantity*line.unitPriceMinor,0);
 export function requestServiceChoices(s:Commerce,actor:string,bookingId:string,kind:ChoiceKind,input:ServiceChoicesInput,id:string,now=Date.now()):Commerce{
  const lines=choiceLines(kind,input);
- if(input.photo&&(!/^data:image\/jpeg;base64,[A-Za-z0-9+/]+=*$/.test(input.photo)||input.photo.length>350000))throw Error('Не удалось прикрепить фото');
+ if(input.photo&&(!/^data:image\/jpeg;base64,[A-Za-z0-9+/]+=*$/.test(input.photo)||input.photo.length>350000))throw Error(tripEditorialText("ПР-148", 'Не удалось прикрепить фото', "Не удалось добавить фото. Попробуйте ещё раз"));
  const next=requestCatalogService(s,actor,bookingId,kind,input.date,input.time,input.comment,id,now);
  if(next===s)return s;
  return {...next,bookings:next.bookings.map(b=>b.id===bookingId?{...b,serviceRequests:b.serviceRequests!.map(r=>r.id===id?{...r,items:lines,photo:input.photo,amountMinor:choiceTotal(lines),title:kind==='cleaning'||kind==='pillow'?lines[0].title:r.title}:r)}:b)};

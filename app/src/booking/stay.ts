@@ -1,3 +1,4 @@
+import {tripEditorialText} from '../../../prototype/domain/tripEditorialText.mjs';
 import {guaranteedTimeService} from './stayTimeServices.ts';
 import {selectedBookingTime} from './bookingTimes.ts';
 import type {Booking,Commerce} from './model.ts';
@@ -19,7 +20,7 @@ export function keyAccess(b:Booking,now=Date.now()){
  const stay=b.stay;
  if(b.operation.status!=='confirmed'||!stay||stay.status!=='in_house')return {visible:false,available:false,reason:'Ключ появится после заселения'};
  if(![stayNow(b,now),Date.parse(stay.accessFrom),Date.parse(stayAccessUntil(b))].every(Number.isFinite))return {visible:true,available:false,reason:'Не удалось проверить срок доступа'};
- if(stayNow(b,now)<Date.parse(stay.accessFrom))return {visible:true,available:false,reason:'Доступ к номеру ещё не начался'};
+ if(stayNow(b,now)<Date.parse(stay.accessFrom))return {visible:true,available:false,reason:tripEditorialText("ПР-222", 'Доступ к номеру ещё не начался', "Пока нет доступа к номеру")};
  if(stayNow(b,now)>=Date.parse(stayAccessUntil(b)))return {visible:true,available:false,reason:'Срок действия ключа истёк'};
  return {visible:true,available:true,reason:''};
 }

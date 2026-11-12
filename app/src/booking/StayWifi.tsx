@@ -1,3 +1,4 @@
+import {tripEditorialText} from '../../../prototype/domain/tripEditorialText.mjs';
 import {useDemoIntegrations} from '../demoIntegrations';
 import {DialogActions} from '../dialogActions';
 import {isDesktop} from '../desktop/surface';
@@ -16,7 +17,7 @@ export function StayWifiSheet({booking,open,onClose}:{booking:Booking;open:boole
  const manual=checkoutDay(booking);
  // A new stay, hotel, or demo clock starts an independent connection scenario.
  const session=[booking.id,booking.draft.hotelId,booking.stay?.eventId,booking.stay?.demoTimeOffsetMs,manual].join(':');
- if(!integrations.wifi)return <BottomSheet open={open&&booking.operation.status==='confirmed'&&booking.stay?.status==='in_house'} onOpenChange={value=>{if(!value)onClose();}} title="Wi-Fi отеля" snap={.32}><div className="sheet-body wifi-reception"><span className="wifi-symbol soft"><Icon name="wifi" size={26} inheritColor/></span><p>За информацией о подключении к Wi-Fi обратитесь на ресепшн гостиницы.</p></div></BottomSheet>;
+ if(!integrations.wifi)return <BottomSheet open={open&&booking.operation.status==='confirmed'&&booking.stay?.status==='in_house'} onOpenChange={value=>{if(!value)onClose();}} title={tripEditorialText("ПР-225", "Wi-Fi отеля", "Wi-Fi")} snap={.32}><div className="sheet-body wifi-reception"><span className="wifi-symbol soft"><Icon name="wifi" size={26} inheritColor/></span><p>{tripEditorialText("ПР-226", "За информацией о подключении к Wi-Fi обратитесь на ресепшн гостиницы.", "Пароль от Wi-Fi можно узнать в чате или у администратора")}</p></div></BottomSheet>;
  return <WifiSession key={session} open={open&&booking.operation.status==='confirmed'&&booking.stay?.status==='in_house'} manual={manual} onClose={onClose}/>;
 }
 function WifiSession({open,manual,onClose}:{open:boolean;manual:boolean;onClose:()=>void}){
@@ -33,12 +34,12 @@ function WifiSession({open,manual,onClose}:{open:boolean;manual:boolean;onClose:
  const copy=async(label:string,value:string)=>{
   const attempt=++copyAttempt.current;setError('');
   try{await navigator.clipboard.writeText(value);if(attempt===copyAttempt.current)setCopied(label);}
-  catch{if(attempt===copyAttempt.current)setError('Не удалось скопировать. Введите данные вручную.');}
+  catch{if(attempt===copyAttempt.current)setError(tripEditorialText("ПР-227", 'Не удалось скопировать. Введите данные вручную.', "Не удалось скопировать. Введите данные вручную"));}
  };
  const connected=view==='connect'&&status==='connected';
- const title=view==='help'?'Как подключиться':connected?'Вы в сети':'Wi-Fi отеля';
+ const title=view==='help'?'Как подключиться':connected?'Вы в сети':tripEditorialText("ПР-225", 'Wi-Fi отеля', "Wi-Fi");
  const device=isDesktop?'устройства':'телефона';
- const subtitle=view==='help'?`В настройках ${device}`:view==='credentials'?`Выберите сеть в настройках ${device}`:connected?(isDesktop?'Устройство подключено к Wi-Fi отеля':'Телефон подключён к Wi-Fi отеля'):(isDesktop?'Подключение к гостевой сети отеля':'Подключим телефон к сети отеля');
+ const subtitle=view==='help'?`В настройках ${device}`:view==='credentials'?`Выберите сеть в настройках ${device}`:connected?(isDesktop?'Устройство подключено к Wi-Fi отеля':tripEditorialText("ПР-228", 'Телефон подключён к Wi-Fi отеля', "Телефон подключён к Wi-Fi")):(isDesktop?'Подключение к гостевой сети отеля':tripEditorialText("ПР-229", 'Подключим телефон к сети отеля', "Подключим телефон к Wi-Fi"));
  return <BottomSheet open={open} onOpenChange={v=>{if(!v)onClose();}} title={title} snap={.64}>
   <div className={'sheet-body wifi-sheet '+(connected?'is-connected':'')} onFocusCapture={event=>{
    // Auto-focus during the sheet animation must not scroll the device shell.
@@ -47,18 +48,18 @@ function WifiSession({open,manual,onClose}:{open:boolean;manual:boolean;onClose:
   }}>
    <header className="wifi-heading"><span className={'wifi-symbol '+(view!=='connect'?'soft':'')}><Icon name={connected?'check':'wifi'} size={26} inheritColor/></span><div><strong aria-hidden="true">{title}</strong><p>{subtitle}</p></div></header>
    {view==='connect'?<>
-    <section className="wifi-network"><span className="wifi-network-icon"><Icon name="wifi" size={22} inheritColor/></span><div><strong>{network}</strong><small aria-live="polite">{connected?'Подключено':status==='connecting'?'Подключаемся…':'Гостевая сеть отеля'}</small></div><Icon name={connected?'check':'key'} size={18} inheritColor/></section>
+    <section className="wifi-network"><span className="wifi-network-icon"><Icon name="wifi" size={22} inheritColor/></span><div><strong>{network}</strong><small aria-live="polite">{connected?'Подключено':status==='connecting'?'Подключаемся…':tripEditorialText("ПР-230", 'Гостевая сеть отеля', "Гостевая сеть")}</small></div><Icon name={connected?'check':'key'} size={18} inheritColor/></section>
     <DialogActions>{connected?<Button dismissOnly variant="secondary" onClick={onClose}>Готово</Button>:<Button busy={status==='connecting'} busyLabel="Подключаемся…" onClick={()=>setStatus('connecting')}><Icon name="wifi" size={20} inheritColor/>Подключиться</Button>}
     {status!=='connecting'&&<Button variant="secondary" onClick={()=>setView('credentials')}>Сеть и пароль</Button>}</DialogActions>
    </>:view==='credentials'?<>
     <section className="wifi-credentials">{[['Сеть',network],['Пароль',password]].map(([label,value])=><div key={label}><span><small>{label}</small><strong>{value}</strong></span><button className="wifi-copy" aria-label={copied===label?`${label}: скопировано`:`Скопировать ${label==='Сеть'?'название сети':'пароль'}`} onClick={()=>copy(label,value)}>{copied===label?<Icon name="check" size={18} inheritColor/>:<img src="/assets/details/copy.svg" width="18" height="18" alt=""/>}</button></div>)}</section>
-    <span className="wifi-copy-status" role="status">{copied?`${copied==='Сеть'?'Название сети':'Пароль'} скопирован${copied==='Сеть'?'о':''}`:''}</span>
+    <span className="wifi-copy-status" role="status">{copied?tripEditorialText("ПР-231", `${copied==='Сеть'?'Название сети':'Пароль'} скопирован${copied==='Сеть'?'о':''}`, 'Скопировано'):''}</span>
     {error&&<p className="field-error" role="alert">{error}</p>}
     <DialogActions><Button variant="secondary" onClick={()=>setView('help')}>Как подключиться</Button>
     <Button dismissOnly={manual} variant="secondary" onClick={manual?onClose:()=>setView('connect')}>{manual?'Готово':'Назад'}</Button></DialogActions>
    </>:<>
-    <ol className="wifi-instructions"><li>Откройте настройки {device} и раздел Wi-Fi.</li><li>Выберите сеть <strong>{network}</strong>.</li><li>Введите пароль <strong>{password}</strong>.</li></ol>
-    <Button variant="secondary" onClick={()=>setView('credentials')}>К сети и паролю</Button>
+    <ol className="wifi-instructions"><li>{tripEditorialText("ПР-235", `Откройте настройки ${device} и раздел Wi-Fi.`, 'Перейдите в раздел Wi-Fi в настройках телефона')}</li><li>Выберите сеть <strong>{network}</strong>.</li><li>Введите пароль <strong>{password}</strong>.</li></ol>
+    <Button variant="secondary" onClick={()=>setView('credentials')}>{tripEditorialText("ПР-236", "К сети и паролю", "Назад")}</Button>
    </>}
   </div>
  </BottomSheet>;

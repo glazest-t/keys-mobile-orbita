@@ -1,3 +1,4 @@
+import {tripEditorialText} from '../../../prototype/domain/tripEditorialText.mjs';
 import {catalog,type Booking,type Commerce} from './model.ts';
 import {settingsFor,type ServiceRequest} from './serviceRequests.ts';
 import type {StayTimeKind} from './bookingTimes.ts';
@@ -22,11 +23,11 @@ export function showTimeService(b:Booking,kind:StayTimeKind,now=Date.now()){
 }
 export function addStayTimeService(s:Commerce,actor:string,bookingId:string,kind:StayTimeKind,time:string,id:string,now=Date.now()):Commerce{
  const b=s.bookings.find(v=>v.id===bookingId);if(!b||!canManageBooking(s,actor,b))throw Error('Нет доступа к поездке');
- if(b.operation.status!=='confirmed'||b.stay?.status==='checked_out')throw Error('Поездка завершена или отменена');
+ if(b.operation.status!=='confirmed'||b.stay?.status==='checked_out')throw Error(tripEditorialText("ПР-174", 'Поездка завершена или отменена', "Поездка завершена или бронь отменена"));
  if(b.serviceRequests?.some(r=>r.id===id))return s;
  if(kind==='arrival'&&b.stay)throw Error('Гость уже заселён');
  const option=stayTimeServiceOptions(b,kind,now).find(o=>o.time===time);
- if(!id||!option||!Number.isFinite(now))throw Error('Это время недоступно. Выберите другой вариант');
+ if(!id||!option||!Number.isFinite(now))throw Error(tripEditorialText("ПР-175", 'Это время недоступно. Выберите другой вариант', "Это время недоступно. Выберите другое"));
  if(includedTimeService(b,kind)||addedTimeService(b,kind))throw Error('Услуга уже добавлена в бронь');
  const at=new Date(stayNow(b,now)).toISOString();
  const r:ServiceRequest={id,kind:kind==='arrival'?'early':'catalog',...(kind==='departure'?{serviceId:'late',title:'Поздний выезд',icon:'late-check-out'}:{}),status:'confirmed',settlement:'at_hotel',confirmedAt:at,date:timeServiceDate(b,kind),time,persons:1,comment:'',amountMinor:option.amountMinor,createdAt:at};

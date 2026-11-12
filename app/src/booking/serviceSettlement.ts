@@ -1,3 +1,4 @@
+import {tripEditorialText} from '../../../prototype/domain/tripEditorialText.mjs';
 import {depositBalance} from './deposit.ts';
 import {stayNow} from './stay.ts';
 import {calculatePayment,confirmPayment,readWallets,type Quote} from '../../../prototype/domain/payment.mjs';
@@ -33,13 +34,13 @@ export function servicePolicy(r:ServiceRequest):NonNullable<ServiceRequest['canc
 export function respondToService(s:Commerce,owner:string,bookingId:string,id:string,response:'confirm'|'decline'|'complete',now=new Date().toISOString()){
  const {b,r}=order(s,owner,bookingId,id),status=requestStatus(b,r,Date.parse(now));
  if(b.stay&&Number.isFinite(Date.parse(now)))now=new Date(stayNow(b,Date.parse(now))).toISOString();
- if(response==='complete'){if(timeServiceKind(r)&&starts(r)>Date.parse(now)&&!(r.kind==='early'&&b.stay))throw Error('Время услуги ещё не наступило');if(status==='completed')return s;if(status!=='paid'&&!(status==='confirmed'&&(r.amountMinor===0||r.settlement==='at_hotel')))throw Error('Сначала оплатите услугу');return update(s,b,{...r,status:'completed'});}
+ if(response==='complete'){if(timeServiceKind(r)&&starts(r)>Date.parse(now)&&!(r.kind==='early'&&b.stay))throw Error(tripEditorialText("ПР-167", 'Время услуги ещё не наступило', "Услуга ещё не началась"));if(status==='completed')return s;if(status!=='paid'&&!(status==='confirmed'&&(r.amountMinor===0||r.settlement==='at_hotel')))throw Error('Сначала оплатите услугу');return update(s,b,{...r,status:'completed'});}
  if(status===(response==='confirm'?'confirmed':'declined'))return s;
- if(status!=='pending'||!Number.isFinite(Date.parse(now))||(response==='confirm'&&starts(r)<=Date.parse(now)))throw Error('Заявка уже изменилась или её время прошло');
+ if(status!=='pending'||!Number.isFinite(Date.parse(now))||(response==='confirm'&&starts(r)<=Date.parse(now)))throw Error(tripEditorialText("ПР-168", 'Заявка уже изменилась или её время прошло', "Заявка изменилась или срок её действия истёк"));
  return update(s,b,response==='decline'?{...r,status:'declined'}:{...r,status:'confirmed',confirmedAt:now,cancellation:servicePolicy(r)});
 }
 export function serviceQuote(s:Commerce,owner:string,bookingId:string,id:string,usePoints:boolean,now=new Date().toISOString()){
- const {b,r}=order(s,owner,bookingId,id);if(r.settlement==='at_hotel')throw Error('Эта услуга оплачивается в отеле');if(b.stay&&Number.isFinite(Date.parse(now)))now=new Date(stayNow(b,Date.parse(now))).toISOString();if(requestStatus(b,r)!=='confirmed'||starts(r)<=Date.parse(now)||!Number.isFinite(Date.parse(now)))throw Error('Заказ пока недоступен для оплаты');
+ const {b,r}=order(s,owner,bookingId,id);if(r.settlement==='at_hotel')throw Error(tripEditorialText("ПР-169", 'Эта услуга оплачивается в отеле', "Эта услуга оплачивается на месте"));if(b.stay&&Number.isFinite(Date.parse(now)))now=new Date(stayNow(b,Date.parse(now))).toISOString();if(requestStatus(b,r)!=='confirmed'||starts(r)<=Date.parse(now)||!Number.isFinite(Date.parse(now)))throw Error('Заказ пока недоступен для оплаты');
  const friendly=catalog.rates.find(v=>v.id===b.draft.rateId)?.id.includes('friendly')||false;
  return calculatePayment({hotelId:b.draft.hotelId,lodgingMinor:0,services:[{id:r.id,quantity:1,unitPriceMinor:r.amountMinor}],wallets:readWallets(s.payment,owner,b.draft.hotelId),usePoints,hotelBenefitsAllowed:!friendly});
 }
@@ -79,7 +80,7 @@ export function cancelPaidService(s:Commerce,owner:string,bookingId:string,id:st
 /** Reception payment event: records cash received at the hotel, never runs the guest payment flow. */
 export function settleTimeServiceAtHotel(s:Commerce,owner:string,bookingId:string,id:string){
  const {b,r}=order(s,owner,bookingId,id);if(r.operation?.status==='confirmed')return s;
- if(r.settlement!=='at_hotel'||!['confirmed','completed'].includes(requestStatus(b,r)))throw Error('Нет услуги к оплате в отеле');
+ if(r.settlement!=='at_hotel'||!['confirmed','completed'].includes(requestStatus(b,r)))throw Error(tripEditorialText("ПР-170", 'Нет услуги к оплате в отеле', "Нет услуг к оплате на месте"));
  const quote=calculatePayment({hotelId:b.draft.hotelId,lodgingMinor:0,services:[{id:r.id,quantity:1,unitPriceMinor:r.amountMinor}],wallets:readWallets(s.payment,owner,b.draft.hotelId),usePoints:false});
  const paid=confirmPayment(s.payment,{userId:owner,bookingId:`service:${b.id}:${r.id}`,quote,method:'at_hotel'});
  const operation={...paid.operation!,paidCashMinor:r.amountMinor,dueAtHotelMinor:0};

@@ -1,3 +1,4 @@
+import {tripEditorialText} from '../../../prototype/domain/tripEditorialText.mjs';
 import {settleHotelLoyalty} from '../rewards/loyalty.ts';
 import {depositBalance,returnDeposit} from './deposit.ts';
 import {calculatePayment,readWallets,walletIds,type Quote} from '../../../prototype/domain/payment.mjs';
@@ -18,7 +19,7 @@ export function stayBill(b:Booking){
  const hotelDue=charges.filter(r=>r.settlement==='at_hotel'&&!r.operation).reduce((n,r)=>n+r.amountMinor,0);
  return {due,hotelDue,onlineDue:due-hotelDue,cash,points,total,charges,pending:requests.filter(r=>['pending','review'].includes(requestStatus(b,r)))};
 }
-function own(s:Commerce,owner:string,id:string){const b=s.bookings.find(b=>b.id===id&&b.owner===owner);if(!b)throw Error('Поездка не найдена');if(b.operation.status!=='confirmed'||!b.stay)throw Error('Счёт доступен после заселения');return b;}
+function own(s:Commerce,owner:string,id:string){const b=s.bookings.find(b=>b.id===id&&b.owner===owner);if(!b)throw Error('Поездка не найдена');if(b.operation.status!=='confirmed'||!b.stay)throw Error(tripEditorialText("ПР-243", 'Счёт доступен после заселения', "Счёт будет доступен после заселения"));return b;}
 function active(s:Commerce,owner:string,id:string){const b=own(s,owner,id);if(b.stay!.status!=='in_house')throw Error('Проживание завершено');return b;}
 function replace(s:Commerce,b:Booking):Commerce{return {...s,bookings:s.bookings.map(v=>v.id===b.id&&v.owner===b.owner?b:v)};}
 const friendly=(b:Booking)=>catalog.rates.find(r=>r.id===b.draft.rateId)?.kind==='friendly_rate';
@@ -29,7 +30,7 @@ export function quoteStayBill(s:Commerce,owner:string,id:string,usePoints:boolea
  const items:{id:string;quote:Quote}[]=[];
  if(b.operation.dueAtHotelMinor){const quote=lodgingQuote(preview,b,usePoints);items.push({id:'lodging',quote});preview=spendPreview(preview,b,quote);}
  for(const r of stayBill(b).charges.filter(r=>!r.operation&&r.amountMinor>0&&r.settlement!=='at_hotel')){
-  let quote:Quote;try{quote=serviceQuote(preview,owner,id,r.id,usePoints,now);}catch{throw Error(`${serviceTitle(r)} · ${r.date}: уточните заказ в отеле или отмените его`);}
+  let quote:Quote;try{quote=serviceQuote(preview,owner,id,r.id,usePoints,now);}catch{throw Error(tripEditorialText("ПР-244", `${serviceTitle(r)} · ${r.date}: уточните заказ в отеле или отмените его`, `${serviceTitle(r)} · ${r.date}: уточните заказ у администратора или отмените его`));}
   items.push({id:r.id,quote});preview=spendPreview(preview,b,quote);
  }
  return {bookingId:id,revision:b.revision||0,usePoints,items,cash:items.reduce((n,r)=>n+r.quote.cashDueMinor,0),hotelPoints:items.reduce((n,r)=>n+r.quote.applied.hotelPoints,0),keysPoints:items.reduce((n,r)=>n+r.quote.applied.keysPoints,0)};
@@ -41,7 +42,7 @@ export function payStayBill(s:Commerce,owner:string,id:string,expected:ReturnTyp
  const fresh=quoteStayBill(s,owner,id,expected.usePoints,now);
  if(JSON.stringify(fresh)!==JSON.stringify(expected))throw Error('Счёт изменился. Проверьте сумму и повторите оплату');
  if(!fresh.items.length)throw Error('Счёт уже оплачен');
- if(source==='deposit'&&(fresh.items.some(i=>i.id==='lodging')||depositBalance(b)<fresh.cash))throw Error('Депозит доступен для услуг при достаточном остатке');
+ if(source==='deposit'&&(fresh.items.some(i=>i.id==='lodging')||depositBalance(b)<fresh.cash))throw Error(tripEditorialText("ПР-245", 'Депозит доступен для услуг при достаточном остатке', "Депозитом можно оплачивать услуги, пока на счёте хватает денег"));
  if(outcome!=='success')throw Error('Оплата не прошла. Попробуйте ещё раз');
  // Build an immutable transaction. Any later error discards every earlier change.
  let next=s;
@@ -78,6 +79,6 @@ export function demoCheckoutDay(s:Commerce,owner:string,id:string,now=Date.now()
 export function confirmCheckout(s:Commerce,owner:string,id:string,eventId:string,now=Date.now()){
  const b=own(s,owner,id);if(b.stay!.status==='checked_out')return s;
  const reason=checkoutBlock(b,now);if(reason)throw Error(reason);
- if(!eventId)throw Error('Нужно подтверждение выезда от отеля');
+ if(!eventId)throw Error(tripEditorialText("ПР-246", 'Нужно подтверждение выезда от отеля', "Нужно подтверждение выезда от администратора"));
  return settleHotelLoyalty(replace(s,{...returnDeposit(b,now),revision:(b.revision||0)+1,stay:{...b.stay!,status:'checked_out',checkedOutAt:new Date(stayNow(b,now)).toISOString(),checkoutEventId:eventId}}),owner,id);
 }

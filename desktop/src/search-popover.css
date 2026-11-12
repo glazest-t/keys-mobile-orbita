@@ -18,7 +18,7 @@
 .desktop-app .desktop-search-popover-guests {left:auto;right:0;width:min(440px,100%);}
 .desktop-app .desktop-destination-input {display:flex;align-items:center;gap:12px;padding:4px 12px;border:1px solid var(--k-border-subtle);border-radius:14px;min-height:52px;}
 .desktop-app .desktop-destination-input:focus-within {border-color:var(--k-text-secondary);}
-.desktop-app .desktop-destination-input input {min-width:0;width:100%;border:0;outline:none;background:transparent;color:var(--k-text-primary);font:400 15px/22px var(--k-font-text);}
+.desktop-app .desktop-destination-input input {min-width:0;width:100%;border:0;outline:none;background:transparent;color:var(--k-text-primary);font:400 16px/22px var(--k-font-text);}
 .desktop-app .desktop-destination-input .k-icon-button {border:0;width:32px;height:32px;flex:none;}
 .desktop-app .desktop-destination-label {font:400 13px/20px var(--k-font-text);margin:16px 0 8px;}
 .desktop-app .desktop-destination-list {display:flex;flex-direction:column;gap:4px;}

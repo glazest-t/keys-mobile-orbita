@@ -14,7 +14,7 @@
 .bottom-sheet .desktop-breakfast-date{display:flex;flex-direction:column;gap:12px}
 .bottom-sheet .desktop-breakfast-field{display:flex;flex-direction:column;gap:8px;font:500 14px/20px Onest;min-width:0}
 .bottom-sheet .desktop-breakfast-select{display:block;position:relative}
-.bottom-sheet .desktop-breakfast-select select,.bottom-sheet .desktop-breakfast-date-range{display:block;width:100%;box-sizing:border-box;border:0;border-radius:14px;background:#f3f6fa;color:#101320;padding:13px 42px 13px 14px;font:400 15px/22px Onest;appearance:none;min-height:48px}
+.bottom-sheet .desktop-breakfast-select select,.bottom-sheet .desktop-breakfast-date-range{display:block;width:100%;box-sizing:border-box;border:0;border-radius:14px;background:#f3f6fa;color:#101320;padding:13px 42px 13px 14px;font:400 16px/22px Onest;appearance:none;min-height:48px}
 .bottom-sheet .desktop-breakfast-select>.k-icon{position:absolute;right:14px;top:50%;transform:translateY(-50%);pointer-events:none;color:#5a6072}
 .bottom-sheet .desktop-breakfast-select select:focus-visible{outline:2px solid #a3a8b3}
 .bottom-sheet .desktop-breakfast-all{display:flex;align-items:center;gap:10px;font:400 14px/20px Onest;min-height:32px}

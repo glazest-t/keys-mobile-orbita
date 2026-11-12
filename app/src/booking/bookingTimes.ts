@@ -1,3 +1,4 @@
+import {tripEditorialText} from '../../../prototype/domain/tripEditorialText.mjs';
 import {editorialText} from '../../../prototype/domain/editorialText.mjs';
 import data from '../../../spec/demo-data.json' with {type:'json'};
 import settings from '../../../spec/booking-time-settings.json' with {type:'json'};
@@ -16,7 +17,7 @@ type TimeSettings={freeFrom:string;freeUntil:string;paidServiceId?:string};
 export type HourlyStayTimeOption=StayTimeOption&{serviceId?:string;available:boolean};
 export function hourlyBookingTimeOptions(hotelId:string,kind:StayTimeKind):HourlyStayTimeOption[]{
  const hotel=data.hotels.find(h=>h.id===hotelId);
- if(!hotel)throw Error('Отель не найден');
+ if(!hotel)throw Error(tripEditorialText("ПР-079", 'Отель не найден', "Объект не найден"));
  const config=(settings as Record<string,Partial<Record<StayTimeKind,TimeSettings>>>)[hotelId]?.[kind];
  const standard=kind==='arrival'?hotel.checkInTime:hotel.checkOutTime;
  const freeFrom=config?.freeFrom||(kind==='arrival'?standard:'00:00'),freeUntil=config?.freeUntil||(kind==='arrival'?'23:00':standard);

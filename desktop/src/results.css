@@ -30,8 +30,8 @@
 .desktop-results-filters .filter-price-heading .switch-row{min-height:32px;padding:0;border:0;width:auto;gap:6px;font-size:11px}
 .desktop-results-filters .filter-price-fields{gap:6px}
 .desktop-results-filters .filter-price-fields label{padding:10px 6px;gap:4px}
-.desktop-results-filters .filter-price-fields input{font-size:12px}
-.desktop-results-filters .filter-price-fields input::placeholder{font-size:10px}
+.desktop-results-filters .filter-price-fields input{font-size:16px}
+.desktop-results-filters .filter-price-fields input::placeholder{font-size:16px}
 .desktop-results-filters .filter-counter{font-size:12px}
 .desktop-results-filters .counter-button{width:28px;height:28px;min-width:28px}
 .desktop-results-filters .filter-counter>div{gap:4px}
@@ -142,8 +142,8 @@
 .desktop-results-filters .filter-price-heading .switch-row{font:400 12px/18px Onest,sans-serif;color:var(--k-text-secondary);gap:6px}
 .desktop-results-filters .filter-price-fields{gap:8px}
 .desktop-results-filters .filter-price-fields label{min-height:48px;padding:10px 8px;gap:4px;border-radius:12px;background:var(--k-surface-app);font:400 13px/20px Onest,sans-serif}
-.desktop-results-filters .filter-price-fields input{font:500 14px/20px Onest,sans-serif}
-.desktop-results-filters .filter-price-fields input::placeholder{font:400 14px/20px Onest,sans-serif;color:var(--k-text-secondary)}
+.desktop-results-filters .filter-price-fields input{font:500 16px/20px Onest,sans-serif}
+.desktop-results-filters .filter-price-fields input::placeholder{font:400 16px/20px Onest,sans-serif;color:var(--k-text-secondary)}
 .desktop-results-filters .filter-counter{font:400 13px/20px Onest,sans-serif;gap:8px}
 .desktop-results-filters .counter-button{width:32px;height:32px;min-width:32px}
 .desktop-results-filters .filter-counter strong{min-width:40px}

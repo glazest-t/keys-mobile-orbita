@@ -38,7 +38,7 @@
 .desktop-modal .desktop-breakfast-settings { display:flex;flex-direction:column;gap:20px; }
 .desktop-modal .desktop-breakfast-field { display:flex;flex-direction:column;gap:8px;min-width:0;font:500 15px/22px Onest,sans-serif; }
 .desktop-modal .desktop-breakfast-field select,
-.desktop-modal .desktop-breakfast-date-range { box-sizing:border-box;width:100%;min-height:48px;padding:12px 14px;border:0;border-radius:14px;background:#f3f6fa;color:var(--k-text-primary);font:400 15px/22px Onest,sans-serif; }
+.desktop-modal .desktop-breakfast-date-range { box-sizing:border-box;width:100%;min-height:48px;padding:12px 14px;border:0;border-radius:14px;background:#f3f6fa;color:var(--k-text-primary);font:400 16px/22px Onest,sans-serif; }
 .desktop-modal .desktop-breakfast-field select:focus-visible { outline:2px solid var(--k-action-primary);outline-offset:2px; }
 .desktop-modal .desktop-breakfast-schedule { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start; }
 .desktop-modal .desktop-breakfast-schedule > .desktop-breakfast-date:only-child { grid-column:1/-1; }

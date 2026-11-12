@@ -16,7 +16,7 @@
 .service-catalog-toolbar p{font:400 13px/20px Onest;color:#717787;margin:5px 0 0}
 .service-catalog-search{display:flex;align-items:center;gap:10px;background:#f6f8fb;border:1px solid #e5e9f0;border-radius:14px;padding:0 14px;height:46px;flex:0 1 270px;min-width:180px;color:#717787}
 .service-catalog-search:focus-within{outline:2px solid #a3a8b3;outline-offset:1px}
-.service-catalog-search input{font:400 14px/22px Onest;min-width:0;width:100%;border:0;outline:0;background:none;color:#101320}
+.service-catalog-search input{font:400 16px/22px Onest;min-width:0;width:100%;border:0;outline:0;background:none;color:#101320}
 .service-catalog-search button{display:grid;place-items:center;border:0;background:none;padding:5px;cursor:pointer}
 .service-catalog-featured{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .desktop-app .service-catalog-card.hotel-service-row{border:1px solid #e3e8f0;border-radius:20px;background:#fff;overflow:hidden;padding:18px;min-height:136px;display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:14px;row-gap:14px;align-items:start;cursor:pointer;transition:box-shadow .18s,border-color .18s}
