@@ -28,13 +28,8 @@
 .keys-app .booking-payment-card>header>.awaiting-payment-status>.k-status-label{color:inherit}
 .keys-app .booking-payment-card--pending .payment-summary-row.total{align-items:center}
 
-.keys-app .record-hotel-copy>.awaiting-payment-status{align-self:flex-start;width:fit-content;margin-bottom:6px;font:500 13px/20px var(--k-font-text,Onest)}
 .pending-payment-fixed-spacer{grid-column:1/-1}
 .pending-payment-fixed-inner{width:100%;max-width:1100px;margin:0 auto;display:flex;justify-content:flex-end}
 .keys-app .pending-payment-fixed .k-button{width:100%;max-width:none;min-height:52px}
 .desktop-app>.pending-payment-fixed{position:fixed;bottom:0;left:0;right:0;padding:16px 32px!important;z-index:30;background:#fff;box-shadow:0 -4px 20px #10132008}
 .desktop-app .pending-payment-fixed .k-button{width:320px;max-width:100%;min-height:52px}
-.desktop-app .record-hotel-copy:has(>.awaiting-payment-status)>.awaiting-payment-status{grid-column:1;grid-row:1;margin:0 0 4px}
-.desktop-app .record-hotel-copy:has(>.awaiting-payment-status)>strong{grid-row:2}
-.desktop-app .record-hotel-copy:has(>.awaiting-payment-status)>.record-hotel-stay{grid-row:3}
-.desktop-app .record-hotel-copy:has(>.awaiting-payment-status)>.booking-hotel-contacts{grid-row:1/4}
