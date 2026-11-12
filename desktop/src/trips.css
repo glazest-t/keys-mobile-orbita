@@ -5,7 +5,7 @@
 .desktop-app .desktop-trip-columns { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 24px; width: 100%; align-items: start; }
 .desktop-app .desktop-trip-column { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
 .desktop-app .desktop-trip-column > * { margin-block: 0; min-width: 0; }
-.desktop-app .desktop-trip-column > .trip-additions { padding: 20px; border: 1px solid #e4e7ef; border-radius: 24px; background: #fff; gap: 12px; }
+.desktop-app .desktop-trip-column > .trip-additions { padding: 20px; border: 1px solid var(--theme-border,#e4e7ef); border-radius: 24px; background: var(--theme-card,#fff); gap: 12px; }
 .desktop-app .desktop-trip-column .trip-service-list { border: 0; border-radius: 0; }
 .desktop-app .desktop-trip-column .trip-service { padding-inline: 0; }
 .desktop-app .desktop-trip-booking .trip-quick-actions { gap: 12px; }
@@ -65,7 +65,7 @@
 .desktop-app .desktop-trip-booking .upcoming-photo { height: clamp(220px, 20vw, 300px); aspect-ratio: auto; min-height: 0; }
 .desktop-app .desktop-trip-booking .upcoming-photo > img { position: absolute; inset: 0; }
 
-.desktop-app .nearby-embedded .detail-segments button.active { background: var(--k-action-tint,#eaf2ff); color: var(--k-action-primary,#2f5bff); box-shadow: none; }
+.desktop-app .nearby-embedded .detail-segments button.active { background: var(--k-action-tint,var(--theme-tint,#eaf2ff)); color: var(--theme-link,var(--theme-link,#2f5bff)); box-shadow: none; }
 
 /* Balance active trip columns with useful map/list space, not empty grid rows. */
 @media (min-width: 901px) {
@@ -82,13 +82,13 @@
 .desktop-app .desktop-trip-booking .trip-checkout-reminder { padding: 16px 20px; }
 
 .desktop-app .completed-tiles .service-tile-label { text-align: left; font-size: 14px; line-height: 20px; gap: 3px; }
-.desktop-app .completed-return-hotel { display: grid; grid-template-columns: minmax(140px,.8fr) minmax(0,1fr); flex: 1; min-height: 228px; overflow: hidden; border: 1px solid var(--k-border-subtle,#e4e7ef); border-radius: 24px; background: var(--k-surface-card,#fff); }
+.desktop-app .completed-return-hotel { display: grid; grid-template-columns: minmax(140px,.8fr) minmax(0,1fr); flex: 1; min-height: 228px; overflow: hidden; border: 1px solid var(--k-border-subtle,var(--theme-border,#e4e7ef)); border-radius: 24px; background: var(--k-surface-card,var(--theme-card,#fff)); }
 .desktop-app .completed-return-hotel > img { width: 100%; height: 100%; min-height: 0; object-fit: cover; }
 .desktop-app .completed-return-content { display: flex; flex-direction: column; justify-content: space-between; gap: 20px; padding: 24px; min-width: 0; }
 .desktop-app .completed-return-content > div:first-child { display: flex; flex-direction: column; gap: 8px; }
 .desktop-app .completed-return-content h2 { font: 500 19px/26px Onest,sans-serif; margin: 0; overflow-wrap: anywhere; }
 .desktop-app .completed-return-content p,
-.desktop-app .completed-return-content span { margin: 0; font: 400 13px/19px Onest,sans-serif; color: var(--k-text-secondary,#5a6072); }
+.desktop-app .completed-return-content span { margin: 0; font: 400 13px/19px Onest,sans-serif; color: var(--k-text-secondary,var(--theme-secondary,#5a6072)); }
 .desktop-app .completed-return-action { display: flex; flex-direction: column; gap: 12px; }
 .desktop-app .completed-return-action .k-button { width: 100%; min-height: 48px; padding-inline: 12px; gap: 8px; }
 @media (min-width: 901px) and (max-width: 1100px) {
@@ -98,11 +98,11 @@
 }
 
 /* The empty-trip benefit promo uses real typography, not an enlarged image of text. */
-.desktop-app .desktop-benefits-banner { display: flex; align-items: center; gap: 20px; width: 100%; min-height: 200px; padding: 24px; border: 1px solid #e0e3f3; border-radius: 28px; background: linear-gradient(120deg,#eaf2ff,#eaf2ff 55%,#eaf2ff); text-align: left; color: var(--k-text-primary,#101320); }
+.desktop-app .desktop-benefits-banner { display: flex; align-items: center; gap: 20px; width: 100%; min-height: 200px; padding: 24px; border: 1px solid var(--theme-border,#e0e3f3); border-radius: 28px; background: linear-gradient(120deg,var(--theme-tint,#eaf2ff),var(--theme-tint,#eaf2ff) 55%,var(--theme-tint,#eaf2ff)); text-align: left; color: var(--k-text-primary,var(--theme-text,#101320)); }
 .desktop-benefits-copy { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
 .desktop-benefits-copy > strong { font: 500 22px/28px Unbounded,sans-serif; letter-spacing: -.7px; }
-.desktop-benefits-copy > span:not(.desktop-benefits-link) { max-width: 320px; font: 400 14px/21px Onest,sans-serif; color: var(--k-text-secondary,#5a6072); }
-.desktop-benefits-copy .desktop-benefits-link { display: flex; align-items: center; gap: 6px; margin-top: 8px; font: 500 14px/20px Onest,sans-serif; color: var(--k-action-primary,#2f5bff); }
+.desktop-benefits-copy > span:not(.desktop-benefits-link) { max-width: 320px; font: 400 14px/21px Onest,sans-serif; color: var(--k-text-secondary,var(--theme-secondary,#5a6072)); }
+.desktop-benefits-copy .desktop-benefits-link { display: flex; align-items: center; gap: 6px; margin-top: 8px; font: 500 14px/20px Onest,sans-serif; color: var(--theme-link,var(--theme-link,#2f5bff)); }
 .desktop-benefits-art { position: relative; display: block; flex: none; width: 144px; height: 144px; overflow: hidden; border-radius: 50%; mask-image: radial-gradient(circle,#000 66%,transparent 72%); }
 .desktop-benefits-art img { position: absolute; width: 355.5%; max-width: none; height: auto; left: -224%; top: -55%; pointer-events: none; }
 @media (max-width: 1100px) {
@@ -118,20 +118,20 @@
 .desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) > .trip-history-entry { height: auto; align-self: stretch; }
 
 /* Empty-trip promos share typography, padding and a bottom-aligned text action. */
-.desktop-app .trip-history-entry { background: linear-gradient(110deg,#D6F1FF 0%,var(--k-action-tint) 55%,#FFFFFF 100%); }
+.desktop-app .trip-history-entry { background: linear-gradient(110deg,var(--theme-tint,#D6F1FF) 0%,var(--k-action-tint) 55%,var(--theme-card,#FFFFFF) 100%); }
 .desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) { grid-template-rows: auto minmax(0,1fr) minmax(0,1fr); }
 .desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison):has(>.hotelier-banner) { grid-template-rows: auto auto minmax(0,1fr) minmax(0,1fr); }
 .desktop-app[data-route="trips"] .benefits-banner-comparison { align-self: stretch; }
-.desktop-app .desktop-benefits-banner { position: relative; height: 100%; align-items: stretch; padding: 24px; background: radial-gradient(ellipse at 0% 100%,#d5f1ff 0%,transparent 62%),radial-gradient(ellipse at 100% 100%,#eaf2ff 0%,transparent 68%),linear-gradient(120deg,#eaf2ff,#eaf2ff); }
+.desktop-app .desktop-benefits-banner { position: relative; height: 100%; align-items: stretch; padding: 24px; background: radial-gradient(ellipse at 0% 100%,var(--theme-tint,#d5f1ff) 0%,transparent 62%),radial-gradient(ellipse at 100% 100%,var(--theme-tint,#eaf2ff) 0%,transparent 68%),linear-gradient(120deg,var(--theme-tint,#eaf2ff),var(--theme-tint,#eaf2ff)); }
 .desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) > .trip-history-entry { padding: 24px; }
 .desktop-app .desktop-benefits-copy,
 .desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) .trip-history-entry-copy { height: 100%; padding: 0; gap: 8px; width: calc(100% - 164px); max-width: none; flex: none; }
 .desktop-app .desktop-benefits-copy > strong,
 .desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) .trip-history-entry-copy > strong { font: 500 22px/28px Unbounded,sans-serif; letter-spacing: -.7px; white-space: normal; }
 .desktop-app .desktop-benefits-copy > span:not(.desktop-benefits-link),
-.desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) .trip-history-entry-copy > small { font: 400 14px/21px Onest,sans-serif; color: var(--k-text-secondary,#5a6072); white-space: normal; }
+.desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) .trip-history-entry-copy > small { font: 400 14px/21px Onest,sans-serif; color: var(--k-text-secondary,var(--theme-secondary,#5a6072)); white-space: normal; }
 .desktop-app .desktop-benefits-copy .desktop-benefits-link,
-.desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) .trip-history-entry-copy > span { margin-top: auto; padding-top: 16px; display: flex; align-items: center; gap: 6px; font: 500 14px/20px Onest,sans-serif; color: var(--k-action-primary,#2f5bff); }
+.desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) .trip-history-entry-copy > span { margin-top: auto; padding-top: 16px; display: flex; align-items: center; gap: 6px; font: 500 14px/20px Onest,sans-serif; color: var(--theme-link,var(--theme-link,#2f5bff)); }
 .desktop-app .desktop-benefits-art { position: absolute; right: 24px; top: 50%; transform: translateY(-50%); }
 @media (max-width: 1100px) {
  .desktop-app .desktop-benefits-copy,

@@ -1,35 +1,35 @@
 /* Pending bookings use the same labels, cards and reading scale as booking details. */
-.keys-app .awaiting-payment-status{background:var(--k-icon-surface,#eaf2ff);color:var(--k-action-primary);gap:8px;font:500 13px/20px var(--k-font-text,Onest)}
+.keys-app .awaiting-payment-status{background:var(--k-icon-surface,var(--theme-tint,#eaf2ff));color:var(--theme-link,var(--k-action-primary));gap:8px;font:500 13px/20px var(--k-font-text,Onest)}
 .awaiting-payment-status .k-spinner{width:18px;height:18px;box-sizing:border-box;border:0;border-radius:0;flex:none;background:url('/brand/assets/logo/mark-cobalt-ui.svg') center/contain no-repeat;animation:spin var(--k-duration-loaderTurn,1400ms) linear infinite}
 @media(prefers-reduced-motion:reduce){.awaiting-payment-status .k-spinner{animation:none}}
 .pending-trip .upcoming-payment-settlement{justify-content:flex-end}
 .pending-trip .booking-payment-remaining{font:400 13px/19px var(--k-font-text,Onest);color:inherit}
-.pending-trip .k-button.pending-trip-pay{width:100%;background:#fff;color:var(--k-action-primary,#2f5bff);height:48px;min-height:48px;border-radius:14px;font:500 14px/20px var(--k-font-text,Onest)}
-@media(hover:hover){.pending-trip .k-button.pending-trip-pay:hover{background:var(--k-icon-surface,#eaf2ff);color:var(--k-action-pressed,#2446c9)}}
-.demo-acquiring{position:absolute;inset:0;z-index:1000;background:var(--k-surface-app,#f6f9ff);overflow:auto;padding:var(--device-safe-area-top,24px) 16px max(24px,var(--mobile-safe-area-height,24px));box-sizing:border-box;font:400 14px/21px var(--k-font-text,Onest);color:var(--k-text-primary,#101320)}
+.pending-trip .k-button.pending-trip-pay{width:100%;background:var(--theme-card,#fff);color:var(--theme-link,var(--theme-link,#2f5bff));height:48px;min-height:48px;border-radius:14px;font:500 14px/20px var(--k-font-text,Onest)}
+@media(hover:hover){.pending-trip .k-button.pending-trip-pay:hover{background:var(--k-icon-surface,var(--theme-tint,#eaf2ff));color:var(--theme-link-hover,var(--theme-link,#2446c9))}}
+.demo-acquiring{position:absolute;inset:0;z-index:1000;background:var(--k-surface-app,var(--theme-card,#f6f9ff));overflow:auto;padding:var(--device-safe-area-top,24px) 16px max(24px,var(--mobile-safe-area-height,24px));box-sizing:border-box;font:400 14px/21px var(--k-font-text,Onest);color:var(--k-text-primary,var(--theme-text,#101320))}
 .demo-acquiring>header{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;gap:8px;font:500 15px/21px var(--k-font-text,Onest);text-align:center;margin-bottom:24px}
 .demo-acquiring>header>.k-icon{justify-self:center}
-.demo-acquiring>main{max-width:440px;margin:0 auto;display:flex;flex-direction:column;gap:16px;padding:20px;background:#fff;border:1px solid var(--k-border-subtle,#e4e7ef);border-radius:22px}
+.demo-acquiring>main{max-width:440px;margin:0 auto;display:flex;flex-direction:column;gap:16px;padding:20px;background:var(--theme-card,#fff);border:1px solid var(--k-border-subtle,var(--theme-border,#e4e7ef));border-radius:22px}
 .demo-acquiring h1{font:600 28px/36px var(--k-font-text,Onest);letter-spacing:-.5px;margin:0}
 .demo-acquiring p{margin:0}
-.demo-acquiring .acquiring-demo-label,.demo-acquiring .acquiring-note,.demo-acquiring .acquiring-booking-number{font:400 13px/19px var(--k-font-text,Onest);color:var(--k-text-secondary,#5a6072)}
-.acquiring-method{padding:16px;border:1px solid var(--k-border-subtle,#e4e7ef);border-radius:16px;display:flex;align-items:center;gap:12px}
-.acquiring-method>.icon-tile{width:44px;height:44px;flex:none;border-radius:14px;display:grid;place-items:center;background:var(--k-icon-surface,#eaf2ff);color:var(--k-action-primary,#2f5bff)}
+.demo-acquiring .acquiring-demo-label,.demo-acquiring .acquiring-note,.demo-acquiring .acquiring-booking-number{font:400 13px/19px var(--k-font-text,Onest);color:var(--k-text-secondary,var(--theme-secondary,#5a6072))}
+.acquiring-method{padding:16px;border:1px solid var(--k-border-subtle,var(--theme-border,#e4e7ef));border-radius:16px;display:flex;align-items:center;gap:12px}
+.acquiring-method>.icon-tile{width:44px;height:44px;flex:none;border-radius:14px;display:grid;place-items:center;background:var(--k-icon-surface,var(--theme-tint,#eaf2ff));color:var(--theme-link,var(--theme-link,#2f5bff))}
 .acquiring-method>div{display:flex;flex-direction:column;gap:4px}
 .acquiring-method strong{font:500 15px/22px var(--k-font-text,Onest)}
-.acquiring-method>div>span{font:400 13px/19px var(--k-font-text,Onest);color:var(--k-text-secondary,#5a6072)}
+.acquiring-method>div>span{font:400 13px/19px var(--k-font-text,Onest);color:var(--k-text-secondary,var(--theme-secondary,#5a6072))}
 .demo-acquiring>main>.k-button{width:100%;max-width:none;min-height:48px;font:500 15px/22px var(--k-font-text,Onest);border-radius:14px}
 .demo-acquiring-desktop{position:fixed;padding:32px}
 .demo-acquiring-desktop>header{max-width:880px;margin:0 auto 32px;font:500 20px/28px var(--k-font-text,Onest);text-align:left}
 .demo-acquiring-desktop>main{padding:24px;border-radius:24px}
 
 
-.keys-app .booking-payment-card>header>.awaiting-payment-status{padding:6px 10px;border-radius:12px;background:var(--k-icon-surface,#eaf2ff);color:var(--k-action-primary);font:500 13px/20px var(--k-font-text,Onest);gap:8px}
+.keys-app .booking-payment-card>header>.awaiting-payment-status{padding:6px 10px;border-radius:12px;background:var(--k-icon-surface,var(--theme-tint,#eaf2ff));color:var(--theme-link,var(--k-action-primary));font:500 13px/20px var(--k-font-text,Onest);gap:8px}
 .keys-app .booking-payment-card>header>.awaiting-payment-status>.k-status-label{color:inherit}
 .keys-app .booking-payment-card--pending .payment-summary-row.total{align-items:center}
 
 .pending-payment-fixed-spacer{grid-column:1/-1}
 .pending-payment-fixed-inner{width:100%;max-width:1100px;margin:0 auto;display:flex;justify-content:flex-end}
 .keys-app .pending-payment-fixed .k-button{width:100%;max-width:none;min-height:52px}
-.desktop-app>.pending-payment-fixed{position:fixed;bottom:0;left:0;right:0;padding:16px 32px!important;z-index:30;background:#fff;box-shadow:0 -4px 20px #10132008}
+.desktop-app>.pending-payment-fixed{position:fixed;bottom:0;left:0;right:0;padding:16px 32px!important;z-index:30;background:var(--theme-card,#fff);box-shadow:0 -4px 20px #10132008}
 .desktop-app .pending-payment-fixed .k-button{width:320px;max-width:100%;min-height:52px}

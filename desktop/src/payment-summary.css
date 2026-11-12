@@ -1,6 +1,6 @@
 /* Preserve the approved cart; only group the payment schedule below points. */
 .desktop-surface .desktop-app .desktop-cart-wallets>.november-partial-points{display:flex;flex-direction:column;align-items:stretch;gap:6px;margin:4px 0 0}
-.desktop-surface .desktop-app .desktop-cart-settlement{display:flex;flex-direction:column;gap:18px;border-top:1px solid #D4DBFF;padding-top:20px}
+.desktop-surface .desktop-app .desktop-cart-settlement{display:flex;flex-direction:column;gap:18px;border-top:1px solid var(--theme-border,#D4DBFF);padding-top:20px}
 .desktop-surface .desktop-app .checkout-cta .desktop-cart-settlement .booking-total-details{border:0;padding:0}
 .desktop-surface .desktop-app .desktop-cart-pay-later{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font:400 14px/21px Onest,sans-serif}
 .desktop-surface .desktop-app .desktop-cart-pay-later strong{font-weight:500;white-space:nowrap}
@@ -9,7 +9,7 @@
 /* Booking detail section headings sit above their cards, like the adjacent sections. */
 .desktop-surface .desktop-app .record-content .booking-payment-card{padding:0;border:0;border-radius:0;background:transparent;gap:10px}
 .desktop-surface .desktop-app .record-content .booking-payment-card>header>h2{margin:0;padding:0;font:500 18px/26px Onest,sans-serif}
-.desktop-surface .desktop-app .record-content .booking-payment-card>.payment-summary{padding:20px;border:1px solid var(--k-border-subtle);border-radius:24px;background:#fff}
+.desktop-surface .desktop-app .record-content .booking-payment-card>.payment-summary{padding:20px;border:1px solid var(--k-border-subtle);border-radius:24px;background:var(--theme-card,#fff)}
 
 .desktop-app .pending-payment-inline-actions{display:flex;flex-direction:column;gap:8px;margin-top:4px}
 .desktop-app .pending-payment-inline-actions>.k-button{width:100%;max-width:none;min-height:48px}

@@ -1,7 +1,7 @@
-.keys-app .booking-hotel-contacts { display:flex;flex-direction:column;gap:6px;margin:8px 0;color:var(--k-text-secondary,#5a6072);font:400 12px/18px Onest; }
+.keys-app .booking-hotel-contacts { display:flex;flex-direction:column;gap:6px;margin:8px 0;color:var(--k-text-secondary,var(--theme-secondary,#5a6072));font:400 12px/18px Onest; }
 .keys-app .booking-hotel-contacts > :is(div,a) { display:flex;align-items:flex-start;gap:6px;min-width:0; }
 .keys-app .booking-hotel-contacts .k-icon { flex:none;margin-top:1px; }
-.keys-app .booking-hotel-contacts a { color:var(--k-action-primary,#2f5bff);text-decoration:none;width:fit-content; }
-.keys-app .booking-hotel-contacts a:hover { color:var(--k-action-pressed);text-decoration:none; }
+.keys-app .booking-hotel-contacts a { color:var(--theme-link,var(--theme-link,#2f5bff));text-decoration:none;width:fit-content; }
+.keys-app .booking-hotel-contacts a:hover { color:var(--theme-link-hover,var(--k-action-pressed));text-decoration:none; }
 .keys-app .booking-hotel-contacts > :is(div,a) > span:last-child { overflow-wrap:anywhere; }
 .desktop-app .booking-hotel-contacts { font-size:14px;line-height:20px; }

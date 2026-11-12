@@ -1,0 +1,116 @@
+/* Shared appearance for both shells. Light values stay in the existing components;
+   dark values are semantic overrides, so imagery and on-accent text keep their colors. */
+html[data-app-theme="dark"] {
+  --theme-card: #192333;
+  --theme-muted: #202d40;
+  --theme-tint: #243858;
+  --theme-border: #36465e;
+  --theme-text: #f0f4fc;
+  --theme-secondary: #b4c1d6;
+  --theme-disabled: #8e9bb0;
+  --theme-link: #91b0ff;
+  --theme-link-hover: #bbceff;
+  --theme-success: #73dbad;
+  --theme-success-bg: #163e34;
+  --theme-warning: #f2c967;
+  --theme-warning-bg: #453820;
+  --theme-error: #ff99a5;
+  --theme-error-bg: #482a35;
+  --k-surface-app: #101722;
+  --k-surface-card: var(--theme-card);
+  --k-text-primary: var(--theme-text);
+  --k-text-secondary: var(--theme-secondary);
+  --k-text-disabled: var(--theme-disabled);
+  --k-text-onAccent: #fff;
+  --k-action-tint: var(--theme-tint);
+  --k-border-subtle: var(--theme-border);
+  --k-status-success: var(--theme-success);
+  --k-status-successTint: var(--theme-success-bg);
+  --k-status-successBg: var(--theme-success-bg);
+  --k-status-successText: var(--theme-success);
+  --k-status-warningTint: var(--theme-warning-bg);
+  --k-status-errorTint: var(--theme-error-bg);
+  --k-status-errorText: var(--theme-error);
+  --k-status-warningText: var(--theme-warning);
+  --k-focus-ring: var(--theme-link);
+  --k-icon-surface: var(--theme-tint);
+  --k-nav-fill: #192333ed;
+  --k-glass-fill: #192333ed;
+  --k-feature-loyaltySoft: linear-gradient(110deg,#192333,#243858);
+  color: var(--theme-text);
+  background: var(--k-surface-app);
+}
+html[data-app-theme="dark"] body { color:var(--theme-text); background:var(--k-surface-app); }
+html[data-app-theme="dark"] :is(.app-screen,.device-screen,.bottom-sheet) { background:var(--k-surface-app); color:var(--theme-text); }
+html[data-app-theme="dark"] .bottom-sheet { background:var(--theme-card); }
+html[data-app-theme="dark"] .status-bar { color:var(--theme-text); }
+html[data-app-theme="dark"] .status-bar img { filter:invert(1); }
+html[data-app-theme="dark"] .sheet-handle { background:var(--theme-disabled); }
+html[data-app-theme="dark"] :is(.sheet-description,.field-label) { color:var(--theme-secondary); }
+html[data-app-theme="dark"] .mobile-field input { background:var(--theme-card);color:var(--theme-text);border-color:var(--theme-border); }
+html[data-app-theme="dark"] :is(.mobile-scrollbar-thumb,.mobile-carousel-scrollbar-thumb) { background:#8e9bb080; }
+html[data-app-theme="dark"] .sheet-overlay { background:#03081499; }
+html[data-app-theme="dark"] :is(input,textarea)::placeholder { color:var(--theme-disabled); }
+html[data-app-theme="dark"] :is(input,textarea,select) { caret-color:var(--theme-link); }
+html[data-app-theme="dark"] :is(.keys-app,.desktop-app,.bottom-sheet,.demo-tools) { scrollbar-color:#52647e transparent; }
+html[data-app-theme="dark"] .keyboard-dock { background:#263047; }
+html[data-app-theme="dark"] .keyboard-asset { filter:invert(.88) hue-rotate(180deg); }
+.theme-choices .language-choice { justify-content:flex-start;gap:12px; }
+.theme-choices .language-choice .k-icon { margin-left:auto; }
+.theme-swatch { width:30px;height:30px;flex:none;border-radius:9px;border:1px solid var(--k-border-subtle);position:relative;overflow:hidden; }
+.theme-swatch::after { content:"";position:absolute;inset:7px 5px;border-radius:4px;border:1px solid #8198c4; }
+.theme-swatch-light { background:#f6f9ff; }
+.theme-swatch-dark { background:#192333; }
+.theme-swatch-system { background:linear-gradient(90deg,#f6f9ff 50%,#192333 50%); }
+
+/* Translucent component surfaces keep their original alpha. */
+html[data-app-theme="dark"] {
+  --theme-border-a64: color-mix(in srgb,var(--theme-border) 25.1%,transparent);
+  --theme-card-a38: color-mix(in srgb,var(--theme-card) 14.9%,transparent);
+  --theme-card-a61: color-mix(in srgb,var(--theme-card) 23.92%,transparent);
+  --theme-card-a217: color-mix(in srgb,var(--theme-card) 85.1%,transparent);
+  --theme-card-a196: color-mix(in srgb,var(--theme-card) 76.86%,transparent);
+  --theme-card-a245: color-mix(in srgb,var(--theme-card) 96.08%,transparent);
+  --theme-card-a230: color-mix(in srgb,var(--theme-card) 90.2%,transparent);
+  --theme-card-a240: color-mix(in srgb,var(--theme-card) 94.12%,transparent);
+  --theme-card-a153: color-mix(in srgb,var(--theme-card) 60%,transparent);
+  --theme-card-a222: color-mix(in srgb,var(--theme-card) 87.06%,transparent);
+  --theme-card-a242: color-mix(in srgb,var(--theme-card) 94.9%,transparent);
+  --theme-card-a237: color-mix(in srgb,var(--theme-card) 92.94%,transparent);
+  --theme-border-a31: color-mix(in srgb,var(--theme-border) 12.16%,transparent);
+  --theme-card-a31: color-mix(in srgb,var(--theme-card) 12.16%,transparent);
+  --theme-card-a36: color-mix(in srgb,var(--theme-card) 14.12%,transparent);
+  --theme-border-a38: color-mix(in srgb,var(--theme-border) 14.9%,transparent);
+  --theme-tint-a140: color-mix(in srgb,var(--theme-tint) 55%,transparent);
+  --theme-border-a20: color-mix(in srgb,var(--theme-border) 7.84%,transparent);
+  --theme-card-a89: color-mix(in srgb,var(--theme-card) 34.9%,transparent);
+  --theme-card-a46: color-mix(in srgb,var(--theme-card) 18.04%,transparent);
+  --theme-border-a77: color-mix(in srgb,var(--theme-border) 30.2%,transparent);
+  --theme-border-a46: color-mix(in srgb,var(--theme-border) 18.04%,transparent);
+  --theme-border-a16: color-mix(in srgb,var(--theme-border) 6.27%,transparent);
+  --theme-card-a51: color-mix(in srgb,var(--theme-card) 20%,transparent);
+  --theme-card-a224: color-mix(in srgb,var(--theme-card) 87.84%,transparent);
+  --theme-card-a179: color-mix(in srgb,var(--theme-card) 70.2%,transparent);
+  --theme-card-a112: color-mix(in srgb,var(--theme-card) 43.92%,transparent);
+  --theme-card-a235: color-mix(in srgb,var(--theme-card) 92.16%,transparent);
+  --theme-warning-bg-a23: color-mix(in srgb,var(--theme-warning-bg) 9.02%,transparent);
+  --theme-card-a250: color-mix(in srgb,var(--theme-card) 98%,transparent);
+  --theme-card-a204: color-mix(in srgb,var(--theme-card) 80%,transparent);
+  --theme-border-a128: color-mix(in srgb,var(--theme-border) 50.2%,transparent);
+  --theme-card-a128: color-mix(in srgb,var(--theme-card) 50.2%,transparent);
+}
+
+html[data-app-theme="dark"] .home-indicator-svg rect { fill:var(--theme-text); }
+html[data-app-theme="dark"] .android-navigation-bar { filter:invert(1); }
+html[data-app-theme="dark"] img.k-icon { filter:brightness(1.55) saturate(.7); }
+
+/* Artwork has a dedicated palette, never an inversion of hotel photography. */
+html[data-app-theme="dark"] .desktop-app .find-search-card { background-image:url('./assets/search-orbit-dark.svg'); }
+html[data-app-theme="dark"] .desktop-navigation .desktop-points-link { color:var(--theme-link); }
+html[data-app-theme="dark"] .desktop-surface .keys-app.desktop-app { background-color:var(--k-surface-app); }
+/* Original preference illustrations are opaque sprites; screen blending removes
+   their inverted white canvas while preserving detail on a dark surface. */
+html[data-app-theme="dark"] .preference-illustration-original { mix-blend-mode:screen; filter:invert(1) hue-rotate(180deg); }
+/* A switch thumb must stay bright in either track state. */
+html[data-app-theme="dark"] .switch::after { background:#f0f4fc; }
+html[data-app-theme="dark"] .switch:not(.on) { background:#52647e; }

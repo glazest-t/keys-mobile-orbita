@@ -1,7 +1,7 @@
 /* k3 «Выдача · изменить даты и гостей», scoped to the results editor. */
-.results-query-flow{position:absolute;inset:0;background:var(--k-surface-app,#f6f9ff)}
-.results-query-header{height:60px;padding:8px 12px;display:flex;align-items:center;justify-content:space-between;background:var(--k-surface-app,#f6f9ff)}
-.keys-app .results-query-header h1{font:500 14px/20px Onest;color:#5a6072;letter-spacing:0;margin:0}
+.results-query-flow{position:absolute;inset:0;background:var(--k-surface-app,var(--theme-card,#f6f9ff))}
+.results-query-header{height:60px;padding:8px 12px;display:flex;align-items:center;justify-content:space-between;background:var(--k-surface-app,var(--theme-card,#f6f9ff))}
+.keys-app .results-query-header h1{font:500 14px/20px Onest;color:var(--theme-secondary,#5a6072);letter-spacing:0;margin:0}
 .results-query-header .header-spacer{width:44px}
 .results-query-content.when-content{gap:10px;padding:4px 16px calc(var(--flow-footer-height) + var(--mobile-safe-area-height,34px) + 24px)}
 .results-query-content .date-calendar{padding:14px 12px;gap:8px}
@@ -17,6 +17,6 @@
 .results-query-content .feature-copy>.icon-tile{width:22px;height:22px;flex:none}
 .results-query-content .feature-copy small{font:400 12px/17px Onest}
 .results-query-content .trip-features{gap:0}
-.results-query-footer{padding:10px 16px 14px;background:var(--k-surface-app,#f6f9ff)}
+.results-query-footer{padding:10px 16px 14px;background:var(--k-surface-app,var(--theme-card,#f6f9ff))}
 .results-query-footer>.k-button{height:52px;min-height:52px;border-radius:14px;font:500 15px/22px Onest}
 .results-query-footer>.field-error{margin:0 0 8px}

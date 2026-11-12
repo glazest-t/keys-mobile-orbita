@@ -14,7 +14,7 @@ export function SourceSplash(){
           E('div', { style: { position: 'absolute', left: cx - D / 2, top: cy - D / 2, width: D, height: D, transform: 'rotate(90deg)' } },
             E('div', { style: { position: 'absolute', inset: 0, animation: A('kOrbit') } },
               E('div', { style: { position: 'absolute', left: D / 2 - dot / 2, top: st / 2 - dot / 2, width: dot, height: dot, borderRadius: '50%', background: C, boxShadow: '0 0 0 4.8px ' + BG, animation: A('kDotGrow') } }))))),
-      E('div', { style: { position: 'absolute', left: 116, top: cy - 21, font: "500 36px/42px 'Unbounded',sans-serif", letterSpacing: -1.8, color: '#101320', whiteSpace: 'nowrap', animation: A('kWord', 'cubic-bezier(.2,.8,.2,1)') } }, 'ключи'));
+      E('div', { style: { position: 'absolute', left: 116, top: cy - 21, font: "500 36px/42px 'Unbounded',sans-serif", letterSpacing: -1.8, color: 'var(--k-text-primary,#101320)', whiteSpace: 'nowrap', animation: A('kWord', 'cubic-bezier(.2,.8,.2,1)') } }, 'ключи'));
 }
 
 export function SourceFinish(){

@@ -2,10 +2,10 @@
 .desktop-modal:has(.service-detail-intro) { width:min(720px,calc(100vw - 48px)); }
 .desktop-modal .service-detail-intro { display:flex;flex-direction:column;gap:12px;min-width:0; }
 .desktop-modal .service-detail-cover { display:block;width:100%;height:210px;object-fit:cover;object-position:center 35%;border-radius:20px; }
-.desktop-modal .service-detail-art { display:grid;place-items:center;height:180px;border-radius:20px;background:linear-gradient(125deg,#d6f1ff,#eaf2ff 60%,#fff);overflow:hidden; }
-.desktop-modal .service-detail-art > span { display:grid;place-items:center;width:112px;height:112px;border-radius:50%;background:#ffffffcc;box-shadow:0 8px 32px #2f5bff12;color:var(--k-action-primary); }
+.desktop-modal .service-detail-art { display:grid;place-items:center;height:180px;border-radius:20px;background:linear-gradient(125deg,var(--theme-tint,#d6f1ff),var(--theme-tint,#eaf2ff) 60%,var(--theme-card,#fff));overflow:hidden; }
+.desktop-modal .service-detail-art > span { display:grid;place-items:center;width:112px;height:112px;border-radius:50%;background:var(--theme-card-a204,#ffffffcc);box-shadow:0 8px 32px #2f5bff12;color:var(--theme-link,var(--k-action-primary)); }
 .desktop-modal .service-detail-intro p { font:400 15px/23px Onest,sans-serif;color:var(--k-text-secondary);margin:0; }
-.desktop-modal .service-detail-unit { font:500 13px/20px Onest,sans-serif;color:var(--k-action-primary); }
+.desktop-modal .service-detail-unit { font:500 13px/20px Onest,sans-serif;color:var(--theme-link,var(--k-action-primary)); }
 .desktop-modal .service-detail-note { font:400 14px/22px Onest,sans-serif;color:var(--k-text-secondary); }
 .desktop-modal:has(.service-detail-intro) :is(.service-sheet-layout,.service-sheet-fields,.breakfast-order-sheet,.breakfast-order-fields) { max-height:none;overflow:visible; }
 .desktop-modal:has(.service-detail-intro) :is(.catalog-service-detail,.booking-time-editor,.desktop-service-detail,.service-choice-fields,.breakfast-order-fields) { gap:20px;padding:0; }
@@ -13,7 +13,7 @@
 .desktop-modal:has(.service-detail-intro) .catalog-comment { width:100%;min-height:88px;resize:vertical; }
 .desktop-modal:has(.service-detail-intro) :is(.service-action-footer,.catalog-order-footer,.desktop-service-footer,.service-time-order-footer) {
  display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:12px 24px;
- margin-top:20px;padding:20px 0 0;border:0;border-top:1px solid var(--k-border-subtle);background:white;
+ margin-top:20px;padding:20px 0 0;border:0;border-top:1px solid var(--k-border-subtle);background:var(--theme-card,white);
 }
 .desktop-modal:has(.service-detail-intro) :is(.service-action-footer,.catalog-order-footer,.desktop-service-footer,.service-time-order-footer) > :is(p,small,.field-error,.dialog-actions) { grid-column:1/-1; }
 .desktop-modal:has(.service-detail-intro) :is(.service-action-footer,.catalog-order-footer,.desktop-service-footer,.service-time-order-footer) > div:not(.dialog-actions) { display:flex;flex-direction:column;gap:4px;align-items:flex-start;justify-content:flex-start;border:0;margin:0;padding:0; }
@@ -38,7 +38,7 @@
 .desktop-modal .desktop-breakfast-settings { display:flex;flex-direction:column;gap:20px; }
 .desktop-modal .desktop-breakfast-field { display:flex;flex-direction:column;gap:8px;min-width:0;font:500 15px/22px Onest,sans-serif; }
 .desktop-modal .desktop-breakfast-field select,
-.desktop-modal .desktop-breakfast-date-range { box-sizing:border-box;width:100%;min-height:48px;padding:12px 14px;border:0;border-radius:14px;background:#f3f6fa;color:var(--k-text-primary);font:400 16px/22px Onest,sans-serif; }
+.desktop-modal .desktop-breakfast-date-range { box-sizing:border-box;width:100%;min-height:48px;padding:12px 14px;border:0;border-radius:14px;background:var(--theme-card,#f3f6fa);color:var(--k-text-primary);font:400 16px/22px Onest,sans-serif; }
 .desktop-modal .desktop-breakfast-field select:focus-visible { outline:2px solid var(--k-action-primary);outline-offset:2px; }
 .desktop-modal .desktop-breakfast-schedule { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start; }
 .desktop-modal .desktop-breakfast-schedule > .desktop-breakfast-date:only-child { grid-column:1/-1; }
@@ -52,7 +52,7 @@
 .desktop-modal .desktop-breakfast-select { display:block;position:relative; }
 .desktop-modal .desktop-breakfast-select select { appearance:none;padding-right:44px;cursor:pointer; }
 .desktop-modal .desktop-breakfast-select > .k-icon { position:absolute;right:16px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--k-text-secondary); }
-.desktop-modal .desktop-breakfast-select select:hover { background:#edf2f8; }
+.desktop-modal .desktop-breakfast-select select:hover { background:var(--theme-card,#edf2f8); }
 .desktop-modal .desktop-breakfast-settings .guest-counter { border:0;padding-bottom:0; }
 .desktop-modal:has(.service-detail-intro) .breakfast-order-sheet > .service-action-footer { border:0; }
 .desktop-modal .breakfast-cost-summary small { color:var(--k-text-secondary);font:400 13px/18px Onest,sans-serif; }

@@ -5,5 +5,5 @@
 }
 .keys-app:not(.desktop-app) .booking-reward .desktop-booking-reward-mark{width:28px;height:28px;object-fit:contain}
 .keys-app:not(.desktop-app) .booking-reward .desktop-booking-reward-title{font:500 14px/20px Onest,sans-serif;color:var(--k-text-primary)}
-.keys-app:not(.desktop-app) .booking-reward .desktop-booking-reward-amount{font:500 20px/26px Onest,sans-serif;white-space:nowrap;color:var(--k-action-primary);text-align:right}
+.keys-app:not(.desktop-app) .booking-reward .desktop-booking-reward-amount{font:500 20px/26px Onest,sans-serif;white-space:nowrap;color:var(--theme-link,var(--k-action-primary));text-align:right}
 .keys-app:not(.desktop-app) .booking-reward>p{grid-column:2/-1;margin:0;font:400 12px/18px Onest,sans-serif;color:var(--k-text-secondary)}

@@ -1,5 +1,5 @@
 .review-card p.review-text,.review-list p.review-text{display:block;overflow:visible;white-space:pre-line;-webkit-line-clamp:unset;margin:0}
 .review-card p.review-text-collapsed,.review-list p.review-text-collapsed{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden}
-.review-text-toggle{align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;margin:-8px 0;padding:0;border:0;background:transparent;color:var(--k-accent,#2f5bff);font:500 14px/20px Onest,sans-serif;text-align:left;cursor:pointer}
+.review-text-toggle{align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;margin:-8px 0;padding:0;border:0;background:transparent;color:var(--k-accent,var(--theme-link,#2f5bff));font:500 14px/20px Onest,sans-serif;text-align:left;cursor:pointer}
 .review-text-toggle:focus-visible{outline:2px solid #2f5bff;outline-offset:2px;border-radius:4px}
 .reviews-track:has(.review-text-toggle){align-items:flex-start}

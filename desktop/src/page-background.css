@@ -1,8 +1,8 @@
 /* White desktop canvas preview. Keep component fills and brand gradients intact:
    --k-surface-app still provides contrast inside fields, chips and muted panels. */
-:root { background-color: #fff; }
-body.desktop-surface { background-color: #fff; }
-.desktop-surface .keys-app.desktop-app { background-color: #fff; }
+:root { background-color: var(--theme-card,#fff); }
+body.desktop-surface { background-color: var(--theme-card,#fff); }
+.desktop-surface .keys-app.desktop-app { background-color: var(--theme-card,#fff); }
 .desktop-app :is(
  .app-header,
  .booking-content,
@@ -28,6 +28,6 @@ body.desktop-surface { background-color: #fff; }
  .breakfast-scroll,
  .swipe-preferences,
  .onboarding-panel
-) { background-color: #fff; }
+) { background-color: var(--theme-card,#fff); }
 .desktop-surface .device-lock-screen,
-.desktop-surface .hotelier-portal { background-color: #fff; }
+.desktop-surface .hotelier-portal { background-color: var(--theme-card,#fff); }

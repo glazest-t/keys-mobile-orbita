@@ -3,7 +3,7 @@
 .keys-app .service-terms h2{font:500 17px/23px var(--k-font-text);color:var(--k-text-primary)}
 .keys-app .service-terms p{font:400 14px/22px var(--k-font-text);color:var(--k-text-secondary)}
 .keys-app .terms{text-align:center;font:400 11px/18px var(--k-font-text)}
-.terms a{color:var(--k-action-primary);text-decoration:underline;text-underline-offset:3px}
+.terms a{color:var(--theme-link,var(--k-action-primary));text-decoration:underline;text-underline-offset:3px}
 .terms a:focus-visible{outline:2px solid var(--k-text-secondary);outline-offset:3px;border-radius:3px}
 .service-terms-intro{display:flex;flex-direction:column;gap:10px}
 .service-terms-intro>small{font:400 12px/18px var(--k-font-text);color:var(--k-text-secondary)}

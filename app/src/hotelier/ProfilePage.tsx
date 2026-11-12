@@ -1,4 +1,5 @@
 import {LanguageSetting} from '../profile/LanguageSetting';
+import {ThemeSetting} from '../profile/ThemeSetting';
 import {useNovember} from '../usePrototypeVariant';
 import {isDesktop} from '../desktop/surface';
 import {ProfilePhoto} from '../profile/ProfilePhoto';
@@ -34,6 +35,7 @@ export function ProfilePage({user,commerce,onPhotoChange,onEdit,onBenefits,onHot
   <section className="profile-navigation-group" aria-labelledby="profile-settings-title"><h2 id="profile-settings-title">Настройки аккаунта</h2><div className="k-card">
    <Row icon="bell" title="Уведомления" onClick={onNotifications}/>
    {november&&<LanguageSetting value={user.language} onChange={onLanguage}/>}
+   <ThemeSetting/>
    <Row icon="secure" title="Безопасность и доступ" onClick={onSecurity}/>
    <Row icon="settings" title="Управление данными" onClick={onData}/>
   </div></section>

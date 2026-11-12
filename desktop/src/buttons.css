@@ -86,7 +86,7 @@
 
 .desktop-modal.keys-app .k-button.primary { background:var(--k-action-primary); color:#fff; }
 .desktop-modal.keys-app .k-button.primary:active { background:var(--k-action-pressed); }
-.desktop-modal.keys-app .k-button.secondary { background:var(--k-action-tint); color:var(--k-action-primary); }
+.desktop-modal.keys-app .k-button.secondary { background:var(--k-action-tint); color:var(--theme-link,var(--k-action-primary)); }
 .desktop-modal:has(.dialog-actions > .k-button:nth-child(4)) { width:min(860px,calc(100vw - 48px)); }
 
 /* Informational dialogs close through the header; do not leave an empty action rail. */

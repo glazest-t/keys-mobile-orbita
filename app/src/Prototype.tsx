@@ -1,3 +1,6 @@
+import './appTheme';
+import './theme.css';
+import './theme-contrast.css';
 import {tripEditorialText} from '../../prototype/domain/tripEditorialText.mjs';
 import {HotelFinder} from './assistant/HotelFinder';
 import {finderLibrary,startFinderBooking} from './assistant/model';

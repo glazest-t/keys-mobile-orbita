@@ -40,9 +40,9 @@
   border-color:color-mix(in srgb,var(--k-action-primary) 45%,var(--k-border-subtle));
   box-shadow:0 4px 16px #1938750d;
  }
- .desktop-surface .keys-app .viewed-hotels>button:hover {color:var(--k-action-primary);}
+ .desktop-surface .keys-app .viewed-hotels>button:hover {color:var(--theme-link,var(--k-action-primary));}
  .desktop-surface .keys-app .viewed-hotels>button:hover>img {outline:2px solid var(--k-action-primary);outline-offset:-2px;}
- .desktop-surface .keys-app :is(.text-action,.booking-link,.desktop-hotel-back):hover:not(:disabled) {color:var(--k-action-pressed);text-decoration:none;}
+ .desktop-surface .keys-app :is(.text-action,.booking-link,.desktop-hotel-back):hover:not(:disabled) {color:var(--theme-link-hover,var(--k-action-pressed));text-decoration:none;}
  .desktop-surface .keys-app .calendar-grid button:not(.selected):not(:disabled):hover {box-shadow:inset 0 0 0 1px var(--k-action-primary);}
  .desktop-surface .keys-app .switch-row:hover:not(:disabled) .switch {box-shadow:0 0 0 3px color-mix(in srgb,var(--k-action-primary) 15%,transparent);}
 }
@@ -52,7 +52,7 @@
 
 /* Actions on the blue trip card need their own contrasting surface. */
 @media (hover: hover) and (pointer: fine) {
- .desktop-surface .keys-app button.k-button.secondary.booking-card-action:hover:not(:disabled):not(:active){background:#2944c6;color:#fff;border-color:#ffffff80}
+ .desktop-surface .keys-app button.k-button.secondary.booking-card-action:hover:not(:disabled):not(:active){background:#2944c6;color:#fff;border-color:var(--theme-border-a128,#ffffff80)}
  .desktop-surface .keys-app .upcoming-payment .booking-balance-link:hover:not(:disabled){color:#eaf2ff;background:transparent;text-decoration:none}
 }
 @media (hover:hover) and (pointer:fine){
@@ -62,7 +62,7 @@
 
 /* Service rows keep their original surface; only their title and action respond. */
 @media (hover:hover) and (pointer:fine){
- .desktop-surface .keys-app :is(.k-list-row,.k-service-tile,.k-surface-action:not(.profile-points)):hover:not(:disabled):not(:active):not([aria-pressed=true]) :is(.service-tile-label,strong){color:var(--k-action-primary)}
- .desktop-surface .keys-app .trip-service:hover:not(:disabled):not(:active)>b:not(.included){color:var(--k-action-pressed)}
- .desktop-surface .keys-app :is(.k-list-row,.k-service-tile,.k-surface-action:not(.profile-points)):hover:not(:disabled):not(:active):not([aria-pressed=true])>.k-icon:last-child{color:var(--k-action-primary)}
+ .desktop-surface .keys-app :is(.k-list-row,.k-service-tile,.k-surface-action:not(.profile-points)):hover:not(:disabled):not(:active):not([aria-pressed=true]) :is(.service-tile-label,strong){color:var(--theme-link,var(--k-action-primary))}
+ .desktop-surface .keys-app .trip-service:hover:not(:disabled):not(:active)>b:not(.included){color:var(--theme-link-hover,var(--k-action-pressed))}
+ .desktop-surface .keys-app :is(.k-list-row,.k-service-tile,.k-surface-action:not(.profile-points)):hover:not(:disabled):not(:active):not([aria-pressed=true])>.k-icon:last-child{color:var(--theme-link,var(--k-action-primary))}
 }

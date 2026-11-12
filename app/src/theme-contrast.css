@@ -1,0 +1,294 @@
+/* Dark theme hierarchy: canvas → content → editable control.
+   Frames identify interaction/selection; static cards rely on their surface. */
+html[data-app-theme="dark"] {
+  --theme-field: #26354c;
+  --theme-control: #30496d;
+  --theme-control-hover: #3c567d;
+  --theme-control-border: #6e84a4;
+  --theme-placeholder: #a9bbd4;
+  --theme-on-control: #edf3ff;
+  --theme-on-accent: #f0f4fc;
+}
+
+/* White desktop page backgrounds are canvases, not another nested card. */
+html[data-app-theme="dark"] .desktop-app :is(
+  .app-header,.booking-content,.booking-scroll,.booking-header,.source-hotel-body,
+  .hotel-intro,.record-flow,.record-scroll,.record-header,.detail-scroll,.detail-header,
+  .results-fixed-header,.favorite-screen,.destination-screen,.destination-header,
+  .booking-date-editor,.shared-booking-page,.results-query-flow,.results-query-header,
+  .results-query-footer,.origin-scroll,.breakfast-scroll
+) { background-color:var(--k-surface-app); }
+
+/* Informational cards: preserve dimensions and inner dividers, remove decorative frames.
+   Rate/payment choices, selected dates and actionable filter chips keep their borders. */
+html[data-app-theme="dark"] .keys-app :is(
+  .k-card,.hotel-list-card,.hotel-review-summary,.hotel-price-card,.hotel-amenities,
+  .hotel-facilities-card,.review-card,.review-hotel,.guest-form-card,.booking-summary,
+  .record-card,.record-hotel,.room-card,.desktop-booking-rail,.desktop-service-list,.trip-features,.booking-balance-card,.points-payment-card,.hotel-loyalty-note,
+  .trip-detail-overview,.trip-detail-panel,.trip-detail-payment,.breakfast-info-card,
+  .breakfast-form-card,.detail-review-summary,.detail-reviews article,
+  .completed-reward-card,.completed-review-card,.completed-review-summary,
+  .benefit-card,.benefit-program-notice,.benefit-privileges>section,
+  .notification-group,.profile-settings-warning,.history-detail-hotel,
+  .history-trip-card,.history-timeline-card,.trip-history-entry,.trip-additions,
+  .desktop-rewards-column .benefit-section,.desktop-hotel-information>.hotel-section,
+  .when-content .guest-count-group,.date-calendar,.search-loading-card
+) { border-color:transparent; }
+html[data-app-theme="dark"] .desktop-app .record-content .booking-payment-card>.payment-summary { border-color:transparent; }
+html[data-app-theme="dark"] .desktop-app .booking-footer.checkout-cta { border-color:transparent; }
+html[data-app-theme="dark"] .keys-app .booking-footer { border-top:0; }
+html[data-app-theme="dark"] .keys-app :is(.hotel-list-card,.history-trip-card,.history-timeline-card):hover { border-color:transparent; }
+html[data-app-theme="dark"] .keys-app :is(.hotel-amenities,.amenities)>span { border-color:transparent; }
+html[data-app-theme="dark"] .keys-app .rating-badge,
+html[data-app-theme="dark"] .keys-app .discovery-rating>b { border-color:transparent; }
+html[data-app-theme="dark"] .keys-app .hotel-rating--good.hotel-rating { background:#304d47;color:#c0e2d6; }
+html[data-app-theme="dark"] .keys-app .hotel-rating--average.hotel-rating { background:#514737;color:#ead6b3; }
+html[data-app-theme="dark"] .keys-app .hotel-rating--poor.hotel-rating { background:#513b44;color:#e8c4cf; }
+
+/* Compound fields get one boundary around the complete control, never around the inner input. */
+html[data-app-theme="dark"] :is(.keys-app,.bottom-sheet,.desktop-search-popover,.filter-editor) :is(
+  .k-field-box,.traveler-select,.search-journey-input,.destination-header>div,
+  .desktop-destination-input,.filter-area-input,.filter-price-fields label,
+  .service-catalog-search,.desktop-program-search,.origin-search,.deposit-input,
+  .hotel-chat-composer form,.finder-composer form
+) {
+  background:var(--theme-field);
+  border-color:var(--theme-control-border);
+  color:var(--theme-text);
+}
+html[data-app-theme="dark"] :is(.keys-app,.bottom-sheet,.desktop-search-popover,.filter-editor) :is(
+  .k-field-box,.traveler-select,.search-journey-input,.destination-header>div,
+  .desktop-destination-input,.filter-area-input,.filter-price-fields label,
+  .service-catalog-search,.desktop-program-search,.origin-search,.deposit-input,
+  .hotel-chat-composer form,.finder-composer form
+):focus-within {
+  border-color:var(--theme-link);
+  outline:0;
+  box-shadow:inset 0 0 0 1px var(--theme-link);
+}
+html[data-app-theme="dark"] :is(.keys-app,.bottom-sheet,.filter-editor) :is(
+  textarea:not(.finder-composer textarea),select,.sms-code-cells input,
+  .mobile-field input,.preference-city input,.booking-share>input
+) {
+  background:var(--theme-field);
+  color:var(--theme-text);
+  border:1px solid var(--theme-control-border);
+}
+html[data-app-theme="dark"] :is(.keys-app,.bottom-sheet,.filter-editor) :is(
+  textarea:not(.finder-composer textarea),select,.sms-code-cells input,
+  .preference-city input,.booking-share>input
+):focus {
+  border-color:var(--theme-link);outline:0;box-shadow:inset 0 0 0 1px var(--theme-link);
+}
+html[data-app-theme="dark"] :is(.keys-app,.bottom-sheet,.desktop-search-popover,.filter-editor) :is(input,textarea)::placeholder {
+  color:var(--theme-placeholder);opacity:1;
+}
+html[data-app-theme="dark"] .keys-app .k-field-box.invalid,
+html[data-app-theme="dark"] .keys-app .k-field-box:has([aria-invalid="true"]),
+html[data-app-theme="dark"] :is(.keys-app,.bottom-sheet,.filter-editor) :is(input,textarea,select)[aria-invalid="true"] {
+  border-color:var(--theme-error);box-shadow:inset 0 0 0 1px var(--theme-error);
+}
+html[data-app-theme="dark"] .keys-app .k-field-box.invalid input,
+html[data-app-theme="dark"] .keys-app .k-field-box input[aria-invalid="true"] { border:0;box-shadow:none; }
+html[data-app-theme="dark"] .keys-app .sms-code-field.is-success input {
+  color:var(--theme-success);border-color:var(--theme-success);background:var(--theme-success-bg);box-shadow:none;
+}
+
+/* Actions: primary stays cobalt; secondary has a distinct fill and one functional edge. */
+html[data-app-theme="dark"] .keys-app .k-button.secondary:not(.booking-card-action):not(:disabled) {
+  background:var(--theme-control);color:var(--theme-on-control);
+  box-shadow:inset 0 0 0 1px var(--theme-control-border);
+}
+html[data-app-theme="dark"] .keys-app :is(.k-icon-button,.counter-button,.desktop-modal-close) {
+  background:var(--theme-control);color:var(--theme-on-control);border-color:transparent;
+}
+/* The inline phone edit action stays unfilled, including pointer states. */
+html[data-app-theme="dark"] .keys-app .profile-phone-row .k-icon-button {
+  background:transparent!important;box-shadow:none;
+}
+html[data-app-theme="dark"] .keys-app .k-button.danger { background:var(--theme-error-bg);color:var(--theme-error); }
+html[data-app-theme="dark"] .keys-app .k-button:disabled {
+  background:var(--theme-muted);color:var(--theme-disabled);opacity:1;box-shadow:none;
+}
+html[data-app-theme="dark"] .keys-app .counter-button:disabled { background:var(--theme-muted);color:var(--theme-disabled);opacity:.5; }
+
+/* Small labels on cobalt cards keep sufficient text contrast. */
+html[data-app-theme="dark"] .keys-app :is(.upcoming-dates small,.upcoming-total,.upcoming-payment) { color:var(--theme-on-accent); }
+html[data-app-theme="dark"] .keys-app .upcoming-payment .november-paid-label { color:var(--theme-on-accent); }
+
+/* Meaningful focus remains visible, including where the component clips its contents. */
+html[data-app-theme="dark"] .desktop-surface { --k-focus-ring:var(--theme-link); }
+html[data-app-theme="dark"] :is(.keys-app,.desktop-navigation,.desktop-account-menu,.demo-tools) :is(button,a,summary):focus-visible {
+  outline:2px solid var(--theme-link);outline-offset:-3px;
+}
+html[data-app-theme="dark"] .keys-app :is(.k-button.primary,.profile-points,.filter-chip.selected):focus-visible {
+  outline-color:#fff;box-shadow:none;
+}
+
+@media (hover:hover) and (pointer:fine) {
+  html[data-app-theme="dark"] .desktop-surface .keys-app .k-button.secondary:not(.booking-card-action):hover:not(:disabled):not(:active) {
+    background:var(--theme-control-hover);color:var(--theme-on-control);
+    box-shadow:inset 0 0 0 1px var(--theme-link);
+  }
+  html[data-app-theme="dark"] .desktop-surface .keys-app :is(.k-icon-button,.counter-button,.desktop-modal-close):hover:not(:disabled):not(:active) {
+    background:var(--theme-control-hover);color:#fff;border-color:transparent;
+  }
+}
+html[data-app-theme="dark"] .keys-app .k-button.secondary:active:not(:disabled) {
+  background:#213553;color:#fff;
+}
+
+/* Phone entry retains the approved quiet focus treatment, without a blue glow. */
+html[data-app-theme="dark"] .keys-app .k-field-box:has(input[type="tel"]):focus-within:not(.invalid) {
+  border-color:var(--theme-secondary);box-shadow:none;
+}
+
+html[data-app-theme="dark"] .keys-app .november-checkbox { border-color:var(--theme-control-border); }
+html[data-app-theme="dark"] .keys-app .november-partial-toggle[aria-checked="true"] .november-checkbox { border-color:var(--k-action-primary); }
+html[data-app-theme="dark"] .keys-app .stay-card .k-button.primary:not(:disabled) { background:#152448;color:#fff; }
+@media (hover:hover) and (pointer:fine) {
+  html[data-app-theme="dark"] .desktop-surface .keys-app .stay-card .k-button.primary:hover:not(:disabled):not(:active) { background:#101b37;color:#fff; }
+  html[data-app-theme="dark"] .desktop-surface .keys-app .profile-points:hover:not(:disabled) { background:linear-gradient(140deg,#2444cf,#4435c8);color:#fff; }
+}
+
+/* The filter editor is portalled outside .keys-app. Keep the same hierarchy there. */
+html[data-app-theme="dark"] .filter-editor { background:var(--k-surface-app);color:var(--theme-text); }
+html[data-app-theme="dark"] .filter-editor .filter-section { border-color:transparent; }
+html[data-app-theme="dark"] :is(.keys-app,.filter-editor) .filter-chip:not(.selected):not([aria-pressed="true"]) {
+  background:#293b57;color:var(--theme-on-control);border-color:transparent;
+}
+html[data-app-theme="dark"] :is(.discovery-chip-track,.filters-panel,.filter-editor) .filter-chip.selected {
+  background:#aecaff;color:#142a53;border-color:transparent;font-weight:600;
+}
+html[data-app-theme="dark"] :is(.discovery-chip-track,.filters-panel,.filter-editor) .filter-chip.selected .k-icon {
+  color:inherit;filter:none;
+}
+@media (hover:hover) and (pointer:fine) {
+  html[data-app-theme="dark"] .desktop-surface .keys-app :is(.discovery-chip-track,.filters-panel,.filter-editor) .filter-chip.selected:hover:not(:disabled):not(:active),
+  html[data-app-theme="dark"] .filter-editor .filter-chip.selected:hover:not(:disabled):not(:active) {
+    background:#c6daff;color:#142a53;border-color:transparent;
+  }
+}
+html[data-app-theme="dark"] .filter-editor :is(button,a,summary):focus-visible { outline:2px solid var(--theme-link);outline-offset:-3px; }
+html[data-app-theme="dark"] :is(.device-picker-trigger,.device-picker-menu,.device-picker-item,.device-picker-check) { color:var(--theme-text); }
+html[data-app-theme="dark"] .device-picker-menu { background:var(--theme-card);border-color:var(--theme-border); }
+html[data-app-theme="dark"] .device-picker-item[data-highlighted] { background:var(--theme-control); }
+
+html[data-app-theme="dark"] .device-picker-trigger:is(:hover,[data-state="open"]) { background:var(--theme-control); }
+html[data-app-theme="dark"] .device-picker-trigger:focus-visible { outline-color:var(--theme-link); }
+
+/* Accent-surface refinements: white actions, translucent trip actions and legible icons. */
+html[data-app-theme="dark"] { --theme-icon:#aecaff; --theme-accent-button:#f4f7ff; --theme-accent-ink:#193979; }
+html[data-app-theme="dark"] .keys-app img.k-icon { filter:brightness(1.85) saturate(.8); }
+html[data-app-theme="dark"] .keys-app :is(.icon-tile,.nearby-category-tile) { color:var(--theme-icon); }
+html[data-app-theme="dark"] .keys-app .hotel-loyalty-note>.icon-tile {
+  background:#44391f;color:#ffda8c;
+}
+html[data-app-theme="dark"] .keys-app .points-label .icon-tile { background:#263b60;color:var(--theme-icon); }
+html[data-app-theme="dark"] .keys-app .nearby-category-tile.museum {
+  background:var(--k-icon-surface);color:var(--theme-icon);
+}
+html[data-app-theme="dark"] .keys-app :is(.benefit-hotel-points,.hotel-level-perk.points) {
+  box-shadow:none;border-color:transparent;background:var(--theme-tint);color:var(--theme-icon);
+}
+html[data-app-theme="dark"] .keys-app .benefit-tabs button[aria-pressed="true"] {
+  background:#aecaff;color:#142a53;border-color:transparent;
+}
+html[data-app-theme="dark"] .keys-app .benefit-tabs button:not([aria-pressed="true"]) {
+  background:var(--theme-muted);color:var(--theme-secondary);border-color:transparent;
+}
+html[data-app-theme="dark"] .keys-app :is(.benefit-hero .k-button.secondary,.k-button.secondary.upcoming-route):not(:disabled) {
+  background:var(--theme-accent-button);color:var(--theme-accent-ink);border-color:transparent;box-shadow:none;
+}
+html[data-app-theme="dark"] .keys-app .k-button.secondary.booking-card-action:not(:disabled) {
+  background:#264cde;color:#fff;border-color:transparent;box-shadow:none;
+}
+html[data-app-theme="dark"] .keys-app .k-button.secondary.booking-card-action:focus-visible { outline-color:#fff; }
+
+html[data-app-theme="dark"] .keys-app :is(.benefit-hero .k-button,.upcoming-route):focus-visible { outline-color:#193979; }
+@media (hover:hover) and (pointer:fine) {
+  html[data-app-theme="dark"] .desktop-surface .keys-app :is(.benefit-hero .k-button.secondary,.k-button.secondary.upcoming-route):hover:not(:disabled):not(:active) {
+    background:#dce8ff;color:#193979;box-shadow:none;
+  }
+  html[data-app-theme="dark"] .desktop-surface .keys-app .k-button.secondary.booking-card-action:hover:not(:disabled):not(:active) {
+    background:#2143c7;color:#fff;box-shadow:none;
+  }
+}
+html[data-app-theme="dark"] .keys-app .k-button.secondary.booking-card-action:active:not(:disabled) { background:#1c39af;color:#fff; }
+html[data-app-theme="dark"] .keys-app :is(.benefit-hero .k-button.secondary,.k-button.secondary.upcoming-route):active:not(:disabled) { background:#c8d9ff;color:#193979; }
+
+/* Closed hotel-member rates use a warm gold surface, distinct from public rates. */
+html[data-app-theme="dark"] .keys-app .room-tariff.loyalty {
+  background:linear-gradient(135deg,#f2d9a4,#ddbb78);color:#2b251a;border-color:transparent;box-shadow:none;
+}
+html[data-app-theme="dark"] .keys-app .room-tariff.loyalty :is(h3,.room-rate-price strong,.room-rate-price small,.room-link) { color:#2b251a; }
+html[data-app-theme="dark"] .keys-app .room-tariff.loyalty .room-loyalty-label { background:#59431f;color:#fff0c9; }
+html[data-app-theme="dark"] .keys-app .room-tariff.loyalty .room-rate-rules>div>span { background:#e4c58a;color:#59431f; }
+html[data-app-theme="dark"] .keys-app .room-tariff.loyalty .room-rate-rules>div>span.included { background:#cad7b2;color:#204c32; }
+html[data-app-theme="dark"] .keys-app .room-tariff.loyalty .room-rate-price { border-color:#9d7f48; }
+html[data-app-theme="dark"] .keys-app .room-tariff.loyalty .room-rate-price>button { background:#2b251a;color:#fff0c9; }
+html[data-app-theme="dark"] .keys-app .room-tariff.loyalty .room-rate-price>button:hover { background:#463820;color:#fff0c9; }
+html[data-app-theme="dark"] .keys-app .room-tariff.loyalty :is(button,a):focus-visible { outline-color:#2b251a; }
+html[data-app-theme="dark"] .keys-app .room-tariff.loyalty .room-rate-price>button:focus-visible { outline-color:#fff0c9; }
+
+/* Timeline nodes are solid status dots, separated only by the page background. */
+html[data-app-theme="dark"] .keys-app .history-timeline::before { background:#52647e; }
+html[data-app-theme="dark"] .keys-app .timeline-tone-info { --history-node:#9cbdff; }
+html[data-app-theme="dark"] .keys-app .timeline-tone-success { --history-node:#73dbad; }
+html[data-app-theme="dark"] .keys-app .timeline-tone-neutral { --history-node:#c3cddd; }
+html[data-app-theme="dark"] .keys-app :is(.history-month-title,.history-timeline-item)::before { border-color:var(--k-surface-app);box-shadow:none; }
+
+.trip-history-entry>img.trip-album-dark { display:none; }
+html[data-app-theme="dark"] .keys-app .trip-history-entry { background:var(--theme-card); }
+html[data-app-theme="dark"] .trip-history-entry>img.trip-album-light { display:none; }
+html[data-app-theme="dark"] .trip-history-entry>img.trip-album-dark { display:block; }
+
+/* Header utilities use filled shapes; the keyboard focus ring remains functional. */
+html[data-app-theme="dark"] .keys-app .header-utilities { border-color:transparent;box-shadow:none;background:transparent; }
+html[data-app-theme="dark"] .keys-app .header-actions :is(.k-icon-button,.avatar) { border-color:transparent;box-shadow:none; }
+html[data-app-theme="dark"] .desktop-navigation :is(.desktop-favorites-link,.desktop-profile-link) { border-color:transparent;box-shadow:none; }
+/* Saved hotels keep the same pink identity as the light theme. */
+html[data-app-theme="dark"] .keys-app .save-hotel.is-saved,
+html[data-app-theme="dark"] .keys-app .save-hotel.is-saved .k-icon { color:#e84d7a; }
+html[data-app-theme="dark"] .keys-app .header-utilities>.k-icon-button[aria-label="Избранное"],
+html[data-app-theme="dark"] .desktop-navigation .desktop-favorites-link {
+  background:#29313f;color:#f0f4fc;
+}
+html[data-app-theme="dark"] .keys-app .header-utilities>.k-icon-button[aria-label="Избранное"] img.k-icon { filter:brightness(0) invert(1); }
+@media (hover:hover) and (pointer:fine) {
+  html[data-app-theme="dark"] .desktop-surface .keys-app .header-utilities>.k-icon-button[aria-label="Избранное"]:hover:not(:disabled):not(:active),
+  html[data-app-theme="dark"] .desktop-navigation .desktop-favorites-link:hover { background:#3a4556;color:#fff; }
+}
+
+/* Selected dark search concept: quiet surfaces and one cobalt CTA. */
+html[data-app-theme="dark"] .keys-app .find-search-card {
+  background:#192333;background-image:none;box-shadow:none;
+}
+html[data-app-theme="dark"] .keys-app .find-search-card::before { content:none; }
+html[data-app-theme="dark"] .keys-app .find-search-heading { color:#aecaff; }
+html[data-app-theme="dark"] .keys-app .find-search-fields {
+  display:flex;flex-direction:column;gap:0;background:#202d40;border-radius:16px;overflow:hidden;
+}
+html[data-app-theme="dark"] .keys-app .find-search-fields>button {
+  border-bottom:1px solid var(--theme-border)!important;border-radius:0;
+}
+html[data-app-theme="dark"] .keys-app .find-search-fields>div { border-radius:0;overflow:hidden; }
+html[data-app-theme="dark"] .keys-app .find-search-fields button,
+html[data-app-theme="dark"] .keys-app .find-search-card .desktop-search-fields { background:#202d40; }
+/* Field icons share the application icon color, rather than filtered image colors. */
+.keys-app :is(.find-search-fields,.desktop-search-fields) .k-icon { color:var(--theme-icon,#2f5bff)!important;filter:none; }
+html[data-app-theme="dark"] .keys-app .find-search-card>.k-button.primary:not(:disabled),
+html[data-app-theme="dark"] .keys-app .find-search-card>.desktop-search-bar>.k-button.primary:not(:disabled) {
+  background:#2f5bff;color:#fff;box-shadow:none;
+}
+html[data-app-theme="dark"] .keys-app .find-search-card .k-button.primary:focus-visible { outline-color:#aecaff; }
+@media (hover:hover) and (pointer:fine) {
+  html[data-app-theme="dark"] .desktop-surface .keys-app .find-search-card>.desktop-search-bar>.k-button.primary:hover:not(:disabled):not(:active) { background:#2449dc;color:#fff; }
+}
+html[data-app-theme="dark"] .keys-app .find-search-card>.k-button.primary:active:not(:disabled),
+html[data-app-theme="dark"] .keys-app .find-search-card>.desktop-search-bar>.k-button.primary:active:not(:disabled) { background:#1d3dbb;color:#fff; }
+
+/* Transparent artwork variants retain their own highlights on dark surfaces. */
+html[data-app-theme="dark"] .k-empty-art[src$="trip-empty-portal.png"] { content:url('/brand/illustrations/trip-empty-portal-dark.png'); }
+html[data-app-theme="dark"] .hotelier-invite-art img { content:url('/brand/illustrations/hotelier-invite-card-dark.png'); }
+html[data-app-theme="dark"] .find-deals-ticket { content:url('/brand/illustrations/hot-deals-ticket-dark.png');mix-blend-mode:normal;object-fit:contain; }

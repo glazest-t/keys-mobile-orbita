@@ -21,7 +21,7 @@
 
 .booking-footer.services-cta{height:128px}
 .booking-services-total-label{display:flex;align-items:center;gap:8px;font:500 13px/18px Onest;white-space:nowrap}
-.booking-services-count{display:inline-grid;place-items:center;min-width:24px;height:24px;padding:0 6px;box-sizing:border-box;border-radius:8px;background:var(--k-action-tint);color:var(--k-action-primary);font:500 12px/18px Onest}
+.booking-services-count{display:inline-grid;place-items:center;min-width:24px;height:24px;padding:0 6px;box-sizing:border-box;border-radius:8px;background:var(--k-action-tint);color:var(--theme-link,var(--k-action-primary));font:500 12px/18px Onest}
 .booking-services-basket,.booking-services-basket-list{display:flex;flex-direction:column;gap:16px}
 .booking-services-basket-row{display:grid;grid-template-columns:minmax(0,1fr) auto 44px;align-items:start;column-gap:8px;font:400 14px/20px Onest}
 .booking-services-basket-row>span{display:flex;flex-direction:column;gap:4px;min-width:0}

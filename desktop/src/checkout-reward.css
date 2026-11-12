@@ -6,9 +6,9 @@
  gap: 4px 10px;
  margin: 0;
  padding: 16px 0 0;
- border-top: 1px solid #d4dbff;
+ border-top: 1px solid var(--theme-border,#d4dbff);
 }
 .desktop-app .desktop-booking-reward-mark { width: 28px; height: 28px; object-fit: contain; }
 .desktop-app .desktop-booking-reward-title { font: 500 15px/22px Onest,sans-serif; color: var(--k-text-primary); }
-.desktop-app .desktop-booking-reward-amount { font: 500 20px/28px Onest,sans-serif; color: var(--k-action-primary); text-align: right; white-space: nowrap; }
+.desktop-app .desktop-booking-reward-amount { font: 500 20px/28px Onest,sans-serif; color: var(--theme-link,var(--k-action-primary)); text-align: right; white-space: nowrap; }
 .desktop-app .desktop-booking-reward > p { grid-column: 2/-1; margin: 0; font: 400 12px/18px Onest,sans-serif; color: var(--k-text-secondary); }

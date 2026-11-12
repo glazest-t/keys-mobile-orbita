@@ -3,7 +3,7 @@
 .keys-app .desktop-hotel-back .desktop-hotel-back-icon{
  width:44px;height:44px;min-width:44px;min-height:44px;flex:none;
  display:grid;place-items:center;padding:0;border:1px solid var(--k-border-subtle);
- border-radius:50%;background:#fff;color:var(--k-action-primary,#2f5bff);
+ border-radius:50%;background:var(--theme-card,#fff);color:var(--theme-link,var(--theme-link,#2f5bff));
  backdrop-filter:none;box-shadow:none;
 }
 .keys-app :is(.hotel-page .hero-actions,.desktop-hotel-heading-actions,.record-details-header,.trip-details-header) :is(.k-icon-button,.save-hotel) .k-icon,
