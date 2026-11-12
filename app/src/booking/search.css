@@ -106,5 +106,7 @@
 .calendar-heading>.k-icon-button:last-child .k-icon{transform:rotate(180deg)}
 
 /* Desktop age picker: all 18 choices remain visible in three rows. */
-.child-age-options-grid{display:grid;grid-template-columns:minmax(72px,1.5fr) repeat(5,minmax(0,1fr));gap:8px;width:100%;min-width:0;margin-top:10px}
+.child-age-options-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;width:100%;min-width:0;margin-top:10px}
 .child-age-options-grid>.filter-chip{width:100%;min-width:0;min-height:36px;padding:6px 4px;justify-content:center;white-space:nowrap}
+
+.child-age-options-grid>.filter-chip:first-child{grid-column:span 2}
