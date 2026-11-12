@@ -33,7 +33,7 @@ function AcquiringPage(props:PaymentProps&{onClose:()=>void}){
 }
 export function PendingPaymentButton(props:PaymentProps&{initialOpen?:boolean;className?:string}){
  const [open,setOpen]=useState(!!props.initialOpen);
- return <><Button className={props.className} onClick={()=>setOpen(true)}>Оплатить</Button>{open&&<AcquiringPage {...props} onClose={()=>setOpen(false)}/>}</>;
+ return <><Button className={'pending-payment-button '+(props.className||'')} onClick={()=>setOpen(true)}>Оплатить</Button>{open&&<AcquiringPage {...props} onClose={()=>setOpen(false)}/>}</>;
 }
 export function PendingCancellationButton({booking,commerce,setCommerce}:PaymentProps){
  const [open,setOpen]=useState(false);

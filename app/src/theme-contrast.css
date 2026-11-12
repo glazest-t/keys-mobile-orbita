@@ -215,6 +215,24 @@ html[data-app-theme="dark"] .keys-app :is(.benefit-hero .k-button,.upcoming-rout
   }
 }
 html[data-app-theme="dark"] .keys-app .k-button.secondary.booking-card-action:active:not(:disabled) { background:#1c39af;color:#fff; }
+/* High-priority trip actions stay light against the cobalt card and dark page. */
+html[data-app-theme="dark"] .keys-app button.k-button.primary:is(.door-button,.pending-payment-button):not(:disabled):not(.is-success) {
+  background:#fff;color:#193979;border-color:transparent;box-shadow:none;
+}
+@media (hover:hover) and (pointer:fine) {
+  html[data-app-theme="dark"] .desktop-surface .keys-app button.k-button.primary:is(.door-button,.pending-payment-button):hover:not(:disabled):not(:active):not([aria-busy=true]):not(.is-success) {
+    background:#dce8ff;color:#193979;box-shadow:none;
+  }
+}
+html[data-app-theme="dark"] .keys-app button.k-button.primary:is(.door-button,.pending-payment-button):active:not(:disabled):not(.is-success) {
+  background:#c8d9ff;color:#193979;
+}
+html[data-app-theme="dark"] .keys-app button.k-button.primary:is(.door-button,.pending-payment-button):focus-visible {
+  outline-color:#193979;
+}
+html[data-app-theme="dark"] .keys-app .stay-progress {
+  background:conic-gradient(#fff var(--stay-progress),#ffffff33 0);
+}
 html[data-app-theme="dark"] .keys-app :is(.benefit-hero .k-button.secondary,.k-button.secondary.upcoming-route):active:not(:disabled) { background:#c8d9ff;color:#193979; }
 
 /* Closed hotel-member rates use a warm gold surface, distinct from public rates. */
