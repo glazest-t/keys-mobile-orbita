@@ -1,3 +1,4 @@
+import {CancelledTrip} from './CancelledTrip';
 import {useNovember} from '../usePrototypeVariant';
 import {isPartiallyPaid} from './bookingBalance';
 import {BookingPaymentBadge,BookingPaymentStatus} from './BookingPaymentStatus';
@@ -28,8 +29,9 @@ const nightLabel=(n:number)=>`${n} ${n%10===1&&n%100!==11?'ночь':n%10>=2&&n%
 const date=(value:string)=>new Date(value+'T12:00:00').toLocaleDateString('ru-RU',{day:'numeric',month:'short'}).replace('.','');
 export function UpcomingTrip({commerce,setCommerce,failNext,onPaymentAttempt,owner,name,onSelect,onDetails,onAction,onReview,onNearby,openedDoorId,openingDoorId}:{setCommerce:Dispatch<SetStateAction<Commerce>>;failNext:boolean;onPaymentAttempt:()=>void;onNearby:(bookingId:string,placeId?:string)=>void;onReview:(id:string,rating?:number)=>void;openingDoorId?:string;openedDoorId?:string;commerce:Commerce;owner:string;name:string;onSelect:(id:string)=>void;onDetails:(id:string)=>void;onAction:(id:string,action:TripAction)=>void}){
  const november=useNovember();
- const all=ownTrips(commerce,owner),b=selectedTrip(commerce,owner),active=all.filter(b=>b.operation.status==='confirmed'&&b.stay?.status!=='checked_out');
+ const all=ownTrips(commerce,owner),b=selectedTrip(commerce,owner)||all.filter(item=>item.operation.status==='cancelled').at(-1),active=all.filter(b=>b.operation.status==='confirmed'&&b.stay?.status!=='checked_out');
  if(!b)return <div className="trip-home"><h1>Поездки</h1></div>;
+ if(b.operation.status==='cancelled')return <CancelledTrip booking={b} onDetails={()=>onDetails(b.id)} onRepeat={()=>onAction(b.id,'repeat')}/>;
  if(b.stay?.status==='checked_out')return <div className="completed-stay"><CompletedTrip booking={b} balance={commerce.payment.balances['keys:'+owner]||0} onReview={rating=>onReview(b.id,rating)} onDocuments={()=>onAction(b.id,'documents')} onChat={()=>onAction(b.id,'chat')} onRepeat={()=>onAction(b.id,'repeat')}/>{active.length>0&&<section className="trip-history"><h2>Предстоящие поездки</h2>{active.map(t=><button key={t.id} onClick={()=>onSelect(t.id)}>{catalog.hotels.find(h=>h.id===t.draft.hotelId)?.name}<Icon name="chevron-right" size={18}/></button>)}</section>}<ProblemSummary booking={b} onOpen={()=>onAction(b.id,'problem')}/></div>;
  const hotel=catalog.hotels.find(h=>h.id===b.draft.hotelId)!,f=tripFacts(b),breakfast=breakfastSummary(b),future=b.draft.search.checkIn>new Date().toLocaleDateString('en-CA');
  const visual=hotelVisual(hotel.id),address=[visual.location.replaceAll(' · ', ', '),hotelLocation(hotel.id)?.address||visual.address].filter(Boolean).join(', ');

@@ -588,6 +588,21 @@
     "trip": "empty"
   },
   {
+    "id": "trip-cancelled",
+    "title": "Поездки · бронь отменена",
+    "group": "Поездки",
+    "route": "trips",
+    "trip": "cancelled"
+  },
+  {
+    "id": "history-cancelled",
+    "title": "История · отменённая бронь",
+    "group": "Поездки",
+    "route": "profile-history",
+    "trip": "cancelled",
+    "historyFilter": "Отменённые"
+  },
+  {
     "id": "trip-upcoming",
     "title": "До заезда",
     "group": "Поездки",

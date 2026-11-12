@@ -63,3 +63,8 @@
 
 .trip-detail-fixed-actions .booking-confirmation-calendar-only{display:contents}
 .trip-detail-fixed-actions .booking-calendar-feedback{grid-column:1/-1}
+
+/* Calendar action follows its label instead of stretching to the available width. */
+.booking-confirmation-tools .k-button.booking-calendar-button{width:max-content;min-width:0;flex:0 0 auto;align-self:flex-start;justify-self:end;white-space:nowrap}
+.trip-detail-fixed-actions .trip-detail-action-group:has(.booking-calendar-button){grid-template-columns:minmax(0,1fr) max-content}
+.desktop-app .record-actions .k-button.booking-calendar-button{width:max-content;min-width:0;flex:0 0 auto}

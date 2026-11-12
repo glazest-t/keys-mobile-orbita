@@ -2,14 +2,16 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {initialCommerce,ensureAccount,decodeCommerce} from '../app/src/booking/model.ts';
 import {activateTripScenario,restoreTripData,activeTripScenario,tripScenarios} from '../app/src/booking/demoTripScenarios.ts';
+import {historyTrips} from '../app/src/profile/history.ts';
 import {keyAccess} from '../app/src/booking/stay.ts';
 import {checkoutDay,stayBill} from '../app/src/booking/stayBill.ts';
 const owner='+79005550001',now=Date.parse('2026-10-27T12:00:00Z');
-test('Все пять сценариев независимы и дают согласованные состояния брони, ключа и счёта',()=>{
+test('Все сценарии независимы и дают согласованные состояния брони, ключа и счёта',()=>{
  for(const {id} of tripScenarios){
   const s=activateTripScenario(initialCommerce(),owner,id,'demo-'+id,now),b=s.bookings[0];
   assert.equal(activeTripScenario(s,owner,now),id);
   if(id==='empty'){assert.equal(s.bookings.length,0);assert.equal(s.selectedBooking,null);continue;}
+  if(id==='cancelled'){assert.equal(b.operation.status,'cancelled');assert.equal(keyAccess(b,now).visible,false);assert.equal(b.stay,undefined);assert.deepEqual(historyTrips(s,owner,'','Отменённые').map(item=>item.id),[b.id]);continue;}
   assert.equal(b.operation.status,'confirmed');assert.equal(b.operation.dueAtHotelMinor,0);
   assert.equal(keyAccess(b,now).visible,['staying','departure'].includes(id));
   assert.equal(keyAccess(b,now).available,['staying','departure'].includes(id));

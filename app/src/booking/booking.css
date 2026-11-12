@@ -142,3 +142,6 @@
 /* Booking steps reuse the search summary header: dates and party stay visible. */
 .booking-header.booking-search-header{height:auto;min-height:56px;gap:8px;padding:4px 12px}
 .booking-header.booking-search-header>.k-icon-button{flex:none}
+
+.cancellation-note .cancellation-sentence{display:block}
+.cancellation-note .cancellation-sentence+.cancellation-sentence{margin-top:6px}

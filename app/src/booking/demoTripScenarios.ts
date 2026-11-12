@@ -1,5 +1,5 @@
 import {historyFixture} from '../profile/historyDemo.ts';
-import {type Commerce,initialCommerce,ensureAccount,startDraft,quoteDraft,commitBooking} from './model.ts';
+import {type Commerce,initialCommerce,ensureAccount,startDraft,quoteDraft,commitBooking,cancelBooking} from './model.ts';
 import {demoCheckIn} from './stay.ts';
 import {demoCheckoutDay,confirmCheckout,checkoutDay} from './stayBill.ts';
 import {selectedTrip} from './trip.ts';
@@ -10,6 +10,7 @@ export const tripScenarios=[
  {id:'upcoming',label:'До заезда',hint:'Бронь подтверждена, ключ ещё недоступен'},
  {id:'staying',label:'Во время проживания',hint:'Ключ, услуги и связь с отелем'},
  {id:'departure',label:'День выезда',hint:'Напоминание перед выездом'},
+ {id:'cancelled',label:'Бронь отменена',hint:'Отменённая бронь в поездках и истории'},
  {id:'completed',label:'После выезда',hint:'Завершённая поездка и отзыв'},
 ] as const;
 export type TripScenario=typeof tripScenarios[number]['id'];
@@ -29,7 +30,8 @@ export function activateTripScenario(s:Commerce,owner:string,scenario:TripScenar
   next={...next,draft:{...next.draft!,contact:{name:'Анна',surname:'Примерова',phone:owner,email:'anna@example.test'}}};
   // Fixed catalogue dates and payment timestamp make the fixture reproducible.
   next=commitBooking(next,owner,quoteDraft(next,owner),'success','2026-10-27T12:00:00Z');
-  if(scenario!=='upcoming')next=demoCheckIn(next,owner,id,id+'-checkin',now);
+  if(scenario==='cancelled')next=cancelBooking(next,owner,id,'2026-10-28T12:00:00Z');
+  if(scenario!=='upcoming'&&scenario!=='cancelled')next=demoCheckIn(next,owner,id,id+'-checkin',now);
   if(scenario==='departure'||scenario==='completed')next=demoCheckoutDay(next,owner,id,now);
   if(scenario==='completed')next=confirmCheckout(next,owner,id,id+'-checkout',now);
   next={...next,draft:null};
@@ -40,6 +42,7 @@ export function restoreTripData(s:Commerce):Commerce{return s.demoTripSession?.o
 export function activeTripScenario(s:Commerce,owner:string,now=Date.now()):TripScenario|null{
  if(s.demoTripSession?.owner!==owner)return null;
  if(s.historyDemo)return 'history';
+ if(s.bookings.find(b=>b.id===s.selectedBooking&&b.owner===owner)?.operation.status==='cancelled')return 'cancelled';
  const b=selectedTrip(s,owner);
  if(!b)return 'empty';
  if(b.stay?.status==='checked_out')return 'completed';
