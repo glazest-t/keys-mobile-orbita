@@ -178,9 +178,13 @@ html[data-app-theme="dark"] .device-picker-trigger:is(:hover,[data-state="open"]
 html[data-app-theme="dark"] .device-picker-trigger:focus-visible { outline-color:var(--theme-link); }
 
 /* Accent-surface refinements: white actions, translucent trip actions and legible icons. */
-html[data-app-theme="dark"] { --theme-icon:#aecaff; --theme-accent-button:#f4f7ff; --theme-accent-ink:#193979; }
-html[data-app-theme="dark"] .keys-app img.k-icon { filter:brightness(1.85) saturate(.8); }
-html[data-app-theme="dark"] .keys-app :is(.icon-tile,.nearby-category-tile) { color:var(--theme-icon); }
+html[data-app-theme="dark"] { --theme-icon:#94bcff; --theme-accent-button:#f4f7ff; --theme-accent-ink:#193979; }
+html[data-app-theme="dark"] :is(.keys-app,.sheet-body) :is(.icon-tile,.nearby-category-tile) { color:var(--theme-icon); }
+html[data-app-theme="dark"] :is(.keys-app,.sheet-body) :is(.icon-tile,.nearby-category-tile) .k-icon { color:inherit!important;filter:none; }
+html[data-app-theme="dark"] .keys-app :is(.hotel-facilities-list,.hotel-facilities-all,.hotel-arrival-times,.booking-time-label,.booking-time-value,.booking-wishes-row,.text-action,.section-label button,.personal-price,.watch-price,.location-address,.hero-actions,.record-details-header,.trip-details-header,.desktop-hotel-heading-actions,.desktop-hotel-back-icon) .k-icon {
+  color:var(--theme-icon)!important;
+}
+html[data-app-theme="dark"] .keys-app .k-list-row.danger-text>.icon-tile { color:var(--theme-error); }
 html[data-app-theme="dark"] .keys-app .hotel-loyalty-note>.icon-tile {
   background:#44391f;color:#ffda8c;
 }
@@ -267,12 +271,12 @@ html[data-app-theme="dark"] .keys-app .header-actions :is(.k-icon-button,.avatar
 html[data-app-theme="dark"] .desktop-navigation :is(.desktop-favorites-link,.desktop-profile-link) { border-color:transparent;box-shadow:none; }
 /* Saved hotels keep the same pink identity as the light theme. */
 html[data-app-theme="dark"] .keys-app .save-hotel.is-saved,
-html[data-app-theme="dark"] .keys-app .save-hotel.is-saved .k-icon { color:#e84d7a; }
+html[data-app-theme="dark"] .keys-app .save-hotel.is-saved .k-icon { color:#e84d7a!important; }
 html[data-app-theme="dark"] .keys-app .header-utilities>.k-icon-button[aria-label="Избранное"],
 html[data-app-theme="dark"] .desktop-navigation .desktop-favorites-link {
   background:#29313f;color:#f0f4fc;
 }
-html[data-app-theme="dark"] .keys-app .header-utilities>.k-icon-button[aria-label="Избранное"] img.k-icon { filter:brightness(0) invert(1); }
+html[data-app-theme="dark"] .keys-app .header-utilities>.k-icon-button[aria-label="Избранное"] .k-icon { color:#f0f4fc;filter:none; }
 @media (hover:hover) and (pointer:fine) {
   html[data-app-theme="dark"] .desktop-surface .keys-app .header-utilities>.k-icon-button[aria-label="Избранное"]:hover:not(:disabled):not(:active),
   html[data-app-theme="dark"] .desktop-navigation .desktop-favorites-link:hover { background:#3a4556;color:#fff; }

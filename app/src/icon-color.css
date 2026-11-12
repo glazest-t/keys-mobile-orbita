@@ -1,0 +1,9 @@
+/* Keep the original artwork in light mode. In dark mode its alpha mask preserves
+   the soft secondary tone while the primary color uses the shared icon token. */
+.k-icon-default { background:var(--icon-image) center / contain no-repeat; }
+html[data-app-theme="dark"] .k-icon-default {
+  color:var(--theme-icon,#94bcff);
+  background-image:none;
+  background-color:currentColor;
+  mask:var(--icon-image) center / contain no-repeat;
+}

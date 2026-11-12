@@ -102,7 +102,6 @@ html[data-app-theme="dark"] {
 
 html[data-app-theme="dark"] .home-indicator-svg rect { fill:var(--theme-text); }
 html[data-app-theme="dark"] .android-navigation-bar { filter:invert(1); }
-html[data-app-theme="dark"] img.k-icon { filter:brightness(1.55) saturate(.7); }
 
 /* Artwork has a dedicated palette, never an inversion of hotel photography. */
 html[data-app-theme="dark"] .desktop-app .find-search-card { background-image:url('./assets/search-orbit-dark.svg'); }
