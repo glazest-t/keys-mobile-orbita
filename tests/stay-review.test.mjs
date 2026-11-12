@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {initialCommerce,ensureAccount,startDraft,quoteDraft,commitBooking,decodeCommerce} from '../app/src/booking/model.ts';
 import {demoCheckIn} from '../app/src/booking/stay.ts';
 import {demoCheckoutDay,requestCheckout,confirmCheckout} from '../app/src/booking/stayBill.ts';
-import {sendStayReview,reviewInputError} from '../app/src/booking/stayReview.ts';
+import {sendStayReview,updateStayReview,reviewInputError} from '../app/src/booking/stayReview.ts';
 const owner='+79001234567',id='review-trip',now=Date.parse('2026-10-23T12:00:00Z');
 function fixture(done=true){let s=ensureAccount(initialCommerce(),owner);s.search={...s.search,adults:1,checkIn:'2026-11-13',checkOut:'2026-11-15'};s=startDraft(s,'pine-sochi',id);s.draft.contact={name:'Анна',surname:'Примерова',phone:owner,email:'anna@example.test'};s=commitBooking(s,owner,quoteDraft(s,owner),'success',new Date(now).toISOString());s=demoCheckIn(s,owner,id,'in',now);if(done){s=demoCheckoutDay(s,owner,id,now);s=requestCheckout(s,owner,id,now);s=confirmCheckout(s,owner,id,'out',now);}return s;}
 const input={rating:4,liked:['Номер'],improve:['Wi-Fi'],text:'  Тихий номер  ',photos:[]};
@@ -14,3 +14,17 @@ test('Проверка шкалы, текста, тем и пяти локаль
 test('Отзыв не переносится на другую поездку и копирует массивы входа',()=>{const s=fixture();s.bookings.push({...s.bookings[0],id:'second'});const draft=structuredClone(input),next=sendStayReview(s,owner,id,'x',draft,now);draft.photos.push('bad');draft.liked.push('Завтрак');assert.equal(next.bookings[1].review,undefined);assert.equal(next.bookings[0].review.photos.length,0);assert.deepEqual(next.bookings[0].review.liked,['Номер']);});
 
 test('Выбор анонимности сохраняется после перезагрузки; по умолчанию отзыв обычный',()=>{const s=fixture();for(const anonymous of [false,true]){const next=sendStayReview(s,owner,id,'anonymous-review',{...input,anonymous},now);assert.equal(next.bookings[0].review.anonymous,anonymous);assert.equal(decodeCommerce(JSON.stringify(next)).bookings[0].review.anonymous,anonymous);assert.equal(next.bookings[0].review.author,owner);}assert.equal(sendStayReview(s,owner,id,'default-review',input,now).bookings[0].review.anonymous,false);});
+
+test('Редактирование сохраняет анонимность, фото и идентичность отзыва, не меняя оплату',()=>{
+ const photo='data:image/jpeg;base64,AAAA';
+ const saved=sendStayReview(fixture(),owner,id,'edit-review',{...input,photos:[photo],anonymous:true},now);
+ const review=saved.bookings[0].review;
+ const updated=updateStayReview(saved,owner,id,{...review,rating:5,text:'Новые впечатления'});
+ assert.deepEqual(updated.bookings[0].review,{...review,rating:5,text:'Новые впечатления'});
+ assert.deepEqual(updated.payment,saved.payment);
+ assert.equal(decodeCommerce(JSON.stringify(updated)).bookings[0].review.anonymous,true);
+ const changed=updateStayReview(updated,owner,id,{...updated.bookings[0].review,anonymous:false,photos:[]});
+ assert.equal(changed.bookings[0].review.anonymous,false);assert.deepEqual(changed.bookings[0].review.photos,[]);
+ assert.throws(()=>updateStayReview(saved,'other',id,review),/доступа/);
+ assert.throws(()=>updateStayReview(saved,owner,id,{...review,rating:0}),/оценку/);
+});

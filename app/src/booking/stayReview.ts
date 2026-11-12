@@ -21,3 +21,12 @@ export function sendStayReview(s:Commerce,actor:string,bookingId:string,id:strin
  const review:StayReview={...input,anonymous:input.anonymous===true,liked:[...new Set(input.liked)],improve:[...new Set(input.improve)],photos:[...input.photos],text:input.text.trim(),id,author:actor,createdAt:new Date(stayNow(b,now)).toISOString()};
  return {...s,bookings:s.bookings.map(item=>item.id===b.id?{...item,review}:item)};
 }
+
+export function updateStayReview(s:Commerce,actor:string,bookingId:string,input:ReviewInput):Commerce{
+ const b=s.bookings.find(b=>b.id===bookingId);
+ if(!b||!canManageBooking(s,actor,b))throw Error('Нет доступа к поездке');
+ if(b.operation.status!=='confirmed'||b.stay?.status!=='checked_out'||!b.review)throw Error('Не удалось изменить отзыв');
+ const error=reviewInputError(input);if(error)throw Error(error);
+ const review:StayReview={...b.review,...input,anonymous:input.anonymous===true,liked:[...new Set(input.liked)],improve:[...new Set(input.improve)],photos:[...input.photos],text:input.text.trim()};
+ return {...s,bookings:s.bookings.map(item=>item.id===b.id?{...item,review}:item)};
+}

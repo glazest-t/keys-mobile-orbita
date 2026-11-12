@@ -40,6 +40,7 @@
 .desktop-app .desktop-flow-footer .record-footer>.field-error{align-self:stretch}
 .desktop-app .desktop-flow-footer :is(.record-footer,.review-footer,.document-footer,.bill-footer){border:0}
 .desktop-app .review-footer:after{display:none}
+.desktop-app .desktop-flow-footer .review-footer.review-footer-complete{align-items:center}
 .desktop-modal .booking-qr{width:196px;height:196px}
 .desktop-modal .share-permission{min-height:0}
 
@@ -73,3 +74,22 @@
 .desktop-app .record-information-column{display:flex;flex-direction:column;gap:24px;min-width:0}
 .desktop-app .record-payment-column{min-width:0}
 @media(max-width:760px){.desktop-app .record-details-layout{grid-template-columns:minmax(0,1fr)}}
+
+/* Review entry, saved review and confirmation share the desktop dialog. */
+.desktop-modal:has(.stay-review-content){width:min(640px,calc(100vw - 48px))}
+.desktop-modal .desktop-flow[data-step="stay-review"]{width:100%;max-width:none;margin:0}
+.desktop-modal .desktop-flow[data-step="stay-review"] .desktop-flow-layout{display:flex;gap:24px}
+.desktop-modal .desktop-flow[data-step="stay-review"] .desktop-flow-content{width:100%;min-width:0}
+.desktop-modal .stay-review-content{padding:0;gap:20px}
+.desktop-modal .review-comment textarea{min-height:180px}
+.desktop-modal .desktop-flow[data-step="stay-review"] .desktop-flow-footer{padding:0;border:0;background:transparent;border-radius:0;box-shadow:none}
+.desktop-modal .review-footer{display:flex;justify-content:center;padding:0;border:0;background:transparent;backdrop-filter:none}
+.desktop-modal .review-footer:after{display:none}
+.desktop-modal .review-footer>.k-button{width:auto;min-width:280px;max-width:100%}
+.desktop-modal:has(.stay-review-content) .record-flow{position:relative;inset:auto;height:auto;min-height:0;background:transparent}
+.desktop-modal:has(.stay-review-content) .page-scroll{background:transparent}
+.desktop-modal .review-footer{align-items:center;width:100%}
+.keys-app.desktop-modal .desktop-flow[data-step="stay-review"] .review-footer>.k-button{align-self:center}
+.keys-app.desktop-modal .review-footer{flex-direction:row;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
+.keys-app.desktop-modal .review-footer>.k-button{flex:0 1 auto;min-width:180px;align-self:center;padding-inline:24px}
+.desktop-app .trip-detail-review>.k-button{width:auto;min-height:44px;padding:10px 20px;align-self:flex-start}

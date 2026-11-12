@@ -7,3 +7,17 @@
 .review-stars button,.review-topics button{transition:background-color var(--interaction-release) var(--interaction-arrive),transform var(--interaction-release) var(--interaction-arrive)}.review-stars button:active:not(:disabled),.review-topics button:active:not(:disabled){transform:scale(.97);transition-duration:var(--interaction-press)}.review-stars button:focus-visible,.review-topics button:focus-visible{outline:2px solid #5a6072;outline-offset:2px}.review-stars button:disabled,.review-topics button:disabled{opacity:1;cursor:default}@media(prefers-reduced-motion:reduce){.review-stars button,.review-topics button{transition:none}}
 
 .review-anonymous{margin-top:2px}.review-anonymous-note{margin:0;color:#5a6072;font:400 14px/20px Onest}
+.review-anonymous-badge{display:inline-flex;align-self:flex-start;width:fit-content;padding:5px 10px;border-radius:8px;background:#eaf2ff;color:#5a6072;font:500 12px/18px Onest;white-space:nowrap}
+.review-footer{display:flex;align-items:center;justify-content:center;gap:12px}
+.review-footer>.k-button{min-width:0;flex:1}
+.review-embedded .stay-review-content{padding:0;gap:20px}
+.review-embedded .review-footer{position:relative;margin-top:24px;padding:0;border:0;background:transparent;backdrop-filter:none}
+.review-embedded .review-footer:after{display:none}
+.trip-detail-review .review-anonymous-badge{margin:8px 0}
+.trip-detail-review .review-photos{margin-top:12px}
+.keys-app .review-photos>div>button{padding:0;display:flex;align-items:center;justify-content:center;color:#2f5bff;line-height:1}
+
+.review-title-row{position:relative;display:flex;align-items:center;justify-content:center;max-width:calc(100% - 80px)}
+.keys-app .review-edit-icon{position:absolute;left:calc(100% + 8px);top:50%;transform:translateY(-50%);display:flex;align-items:center;justify-content:center;width:36px;height:36px;padding:0;border:0;border-radius:50%;background:transparent;color:#5a6072;cursor:pointer}
+@media(hover:hover){.keys-app .review-edit-icon:hover{color:#2f5bff;background:#eaf2ff}}
+.keys-app .review-edit-icon:focus-visible{outline:2px solid #2f5bff;outline-offset:2px}
