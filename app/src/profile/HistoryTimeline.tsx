@@ -1,3 +1,4 @@
+import {AwaitingPaymentStatus} from '../booking/PendingBooking';
 import {Icon,StatusBadge} from '../ui';
 import {catalog,dateLabel,hotelPhoto,type Booking} from '../booking/model';
 import {tripStatus} from './history';
@@ -11,6 +12,7 @@ function presentation(booking:Booking){
 }
 
 export function HistoryStatus({booking}:{booking:Booking}){
+ if(booking.operation.status==='awaiting_payment')return <AwaitingPaymentStatus/>;
  return <StatusBadge {...presentation(booking)}>{tripStatus(booking)}</StatusBadge>;
 }
 

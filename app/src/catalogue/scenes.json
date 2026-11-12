@@ -1288,5 +1288,20 @@
     "group": "Чаты и уведомления",
     "route": "ai-assistant",
     "assistantResults": true
+  },
+  {
+    "id": "booking-awaiting-payment",
+    "title": "Бронирование · ожидает оплаты",
+    "group": "Бронирование",
+    "route": "booking-flow",
+    "trip": "awaiting-payment",
+    "pendingBooking": true
+  },
+  {
+    "id": "trip-awaiting-payment",
+    "title": "Поездки · ожидает оплаты",
+    "group": "Поездки",
+    "route": "trips",
+    "trip": "awaiting-payment"
   }
 ]

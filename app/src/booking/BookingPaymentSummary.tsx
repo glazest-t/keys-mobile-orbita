@@ -1,4 +1,7 @@
+import {isDesktop} from '../desktop/surface';
+import {PendingPaymentButton,PendingCancellationButton} from './PendingBooking';
 import type {ReactNode,Dispatch,SetStateAction} from 'react';
+import {awaitingPayment} from './pendingPayment';
 import type {BookingQuote} from '../../../prototype/domain/booking.mjs';
 import {formatMoney,type Draft,type Booking,type Commerce} from './model';
 import {bookingCostLines,bookingPaymentView} from './bookingPaymentView';
@@ -27,14 +30,20 @@ export function PaymentSchedule({draft,quote}:{draft:Draft;quote:BookingQuote}){
  const now=quote.paymentSchedule?.nowMinor??(draft.method==='at_hotel'?0:quote.cashDueMinor),later=quote.cashDueMinor-now;
  return <section className="payment-summary-settlement" aria-label="Когда платить"><MoneyRow label="Сейчас к оплате" amount={now} tone="total"/>{later>0&&<MoneyRow label="При заселении" amount={later}/>}{now===0&&later>0&&<p className="payment-summary-note">При бронировании ничего не списываем.</p>}{quote.cashDueMinor===0&&<p className="payment-summary-note">Стоимость полностью покрыта баллами.</p>}</section>;
 }
-export function DraftPaymentSummary({draft,quote,pointsControl,showSettlement=true}:{draft:Draft;quote:BookingQuote;pointsControl?:ReactNode;showSettlement?:boolean}){
- return <div className="payment-summary"><CostLines draft={draft} quote={quote}/>{pointsControl}<PointsLines quote={quote}/>
+export function DraftPaymentSummary({draft,quote,pointsControl,showSettlement=true,headings=true}:{draft:Draft;quote:BookingQuote;pointsControl?:ReactNode;showSettlement?:boolean;headings?:boolean}){
+ return <div className="payment-summary"><CostLines draft={draft} quote={quote} headings={headings}/>{pointsControl}<PointsLines quote={quote}/>
  {quote.applied.pointsMinor>0&&<MoneyRow label="Итого деньгами" amount={quote.cashDueMinor} tone="subtotal"/>}
  {showSettlement&&<PaymentSchedule draft={draft} quote={quote}/>}
  <p className="payment-summary-note">Налоги и сборы включены</p></div>;
 }
-export function BookingPaymentSummary({booking:b,commerce,setCommerce,failNext,onPaymentAttempt,children}:{booking:Booking;commerce:Commerce;setCommerce:Dispatch<SetStateAction<Commerce>>;failNext?:boolean;onPaymentAttempt?:()=>void;children?:ReactNode}){
+export function BookingPaymentSummary({booking:b,commerce,setCommerce,failNext,onPaymentAttempt,children,initialPaymentOpen}:{initialPaymentOpen?:boolean;booking:Booking;commerce:Commerce;setCommerce:Dispatch<SetStateAction<Commerce>>;failNext?:boolean;onPaymentAttempt?:()=>void;children?:ReactNode}){
  const v=bookingPaymentView(b),q=b.quote;
+ if(awaitingPayment(b))return <section className="booking-payment-card booking-payment-card--pending"><header><h2>Оплата бронирования</h2></header>
+ <div className="payment-summary"><CostLines draft={b.draft} quote={q} headings={false}/><PointsLines quote={q}/>
+ {q.applied.pointsMinor>0&&<MoneyRow label="Итого деньгами" amount={q.cashDueMinor} tone="subtotal"/>}
+ <PaymentSchedule draft={b.draft} quote={q}/><p className="payment-summary-note">Налоги и сборы включены</p>{isDesktop&&<div className="pending-payment-inline-actions"><PendingPaymentButton booking={b} commerce={commerce} setCommerce={setCommerce} failNext={failNext} onPaymentAttempt={onPaymentAttempt} initialOpen={initialPaymentOpen}/><PendingCancellationButton booking={b} commerce={commerce} setCommerce={setCommerce}/></div>}</div>
+ </section>;
+
  return <section className="booking-payment-card"><header><h2>Оплата бронирования</h2>{!v.cancelled&&<StatusBadge tone={v.due?'warning':'success'} icon={v.due?'pending':'check'}>{v.status}</StatusBadge>}</header>
  <div className="payment-summary"><CostLines draft={b.draft} quote={q} headings={false}/>
  {v.groups.length>0&&<section className="payment-summary-group"><h3>Услуги вне брони</h3>{v.groups.map(s=><MoneyRow key={s.id} label={s.title} detail={s.status} amount={s.amount}/>)}{!v.cancelled&&v.serviceRefunds.cash>0&&<MoneyRow label="Возвращено за отменённые услуги" amount={v.serviceRefunds.cash}/>} {!v.cancelled&&v.serviceRefunds.points>0&&<MoneyRow label="Возвращено баллов за услуги">{(v.serviceRefunds.points/100).toLocaleString('ru-RU')} баллов</MoneyRow>}{v.retained>0&&<MoneyRow label="Удержано за отмену услуг" amount={v.retained}/>}{v.groups.some(g=>["Ждёт подтверждения","Нужна проверка","Отменено","Отклонено"].includes(g.status))&&<p className="payment-summary-note">В итог входят только подтверждённые услуги и удержания за отмену.</p>}</section>}

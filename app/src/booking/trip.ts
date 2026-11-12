@@ -12,7 +12,7 @@ export function ownTrips(state:Commerce,owner:string){
  return state.bookings.filter(b=>visibleBooking(state,owner,b)).sort((a,b)=>a.draft.search.checkIn.localeCompare(b.draft.search.checkIn)||a.createdAt.localeCompare(b.createdAt));
 }
 export function selectedTrip(state:Commerce,owner:string){
- const active=ownTrips(state,owner).filter(b=>b.operation.status==='confirmed'&&b.stay?.status!=='checked_out');
+ const active=ownTrips(state,owner).filter(b=>(b.operation.status==='confirmed'||b.operation.status==='awaiting_payment')&&b.stay?.status!=='checked_out');
  const completed=ownTrips(state,owner).filter(b=>b.stay?.status==='checked_out');return active.find(b=>b.id===state.selectedBooking)||completed.find(b=>b.id===state.selectedBooking)||active[0]||completed.at(-1);
 }
 export function tripFacts(b:Booking){

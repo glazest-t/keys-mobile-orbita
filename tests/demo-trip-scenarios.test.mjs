@@ -11,6 +11,7 @@ test('Все сценарии независимы и дают согласов�
   const s=activateTripScenario(initialCommerce(),owner,id,'demo-'+id,now),b=s.bookings[0];
   assert.equal(activeTripScenario(s,owner,now),id);
   if(id==='empty'){assert.equal(s.bookings.length,0);assert.equal(s.selectedBooking,null);continue;}
+  if(id==='awaiting-payment'){assert.equal(b.operation.status,'awaiting_payment');assert.equal(b.operation.paidCashMinor,0);assert.equal(keyAccess(b,now).visible,false);assert.equal(b.stay,undefined);continue;}
   if(id==='cancelled'){assert.equal(b.operation.status,'cancelled');assert.equal(keyAccess(b,now).visible,false);assert.equal(b.stay,undefined);assert.deepEqual(historyTrips(s,owner,'','Отменённые').map(item=>item.id),[b.id]);continue;}
   assert.equal(b.operation.status,'confirmed');assert.equal(b.operation.dueAtHotelMinor,0);
   assert.equal(keyAccess(b,now).visible,['staying','departure'].includes(id));

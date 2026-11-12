@@ -1,7 +1,7 @@
 export type Wallets={hotelId:string;keysPoints:number;hotelPoints:number};
 export type Service={id:string;quantity:number;unitPriceMinor:number};
 export type Quote={hotelId:string;lodgingMinor:number;serviceTotalMinor:number;orderTotalMinor:number;hotelBenefitsAllowed:boolean;usePoints:boolean;pointsLimit?:number;applied:{hotelPoints:number;keysPoints:number;pointsMinor:number};cashDueMinor:number;remaining:{hotelPoints:number;keysPoints:number}};
-export type Operation={id:string;userId:string;bookingId:string;hotelId:string;status:'confirmed'|'cancelled';method:'online'|'at_hotel';orderTotalMinor:number;pointsMinor:number;debits:Record<string,number>;paidCashMinor:number;dueAtHotelMinor:number;refundCashMinor?:number;returnedPointsMinor?:number;penaltyMinor?:number;penaltyDueMinor?:number};
+export type Operation={id:string;userId:string;bookingId:string;hotelId:string;status:'confirmed'|'cancelled'|'awaiting_payment';method:'online'|'at_hotel';orderTotalMinor:number;pointsMinor:number;debits:Record<string,number>;paidCashMinor:number;dueAtHotelMinor:number;refundCashMinor?:number;returnedPointsMinor?:number;penaltyMinor?:number;penaltyDueMinor?:number};
 export type PaymentState={balances:Record<string,number>;operations:Record<string,Operation>};
 export class DomainError extends Error {code:string;constructor(code:string,message:string)}
 export function createPaymentState():PaymentState;

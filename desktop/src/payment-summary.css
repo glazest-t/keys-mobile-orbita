@@ -7,6 +7,10 @@
 .desktop-surface .desktop-app .checkout-cta .desktop-cart-settlement .desktop-cart-tax{margin:0}
 
 /* Booking detail section headings sit above their cards, like the adjacent sections. */
-.desktop-surface .desktop-app .record-content>.booking-payment-card{padding:0;border:0;border-radius:0;background:transparent;gap:10px}
-.desktop-surface .desktop-app .record-content>.booking-payment-card>header>h2{margin:0;padding:0;font:500 18px/26px Onest,sans-serif}
-.desktop-surface .desktop-app .record-content>.booking-payment-card>.payment-summary{padding:20px;border:1px solid var(--k-border-subtle);border-radius:24px;background:#fff}
+.desktop-surface .desktop-app .record-content .booking-payment-card{padding:0;border:0;border-radius:0;background:transparent;gap:10px}
+.desktop-surface .desktop-app .record-content .booking-payment-card>header>h2{margin:0;padding:0;font:500 18px/26px Onest,sans-serif}
+.desktop-surface .desktop-app .record-content .booking-payment-card>.payment-summary{padding:20px;border:1px solid var(--k-border-subtle);border-radius:24px;background:#fff}
+
+.desktop-app .pending-payment-inline-actions{display:flex;flex-direction:column;gap:8px;margin-top:4px}
+.desktop-app .pending-payment-inline-actions>.k-button{width:100%;max-width:none;min-height:48px}
+.desktop-app .pending-payment-inline-actions>.record-cancel{color:var(--k-text-secondary)}

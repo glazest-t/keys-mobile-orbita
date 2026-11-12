@@ -67,3 +67,9 @@
 .desktop-app .record-hotel-copy > strong { grid-column:1;grid-row:1;align-self:end; }
 .desktop-app .record-hotel-copy > .record-hotel-stay { grid-column:1;grid-row:2;align-self:start;margin:0; }
 .desktop-app .record-hotel-copy > .booking-hotel-contacts { grid-column:2;grid-row:1/3;margin:0; }
+
+/* Booking facts form one reading column, with the payment summary alongside. */
+.desktop-app .record-details-layout{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+.desktop-app .record-information-column{display:flex;flex-direction:column;gap:24px;min-width:0}
+.desktop-app .record-payment-column{min-width:0}
+@media(max-width:760px){.desktop-app .record-details-layout{grid-template-columns:minmax(0,1fr)}}

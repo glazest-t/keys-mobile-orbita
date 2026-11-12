@@ -29,6 +29,7 @@ export async function createCatalogueFixture(scene:CatalogueScene):Promise<Catal
  let commerce=activateTripScenario(initialCommerce(),owner,(scene.trip||'empty') as TripScenario,'catalogue-booking');
  commerce=ensureDemoHotelPoints(ensureDemoPointsHistory(ensureWelcomePoints(commerce,owner),owner),owner);
  if(scene.trip==='cancelled')commerce={...commerce,historyReturnTo:'trips',historyBrowse:{[owner]:{query:'',filter:'Отменённые'}}};
+ if(scene.pendingBooking)commerce={...commerce,draft:{...commerce.bookings[0].draft,step:'confirmation'}};
  if(scene.firstFind)state.users[owner].travelStyleIntro='pending';
  if(scene.loyalty)commerce={...commerce,hotelMemberships:{...commerce.hotelMemberships,[owner]:{...commerce.hotelMemberships?.[owner],'orbit-sea':true}}};
  if(scene.role&&scene.role!=='guest'){

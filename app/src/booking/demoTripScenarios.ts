@@ -1,3 +1,4 @@
+import {beginBookingPayment} from './pendingPayment.ts';
 import {historyFixture} from '../profile/historyDemo.ts';
 import {type Commerce,initialCommerce,ensureAccount,startDraft,quoteDraft,commitBooking,cancelBooking} from './model.ts';
 import {demoCheckIn} from './stay.ts';
@@ -10,6 +11,7 @@ export const tripScenarios=[
  {id:'upcoming',label:'До заезда',hint:'Бронь подтверждена, ключ ещё недоступен'},
  {id:'staying',label:'Во время проживания',hint:'Ключ, услуги и связь с отелем'},
  {id:'departure',label:'День выезда',hint:'Напоминание перед выездом'},
+ {id:'awaiting-payment',label:'Ожидает оплаты',hint:'Возврат со страницы оплаты без платежа'},
  {id:'cancelled',label:'Бронь отменена',hint:'Отменённая бронь в поездках и истории'},
  {id:'completed',label:'После выезда',hint:'Завершённая поездка и отзыв'},
 ] as const;
@@ -29,9 +31,9 @@ export function activateTripScenario(s:Commerce,owner:string,scenario:TripScenar
   next=startDraft(next,'orbit-sea',id);
   next={...next,draft:{...next.draft!,contact:{name:'Анна',surname:'Примерова',phone:owner,email:'anna@example.test'}}};
   // Fixed catalogue dates and payment timestamp make the fixture reproducible.
-  next=commitBooking(next,owner,quoteDraft(next,owner),'success','2026-10-27T12:00:00Z');
+  next=scenario==='awaiting-payment'?beginBookingPayment(next,owner,quoteDraft(next,owner),'2026-10-27T12:00:00Z'):commitBooking(next,owner,quoteDraft(next,owner),'success','2026-10-27T12:00:00Z');
   if(scenario==='cancelled')next=cancelBooking(next,owner,id,'2026-10-28T12:00:00Z');
-  if(scenario!=='upcoming'&&scenario!=='cancelled')next=demoCheckIn(next,owner,id,id+'-checkin',now);
+  if(scenario!=='upcoming'&&scenario!=='cancelled'&&scenario!=='awaiting-payment')next=demoCheckIn(next,owner,id,id+'-checkin',now);
   if(scenario==='departure'||scenario==='completed')next=demoCheckoutDay(next,owner,id,now);
   if(scenario==='completed')next=confirmCheckout(next,owner,id,id+'-checkout',now);
   next={...next,draft:null};
@@ -45,6 +47,7 @@ export function activeTripScenario(s:Commerce,owner:string,now=Date.now()):TripS
  if(s.bookings.find(b=>b.id===s.selectedBooking&&b.owner===owner)?.operation.status==='cancelled')return 'cancelled';
  const b=selectedTrip(s,owner);
  if(!b)return 'empty';
+ if(b.operation.status==='awaiting_payment')return 'awaiting-payment';
  if(b.stay?.status==='checked_out')return 'completed';
  if(b.stay)return checkoutDay(b,now)?'departure':'staying';
  return 'upcoming';

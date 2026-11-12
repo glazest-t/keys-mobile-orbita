@@ -1,3 +1,4 @@
+import {PendingTrip} from './PendingBooking';
 import {CancelledTrip} from './CancelledTrip';
 import {useNovember} from '../usePrototypeVariant';
 import {isPartiallyPaid} from './bookingBalance';
@@ -31,6 +32,7 @@ export function UpcomingTrip({commerce,setCommerce,failNext,onPaymentAttempt,own
  const november=useNovember();
  const all=ownTrips(commerce,owner),b=selectedTrip(commerce,owner)||all.filter(item=>item.operation.status==='cancelled').at(-1),active=all.filter(b=>b.operation.status==='confirmed'&&b.stay?.status!=='checked_out');
  if(!b)return <div className="trip-home"><h1>Поездки</h1></div>;
+ if(b.operation.status==='awaiting_payment')return <PendingTrip booking={b} commerce={commerce} setCommerce={setCommerce} failNext={failNext} onPaymentAttempt={onPaymentAttempt} onDetails={()=>onDetails(b.id)}/>;
  if(b.operation.status==='cancelled')return <CancelledTrip booking={b} onDetails={()=>onDetails(b.id)} onRepeat={()=>onAction(b.id,'repeat')}/>;
  if(b.stay?.status==='checked_out')return <div className="completed-stay"><CompletedTrip booking={b} balance={commerce.payment.balances['keys:'+owner]||0} onReview={rating=>onReview(b.id,rating)} onDocuments={()=>onAction(b.id,'documents')} onChat={()=>onAction(b.id,'chat')} onRepeat={()=>onAction(b.id,'repeat')}/>{active.length>0&&<section className="trip-history"><h2>Предстоящие поездки</h2>{active.map(t=><button key={t.id} onClick={()=>onSelect(t.id)}>{catalog.hotels.find(h=>h.id===t.draft.hotelId)?.name}<Icon name="chevron-right" size={18}/></button>)}</section>}<ProblemSummary booking={b} onOpen={()=>onAction(b.id,'problem')}/></div>;
  const hotel=catalog.hotels.find(h=>h.id===b.draft.hotelId)!,f=tripFacts(b),breakfast=breakfastSummary(b),future=b.draft.search.checkIn>new Date().toLocaleDateString('en-CA');
