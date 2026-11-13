@@ -1,0 +1,305 @@
+{
+  "date": "2026-11-13",
+  "images": [
+    {
+      "file": "rustore/screenshots/01-search.jpg",
+      "width": 1080,
+      "height": 1920,
+      "format": "jpeg",
+      "bytes": 179272,
+      "pass": true
+    },
+    {
+      "file": "rustore/screenshots/02-hotel.jpg",
+      "width": 1080,
+      "height": 1920,
+      "format": "jpeg",
+      "bytes": 177512,
+      "pass": true
+    },
+    {
+      "file": "rustore/screenshots/03-trip.jpg",
+      "width": 1080,
+      "height": 1920,
+      "format": "jpeg",
+      "bytes": 167055,
+      "pass": true
+    },
+    {
+      "file": "rustore/screenshots/04-services.jpg",
+      "width": 1080,
+      "height": 1920,
+      "format": "jpeg",
+      "bytes": 150157,
+      "pass": true
+    },
+    {
+      "file": "rustore/screenshots/05-chat.jpg",
+      "width": 1080,
+      "height": 1920,
+      "format": "jpeg",
+      "bytes": 98816,
+      "pass": true
+    },
+    {
+      "file": "rustore/screenshots/06-rewards.jpg",
+      "width": 1080,
+      "height": 1920,
+      "format": "jpeg",
+      "bytes": 119482,
+      "pass": true
+    },
+    {
+      "file": "rustore/screenshots/07-favorites.jpg",
+      "width": 1080,
+      "height": 1920,
+      "format": "jpeg",
+      "bytes": 157852,
+      "pass": true
+    },
+    {
+      "file": "google-play/screenshots/01-search.jpg",
+      "width": 1080,
+      "height": 1920,
+      "format": "jpeg",
+      "bytes": 179272,
+      "pass": true
+    },
+    {
+      "file": "google-play/screenshots/02-hotel.jpg",
+      "width": 1080,
+      "height": 1920,
+      "format": "jpeg",
+      "bytes": 177512,
+      "pass": true
+    },
+    {
+      "file": "google-play/screenshots/03-trip.jpg",
+      "width": 1080,
+      "height": 1920,
+      "format": "jpeg",
+      "bytes": 167055,
+      "pass": true
+    },
+    {
+      "file": "google-play/screenshots/04-services.jpg",
+      "width": 1080,
+      "height": 1920,
+      "format": "jpeg",
+      "bytes": 150157,
+      "pass": true
+    },
+    {
+      "file": "google-play/screenshots/05-chat.jpg",
+      "width": 1080,
+      "height": 1920,
+      "format": "jpeg",
+      "bytes": 98816,
+      "pass": true
+    },
+    {
+      "file": "google-play/screenshots/06-rewards.jpg",
+      "width": 1080,
+      "height": 1920,
+      "format": "jpeg",
+      "bytes": 119482,
+      "pass": true
+    },
+    {
+      "file": "google-play/screenshots/07-favorites.jpg",
+      "width": 1080,
+      "height": 1920,
+      "format": "jpeg",
+      "bytes": 157852,
+      "pass": true
+    },
+    {
+      "file": "app-store/iphone-large/01-search.jpg",
+      "width": 1320,
+      "height": 2868,
+      "format": "jpeg",
+      "bytes": 269461,
+      "pass": true
+    },
+    {
+      "file": "app-store/iphone-large/02-hotel.jpg",
+      "width": 1320,
+      "height": 2868,
+      "format": "jpeg",
+      "bytes": 291889,
+      "pass": true
+    },
+    {
+      "file": "app-store/iphone-large/03-trip.jpg",
+      "width": 1320,
+      "height": 2868,
+      "format": "jpeg",
+      "bytes": 242858,
+      "pass": true
+    },
+    {
+      "file": "app-store/iphone-large/04-services.jpg",
+      "width": 1320,
+      "height": 2868,
+      "format": "jpeg",
+      "bytes": 266519,
+      "pass": true
+    },
+    {
+      "file": "app-store/iphone-large/05-chat.jpg",
+      "width": 1320,
+      "height": 2868,
+      "format": "jpeg",
+      "bytes": 163252,
+      "pass": true
+    },
+    {
+      "file": "app-store/iphone-large/06-rewards.jpg",
+      "width": 1320,
+      "height": 2868,
+      "format": "jpeg",
+      "bytes": 171100,
+      "pass": true
+    },
+    {
+      "file": "app-store/iphone-large/07-favorites.jpg",
+      "width": 1320,
+      "height": 2868,
+      "format": "jpeg",
+      "bytes": 264617,
+      "pass": true
+    },
+    {
+      "file": "app-store/iphone-medium/01-search.jpg",
+      "width": 1206,
+      "height": 2622,
+      "format": "jpeg",
+      "bytes": 239178,
+      "pass": true
+    },
+    {
+      "file": "app-store/iphone-medium/02-hotel.jpg",
+      "width": 1206,
+      "height": 2622,
+      "format": "jpeg",
+      "bytes": 264537,
+      "pass": true
+    },
+    {
+      "file": "app-store/iphone-medium/03-trip.jpg",
+      "width": 1206,
+      "height": 2622,
+      "format": "jpeg",
+      "bytes": 216585,
+      "pass": true
+    },
+    {
+      "file": "app-store/iphone-medium/04-services.jpg",
+      "width": 1206,
+      "height": 2622,
+      "format": "jpeg",
+      "bytes": 237417,
+      "pass": true
+    },
+    {
+      "file": "app-store/iphone-medium/05-chat.jpg",
+      "width": 1206,
+      "height": 2622,
+      "format": "jpeg",
+      "bytes": 145193,
+      "pass": true
+    },
+    {
+      "file": "app-store/iphone-medium/06-rewards.jpg",
+      "width": 1206,
+      "height": 2622,
+      "format": "jpeg",
+      "bytes": 153353,
+      "pass": true
+    },
+    {
+      "file": "app-store/iphone-medium/07-favorites.jpg",
+      "width": 1206,
+      "height": 2622,
+      "format": "jpeg",
+      "bytes": 235663,
+      "pass": true
+    },
+    {
+      "file": "rustore/app-icon-512.png",
+      "width": 512,
+      "height": 512,
+      "format": "png",
+      "bytes": 13629,
+      "opaque": true,
+      "pass": true
+    },
+    {
+      "file": "google-play/app-icon-512.png",
+      "width": 512,
+      "height": 512,
+      "format": "png",
+      "bytes": 13629,
+      "opaque": true,
+      "pass": true
+    },
+    {
+      "file": "app-store/app-icon-1024.png",
+      "width": 1024,
+      "height": 1024,
+      "format": "png",
+      "bytes": 32320,
+      "opaque": true,
+      "pass": true
+    },
+    {
+      "file": "google-play/feature-graphic-1024x500.jpg",
+      "width": 1024,
+      "height": 500,
+      "format": "jpeg",
+      "bytes": 39526,
+      "opaque": true,
+      "pass": true
+    }
+  ],
+  "texts": [
+    {
+      "field": "name",
+      "length": 23,
+      "limit": 30,
+      "pass": true
+    },
+    {
+      "field": "short_description",
+      "length": 76,
+      "limit": 80,
+      "pass": true
+    },
+    {
+      "field": "subtitle_app_store",
+      "length": 25,
+      "limit": 30,
+      "pass": true
+    },
+    {
+      "field": "promotional_text_app_store",
+      "length": 120,
+      "limit": 170,
+      "pass": true
+    },
+    {
+      "field": "keywords_app_store",
+      "length": 72,
+      "limit": 100,
+      "pass": true
+    },
+    {
+      "field": "full_description",
+      "length": 1160,
+      "limit": 4000,
+      "pass": true
+    }
+  ],
+  "revision": 2,
+  "source": "393x852 original prototype geometry; uniform scaling; documented crops"
+}

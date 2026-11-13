@@ -1,0 +1,72 @@
+[
+  {
+    "id": "01-search",
+    "scene": "results",
+    "route": "results",
+    "title": "Отель для<br><em>ваших планов</em>",
+    "subtitle": "Сравнивайте цены, расположение<br>и удобства",
+    "label": "Поиск",
+    "cropHeight": 598,
+    "tone": "blue"
+  },
+  {
+    "id": "02-hotel",
+    "scene": "booking-hotel",
+    "route": "booking-flow",
+    "title": "Все детали.<br><em>До бронирования.</em>",
+    "subtitle": "Фото, номера и условия —<br>чтобы выбрать своё",
+    "label": "Отель",
+    "cropHeight": 660,
+    "tone": "ice"
+  },
+  {
+    "id": "03-trip",
+    "scene": "trip-upcoming",
+    "route": "trips",
+    "title": "Ваша поездка.<br><em>Всё на месте.</em>",
+    "subtitle": "Даты, адрес и детали брони<br>в одном приложении",
+    "label": "Поездка",
+    "cropHeight": 590,
+    "tone": "ice"
+  },
+  {
+    "id": "04-services",
+    "scene": "services",
+    "route": "trip-services",
+    "title": "Больше комфорта.<br><em>Меньше хлопот.</em>",
+    "subtitle": "Добавляйте доступные услуги<br>сразу в приложении",
+    "label": "Услуги",
+    "cropHeight": 714,
+    "tone": "blue"
+  },
+  {
+    "id": "05-chat",
+    "scene": "trip-chat",
+    "route": "trip-chat",
+    "title": "Вопрос отелю?<br><em>Напишите в чат.</em>",
+    "subtitle": "Уточняйте детали проживания<br>без лишних звонков",
+    "label": "Чат",
+    "cropHeight": 764,
+    "tone": "ice"
+  },
+  {
+    "id": "06-rewards",
+    "scene": "rewards",
+    "route": "rewards",
+    "title": "Поездки<br><em>с преимуществами</em>",
+    "subtitle": "Баллы Ключей и программы<br>лояльности отелей",
+    "label": "Выгоды",
+    "cropHeight": 600,
+    "tone": "blue"
+  },
+  {
+    "id": "07-favorites",
+    "scene": "favorite-list",
+    "route": "favorite-list",
+    "title": "Понравилось?<br><em>Сохраните.</em>",
+    "subtitle": "Собирайте отели в подборки<br>и возвращайтесь к выбору",
+    "label": "Избранное",
+    "cropHeight": 674,
+    "tone": "ice"
+  }
+]

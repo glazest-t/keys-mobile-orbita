@@ -26,7 +26,7 @@ def target(href,parent):
     return parent/p
 
 assert (ROOT/'.nojekyll').exists()
-files=['index.html','screens.html','documentation.html','prototype/index.html','desktop/index.html','desktop/review.html','docs/brand/index.html']
+files=['store-kit/index.html','index.html','screens.html','documentation.html','prototype/index.html','desktop/index.html','desktop/review.html','docs/brand/index.html']
 files += [str(p.relative_to(ROOT)) for p in (ROOT/'docs/handoff').glob('*.html')]
 files += ['README.html','docs/DEPLOYMENT.html','docs/MOBILE-REVIEW.html','docs/references/README.html']
 count=0
@@ -72,3 +72,13 @@ for surface in ['prototype','desktop']:
     for prop in ['backdrop-filter','-webkit-backdrop-filter']:
         assert any(re.search(r'(?:^|;)\s*'+re.escape(prop)+r':\s*blur\(14px\)(?:;|$)',body) for body in rules), (surface, 'Missing search blur', prop)
 print('OK: search backdrop blur retained for standard browsers and Safari')
+
+# Public store gallery and downloadable bundle must be self-contained.
+from zipfile import ZipFile
+kit=ROOT/'store-kit'
+assert not (kit/'source').exists()
+with ZipFile(kit/'keys-store-kit.zip') as bundle:
+    assert bundle.testzip() is None
+for store,folder,total in [('rustore','screenshots',7),('google-play','screenshots',7),('app-store','iphone-large',7),('app-store','iphone-medium',7)]:
+    assert len(list((kit/store/folder).glob('*.jpg')))==total
+print('OK: store gallery, 28 screenshots and ZIP bundle')

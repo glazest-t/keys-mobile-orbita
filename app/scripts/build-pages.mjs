@@ -32,6 +32,9 @@ execFileSync(path.join(root,'desktop/node_modules/.bin/vite'),['build','--base',
 rmSync(out,{recursive:true,force:true});mkdirSync(out,{recursive:true});
 const published=['docs/handoff','docs/brand','docs/references','docs/MOBILE-REVIEW.md','docs/DEPLOYMENT.md','docs/PRODUCT.md','docs/DESIGN_SYSTEM.md','docs/iteration-9/qa-current-publication','docs/iteration-9/qa-2gis-2026-11-02','design/assets','design/fonts','design/tokens.json','design/tokens.css','spec','prototype/domain'];
 for(const name of published){if(existsSync(path.join(root,name)))cpSync(path.join(root,name),path.join(out,name),{recursive:true,filter:p=>!excluded(p)&&!['.DS_Store','__pycache__'].includes(path.basename(p))});}
+// Store screenshots and downloads; local capture tools remain in the repository/ZIP.
+const storeKit=path.join(root,'design/store-kit-2026-11-13');
+cpSync(storeKit,path.join(out,'store-kit'),{recursive:true,filter:p=>path.relative(storeKit,p).split(path.sep)[0]!=='source'});
 for(const name of ['README.md'])cpSync(path.join(root,name),path.join(out,name));
 cpSync(path.join(app,'dist/client'),path.join(out,'prototype'),{recursive:true,filter:p=>!excluded(p)});
 cpSync(path.join(root,'desktop/dist/client'),path.join(out,'desktop'),{recursive:true,filter:p=>!excluded(p)});
@@ -97,6 +100,7 @@ const cards=[
  ['04','Для разработки','Действующая логика, состояния компонентов, спецификации, источники и результаты проверок.',base+'documentation.html','Читать документы'],
  ['05','Материалы для маркетинга','Баннеры, иллюстрации, UI, логотипы и исходники для сайтов, лендингов и соцсетей.',base+'marketing/','Открыть материалы'],
  ['06','Иконки приложения','Полный актуальный сет «Мягкие»: 170 векторных SVG-иконок для мобильной и десктопной версий.',base+'icons.html','Смотреть все иконки'],
+ ['07','Материалы для сторов','Актуальные скриншоты, иконки и тексты для RuStore, Google Play и App Store. Просмотр и скачивание комплекта.',base+'store-kit/','Посмотреть и скачать'],
 ];
 write('index.html',page('Пространство проекта',`<section class="hero"><p class="eyebrow">МОБИЛЬНАЯ И ДЕСКТОПНАЯ ВЕРСИИ</p><h1>Ключи от<br/>всех отелей</h1><p class="lead">Приложение, экраны, документация и материалы для маркетинга — в одном месте.</p><div class="actions"><a class="primary" href="${appBase}">Мобильная версия ↗</a><a class="secondary" href="${desktopBase}">Десктопная версия ↗</a><a class="secondary" href="${base}screens.html">Все экраны</a></div><div class="orbit" aria-hidden="true"><i></i><b></b></div></section><section class="cards">${cards.map(([n,title,copy,href,cta])=>`<a class="card" href="${href}"${href.endsWith('.zip')?' download':''}><span class="number">${n}</span><h2>${title}</h2><p>${copy}</p><strong>${cta} →</strong></a>`).join('')}</section><section class="guide"><div><p class="eyebrow">КАК ПОСМОТРЕТЬ</p><h2>Выберите сценарий<br/>в настройках демонстрации</h2></div><div><p>В приложении есть шесть вариантов входа и пять состояний поездки: без брони, до заезда, проживание, день выезда и завершённая поездка.</p><p>Код СМС: <b>123456</b> · PIN: <b>1234</b>. После входа станут доступны сценарии поездок, услуг, оплаты и уведомлений.</p><a href="${appBase}#kit">Открыть живой UI kit →</a></div></section>`));
 
