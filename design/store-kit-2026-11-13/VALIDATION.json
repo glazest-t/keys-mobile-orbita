@@ -22,7 +22,7 @@
       "width": 1080,
       "height": 1920,
       "format": "jpeg",
-      "bytes": 225617,
+      "bytes": 226031,
       "pass": true
     },
     {
@@ -46,7 +46,7 @@
       "width": 1080,
       "height": 1920,
       "format": "jpeg",
-      "bytes": 119482,
+      "bytes": 209264,
       "pass": true
     },
     {
@@ -78,7 +78,7 @@
       "width": 1080,
       "height": 1920,
       "format": "jpeg",
-      "bytes": 225617,
+      "bytes": 226031,
       "pass": true
     },
     {
@@ -102,7 +102,7 @@
       "width": 1080,
       "height": 1920,
       "format": "jpeg",
-      "bytes": 119482,
+      "bytes": 209264,
       "pass": true
     },
     {
@@ -134,7 +134,7 @@
       "width": 1320,
       "height": 2868,
       "format": "jpeg",
-      "bytes": 317005,
+      "bytes": 317528,
       "pass": true
     },
     {
@@ -158,7 +158,7 @@
       "width": 1320,
       "height": 2868,
       "format": "jpeg",
-      "bytes": 171100,
+      "bytes": 301909,
       "pass": true
     },
     {
@@ -190,7 +190,7 @@
       "width": 1206,
       "height": 2622,
       "format": "jpeg",
-      "bytes": 286993,
+      "bytes": 287043,
       "pass": true
     },
     {
@@ -214,7 +214,7 @@
       "width": 1206,
       "height": 2622,
       "format": "jpeg",
-      "bytes": 153353,
+      "bytes": 271121,
       "pass": true
     },
     {
@@ -300,6 +300,6 @@
       "pass": true
     }
   ],
-  "revision": 3,
+  "revision": 4,
   "source": "393x852 original prototype geometry; uniform scaling; documented crops"
 }

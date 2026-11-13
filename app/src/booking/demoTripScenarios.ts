@@ -29,7 +29,7 @@ export function activateTripScenario(s:Commerce,owner:string,scenario:TripScenar
  }
  if(scenario!=='empty'){
   next=startDraft(next,'orbit-sea',id);
-  next={...next,draft:{...next.draft!,contact:{name:'Анна',surname:'Примерова',phone:owner,email:'anna@example.test'}}};
+  next={...next,draft:{...next.draft!,contact:{name:'Татьяна',surname:'Примерова',phone:owner,email:'tatyana@example.test'}}};
   // Fixed catalogue dates and payment timestamp make the fixture reproducible.
   next=scenario==='awaiting-payment'?beginBookingPayment(next,owner,quoteDraft(next,owner),'2026-10-27T12:00:00Z'):commitBooking(next,owner,quoteDraft(next,owner),'success','2026-10-27T12:00:00Z');
   if(scenario==='cancelled')next=cancelBooking(next,owner,id,'2026-10-28T12:00:00Z');

@@ -25,7 +25,7 @@ export const catalogueScene:CatalogueScene|null=typeof location==='undefined'?nu
 export type CatalogueFixture={state:State;commerce:Commerce};
 export async function createCatalogueFixture(scene:CatalogueScene):Promise<CatalogueFixture>{
  const owner='+79990000001';
- let state:State={...initialState(),onboarded:true,activePhone:owner,users:{[owner]:{phone:owner,name:'Анна',travelers:[{...blankTraveler('primary'),primary:true,name:'Анна',surname:'Соколова',phone:owner,email:'anna@example.test',birthDate:'1992-04-18',citizenship:'Россия'},{...blankTraveler('companion'),name:'Иван',surname:'Соколов',phone:'+79990000002',email:'ivan@example.test'}]}}};
+ let state:State={...initialState(),onboarded:true,activePhone:owner,users:{[owner]:{phone:owner,name:'Татьяна',travelers:[{...blankTraveler('primary'),primary:true,name:'Татьяна',surname:'Соколова',phone:owner,email:'tatyana@example.test',birthDate:'1992-04-18',citizenship:'Россия'},{...blankTraveler('companion'),name:'Иван',surname:'Соколов',phone:'+79990000002',email:'ivan@example.test'}]}}};
  let commerce=activateTripScenario(initialCommerce(),owner,(scene.trip||'empty') as TripScenario,'catalogue-booking');
  commerce=ensureDemoHotelPoints(ensureDemoPointsHistory(ensureWelcomePoints(commerce,owner),owner),owner);
  if(scene.trip==='cancelled')commerce={...commerce,historyReturnTo:'trips',historyBrowse:{[owner]:{query:'',filter:'Отменённые'}}};
@@ -35,7 +35,7 @@ export async function createCatalogueFixture(scene:CatalogueScene):Promise<Catal
  if(scene.role&&scene.role!=='guest'){
   commerce=registerHotelierInterest(commerce,owner,{name:'Юра Костин',hotel:'Travelline'});
   if(scene.role!=='interested'){
-   commerce=submitVerification(commerce,owner,'anna@hotel.example','catalogue-verification');
+   commerce=submitVerification(commerce,owner,'tatyana@hotel.example','catalogue-verification');
    if(scene.role==='approved'||scene.role==='rejected')commerce=resolveVerification(commerce,owner,verificationClaim(commerce.hotelierVerifications![owner]),scene.role);
   }
  }
@@ -49,7 +49,7 @@ export async function createCatalogueFixture(scene:CatalogueScene):Promise<Catal
  if(scene.adults)commerce={...commerce,search:{...commerce.search,adults:Number(scene.adults)}};
  if(scene.step){
   commerce=startDraft(commerce,'orbit-sea','catalogue-draft',owner);
-  commerce={...commerce,draft:{...commerce.draft!,step:scene.step,contact:{name:'Анна',surname:'Соколова',phone:owner,email:'anna@example.test'}}};
+  commerce={...commerce,draft:{...commerce.draft!,step:scene.step,contact:{name:'Татьяна',surname:'Соколова',phone:owner,email:'tatyana@example.test'}}};
   if(scene.nearbyDates){
    const d=commerce.draft!,start=Date.parse(d.search.checkIn+'T00:00:00Z'),end=Date.parse(d.search.checkOut+'T00:00:00Z');
    const prices={...commerce.demoOfferPrices};

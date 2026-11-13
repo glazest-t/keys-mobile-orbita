@@ -7,7 +7,7 @@ export function historyFixture(owner:string,hotelId:string,number:string,status:
  let s=ensureAccount(initialCommerce(),owner);const h=catalog.hotels.find(h=>h.id===hotelId)!;
  s={...s,search:{city:h.city,checkIn:'2026-11-13',checkOut:'2026-11-15',adults:1,childrenAges:[]}};
  s=startDraft(s,hotelId,number+'-'+owner);
- s.draft!.contact={name:'Анна',surname:'Примерова',phone:owner,email:'anna@example.test'};
+ s.draft!.contact={name:'Татьяна',surname:'Примерова',phone:owner,email:'tatyana@example.test'};
  s=commitBooking(s,owner,quoteDraft(s,owner),'success','2026-10-27T12:00:00Z');
  const id=s.bookings[0].id;
  if(status==='cancelled')s=cancelBooking(s,owner,id,'2026-10-28T12:00:00Z');
