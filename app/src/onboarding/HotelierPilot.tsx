@@ -13,6 +13,8 @@ export function HotelierPilot({onStart,initialStep=0}:{onStart:()=>void;initialS
  const [step,setStep]=useState(Math.max(0,Math.min(3,initialStep))),[chatOpen,setChatOpen]=useState(false);
  const heading=useRef<HTMLHeadingElement>(null),reduced=useReducedMotion(),{bottomInset}=useKeyboardInsets();
  const title=[usePrototypeCopy('Первые Ключи — отельерам чата'),usePrototypeCopy('Friendly Rate: скидки для своих'),usePrototypeCopy('Как открыть тарифы'),usePrototypeCopy('Проверяйте в деле. Влияйте на продукт')];
+ const titleAccent=['отельерам чата','скидки для своих','тарифы','Влияйте на продукт'];
+ const accentStart=title[step].lastIndexOf(titleAccent[step]);
  const description=[usePrototypeCopy('Вы помогали создавать этот продукт — время проверить его в деле'),usePrototypeCopy('Бронируйте объекты коллег на закрытых условиях — доступ по профилю TravelLine'),usePrototypeCopy('Активируйте участие и промокод со скидкой в кабинете TravelLine, затем подтвердите профиль здесь. Это нужно, чтобы выгоду получали только свои'),usePrototypeCopy('Это первая версия Ключей. Делитесь впечатлениями, предлагайте идеи в нашем чате — мы всегда на связи')];
  const changeStep=(next:number)=>{setStep(next);requestAnimationFrame(()=>heading.current?.focus({preventScroll:true}));};
  return <div className={`hotelier-pilot-flow${step===3?' is-final-step':''}`}>
@@ -22,7 +24,7 @@ export function HotelierPilot({onStart,initialStep=0}:{onStart:()=>void;initialS
     <motion.div key={step} className="hotelier-pilot-art" initial={reduced?false:{opacity:0,y:12}} animate={{opacity:1,y:0}} transition={{duration:interactionMotion.push}}>
      {step===0?<PilotInvitation/>:step===1?<PilotHotelCard/>:step===2?<PilotSteps/>:<PilotChat/>}
     </motion.div>
-    <div className="hotelier-pilot-copy"><h1 ref={heading} tabIndex={-1}>{title[step]}</h1><p>{description[step]}</p></div>
+    <div className="hotelier-pilot-copy"><h1 ref={heading} tabIndex={-1}>{accentStart<0?title[step]:<>{title[step].slice(0,accentStart)}<span className="hotelier-pilot-title-accent">{title[step].slice(accentStart)}</span></>}</h1><p>{description[step]}</p></div>
    </main>
   </MobileScroll>
   <footer className="app-footer hotelier-pilot-footer" style={{bottom:bottomInset}}>
@@ -39,14 +41,18 @@ export function HotelierPilot({onStart,initialStep=0}:{onStart:()=>void;initialS
 
 function PilotInvitation(){
  return <div className="hotelier-pilot-invitation" role="img" aria-label="Ключи. Сообщество отельеров. Приглашение для своих. Закрытый релиз.">
-  <span className="hotelier-pilot-orbit" aria-hidden="true"/>
-  <div className="hotelier-pilot-invite-card" aria-hidden="true"><div className="hotelier-pilot-invite-brand"><Mark/><span>Ключи</span></div><span className="hotelier-pilot-invite-community">Сообщество отельеров</span><strong>Приглашение<br/>для своих</strong><span className="hotelier-pilot-invite-seal"><Icon name="secure" size={16} inheritColor/>Закрытый релиз</span></div>
+  <div className="hotelier-pilot-invite-card" aria-hidden="true">
+   <div className="hotelier-pilot-invite-top"><div className="hotelier-pilot-invite-brand"><Mark/><span>Ключи</span></div><span className="hotelier-pilot-invite-community">Сообщество<br/>отельеров</span></div>
+   <strong>Приглашение<br/>для своих</strong>
+   <div className="hotelier-pilot-invite-bottom"><span className="hotelier-pilot-invite-seal"><Icon name="secure" size={14} inheritColor/>Закрытый релиз</span><span className="hotelier-pilot-invite-symbol"><Mark/></span></div>
+   <span className="hotelier-pilot-orbit"/>
+  </div>
  </div>;
 }
 function PilotHotelCard(){
  return <article className="hotelier-pilot-rate" aria-label="Пример карточки отеля с Friendly Rate">
   <div className="hotelier-pilot-photo"><img src="/brand/illustrations/hotelier-pilot-seaside.png" alt="Отель у моря"/></div>
-  <div className="hotelier-pilot-rate-copy"><strong>Орбита у моря</strong><p><Icon name="pin" size={14}/>Сочи · 300 м до моря</p><div className="hotelier-pilot-hotel-bottom"><div><RatingBadge value={4.9}/><span>Превосходно</span></div><div className="hotelier-pilot-hotel-price"><s>8 500 ₽</s><div className="hotelier-pilot-price-line"><FriendlyRateBadge/><strong>5 525 ₽</strong></div><small>за ночь</small></div></div></div>
+  <div className="hotelier-pilot-rate-copy"><div className="hotelier-pilot-hotel-info"><strong>Орбита у моря</strong><p><Icon name="pin" size={14}/>Сочи · 300 м до моря</p><div className="hotelier-pilot-hotel-rating"><RatingBadge value={4.9}/><span>Превосходно</span></div></div><div className="hotelier-pilot-hotel-price"><s>8 500 ₽</s><strong>5 525 ₽</strong><FriendlyRateBadge/></div></div>
  </article>;
 }
 function PilotSteps(){
@@ -55,8 +61,11 @@ function PilotSteps(){
 function PilotChat(){
  const reduced=useReducedMotion(),[replied,setReplied]=useState(!!reduced);
  useEffect(()=>{if(reduced){setReplied(true);return;}const timer=setTimeout(()=>setReplied(true),interactionMotion.chatReplyMs*2);return()=>clearTimeout(timer);},[reduced]);
- return <div className="hotelier-pilot-chat"><div className="hotelier-pilot-chat-heading"><span className="icon-tile"><Icon name="nav-chats" size={28}/></span><div><strong>Чат отельеров</strong><small>На связи с командой Ключей</small></div></div>
-  <motion.div className="hotelier-pilot-bubble is-hotelier" initial={reduced?false:{opacity:0,y:12}} animate={{opacity:1,y:0}} transition={{duration:interactionMotion.bubbleAppear}}><small>Вы · отельер</small><p>В форме всё отлично, добавьте кнопку продления</p><Icon name="check" size={14} inheritColor/></motion.div>
-  <div className="hotelier-pilot-reply-slot">{replied?<motion.div className="hotelier-pilot-bubble is-team" initial={reduced?false:{opacity:0,y:12}} animate={{opacity:1,y:0}} transition={{duration:interactionMotion.bubbleAppear}}><small>Команда Ключей</small><p>Принято, берём в следующий спринт!</p></motion.div>:<div className="hotelier-pilot-typing" aria-label="Команда Ключей набирает сообщение"><span>Команда Ключей</span><div aria-hidden="true">{[0,1,2].map(i=><motion.i key={i} animate={{opacity:[.3,1,.3],y:[0,-3,0]}} transition={{duration:interactionMotion.bubbleOrbit,delay:i*interactionMotion.bubbleStagger,repeat:Infinity}}/>)}</div></div>}</div>
+ return <div className="hotelier-pilot-chat" role="group" aria-label="Пример диалога в чате отельеров">
+  <div className="hotelier-pilot-chat-heading"><span className="icon-tile"><Icon name="nav-chats" size={24}/></span><div><strong>Чат отельеров</strong><small><i aria-hidden="true"/>На связи с командой Ключей</small></div></div>
+  <div className="hotelier-pilot-chat-messages">
+   <motion.div className="hotelier-pilot-message is-outgoing" initial={reduced?false:{opacity:0,y:12}} animate={{opacity:1,y:0}} transition={{duration:interactionMotion.bubbleAppear}}><div className="hotelier-pilot-bubble is-hotelier"><small>Вы · отельер</small><p>В форме всё отлично, добавьте кнопку продления</p><span className="hotelier-pilot-message-time">12:04 <Icon name="check" size={12} inheritColor/></span></div><span className="hotelier-pilot-avatar" aria-hidden="true">Вы</span></motion.div>
+   <div className="hotelier-pilot-reply-slot"><span className="hotelier-pilot-avatar is-team" aria-hidden="true">К</span>{replied?<motion.div className="hotelier-pilot-bubble is-team" initial={reduced?false:{opacity:0,y:12}} animate={{opacity:1,y:0}} transition={{duration:interactionMotion.bubbleAppear}}><small>Команда Ключей</small><p>Принято, берём в следующий спринт!</p><span className="hotelier-pilot-message-time">12:05</span></motion.div>:<div className="hotelier-pilot-typing" aria-label="Команда Ключей набирает сообщение"><span>Команда Ключей</span><div aria-hidden="true">{[0,1,2].map(i=><motion.i key={i} animate={{opacity:[.3,1,.3],y:[0,-3,0]}} transition={{duration:interactionMotion.bubbleOrbit,delay:i*interactionMotion.bubbleStagger,repeat:Infinity}}/>)}</div></div>}</div>
+  </div>
  </div>;
 }
