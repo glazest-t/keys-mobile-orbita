@@ -1,3 +1,4 @@
+import {getPrototypeText,selectPrototypeText} from '../prototypeText';
 import {createFinderChat,sendFinderMessage,completeFinderReply} from '../assistant/model';
 import {submitSupport} from '../profile/support';
 import {confirmPin} from '../profile/settings';
@@ -15,7 +16,7 @@ import {prepareDeviceEntry} from '../demoEntry';
 import {ensureDemoHotelPoints} from '../rewards/loyalty';
 import {ensureWelcomePoints,ensureDemoPointsHistory} from '../rewards/points';
 import {registerHotelierInterest,submitVerification,resolveVerification,verificationClaim} from '../hotelier/verification';
-import {saveSwipeLike,favoriteNavigation} from '../booking/favorites';
+import {saveSwipeLike,favoriteNavigation,saveFavoriteList} from '../booking/favorites';
 import {savePriceWatch,watchKey} from '../booking/priceWatch';
 import {roomOffers} from '../booking/roomOffers';
 import {saveSwipePreferences} from '../booking/swipePreferences';
@@ -40,6 +41,7 @@ export async function createCatalogueFixture(scene:CatalogueScene):Promise<Catal
   }
  }
  for(const hotel of ['orbit-sea','orbit-forest','pine-sochi'])commerce=saveSwipeLike(commerce,owner,hotel);
+ if(scene.id==='favorite-list')commerce=saveFavoriteList(commerce,owner,'swipe-picks',selectPrototypeText(getPrototypeText(),'Подбор по свайпу','Планы на выходные'));
  commerce=favoriteNavigation(commerce,owner,{selectedId:'swipe-picks'});
  const watch=startDraft(commerce,'orbit-sea','catalogue-watch',owner);
  commerce=savePriceWatch(commerce,owner,watch.draft!,{mode:'any',targetMinor:null,push:true,active:true,priceMinor:quoteDraft(watch,owner).cashDueMinor+550000});
