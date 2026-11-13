@@ -21,10 +21,10 @@
   },
   {
     "id": "03-trip",
-    "scene": "trip-upcoming",
+    "scene": "trip-staying",
     "route": "trips",
-    "title": "Ваша поездка.<br><em>Всё на месте.</em>",
-    "subtitle": "Даты, адрес и детали брони<br>в одном приложении",
+    "title": "Вы уже в отеле.<br><em>Всё под рукой.</em>",
+    "subtitle": "Открывайте дверь, заказывайте услуги.<br>Подключайтесь к Wi-Fi в один клик",
     "label": "Поездка",
     "cropHeight": 590,
     "tone": "ice"
