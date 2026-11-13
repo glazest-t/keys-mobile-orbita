@@ -1303,5 +1303,33 @@
     "group": "Поездки",
     "route": "trips",
     "trip": "awaiting-payment"
+  },
+  {
+    "id": "hotelier-pilot",
+    "title": "Онбординг отельера (Эд, Юра) · Приглашение",
+    "group": "Вход и регистрация",
+    "route": "hotelier-pilot",
+    "pilotStep": 0
+  },
+  {
+    "id": "hotelier-pilot-2",
+    "title": "Онбординг отельера (Эд, Юра) · Friendly Rate",
+    "group": "Вход и регистрация",
+    "route": "hotelier-pilot",
+    "pilotStep": 1
+  },
+  {
+    "id": "hotelier-pilot-3",
+    "title": "Онбординг отельера (Эд, Юра) · Как открыть тарифы",
+    "group": "Вход и регистрация",
+    "route": "hotelier-pilot",
+    "pilotStep": 2
+  },
+  {
+    "id": "hotelier-pilot-4",
+    "title": "Онбординг отельера (Эд, Юра) · Обратная связь",
+    "group": "Вход и регистрация",
+    "route": "hotelier-pilot",
+    "pilotStep": 3
   }
 ]

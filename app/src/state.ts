@@ -3,7 +3,7 @@ import {normalizeContactPhone} from './travelers/contactPhone.ts';
 export type Traveler = {id:string; name:string; surname:string; patronymic:string; birthDate:string; citizenship:string; phone:string; email:string; primary?:boolean};
 export type User = {language?:'ru'|'en';travelStyleIntro?:'pending'|'seen';demoDeviceAccess?:boolean;photo?:string;helpBrowse?:{query:string;category:string};supportRequests?:import('./profile/support').SupportRequest[];supportDraft?:import('./profile/support').SupportDraft;settings?:import('./profile/settings').ProfileSettings;phone:string; name:string; travelers:Traveler[]};
 export type CodeRequest = {phone:string; issuedAt:number; expiresAt:number; resendAt:number};
-export type State = {hotelierTourTarget?:'hotelier'|'trips';securityRecoveryPhone?:string;demoRegistrationPhone?:string;hotelierInviter?:{name:string;hotel:string};hotelierOnboarding?:boolean;hotelierReturnTo?:string;version:1; onboarded:boolean; users:Record<string,User>; activePhone:string|null; request:CodeRequest|null; verifiedPhone:string|null; returnTo:string; selectedTravelerId?:string};
+export type State = {hotelierEntryVariant?:'pilot';hotelierTourTarget?:'hotelier'|'trips';securityRecoveryPhone?:string;demoRegistrationPhone?:string;hotelierInviter?:{name:string;hotel:string};hotelierOnboarding?:boolean;hotelierReturnTo?:string;version:1; onboarded:boolean; users:Record<string,User>; activePhone:string|null; request:CodeRequest|null; verifiedPhone:string|null; returnTo:string; selectedTravelerId?:string};
 export const STORAGE_KEY='keys-orbita-demo-v1';
 export function initialState():State{return {version:1,onboarded:false,users:{},activePhone:null,request:null,verifiedPhone:null,returnTo:'trips'};}
 export function normalizePhone(raw:string){let digits=raw.replace(/\D/g,'');if(digits.length===11&&['7','8'].includes(digits[0]))digits=digits.slice(1);return /^\d{10}$/.test(digits)?'+7'+digits:null;}
@@ -30,7 +30,7 @@ export function completeName(state:State,name:string):State{
  return {...state,demoRegistrationPhone:undefined,verifiedPhone:null,activePhone:phone,users:{...state.users,[phone]:{phone,name:clean,travelStyleIntro:'pending',travelers:[{...blankTraveler('primary'),name:clean,phone,primary:true}]}}};
 }
 export function registrationContinuation(state:State){return state.hotelierTourTarget==='hotelier'?'hotelier':state.hotelierTourTarget==='trips'?'welcome':state.returnTo;}
-export function finishHotelierEntry(state:State):State{return {...state,hotelierOnboarding:false,hotelierTourTarget:state.hotelierTourTarget?'trips':undefined};}
+export function finishHotelierEntry(state:State):State{return {...state,hotelierOnboarding:false,hotelierTourTarget:state.hotelierEntryVariant==='pilot'?undefined:state.hotelierTourTarget?'trips':undefined};}
 export function completeRegistrationTour(state:State):State{return {...state,onboarded:true,hotelierTourTarget:undefined};}
 export function blankTraveler(id:string):Traveler{return {id,name:'',surname:'',patronymic:'',birthDate:'',citizenship:'',phone:'',email:''};}
 export function validateTraveler(t:Traveler,today=new Date().toISOString().slice(0,10)){

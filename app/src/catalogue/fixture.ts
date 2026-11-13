@@ -77,7 +77,7 @@ export async function createCatalogueFixture(scene:CatalogueScene):Promise<Catal
   if(scene.paid)commerce=payService(commerce,owner,b.id,'catalogue-service',serviceQuote(commerce,owner,b.id,'catalogue-service',false),'sbp','success');
  }
  if(scene.hotelNotifications)commerce={...commerce,notificationHotelId:'orbit-sea'};
- if(['welcome','phone','code','name','hotelier-invite'].includes(scene.route)){
+ if(['welcome','phone','code','name','hotelier-invite','hotelier-pilot'].includes(scene.route)){
   state={...state,activePhone:null,users:{},onboarded:scene.route!=='welcome'};
   if(scene.route==='code')state=requestCode(state,owner);
   if(scene.route==='name')state={...state,verifiedPhone:owner};

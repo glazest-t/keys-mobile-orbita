@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {initialCommerce,ensureAccount} from '../app/src/booking/model.ts';
 import {prepareDemoEntry,prepareDeviceEntry,shouldLockOnStartup} from '../app/src/demoEntry.ts';
-import {initialState,requestCode,verifyCode,completeName,decodeState} from '../app/src/state.ts';
+import {initialState,requestCode,verifyCode,completeName,decodeState,finishHotelierEntry,registrationContinuation} from '../app/src/state.ts';
 const existing=()=>completeName(verifyCode(requestCode(initialState(),'9990000001'),'123456'),'Мария');
 test('Новая регистрация стартует с онбординга и не заменяет сохранённый профиль',()=>{
  const before=existing(),demo=prepareDemoEntry(before,'new',initialCommerce());
@@ -94,4 +94,22 @@ test('Демонстрационный PIN и биометрия не захва
   assert.equal(shouldLockOnStartup(restored,true),false);
   assert.equal((await checkPin(restored,restored.activePhone,'1234')).valid,true);
  }
+});
+
+
+test('Пилот Эд/Юра — отдельный публичный вход без автоматического статуса и повторного тура',()=>{
+ const before=existing(),commerce=initialCommerce();
+ const demo=prepareDemoEntry(before,'hotelier-pilot',commerce);
+ assert.equal(demo.route,'hotelier-pilot');
+ assert.equal(demo.state.hotelierEntryVariant,'pilot');
+ assert.equal(demo.state.activePhone,null);
+ assert.deepEqual(demo.state.users,before.users);
+ assert.deepEqual(demo.commerce,commerce);
+ const accepted={...demo.state,hotelierOnboarding:true,returnTo:'hotelier'};
+ const named=completeName(verifyCode(requestCode(accepted,demo.phone),'123456'),'Марина');
+ assert.equal(registrationContinuation(named),'hotelier');
+ assert.equal(finishHotelierEntry(named).hotelierTourTarget,undefined);
+ assert.equal(finishHotelierEntry(named).hotelierOnboarding,false);
+ assert.equal(finishHotelierEntry({...named,hotelierEntryVariant:undefined}).hotelierTourTarget,'trips');
+ assert.equal(prepareDemoEntry(named,'hotelier',commerce).state.hotelierEntryVariant,undefined);
 });

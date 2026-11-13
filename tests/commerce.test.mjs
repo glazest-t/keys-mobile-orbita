@@ -1,3 +1,6 @@
+import {beforeEach as beforeFixtureTest} from 'node:test';
+// November fixture dates must not expire as the real calendar advances.
+beforeFixtureTest(t=>t.mock.timers.enable({apis:['Date'],now:new Date('2026-11-01T12:00:00Z')}));
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {initialCommerce,ensureAccount,startDraft,quoteDraft,commitBooking,cancelBooking,cancellationPreview,cancellationDeadline,searchHotels,available,contactErrors,decodeCommerce} from '../app/src/booking/model.ts';

@@ -2,7 +2,7 @@ import {confirmPin,hasDevicePin,updateSettings} from './profile/settings.ts';
 import {blankTraveler,type State} from './state.ts';
 import {ensureAccount,type Commerce} from './booking/model.ts';
 import {submitVerification,resolveVerification,verificationClaim} from './hotelier/verification.ts';
-export type DemoEntry='new'|'hotelier'|'returning'|'returning-guest';
+export type DemoEntry='new'|'hotelier'|'hotelier-pilot'|'returning'|'returning-guest';
 export function prepareDemoEntry(state:State,kind:DemoEntry,commerce:Commerce){
  const returning=kind==='returning'||kind==='returning-guest';
  const candidates=[...new Set([state.activePhone,...Object.keys(state.users)])].filter((phone):phone is string=>!!phone&&!!state.users[phone]);
@@ -23,8 +23,8 @@ export function prepareDemoEntry(state:State,kind:DemoEntry,commerce:Commerce){
    nextCommerce=resolveVerification(pending,phone,verificationClaim(pending.hotelierVerifications![phone]),'approved');
   }
  }
- const next:State={...state,users,activePhone:null,request:null,verifiedPhone:null,onboarded:returning,securityRecoveryPhone:undefined,hotelierOnboarding:false,hotelierTourTarget:undefined,hotelierInviter:undefined,hotelierReturnTo:'trips',returnTo:'trips',demoRegistrationPhone:returning?undefined:phone};
- return {state:next,commerce:nextCommerce,phone:phone.slice(2),route:kind==='new'?'welcome':kind==='hotelier'?'hotelier-invite':'phone'};
+ const next:State={...state,users,activePhone:null,request:null,verifiedPhone:null,onboarded:returning,securityRecoveryPhone:undefined,hotelierOnboarding:false,hotelierEntryVariant:kind==='hotelier-pilot'?'pilot':undefined,hotelierTourTarget:undefined,hotelierInviter:undefined,hotelierReturnTo:'trips',returnTo:'trips',demoRegistrationPhone:returning?undefined:phone};
+ return {state:next,commerce:nextCommerce,phone:phone.slice(2),route:kind==='new'?'welcome':kind==='hotelier-pilot'?'hotelier-pilot':kind==='hotelier'?'hotelier-invite':'phone'};
 }
 
 export type DeviceEntry='pin'|'biometric';
@@ -34,7 +34,7 @@ export async function prepareDeviceEntry(state:State,kind:DeviceEntry,commerce:C
  let phone=Object.keys(state.users).find(id=>state.users[id].demoDeviceAccess);
  if(!phone){let n=1;while(state.users['+7998'+String(n).padStart(7,'0')]||commerce.accounts['+7998'+String(n).padStart(7,'0')])n++;phone='+7998'+String(n).padStart(7,'0');}
  const user=state.users[phone]||{demoDeviceAccess:true,phone,name:'Анна',travelers:[{...blankTraveler('primary'),name:'Анна',surname:'Соколова',email:'anna@example.test',phone,primary:true}]};
- const next:State={...state,users:{...state.users,[phone]:user},activePhone:phone,request:null,verifiedPhone:null,securityRecoveryPhone:undefined,onboarded:true,hotelierOnboarding:false,hotelierTourTarget:undefined,hotelierInviter:undefined,hotelierReturnTo:'trips',returnTo:'trips',demoRegistrationPhone:undefined};
+ const next:State={...state,users:{...state.users,[phone]:user},activePhone:phone,request:null,verifiedPhone:null,securityRecoveryPhone:undefined,onboarded:true,hotelierOnboarding:false,hotelierEntryVariant:undefined,hotelierTourTarget:undefined,hotelierInviter:undefined,hotelierReturnTo:'trips',returnTo:'trips',demoRegistrationPhone:undefined};
  const configured=await confirmPin(next,phone,DEMO_PIN,DEMO_PIN);
  return {state:updateSettings(configured,phone,{biometric:kind==='biometric'}),commerce:ensureAccount(commerce,phone),route:'trips'};
 }
