@@ -23,11 +23,18 @@ export type Contact={citizenship?:string;name:string;surname:string;phone:string
 export type Draft={pointsToUse?:number;stayTimes?:Partial<Record<'arrival'|'departure',string>>;cardPaymentPlan?:import('./bookingPayment.ts').CardPaymentPlan;returnTo?:'ai-assistant'|`hotel-chat/${string}`|'profile-history'|`profile-trip/${string}`|`loyalty-program/${string}`|'swipe'|'notifications'|'price-watches'|'wish-search'|'preferences'|'favorites'|'favorite-list'|'favorite-map';favoriteListId?:string;preferenceMatches?:string[];id:string;hotelId:string;roomId:string;rateId:string;search:Search;services:string[];usePoints:boolean;method:'online'|'at_hotel';paymentOption?:import('./paymentOptions').OnlinePaymentOption;bookingFor?:'self'|'other';guestTravelerId?:string;contact:Contact;additionalGuest?:{name:string;surname:string};otherGuests?:{name:string;surname:string}[];stayWishes?:{options:string[];note:string};step:string};
 export type Booking={cancellationPolicy?:import('./bookingCancellation.ts').CancellationPolicy;balancePayments?:import('./bookingBalance.ts').BalancePayment[];hotelLoyalty?:import('../rewards/loyalty.ts').HotelLoyaltySnapshot;number?:string;timeServiceAvailability?:Partial<Record<'arrival'|'departure',boolean>>;review?:import('./stayReview.ts').StayReview;deposit?:import('./deposit.ts').Deposit;problems?:import('./stayProblems.ts').StayProblem[];stay?:import('./stay.ts').Stay;serviceRequests?:import('./serviceRequests.ts').ServiceRequest[];id:string;owner:string;draft:Draft;quote:BookingQuote;operation:Operation;createdAt:string;revision?:number;changes?:import('./amendment.ts').BookingChange[]};
 export type Commerce={finderLibraries?:Record<string,import('../assistant/model.ts').FinderLibrary>;hotelLoyaltySeeds?:Record<string,Record<string,{year:string;amountMinor:number}>>;hotelLoyaltyAwards?:Record<string,import('../rewards/loyalty.ts').HotelLoyaltyAward[]>;demoPointsHistory?:Record<string,import('../rewards/points.ts').PointEntry[]>;wishSearchReturnTo?:'find'|'chats';hiddenTrips?:Record<string,string[]>;historyReturnTo?:string;historyDemo?:boolean;welcomePoints?:Record<string,{amount:number;at:string}>;hotelConversations?:Record<string,Record<string,import('./chatThreads.ts').HotelConversation>>;chatReads?:Record<string,Record<string,string>>;chatReturnTo?:string;helpReturnTo?:'profile'|'chats';chatBrowse?:Record<string,{list?:string;new?:string}>;historyBrowse?:Record<string,{query:string;filter:string}>;rewardsBrowse?:Record<string,{query:string;filter:string}>;hotelMemberships?:Record<string,Record<string,boolean>>;rewardsReturnTo?:string;hotelierInviters?:Record<string,import('../hotelier/verification.ts').HotelierInvitationData>;hotelierParticipants?:Record<string,boolean>;hotelierBannerDismissed?:Record<string,string>;hotelierEmailDrafts?:Record<string,string>;hotelierVerifications?:Record<string,import('../hotelier/verification.ts').Verification>;appNotices?:import('./notifications.ts').AppNotice[];swipePreferences?:Record<string,import('./swipePreferences.ts').SwipePreferences>;demoTripSession?:import('./demoTripScenarios.ts').DemoTripSession;swipeHistories?:Record<string,import('./swipeDiscovery.ts').SwipeHistory>;notificationsReturnTo?:string;notificationHotelId?:string;notificationChatBookingId?:string;priceEvents?:import('./priceEvents.ts').PriceEvent[];priceNotices?:import('./priceEvents.ts').PriceNotice[];demoOfferPrices?:Record<string,number>;freeTextDrafts?:Record<string,import('./preferences.ts').PreferenceDraft>;favoriteLibraries?:Record<string,import('./favorites.ts').FavoriteLibrary>;preferenceDrafts?:Record<string,import('./preferences.ts').PreferenceDraft>;version:1;chatDrafts?:Record<string,string>;bookingShares?:import('./bookingShare.ts').BookingShare[];bookingManagers?:Record<string,string[]>;tripMessages?:Record<string,import('./trip.ts').TripMessage[]>;priceWatches?:Record<string,import('./priceWatch').PriceWatch>;recentSearches?:import('./filterSchema.ts').RecentSearch[];priceMode?:'stay'|'night';searchDistrict?:{city:string;name:string};viewedHotels?:string[];collection?:string;maxNightly?:number|null;priceRangeMinor?:{min:number|null;max:number|null};minRating?:number;searchFilters?:string[];searchSort?:string;savedHotels?:Record<string,string[]>;search:Search;draft:Draft|null;bookings:Booking[];payment:PaymentState;accounts:Record<string,{hotelierStatus:import('../hotelier/verification.ts').HotelierStatus;loyalty:boolean}>;selectedBooking:string|null};
-export const initialCommerce=():Commerce=>({version:1,search:{...data.search,childrenAges:[]},draft:null,bookings:[],payment:createPaymentState(),accounts:{},selectedBooking:null});
+function currentSearchDates(search:Search,today=new Date().toLocaleDateString('en-CA')):Search{
+ if(search.checkIn>=today)return search;
+ const duration=nights(search);
+ if(!Number.isInteger(duration)||duration<1||duration>30)return search;
+ const checkOut=new Date(Date.parse(today)+duration*86400000).toISOString().slice(0,10);
+ return {...search,checkIn:today,checkOut};
+}
+export const initialCommerce=():Commerce=>({version:1,search:currentSearchDates({...data.search,childrenAges:[]}),draft:null,bookings:[],payment:createPaymentState(),accounts:{},selectedBooking:null});
 export function decodeCommerce(raw:string|null):Commerce{
  if(!raw)return initialCommerce();const value=JSON.parse(raw) as Commerce;
  if(value.version!==1||!value.search||!Array.isArray(value.bookings)||!value.payment?.balances||!value.payment.operations||!value.accounts)throw Error('Не удалось прочитать сохранённые брони');
- return value;
+ return {...value,search:currentSearchDates(value.search)};
 }
 export function ensureAccount(state:Commerce,owner:string):Commerce{
  if(state.accounts[owner])return state;
@@ -42,18 +49,18 @@ export function searchError(s:Search,today=new Date().toLocaleDateString('en-CA'
  if(!Number.isInteger(s.adults)||s.adults<1||s.adults>6||s.childrenAges.length>4||s.childrenAges.some(a=>!Number.isInteger(a)||a<0||a>17))return 'Проверьте состав и возраст гостей';
  return '';
 }
-export function available(state:Commerce,roomId:string,s:Search){
- if(searchError(s))return false;
+export function available(state:Commerce,roomId:string,s:Search,today?:string){
+ if(searchError(s,today))return false;
  const room=data.rooms.find(r=>r.id===roomId),slot=data.availability.find(a=>a.roomId===roomId);
- if(!room||!slot||room.maxGuests<s.adults+s.childrenAges.length||s.checkIn<slot.from||s.checkOut>slot.to)return false;
+ if(!room||!slot||room.maxGuests<s.adults+s.childrenAges.length)return false;
  // Availability is a local demo allotment; each confirmed overlapping booking occupies a room.
  const used=state.bookings.filter(b=>b.operation.status==='confirmed'&&b.stay?.status!=='checked_out'&&b.draft.roomId===roomId&&b.draft.search.checkIn<s.checkOut&&b.draft.search.checkOut>s.checkIn).length;
  return slot.remaining>used;
 }
 export function searchHotels(state:Commerce){return data.hotels.filter(h=>matchesDestination(state.search.city,h)&&(!state.search.withPet||hotelFacets(h.id)?.booking.includes('Можно с питомцем'))&&(!state.search.childrenAges.length||hotelFacets(h.id)?.booking.includes('Можно с детьми'))&&data.rooms.some(r=>r.hotelId===h.id&&matchesRoom(state,r.id)&&available(state,r.id,state.search)&&data.rates.some(rate=>rate.roomId===r.id&&matchesRate(state,rate))));}
-export function startDraft(state:Commerce,hotelId:string,id:string,owner:string|null=null):Commerce{
+export function startDraft(state:Commerce,hotelId:string,id:string,owner:string|null=null,today?:string):Commerce{
  const eligible=(r:typeof data.rates[number])=>matchesRate(state,r)&&canBookRate(state,owner||null,r);
- const room=data.rooms.find(r=>r.hotelId===hotelId&&matchesRoom(state,r.id)&&available(state,r.id,state.search)&&data.rates.some(rate=>rate.roomId===r.id&&eligible(rate)));
+ const room=data.rooms.find(r=>r.hotelId===hotelId&&matchesRoom(state,r.id)&&available(state,r.id,state.search,today)&&data.rates.some(rate=>rate.roomId===r.id&&eligible(rate)));
  const regular=data.rates.find(r=>r.roomId===room?.id&&eligible(r));
  const rate=owner&&state.accounts[owner]?.hotelierStatus==='approved'?data.rates.find(r=>r.kind==='friendly_rate'&&r.baseRateId===regular?.id)||regular:regular;
  if(!room||!rate)throw Error('На эти даты нет доступных номеров');
@@ -95,7 +102,7 @@ export function commitBooking(state:Commerce,owner:string,expected:BookingQuote,
  if(Object.keys(contactErrors(d.contact)).length)throw Error('Проверьте данные гостя');
  if(additionalGuestError(d))throw Error(additionalGuestError(d));
  if((d.stayWishes?.note.length||0)>WISH_LIMIT)throw Error('Сократите пожелание до 500 символов');
- if(searchError(d.search,now.slice(0,10))||!available(state,d.roomId,d.search))throw Error('Условия изменились. Проверьте даты и наличие');
+ if(!available(state,d.roomId,d.search,now.slice(0,10)))throw Error('Условия изменились. Проверьте даты и наличие');
  const fresh=quoteDraft(state,owner);
  if(JSON.stringify(fresh)!==JSON.stringify(expected))throw Error('Цена или баланс изменились. Проверьте итог ещё раз');
  const paid=confirmPayment(state.payment,{userId:owner,bookingId:d.id,quote:fresh,method:d.method,cashNowMinor:fresh.paymentSchedule?.nowMinor,outcome});

@@ -22,13 +22,16 @@ export function activateTripScenario(s:Commerce,owner:string,scenario:TripScenar
  if(!owner||!id||!tripScenarios.some(v=>v.id===scenario))throw Error('Выберите сценарий поездки');
  const original=s.demoTripSession?.original||s;
  let next=ensureAccount(initialCommerce(),owner);
- next={...next,search:{...next.search,city:'Сочи',checkIn:'2026-11-13',checkOut:'2026-11-15',adults:1,childrenAges:[]}};
+ const search={...next.search,adults:1};
+ next={...next,search};
  if(scenario==='history'){
   const bookings=[historyFixture(owner,'orbit-sea','KEYS-101','future'),historyFixture(owner,'orbit-forest','KEYS-102','past'),historyFixture(owner,'pine-sochi','KEYS-103','cancelled')];
   return {...next,bookings,selectedBooking:bookings[0].id,historyDemo:true,payment:{...next.payment,operations:Object.fromEntries(bookings.map(b=>[b.operation.id,b.operation]))},demoTripSession:{owner,original}};
  }
  if(scenario!=='empty'){
-  next=startDraft(next,'orbit-sea',id);
+  const demoSearch={...search,checkIn:'2026-11-13',checkOut:'2026-11-15'};
+  next=startDraft({...next,search:demoSearch},'orbit-sea',id,null,demoSearch.checkIn);
+  next={...next,search};
   next={...next,draft:{...next.draft!,contact:{name:'Татьяна',surname:'Примерова',phone:owner,email:'tatyana@example.test'}}};
   // Fixed catalogue dates and payment timestamp make the fixture reproducible.
   next=scenario==='awaiting-payment'?beginBookingPayment(next,owner,quoteDraft(next,owner),'2026-10-27T12:00:00Z'):commitBooking(next,owner,quoteDraft(next,owner),'success','2026-10-27T12:00:00Z');

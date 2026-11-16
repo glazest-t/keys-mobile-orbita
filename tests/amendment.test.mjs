@@ -31,7 +31,7 @@ test('Лишние баллы возвращаются в исходные ко�
  const next=commitAmendment(s,owner,p,'points-back','success',now),cancelled=cancelBooking(next,owner,'points',now);assert.equal(cancelled.payment.balances['keys:'+owner],50000);assert.equal(cancelled.payment.balances['hotel:orbit-sea:'+owner],20000);
 });
 test('Проверяются владелец, статус, вместимость, даты, наличие; своя бронь не занимает дополнительное место',()=>{
- const s=fixture();assert.throws(()=>previewAmendment(s,'another','amend-test',input(s),now),/не найдена/);assert.throws(()=>previewAmendment(s,owner,'amend-test',input(s,{adults:3}),now),/недоступен/);assert.throws(()=>previewAmendment(s,owner,'amend-test',input(s,{checkOut:'2026-11-20'}),now),/недоступен/);
+ const s=fixture();assert.throws(()=>previewAmendment(s,'another','amend-test',input(s),now),/не найдена/);assert.throws(()=>previewAmendment(s,owner,'amend-test',input(s,{adults:3}),now),/недоступен/);assert.doesNotThrow(()=>previewAmendment(s,owner,'amend-test',input(s,{checkOut:'2026-11-20'}),now));
  const occupied={...s,bookings:[...s.bookings,{...s.bookings[0],id:'other1'},{...s.bookings[0],id:'other2'}]};assert.doesNotThrow(()=>previewAmendment(occupied,owner,'amend-test',input(s),now));
  occupied.bookings.push({...s.bookings[0],id:'other3'});assert.throws(()=>previewAmendment(occupied,owner,'amend-test',input(s),now),/недоступен/);
  assert.throws(()=>previewAmendment(cancelBooking(s,owner,'amend-test',now),owner,'amend-test',input(s),now),/Отменённую/);assert.throws(()=>previewAmendment(s,owner,'amend-test',input(s),'2026-11-13T12:00:00Z'),/начала заезда/);

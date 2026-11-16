@@ -44,9 +44,13 @@ test('Цена рассчитывается на даты списка; поис
  const after=favoriteOffers(s,owner,'inbox')[0].quote;assert.equal(after.lodgingMinor,before.lodgingMinor*2);assert.equal(s.search.checkOut,'2026-11-15');assert.deepEqual(s.searchFilters,['Несуществующий']);
  assert.throws(()=>saveFavoriteSearch(s,owner,'inbox',{...search,checkOut:search.checkIn}),/выезд/);
 });
-test('Недоступный на даты отель остаётся в списке, вместо неправильной цены возвращается null',()=>{
- let s=setFavorite(fixture(),owner,'orbit-sea','inbox');s=saveFavoriteSearch(s,owner,'inbox',{...s.search,checkIn:'2028-01-01',checkOut:'2028-01-03'});
- assert.equal(favoriteOffers(s,owner,'inbox').length,1);assert.equal(favoriteOffers(s,owner,'inbox')[0].quote,null);assert.throws(()=>startFavoriteBooking(s,owner,'inbox','orbit-sea','new'),/нет доступных/);
+test('Для отдалённых будущих дат видна цена и можно начать бронь из списка',()=>{
+ let s=setFavorite(fixture(),owner,'orbit-sea','inbox');
+ s=saveFavoriteSearch(s,owner,'inbox',{...s.search,checkIn:'2028-01-01',checkOut:'2028-01-03'});
+ const offers=favoriteOffers(s,owner,'inbox');
+ assert.equal(offers.length,1);
+ assert.ok(offers[0].quote);
+ assert.equal(startFavoriteBooking(s,owner,'inbox','orbit-sea','new').draft.search.checkIn,'2028-01-01');
 });
 test('Отель наследует параметры списка; возврат и цена сохраняются после reload',()=>{
  let s=setFavorite(saveFavoriteList(fixture(),owner,'a','Море'),owner,'orbit-sea','a');s=saveFavoriteSearch(s,owner,'a',{...s.search,adults:1,checkOut:'2026-11-16'});
