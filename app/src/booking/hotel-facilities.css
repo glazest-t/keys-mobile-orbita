@@ -1,8 +1,62 @@
-/* Hotel facilities are informational; only the final row opens the full list. */
 .hotel-facilities-card{background:var(--k-surface-card,var(--theme-card,#fff));border-radius:24px;overflow:hidden;padding:8px 20px 0}
-.hotel-facilities-list{display:grid;grid-template-columns:minmax(0,1fr);list-style:none;margin:0;padding:0}
-.hotel-facilities-list>li{display:flex;align-items:center;gap:16px;min-height:42px;padding:7px 0;color:var(--theme-link,var(--theme-link,#2f5bff));font:400 15px/22px Onest,sans-serif;overflow-wrap:anywhere}
-.hotel-facilities-list>li>.k-icon{flex:none;color:var(--theme-link,var(--theme-link,#2f5bff))}
+.hotel-facilities-groups{display:grid;gap:20px;padding:12px 0}
+.hotel-facility-group{position:relative;min-width:0;min-height:44px;padding-inline-start:54px}
+.hotel-facility-group h3{margin:0;color:var(--theme-text,#101320);font:600 16px/22px Onest,sans-serif}
+.hotel-facility-group h3>.icon-tile{position:absolute;inset-block-start:0;inset-inline-start:0;display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:15px;background:var(--k-icon-surface,var(--theme-tint,#eaf2ff));color:var(--theme-link,var(--k-action-primary))}
+.hotel-facility-group ul{display:grid;gap:6px;margin:4px 0 0;padding:0;list-style:none;color:var(--theme-text,#101320);font:400 15px/21px Onest,sans-serif}
+.hotel-facility-group li{position:relative;padding-inline-start:14px}
+.hotel-facility-group li::before{content:"";position:absolute;inset-inline-start:0;inset-block-start:8px;width:5px;height:5px;border-radius:50%;background:var(--theme-secondary,#5a6072)}
+.hotel-facility-labels{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+.hotel-facility-labels>span{padding:3px 8px;border-radius:8px;background:var(--theme-tint,#eaf2ff);color:var(--theme-text,#101320);font:400 12px/17px Onest,sans-serif}
+.hotel-popular-facilities{min-width:0}
+.hotel-popular-facilities-scroll{min-width:0;overscroll-behavior-inline:contain}
+.hotel-popular-facilities-scroll>.hotel-popular-facilities-track{width:100%;gap:12px}
+.hotel-facility-photo-card{position:relative;flex:0 0 clamp(154px,38vw,216px);border-radius:16px;background:var(--theme-card,#fff)}
+.hotel-facility-photo-card .hotel-card-photos{position:relative;height:auto;aspect-ratio:16/10;border-radius:16px 16px 0 0;overflow:hidden}
+.hotel-facility-photo-card .hotel-photo-carousel{scroll-snap-type:x mandatory}
+.hotel-facility-photo-card .hotel-photo-carousel[data-dragging=true]{scroll-snap-type:none}
+.hotel-facility-photo-card .photo-open{scroll-snap-align:start;scroll-snap-stop:always}
+.hotel-facility-photo-card img{display:block;width:100%;height:100%;object-fit:cover}
+.hotel-facility-photo-card .photo-counter{pointer-events:none}
+.hotel-facility-photo-card .photo-open:focus-visible,.hotel-card-photo-arrows .k-icon-button:focus-visible{outline:2px solid var(--theme-link,#2f5bff);outline-offset:-3px}
+.hotel-facility-photo-caption{display:block;padding:9px 12px;color:var(--theme-text,#101320);font:500 15px/21px Onest,sans-serif}
+.hotel-popular-facilities-mobile .hotel-popular-facilities-track{gap:10px}
+.hotel-popular-facilities-mobile .hotel-facility-photo-card{flex-basis:calc((100% - 40px)/2);min-width:0;background:transparent}
+.hotel-popular-facilities-mobile .hotel-facility-photo-card .hotel-card-photos{border-radius:14px}
+.hotel-popular-facilities-mobile .hotel-facility-photo-caption{padding:6px 0 0}
+.hotel-card-photos[data-counter-on-scroll]>.photo-counter{opacity:0}
+.hotel-card-photos[data-counter-on-scroll]:is([data-photo-scrolling],:has(.hotel-photo-carousel[data-dragging=true]))>.photo-counter{opacity:1}
+.hotel-card-photo-arrows{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;padding:0 6px;pointer-events:none}
+.hotel-card-photo-arrows .k-icon-button{width:36px;height:36px;background:var(--theme-card,#fff);color:var(--theme-text,#101320);pointer-events:auto}
+.hotel-card-photo-arrows .k-icon-button:disabled{visibility:hidden}
+@media(hover:hover) and (pointer:fine){
+ .hotel-card-photo-arrows{opacity:0}
+ .hotel-card-photo-arrows .k-icon-button{pointer-events:none}
+ .hotel-card-photos:is(:hover,:focus-within) .hotel-card-photo-arrows{opacity:1}
+ .hotel-card-photos:is(:hover,:focus-within) .hotel-card-photo-arrows .k-icon-button{pointer-events:auto}
+}
+.bottom-sheet:has(.desktop-photo-gallery){
+  top:0;
+  bottom:0!important;
+  max-height:none!important;
+  border-radius:0;
+  padding-top:max(var(--device-safe-area-top, 44px),env(safe-area-inset-top));
+}
+.bottom-sheet:has(.desktop-photo-gallery)>.sheet-handle-zone{display:none}
+.bottom-sheet:has(.desktop-photo-gallery)>.sheet-header{flex:none;padding:16px 16px 12px;color:var(--theme-text,#101320)}
+.bottom-sheet:has(.desktop-photo-gallery)>.sheet-header>.sheet-title{font:500 18px/26px Unbounded,sans-serif;letter-spacing:-.4px}
+.bottom-sheet:has(.desktop-photo-gallery)>.sheet-content{display:flex;flex:1;min-height:0;padding:0 16px max(var(--device-safe-area-bottom, 24px),env(safe-area-inset-bottom),16px)}
+.bottom-sheet .desktop-photo-gallery{display:flex;flex:1;flex-direction:column;min-width:0;min-height:0;gap:12px}
+.bottom-sheet .desktop-photo-gallery-stage{position:relative;flex:1;min-height:0}
+.bottom-sheet .desktop-photo-gallery-stage>img{display:block;width:100%;height:100%;object-fit:contain}
+.bottom-sheet .desktop-photo-gallery-stage>.k-icon-button{position:absolute;top:50%;transform:translateY(-50%);background:var(--theme-card,#fff)}
+.bottom-sheet .desktop-photo-gallery-stage>.k-icon-button:nth-child(2){left:0}
+.bottom-sheet .desktop-photo-gallery-stage>.k-icon-button:nth-child(3){right:0}
+.bottom-sheet .desktop-photo-gallery-footer{display:grid;justify-items:center;gap:8px}
+.bottom-sheet .desktop-photo-gallery-thumbnails{display:flex;gap:6px;max-width:100%;overflow-x:auto}
+.bottom-sheet .desktop-photo-gallery-thumbnails>button{flex:0 0 56px;height:44px;padding:2px;border:2px solid transparent;border-radius:8px;background:none}
+.bottom-sheet .desktop-photo-gallery-thumbnails>button[aria-pressed=true]{border-color:var(--theme-link,#2f5bff)}
+.bottom-sheet .desktop-photo-gallery-thumbnails img{display:block;width:100%;height:100%;border-radius:4px;object-fit:cover}
 .hotel-facilities-card>.hotel-facilities-all{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:52px;width:100%;margin-top:8px;padding:12px 0;border:0;border-top:1px solid var(--k-border-subtle,var(--theme-border,#e4e7ef));border-radius:0;background:none;color:var(--theme-link,var(--theme-link,#2f5bff));font:500 15px/22px Onest,sans-serif;text-align:left;cursor:pointer}
 .hotel-facilities-card>.hotel-facilities-all>.k-icon{flex:none}
 .hotel-facilities-card:not(:has(.hotel-facilities-all)){padding-bottom:8px}
@@ -13,14 +67,33 @@
 .hotel-arrival-times .k-icon{grid-row:1/3;color:var(--k-text-secondary,var(--theme-secondary,#5a6072))}
 .hotel-arrival-times dt{font:400 13px/19px Onest,sans-serif;color:var(--k-text-secondary,var(--theme-secondary,#5a6072))}
 .hotel-arrival-times dd{margin:0;font:500 17px/24px Onest,sans-serif;color:var(--k-text-primary,var(--theme-text,#101320))}
-.desktop-hotel-information>.hotel-amenities-section,.desktop-hotel-information>.hotel-arrival-section{padding:0;border:0;border-radius:0;background:none}
+.desktop-hotel-information>.hotel-section:is(.hotel-amenities-section,.hotel-popular-facilities,.hotel-arrival-section){padding:0;border:0;border-radius:0;background:none}
 .desktop-hotel-information .hotel-facilities-card{padding:12px 24px;border:1px solid var(--k-border-subtle,var(--theme-border,#e4e7ef))}
-.desktop-hotel-information .hotel-facilities-list{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:24px}
+.desktop-hotel-information .hotel-facilities-groups{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:24px}
 .desktop-hotel-information .hotel-arrival-times{max-width:600px}
-@media(min-width:801px) and (max-width:1100px){.desktop-hotel-information .hotel-facilities-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:801px) and (max-width:1100px){.desktop-hotel-information .hotel-facilities-groups{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:380px){.hotel-arrival-times{gap:10px}.hotel-arrival-times>div{column-gap:8px}.hotel-arrival-times dd{font-size:16px}}
-.hotel-facilities-list>li>span:last-child{color:var(--k-text-primary,var(--theme-text,#101320))}
 
 /* Separate sections more clearly while keeping each heading with its content. */
 .source-hotel-body:not(.desktop-hotel-information){gap:24px}
 .source-hotel-body:not(.desktop-hotel-information)>.hotel-section{margin-top:8px;gap:10px}
+
+.bottom-sheet:has(.hotel-facilities-sheet){
+  inset:0;
+  bottom:0!important;
+  max-height:none!important;
+  border-radius:0;
+  padding-top:max(var(--device-safe-area-top,44px),env(safe-area-inset-top));
+  background:var(--k-surface-app,var(--theme-card,#fff));
+}
+.bottom-sheet:has(.hotel-facilities-sheet)>.sheet-handle-zone{display:none}
+.bottom-sheet:has(.hotel-facilities-sheet)>.sheet-header{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%)}
+.bottom-sheet:has(.hotel-facilities-sheet)>.sheet-content,
+.bottom-sheet:has(.hotel-facilities-sheet)>.sheet-content>.sheet-body{display:flex;flex:1;min-height:0;padding:0;overflow:hidden}
+.hotel-facilities-sheet{display:flex;flex:1;flex-direction:column;min-width:0;min-height:0;color:var(--theme-text,#101320)}
+.hotel-facilities-sheet-header{display:flex;flex:none;align-items:center;gap:12px;padding:8px 16px;font:500 18px/26px Unbounded,sans-serif}
+.hotel-facilities-sheet-header>.k-icon-button{flex:none;width:44px;height:44px;border:1px solid var(--theme-border,#e4e7ef);border-radius:50%;background:var(--theme-card,#fff)}
+.hotel-facilities-sheet-scroll{flex:1;min-height:0;overflow:auto;padding:8px 16px max(24px,var(--device-safe-area-bottom,24px));overscroll-behavior:contain}
+.hotel-facilities-sheet-scroll>.hotel-facilities-card{padding:0;background:none}
+.hotel-facilities-sheet-scroll .hotel-facilities-groups{padding:0 0 12px}
+.hotel-facilities-sheet-scroll .hotel-facility-group{padding-inline-start:58px}

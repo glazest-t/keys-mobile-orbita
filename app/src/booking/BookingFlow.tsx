@@ -1,3 +1,4 @@
+import {usePrototypeCopy} from '../usePrototypeText';
 import {beginBookingPayment} from './pendingPayment';
 import {cancellationTerms,cancellationPolicyFor,policyPenalty} from './bookingCancellation';
 import {bookingCostLines} from './bookingPaymentView';
@@ -101,6 +102,7 @@ function FlowFooter(){const [priceOpen,setPriceOpen]=useState(false),keyboard=us
 }
 function BookingPage({page}:{page:string}){
  const november=useNovember();
+ const addServicesLabel=usePrototypeCopy('Добавить к поездке','Добавить услуги к поездке');
  const ctx=useBooking(),flow=useFlow(),d=ctx.commerce.draft!;
  let rewardQuote;try{if(page==='checkout')rewardQuote=quoteDraft(ctx.commerce,ctx.user?.phone||null);}catch{}
  const current=flow.current.id===page,mainRef=useRef<HTMLElement>(null);
@@ -110,7 +112,7 @@ function BookingPage({page}:{page:string}){
  const account=ctx.user?ctx.commerce.accounts[ctx.user.phone]:null;
  const change=(patch:Partial<Draft>)=>{ctx.setError('');ctx.setCommerce(s=>({...s,draft:s.draft?{...s.draft,...patch}:null}));};
  const errors=ctx.error?contactErrors(d.contact):{};
- const guestFields=<><BookingTimes draft={d} onEdit={ctx.edit}/><section className="hotel-section"><h2>Гость</h2><BookingGuestContact draft={d} errors={errors} onChange={change}/><GuestActions draft={d} onEdit={ctx.editGuest}/></section>{catalog.services.some(s=>s.hotelId===hotel.id&&!isBookingTimeService(s.id))&&(isDesktop?<section className="hotel-section desktop-checkout-services"><h2>Добавить к поездке</h2><ServiceOptions/></section>:<button className="booking-extras" onClick={()=>flow.push(screen('services'))}><span className="icon-tile"><Icon name="plus" size={22} inheritColor/></span><span><strong>Добавить к поездке</strong><small>Трансфер, ужин, спа</small></span>{d.services.filter(id=>!isBookingTimeService(id)).length>0?<b>{d.services.filter(id=>!isBookingTimeService(id)).length} добавлено</b>:<Icon name="chevron-right" size={18} inheritColor/>}</button>)}<StayWishesButton draft={d} onClick={()=>ctx.edit('wishes')}/></>;
+ const guestFields=<><BookingTimes draft={d} onEdit={ctx.edit}/><section className="hotel-section"><h2>Гость</h2><BookingGuestContact draft={d} errors={errors} onChange={change}/><GuestActions draft={d} onEdit={ctx.editGuest}/></section>{catalog.services.some(s=>s.hotelId===hotel.id&&!isBookingTimeService(s.id))&&(isDesktop?<section className="hotel-section desktop-checkout-services"><h2>{addServicesLabel}</h2><ServiceOptions/></section>:<button className="booking-extras" onClick={()=>flow.push(screen('services'))}><span className="icon-tile"><Icon name="plus" size={22} inheritColor/></span><span><strong>{addServicesLabel}</strong><small>Трансфер, ужин, спа</small></span>{d.services.filter(id=>!isBookingTimeService(id)).length>0?<b>{d.services.filter(id=>!isBookingTimeService(id)).length} добавлено</b>:<Icon name="chevron-right" size={18} inheritColor/>}</button>)}<StayWishesButton draft={d} onClick={()=>ctx.edit('wishes')}/></>;
  const chooseRate=(rateId:string)=>{try{const next=selectRoomRate(ctx.commerce,ctx.user?.phone||null,rateId);next.draft={...next.draft!,step:'guest'};ctx.setError('');ctx.setCommerce(next);if(!ctx.user)ctx.onLogin();else flow.push(screen('guest'));}catch(e){ctx.setError((e as Error).message);}};
  if(page==='rooms')return <RoomsSelection header={<div inert={!current} aria-hidden={!current}><FlowHeader page={page}/></div>} error={ctx.error} active={current&&!ctx.busy} commerce={ctx.commerce} owner={ctx.user?.phone||null} onEdit={ctx.edit} onChoose={chooseRate}/>;
  return <MobileScroll className={"booking-scroll "+(page!=="hotel"?"page-scroll":"")+(page==='services'?' booking-services-scroll':'')}>{!["hotel","confirmation"].includes(page)&&<div inert={!current} aria-hidden={!current}><FlowHeader page={page}/></div>}<main ref={mainRef} className={"booking-content "+(page==='hotel'?'hotel-page':page==='confirmation'?'confirmation-page':page==='rooms'?'rooms-page':'')} inert={!current||ctx.busy} aria-hidden={!current}>

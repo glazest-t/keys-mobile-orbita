@@ -535,7 +535,7 @@
     "step": "hotel",
     "actions": [
       {
-        "selector": ".hotel-amenities-all"
+        "selector": ".hotel-facilities-all"
       }
     ]
   },
