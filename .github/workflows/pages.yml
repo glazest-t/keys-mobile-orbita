@@ -33,7 +33,7 @@ jobs:
       - name: Validate icon sets
         run: npm --prefix app run check:icons
       - name: Test logic
-        run: node --experimental-strip-types --test tests/*.test.mjs app/tests/auth.test.mjs app/tests/maps.test.mjs desktop/tests/access.test.mjs
+        run: node --import ./tests/fixture-clock.mjs --experimental-strip-types --test tests/*.test.mjs app/tests/auth.test.mjs app/tests/maps.test.mjs desktop/tests/access.test.mjs
       - name: Validate references
         run: |
           python3 scripts/validate_brand.py
