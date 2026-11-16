@@ -1,7 +1,4 @@
-.booking-wishes-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 2px;text-align:left;border:0;background:transparent;color:var(--theme-link,#2f5bff)}
-.booking-wishes-row>span{display:flex;flex-direction:column;min-width:0;gap:3px}
-.booking-wishes-row strong{font:500 15px/21px Onest;color:var(--theme-text,#101320)}
-.booking-wishes-row small{font:400 12px/18px Onest;color:var(--theme-secondary,#5a6072);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.booking-wishes-row small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .guest-editor{display:flex;flex-direction:column;gap:16px}
 .guest-editor .room-detail-caption{margin:0}
 .stay-wish-options{display:flex;flex-direction:column}

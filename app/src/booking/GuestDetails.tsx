@@ -15,7 +15,7 @@ export function GuestActions({draft,onEdit}:{draft:Draft;onEdit:(index:number)=>
  return <>{guests.map((guest,index)=><button key={index} className="booking-add-guest" onClick={()=>onEdit(index)}><Icon name="edit" size={18} inheritColor/>{[guest.name,guest.surname].filter(Boolean).join(' ')||`Гость ${index+2}`}{(!guest.name.trim()||!guest.surname.trim())&&<small>Данные не заполнены</small>}</button>)}{guests.length<guestCapacity(draft.search)&&<button className="booking-add-guest" onClick={()=>onEdit(guests.length)}><Icon name="plus" size={18} inheritColor/>{guests.length?'Добавить ещё гостя':'Добавить второго гостя'}</button>}</>;
 }
 export function StayWishesButton({draft,onClick}:{draft:Draft;onClick:()=>void}){
- return <button className="booking-wishes-row" onClick={onClick}><span><strong>Пожелания к проживанию</strong><small>{wishSummary(draft)||'Необязательно'}</small></span><Icon name="chevron-right" size={18} inheritColor/></button>;
+ return <button type="button" className="booking-extras booking-wishes-row" onClick={onClick}><span className="icon-tile"><Icon name="edit" size={22} inheritColor/></span><span><strong>Пожелания к проживанию</strong><small>{wishSummary(draft)||'Необязательно'}</small></span><Icon name="chevron-right" size={18} inheritColor/></button>;
 }
 export function BookingGuestDetails({draft}:{draft:Draft}){
  const guests=bookingGuests(draft).filter(g=>g.name.trim()&&g.surname.trim()),wishes=wishSummary(draft);

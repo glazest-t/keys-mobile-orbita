@@ -1,6 +1,6 @@
 /* Desktop pointer feedback: shared brand colors and motion, without layout shifts. */
 @media (hover: hover) and (pointer: fine) {
- .desktop-surface :is(.desktop-navigation button,.desktop-search-trigger,.desktop-destination-list>button,.counter-button,.filter-chip,.k-list-row,.k-surface-action,.k-service-tile,.recent-search-track>button,.viewed-hotels>button,.desktop-modal-close) {
+ .desktop-surface :is(.desktop-navigation button,.desktop-search-trigger,.desktop-destination-list>button,.counter-button,.filter-chip,.k-list-row,.k-surface-action,.booking-wishes-row,.k-service-tile,.recent-search-track>button,.viewed-hotels>button,.desktop-modal-close) {
   transition:background-color var(--k-duration-instant) var(--k-ease-arrive),border-color var(--k-duration-instant) var(--k-ease-arrive),color var(--k-duration-instant) var(--k-ease-arrive),box-shadow var(--k-duration-instant) var(--k-ease-arrive);
  }
  .desktop-surface .keys-app button.k-button.primary:hover:not(:disabled):not(:active):not([aria-busy=true]):not(.is-success),
@@ -47,7 +47,7 @@
  .desktop-surface .keys-app .switch-row:hover:not(:disabled) .switch {box-shadow:0 0 0 3px color-mix(in srgb,var(--k-action-primary) 15%,transparent);}
 }
 @media (prefers-reduced-motion: reduce) {
- .desktop-surface :is(.desktop-navigation button,.desktop-search-trigger,.desktop-destination-list>button,.counter-button,.filter-chip,.k-list-row,.k-surface-action,.k-service-tile,.recent-search-track>button,.viewed-hotels>button,.desktop-modal-close) {transition:none;}
+ .desktop-surface :is(.desktop-navigation button,.desktop-search-trigger,.desktop-destination-list>button,.counter-button,.filter-chip,.k-list-row,.k-surface-action,.booking-wishes-row,.k-service-tile,.recent-search-track>button,.viewed-hotels>button,.desktop-modal-close) {transition:none;}
 }
 
 /* Actions on the blue trip card need their own contrasting surface. */
@@ -62,7 +62,7 @@
 
 /* Service rows keep their original surface; only their title and action respond. */
 @media (hover:hover) and (pointer:fine){
- .desktop-surface .keys-app :is(.k-list-row,.k-service-tile,.k-surface-action:not(.profile-points)):hover:not(:disabled):not(:active):not([aria-pressed=true]) :is(.service-tile-label,strong){color:var(--theme-link,var(--k-action-primary))}
+ .desktop-surface .keys-app :is(.k-list-row,.booking-wishes-row,.k-service-tile,.k-surface-action:not(.profile-points)):hover:not(:disabled):not(:active):not([aria-pressed=true]) :is(.service-tile-label,strong){color:var(--theme-link,var(--k-action-primary))}
  .desktop-surface .keys-app .trip-service:hover:not(:disabled):not(:active)>b:not(.included){color:var(--theme-link-hover,var(--k-action-pressed))}
- .desktop-surface .keys-app :is(.k-list-row,.k-service-tile,.k-surface-action:not(.profile-points)):hover:not(:disabled):not(:active):not([aria-pressed=true])>.k-icon:last-child{color:var(--theme-link,var(--k-action-primary))}
+ .desktop-surface .keys-app :is(.k-list-row,.booking-wishes-row,.k-service-tile,.k-surface-action:not(.profile-points)):hover:not(:disabled):not(:active):not([aria-pressed=true])>.k-icon:last-child{color:var(--theme-link,var(--k-action-primary))}
 }
