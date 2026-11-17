@@ -263,7 +263,7 @@
     {
       "path": "design/assets/icons/_sprite.svg",
       "source": "design/assets/icons-soft/manifest.json",
-      "sha256": "d647dd3f8d1bae9f7a4b0010d9c9b5b53fb2a4a364b5de8f722cb983b347cbbf",
+      "sha256": "3bdcc0160d20250bf6bbca04f4d2c65a7f9ffb08d9aff5092ada4c790b97da96",
       "transformation": "Soft sprite extended with microphone for voice input, 2026-11-11",
       "rights": "created_for_project"
     },
@@ -291,7 +291,7 @@
     {
       "path": "design/assets/icons/back.svg",
       "source": "design/assets/icons-soft/back.svg",
-      "sha256": "4f8e73263e082d5144a0881ca598fce843ee910e29f5a11935437abc4c40b93d",
+      "sha256": "d35e7a8705dd34eb2f3b7dd6e15bccae4ce3d2a213e6a8ed7e9668851b8d6c39",
       "transformation": "approved Soft icon set, revision 24",
       "rights": "created_for_project"
     },
@@ -1250,7 +1250,7 @@
     {
       "path": "design/assets/icons/share.svg",
       "source": "design/assets/icons-soft/share.svg",
-      "sha256": "a209e92e392599935c7aad5de66be152b08c20296501d2a1d2924d3e5b940ba4",
+      "sha256": "53ece6b2e228dc27f8a1c571d6a9a199873a22aec74b279299171bc32748e7d2",
       "transformation": "approved Soft icon set, revision 24",
       "rights": "created_for_project"
     },
