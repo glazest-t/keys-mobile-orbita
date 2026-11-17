@@ -77,13 +77,6 @@
 .booking-total-details:focus-visible{outline:2px solid #5a6072;outline-offset:3px;border-radius:8px}
 .booking-price-details{display:flex;flex-direction:column;gap:20px}
 .booking-price-content{display:flex;flex-direction:column;gap:16px}
-.booking-price-details .price-breakdown{font:400 14px/20px Onest;gap:16px}
-.booking-price-details .price-breakdown>div:not(.price-total){padding:0 4px}
-.booking-price-details .price-reduction>span:last-child{color:var(--theme-success,#11734d);font-weight:500}
-.booking-price-details .price-total{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:6px 12px;background:var(--k-surface-app);color:var(--k-text-primary);border:0;border-radius:22px;padding:18px 16px;margin-top:2px;font:500 15px/21px Onest}
-.booking-price-details .price-total>strong:last-of-type{font:500 20px/28px Unbounded;letter-spacing:-.6px;white-space:nowrap}
-.booking-price-details .price-total>small{grid-column:1/-1;font:400 12px/17px Onest;color:var(--k-text-secondary)}
-.booking-price-timing{display:flex;flex-direction:column;gap:10px;padding:0 4px;font:400 13px/18px Onest}.booking-price-timing>div{display:flex;justify-content:space-between;gap:12px}
 
 .confirmation-services{padding:14px 16px;gap:14px}
 .confirmation-services>div{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;font:400 14px/20px Onest}
