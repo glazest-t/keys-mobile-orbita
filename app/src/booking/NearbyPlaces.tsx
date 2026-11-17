@@ -2,8 +2,10 @@ import {tripEditorialText} from '../../../prototype/domain/tripEditorialText.mjs
 import {useNovember} from '../usePrototypeVariant';
 import {isDesktop} from '../desktop/surface';
 import {useState,type ReactNode} from 'react';
+import {createPortal} from 'react-dom';
 import {BottomSheet,MobileScroll} from '../mobile';
-import {Button,Icon} from '../ui';
+import {Button,Icon,IconButton} from '../ui';
+import {ExpandingMap} from '../interactions';
 import {catalog} from './model';
 import {filterNearbyPlaces,nearbyPlace,nearbyPlaces,nearbyPhoto,nearbyIllustration,nearbyReason,nearbyJourney,type NearbyCategory,type NearbyPlace} from './nearby';
 import {TwoGisMap} from '../maps/TwoGisMap';
@@ -29,16 +31,46 @@ export function NearbyPlaces({hotelId,initialPlaceId,header,embedded=false}:{hea
  const Scroll=embedded?'div':MobileScroll,Content=embedded?'div':'main';
  const initial=nearbyPlace(hotelId,initialPlaceId),hotel=catalog.hotels.find(h=>h.id===hotelId),location=hotelLocation(hotelId);
  const [category,setCategory]=useState<NearbyCategory>(initial?.category||'Всё'),[selected,setSelected]=useState<NearbyPlace|undefined>(initial);
+ const [mapView,setMapView]=useState<{host:HTMLElement;origin:string;trigger:HTMLButtonElement;open:boolean}|null>(null);
  const all=nearbyPlaces(hotelId),places=filterNearbyPlaces(hotelId,category);
  const categories=(['Всё','Культура','Музеи','Прогулки'] as NearbyCategory[]).filter(c=>c==='Всё'||all.some(p=>p.category===c));
  const points=[...(location?[{id:hotelId,coordinates:location.coordinates,label:tripEditorialText("ПР-099", 'Отель', "Проживание"),name:hotel?.name||'Ваш отель'}]:[]),...places.map((p,i)=>{
   const same=places.filter(other=>other.coordinates.join(',')===p.coordinates.join(','));
   return {id:p.id,coordinates:p.coordinates,label:november?p.categoryLabel:String(i+1),icon:november?placeIcon(p):undefined,name:p.name,markerOffset:[(same.findIndex(other=>other.id===p.id)-(same.length-1)/2)*42,0]};
  })];
- return <><Scroll className={embedded?"nearby nearby-embedded":"detail-scroll nearby page-scroll"}>{header}<Content className="detail-content detail-nearby">
- {location&&<div className="nearby-live-map" role="group" aria-label="Места в радиусе 1,5 км от отеля"><TwoGisMap center={location.coordinates as Coordinates} points={points} selected={selected?.id||hotelId} onSelect={id=>{const p=nearbyPlace(hotelId,id);if(p)setSelected(p);}} label={tripEditorialText("ПР-100", "Отель и места рядом", "Места рядом")}/></div>}
+ const openMap=(trigger:HTMLButtonElement)=>{
+  const host=trigger.closest<HTMLElement>('.keys-app'),preview=trigger.parentElement;
+  if(!host||!preview)return;
+  const frame=host.getBoundingClientRect(),map=preview.getBoundingClientRect();
+  const scale=frame.width/host.clientWidth;
+  const top=isDesktop?frame.top+72:frame.top;
+  const origin=`inset(${Math.max(0,(map.top-top)/scale)}px ${(frame.right-map.right)/scale}px ${(frame.bottom-map.bottom)/scale}px ${(map.left-frame.left)/scale}px round 24px)`;
+  setMapView({host,origin,trigger,open:true});
+ };
+ const closeMap=()=>{
+  if(!mapView?.open)return;
+  setMapView({...mapView,open:false});
+  if(!isDesktop)requestAnimationFrame(()=>mapView.trigger.focus({preventScroll:true}));
+ };
+ const renderMap=(expanded:boolean)=>location&&<TwoGisMap
+  center={location.coordinates as Coordinates} points={points} selected={selected?.id||hotelId}
+  onSelect={id=>{const place=nearbyPlace(hotelId,id);if(place)setSelected(place);}}
+  label={tripEditorialText("ПР-100", "Отель и места рядом", "Места рядом")}
+  expanded={expanded} interactive={expanded||isDesktop}/>;
+ return <><Scroll className={embedded?"nearby nearby-embedded":"detail-scroll nearby page-scroll"}>{header}<Content className="detail-content detail-nearby" inert={!isDesktop&&mapView?.open||undefined}>
+ {location&&<div className="nearby-live-map" role="group" aria-label="Места в радиусе 1,5 км от отеля">
+  {renderMap(false)}
+  <button type="button" className="map-expand" onClick={event=>openMap(event.currentTarget)}><Icon name="map" size={16}/>Развернуть карту</button>
+ </div>}
  {all.length>0&&<><div className="detail-segments" aria-label="Категории мест">{categories.map(c=><button key={c} className={category===c?'active':''} aria-pressed={category===c} onClick={()=>{setCategory(c);setSelected(undefined);}}>{c}</button>)}</div></>}
  {places.length?<section className="nearby-real-places" aria-label="Места рядом с отелем" tabIndex={embedded?0:undefined}>{places.map(p=><button className="nearby-place-row" key={p.id} onClick={()=>setSelected(p)}>{november?<PlaceIcon place={p}/>:<PlacePhoto place={p}/>}<span className="nearby-place-copy"><small>{p.categoryLabel}</small><strong>{p.name}</strong><span className="nearby-place-distance">{nearbyJourney(p)}</span></span></button>)}</section>:<div className="nearby-empty"><Icon name="pin" size={32}/><h2>{location?tripEditorialText("ПР-101", 'Пока нет мест поблизости', "Пока нет мест рядом"):'Места рядом пока не добавлены'}</h2><p>{hotel?.name}</p></div>}
  </Content></Scroll>
+ {mapView&&createPortal(<ExpandingMap open={mapView.open} origin={mapView.origin} onClose={closeMap} title="Карта мест рядом">
+  <section className="expanded-results-map nearby-expanded-map" aria-label="Карта мест рядом">
+   {renderMap(true)}
+   <header><IconButton name="back" label="Назад к местам рядом" onClick={closeMap}/></header>
+   <div className="map-selection"><button type="button" className="map-list-button" onClick={closeMap}><Icon name="menu" size={16} inheritColor/>Списком</button></div>
+  </section>
+ </ExpandingMap>,mapView.host)}
  <BottomSheet open={!!selected} onOpenChange={v=>{if(!v)setSelected(undefined);}} title={selected?.name||'Место рядом'} snap={november?.6:.86}><div className="sheet-body nearby-place-sheet">{selected&&<>{!november&&<PlacePhoto key={selected.id} place={selected} large/>}<div className="nearby-place-meta"><span className="icon-tile"><Icon name={november?placeIcon(selected):selected.icon} size={24} inheritColor/></span><span><strong>{selected.categoryLabel}</strong><small>{nearbyJourney(selected)}</small></span></div><p>{selected.about}</p><section className="nearby-place-reason"><strong>Почему вам может понравиться</strong><p>{nearbyReason(selected)}</p></section><a className="nearby-source" href={selected.source} target="_blank" rel="noreferrer">{tripEditorialText("ПР-102", "Информация о месте в 2ГИС", "Детали места в 2ГИС")}<Icon name="chevron-right" size={16} inheritColor/></a><Button dismissOnly onClick={()=>setSelected(undefined)}>Понятно</Button></>}</div></BottomSheet></>;
 }

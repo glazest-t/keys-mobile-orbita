@@ -92,23 +92,23 @@ export function PointsBalance({value,children,className=''}:{value:number;childr
  </div>;
 }
 
-export function ExpandingMap({open,origin,children,onClose}:{open:boolean;origin:string;children:ReactNode;onClose?:()=>void}){
+export function ExpandingMap({open,origin,children,onClose,title='Карта отелей'}:{open:boolean;origin:string;children:ReactNode;onClose?:()=>void;title?:string}){
  const reduced=useReducedMotion();
- if(isDesktop)return <DesktopMapDialog open={open} origin={origin} onClose={onClose}>{children}</DesktopMapDialog>;
+ if(isDesktop)return <DesktopMapDialog open={open} origin={origin} onClose={onClose} title={title}>{children}</DesktopMapDialog>;
  return <AnimatePresence>{open&&<motion.div className="map-transition-layer"
   initial={reduced?{opacity:0}:{clipPath:origin}} animate={{opacity:1,clipPath:'inset(0px 0px 0px 0px round 0px)'}}
   exit={reduced?{opacity:0,transition:{duration:interactionMotion.tab}}:{clipPath:origin,transition:{duration:interactionMotion.pop,ease:interactionMotion.iosPush}}}
   transition={{duration:reduced?interactionMotion.tab:interactionMotion.push,ease:interactionMotion.iosPush}}>{children}</motion.div>}</AnimatePresence>;
 }
 
-function DesktopMapDialog({open,origin,onClose,children}:{open:boolean;origin:string;onClose?:()=>void;children:ReactNode}){
+function DesktopMapDialog({open,origin,onClose,children,title}:{open:boolean;origin:string;onClose?:()=>void;children:ReactNode;title:string}){
  const reduced=useReducedMotion(),returnFocus=useRef<HTMLElement|null>(null);
  return <Dialog.Root open={open} onOpenChange={v=>{if(!v)onClose?.();}}><AnimatePresence>{open&&<Dialog.Content key="desktop-map" asChild forceMount aria-describedby={undefined}
   onOpenAutoFocus={()=>{returnFocus.current=document.activeElement instanceof HTMLElement?document.activeElement:null;}}
   onCloseAutoFocus={e=>{const target=returnFocus.current;if(target?.isConnected){e.preventDefault();target.focus({preventScroll:true});}}}
   onInteractOutside={e=>e.preventDefault()}>
   <motion.div className="map-transition-layer desktop-map-dialog" initial={reduced?{opacity:0}:{clipPath:origin}} animate={{opacity:1,clipPath:'inset(0px 0px 0px 0px round 0px)'}} exit={{opacity:0,transition:{duration:interactionMotion.tab}}} transition={{duration:reduced?interactionMotion.tab:interactionMotion.push,ease:interactionMotion.iosPush}}>
-   <Dialog.Title className="desktop-map-title">Карта отелей</Dialog.Title>{children}
+   <Dialog.Title className="desktop-map-title">{title}</Dialog.Title>{children}
   </motion.div>
  </Dialog.Content>}</AnimatePresence></Dialog.Root>;
 }

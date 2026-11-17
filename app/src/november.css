@@ -90,3 +90,9 @@
 .upcoming-card .november-partial-clock{color:#ffdc83}
 .upcoming-card .booking-payment-status:has(.november-partial-clock){row-gap:0}
 .desktop-app .upcoming-dates>.trip-date-direction{width:160px}
+
+.november-map-address {display:flex;align-items:center;gap:8px;user-select:text}
+.november-map-address > span {flex:1;min-width:0;overflow-wrap:anywhere}
+.november-map-address:has(.map-address-copy) {padding-block:4px;padding-inline-end:4px}
+.map-address-copy {display:grid;place-items:center;flex:none;width:44px;height:44px;padding:0;border:0;border-radius:12px;background:transparent;color:var(--theme-link,#2f5bff);cursor:pointer}
+.november-map-apps > .map-address-status {font:400 13px/18px Onest,sans-serif;color:var(--k-text-secondary);margin:0}

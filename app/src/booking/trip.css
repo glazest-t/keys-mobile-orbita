@@ -25,3 +25,20 @@
 .upcoming-payment-settlement>.k-status{margin-left:auto}
 .upcoming-payment .k-status--success{background:var(--theme-success-bg,#BFF0DE);color:var(--theme-success,#116D4A);padding:3px 8px}
 .trip-service .trip-breakfast-facts{display:block;margin-top:3px}
+
+.trip-hotel-address {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #eef1ff;
+  font: 400 13px/18px Onest, sans-serif;
+  text-align: start;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+.trip-hotel-address > .k-icon {flex:none;margin-top:1px}

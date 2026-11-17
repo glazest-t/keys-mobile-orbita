@@ -20,3 +20,24 @@
  .stay-room-unavailable .stay-progress small{font-size:9px;line-height:11px}
 }
 .desktop-app .stay-card>.k-button.door-button{width:calc((100% - 8px)/2);max-width:none;align-self:flex-start}
+
+.stay-room.stay-room-checkout-only {grid-template-columns:1fr}
+.stay-checkout-time {
+  display:grid;
+  gap:4px;
+  min-width:0;
+}
+.stay-room:not(.stay-room-checkout-only) > .stay-checkout-time {
+  border-inline-start:1px solid #ffffff60;
+  padding-inline-start:12px;
+}
+.stay-checkout-time > small {display:flex;align-items:center;gap:5px}
+.stay-checkout-time .k-icon {flex:none}
+.stay-checkout-time time {font:600 23px/28px Unbounded,sans-serif;white-space:nowrap}
+
+.stay-room.stay-room-checkout {row-gap:4px;align-items:start}
+.stay-room-checkout > .stay-room-info:first-child {display:contents}
+.stay-room-checkout > .stay-room-info > small {grid-column:1 / -1}
+.stay-room-checkout > .stay-room-info > strong {grid-area:2 / 1}
+.stay-room-checkout > .stay-checkout-time {grid-area:2 / 2}
+.stay-room-checkout > .stay-room-info > span {grid-area:3 / 1 / 4 / -1;overflow-wrap:anywhere}
