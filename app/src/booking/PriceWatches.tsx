@@ -11,8 +11,13 @@ import './details.css';
 import './price-watches.css';
 import '../filter-tabs.css';
 
-export function PriceWatches({previewChange=null,onExitPreview,commerce,setCommerce,owner,onOpen,onSearch}:{previewChange?:'down'|'up'|'compare'|null;onExitPreview?:()=>void;commerce:Commerce;setCommerce:Dispatch<SetStateAction<Commerce>>;owner:string;onOpen:(key:string)=>void;onSearch:()=>void}){
- const entries=priceWatchEntries(commerce,owner),[tab,setTab]=useState<'active'|'paused'>('active'),[selected,setSelected]=useState(''),[sheet,setSheet]=useState<'edit'|'delete'|''>(''),[error,setError]=useState('');
+export function PriceWatches({initialEditKey,previewChange=null,onExitPreview,commerce,setCommerce,owner,onOpen,onSearch}:{initialEditKey?:string;previewChange?:'down'|'up'|'compare'|null;onExitPreview?:()=>void;commerce:Commerce;setCommerce:Dispatch<SetStateAction<Commerce>>;owner:string;onOpen:(key:string)=>void;onSearch:()=>void}){
+ const entries=priceWatchEntries(commerce,owner);
+ const initialEntry=entries.find(entry=>entry.key===initialEditKey);
+ const [tab,setTab]=useState<'active'|'paused'>(initialEntry?.watch.active===false?'paused':'active');
+ const [selected,setSelected]=useState(initialEntry?.key||'');
+ const [sheet,setSheet]=useState<'edit'|'delete'|''>(initialEntry?'edit':'');
+ const [error,setError]=useState('');
  const keyboard=useKeyboard(),entry=entries.find(e=>e.key===selected),active=entries.filter(e=>e.watch.active),paused=entries.filter(e=>!e.watch.active),shown=tab==='active'?active:paused;
  const close=()=>{keyboard.hide();setSheet('');setError('');};
  const open=(key:string,next:'edit'|'delete')=>{onExitPreview?.();keyboard.hide();setSelected(key);setSheet(next);setError('');};
