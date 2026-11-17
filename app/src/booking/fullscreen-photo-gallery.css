@@ -1,0 +1,129 @@
+.bottom-sheet:has(.fullscreen-photo-gallery),
+.keys-app.desktop-modal:has(.fullscreen-photo-gallery) {
+  inset: 0;
+  max-height: none !important;
+  border-radius: 0;
+  background: #000;
+}
+
+.bottom-sheet:has(.fullscreen-photo-gallery) {
+  bottom: 0 !important;
+  padding-block: max(var(--device-safe-area-top, 44px), env(safe-area-inset-top))
+    max(var(--device-safe-area-bottom, 0px), env(safe-area-inset-bottom));
+}
+
+.keys-app.desktop-modal:has(.fullscreen-photo-gallery) {
+  width: 100vw;
+  height: 100dvh;
+  transform: none;
+  animation: none;
+}
+
+.bottom-sheet:has(.fullscreen-photo-gallery) > .sheet-handle-zone {
+  display: none;
+}
+
+.bottom-sheet:has(.fullscreen-photo-gallery) > .sheet-header,
+.desktop-modal:has(.fullscreen-photo-gallery) > .desktop-modal-header {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.desktop-modal:has(.fullscreen-photo-gallery) > .desktop-modal-header > button {
+  display: none;
+}
+
+.bottom-sheet:has(.fullscreen-photo-gallery) > .sheet-content,
+.desktop-modal:has(.fullscreen-photo-gallery) > .desktop-modal-body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.fullscreen-photo-gallery {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  color: #fff;
+}
+
+.fullscreen-photo-header {
+  position: relative;
+  display: grid;
+  flex: none;
+  place-items: center;
+  min-height: 56px;
+  font: 600 17px/24px Onest, sans-serif;
+}
+
+.fullscreen-photo-header > .k-icon-button {
+  position: absolute;
+  inset-inline-start: 16px;
+}
+
+.fullscreen-photo-stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  touch-action: pan-y pinch-zoom;
+}
+
+.fullscreen-photo-track {
+  position: absolute;
+  inset: 0;
+}
+
+.fullscreen-photo-track > img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+}
+
+.fullscreen-photo-previous { transform: translateX(-100%); }
+.fullscreen-photo-next { transform: translateX(100%); }
+
+.fullscreen-photo-stage > .k-icon-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: #171717;
+  color: #80aaff;
+}
+
+.fullscreen-photo-stage > .k-icon-button:nth-child(2) { inset-inline-start: 16px; }
+.fullscreen-photo-stage > .k-icon-button:nth-child(3) { inset-inline-end: 16px; }
+
+.device-screen:has(.fullscreen-photo-gallery) .status-bar {
+  color: #fff;
+  background: #000;
+}
+
+html:not([data-app-theme="dark"]) .device-screen:has(.fullscreen-photo-gallery) .status-bar img {
+  filter: invert(1);
+}
+
+.device-screen:has(.fullscreen-photo-gallery) .home-indicator-svg rect {
+  fill: #bcbcbc;
+}
+
+@media (max-width: 600px) {
+  body:has(.fullscreen-photo-gallery) .demo-launcher {
+    visibility: hidden;
+  }
+}

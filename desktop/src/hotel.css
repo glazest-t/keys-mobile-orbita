@@ -159,22 +159,6 @@
 .desktop-room-photo-strip>button>span{position:absolute;inset:4px;display:grid;place-items:center;border-radius:8px;background:#10132080;color:white;font:500 22px/28px Onest,sans-serif}
 @media(max-width:1100px){.desktop-flow .room-offer:has(.desktop-room-photo-preview){grid-template-columns:300px minmax(0,1fr)}.desktop-room-photo-strip>button{height:56px}}
 .desktop-room-photo-count{position:absolute;right:12px;bottom:12px;display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:12px;background:#10132080;color:#fff;font:500 12px/18px Onest,sans-serif;pointer-events:none}
-.keys-app.desktop-modal:has(.desktop-photo-gallery){inset:0;transform:none;width:100vw;height:100dvh;max-height:none;border-radius:0;animation:none}
-.desktop-modal:has(.desktop-photo-gallery)>.desktop-modal-header{padding:20px 32px}
-.desktop-modal:has(.desktop-photo-gallery)>.desktop-modal-body{flex:1;min-height:0;overflow:hidden;padding:0 32px 20px}
-.desktop-photo-gallery{display:flex;flex-direction:column;gap:16px;height:100%;min-height:0}
-.desktop-photo-gallery-stage{position:relative;flex:1;min-height:0;display:flex;justify-content:center;background:var(--theme-card,#f3f6fa);border-radius:20px;overflow:hidden}
-.desktop-photo-gallery-stage>img{width:100%;height:100%;object-fit:contain}
-.desktop-photo-gallery-stage>.k-icon-button{position:absolute;top:50%;transform:translateY(-50%);background:var(--theme-card,white);box-shadow:0 2px 12px #10132020}
-.desktop-photo-gallery-stage>.k-icon-button:nth-child(2){left:20px}
-.desktop-photo-gallery-stage>.k-icon-button:nth-child(3){right:20px}
-.desktop-photo-gallery-footer{flex:none;display:flex;align-items:center;justify-content:center;gap:20px;min-width:0}
-.desktop-photo-gallery-footer>span{flex:none;font:500 14px/20px Onest,sans-serif;color:var(--k-text-secondary)}
-.desktop-photo-gallery-thumbnails{display:flex;gap:8px;overflow-x:auto;min-width:0;padding:4px}
-.desktop-photo-gallery-thumbnails>button{flex:0 0 88px;height:60px;border:2px solid transparent;border-radius:12px;padding:2px;background:transparent;overflow:hidden}
-.desktop-photo-gallery-thumbnails>button[aria-pressed=true]{border-color:var(--k-action-primary)}
-.desktop-photo-gallery-thumbnails img{display:block;width:100%;height:100%;object-fit:cover;border-radius:8px}
-
 /* The outer section already groups facilities and location. */
 .desktop-hotel-information .hotel-facilities-card{border:0;padding:0 4px;border-radius:0}
 .desktop-hotel-information .hotel-location{border:0}
