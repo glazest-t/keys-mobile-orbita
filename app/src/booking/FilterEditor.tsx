@@ -4,10 +4,10 @@ import {MobileScroll,useScreenPortal,useKeyboard,useKeyboardInsets,useMobileDevi
 import {Button,Icon,IconButton} from '../ui';
 import './filters.css';
 
-export function FilterEditorDialog({open,onClose,children}:{open:boolean;onClose:()=>void;children:ReactNode}){
+export function FilterEditorDialog({open,onClose,children,initialFocusSelector='.filter-editor-header button'}:{open:boolean;onClose:()=>void;children:ReactNode;initialFocusSelector?:string}){
  const {screenRef}=useScreenPortal(),keyboard=useKeyboard();
  useEffect(()=>{if(open)keyboard.hide();},[open]);
- return <Dialog.Root open={open} onOpenChange={value=>{if(!value){keyboard.hide();onClose();}}}><Dialog.Portal container={screenRef.current??undefined}>{open&&<Dialog.Content className="filter-editor" aria-describedby={undefined} onOpenAutoFocus={event=>{if(!screenRef.current)return;event.preventDefault();screenRef.current.querySelector<HTMLButtonElement>('.filter-editor-header button')?.focus();}}>{children}</Dialog.Content>}</Dialog.Portal></Dialog.Root>;
+ return <Dialog.Root open={open} onOpenChange={value=>{if(!value){keyboard.hide();onClose();}}}><Dialog.Portal container={screenRef.current??undefined}>{open&&<Dialog.Content className="filter-editor" aria-describedby={undefined} onOpenAutoFocus={event=>{if(!screenRef.current)return;event.preventDefault();screenRef.current.querySelector<HTMLButtonElement>(initialFocusSelector)?.focus();}}>{children}</Dialog.Content>}</Dialog.Portal></Dialog.Root>;
 }
 
 export function FilterEditorLayout({title='Фильтры',children,onClose,onReset,onApply,submitLabel,disabled=false,embedded=false}:{title?:string;children:ReactNode;onClose:()=>void;onReset:()=>void;onApply:()=>void;submitLabel:string;disabled?:boolean;embedded?:boolean}){

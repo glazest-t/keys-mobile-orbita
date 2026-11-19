@@ -1,0 +1,24 @@
+.guest-style-dialog-title{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.guest-style-editor{position:absolute;inset:var(--device-safe-area-top,54px) 0 0}
+.filter-editor:has(.guest-style-editor):before{background:var(--k-surface-app)}
+.guest-style-match{position:relative;padding:14px 14px 12px;color:var(--k-text-primary,var(--theme-text,#101320));font:400 13px/19px Onest,sans-serif}
+.guest-style-match summary,.guest-style-match-heading{display:flex;align-items:center;gap:8px;text-align:left}
+.guest-style-match summary{list-style:none;cursor:pointer}
+.guest-style-match summary::-webkit-details-marker{display:none}
+.guest-style-match strong{flex:1;font-weight:500}
+.guest-style-match .k-icon{flex:none;color:var(--theme-link,var(--k-action-primary))}
+.guest-style-match b{color:var(--theme-link,var(--k-action-primary));font-weight:600}
+.guest-style-match ul{display:flex;flex-direction:column;gap:6px;margin:10px 0 0;padding:0;list-style:none}
+.guest-style-match li{display:flex;align-items:center;gap:10px;min-height:28px;font:400 13px/19px Onest,sans-serif}
+.guest-style-match li>.preference-illustration{flex:none}
+.guest-style-match li>span:last-child{min-width:0}
+.guest-style-match details[open]>summary>.k-icon:last-child{transform:rotate(180deg)}
+.guest-style-match summary:focus-visible{outline:2px solid var(--theme-link,var(--k-action-primary));outline-offset:4px;border-radius:8px}
+
+.guest-style-heart{display:block;flex:none;width:22px;height:22px;object-fit:contain}
+
+.guest-style-match-meter{position:absolute;inset:0 0 auto;height:3px;background:var(--k-border-subtle,var(--theme-border,#e4e7ef));overflow:hidden;pointer-events:none}
+.guest-style-match-meter>span{display:block;height:100%;background:var(--theme-link,var(--k-action-primary))}
+
+.guest-style-match-ring{display:grid;place-items:center;flex:none;width:38px;height:38px;padding:3px;border-radius:50%;box-sizing:border-box}
+.guest-style-match-ring>span{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:var(--theme-card,#fff);font:600 11px/16px Onest,sans-serif}

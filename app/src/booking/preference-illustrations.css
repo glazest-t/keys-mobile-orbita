@@ -6,5 +6,7 @@
 .preference-match li>.preference-illustration{align-self:center}
 
 .preference-illustration-original{mix-blend-mode:multiply}
-.preference-illustration-original>span{position:relative;display:block;overflow:hidden;flex:none}
-.preference-illustration-original img{position:absolute;display:block;max-width:none!important;object-fit:fill;user-select:none}
+.preference-illustration-original>span,.preference-illustration-contrast>span{position:relative;display:block;overflow:hidden;flex:none}
+.preference-illustration-original img,.preference-illustration-contrast img{position:absolute;display:block;max-width:none!important;object-fit:fill;user-select:none}
+
+.preference-illustration-contrast{mix-blend-mode:normal;filter:none}

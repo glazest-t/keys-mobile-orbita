@@ -37,8 +37,12 @@
 .bottom-sheet:has(.swipe-preferences-sheet) .sheet-content{display:flex;flex-direction:column;overflow:hidden;padding:0;min-height:0}
 .swipe-preferences-sheet .swipe-preferences-footer{background:var(--k-surface-app)}
 
-/* Approved illustrated set: a white medallion preserves artwork on selected cobalt bubbles. */
+/* Transparent 3D artwork remains visible on light, dark and selected cobalt bubbles. */
 .swipe-preferences .swipe-theme{padding:6px 5px;gap:4px}
-.swipe-preferences .swipe-theme-symbol{width:42px;height:42px;background:var(--theme-card,#fff);box-shadow:0 2px 8px #1B1E3308}
-.swipe-preferences .swipe-theme[aria-checked=true] .swipe-theme-symbol{background:var(--theme-card,#fff);box-shadow:0 2px 8px #1B1E3312}
+.swipe-preferences .swipe-theme-symbol{width:42px;height:42px;background:transparent;box-shadow:none}
+.swipe-preferences .swipe-theme[aria-checked=true] .swipe-theme-symbol{background:transparent;box-shadow:none}
 .swipe-preferences .swipe-theme[aria-checked=true] .swipe-theme-label{color:#fff}
+
+.swipe-theme-art{display:block;width:42px;height:42px;object-fit:contain;pointer-events:none;user-select:none}
+
+[data-app-theme="dark"] .swipe-preferences .swipe-theme[aria-checked="false"]{background:transparent;border-color:transparent;box-shadow:none}

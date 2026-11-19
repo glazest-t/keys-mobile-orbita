@@ -6,8 +6,8 @@ import {swipeThemes,matchedSwipePreferences,saveSwipePreferences,swipePreference
 import {discoveryOffers} from '../app/src/booking/offers.ts';
 import {preferenceIllustrationFor} from '../app/src/booking/preferenceIllustrations.ts';
 const owner='preference-coverage';
-test('Каждый из 53 отелей даёт минимум три критерия для каждого из 10 стилей',()=>{
- assert.equal(catalog.hotels.length,53);assert.equal(swipeThemes.length,10);
+test('Каждый из 53 отелей даёт минимум три критерия для каждого из 8 стилей',()=>{
+ assert.equal(catalog.hotels.length,53);assert.equal(swipeThemes.length,8);
  for(const h of catalog.hotels){
   const features=hotelPreferenceFeatures(h.id);assert.ok(features.length>=3,h.id);
   for(const theme of swipeThemes){const matches=matchedSwipePreferences(h.id,[theme.id]);assert.ok(matches.length>=3,h.id+':'+theme.id);assert.equal(matches.length,new Set(matches).size);assert.ok(matches.every(f=>features.includes(f)));assert.ok(matches.every(f=>preferenceIllustrationFor(f)),matches.join(', '));}
