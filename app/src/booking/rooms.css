@@ -12,10 +12,9 @@
 .room-offer-rates{gap:8px;padding:14px;align-items:stretch}
 .room-tariff{flex:none;width:224px;padding:14px;border-radius:20px;border:1px solid var(--theme-border,#e4e7ef);display:flex;flex-direction:column;gap:12px;color:var(--theme-text,#101320);background:var(--theme-card,#fff)}
 .keys-app .room-tariff h3{font:500 14px/19px Onest;margin:0;letter-spacing:0}
-.room-rate-rules{display:flex;flex-direction:column;gap:6px}
-.room-rate-rules>div{display:flex;gap:8px;align-items:center;font:400 12px/17px Onest}
-.room-rate-rules>div>span{width:18px;height:18px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--theme-card,#eceef3);color:var(--theme-disabled,#8a90a2)}
-.room-rate-rules>div>.included{background:var(--theme-success-bg,#bff0de);color:var(--theme-success,#11734d)}
+.room-rate-rules{display:flex;flex-direction:column;gap:6px;list-style:none;margin:0;padding:0;color:inherit}
+.room-rate-rules>li{display:flex;align-items:flex-start;gap:8px;font:400 12px/18px Onest;color:inherit}
+.room-rate-rules>li>.k-icon{flex:none;opacity:.7}
 .room-tariff>.room-link{font-size:12px}
 .room-rate-price{display:flex;flex-direction:column;align-items:stretch;gap:8px;margin-top:auto;border-top:1px solid var(--theme-border,#eef0f4);padding-top:10px}
 .room-rate-price>div{display:flex;flex-direction:column;gap:2px;min-width:0}
@@ -81,7 +80,6 @@
 /* fr4: emerald Friendly Rate, not the violet hotel loyalty tariff. */
 .room-tariff.friendly{background:var(--k-feature-friendly);box-shadow:0 14px 30px #0b6b6338}
 .room-tariff.friendly .room-link{color:var(--theme-success,#b8f7e4)}
-.room-tariff.friendly .room-rate-rules>div>span{background:var(--theme-card-a38,#ffffff26);color:var(--theme-success,#bff0de)}
 .room-tariff.friendly .room-rate-price>button{color:var(--theme-text,#063f3c)}
 .room-tariff.friendly .room-rate-price small{color:#9fe0d2}
 .room-tariff.friendly .room-rate-price b{background:var(--theme-success-bg,#b8f7e4);color:var(--theme-text,#063f3c)}
@@ -92,7 +90,6 @@
 .room-tariff.loyalty{background:linear-gradient(150deg,#1b1e33,#2d2a55);border-color:transparent;color:#fff}
 .room-loyalty-label{display:flex;align-items:center;gap:6px;font:500 11px/16px Onest;color:#D6DCFF}
 .room-tariff.loyalty .room-link{color:#D6DCFF}
-.room-tariff.loyalty .room-rate-rules>div>span{background:var(--theme-card-a36,#ffffff24);color:var(--theme-success,#BFF0DE)}
 .room-tariff.loyalty .room-rate-price{border-color:var(--theme-border-a38,#ffffff26)}
 .room-tariff.loyalty .room-rate-price small{color:#D7DAE4}
 .room-tariff.loyalty .room-rate-price>button{background:var(--theme-card,#fff);color:var(--k-text-primary)}

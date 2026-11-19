@@ -245,8 +245,6 @@ html[data-app-theme="dark"] .keys-app .room-tariff.loyalty {
 }
 html[data-app-theme="dark"] .keys-app .room-tariff.loyalty :is(h3,.room-rate-price strong,.room-rate-price small,.room-link) { color:#2b251a; }
 html[data-app-theme="dark"] .keys-app .room-tariff.loyalty .room-loyalty-label { background:#59431f;color:#fff0c9; }
-html[data-app-theme="dark"] .keys-app .room-tariff.loyalty .room-rate-rules>div>span { background:#e4c58a;color:#59431f; }
-html[data-app-theme="dark"] .keys-app .room-tariff.loyalty .room-rate-rules>div>span.included { background:#cad7b2;color:#204c32; }
 html[data-app-theme="dark"] .keys-app .room-tariff.loyalty .room-rate-price { border-color:#9d7f48; }
 html[data-app-theme="dark"] .keys-app .room-tariff.loyalty .room-rate-price>button { background:#2b251a;color:#fff0c9; }
 html[data-app-theme="dark"] .keys-app .room-tariff.loyalty .room-rate-price>button:hover { background:#463820;color:#fff0c9; }

@@ -263,7 +263,7 @@
     {
       "path": "design/assets/icons/_sprite.svg",
       "source": "design/assets/icons-soft/manifest.json",
-      "sha256": "3bdcc0160d20250bf6bbca04f4d2c65a7f9ffb08d9aff5092ada4c790b97da96",
+      "sha256": "d461f33119ab9ba5398b5c2fdc19c9d302f38b32a00fab23a2300c20207f37fe",
       "transformation": "Soft sprite extended with microphone for voice input, 2026-11-11",
       "rights": "created_for_project"
     },
