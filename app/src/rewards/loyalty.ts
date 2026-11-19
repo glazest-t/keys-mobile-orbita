@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {readWallets} from '../../../prototype/domain/payment.mjs';
 import data from '../../../spec/demo-data.json' with {type:'json'};
 import type {Commerce} from '../booking/model.ts';
@@ -9,7 +10,7 @@ export function hasHotelProgram(s:Commerce,owner:string|null|undefined,hotelId:s
 export const hotelPrograms=data.hotels.filter(h=>h.hotelDiscountBasisPoints>0||h.hotelPointsProgram);
 export function setHotelProgram(s:Commerce,owner:string,hotelId:string,connected:boolean):Commerce{
  if(!s.accounts[owner])throw Error('Войдите в профиль');
- if(!hotelPrograms.some(h=>h.id===hotelId))throw Error('Программа отеля недоступна');
+ if(!hotelPrograms.some(h=>h.id===hotelId))throw Error(novemberEditorialText("Т-3498", 'Программа отеля недоступна', "Программа лояльности недоступна"));
  return {...s,hotelMemberships:{...s.hotelMemberships,[owner]:{...s.hotelMemberships?.[owner],[hotelId]:connected}}};
 }
 export function connectHotelProgram(s:Commerce,owner:string,hotelId:string,email:string,password:string):Commerce{

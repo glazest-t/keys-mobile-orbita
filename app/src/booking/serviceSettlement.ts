@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {tripEditorialText} from '../../../prototype/domain/tripEditorialText.mjs';
 import {depositBalance} from './deposit.ts';
 import {stayNow} from './stay.ts';
@@ -23,7 +24,7 @@ export function serviceStatusPresentation(b:Booking,r:ServiceRequest):{label:str
 }
 export const serviceStatusLabel=(b:Booking,r:ServiceRequest)=>serviceStatusPresentation(b,r).label;
 const starts=serviceStartsAt;
-function order(s:Commerce,owner:string,bookingId:string,id:string){const b=s.bookings.find(b=>b.id===bookingId&&b.owner===owner),r=b?.serviceRequests?.find(r=>r.id===id);if(!b||!r)throw Error('Заказ не найден');if(b.operation.status!=='confirmed')throw Error('Бронь отменена');if(b.stay?.status==='checked_out')throw Error('Проживание завершено');return {b,r};}
+function order(s:Commerce,owner:string,bookingId:string,id:string){const b=s.bookings.find(b=>b.id===bookingId&&b.owner===owner),r=b?.serviceRequests?.find(r=>r.id===id);if(!b||!r)throw Error(novemberEditorialText("Т-2214", 'Заказ не найден', "Не нашли заказ"));if(b.operation.status!=='confirmed')throw Error('Бронь отменена');if(b.stay?.status==='checked_out')throw Error('Проживание завершено');return {b,r};}
 function update(s:Commerce,b:Booking,r:ServiceRequest):Commerce{return {...s,bookings:s.bookings.map(v=>v===b?{...b,revision:(b.revision||0)+1,serviceRequests:b.serviceRequests!.map(v=>v.id===r.id?r:v)}:v)};}
 export function servicePolicy(r:ServiceRequest):NonNullable<ServiceRequest['cancellation']>{
  // Policy is snapshotted when the hotel confirms the request.

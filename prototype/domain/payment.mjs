@@ -1,3 +1,4 @@
+import {novemberEditorialText} from './novemberEditorialText.mjs';
 import {editorialText} from './editorialText.mjs';
 // Framework-independent demo logic. No external requests or real payments.
 export class DomainError extends Error {
@@ -111,7 +112,7 @@ export function confirmPayment(state, { userId, bookingId, quote, method, cashNo
 export function cancelFreeBooking(state, { userId, bookingId, freeCancellationAllowed }) {
   const id = `${userId}:${bookingId}`;
   const operation = state.operations[id];
-  if (!operation) throw new DomainError('BOOKING_NOT_FOUND', 'Подтверждённая бронь не найдена');
+  if (!operation) throw new DomainError('BOOKING_NOT_FOUND', novemberEditorialText("Т-3708", 'Подтверждённая бронь не найдена', "Не нашли подтверждённую бронь"));
   if (operation.status === 'cancelled') return { state, operation, duplicate: true };
   if (freeCancellationAllowed !== true) throw new DomainError('PENALTY_REVIEW_REQUIRED', 'Нужен расчёт условий отмены');
   const balances = { ...state.balances };

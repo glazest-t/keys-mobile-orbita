@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {entryEditorialText} from '../entryEditorialText.ts';
 import {useEffect,useState,useRef,type CSSProperties} from 'react';
 import {useReducedMotion} from 'motion/react';
@@ -14,7 +15,7 @@ import './onboarding.css';
 function onboardingSlides(){return [
  {id:'room-control',art:'',title:entryEditorialText('ДОП-002','Управляйте номером','Управляйте проживанием'),lead:'Управляйте ',accent:entryEditorialText('ДОП-002','номером','проживанием'),text:entryEditorialText('ДОП-003','Все возможности — в вашем телефоне.','Без звонков на ресепшн и очередей на стойке')},
  {id:'dual-benefits',art:'',title:'Двойная выгода',lead:'Двойная ',accent:'выгода',text:''},
- {id:'personal-selection',art:'',title:'Подборка, которая понимает вас',lead:'Подборка, ',accent:'которая понимает вас',text:'Учимся на ваших поездках и выборе, учитываем избранное — и находим отели под ваши пожелания.'},
+ {id:'personal-selection',art:'',title:'Подборка, которая понимает вас',lead:'Подборка, ',accent:'которая понимает вас',text:novemberEditorialText("Т-2934", 'Учимся на ваших поездках и выборе, учитываем избранное — и находим отели под ваши пожелания.', "Учитываем ваши поездки и избранное — и подбираем варианты под вас")},
 ];}
 
 export function Onboarding({onStart,onLogin,registered=false}:{onStart:()=>void;onLogin:()=>void;registered?:boolean}){

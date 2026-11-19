@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../prototype/domain/novemberEditorialText.mjs';
 import {entryEditorialText} from './entryEditorialText.ts';
 import {normalizeContactPhone} from './travelers/contactPhone.ts';
 export type Traveler = {id:string; name:string; surname:string; patronymic:string; birthDate:string; citizenship:string; phone:string; email:string; primary?:boolean};
@@ -61,7 +62,7 @@ export function decodeState(raw:string|null):State{
  for(const [phone,u] of Object.entries(value.users) as [string,User][]){
   if(normalizePhone(phone)!==phone||u.phone!==phone||!validName(u.name)||!Array.isArray(u.travelers)||!u.travelers.every(t=>typeof t.id==='string'&&['name','surname','patronymic','birthDate','citizenship','phone','email'].every(k=>typeof (t as unknown as Record<string,unknown>)[k]==='string')))throw Error('Повреждены данные профиля');
  }
- if(value.activePhone!==null&&!value.users[value.activePhone])throw Error('Профиль не найден');
+ if(value.activePhone!==null&&!value.users[value.activePhone])throw Error(novemberEditorialText("Т-3643", 'Профиль не найден', "Не нашли профиль"));
  if(value.request&&(!normalizePhone(value.request.phone)||!['issuedAt','expiresAt','resendAt'].every(k=>Number.isFinite(value.request[k]))))throw Error('Повреждён запрос кода');
  return {...initialState(),...value};
 }

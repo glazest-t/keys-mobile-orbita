@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {isDesktop} from '../desktop/surface';
 import {useState} from 'react';
 import {Field,Icon} from '../ui';
@@ -23,6 +24,6 @@ export function TravelerFields({draft,errors,onChange}:{draft:Traveler;errors:Re
   <ContactPhoneField value={draft.phone} error={errors.phone} onChange={value=>onChange('phone',value)}/>
   <Field label="Почта" type="email" autoComplete="email" value={draft.email} error={errors.email} onChange={e=>onChange('email',e.currentTarget.value)}/>
   {dateOpen&&<BirthDatePicker value={draft.birthDate} onClose={()=>setDateOpen(false)} onSave={value=>{onChange('birthDate',value);setDateOpen(false);}}/>}
-  <BottomSheet title="Гражданство" open={open} onOpenChange={setOpen} snap={.85}><div className="sheet-body citizenship-sheet"><Field label="Поиск страны" placeholder="Название страны" value={query} onChange={e=>setQuery(e.currentTarget.value)}/><div className="citizenship-options"><button type="button" aria-pressed={!draft.citizenship} onPointerDown={e=>{if(!isDesktop)e.preventDefault();}} onClick={()=>choose('')}><span>Не указывать</span>{!draft.citizenship&&<Icon name="check" size={18} inheritColor/>}</button>{choices.map(country=><button type="button" key={country} aria-pressed={draft.citizenship===country} onPointerDown={e=>{if(!isDesktop)e.preventDefault();}} onClick={()=>choose(country)}><span>{country}</span>{draft.citizenship===country&&<Icon name="check" size={18} inheritColor/>}</button>)}</div>{!choices.length&&<p>Страна не найдена</p>}</div></BottomSheet>
+  <BottomSheet title="Гражданство" open={open} onOpenChange={setOpen} snap={.85}><div className="sheet-body citizenship-sheet"><Field label="Поиск страны" placeholder="Название страны" value={query} onChange={e=>setQuery(e.currentTarget.value)}/><div className="citizenship-options"><button type="button" aria-pressed={!draft.citizenship} onPointerDown={e=>{if(!isDesktop)e.preventDefault();}} onClick={()=>choose('')}><span>Не указывать</span>{!draft.citizenship&&<Icon name="check" size={18} inheritColor/>}</button>{choices.map(country=><button type="button" key={country} aria-pressed={draft.citizenship===country} onPointerDown={e=>{if(!isDesktop)e.preventDefault();}} onClick={()=>choose(country)}><span>{country}</span>{draft.citizenship===country&&<Icon name="check" size={18} inheritColor/>}</button>)}</div>{!choices.length&&<p>{novemberEditorialText("Т-3685", "Страна не найдена", "Не нашли страну")}</p>}</div></BottomSheet>
  </>;
 }

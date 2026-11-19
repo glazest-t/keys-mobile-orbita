@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {BottomSheet} from '../mobile';
 import {Button} from '../ui';
 import type {Commerce} from '../booking/model';
@@ -9,7 +10,7 @@ const hotelProgramSites:Record<string,string>={'orbit-sea':'https://manteracongr
 
 export function ProgramSummarySheet({open,name,city,programUrl,onClose,onBook,children}:{open:boolean;name:string;city?:string;programUrl?:string;onClose:()=>void;onBook:()=>void;children:ReactNode}){
  return <BottomSheet open={open} onOpenChange={value=>{if(!value)onClose();}} title={name} description={city} snap={.65}>
-  <div className="sheet-body hotel-program-summary">{children}{programUrl&&<p className="benefit-muted hotel-program-site-note">Условия программы и доступные тарифы — <a className="hotel-program-site-link" href={programUrl} target="_blank" rel="noopener noreferrer">на сайте отеля</a>.</p>}<Button onClick={onBook}>Забронировать</Button></div>
+  <div className="sheet-body hotel-program-summary">{children}{programUrl&&<p className="benefit-muted hotel-program-site-note">Условия программы и доступные тарифы — <a className="hotel-program-site-link" href={programUrl} target="_blank" rel="noopener noreferrer">{novemberEditorialText("Т-3493", "на сайте отеля", "на сайте программы лояльности")}</a>.</p>}<Button onClick={onBook}>Забронировать</Button></div>
  </BottomSheet>;
 }
 

@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {catalog,searchError,startDraft,quoteDraft,type Commerce,type Search} from '../booking/model.ts';
 import {roomOffers,selectRoomRate} from '../booking/roomOffers.ts';
 import {mealIncludesBreakfast} from '../booking/searchFacets.ts';
@@ -98,7 +99,7 @@ export function finderHotels(s:Commerce,owner:string,trip:FinderTrip){
  }).sort((a,b)=>b.matches.matched.length-a.matches.matched.length||hotelVisual(b.h.id).rating-hotelVisual(a.h.id).rating);
 }
 export function sendFinderMessage(s:Commerce,owner:string,chatId:string,text:string,id:string,now=Date.now()):Commerce{
- const c=finderLibrary(s,owner).chats.find(c=>c.id===chatId);if(!c)throw Error('Диалог не найден');
+ const c=finderLibrary(s,owner).chats.find(c=>c.id===chatId);if(!c)throw Error(novemberEditorialText("Т-0112", 'Диалог не найден', "Не нашли диалог"));
  const clean=text.trim();if(!clean||clean.length>2000)throw Error('Напишите сообщение до 2000 символов');
  if(c.messages.some(m=>m.status==='working'))throw Error('Дождитесь ответа или остановите его');
  const trip=interpretFinderTrip(c.trip,clean);
@@ -131,7 +132,7 @@ function hotelBasePrice(id:string){const ids=catalog.rooms.filter(r=>r.hotelId==
 export function stopFinderReply(s:Commerce,owner:string,chatId:string,id:string){return updateFinderChat(s,owner,chatId,c=>({...c,messages:c.messages.map(m=>m.id===id&&m.status==='working'?{...m,status:'stopped',text:'Ответ остановлен.'}:m)}));}
 export function retryFinderReply(s:Commerce,owner:string,chatId:string,id:string){return updateFinderChat(s,owner,chatId,c=>({...c,messages:c.messages.map(m=>m.id===id&&(m.status==='stopped'||m.status==='error')?{...m,status:'working',text:'',at:Date.now()}:m)}));}
 export function startFinderBooking(s:Commerce,owner:string,chatId:string,hotelId:string,trip:FinderTrip,id:string,rateId?:string):Commerce{
- const chat=finderLibrary(s,owner).chats.find(c=>c.id===chatId);if(!chat?.messages.some(m=>m.hotelIds?.includes(hotelId)))throw Error('Отель не найден в этом диалоге');
+ const chat=finderLibrary(s,owner).chats.find(c=>c.id===chatId);if(!chat?.messages.some(m=>m.hotelIds?.includes(hotelId)))throw Error(novemberEditorialText("Т-0136", 'Отель не найден в этом диалоге', "Не нашли в диалоге"));
  if(!trip.datesSet||!trip.guestsSet)throw Error('Выберите даты и гостей');
  const error=searchError(trip.search);if(error)throw Error(error);
  let next=startDraft(finderSearchCommerce(s,trip),hotelId,id,owner);

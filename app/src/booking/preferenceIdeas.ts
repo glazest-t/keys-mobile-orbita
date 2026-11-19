@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import type {PreferenceDraft} from './preferences.ts';
 
 export type IdeaAnswer='want'|'no'|'skip';
@@ -26,7 +27,7 @@ export function nextHolidayIdea(d:PreferenceDraft){
  return holidayIdeas.filter(i=>!d.ideaAnswers?.[i.id]).map((idea,index)=>({idea,index,weight:chosen.includes(idea.interest)?-2:likedThemes.includes(idea.theme)?2:d.party==='kids'&&idea.theme==='nature'?1:0})).sort((a,b)=>b.weight-a.weight||a.index-b.index)[0]?.idea;
 }
 export function answerHolidayIdea(d:PreferenceDraft,id:string,answer:IdeaAnswer):PreferenceDraft{
- const idea=holidayIdeas.find(i=>i.id===id);if(!idea)throw Error('Идея не найдена');
+ const idea=holidayIdeas.find(i=>i.id===id);if(!idea)throw Error(novemberEditorialText("Т-1404", 'Идея не найдена', "Не нашли идею"));
  if(d.ideaAnswers?.[id])return d;
  return {...d,ideaHistory:[...(d.ideaHistory||[]),{id,answers:{...d.ideaAnswers},dismissed:[...(d.dismissedInterests||[])]}],ideaAnswers:{...d.ideaAnswers,[id]:answer},dismissedInterests:answer==='want'?(d.dismissedInterests||[]).filter(i=>i!==idea.interest):d.dismissedInterests};
 }

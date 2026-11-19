@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {type Commerce,type Draft} from './model.ts';
 export type PriceWatch={mode:'any'|'target';targetMinor:number|null;push:boolean;active:boolean;priceMinor:number};
 export function watchKey(owner:string|null,d:Draft){return JSON.stringify([owner||'guest',d.hotelId,d.roomId,d.rateId,d.search.checkIn,d.search.checkOut,d.search.adults,[...d.search.childrenAges].sort((a,b)=>a-b)]);}
@@ -29,7 +30,7 @@ export function priceWatchEntries(s:Commerce,owner:string|null):WatchEntry[]{
  });
 }
 function ownedWatch(s:Commerce,owner:string|null,key:string){
- if(!s.priceWatches?.[key]||!watchDraft(key,owner))throw Error('Наблюдение не найдено');
+ if(!s.priceWatches?.[key]||!watchDraft(key,owner))throw Error(novemberEditorialText("Т-1755", 'Наблюдение не найдено', "Не нашли отслеживаемое предложение"));
  return s.priceWatches[key];
 }
 export function setWatchActive(s:Commerce,owner:string|null,key:string,active:boolean):Commerce{

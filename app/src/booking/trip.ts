@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {mealIncludesBreakfast} from './searchFacets.ts';
 import {guaranteedTimeService} from './stayTimeServices.ts';
 import {selectedBookingTime} from './bookingTimes.ts';
@@ -22,7 +23,7 @@ export function tripFacts(b:Booking){
 }
 export function sendTripMessage(state:Commerce,owner:string,bookingId:string,text:string,id:string,at=new Date().toISOString()):Commerce{
  const b=state.bookings.find(b=>b.id===bookingId&&canManageBooking(state,owner,b));
- if(!b)throw Error('Поездка не найдена');
+ if(!b)throw Error(novemberEditorialText("Т-2556", 'Поездка не найдена', "Не нашли поездку"));
  const messages=state.tripMessages?.[bookingId]||[];
  if(!id)throw Error('Не удалось сохранить сообщение');
  if(messages.some(m=>m.id===id))return state;

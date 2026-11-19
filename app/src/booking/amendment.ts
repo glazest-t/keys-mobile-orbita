@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {bookingPayment} from './bookingPayment.ts';
 import {calculateBookingQuote} from '../../../prototype/domain/booking.mjs';
 import {readWallets,walletIds} from '../../../prototype/domain/payment.mjs';
@@ -13,30 +14,30 @@ export function amendmentInput(b:Booking):AmendmentInput{return {search:structur
 export type BookingChange={id:string;at:string;fromRevision:number;previousSearch:Search;previousDraft?:Booking['draft'];paidMinor:number;refundMinor:number;returnedHotelPoints:number;returnedKeysPoints:number};
 function findBooking(state:Commerce,owner:string,id:string,now:string){
  const b=state.bookings.find(v=>v.id===id&&v.owner===owner);
- if(!b)throw Error('Бронь не найдена');
- if(b.stay)throw Error('Для изменения проживания обратитесь в отель');
- if(b.operation.status!=='confirmed')throw Error('Отменённую бронь нельзя изменить');
- if(!Number.isFinite(Date.parse(now))||Date.parse(now)>=Date.parse(b.draft.search.checkIn+'T15:00:00+03:00'))throw Error('Для изменения после начала заезда свяжитесь с отелем');
+ if(!b)throw Error(novemberEditorialText("Т-0153", 'Бронь не найдена', "Не нашли бронь"));
+ if(b.stay)throw Error(novemberEditorialText("Т-0154", 'Для изменения проживания обратитесь в отель', "Чтобы изменить условия проживания, свяжитесь с администратором"));
+ if(b.operation.status!=='confirmed')throw Error(novemberEditorialText("Т-0155", 'Отменённую бронь нельзя изменить', "Нельзя изменить отменённую бронь"));
+ if(!Number.isFinite(Date.parse(now))||Date.parse(now)>=Date.parse(b.draft.search.checkIn+'T15:00:00+03:00'))throw Error(novemberEditorialText("Т-0156", 'Для изменения после начала заезда свяжитесь с отелем', "Проживание уже началось. Чтобы изменить бронь, свяжитесь с администратором"));
  return b;
 }
 export function previewAmendment(state:Commerce,owner:string,id:string,input:AmendmentInput,now=new Date().toISOString()){
  const b=findBooking(state,owner,id,now),search={...input.search,city:b.draft.search.city};
- if(b.serviceRequests?.some(r=>(r.operation?.status==='confirmed'||r.settlement==='at_hotel'&&['confirmed','completed'].includes(r.status)))&&(search.checkIn!==b.draft.search.checkIn||search.checkOut!==b.draft.search.checkOut||search.adults!==b.draft.search.adults||JSON.stringify(search.childrenAges)!==JSON.stringify(b.draft.search.childrenAges)))throw Error('Перед изменением дат или гостей отмените добавленные услуги в разделе «Все услуги отеля». Условия возврата указаны в каждом заказе');
+ if(b.serviceRequests?.some(r=>(r.operation?.status==='confirmed'||r.settlement==='at_hotel'&&['confirmed','completed'].includes(r.status)))&&(search.checkIn!==b.draft.search.checkIn||search.checkOut!==b.draft.search.checkOut||search.adults!==b.draft.search.adults||JSON.stringify(search.childrenAges)!==JSON.stringify(b.draft.search.childrenAges)))throw Error(novemberEditorialText("Т-0157", 'Перед изменением дат или гостей отмените добавленные услуги в разделе «Все услуги отеля». Условия возврата указаны в каждом заказе', "Перед изменением дат или гостей отмените добавленные услуги в разделе Все услуги. Условия возврата указаны в каждом заказе"));
  const error=searchError(search,now.slice(0,10));if(error)throw Error(error);
  const roomId=input.roomId||b.draft.roomId,rateId=input.rateId||b.draft.rateId;
- if(!catalog.rooms.some(r=>r.id===roomId&&r.hotelId===b.draft.hotelId))throw Error('Выберите номер этого отеля');
- if(!available({...state,bookings:state.bookings.filter(v=>v!==b)},roomId,search))throw Error('Этот номер недоступен на выбранные даты или для такого числа гостей');
+ if(!catalog.rooms.some(r=>r.id===roomId&&r.hotelId===b.draft.hotelId))throw Error(novemberEditorialText("Т-0158", 'Выберите номер этого отеля', "Выберите вариант размещения"));
+ if(!available({...state,bookings:state.bookings.filter(v=>v!==b)},roomId,search))throw Error(novemberEditorialText("Т-0159", 'Этот номер недоступен на выбранные даты или для такого числа гостей', "Этот вариант недоступен на выбранные даты или состав гостей"));
  const rate=catalog.rates.find(r=>r.id===rateId&&r.roomId===roomId&&r.hotelId===b.draft.hotelId)!;
  if(!rate)throw Error('Тариф недоступен');
  const sameRate=rateId===b.draft.rateId;
- if(!sameRate&&!canBookRate(state,owner,rate))throw Error('Этот тариф недоступен для вашего профиля');
+ if(!sameRate&&!canBookRate(state,owner,rate))throw Error(novemberEditorialText("Т-0161", 'Этот тариф недоступен для вашего профиля', "Тариф недоступен"));
  const contact={...(input.contact||b.draft.contact)},guests=input.guests?input.guests.map(g=>({...g})):bookingGuests({...b.draft,...trimGuests(b.draft,search)}),wishes=input.wishes??b.draft.stayWishes?.note??'';
- if(input.contact&&JSON.stringify(contact)!==JSON.stringify(b.draft.contact)&&Object.keys(contactErrors(contact)).length)throw Error('Проверьте имя, фамилию, телефон и почту основного гостя');
+ if(input.contact&&JSON.stringify(contact)!==JSON.stringify(b.draft.contact)&&Object.keys(contactErrors(contact)).length)throw Error(novemberEditorialText("Т-0162", 'Проверьте имя, фамилию, телефон и почту основного гостя', "Проверьте данные основного гостя"));
  const guestError=additionalGuestError({...b.draft,search,...guestPatch(guests)});if(guestError)throw Error(guestError);
  if(wishes.length>WISH_LIMIT)throw Error(`Пожелание — не более ${WISH_LIMIT} символов`);
  const services=[...new Set(input.services)];
  if(services.includes('sea-early')&&b.serviceRequests?.some(r=>r.kind==='early'&&(r.operation?.status==='confirmed'||r.settlement==='at_hotel'&&r.status==='confirmed')))throw Error('Ранний заезд уже оплачен отдельным заказом');
- if(services.some(id=>!b.draft.services.includes(id)&&id!=='sea-early')||b.draft.services.some(id=>id!=='sea-early'&&!services.includes(id)))throw Error('Эти услуги нельзя изменить здесь');
+ if(services.some(id=>!b.draft.services.includes(id)&&id!=='sea-early')||b.draft.services.some(id=>id!=='sea-early'&&!services.includes(id)))throw Error(novemberEditorialText("Т-0165", 'Эти услуги нельзя изменить здесь', "Нельзя изменить эти услуги здесь"));
  const items=services.filter(id=>id!=='sea-breakfast'||rate.mealPlan!=='breakfast').map(id=>{
   const s=catalog.services.find(s=>s.id===id&&s.hotelId===b.draft.hotelId);if(!s)throw Error('Услуга недоступна');
   return {...s,quantity:id==='sea-breakfast'?nights(search)*(search.adults+search.childrenAges.length):1};
@@ -51,13 +52,13 @@ export function previewAmendment(state:Commerce,owner:string,id:string,input:Ame
 }
 export type AmendmentPreview=ReturnType<typeof previewAmendment>;
 export function commitAmendment(state:Commerce,owner:string,expected:AmendmentPreview,requestId:string,outcome:'success'|'failure'='success',now=new Date().toISOString()):Commerce{
- if(!requestId)throw Error('Не удалось подтвердить изменение');
+ if(!requestId)throw Error(novemberEditorialText("Т-0167", 'Не удалось подтвердить изменение', "Не удалось изменить. Попробуйте ещё раз"));
  const previous=state.bookings.find(b=>b.id===expected.bookingId&&b.owner===owner);
  if(previous?.changes?.some(c=>c.id===requestId))return state;
  const b=findBooking(state,owner,expected.bookingId,now);
- if((b.revision||0)!==expected.revision)throw Error('Бронь уже изменилась. Откройте её заново');
+ if((b.revision||0)!==expected.revision)throw Error(novemberEditorialText("Т-0168", 'Бронь уже изменилась. Откройте её заново', "Бронь уже изменена — откройте её снова"));
  const fresh=previewAmendment(state,owner,b.id,expected.input,now);
- if(JSON.stringify(fresh)!==JSON.stringify(expected))throw Error('Условия изменились. Проверьте расчёт ещё раз');
+ if(JSON.stringify(fresh)!==JSON.stringify(expected))throw Error(novemberEditorialText("Т-0169", 'Условия изменились. Проверьте расчёт ещё раз', "Условия изменены. Проверьте расчёт"));
  if(fresh.extraPaid>0&&outcome==='failure')throw Error('Доплата не прошла. Исходная бронь сохранена');
  const ids=walletIds(owner,b.draft.hotelId),balances={...state.payment.balances,[ids.hotel]:fresh.quote.remaining.hotelPoints,[ids.keys]:fresh.quote.remaining.keysPoints};
  const operation={...b.operation,orderTotalMinor:fresh.quote.orderTotalMinor,pointsMinor:fresh.quote.applied.pointsMinor,debits:{[ids.hotel]:fresh.quote.applied.hotelPoints,[ids.keys]:fresh.quote.applied.keysPoints},paidCashMinor:fresh.quote.cashDueMinor-fresh.dueAtHotel,dueAtHotelMinor:fresh.dueAtHotel};

@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {useId,useRef,useState} from 'react';
 import {KeyboardInput,useKeyboard} from '../mobile';
 import {Button,Icon,IconButton} from '../ui';
@@ -42,7 +43,7 @@ export function SearchJourney({commerce,initialStep,onApply,onClose}:{commerce:C
     </button>
     <div id={`${id}-${key}`} hidden={step!==key} className="search-step-content">
      {key==='city'&&<>
-      <div className="search-journey-input"><Icon name="nav-search" size={20} inheritColor/><KeyboardInput aria-label="город или название отеля" placeholder={selectedHotel?.name||draft.city||'город или название отеля'} value={query} onChange={e=>setQuery(e.target.value)} onKeyDown={e=>{if(e.key==='Enter'&&!e.nativeEvent.isComposing){e.preventDefault();next();}}} enterKeyHint="search"/>{query&&<IconButton name="close" label="Очистить направление" onClick={()=>setQuery('')}/>}</div>
+      <div className="search-journey-input"><Icon name="nav-search" size={20} inheritColor/><KeyboardInput aria-label={novemberEditorialText("Т-2025", "город или название отеля", "Город или название места")} placeholder={selectedHotel?.name||draft.city||novemberEditorialText("Т-2026", 'город или название отеля', "Город или название места")} value={query} onChange={e=>setQuery(e.target.value)} onKeyDown={e=>{if(e.key==='Enter'&&!e.nativeEvent.isComposing){e.preventDefault();next();}}} enterKeyHint="search"/>{query&&<IconButton name="close" label="Очистить направление" onClick={()=>setQuery('')}/>}</div>
       <p className="search-journey-label">{query.trim()?'Города и отели':'Популярные направления'}</p>
       <div className="search-journey-destinations">{query.trim()?suggestions.map(s=><button type="button" key={s.id} onClick={()=>select(s.city,s.hotelId)}><span className="icon-tile"><Icon name={s.hotelId?'room':'pin'} size={20} inheritColor/></span><span><strong>{s.title}</strong><small>{s.subtitle}</small></span></button>):popularCities.map(city=><button type="button" key={city} onClick={()=>select(city)}><span className="icon-tile"><Icon name="pin" size={20} inheritColor/></span><span><strong>{city}</strong></span></button>)}</div>
       {query.trim()&&!suggestions.length&&<p className="search-journey-label">Ничего не нашли. Попробуйте другое название.</p>}

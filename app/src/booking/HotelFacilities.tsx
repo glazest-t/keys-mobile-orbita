@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {useState} from 'react';
 import {Icon} from '../ui';
 import {Carousel} from '../mobile';
@@ -85,7 +86,7 @@ export function HotelFacilities({amenities,hotelId,onShowAll,showPopular=true}:{
 
  return <>
   {showPopular?<section className="hotel-section hotel-amenities-section">
-   <h2>Удобства отеля</h2>
+   <h2>{novemberEditorialText("Т-1077", "Удобства отеля", "Удобства")}</h2>
    {facilitiesCard}
   </section>:facilitiesCard}
   {popular.length>0&&<section className={`hotel-section hotel-popular-facilities${isDesktop?'':' hotel-popular-facilities-mobile'}`}>

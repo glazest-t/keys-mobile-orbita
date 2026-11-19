@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {tripEditorialText} from '../../../prototype/domain/tripEditorialText.mjs';
 import {settleHotelLoyalty} from '../rewards/loyalty.ts';
 import {depositBalance,returnDeposit} from './deposit.ts';
@@ -19,7 +20,7 @@ export function stayBill(b:Booking){
  const hotelDue=charges.filter(r=>r.settlement==='at_hotel'&&!r.operation).reduce((n,r)=>n+r.amountMinor,0);
  return {due,hotelDue,onlineDue:due-hotelDue,cash,points,total,charges,pending:requests.filter(r=>['pending','review'].includes(requestStatus(b,r)))};
 }
-function own(s:Commerce,owner:string,id:string){const b=s.bookings.find(b=>b.id===id&&b.owner===owner);if(!b)throw Error('Поездка не найдена');if(b.operation.status!=='confirmed'||!b.stay)throw Error(tripEditorialText("ПР-243", 'Счёт доступен после заселения', "Счёт будет доступен после заселения"));return b;}
+function own(s:Commerce,owner:string,id:string){const b=s.bookings.find(b=>b.id===id&&b.owner===owner);if(!b)throw Error(novemberEditorialText("Т-2293", 'Поездка не найдена', "Не нашли поездку"));if(b.operation.status!=='confirmed'||!b.stay)throw Error(tripEditorialText("ПР-243", 'Счёт доступен после заселения', "Счёт будет доступен после заселения"));return b;}
 function active(s:Commerce,owner:string,id:string){const b=own(s,owner,id);if(b.stay!.status!=='in_house')throw Error('Проживание завершено');return b;}
 function replace(s:Commerce,b:Booking):Commerce{return {...s,bookings:s.bookings.map(v=>v.id===b.id&&v.owner===b.owner?b:v)};}
 const friendly=(b:Booking)=>catalog.rates.find(r=>r.id===b.draft.rateId)?.kind==='friendly_rate';

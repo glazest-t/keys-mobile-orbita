@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import type {Booking,Commerce} from './model.ts';
 
 export type BalancePayment={id:string;at:string;amountMinor:number};
@@ -10,7 +11,7 @@ export function quoteBookingBalance(b:Booking){
 }
 export function payBookingBalance(s:Commerce,owner:string,expected:ReturnType<typeof quoteBookingBalance>,eventId:string,outcome:'success'|'failure',now=new Date().toISOString()):Commerce{
  const b=s.bookings.find(b=>b.id===expected.bookingId&&b.owner===owner);
- if(!b)throw Error('Бронь не найдена');
+ if(!b)throw Error(novemberEditorialText("Т-0275", 'Бронь не найдена', "Не нашли бронь"));
  if(!eventId)throw Error('Повторите оплату');
  if(b.balancePayments?.some(p=>p.id===eventId))return s;
  const fresh=quoteBookingBalance(b);

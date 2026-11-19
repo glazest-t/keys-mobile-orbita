@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {useEffect,useRef,useState} from 'react';
 import {motion,useReducedMotion} from 'motion/react';
 import {MobileScroll,useKeyboardInsets,BottomSheet} from '../mobile';
@@ -50,8 +51,8 @@ function PilotInvitation(){
  </div>;
 }
 function PilotHotelCard(){
- return <article className="hotelier-pilot-rate" aria-label="Пример карточки отеля с Friendly Rate">
-  <div className="hotelier-pilot-photo"><img src="/brand/illustrations/hotelier-pilot-seaside.png" alt="Отель у моря"/></div>
+ return <article className="hotelier-pilot-rate" aria-label={novemberEditorialText("Т-2895", "Пример карточки отеля с Friendly Rate", "Пример карточки объекта с Friendly Rates")}>
+  <div className="hotelier-pilot-photo"><img src="/brand/illustrations/hotelier-pilot-seaside.png" alt={novemberEditorialText("Т-2896", "Отель у моря", "У моря")}/></div>
   <div className="hotelier-pilot-rate-copy"><div className="hotelier-pilot-hotel-info"><strong>Орбита у моря</strong><p><Icon name="pin" size={14}/>Сочи · 300 м до моря</p><div className="hotelier-pilot-hotel-rating"><RatingBadge value={4.9}/><span>Превосходно</span></div></div><div className="hotelier-pilot-hotel-price"><s>8 500 ₽</s><strong>5 525 ₽</strong><FriendlyRateBadge/></div></div>
  </article>;
 }

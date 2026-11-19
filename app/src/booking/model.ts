@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {roomFiltersFromSearch,type RoomSelectionFilters} from './roomFilters.ts';
 import {editorialText} from '../../../prototype/domain/editorialText.mjs';
 import {cancellationPolicyFor,bookingCancellationPolicy,policyDeadline,policyPenalty} from './bookingCancellation.ts';
@@ -112,7 +113,7 @@ export function commitBooking(state:Commerce,owner:string,expected:BookingQuote,
  return {...state,draft:{...savedDraft,step:'confirmation'},payment:paid.state,selectedBooking:d.id,bookings:[...state.bookings,{id:d.id,owner,cancellationPolicy:cancellationPolicyFor(savedDraft),draft:structuredClone(savedDraft),quote:fresh,operation:paid.operation,createdAt:now,hotelLoyalty:hotelLoyaltySnapshot(state,owner,d.hotelId,d.rateId)}]};
 }
 export function cancelBooking(state:Commerce,owner:string,id:string,now=new Date().toISOString()):Commerce{
- const booking=state.bookings.find(b=>b.id===id&&b.owner===owner);if(!booking)throw Error('Бронь не найдена');
+ const booking=state.bookings.find(b=>b.id===id&&b.owner===owner);if(!booking)throw Error(novemberEditorialText("Т-1253", 'Бронь не найдена', "Не нашли бронь"));
  if(booking.operation.status==='cancelled')return state;
  const result=cancellationPreview(booking,now),balances={...state.payment.balances};
  for(const [id,amount] of Object.entries(result.pointReturns))balances[id]=(balances[id]||0)+amount;

@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {promotionBasisPoints} from './promotions.ts';
 import {hotelProgramDiscount} from '../rewards/loyalty.ts';
 import {catalog,quoteDraft,type Commerce,type Draft} from './model.ts';
@@ -11,7 +12,7 @@ export function userPriceNotices(s:Commerce,owner:string,now=Date.now()){
 export function applyPriceEvent(s:Commerce,owner:string,key:string,deltaMinor:number,id:string,now=new Date().toISOString()):Commerce{
  if((s.priceEvents||[]).some(e=>e.id===id))return s;
  const entry=priceWatchEntries(s,owner).find(e=>e.key===key);
- if(!entry||entry.currentMinor===null)throw Error(entry?.unavailable||'Наблюдение не найдено');
+ if(!entry||entry.currentMinor===null)throw Error(entry?.unavailable||novemberEditorialText("Т-1742", 'Наблюдение не найдено', "Не нашли отслеживаемое предложение"));
  if(!id||!Number.isSafeInteger(deltaMinor)||!deltaMinor||!Number.isFinite(Date.parse(now)))throw Error('Проверьте изменение цены');
  const target=entry.currentMinor+deltaMinor;if(!Number.isSafeInteger(target)||target<=0)throw Error('Цена должна остаться больше нуля');
  const rate=catalog.rates.find(r=>r.id===entry.draft.rateId)!,hotel=catalog.hotels.find(h=>h.id===entry.draft.hotelId)!;
@@ -31,7 +32,7 @@ export function readPriceNotices(s:Commerce,owner:string,id?:string):Commerce{
  return {...s,priceNotices:(s.priceNotices||[]).map(n=>n.owner===owner&&Date.parse(n.createdAt)<=Date.now()&&(!id||n.id===id)?{...n,read:true}:n)};
 }
 export function openPriceNotice(s:Commerce,owner:string,id:string,draftId:string):Commerce{
- const n=userPriceNotices(s,owner).find(n=>n.id===id);if(!n)throw Error('Уведомление не найдено');
+ const n=userPriceNotices(s,owner).find(n=>n.id===id);if(!n)throw Error(novemberEditorialText("Т-1748", 'Уведомление не найдено', "Не нашли уведомление"));
  // A notice keeps its snapshot even if the observation was deleted.
  const scoped={...s,priceWatches:{...s.priceWatches,[n.key]:s.priceWatches?.[n.key]||{mode:'any' as const,targetMinor:null,push:false,active:false,priceMinor:n.currentMinor}}};
  const entry=priceWatchEntries(scoped,owner).find(e=>e.key===n.key);if(!entry||entry.unavailable)throw Error(entry?.unavailable||'Предложение недоступно');

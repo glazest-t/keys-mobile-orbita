@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {editorialText} from '../../../prototype/domain/editorialText.mjs';
 import {bookingNumber} from '../booking/bookingNumber.ts';
 import {catalog,dateLabel,formatMoney,guestLabel,type Booking,type Commerce} from '../booking/model.ts';
@@ -23,14 +24,14 @@ export function historyTrips(s:Commerce,owner:string,query='',filter='Все'){
 }
 /** Visibility only: the hotel booking, payment and other travellers' access stay intact. */
 export function removeTrip(s:Commerce,owner:string,id:string):Commerce{
- const b=s.bookings.find(b=>b.id===id&&canManageBooking(s,owner,b));if(!b)throw Error('Бронь не найдена');
+ const b=s.bookings.find(b=>b.id===id&&canManageBooking(s,owner,b));if(!b)throw Error(novemberEditorialText("Т-3041", 'Бронь не найдена', "Не нашли бронь"));
  if(s.hiddenTrips?.[owner]?.includes(id))return s;
  return {...s,hiddenTrips:{...s.hiddenTrips,[owner]:[...(s.hiddenTrips?.[owner]||[]),id]},selectedBooking:s.selectedBooking===id?null:s.selectedBooking};
 }
 export function restoreTripByNumber(s:Commerce,owner:string,number:string):Commerce{
  const code=number.trim().replace(/^№\s*/, '').toUpperCase();if(!code)throw Error(editorialText("РШ-309", "Введите номер бронирования", "Укажите номер брони"));
  const b=s.bookings.find(b=>[(b.number||b.id).toUpperCase(),bookingNumber(b)].includes(code)&&canManageBooking(s,owner,b));
- if(!b)throw Error(editorialText("РШ-310", "Бронь не найдена. Проверьте номер бронирования", "Бронь не найдена. Проверьте, что ввели её правильно"));
+ if(!b)throw Error(novemberEditorialText("Т-3043", editorialText("РШ-310", "Бронь не найдена. Проверьте номер бронирования", "Бронь не найдена. Проверьте, что ввели её правильно"), "Не нашли бронь. Проверьте номер и попробуйте ещё раз"));
  if(!s.hiddenTrips?.[owner]?.includes(b.id))throw Error('Эта бронь уже есть в приложении');
  return {...s,hiddenTrips:{...s.hiddenTrips,[owner]:s.hiddenTrips[owner].filter(id=>id!==b.id)},selectedBooking:b.id};
 }

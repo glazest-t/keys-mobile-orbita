@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {tripEditorialText} from '../../../prototype/domain/tripEditorialText.mjs';
 import {canManageBooking} from './bookingShare.ts';
 import {tripFacts,type ChatAction} from './trip.ts';
@@ -29,7 +30,7 @@ export function chatAnswer(b:Booking,text:string):Answer {
 }
 export function replyToTripMessage(state:Commerce,actor:string,bookingId:string,messageId:string,at=new Date().toISOString()):Commerce {
  const b=state.bookings.find(b=>b.id===bookingId&&canManageBooking(state,actor,b));
- if(!b)throw Error('Поездка не найдена');
+ if(!b)throw Error(novemberEditorialText("Т-0655", 'Поездка не найдена', "Не нашли поездку"));
  const messages=state.tripMessages?.[bookingId]||[],message=messages.find(m=>m.id===messageId);
  if(!message||message.role==='assistant'||message.replyState!=='pending')return state;
  if(messages.some(m=>m.replyTo===messageId))return state;

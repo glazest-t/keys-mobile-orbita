@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {tripEditorialText} from '../../../prototype/domain/tripEditorialText.mjs';
 import {mealIncludesBreakfast} from './searchFacets.ts';
 import {cancelPaidService} from './serviceSettlement.ts';
@@ -27,7 +28,7 @@ export function requestStatus(b:Booking,r:ServiceRequest,now=Date.now()){
 }
 export function activeRequests(b:Booking){return (b.serviceRequests||[]).filter(r=>['pending','confirmed','paid'].includes(requestStatus(b,r)));}
 export function pendingRequests(b:Booking){return (b.serviceRequests||[]).filter(r=>requestStatus(b,r)==='pending');}
-function ownBooking(s:Commerce,owner:string,id:string){const b=s.bookings.find(b=>b.owner===owner&&b.id===id);if(!b)throw Error('Бронь не найдена');if(b.operation.status!=='confirmed')throw Error('Бронь отменена');if(b.stay?.status==='checked_out')throw Error('Проживание завершено');return b;}
+function ownBooking(s:Commerce,owner:string,id:string){const b=s.bookings.find(b=>b.owner===owner&&b.id===id);if(!b)throw Error(novemberEditorialText("Т-2186", 'Бронь не найдена', "Не нашли бронь"));if(b.operation.status!=='confirmed')throw Error('Бронь отменена');if(b.stay?.status==='checked_out')throw Error('Проживание завершено');return b;}
 function update(s:Commerce,b:Booking,requests:ServiceRequest[]):Commerce{return {...s,bookings:s.bookings.map(v=>v===b?{...b,serviceRequests:requests,revision:(b.revision||0)+1}:v)};}
 export function requestEarly(s:Commerce,owner:string,bookingId:string,time:string,id:string,now=new Date().toISOString()){
  return addStayTimeService(s,owner,bookingId,'arrival',time,id,Date.parse(now));
@@ -51,7 +52,7 @@ export function requestBreakfast(s:Commerce,owner:string,bookingId:string,input:
  const amountMinor=breakfastQuote(b,input,now);
  return update(s,b,[...(b.serviceRequests||[]),{...input,time:input.mode==='buffet'?'11:00':input.time,comment:input.comment.trim(),id,kind:'breakfast',status:'pending',amountMinor,createdAt:now}]);
 }
-export function cancelServiceRequest(s:Commerce,owner:string,bookingId:string,id:string){const b=ownBooking(s,owner,bookingId);const r=b.serviceRequests?.find(r=>r.id===id);if(!r)throw Error('Заявка не найдена');if(r.status==='cancelled')return s;if(r.settlement==='at_hotel')return cancelPaidService(s,owner,bookingId,id);if(r.operation||r.status==='completed')throw Error('Откройте заказ, чтобы проверить условия отмены');return update(s,b,b.serviceRequests!.map(v=>v.id===id?{...v,status:'cancelled'}:v));}
+export function cancelServiceRequest(s:Commerce,owner:string,bookingId:string,id:string){const b=ownBooking(s,owner,bookingId);const r=b.serviceRequests?.find(r=>r.id===id);if(!r)throw Error(novemberEditorialText("Т-2197", 'Заявка не найдена', "Не нашли заявку"));if(r.status==='cancelled')return s;if(r.settlement==='at_hotel')return cancelPaidService(s,owner,bookingId,id);if(r.operation||r.status==='completed')throw Error('Откройте заказ, чтобы проверить условия отмены');return update(s,b,b.serviceRequests!.map(v=>v.id===id?{...v,status:'cancelled'}:v));}
 
 export function breakfastMornings(b:Booking){
  const dates:string[]=[];

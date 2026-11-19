@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {quoteDraft,commitBooking,type Commerce,type Booking} from './model.ts';
 import type {BookingQuote} from '../../../prototype/domain/booking.mjs';
 
@@ -14,7 +15,7 @@ export function beginBookingPayment(s:Commerce,owner:string,quote:BookingQuote,n
 }
 export function completeBookingPayment(s:Commerce,owner:string,id:string,outcome:'success'|'failure',now=new Date().toISOString()):Commerce{
  const b=s.bookings.find(b=>b.id===id&&b.owner===owner);
- if(!b)throw Error('Бронь не найдена');
+ if(!b)throw Error(novemberEditorialText("Т-1389", 'Бронь не найдена', "Не нашли бронь"));
  if(b.operation.status==='confirmed')return s;
  if(!awaitingPayment(b))throw Error('Эту бронь нельзя оплатить');
  const prepared={...s,bookings:s.bookings.filter(item=>item!==b),draft:structuredClone(b.draft)};

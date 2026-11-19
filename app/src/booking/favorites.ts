@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {catalog,startDraft,quoteDraft,searchError,type Commerce,type Search} from './model.ts';
 
 export const INBOX='inbox';
@@ -8,8 +9,11 @@ export function saveSwipeLike(s:Commerce,owner:string,hotelId:string):Commerce{
  const next=list?s:saveFavoriteList(s,owner,SWIPE_LIST,'Подбор по свайпу');
  return setFavorite(next,owner,hotelId,list?.id||SWIPE_LIST);
 }
-export const favoriteCountLabel=(n:number)=>`${n} ${n%10===1&&n%100!==11?'отель':n%10>=2&&n%10<=4&&(n%100<12||n%100>14)?'отеля':'отелей'}`;
+// Т-0812: preserve the count and Russian plural forms (Т-0813–Т-0815).
+export const favoriteCountLabel=(n:number)=>`${n} ${n%10===1&&n%100!==11?novemberEditorialText("Т-0813", 'отель', "место"):n%10>=2&&n%10<=4&&(n%100<12||n%100>14)?novemberEditorialText("Т-0814", 'отеля', "места"):novemberEditorialText("Т-0815", 'отелей', "мест")}`;
 export type FavoriteList={id:string;name:string;search:Search};
+/** Only the system inbox label is editorial; stored/user-created names stay intact. */
+export function favoriteListName(list:Pick<FavoriteList,'id'|'name'>){return list.id===INBOX?novemberEditorialText('Т-0816',list.name,'Без подборки'):list.name;}
 export type FavoriteLibrary={lists:FavoriteList[];assignment:Record<string,string>;notes:Record<string,string>;selectedId:string;returnTo:string};
 const copySearch=(s:Search):Search=>({...s,childrenAges:[...s.childrenAges],withPet:false,businessTrip:false,byCar:false});
 export function favoriteLibrary(s:Commerce,owner:string):FavoriteLibrary{
@@ -23,9 +27,9 @@ function write(s:Commerce,owner:string,library:FavoriteLibrary):Commerce{return 
 export function favoriteNavigation(s:Commerce,owner:string,patch:Partial<Pick<FavoriteLibrary,'selectedId'|'returnTo'>>){return write(s,owner,{...favoriteLibrary(s,owner),...patch});}
 export function favoriteItems(s:Commerce,owner:string,listId:string){const lib=favoriteLibrary(s,owner);return (s.savedHotels?.[owner]||[]).filter(id=>lib.assignment[id]===listId);}
 export function setFavorite(s:Commerce,owner:string,hotelId:string,listId:string|null):Commerce{
- if(!catalog.hotels.some(h=>h.id===hotelId))throw Error('Отель не найден');
+ if(!catalog.hotels.some(h=>h.id===hotelId))throw Error(novemberEditorialText("Т-0817", 'Отель не найден', "Не нашли этот вариант"));
  const lib=favoriteLibrary(s,owner),ids=s.savedHotels?.[owner]||[];
- if(listId!==null&&!lib.lists.some(l=>l.id===listId))throw Error('Список не найден');
+ if(listId!==null&&!lib.lists.some(l=>l.id===listId))throw Error(novemberEditorialText("Т-0818", 'Список не найден', "Не нашли подборку"));
  const assignment={...lib.assignment},notes={...lib.notes};
  if(listId===null){delete assignment[hotelId];delete notes[hotelId];}else assignment[hotelId]=listId;
  return write({...s,savedHotels:{...s.savedHotels,[owner]:listId===null?ids.filter(id=>id!==hotelId):[...new Set([...ids,hotelId])]}},owner,{...lib,assignment,notes});
@@ -33,32 +37,32 @@ export function setFavorite(s:Commerce,owner:string,hotelId:string,listId:string
 export function saveFavoriteList(s:Commerce,owner:string,id:string,name:string,search=s.search):Commerce{
  const lib=favoriteLibrary(s,owner),clean=name.trim().replace(/\s+/g,' ');
  if(!clean||clean.length>60)throw Error('Введите название до 60 символов');
- if(id===INBOX)throw Error('Этот список нельзя переименовать');
- if(lib.lists.some(l=>l.id!==id&&l.name.toLocaleLowerCase('ru')===clean.toLocaleLowerCase('ru')))throw Error('Список с таким названием уже есть');
+ if(id===INBOX)throw Error(novemberEditorialText("Т-0820", 'Этот список нельзя переименовать', "Нельзя переименовать подборку"));
+ if(lib.lists.some(l=>l.id!==id&&l.name.toLocaleLowerCase('ru')===clean.toLocaleLowerCase('ru')))throw Error(novemberEditorialText("Т-0821", 'Список с таким названием уже есть', "Уже есть подборка с таким названием"));
  const existing=lib.lists.some(l=>l.id===id);
  return write(s,owner,{...lib,lists:existing?lib.lists.map(l=>l.id===id?{...l,name:clean}:l):[...lib.lists,{id,name:clean,search:copySearch(search)}]});
 }
 export function deleteFavoriteList(s:Commerce,owner:string,id:string):Commerce{
- if(id===INBOX)throw Error('Этот список нельзя удалить');
+ if(id===INBOX)throw Error(novemberEditorialText("Т-0822", 'Этот список нельзя удалить', "Нельзя удалить подборку"));
  const lib=favoriteLibrary(s,owner);
  return write(s,owner,{...lib,lists:lib.lists.filter(l=>l.id!==id),assignment:Object.fromEntries(Object.entries(lib.assignment).map(([hotel,list])=>[hotel,list===id?INBOX:list])),selectedId:lib.selectedId===id?INBOX:lib.selectedId});
 }
 export function saveFavoriteNote(s:Commerce,owner:string,hotelId:string,note:string):Commerce{
- if(!s.savedHotels?.[owner]?.includes(hotelId))throw Error('Отель больше не в избранном');
- if(note.length>1000)throw Error('Не больше 1000 символов');
+ if(!s.savedHotels?.[owner]?.includes(hotelId))throw Error(novemberEditorialText("Т-0823", 'Отель больше не в избранном', "Этого места больше нет в избранном"));
+ if(note.length>1000)throw Error(novemberEditorialText("Т-0824", 'Не больше 1000 символов', "Не больше 1 000 символов"));
  const lib=favoriteLibrary(s,owner),notes={...lib.notes};
  if(note.trim())notes[hotelId]=note.trim();else delete notes[hotelId];
  return write(s,owner,{...lib,notes});
 }
 export function saveFavoriteSearch(s:Commerce,owner:string,listId:string,search:Search):Commerce{
  const error=searchError(search);if(error)throw Error(error);
- const lib=favoriteLibrary(s,owner);if(!lib.lists.some(l=>l.id===listId))throw Error('Список не найден');
+ const lib=favoriteLibrary(s,owner);if(!lib.lists.some(l=>l.id===listId))throw Error(novemberEditorialText("Т-0825", 'Список не найден', "Не нашли подборку"));
  return write(s,owner,{...lib,lists:lib.lists.map(l=>l.id===listId?{...l,search:copySearch(search)}:l)});
 }
 export function startFavoriteBooking(s:Commerce,owner:string,listId:string,hotelId:string,id:string):Commerce{
  const lib=favoriteLibrary(s,owner),list=lib.lists.find(l=>l.id===listId);
- if(!list||!favoriteItems(s,owner,listId).includes(hotelId))throw Error('Отель не найден в списке');
- const hotel=catalog.hotels.find(h=>h.id===hotelId);if(!hotel)throw Error('Отель не найден');
+ if(!list||!favoriteItems(s,owner,listId).includes(hotelId))throw Error(novemberEditorialText("Т-0826", 'Отель не найден в списке', "Не нашли в подборке"));
+ const hotel=catalog.hotels.find(h=>h.id===hotelId);if(!hotel)throw Error(novemberEditorialText("Т-0827", 'Отель не найден', "Не нашли этот вариант"));
  const next=startDraft({...s,search:{...list.search,city:hotel.city},searchFilters:[]},hotelId,id,owner);
  return {...next,search:s.search,searchFilters:s.searchFilters,draft:{...next.draft!,returnTo:'favorite-list',favoriteListId:listId}};
 }

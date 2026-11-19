@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {editorialText} from '../../../prototype/domain/editorialText.mjs';
 import {isDesktop} from '../desktop/surface';
 import {useState} from 'react';
@@ -21,7 +22,7 @@ export function HotelierInfoSheet({open,onClose,onHotels,inviter}:{open:boolean;
    <p>{editorialText('ОТ-012','Тариф для отельеров партнёрской программы TravelLine. Даёт скидку на бронирование отелей в «Ключах».','Бронируйте объекты коллег на закрытых условиях — доступ по профилю TravelLine')}</p>
    {inviter&&<section className="hotelier-inviter"><small>Вас пригласил</small><div><span className="hotelier-inviter-avatar">{inviter.name.split(' ').map(n=>n[0]).slice(0,2).join('')}</span><span><strong>{inviter.name}</strong><small>{inviter.hotel}</small></span></div></section>}
    <p className="hotelier-eligibility"><Icon name="secure" size={20} inheritColor/><span>Доступно только отельерам с подтверждённым статусом</span></p>
-   <Button onClick={onHotels}>К отелям с Friendly Rate</Button>
+   <Button onClick={onHotels}>{novemberEditorialText("Т-2670", "К отелям с Friendly Rate", "К вариантам с Friendly Rate")}</Button>
   </div>
  </BottomSheet>;
 }
@@ -40,9 +41,9 @@ export function HotelierSharePage({name,hotel,approved}:{name:string;hotel:strin
    <div className="invite-audiences" role="group" aria-label="Кого пригласить">
     {([['hotelier','reception','Коллегу-отельера','Доступ к тарифам Friendly Rate'],['traveler','invite','Путешественника','Обычная ссылка на приложение']] as const).map(([value,icon,title,description])=><button key={value} className={'invite-audience k-surface-action '+(selected===value?'is-selected':'')} aria-pressed={selected===value} onClick={()=>{setAudience(value);setCopied(false);setError('');}}><span className="icon-tile"><Icon name={icon} size={22} inheritColor/></span><span><strong>{title}</strong><small>{description}</small>{value==='hotelier'&&<span className="invite-rate-label">Friendly Rate</span>}</span><span className="invite-radio" aria-hidden="true"/></button>)}
    </div><div className="invite-explanation"><span className="invite-info-icon"><Icon name="info" size={20} inheritColor/></span><span>{selected==='hotelier'?'Коллеге нужно будет подтвердить аккаунт в личном кабинете TravelLine. После этого откроются тарифы Friendly Rate.':'Ссылка откроет обычный вход в приложение — без подтверждения статуса отельера.'}</span></div>
-  </>:<><section className="hotelier-share-hero"><img src="/brand/assets/logo/mark-cobalt-ui.svg" alt=""/><h1>Поделитесь{isDesktop?' ':<br/>}ссылкой на «Ключи»</h1></section><ol className="hotelier-share-steps"><li>Отправьте другу свою ссылку</li><li>Друг войдёт в приложение по номеру телефона</li><li>Выбирайте отели и планируйте новые поездки</li></ol></>}
+  </>:<><section className="hotelier-share-hero"><img src="/brand/assets/logo/mark-cobalt-ui.svg" alt=""/><h1>Поделитесь{isDesktop?' ':<br/>}ссылкой на «Ключи»</h1></section><ol className="hotelier-share-steps"><li>Отправьте другу свою ссылку</li><li>Друг войдёт в приложение по номеру телефона</li><li>{novemberEditorialText("Т-2687", "Выбирайте отели и планируйте новые поездки", "Ищите где остановиться и планируйте поездки")}</li></ol></>}
   <div className={isDesktop?"desktop-invite-share-row":"invite-share-row"}><div className="hotelier-share-link"><Field label="Ссылка-приглашение" value={link} readOnly onFocus={e=>e.target.select()} endAdornment={<button type="button" onClick={copy} aria-label="Скопировать ссылку-приглашение"><Icon name={copied?'check':'document'} size={18} inheritColor/>{copied?'Скопировано':'Копировать'}</button>}/></div>{isDesktop&&shareAction}</div>
-  {error&&<p className="field-error" role="alert">{error}</p>}{copied&&<span className="sr-only" role="status">Ссылка скопирована</span>}
+  {error&&<p className="field-error" role="alert">{error}</p>}{copied&&<span className="sr-only" role="status">{novemberEditorialText("Т-2690", "Ссылка скопирована", "Скопировали ссылку")}</span>}
   {!isDesktop&&<div className="hotelier-actions">{shareAction}</div>}
  </div>;
 }

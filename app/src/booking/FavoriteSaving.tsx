@@ -1,8 +1,9 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {createContext,useContext,useState,type ReactNode,type Dispatch,type SetStateAction} from 'react';
 import {BottomSheet,useKeyboard} from '../mobile';
 import {Button,Field,Icon} from '../ui';
 import {type Commerce,type Search} from './model';
-import {favoriteCountLabel,favoriteLibrary,favoriteItems,saveFavoriteList,setFavorite,INBOX} from './favorites';
+import {favoriteCountLabel,favoriteLibrary,favoriteListName,favoriteItems,saveFavoriteList,setFavorite,INBOX} from './favorites';
 import './favorites.css';
 
 const FavoriteSaving=createContext<{toggle:(hotelId:string)=>void;selectList:(id:string)=>void}|null>(null);
@@ -21,7 +22,7 @@ export function FavoriteName({initial='',onSave}:{initial?:string;onSave:(name:s
 export function FavoriteDestination({commerce,setCommerce,owner,onSelect,search}:{onSelect:(listId:string,next?:Commerce)=>void}&StateProps){
  const [creating,setCreating]=useState(false);
  const lib=favoriteLibrary(commerce,owner);
- return creating?<><p className="muted">Следующие отели попадут сюда же</p><FavoriteName onSave={name=>{const id=crypto.randomUUID(),next=saveFavoriteList(commerce,owner,id,name,search);setCommerce(next);onSelect(id,next);}}/><Button variant="ghost" onClick={()=>setCreating(false)}>К спискам</Button></>:<div className="favorite-destinations">{lib.lists.map(list=><button className="favorite-destination k-surface-action" key={list.id} onClick={()=>onSelect(list.id)}><Icon name="heart" size={20}/><span><strong>{list.name}</strong><small>{favoriteCountLabel(favoriteItems(commerce,owner,list.id).length)}</small></span><Icon name="chevron-right" size={16}/></button>)}<Button variant="secondary" onClick={()=>setCreating(true)}><Icon name="plus" size={18} inheritColor/>Новый список</Button></div>;
+ return creating?<><p className="muted">{novemberEditorialText("Т-0834", "Следующие отели попадут сюда же", "Следующие места сохраним сюда")}</p><FavoriteName onSave={name=>{const id=crypto.randomUUID(),next=saveFavoriteList(commerce,owner,id,name,search);setCommerce(next);onSelect(id,next);}}/><Button variant="ghost" onClick={()=>setCreating(false)}>{novemberEditorialText("Т-0835", "К спискам", "Посмотреть подборки")}</Button></>:<div className="favorite-destinations">{lib.lists.map(list=><button className="favorite-destination k-surface-action" key={list.id} onClick={()=>onSelect(list.id)}><Icon name="heart" size={20}/><span><strong>{favoriteListName(list)}</strong><small>{favoriteCountLabel(favoriteItems(commerce,owner,list.id).length)}</small></span><Icon name="chevron-right" size={16}/></button>)}<Button variant="secondary" onClick={()=>setCreating(true)}><Icon name="plus" size={18} inheritColor/>{novemberEditorialText("Т-0836", "Новый список", "Новая подборка")}</Button></div>;
 }
 
 export function FavoriteSavingProvider({commerce,setCommerce,owner,children,onToast,search}:{children:ReactNode;onToast:(text:string,action?:{label:string;onClick:()=>void})=>void}&StateProps){
@@ -29,15 +30,15 @@ export function FavoriteSavingProvider({commerce,setCommerce,owner,children,onTo
  const keyboard=useKeyboard();
  const choose=(id:string,next=commerce)=>{
   if(!pending)return;setCommerce(setFavorite(next,owner,pending,id));setDestination(id);setPending(null);keyboard.hide();
-  onToast('Сохранено в «'+favoriteLibrary(next,owner).lists.find(l=>l.id===id)!.name+'»',{label:'Изменить',onClick:()=>{onToast('');setPending(pending);}});
+  onToast(novemberEditorialText("Т-0837", 'Сохранено в «', "Сохранили в «")+favoriteListName(favoriteLibrary(next,owner).lists.find(l=>l.id===id)!)+'»',{label:'Изменить',onClick:()=>{onToast('');setPending(pending);}});
  };
  const toggle=(hotelId:string)=>{
-  if(commerce.savedHotels?.[owner]?.includes(hotelId)){setCommerce(s=>setFavorite(s,owner,hotelId,null));onToast('Отель удалён из избранного');return;}
+  if(commerce.savedHotels?.[owner]?.includes(hotelId)){setCommerce(s=>setFavorite(s,owner,hotelId,null));onToast(novemberEditorialText("Т-0839", 'Отель удалён из избранного', "Убрали из избранного"));return;}
   if(destination&&favoriteLibrary(commerce,owner).lists.some(l=>l.id===destination)){
-   setCommerce(s=>setFavorite(s,owner,hotelId,destination));onToast('Сохранено в «'+favoriteLibrary(commerce,owner).lists.find(l=>l.id===destination)!.name+'»',{label:'Изменить',onClick:()=>{onToast('');setPending(hotelId);}});
+   setCommerce(s=>setFavorite(s,owner,hotelId,destination));onToast(novemberEditorialText("Т-0840", 'Сохранено в «', "Сохранили в «")+favoriteListName(favoriteLibrary(commerce,owner).lists.find(l=>l.id===destination)!)+'»',{label:'Изменить',onClick:()=>{onToast('');setPending(hotelId);}});
   }else {keyboard.hide();setPending(hotelId);}
  };
- return <FavoriteSaving.Provider value={{toggle,selectList:setDestination}}>{children}<BottomSheet open={!!pending} onOpenChange={open=>{if(!open){keyboard.hide();setPending(null);}}} title="Сохранить в список" snap={.72}><div className="sheet-body favorite-sheet">{pending&&<FavoriteDestination key={pending} commerce={commerce} setCommerce={setCommerce} owner={owner} search={search} onSelect={choose}/>}</div></BottomSheet></FavoriteSaving.Provider>;
+ return <FavoriteSaving.Provider value={{toggle,selectList:setDestination}}>{children}<BottomSheet open={!!pending} onOpenChange={open=>{if(!open){keyboard.hide();setPending(null);}}} title={novemberEditorialText("Т-0842", "Сохранить в список", "Добавить в подборку")} snap={.72}><div className="sheet-body favorite-sheet">{pending&&<FavoriteDestination key={pending} commerce={commerce} setCommerce={setCommerce} owner={owner} search={search} onSelect={choose}/>}</div></BottomSheet></FavoriteSaving.Provider>;
 }
 
 // Compatibility for callers outside the application provider.

@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {tripEditorialText} from '../../../prototype/domain/tripEditorialText.mjs';
 import {useDemoIntegrations} from '../demoIntegrations';
 import {DialogActions} from '../dialogActions';
@@ -53,7 +54,7 @@ function WifiSession({open,manual,onClose}:{open:boolean;manual:boolean;onClose:
     {status!=='connecting'&&<Button variant="secondary" onClick={()=>setView('credentials')}>Сеть и пароль</Button>}</DialogActions>
    </>:view==='credentials'?<>
     <section className="wifi-credentials">{[['Сеть',network],['Пароль',password]].map(([label,value])=><div key={label}><span><small>{label}</small><strong>{value}</strong></span><button className="wifi-copy" aria-label={copied===label?`${label}: скопировано`:`Скопировать ${label==='Сеть'?'название сети':'пароль'}`} onClick={()=>copy(label,value)}>{copied===label?<Icon name="check" size={18} inheritColor/>:<img src="/assets/details/copy.svg" width="18" height="18" alt=""/>}</button></div>)}</section>
-    <span className="wifi-copy-status" role="status">{copied?tripEditorialText("ПР-231", `${copied==='Сеть'?'Название сети':'Пароль'} скопирован${copied==='Сеть'?'о':''}`, 'Скопировано'):''}</span>
+    <span className="wifi-copy-status" role="status">{copied?novemberEditorialText("Т-2476", tripEditorialText("ПР-231", `${copied==='Сеть'?'Название сети':'Пароль'} скопирован${copied==='Сеть'?'о':''}`, 'Скопировано'), "Скопировали"):''}</span>
     {error&&<p className="field-error" role="alert">{error}</p>}
     <DialogActions><Button variant="secondary" onClick={()=>setView('help')}>Как подключиться</Button>
     <Button dismissOnly={manual} variant="secondary" onClick={manual?onClose:()=>setView('connect')}>{manual?'Готово':'Назад'}</Button></DialogActions>

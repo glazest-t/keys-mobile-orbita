@@ -1,10 +1,11 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import type {Commerce} from './model.ts';
 import {walletIds} from '../../../prototype/domain/payment.mjs';
 import {respondToService,serviceQuote,payService,payServiceFromDeposit} from './serviceSettlement.ts';
 import {depositBalance} from './deposit.ts';
 function group(s:Commerce,owner:string,bookingId:string,groupId:string){
  const b=s.bookings.find(v=>v.id===bookingId&&v.owner===owner),rows=b?.serviceRequests?.filter(r=>r.id===groupId||r.groupId===groupId)||[];
- if(!b||!rows.length)throw Error('Заказ не найден');return {b,rows};
+ if(!b||!rows.length)throw Error(novemberEditorialText("Т-2181", 'Заказ не найден', "Не нашли заказ"));return {b,rows};
 }
 /** Fixed-price services are accepted immediately; stay-time services are already added for hotel settlement. */
 export function confirmPricedServices(s:Commerce,owner:string,bookingId:string,ids:string[],now=new Date().toISOString()){

@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {entryEditorialText} from '../entryEditorialText.ts';
 import type {Commerce} from '../booking/model.ts';
 export type HotelierStatus='none'|'pending'|'approved'|'rejected';
@@ -30,7 +31,7 @@ export function syncVerification(s:Commerce,remote:Commerce,owner:string):Commer
 export type HotelierInvitationData={name:string;hotel:string};
 const clean=(value:string|null,fallback:string)=>value?.trim().replace(/\s+/g,' ').slice(0,80)||fallback;
 export function invitationData(url:string):HotelierInvitationData{const params=new URL(url).searchParams;return {name:clean(params.get('inviter'),'Юра Костин'),hotel:clean(params.get('inviterHotel'),'Travelline')};}
-export function invitationLink(base:string,name:string,hotel:string){const url=new URL(base);url.search='';url.hash='hotelier-invite';url.searchParams.set('scenario','guest-invite');url.searchParams.set('inviter',clean(name,'Коллега'));url.searchParams.set('inviterHotel',clean(hotel,'Отель'));return url.href;}
+export function invitationLink(base:string,name:string,hotel:string){const url=new URL(base);url.search='';url.hash='hotelier-invite';url.searchParams.set('scenario','guest-invite');url.searchParams.set('inviter',clean(name,'Коллега'));url.searchParams.set('inviterHotel',clean(hotel,novemberEditorialText("Т-2792", 'Отель', "Место проживания")));return url.href;}
 export function bannerStamp(s:Commerce,owner:string){return `${s.accounts[owner]?.hotelierStatus||'none'}:${s.hotelierVerifications?.[owner]?.id||''}`;}
 
 export type InvitationAudience='hotelier'|'traveler';

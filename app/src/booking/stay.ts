@@ -1,3 +1,4 @@
+import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {tripEditorialText} from '../../../prototype/domain/tripEditorialText.mjs';
 import {guaranteedTimeService} from './stayTimeServices.ts';
 import {selectedBookingTime} from './bookingTimes.ts';
@@ -24,7 +25,7 @@ export function keyAccess(b:Booking,now=Date.now()){
  if(stayNow(b,now)>=Date.parse(stayAccessUntil(b)))return {visible:true,available:false,reason:'Срок действия ключа истёк'};
  return {visible:true,available:true,reason:''};
 }
-function ownBooking(s:Commerce,owner:string,id:string){const b=s.bookings.find(b=>b.id===id&&b.owner===owner);if(!b)throw Error('Поездка не найдена');if(b.operation.status!=='confirmed')throw Error('Бронь отменена');if(b.stay?.status==='checked_out')throw Error('Проживание завершено');return b;}
+function ownBooking(s:Commerce,owner:string,id:string){const b=s.bookings.find(b=>b.id===id&&b.owner===owner);if(!b)throw Error(novemberEditorialText("Т-2258", 'Поездка не найдена', "Не нашли поездку"));if(b.operation.status!=='confirmed')throw Error('Бронь отменена');if(b.stay?.status==='checked_out')throw Error('Проживание завершено');return b;}
 function update(s:Commerce,b:Booking,stay:Stay|undefined):Commerce{return {...s,bookings:s.bookings.map(item=>item===b?{...b,stay,revision:(b.revision||0)+1}:item)};}
 /** Hotel event simulator. The clock follows the booking date; this is never guest registration. */
 export function demoCheckIn(s:Commerce,owner:string,id:string,eventId:string,now=Date.now()){
