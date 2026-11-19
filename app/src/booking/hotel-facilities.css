@@ -12,7 +12,8 @@
 .hotel-popular-facilities-scroll{min-width:0;overscroll-behavior-inline:contain}
 .hotel-popular-facilities-scroll>.hotel-popular-facilities-track{width:100%;gap:12px}
 .hotel-facility-photo-card{position:relative;flex:0 0 clamp(154px,38vw,216px);border-radius:16px;background:var(--theme-card,#fff)}
-.hotel-facility-photo-cover{display:block;width:100%;aspect-ratio:16/10;padding:0;border:0;border-radius:16px 16px 0 0;overflow:hidden;background:none;cursor:pointer}
+.hotel-facility-photo-cover{position:relative;display:block;width:100%;aspect-ratio:16/10;padding:0;border:0;border-radius:16px 16px 0 0;overflow:hidden;background:none;cursor:pointer}
+.hotel-facility-photo-cover>.photo-counter{display:flex;align-items:center;gap:4px}
 .hotel-facility-photo-cover img{display:block;width:100%;height:100%;object-fit:cover}
 .hotel-facility-photo-cover:focus-visible{outline:2px solid var(--theme-link,#2f5bff);outline-offset:2px}
 .hotel-facility-photo-caption{display:block;padding:9px 12px;color:var(--theme-text,#101320);font:500 15px/21px Onest,sans-serif}

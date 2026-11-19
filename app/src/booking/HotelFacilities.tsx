@@ -92,8 +92,9 @@ export function HotelFacilities({amenities,hotelId,onShowAll,showPopular=true}:{
    <h2>Популярные удобства</h2>
    <Carousel ariaLabel="Фото популярных удобств" className="hotel-popular-facilities-scroll" contentClassName="hotel-popular-facilities-track">
     {popular.map(({label,photos})=><div className="hotel-facility-photo-card" key={label}>
-     <button type="button" className="hotel-facility-photo-cover" aria-label={`Посмотреть фото: ${label}`} aria-haspopup="dialog" onClick={()=>setGalleryState({label,index:0})}>
+     <button type="button" className="hotel-facility-photo-cover" aria-label={`Посмотреть фото: ${label}${photos.length>1?` · ${photos.length} фото`:""}`} aria-haspopup="dialog" onClick={()=>setGalleryState({label,index:0})}>
       <img src={photos[0]} alt="" draggable={false}/>
+      {photos.length>1&&<span className="photo-counter" aria-hidden="true"><Icon name="camera" size={14} inheritColor/>{photos.length}</span>}
      </button>
      <span className="hotel-facility-photo-caption">{label}</span>
     </div>)}
