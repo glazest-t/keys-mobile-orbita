@@ -1,6 +1,5 @@
 .booking-content.rooms-page{padding:10px 16px 32px;gap:12px}
 .rooms-selection{display:flex;flex-direction:column;gap:12px;min-width:0}
-.room-filter-track{gap:8px}
 .room-filter-icon{width:36px;padding:0!important;justify-content:center}
 .room-offer{border:1px solid var(--theme-border,#e4e7ef);background:var(--theme-card,#fff);border-radius:24px;overflow:hidden}
 .room-offer-photo{height:180px;position:relative}
@@ -106,3 +105,8 @@
 /* Equipment icons share the action blue; bed silhouettes distinguish layouts. */
 .room-equipment :is(.icon-tile,.room-equipment-icon){color:var(--theme-link,var(--k-action-primary))}
 .room-equipment-icon{display:inline-flex;align-items:center;justify-content:center;flex:none}
+
+.rooms-fixed-header{height:112px;background:var(--k-surface-app)}
+.rooms-fixed-header .booking-search-header{height:60px;min-height:60px}
+.room-filter-rail{height:52px;flex:none}
+.room-filter-rail .discovery-chip-track{padding-top:8px;padding-bottom:12px}

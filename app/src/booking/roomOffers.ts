@@ -1,9 +1,11 @@
+import {activeRoomFilters,type RoomSelectionFilters} from './roomFilters.ts';
+import {roomVisual} from './roomVisuals.ts';
 import {canBookRate} from './rateAccess.ts';
 import {mealLabel,roomFacets} from './searchFacets.ts';
 import {trimGuests} from './bookingParty.ts';
 import {available,catalog,cancellationDeadline,quoteDraft,type Commerce,type Search} from './model.ts';
 
-export type RoomFilters={bed:'any'|'double'|'twin';breakfast:boolean;freeCancellation:boolean;payment:'any'|'at_hotel'|'online'};
+export type RoomFilters={selection?:RoomSelectionFilters;bed:'any'|'double'|'twin';breakfast:boolean;freeCancellation:boolean;payment:'any'|'at_hotel'|'online'};
 export const emptyRoomFilters:RoomFilters={bed:'any',breakfast:false,freeCancellation:false,payment:'any'};
 export const bedOptions={double:{label:'Одна двуспальная',icon:'bed-double'},twin:{label:'Две односпальные',icon:'bed-twin'},single:{label:'Одна односпальная',icon:'bed-single'},sofa:{label:'Диван-кровать',icon:'sofa-bed'},bunk:{label:'Двухъярусная',icon:'bunk-bed'},cot:{label:'Детская кроватка',icon:'baby-cot'}} as const;
 export const roomBeds=(id:string):(keyof typeof bedOptions)[]=>roomFacets(id)?.beds.flatMap(label=>(Object.keys(bedOptions) as (keyof typeof bedOptions)[]).filter(key=>bedOptions[key].label===label))||['double','twin'];
@@ -15,11 +17,15 @@ export function roomQuote(state:Commerce,owner:string|null,rateId:string){
  if(!state.draft||!rate||rate.hotelId!==state.draft.hotelId)throw Error('Тариф недоступен');
  return quoteDraft({...state,draft:{...state.draft,roomId:rate.roomId,rateId,services:[],usePoints:false}},owner);
 }
-export function roomOffers(state:Commerce,owner:string|null,filters=emptyRoomFilters,now=Date.now()){
+export function roomOffers(state:Commerce,owner:string|null,filters:RoomFilters={...emptyRoomFilters,selection:activeRoomFilters(state)},now=Date.now()){
  const d=state.draft;if(!d)return [];
+ const selected=filters.selection;
+ const free=now<=Date.parse(cancellationDeadline(d.search));
+ if(selected?.payments.length&&!selected.payments.some(value=>roomPaymentMethods.includes(value as typeof roomPaymentMethods[number])))return [];
+ if(selected?.cancellations.length&&!selected.cancellations.includes(free?'free':'penalty'))return [];
  if(filters.payment!=='any'&&!roomPaymentMethods.includes(filters.payment))return [];
- return catalog.rooms.filter(r=>r.hotelId===d.hotelId&&available(state,r.id,d.search)&&(filters.bed==='any'||roomBeds(r.id).includes(filters.bed)))
- .map(room=>({room,rates:catalog.rates.filter(rate=>rate.roomId===room.id&&canBookRate(state,owner,rate)&&(!filters.breakfast||rate.mealPlan==='breakfast')&&(!filters.freeCancellation||now<=Date.parse(cancellationDeadline(d.search))))
+ return catalog.rooms.filter(r=>r.hotelId===d.hotelId&&available(state,r.id,d.search)&&(filters.bed==='any'||roomBeds(r.id).includes(filters.bed))&&(!selected?.beds.length||selected.beds.some(value=>roomFacets(r.id)?.beds.includes(value)))&&(!selected?.views.length||selected.views.includes(roomVisual(r.id).view)))
+ .map(room=>({room,rates:catalog.rates.filter(rate=>rate.roomId===room.id&&canBookRate(state,owner,rate)&&(!selected?.meals.length||selected.meals.includes(mealLabel(rate.mealPlan))||selected.meals.includes('Собственная кухня')&&roomFacets(room.id)?.kitchen)&&(!filters.breakfast||rate.mealPlan==='breakfast')&&(!filters.freeCancellation||now<=Date.parse(cancellationDeadline(d.search))))
  .sort((a,b)=>Number(b.kind==='friendly_rate')-Number(a.kind==='friendly_rate')).map(rate=>({rate,quote:roomQuote(state,owner,rate.id)}))})).filter(r=>r.rates.length);
 }
 export function selectRoomRate(state:Commerce,owner:string|null,rateId:string):Commerce{
@@ -31,7 +37,7 @@ export function selectRoomRate(state:Commerce,owner:string|null,rateId:string):C
 export function updateRoomSearch(state:Commerce,owner:string|null,search:Search):Commerce{
  if(!state.draft)throw Error('Выберите отель');
  const next={...state,draft:{...state.draft,search,...trimGuests(state.draft,search)}};
- const offers=roomOffers(next,owner);
+ const offers=roomOffers(next,owner,emptyRoomFilters);
  if(!offers.length)throw Error('Нет доступных номеров на эти даты или состав гостей');
  const current=offers.flatMap(o=>o.rates).find(o=>o.rate.id===state.draft!.rateId);
  return selectRoomRate(next,owner,current?.rate.id||offers[0].rates[0].rate.id);
