@@ -46,7 +46,8 @@ export function hotelLevels(hotelId:string):HotelLevel[]{
  return names.map((name,i)=>({id:['guest','connoisseur','expert','master','legend'][i],name,
  thresholdMinor:[0,4000000,8000000,15000000,30000000][i],
  discountBasisPoints:h.hotelDiscountBasisPoints?Math.min(2500,h.hotelDiscountBasisPoints+[0,0,200,500,1000][i]):0,
- earnBasisPoints:h.hotelPointsProgram?[300,500,700,1000,1500][i]:0,
+ // Demo: the Connoisseur hotel reward is 4%, distinct from the 5% Keys reward.
+ earnBasisPoints:h.hotelPointsProgram?[300,400,700,1000,1500][i]:0,
  privileges:i===0?[]:i===1?['Приветственный напиток']:i===2?['Приветственный напиток','Поздний выезд при наличии возможности']:['Приветственный напиток','Поздний выезд при наличии возможности','Повышение категории при наличии свободных номеров']
  }));
 }
@@ -66,12 +67,16 @@ export function hotelLoyaltySnapshot(s:Commerce,owner:string,hotelId:string,rate
  const level=hotelProgramProgress(s,owner,hotelId).current;
  return level?{levelId:level.id,levelName:level.name,earnBasisPoints:level.earnBasisPoints}:undefined;
 }
+/** Same estimate used by the booking preview and final hotel award. */
+export function hotelRewardPoints(quote:{lodgingMinor:number;applied:{pointsMinor:number}},loyalty?:HotelLoyaltySnapshot){
+ return Math.floor(Math.max(0,quote.lodgingMinor-quote.applied.pointsMinor)*(loyalty?.earnBasisPoints??0)/1000000);
+}
 /** Called once by hotel checkout; stored booking terms survive later level changes. */
 export function settleHotelLoyalty(s:Commerce,owner:string,bookingId:string):Commerce{
  const b=s.bookings.find(b=>b.id===bookingId&&b.owner===owner);
  if(!b?.hotelLoyalty||b.operation.status!=='confirmed'||b.stay?.status!=='checked_out'||!b.stay.checkedOutAt||s.hotelLoyaltyAwards?.[owner]?.some(a=>a.bookingId===bookingId))return s;
  const qualifyingMinor=Math.max(0,b.quote.lodgingMinor-b.quote.applied.pointsMinor);
- const points=Math.floor(qualifyingMinor*b.hotelLoyalty.earnBasisPoints/1000000),wallet=`hotel:${b.draft.hotelId}:${owner}`;
+ const points=hotelRewardPoints(b.quote,b.hotelLoyalty),wallet=`hotel:${b.draft.hotelId}:${owner}`;
  const award={bookingId,hotelId:b.draft.hotelId,at:b.stay.checkedOutAt,qualifyingMinor,points};
  return {...s,hotelLoyaltyAwards:{...s.hotelLoyaltyAwards,[owner]:[...(s.hotelLoyaltyAwards?.[owner]||[]),award]},payment:{...s.payment,balances:{...s.payment.balances,[wallet]:(s.payment.balances[wallet]||0)+points}}};
 }

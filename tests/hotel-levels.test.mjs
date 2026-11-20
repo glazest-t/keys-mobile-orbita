@@ -43,10 +43,10 @@ test('Friendly Rate не использует ни скидку, ни начис
 });
 test('Выезд начисляет баллы по сохранённому уровню ровно один раз; кошельки раздельны',()=>{
  let s=book(base(7900000));const initial=s.payment.balances['hotel:orbit-sea:'+owner],keys=s.payment.balances['keys:'+owner];
- assert.equal(s.bookings[0].hotelLoyalty.earnBasisPoints,500);
+ assert.equal(s.bookings[0].hotelLoyalty.earnBasisPoints,400);
  assert.equal(settleHotelLoyalty(s,owner,'levels'),s);
  s=checkedOut(s);s=settleHotelLoyalty(s,owner,'levels');const award=s.hotelLoyaltyAwards[owner][0];
- assert.equal(award.points,Math.floor(s.bookings[0].quote.lodgingMinor*500/1000000));
+ assert.equal(award.points,Math.floor(s.bookings[0].quote.lodgingMinor*400/1000000));
  assert.equal(s.payment.balances['hotel:orbit-sea:'+owner],initial+award.points);
  assert.equal(s.payment.balances['keys:'+owner],keys);
  assert.equal(hotelProgramProgress(s,owner,'orbit-sea').current.name,'Знаток');
