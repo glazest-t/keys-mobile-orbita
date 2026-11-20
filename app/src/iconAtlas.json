@@ -1,0 +1,1190 @@
+{
+  "nav-trips": {
+    "file": "nav-trips.png",
+    "color": false
+  },
+  "nav-search": {
+    "file": "nav-search.png",
+    "color": false
+  },
+  "chat-hotel": {
+    "file": "chat-hotel.svg",
+    "color": false
+  },
+  "gift": {
+    "file": "gift.png",
+    "color": false
+  },
+  "nav-profile": {
+    "file": "nav-profile.png",
+    "color": false
+  },
+  "back": {
+    "file": "back.png",
+    "color": false
+  },
+  "chevron-right": {
+    "file": "chevron-right.png",
+    "color": false
+  },
+  "chevron-down": {
+    "file": "chevron-down.png",
+    "color": false
+  },
+  "arrow-up": {
+    "file": "arrow-up.png",
+    "color": false
+  },
+  "arrow-down": {
+    "file": "arrow-down.png",
+    "color": false
+  },
+  "menu": {
+    "file": "menu.png",
+    "color": false
+  },
+  "list": {
+    "file": "list.png",
+    "color": false
+  },
+  "more": {
+    "file": "more.png",
+    "color": false
+  },
+  "filter": {
+    "file": "filter.png",
+    "color": false
+  },
+  "preferences": {
+    "file": "preferences.png",
+    "color": false
+  },
+  "sort": {
+    "file": "sort.png",
+    "color": false
+  },
+  "plus": {
+    "file": "plus.png",
+    "color": false
+  },
+  "minus": {
+    "file": "minus.png",
+    "color": false
+  },
+  "close": {
+    "file": "close.png",
+    "color": false
+  },
+  "edit": {
+    "file": "edit.png",
+    "color": false
+  },
+  "check": {
+    "file": "check.png",
+    "color": false
+  },
+  "attach": {
+    "file": "attach.png",
+    "color": false
+  },
+  "download": {
+    "file": "download.png",
+    "color": false
+  },
+  "share": {
+    "file": "share.svg",
+    "color": false
+  },
+  "copy": {
+    "file": "copy.png",
+    "color": false
+  },
+  "copy-outline": {
+    "file": "copy-outline.png",
+    "color": false
+  },
+  "undo": {
+    "file": "undo.png",
+    "color": false
+  },
+  "repeat": {
+    "file": "repeat.png",
+    "color": false
+  },
+  "trash": {
+    "file": "trash.png",
+    "color": false
+  },
+  "pause": {
+    "file": "pause.png",
+    "color": false
+  },
+  "play": {
+    "file": "play.png",
+    "color": false
+  },
+  "volume": {
+    "file": "volume.png",
+    "color": false
+  },
+  "volume-off": {
+    "file": "volume-off.png",
+    "color": false
+  },
+  "camera": {
+    "file": "camera.png",
+    "color": false
+  },
+  "photos": {
+    "file": "photos.png",
+    "color": false
+  },
+  "heart": {
+    "file": "heart.png",
+    "color": false
+  },
+  "favorite-outline": {
+    "file": "favorite-outline.png",
+    "color": false
+  },
+  "heart-outline": {
+    "file": "heart-outline.png",
+    "color": false
+  },
+  "guest-outline": {
+    "file": "guest-outline.png",
+    "color": false
+  },
+  "guests": {
+    "file": "guests.png",
+    "color": false
+  },
+  "invite": {
+    "file": "invite.png",
+    "color": false
+  },
+  "bell": {
+    "file": "bell.png",
+    "color": false
+  },
+  "bell-check": {
+    "file": "bell-check.png",
+    "color": false
+  },
+  "mail": {
+    "file": "mail.png",
+    "color": false
+  },
+  "send": {
+    "file": "send.png",
+    "color": false
+  },
+  "support-write": {
+    "file": "support-write.png",
+    "color": false
+  },
+  "assistant": {
+    "file": "assistant.png",
+    "color": false
+  },
+  "problem": {
+    "file": "problem.png",
+    "color": false
+  },
+  "phone": {
+    "file": "phone.png",
+    "color": false
+  },
+  "settings": {
+    "file": "settings.png",
+    "color": false
+  },
+  "language": {
+    "file": "language.png",
+    "color": false
+  },
+  "globe": {
+    "file": "globe.png",
+    "color": false
+  },
+  "passport": {
+    "file": "passport.png",
+    "color": false
+  },
+  "document": {
+    "file": "document.png",
+    "color": false
+  },
+  "face-id": {
+    "file": "face-id.png",
+    "color": false
+  },
+  "secure": {
+    "file": "secure.png",
+    "color": false
+  },
+  "lock": {
+    "file": "lock.png",
+    "color": false
+  },
+  "key": {
+    "file": "key.png",
+    "color": false
+  },
+  "logout": {
+    "file": "logout.png",
+    "color": false
+  },
+  "review": {
+    "file": "review.png",
+    "color": false
+  },
+  "style-match": {
+    "file": "style-match.png",
+    "color": false
+  },
+  "calendar": {
+    "file": "calendar.png",
+    "color": false
+  },
+  "ticket": {
+    "file": "ticket.png",
+    "color": false
+  },
+  "check-in": {
+    "file": "check-in.png",
+    "color": false
+  },
+  "check-out": {
+    "file": "check-out.png",
+    "color": false
+  },
+  "early-check-in": {
+    "file": "early-check-in.png",
+    "color": false
+  },
+  "late-check-out": {
+    "file": "late-check-out.png",
+    "color": false
+  },
+  "contactless-check-in": {
+    "file": "contactless-check-in.svg",
+    "color": false
+  },
+  "price": {
+    "file": "price.png",
+    "color": false
+  },
+  "best-price": {
+    "file": "best-price.png",
+    "color": false
+  },
+  "discount": {
+    "file": "discount.png",
+    "color": false
+  },
+  "gift-outline": {
+    "file": "gift-outline.png",
+    "color": false
+  },
+  "card": {
+    "file": "card.png",
+    "color": false
+  },
+  "deposit": {
+    "file": "deposit.png",
+    "color": false
+  },
+  "wallet-outline": {
+    "file": "wallet-outline.png",
+    "color": false
+  },
+  "points": {
+    "file": "points.png",
+    "color": false
+  },
+  "points-earned": {
+    "file": "points-earned.png",
+    "color": false
+  },
+  "crown": {
+    "file": "crown.png",
+    "color": false
+  },
+  "receipt": {
+    "file": "receipt.png",
+    "color": false
+  },
+  "bill": {
+    "file": "bill.png",
+    "color": false
+  },
+  "qr": {
+    "file": "qr.png",
+    "color": false
+  },
+  "nfc": {
+    "file": "nfc.png",
+    "color": false
+  },
+  "bed-double": {
+    "file": "bed-double.png",
+    "color": false
+  },
+  "bed-single": {
+    "file": "bed-single.png",
+    "color": false
+  },
+  "bed-twin": {
+    "file": "bed-twin.png",
+    "color": false
+  },
+  "bed": {
+    "file": "bed.png",
+    "color": false
+  },
+  "bunk-bed": {
+    "file": "bunk-bed.png",
+    "color": false
+  },
+  "sofa-bed": {
+    "file": "sofa-bed.png",
+    "color": false
+  },
+  "bedrooms": {
+    "file": "bedrooms.svg",
+    "color": false
+  },
+  "room-outline": {
+    "file": "room-outline.png",
+    "color": false
+  },
+  "room-area": {
+    "file": "room-area.png",
+    "color": false
+  },
+  "area": {
+    "file": "area.png",
+    "color": false
+  },
+  "baby-cot": {
+    "file": "baby-cot.svg",
+    "color": false
+  },
+  "pillow": {
+    "file": "pillow.png",
+    "color": false
+  },
+  "linen": {
+    "file": "linen.png",
+    "color": false
+  },
+  "wardrobe": {
+    "file": "wardrobe.png",
+    "color": false
+  },
+  "desk": {
+    "file": "desk.png",
+    "color": false
+  },
+  "door": {
+    "file": "door.png",
+    "color": false
+  },
+  "balcony": {
+    "file": "balcony.svg",
+    "color": false
+  },
+  "terrace": {
+    "file": "terrace.png",
+    "color": false
+  },
+  "floor": {
+    "file": "floor.png",
+    "color": false
+  },
+  "tv": {
+    "file": "tv.png",
+    "color": false
+  },
+  "plug": {
+    "file": "plug.png",
+    "color": false
+  },
+  "bulb": {
+    "file": "bulb.png",
+    "color": false
+  },
+  "climate": {
+    "file": "climate.png",
+    "color": false
+  },
+  "refrigerator": {
+    "file": "refrigerator.png",
+    "color": false
+  },
+  "minibar": {
+    "file": "minibar.svg",
+    "color": false
+  },
+  "microwave": {
+    "file": "microwave.png",
+    "color": false
+  },
+  "kettle": {
+    "file": "kettle.png",
+    "color": false
+  },
+  "coffee-machine": {
+    "file": "coffee-machine.svg",
+    "color": false
+  },
+  "safe": {
+    "file": "safe.png",
+    "color": false
+  },
+  "bathroom": {
+    "file": "bathroom.png",
+    "color": false
+  },
+  "shared-bathroom": {
+    "file": "shared-bathroom.png",
+    "color": false
+  },
+  "shower": {
+    "file": "shower.png",
+    "color": false
+  },
+  "bathrobe": {
+    "file": "bathrobe.png",
+    "color": false
+  },
+  "slippers": {
+    "file": "slippers.png",
+    "color": false
+  },
+  "towels": {
+    "file": "towels.png",
+    "color": false
+  },
+  "toiletries": {
+    "file": "toiletries.png",
+    "color": false
+  },
+  "hairdryer": {
+    "file": "hairdryer.png",
+    "color": false
+  },
+  "iron": {
+    "file": "iron.png",
+    "color": false
+  },
+  "hotel-building": {
+    "file": "hotel-building.png",
+    "color": false
+  },
+  "hotel-outline": {
+    "file": "hotel-outline.png",
+    "color": false
+  },
+  "hotel-network": {
+    "file": "hotel-network.png",
+    "color": false
+  },
+  "reception": {
+    "file": "reception.svg",
+    "color": false
+  },
+  "concierge": {
+    "file": "concierge.svg",
+    "color": false
+  },
+  "room-service": {
+    "file": "room-service.png",
+    "color": false
+  },
+  "do-not-disturb": {
+    "file": "do-not-disturb.png",
+    "color": false
+  },
+  "luggage": {
+    "file": "luggage.png",
+    "color": false
+  },
+  "luggage-outline": {
+    "file": "luggage-outline.png",
+    "color": false
+  },
+  "cleaning": {
+    "file": "cleaning.png",
+    "color": false
+  },
+  "laundry": {
+    "file": "laundry.png",
+    "color": false
+  },
+  "washing-machine": {
+    "file": "washing-machine.png",
+    "color": false
+  },
+  "elevator": {
+    "file": "elevator.png",
+    "color": false
+  },
+  "accessible": {
+    "file": "accessible.png",
+    "color": false
+  },
+  "no-smoking": {
+    "file": "no-smoking.png",
+    "color": false
+  },
+  "pet": {
+    "file": "pet.png",
+    "color": false
+  },
+  "kids-room": {
+    "file": "kids-room.svg",
+    "color": false
+  },
+  "kid": {
+    "file": "kid.png",
+    "color": false
+  },
+  "blocks": {
+    "file": "blocks.png",
+    "color": false
+  },
+  "board-games": {
+    "file": "board-games.png",
+    "color": false
+  },
+  "breakfast": {
+    "file": "breakfast.png",
+    "color": false
+  },
+  "restaurant": {
+    "file": "restaurant.png",
+    "color": false
+  },
+  "cafe": {
+    "file": "cafe.png",
+    "color": false
+  },
+  "coffee-to-go": {
+    "file": "coffee-to-go.png",
+    "color": false
+  },
+  "bar": {
+    "file": "bar.png",
+    "color": false
+  },
+  "wine": {
+    "file": "wine.png",
+    "color": false
+  },
+  "kitchen": {
+    "file": "kitchen.png",
+    "color": false
+  },
+  "water-dispenser": {
+    "file": "water-dispenser.png",
+    "color": false
+  },
+  "pool": {
+    "file": "pool.png",
+    "color": false
+  },
+  "fitness": {
+    "file": "fitness.png",
+    "color": false
+  },
+  "fitness-outline": {
+    "file": "fitness-outline.png",
+    "color": false
+  },
+  "spa": {
+    "file": "spa.svg",
+    "color": false
+  },
+  "sauna": {
+    "file": "sauna.png",
+    "color": false
+  },
+  "wifi": {
+    "file": "wifi.png",
+    "color": false
+  },
+  "bluetooth": {
+    "file": "bluetooth.png",
+    "color": false
+  },
+  "map": {
+    "file": "map.png",
+    "color": false
+  },
+  "pin": {
+    "file": "pin.png",
+    "color": false
+  },
+  "locate": {
+    "file": "locate.png",
+    "color": false
+  },
+  "nearby": {
+    "file": "nearby.svg",
+    "color": false
+  },
+  "route": {
+    "file": "route.png",
+    "color": false
+  },
+  "car": {
+    "file": "car.png",
+    "color": false
+  },
+  "taxi": {
+    "file": "taxi.png",
+    "color": false
+  },
+  "transfer": {
+    "file": "transfer.png",
+    "color": false
+  },
+  "parking": {
+    "file": "parking.png",
+    "color": false
+  },
+  "plane": {
+    "file": "plane.png",
+    "color": false
+  },
+  "train": {
+    "file": "train.png",
+    "color": false
+  },
+  "walk": {
+    "file": "walk.png",
+    "color": false
+  },
+  "museum": {
+    "file": "museum.png",
+    "color": false
+  },
+  "flag": {
+    "file": "flag.png",
+    "color": false
+  },
+  "park": {
+    "file": "park.png",
+    "color": false
+  },
+  "picnic": {
+    "file": "picnic.png",
+    "color": false
+  },
+  "beach": {
+    "file": "beach.png",
+    "color": false
+  },
+  "garden-view": {
+    "file": "garden-view.png",
+    "color": false
+  },
+  "mountain-view": {
+    "file": "mountain-view.png",
+    "color": false
+  },
+  "sea-view": {
+    "file": "sea-view.png",
+    "color": false
+  },
+  "tree": {
+    "file": "tree.png",
+    "color": false
+  },
+  "weather": {
+    "file": "weather.png",
+    "color": false
+  },
+  "sun": {
+    "file": "sun.png",
+    "color": false
+  },
+  "moon": {
+    "file": "moon.png",
+    "color": false
+  },
+  "sunrise": {
+    "file": "sunrise.png",
+    "color": false
+  },
+  "sunset": {
+    "file": "sunset.png",
+    "color": false
+  },
+  "cloud": {
+    "file": "cloud.png",
+    "color": false
+  },
+  "cloud-sun": {
+    "file": "cloud-sun.png",
+    "color": false
+  },
+  "rain": {
+    "file": "rain.png",
+    "color": false
+  },
+  "wave": {
+    "file": "wave.png",
+    "color": false
+  },
+  "sea": {
+    "file": "sea.png",
+    "color": false
+  },
+  "flame": {
+    "file": "flame.png",
+    "color": false
+  },
+  "time": {
+    "file": "time.png",
+    "color": false
+  },
+  "pending": {
+    "file": "pending.png",
+    "color": false
+  },
+  "success": {
+    "file": "success.png",
+    "color": false
+  },
+  "error": {
+    "file": "error.png",
+    "color": false
+  },
+  "warning": {
+    "file": "warning.png",
+    "color": false
+  },
+  "help": {
+    "file": "help.png",
+    "color": false
+  },
+  "info": {
+    "file": "info.png",
+    "color": false
+  },
+  "wifi-off": {
+    "file": "wifi-off.png",
+    "color": false
+  },
+  "orbit": {
+    "file": "orbit.png",
+    "color": false
+  },
+  "spark": {
+    "file": "spark.png",
+    "color": false
+  },
+  "spark-curved": {
+    "file": "spark-curved.png",
+    "color": false
+  },
+  "spark-rays": {
+    "file": "spark-rays.png",
+    "color": false
+  },
+  "theme-light": {
+    "file": "theme-light.png",
+    "color": false
+  },
+  "theme-dark": {
+    "file": "theme-dark.png",
+    "color": false
+  },
+  "theme-system": {
+    "file": "theme-system.png",
+    "color": false
+  },
+  "ui-prev": {
+    "file": "ui-prev.png",
+    "color": false
+  },
+  "ui-next": {
+    "file": "ui-next.png",
+    "color": false
+  },
+  "ui-down": {
+    "file": "ui-down.png",
+    "color": false
+  },
+  "ui-up": {
+    "file": "ui-up.png",
+    "color": false
+  },
+  "ui-tick": {
+    "file": "ui-tick.png",
+    "color": false
+  },
+  "ui-partial": {
+    "file": "ui-partial.png",
+    "color": false
+  },
+  "ui-radio": {
+    "file": "ui-radio.svg",
+    "color": true
+  },
+  "ui-command": {
+    "file": "ui-command.png",
+    "color": false
+  },
+  "ui-close": {
+    "file": "ui-close.png",
+    "color": false
+  },
+  "ui-close-sheet": {
+    "file": "ui-close-sheet.png",
+    "color": false
+  },
+  "art-cleanliness": {
+    "file": "art-cleanliness.png",
+    "color": true
+  },
+  "art-quiet": {
+    "file": "art-quiet.png",
+    "color": true
+  },
+  "art-wifi": {
+    "file": "art-wifi.png",
+    "color": true
+  },
+  "art-location": {
+    "file": "art-location.png",
+    "color": true
+  },
+  "art-kids": {
+    "file": "art-kids.png",
+    "color": true
+  },
+  "art-pool": {
+    "file": "art-pool.png",
+    "color": true
+  },
+  "art-breakfast": {
+    "file": "art-breakfast.png",
+    "color": true
+  },
+  "art-air": {
+    "file": "art-air.png",
+    "color": true
+  },
+  "art-entertainment": {
+    "file": "art-entertainment.png",
+    "color": true
+  },
+  "art-design": {
+    "file": "art-design.png",
+    "color": true
+  },
+  "art-coffee": {
+    "file": "art-coffee.png",
+    "color": true
+  },
+  "art-attractions": {
+    "file": "art-attractions.png",
+    "color": true
+  },
+  "art-spa": {
+    "file": "art-spa.png",
+    "color": true
+  },
+  "art-view": {
+    "file": "art-view.png",
+    "color": true
+  },
+  "art-restaurant": {
+    "file": "art-restaurant.png",
+    "color": true
+  },
+  "art-historic": {
+    "file": "art-historic.png",
+    "color": true
+  },
+  "art-security": {
+    "file": "art-security.png",
+    "color": true
+  },
+  "art-solo": {
+    "file": "art-solo.png",
+    "color": true
+  },
+  "art-sport": {
+    "file": "art-sport.png",
+    "color": true
+  },
+  "art-parking": {
+    "file": "art-parking.png",
+    "color": true
+  },
+  "art-mountains": {
+    "file": "art-mountains.png",
+    "color": true
+  },
+  "art-rental": {
+    "file": "art-rental.png",
+    "color": true
+  },
+  "art-nature": {
+    "file": "art-nature.png",
+    "color": true
+  },
+  "art-water": {
+    "file": "art-water.png",
+    "color": true
+  },
+  "art-park": {
+    "file": "art-park.png",
+    "color": true
+  },
+  "art-kitchen": {
+    "file": "art-kitchen.png",
+    "color": true
+  },
+  "art-laundry": {
+    "file": "art-laundry.png",
+    "color": true
+  },
+  "art-sauna": {
+    "file": "art-sauna.png",
+    "color": true
+  },
+  "art-bar": {
+    "file": "art-bar.png",
+    "color": true
+  },
+  "art-adults": {
+    "file": "art-adults.png",
+    "color": true
+  },
+  "art-beach": {
+    "file": "art-beach.png",
+    "color": true
+  },
+  "art-work": {
+    "file": "art-work.png",
+    "color": true
+  },
+  "preference-sleep": {
+    "file": "preference-sleep.png",
+    "color": true
+  },
+  "preference-spa": {
+    "file": "preference-spa.png",
+    "color": true
+  },
+  "preference-breakfast": {
+    "file": "preference-breakfast.png",
+    "color": true
+  },
+  "brand-keys": {
+    "file": "brand-keys.png",
+    "color": true
+  },
+  "brand-launcher": {
+    "file": "brand-launcher.png",
+    "color": true
+  },
+  "route-yandex": {
+    "file": "route-yandex.png",
+    "color": true
+  },
+  "route-google": {
+    "file": "route-google.svg",
+    "color": true
+  },
+  "route-apple": {
+    "file": "route-apple.png",
+    "color": true
+  },
+  "route-2gis": {
+    "file": "route-2gis.png",
+    "color": true
+  },
+  "route-go": {
+    "file": "route-go.png",
+    "color": true
+  },
+  "trips": {
+    "file": "nav-trips.png",
+    "color": false
+  },
+  "search": {
+    "file": "nav-search.png",
+    "color": false
+  },
+  "chat": {
+    "file": "chat-hotel.svg",
+    "color": false
+  },
+  "hotel-chat": {
+    "file": "chat-hotel.svg",
+    "color": false
+  },
+  "nav-chats": {
+    "file": "chat-hotel.svg",
+    "color": false
+  },
+  "nav-rewards": {
+    "file": "gift.png",
+    "color": false
+  },
+  "user": {
+    "file": "nav-profile.png",
+    "color": false
+  },
+  "arrow": {
+    "file": "chevron-right.png",
+    "color": false
+  },
+  "chevron": {
+    "file": "chevron-right.png",
+    "color": false
+  },
+  "down": {
+    "file": "chevron-down.png",
+    "color": false
+  },
+  "sliders": {
+    "file": "preferences.png",
+    "color": false
+  },
+  "booking-edit": {
+    "file": "edit.png",
+    "color": false
+  },
+  "share-trip": {
+    "file": "share.svg",
+    "color": false
+  },
+  "users": {
+    "file": "guests.png",
+    "color": false
+  },
+  "problem-outline": {
+    "file": "problem.png",
+    "color": false
+  },
+  "booking-doc": {
+    "file": "document.png",
+    "color": false
+  },
+  "doc": {
+    "file": "document.png",
+    "color": false
+  },
+  "Детали брони": {
+    "file": "document.png",
+    "color": false
+  },
+  "Детали поездки": {
+    "file": "document.png",
+    "color": false
+  },
+  "shield": {
+    "file": "secure.png",
+    "color": false
+  },
+  "star": {
+    "file": "review.png",
+    "color": false
+  },
+  "clock-checkin": {
+    "file": "early-check-in.png",
+    "color": false
+  },
+  "history-clock": {
+    "file": "late-check-out.png",
+    "color": false
+  },
+  "percent": {
+    "file": "discount.png",
+    "color": false
+  },
+  "wallet": {
+    "file": "deposit.png",
+    "color": false
+  },
+  "coins": {
+    "file": "points.png",
+    "color": false
+  },
+  "room": {
+    "file": "bed-double.png",
+    "color": false
+  },
+  "towel": {
+    "file": "towels.png",
+    "color": false
+  },
+  "hotel": {
+    "file": "hotel-building.png",
+    "color": false
+  },
+  "service": {
+    "file": "concierge.svg",
+    "color": false
+  },
+  "paw": {
+    "file": "pet.png",
+    "color": false
+  },
+  "coffee": {
+    "file": "breakfast.png",
+    "color": false
+  },
+  "food": {
+    "file": "restaurant.png",
+    "color": false
+  },
+  "glass": {
+    "file": "wine.png",
+    "color": false
+  },
+  "clock": {
+    "file": "pending.png",
+    "color": false
+  },
+  "info-circle": {
+    "file": "info.png",
+    "color": false
+  },
+  "chats": {
+    "file": "chat-hotel.svg",
+    "color": false
+  },
+  "location": {
+    "file": "pin.png",
+    "color": false
+  },
+  "network": {
+    "file": "hotel-network.png",
+    "color": false
+  },
+  "profile": {
+    "file": "nav-profile.png",
+    "color": false
+  },
+  "return": {
+    "file": "undo.png",
+    "color": false
+  },
+  "rewards": {
+    "file": "gift.png",
+    "color": false
+  },
+  "microphone": {
+    "file": "microphone.svg",
+    "color": false
+  }
+}

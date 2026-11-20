@@ -1,6 +1,6 @@
 import {CardPaymentPlan} from './CardPaymentPlan';
 import {useId,useLayoutEffect,useRef,useState} from 'react';
-import {Icon} from '../ui';
+import {Icon,RadioMark} from '../ui';
 import type {Draft} from './model';
 import {extraPaymentOptions,paymentSelection,type PaymentChoice} from './paymentOptions';
 import {paymentLayout} from './paymentLayout';
@@ -25,6 +25,6 @@ export function DesktopPaymentChoices({draft,onChange,onlineOnly=false}:{draft:D
    {!!overflow.length&&<button className={'payment-choice payment-more '+(hiddenSelected?'selected':'')} aria-expanded={expanded} aria-controls={id} onClick={()=>setExpanded(v=>!v)}><Icon name="more" size={26} inheritColor/><span className="payment-choice-check" aria-hidden="true">{hiddenSelected&&<Icon name="check" size={12} inheritColor/>}</span><strong>Другое <Icon name="chevron-down" size={14} inheritColor/></strong><small>{hiddenSelected?.label||`Ещё ${overflow.length}`}</small></button>}
   </div>
   <CardPaymentPlan draft={draft} onChange={onChange} onlineOnly={onlineOnly}/>
-  {expanded&&!!overflow.length&&<div id={id} className="payment-extra-options" role="group" aria-label="Другие способы оплаты">{overflow.map(o=><button key={o.id} aria-pressed={selected===o.id} onClick={()=>select(o.id)}><span className="icon-tile"><Icon name={o.icon} size={20} inheritColor/></span><strong>{o.label}</strong><span className={'radio-dot '+(selected===o.id?'checked':'')}/></button>)}</div>}
+  {expanded&&!!overflow.length&&<div id={id} className="payment-extra-options" role="group" aria-label="Другие способы оплаты">{overflow.map(o=><button key={o.id} aria-pressed={selected===o.id} onClick={()=>select(o.id)}><span className="icon-tile"><Icon name={o.icon} size={20} inheritColor/></span><strong>{o.label}</strong><RadioMark checked={selected===o.id}/></button>)}</div>}
  </section>;
 }

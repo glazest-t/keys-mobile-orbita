@@ -1,5 +1,6 @@
 import {useState} from 'react';
-import {CopyIcon} from '@radix-ui/react-icons';
+import {iconAsset} from '../iconAssets';
+import {usePrototypeIcons} from '../usePrototypeIcons';
 import {useNovember} from '../usePrototypeVariant';
 import {BottomSheet} from '../mobile';
 import {Icon} from '../ui';
@@ -9,6 +10,8 @@ import {hotelLocation,twoGisPlaceUrl} from '../maps/locations';
 
 export function MapAppChooser({hotelId,onClose,copyableAddress}:{hotelId:string|null;onClose:()=>void;copyableAddress?:string}){
  const [copyStatus,setCopyStatus]=useState('');
+ const iconVariant=usePrototypeIcons();
+ const atlasNames:Record<string,string>={'yandex.svg':'route-yandex','2gis.png':'route-2gis','google.ico':'route-google','apple.png':'route-apple'};
  const hotel=catalog.hotels.find(h=>h.id===hotelId),place=hotelId?hotelLocation(hotelId):undefined;
  const v=hotelId?hotelVisual(hotelId):null;
  const destination=place?`${place.coordinates[1]},${place.coordinates[0]}`:hotel?`${hotel.city}, ${v?.address}, ${hotel.name}`:'';
@@ -34,12 +37,12 @@ export function MapAppChooser({hotelId,onClose,copyableAddress}:{hotelId:string|
    <div className="november-map-address">
     <span>{address}</span>
     {address&&<button type="button" className="map-address-copy" aria-label="Скопировать адрес" title="Скопировать адрес" onClick={copyAddress}>
-     <CopyIcon width={20} height={20} aria-hidden="true"/>
+     <Icon name="copy" size={20} inheritColor/>
     </button>}
    </div>
    {address&&<p className="map-address-status" role="status">{copyStatus}</p>}
    {links.filter(l=>l.url).map(l=><a key={l.name} href={l.url} target="_blank" rel="noreferrer" onClick={close}>
-    <span className={"november-map-app-icon "+(l.icon==='apple.png'?'apple':'')}><img src={import.meta.env.BASE_URL+'brand/map-apps/'+l.icon} alt=""/></span>
+    <span className={"november-map-app-icon "+(l.icon==='apple.png'?'apple':'')}><img src={iconVariant==='new'?iconAsset(atlasNames[l.icon],iconVariant):import.meta.env.BASE_URL+'brand/map-apps/'+l.icon} alt=""/></span>
     <strong>{l.name}</strong><Icon name="chevron-right" size={18} inheritColor/>
    </a>)}
   </div>

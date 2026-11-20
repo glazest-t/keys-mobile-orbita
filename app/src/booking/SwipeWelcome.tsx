@@ -1,13 +1,16 @@
 import {useState,type CSSProperties} from 'react';
 import {MobileScroll,useKeyboardInsets} from '../mobile';
 import {Button,Icon,IconButton} from '../ui';
+import {iconAsset} from '../iconAssets';
+import {usePrototypeIcons} from '../usePrototypeIcons';
 import {swipeThemes} from './swipePreferences';
 import {BubbleOrbit,WaterRippleButton} from '../interactions';
 import './swipe-preferences.css';
 
 
 export function SwipePreferences({selected,onChange,onContinue,onClose,backLabel='Назад к поиску',saveMode=false,embedded=false,standardHeader=false}:{selected:string[];onChange:(ids:string[])=>void;onContinue:()=>void;onClose:()=>void;backLabel?:string;saveMode?:boolean;embedded?:boolean;standardHeader?:boolean}){
- const {bottomInset}=useKeyboardInsets();
+ const {bottomInset}=useKeyboardInsets(),iconVariant=usePrototypeIcons();
+ const styleIcons:Record<string,string>={family:'art-kids',discover:'art-entertainment',romantic:'art-adults',culture:'art-attractions',active:'art-sport',nature:'art-nature',spa:'preference-spa',food:'art-restaurant'};
  const [departing,setDeparting]=useState(false);
  return <section className={"swipe-preferences"+(embedded?" swipe-preferences-sheet":"")} style={{'--swipe-intro-bottom':`${bottomInset}px`} as CSSProperties} aria-label="Предпочтения поездки" aria-busy={departing}>
   {standardHeader&&<header className="desktop-section-header"><IconButton name="back" label={backLabel} onClick={onClose}/><h1>Ваш стиль путешествий</h1></header>}
@@ -18,7 +21,7 @@ export function SwipePreferences({selected,onChange,onContinue,onClose,backLabel
    <p>На основе ваших предпочтений мы подберем лучшее предложение</p>
    <BubbleOrbit departing={departing} onDeparted={onContinue}>
     {swipeThemes.map(theme=>{const checked=selected.includes(theme.id);return <WaterRippleButton key={theme.id} type="button" role="checkbox" aria-checked={checked} className="swipe-theme" onClick={()=>onChange(checked?selected.filter(id=>id!==theme.id):[...selected,theme.id])}>
-     <span className="swipe-theme-symbol"><img className="swipe-theme-art" src={`/assets/preferences/travel-style/${theme.id}.png?v=1`} width={42} height={42} alt="" aria-hidden="true" draggable={false}/></span><span className="swipe-theme-label">{theme.title}</span>
+     <span className="swipe-theme-symbol"><img className="swipe-theme-art" src={iconVariant==='new'?iconAsset(styleIcons[theme.id],iconVariant):`/assets/preferences/travel-style/${theme.id}.png?v=1`} width={42} height={42} alt="" aria-hidden="true" draggable={false}/></span><span className="swipe-theme-label">{theme.title}</span>
      {checked&&<i className="swipe-theme-check"><Icon name="check" size={14} inheritColor/></i>}
     </WaterRippleButton>;})}
    </BubbleOrbit>

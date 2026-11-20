@@ -1,0 +1,1807 @@
+{
+  "name": "Ключи · Мягкий контур",
+  "revision": "soft-contour-v2-20261120",
+  "source": "https://keys-soft-contour-icon-atlas.bapiwork2020.chatgpt.site/",
+  "sourceSha256": "5f9bbbfcc40efa5db31cd08276c041ca86fe0a43c73e44a781edbf7743eddf59",
+  "catalogueCount": 254,
+  "v2": [
+    "bedrooms",
+    "baby-cot",
+    "balcony",
+    "minibar",
+    "coffee-machine",
+    "contactless-check-in",
+    "reception",
+    "concierge",
+    "kids-room",
+    "spa",
+    "chat-hotel",
+    "share",
+    "nearby",
+    "route-google",
+    "ui-radio"
+  ],
+  "items": [
+    {
+      "id": "nav-trips",
+      "label": "Поездки",
+      "group": "Навигация",
+      "version": "atlas"
+    },
+    {
+      "id": "nav-search",
+      "label": "Найти",
+      "group": "Навигация",
+      "version": "atlas"
+    },
+    {
+      "id": "chat-hotel",
+      "label": "Чаты",
+      "group": "Навигация",
+      "version": "v2"
+    },
+    {
+      "id": "gift",
+      "label": "Выгоды",
+      "group": "Навигация",
+      "version": "atlas"
+    },
+    {
+      "id": "nav-profile",
+      "label": "Профиль",
+      "group": "Навигация",
+      "version": "atlas"
+    },
+    {
+      "id": "back",
+      "label": "Назад",
+      "group": "Навигация",
+      "version": "atlas"
+    },
+    {
+      "id": "chevron-right",
+      "label": "Дальше",
+      "group": "Навигация",
+      "version": "atlas"
+    },
+    {
+      "id": "chevron-down",
+      "label": "Развернуть",
+      "group": "Навигация",
+      "version": "atlas"
+    },
+    {
+      "id": "arrow-up",
+      "label": "Стрелка вверх",
+      "group": "Навигация",
+      "version": "atlas"
+    },
+    {
+      "id": "arrow-down",
+      "label": "Стрелка вниз",
+      "group": "Навигация",
+      "version": "atlas"
+    },
+    {
+      "id": "menu",
+      "label": "Меню",
+      "group": "Навигация",
+      "version": "atlas"
+    },
+    {
+      "id": "list",
+      "label": "Список",
+      "group": "Навигация",
+      "version": "atlas"
+    },
+    {
+      "id": "more",
+      "label": "Ещё",
+      "group": "Навигация",
+      "version": "atlas"
+    },
+    {
+      "id": "filter",
+      "label": "Фильтр",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "preferences",
+      "label": "Параметры",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "sort",
+      "label": "Сортировка",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "plus",
+      "label": "Добавить",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "minus",
+      "label": "Убрать",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "close",
+      "label": "Закрыть",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "edit",
+      "label": "Редактировать",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "check",
+      "label": "Подтвердить",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "attach",
+      "label": "Прикрепить",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "download",
+      "label": "Скачать",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "share",
+      "label": "Поделиться",
+      "group": "Действия",
+      "version": "v2"
+    },
+    {
+      "id": "copy",
+      "label": "Копировать",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "copy-outline",
+      "label": "Копия",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "undo",
+      "label": "Отменить действие",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "repeat",
+      "label": "Повторить",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "trash",
+      "label": "Удалить",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "pause",
+      "label": "Пауза",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "play",
+      "label": "Воспроизвести",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "volume",
+      "label": "Звук включён",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "volume-off",
+      "label": "Без звука",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "camera",
+      "label": "Камера",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "photos",
+      "label": "Фотографии",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "heart",
+      "label": "В избранном",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "favorite-outline",
+      "label": "В избранное",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "heart-outline",
+      "label": "Избранное в профиле",
+      "group": "Действия",
+      "version": "atlas"
+    },
+    {
+      "id": "guest-outline",
+      "label": "Гость",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "guests",
+      "label": "Гости",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "invite",
+      "label": "Пригласить",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "bell",
+      "label": "Уведомления",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "bell-check",
+      "label": "Уведомления прочитаны",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "mail",
+      "label": "Почта",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "send",
+      "label": "Отправить",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "support-write",
+      "label": "Написать в поддержку",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "assistant",
+      "label": "Помощник",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "problem",
+      "label": "Сообщить о проблеме",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "phone",
+      "label": "Телефон",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "settings",
+      "label": "Настройки",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "language",
+      "label": "Язык",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "globe",
+      "label": "Регионы и языки",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "passport",
+      "label": "Паспорт",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "document",
+      "label": "Документ",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "face-id",
+      "label": "Распознавание лица",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "secure",
+      "label": "Безопасность",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "lock",
+      "label": "Замок",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "key",
+      "label": "Ключ",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "logout",
+      "label": "Выйти",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "review",
+      "label": "Оценка и отзывы",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "style-match",
+      "label": "Подходит вам",
+      "group": "Профиль и связь",
+      "version": "atlas"
+    },
+    {
+      "id": "calendar",
+      "label": "Календарь",
+      "group": "Бронирование и оплата",
+      "version": "atlas"
+    },
+    {
+      "id": "ticket",
+      "label": "Билет",
+      "group": "Бронирование и оплата",
+      "version": "atlas"
+    },
+    {
+      "id": "check-in",
+      "label": "Заезд",
+      "group": "Бронирование и оплата",
+      "version": "atlas"
+    },
+    {
+      "id": "check-out",
+      "label": "Выезд",
+      "group": "Бронирование и оплата",
+      "version": "atlas"
+    },
+    {
+      "id": "early-check-in",
+      "label": "Ранний заезд",
+      "group": "Бронирование и оплата",
+      "version": "atlas"
+    },
+    {
+      "id": "late-check-out",
+      "label": "Поздний выезд",
+      "group": "Бронирование и оплата",
+      "version": "atlas"
+    },
+    {
+      "id": "contactless-check-in",
+      "label": "Бесконтактный заезд",
+      "group": "Бронирование и оплата",
+      "version": "v2"
+    },
+    {
+      "id": "price",
+      "label": "Динамика цены",
+      "group": "Бронирование и оплата",
+      "version": "atlas"
+    },
+    {
+      "id": "best-price",
+      "label": "Лучшая цена",
+      "group": "Бронирование и оплата",
+      "version": "atlas"
+    },
+    {
+      "id": "discount",
+      "label": "Скидка",
+      "group": "Бронирование и оплата",
+      "version": "atlas"
+    },
+    {
+      "id": "gift-outline",
+      "label": "Подарок",
+      "group": "Бронирование и оплата",
+      "version": "atlas"
+    },
+    {
+      "id": "card",
+      "label": "Банковская карта",
+      "group": "Бронирование и оплата",
+      "version": "atlas"
+    },
+    {
+      "id": "deposit",
+      "label": "Кошелёк и депозит",
+      "group": "Бронирование и оплата",
+      "version": "atlas"
+    },
+    {
+      "id": "wallet-outline",
+      "label": "Кошелёк",
+      "group": "Бронирование и оплата",
+      "version": "atlas"
+    },
+    {
+      "id": "points",
+      "label": "Баллы",
+      "group": "Бронирование и оплата",
+      "version": "atlas"
+    },
+    {
+      "id": "points-earned",
+      "label": "Начисление баллов",
+      "group": "Бронирование и оплата",
+      "version": "atlas"
+    },
+    {
+      "id": "crown",
+      "label": "Статус участника",
+      "group": "Бронирование и оплата",
+      "version": "atlas"
+    },
+    {
+      "id": "receipt",
+      "label": "Чек",
+      "group": "Бронирование и оплата",
+      "version": "atlas"
+    },
+    {
+      "id": "bill",
+      "label": "Счёт",
+      "group": "Бронирование и оплата",
+      "version": "atlas"
+    },
+    {
+      "id": "qr",
+      "label": "QR-код",
+      "group": "Бронирование и оплата",
+      "version": "atlas"
+    },
+    {
+      "id": "nfc",
+      "label": "Бесконтактная оплата",
+      "group": "Бронирование и оплата",
+      "version": "atlas"
+    },
+    {
+      "id": "bed-double",
+      "label": "Двуспальная кровать",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "bed-single",
+      "label": "Односпальная кровать",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "bed-twin",
+      "label": "Две раздельные кровати",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "bed",
+      "label": "Спальное место",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "bunk-bed",
+      "label": "Двухъярусная кровать",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "sofa-bed",
+      "label": "Диван-кровать",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "bedrooms",
+      "label": "Спальни",
+      "group": "Номер",
+      "version": "v2"
+    },
+    {
+      "id": "room-outline",
+      "label": "Номер",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "room-area",
+      "label": "Площадь номера",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "area",
+      "label": "Размеры",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "baby-cot",
+      "label": "Детская кроватка",
+      "group": "Номер",
+      "version": "v2"
+    },
+    {
+      "id": "pillow",
+      "label": "Подушка",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "linen",
+      "label": "Постельное бельё",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "wardrobe",
+      "label": "Шкаф",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "desk",
+      "label": "Рабочий стол",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "door",
+      "label": "Дверь",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "balcony",
+      "label": "Балкон",
+      "group": "Номер",
+      "version": "v2"
+    },
+    {
+      "id": "terrace",
+      "label": "Терраса",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "floor",
+      "label": "Этаж",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "tv",
+      "label": "Телевизор",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "plug",
+      "label": "Розетка",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "bulb",
+      "label": "Освещение",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "climate",
+      "label": "Климат-контроль",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "refrigerator",
+      "label": "Холодильник",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "minibar",
+      "label": "Мини-бар",
+      "group": "Номер",
+      "version": "v2"
+    },
+    {
+      "id": "microwave",
+      "label": "Микроволновка",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "kettle",
+      "label": "Чайник",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "coffee-machine",
+      "label": "Кофемашина",
+      "group": "Номер",
+      "version": "v2"
+    },
+    {
+      "id": "safe",
+      "label": "Сейф",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "bathroom",
+      "label": "Ванная комната",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "shared-bathroom",
+      "label": "Общая ванная",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "shower",
+      "label": "Душ",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "bathrobe",
+      "label": "Халат",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "slippers",
+      "label": "Тапочки",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "towels",
+      "label": "Полотенца",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "toiletries",
+      "label": "Косметические средства",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "hairdryer",
+      "label": "Фен",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "iron",
+      "label": "Утюг",
+      "group": "Номер",
+      "version": "atlas"
+    },
+    {
+      "id": "hotel-building",
+      "label": "Отель",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "hotel-outline",
+      "label": "Здание отеля",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "hotel-network",
+      "label": "Сеть отелей",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "reception",
+      "label": "Стойка регистрации",
+      "group": "Отель и услуги",
+      "version": "v2"
+    },
+    {
+      "id": "concierge",
+      "label": "Консьерж",
+      "group": "Отель и услуги",
+      "version": "v2"
+    },
+    {
+      "id": "room-service",
+      "label": "Обслуживание номера",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "do-not-disturb",
+      "label": "Не беспокоить",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "luggage",
+      "label": "Хранение багажа",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "luggage-outline",
+      "label": "Багаж",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "cleaning",
+      "label": "Уборка",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "laundry",
+      "label": "Прачечная",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "washing-machine",
+      "label": "Стиральная машина",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "elevator",
+      "label": "Лифт",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "accessible",
+      "label": "Доступная среда",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "no-smoking",
+      "label": "Для некурящих",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "pet",
+      "label": "Можно с питомцами",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "kids-room",
+      "label": "Детская комната",
+      "group": "Отель и услуги",
+      "version": "v2"
+    },
+    {
+      "id": "kid",
+      "label": "Ребёнок",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "blocks",
+      "label": "Кубики",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "board-games",
+      "label": "Настольные игры",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "breakfast",
+      "label": "Завтрак",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "restaurant",
+      "label": "Ресторан",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "cafe",
+      "label": "Кафе",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "coffee-to-go",
+      "label": "Кофе с собой",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "bar",
+      "label": "Бар",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "wine",
+      "label": "Вино",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "kitchen",
+      "label": "Кухня",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "water-dispenser",
+      "label": "Кулер",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "pool",
+      "label": "Бассейн",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "fitness",
+      "label": "Тренажёрный зал",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "fitness-outline",
+      "label": "Фитнес",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "spa",
+      "label": "Спа",
+      "group": "Отель и услуги",
+      "version": "v2"
+    },
+    {
+      "id": "sauna",
+      "label": "Сауна",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "wifi",
+      "label": "Wi-Fi",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "bluetooth",
+      "label": "Bluetooth",
+      "group": "Отель и услуги",
+      "version": "atlas"
+    },
+    {
+      "id": "map",
+      "label": "Карта",
+      "group": "Места и транспорт",
+      "version": "atlas"
+    },
+    {
+      "id": "pin",
+      "label": "Место на карте",
+      "group": "Места и транспорт",
+      "version": "atlas"
+    },
+    {
+      "id": "locate",
+      "label": "Моё местоположение",
+      "group": "Места и транспорт",
+      "version": "atlas"
+    },
+    {
+      "id": "nearby",
+      "label": "Рядом со мной",
+      "group": "Места и транспорт",
+      "version": "v2"
+    },
+    {
+      "id": "route",
+      "label": "Маршрут",
+      "group": "Места и транспорт",
+      "version": "atlas"
+    },
+    {
+      "id": "car",
+      "label": "Автомобиль",
+      "group": "Места и транспорт",
+      "version": "atlas"
+    },
+    {
+      "id": "taxi",
+      "label": "Такси",
+      "group": "Места и транспорт",
+      "version": "atlas"
+    },
+    {
+      "id": "transfer",
+      "label": "Трансфер",
+      "group": "Места и транспорт",
+      "version": "atlas"
+    },
+    {
+      "id": "parking",
+      "label": "Парковка",
+      "group": "Места и транспорт",
+      "version": "atlas"
+    },
+    {
+      "id": "plane",
+      "label": "Самолёт",
+      "group": "Места и транспорт",
+      "version": "atlas"
+    },
+    {
+      "id": "train",
+      "label": "Поезд",
+      "group": "Места и транспорт",
+      "version": "atlas"
+    },
+    {
+      "id": "walk",
+      "label": "Пешком",
+      "group": "Места и транспорт",
+      "version": "atlas"
+    },
+    {
+      "id": "museum",
+      "label": "Музей",
+      "group": "Места и транспорт",
+      "version": "atlas"
+    },
+    {
+      "id": "flag",
+      "label": "Флаг",
+      "group": "Места и транспорт",
+      "version": "atlas"
+    },
+    {
+      "id": "park",
+      "label": "Парк",
+      "group": "Места и транспорт",
+      "version": "atlas"
+    },
+    {
+      "id": "picnic",
+      "label": "Пикник",
+      "group": "Места и транспорт",
+      "version": "atlas"
+    },
+    {
+      "id": "beach",
+      "label": "Пляж",
+      "group": "Места и транспорт",
+      "version": "atlas"
+    },
+    {
+      "id": "garden-view",
+      "label": "Вид на сад",
+      "group": "Природа и погода",
+      "version": "atlas"
+    },
+    {
+      "id": "mountain-view",
+      "label": "Вид на горы",
+      "group": "Природа и погода",
+      "version": "atlas"
+    },
+    {
+      "id": "sea-view",
+      "label": "Вид на море",
+      "group": "Природа и погода",
+      "version": "atlas"
+    },
+    {
+      "id": "tree",
+      "label": "Дерево",
+      "group": "Природа и погода",
+      "version": "atlas"
+    },
+    {
+      "id": "weather",
+      "label": "Погода",
+      "group": "Природа и погода",
+      "version": "atlas"
+    },
+    {
+      "id": "sun",
+      "label": "Солнце",
+      "group": "Природа и погода",
+      "version": "atlas"
+    },
+    {
+      "id": "moon",
+      "label": "Луна",
+      "group": "Природа и погода",
+      "version": "atlas"
+    },
+    {
+      "id": "sunrise",
+      "label": "Восход",
+      "group": "Природа и погода",
+      "version": "atlas"
+    },
+    {
+      "id": "sunset",
+      "label": "Закат",
+      "group": "Природа и погода",
+      "version": "atlas"
+    },
+    {
+      "id": "cloud",
+      "label": "Облачно",
+      "group": "Природа и погода",
+      "version": "atlas"
+    },
+    {
+      "id": "cloud-sun",
+      "label": "Переменная облачность",
+      "group": "Природа и погода",
+      "version": "atlas"
+    },
+    {
+      "id": "rain",
+      "label": "Дождь",
+      "group": "Природа и погода",
+      "version": "atlas"
+    },
+    {
+      "id": "wave",
+      "label": "Волны",
+      "group": "Природа и погода",
+      "version": "atlas"
+    },
+    {
+      "id": "sea",
+      "label": "Море",
+      "group": "Природа и погода",
+      "version": "atlas"
+    },
+    {
+      "id": "flame",
+      "label": "Огонь",
+      "group": "Природа и погода",
+      "version": "atlas"
+    },
+    {
+      "id": "time",
+      "label": "Время",
+      "group": "Состояния и оформление",
+      "version": "atlas"
+    },
+    {
+      "id": "pending",
+      "label": "Ожидание",
+      "group": "Состояния и оформление",
+      "version": "atlas"
+    },
+    {
+      "id": "success",
+      "label": "Готово",
+      "group": "Состояния и оформление",
+      "version": "atlas"
+    },
+    {
+      "id": "error",
+      "label": "Ошибка",
+      "group": "Состояния и оформление",
+      "version": "atlas"
+    },
+    {
+      "id": "warning",
+      "label": "Предупреждение",
+      "group": "Состояния и оформление",
+      "version": "atlas"
+    },
+    {
+      "id": "help",
+      "label": "Помощь",
+      "group": "Состояния и оформление",
+      "version": "atlas"
+    },
+    {
+      "id": "info",
+      "label": "Информация",
+      "group": "Состояния и оформление",
+      "version": "atlas"
+    },
+    {
+      "id": "wifi-off",
+      "label": "Нет сети",
+      "group": "Состояния и оформление",
+      "version": "atlas"
+    },
+    {
+      "id": "orbit",
+      "label": "Орбита",
+      "group": "Состояния и оформление",
+      "version": "atlas"
+    },
+    {
+      "id": "spark",
+      "label": "Искра",
+      "group": "Состояния и оформление",
+      "version": "atlas"
+    },
+    {
+      "id": "spark-curved",
+      "label": "Искра помощника",
+      "group": "Состояния и оформление",
+      "version": "atlas"
+    },
+    {
+      "id": "spark-rays",
+      "label": "Лучистая искра",
+      "group": "Состояния и оформление",
+      "version": "atlas"
+    },
+    {
+      "id": "theme-light",
+      "label": "Светлая тема",
+      "group": "Состояния и оформление",
+      "version": "atlas"
+    },
+    {
+      "id": "theme-dark",
+      "label": "Тёмная тема",
+      "group": "Состояния и оформление",
+      "version": "atlas"
+    },
+    {
+      "id": "theme-system",
+      "label": "Системная тема",
+      "group": "Состояния и оформление",
+      "version": "atlas"
+    },
+    {
+      "id": "ui-prev",
+      "label": "Предыдущий месяц",
+      "group": "Элементы управления",
+      "version": "atlas"
+    },
+    {
+      "id": "ui-next",
+      "label": "Следующий месяц",
+      "group": "Элементы управления",
+      "version": "atlas"
+    },
+    {
+      "id": "ui-down",
+      "label": "Раскрыть список",
+      "group": "Элементы управления",
+      "version": "atlas"
+    },
+    {
+      "id": "ui-up",
+      "label": "Свернуть список",
+      "group": "Элементы управления",
+      "version": "atlas"
+    },
+    {
+      "id": "ui-tick",
+      "label": "Выбрано",
+      "group": "Элементы управления",
+      "version": "atlas"
+    },
+    {
+      "id": "ui-partial",
+      "label": "Частичный выбор",
+      "group": "Элементы управления",
+      "version": "atlas"
+    },
+    {
+      "id": "ui-radio",
+      "label": "Выбранный вариант",
+      "group": "Элементы управления",
+      "version": "v2"
+    },
+    {
+      "id": "ui-command",
+      "label": "Поиск в списке",
+      "group": "Элементы управления",
+      "version": "atlas"
+    },
+    {
+      "id": "ui-close",
+      "label": "Закрыть окно",
+      "group": "Элементы управления",
+      "version": "atlas"
+    },
+    {
+      "id": "ui-close-sheet",
+      "label": "Закрыть панель",
+      "group": "Элементы управления",
+      "version": "atlas"
+    },
+    {
+      "id": "art-cleanliness",
+      "label": "Чистота",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-quiet",
+      "label": "Тишина",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-wifi",
+      "label": "Интернет",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-location",
+      "label": "Расположение",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-kids",
+      "label": "С детьми",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-pool",
+      "label": "Бассейн",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-breakfast",
+      "label": "Завтрак",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-air",
+      "label": "Кондиционер",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-entertainment",
+      "label": "Развлечения",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-design",
+      "label": "Интерьер",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-coffee",
+      "label": "Кофе",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-attractions",
+      "label": "Достопримечательности",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-spa",
+      "label": "Спа",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-view",
+      "label": "Вид из окна",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-restaurant",
+      "label": "Ресторан",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-historic",
+      "label": "Историческое здание",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-security",
+      "label": "Безопасность",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-solo",
+      "label": "Соло-поездка",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-sport",
+      "label": "Спорт",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-parking",
+      "label": "Парковка",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-mountains",
+      "label": "Горы",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-rental",
+      "label": "Прокат",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-nature",
+      "label": "Природа",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-water",
+      "label": "У воды",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-park",
+      "label": "Рядом с парком",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-kitchen",
+      "label": "Кухня",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-laundry",
+      "label": "Прачечная",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-sauna",
+      "label": "Сауна",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-bar",
+      "label": "Бар",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-adults",
+      "label": "Для взрослых",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-beach",
+      "label": "Пляж",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "art-work",
+      "label": "Рабочее место",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "preference-sleep",
+      "label": "Комфортный сон",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "preference-spa",
+      "label": "Спа в предпочтениях",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "preference-breakfast",
+      "label": "Завтрак в предпочтениях",
+      "group": "Карточки удобств",
+      "version": "atlas"
+    },
+    {
+      "id": "brand-keys",
+      "label": "Знак Ключей",
+      "group": "Знаки приложений",
+      "version": "atlas"
+    },
+    {
+      "id": "brand-launcher",
+      "label": "Иконка приложения",
+      "group": "Знаки приложений",
+      "version": "atlas"
+    },
+    {
+      "id": "route-yandex",
+      "label": "Яндекс Карты",
+      "group": "Знаки приложений",
+      "version": "atlas"
+    },
+    {
+      "id": "route-google",
+      "label": "Google Карты",
+      "group": "Знаки приложений",
+      "version": "v2"
+    },
+    {
+      "id": "route-apple",
+      "label": "Apple Карты",
+      "group": "Знаки приложений",
+      "version": "atlas"
+    },
+    {
+      "id": "route-2gis",
+      "label": "2ГИС",
+      "group": "Знаки приложений",
+      "version": "atlas"
+    },
+    {
+      "id": "route-go",
+      "label": "Яндекс Go",
+      "group": "Знаки приложений",
+      "version": "atlas"
+    }
+  ],
+  "files": {
+    "nav-trips.png": "ed1fb95134f4190d2e94ea9ca6fda2c2c5805fdd8c0d14097f4a00cbfe80d659",
+    "nav-search.png": "20b6e0239daa1a2683da2afa9926f2427e85b546bfc8a75165de4f174401d70c",
+    "chat-hotel.svg": "fc81fe117f62c893947dbd75e784e6703062b2ccad39fcb3403ad7c096479daa",
+    "gift.png": "d1a9a8bfc885fd0d84c029e5b5fbddad12db8fad122c872639591bcee1701834",
+    "nav-profile.png": "b806e5fd623f90b369e8fdfbf6a0eb5c572bfa38d0349d8e34aa6026a92642aa",
+    "back.png": "145304fe98deca9f875576360c1fe60752e7cccd977cb4642bf8de4f4f39ed2c",
+    "chevron-right.png": "8866f6a997a4d1ea68459ed01ff6560ec5a17a208ee56f3a9eff6262f2584aa7",
+    "chevron-down.png": "9d3c66d67c7aff876867e5cc93d17abb4f735d7cfad5fe66116a30a75c8008a2",
+    "arrow-up.png": "adaac6367a4e3def50583bd1a774a949c6d71196794e1ac195f294d21e74513c",
+    "arrow-down.png": "a46a771a887970880b60b14aafa8dac4545770225e5dd1822c380f78593180d8",
+    "menu.png": "de23110d68254c620ba167b2f66f1cc84059671ab037c21a911bfaff8bbccbe2",
+    "list.png": "3be7ebb5407899480bfe9d7e6aa91482b159b904d1e03f839c296fb4ad416ec3",
+    "more.png": "bf9219498f40779d44131dc800170aa9df3d81fcecbfcf2e1d834abe3e230ec4",
+    "filter.png": "6913293e7d32573fef42b2e4b1f6fa50922b9cd24c13ef4497f0cda1d2246a2f",
+    "preferences.png": "faed5a604d4715d97c239463b3fbdaee6c9944ec5de2a12a3834f33d3ed1af3d",
+    "sort.png": "8f4cf3c40500c2c0be48873f54189d109f5416aa4775f266780375ab7eadb22a",
+    "plus.png": "56330ce2445128df1e1d4186bbfa304ad9bfb25adcff3fa9013064dfaf80c34c",
+    "minus.png": "83fcac52b0631e84ba2bd42503089b6fce2ca541251d865c53fb6700218c5f1a",
+    "close.png": "ab3d9400c8b30c5973ee5bb561e427c6068f6374ddd1cdfbd82dc26ccf7fd4ca",
+    "edit.png": "66f811fe64b48d8a68f9d48a9a88954f6672d17c4ab0fe38b53ed08cd6138f3f",
+    "check.png": "c9e19534f86713f4514616528feda2cb481fe8842c3cd71b61586e9317e3313b",
+    "attach.png": "c329b299707b0831c28205091c311a744ca71a1a05e89d32b5f4fdba4ea4b576",
+    "download.png": "fe9a67ae144aa2afa0f1922d9878007c74bbb36e2d890d7d368af2e9da080b39",
+    "share.svg": "3345eb018b959f827cc6e631692b2512548d63fb8a2e95d3ba8271673a854ede",
+    "copy.png": "b2beeec7011baec68f2638ff1388e00da8229dbc607b14e300ad9da03c0fdc03",
+    "copy-outline.png": "b2beeec7011baec68f2638ff1388e00da8229dbc607b14e300ad9da03c0fdc03",
+    "undo.png": "b5ea9eb80e20cece3a21ba12102eee1585861209138b473bc2a0ebb943809e59",
+    "repeat.png": "a4e886759c2dc71c4d2bb4ec6da9253996f210830fda301d2533f5f0a64c62c7",
+    "trash.png": "270ea3a11f8560cdc11399c8c5705f5a003963d79ab96c466edde337a001d3ab",
+    "pause.png": "762243e270fe6b534bd1b8780ec56d0a0ed314d3f6dabb43e2ceb7d054577a6e",
+    "play.png": "4f24d1aeb774d151a1b5ea43beff8ede0d3e759f14a71d0c8769d2dfe9b772fd",
+    "volume.png": "18c6bdb545673ad7d816cca3d503ec02743fe5cc88c444c29f2776aa3380d38a",
+    "volume-off.png": "9aca518828f6d8304446d9997e7b58cb6c4b4bfc0e0e80fe5c6111f893dcffb8",
+    "camera.png": "c676816fb5fbcad571778914d1229e471484631286d0608e7783191875a9759e",
+    "photos.png": "f0af2bd402d4daf51bb026aee5101ec7cff9935c7cb05e01033b8116ac935309",
+    "heart.png": "ab10677b0401bcd022f132610b5606800463a59312a4046c47e3815e0c5cbe55",
+    "favorite-outline.png": "c6e38480e9a8bdb929e4bd5a8a10eaf23810a2df841fe718acf340f263a94a9c",
+    "heart-outline.png": "c6e38480e9a8bdb929e4bd5a8a10eaf23810a2df841fe718acf340f263a94a9c",
+    "guest-outline.png": "78290580f2287df7bef87e59d56fd5754527629a562f3eff33037573e1cc20d3",
+    "guests.png": "1761ed7be38d8dc58d67531cf887de97dc9ec3c0f547def8d9ac10280b1373e5",
+    "invite.png": "97588f65121c5be7859bd156ccbf5270669e71cc87d383db5515838fab280021",
+    "bell.png": "dad3ce9c7b86f0042daef2b38105ffff48138c7fd5d7c28079dfb0ea16c1db1b",
+    "bell-check.png": "01ed0e8c97065105e6fee93dbf4481896633e051ee3a344f2db1828203f0c546",
+    "mail.png": "ab89f89fe0a1c3f74fc6a9b73d74ef47e12df59e6702934c26ab3e66783ae971",
+    "send.png": "139aaf7c105869b03d80390022fc7681cf66241f38f38e00bc29f6c5d825c289",
+    "support-write.png": "ac1f2693f810ff438fc5cc12b44938f1319e605a91e8a7190b6510d49227a60d",
+    "assistant.png": "4175a3bf7403399d086d8afd264e18d5fec37c193a60e6bafd94f1048249e7f7",
+    "problem.png": "be859675c8805900a22c248f57a6a43bcc82c6a71f3fa9f4aac5720db461c782",
+    "phone.png": "da56abf20d97dc2f450a61d44e9cc2e150be509e5ec7316b6a170abc4f024f5f",
+    "settings.png": "bcb0493f4a11aa23d81bfa26f853c4472bb08107da7b7ef9e900de5f8646bc4c",
+    "language.png": "a54f94a1561f2e5ea207134cb5378bfce7a9afda33db842784721b592340cc43",
+    "globe.png": "83ac042d524775f7215b39def46d1ad85a883ab995fc664e262c0b6e7fe32a30",
+    "passport.png": "b4af1e1a8364eb934f17e3c50b4b232014c46e7b1fe7df8682c2cce8b423dbf9",
+    "document.png": "8333d2b918e9db1c0e055947873f69d8260dc6821c67663e5923e28c31ac76ca",
+    "face-id.png": "0e26afa31c1e3d8f7eed0fa78613dd312c2dbb8506c7370957afaccac4d5ce3f",
+    "secure.png": "495c8513d0c828998e5cdc288657f6f7cf32f1284dab351ecad48ae5b82d8688",
+    "lock.png": "1ef965c0ebbc0fd6445759fff1ea028f48ae51090c958558ccecb28a85312192",
+    "key.png": "0340698f3b30c1cf6b7233d89a98575397d0243448468f59b5ad3563b70cd71f",
+    "logout.png": "34ed707712b7d1fcb1c0893d11eeb6e5e971ac694cb44256034ce1c973ec5594",
+    "review.png": "df043cac9984d433d87b682be3e4eb6aad36a6b021ea37e9ba3365a699888f92",
+    "style-match.png": "1a3398680c05539069ce126b2e5fdcd32c4a114cbb2a11fe42d1536255b42cc1",
+    "calendar.png": "c502e5a56d2b9959861f7d929b571a0eb27af91a655612513cdd69d398e02af5",
+    "ticket.png": "98ab21c3422ec16aa5f69a2ae6ffdea033ae0c2633164c44d1b2779b78765662",
+    "check-in.png": "728afd4d9fd17d751acdc04d5cedf2c6c127c5ab2d6e78b3ea9b0ae2f4abfc6c",
+    "check-out.png": "34ed707712b7d1fcb1c0893d11eeb6e5e971ac694cb44256034ce1c973ec5594",
+    "early-check-in.png": "8d607f5815a6c3d23652df5895cb79625055d53b564cfc6837e049018cf94421",
+    "late-check-out.png": "8a9db2f0879ced2732cf0d626e441f1100fcb597fec17360d6a18ab7fbeb54cf",
+    "contactless-check-in.svg": "888906d49479af3b68c78933332b8e9b1225ac52547ace2b5378edaea9951f77",
+    "price.png": "1c04a9089109e2d17f8a41f14caa6c48fd74511ec9bf667d13cdac96928f98d0",
+    "best-price.png": "82da689b9dac2b9b39d8322e3e531bd2cf9bf1c168ec70bf1f0dcc474e731471",
+    "discount.png": "7648cc37a3416ba6ab7f8fb921f6fcccdc7d65562f58168d235617cd5e862507",
+    "gift-outline.png": "2111378cae417469749ecd576b66950e2baa45e4ddea4282f8e5bf3c643ae31f",
+    "card.png": "33c3a22ebce13fde5c11b9e9e3937d4d0ddb064e98d5891b60679d38cd4e6643",
+    "deposit.png": "5b5b043856853d3cc79eec15d5cc7951e8ac3ad1b557e252b411219af8d42dda",
+    "wallet-outline.png": "bc1371bae1448a62d3594a8b3da4e1976c7ef4e511ed2b0d41c693e2c5b1a77a",
+    "points.png": "119224ff8155ce2477a2b1a6f4c13f48ec7d54cab1da2ec432f3f24bf7d5bf56",
+    "points-earned.png": "6e3d1c0b56777db61a55028cb5562ea1e416cbf47390459bb791fdecb8b0fac6",
+    "crown.png": "96616ee9b43fa8203ed46619adb7268d8edd4999fbd547a65e109bec933566e5",
+    "receipt.png": "0dced1dbe9b7ed9777699f8714d4871ae64c4d8d4e3b07e42f4ad738868dc31b",
+    "bill.png": "eee1d0a1602bdfdda0bdf1c851e412e86660977df207eaae45352ee60dd8fcde",
+    "qr.png": "3053cf8ed36e9c6a166ee31cd86a7a8570828b5c2ffc3b62027c13804a45d50f",
+    "nfc.png": "a3bebde68b3e254e17de7adc8194e25ac195581cde433411cea8d9120aec5bec",
+    "bed-double.png": "7b19d0365e076ad4511c7ca44c550482ec50152c7950debf3c7e49b180e26cc8",
+    "bed-single.png": "dcc6839de01a5071260748643493a3c2edcc564c0fb7ae861cbad1b6e40e43ce",
+    "bed-twin.png": "e59c7ca6344656efebfa09f40d94ab86e17cdfc0054472cf0900d5bab229d2da",
+    "bed.png": "e58942c80d8babfaed156bcad3f13c59ea17246804a6152f305148860b8c9c99",
+    "bunk-bed.png": "f4aec8430f27f3c8d8f2b736d313e6a630b4cb98d660681669d8556dc955fed1",
+    "sofa-bed.png": "f97160c0b4a247e592214422c25b0894d650b5b2b89b4a50cbb55877bb219ff3",
+    "bedrooms.svg": "3ac1f23293c24af07f6dd64769c04f755efd06a444cbf421660e6b14a75fd195",
+    "room-outline.png": "7b19d0365e076ad4511c7ca44c550482ec50152c7950debf3c7e49b180e26cc8",
+    "room-area.png": "25b3e94aea10fd730c515fd777c1ea149ec1b17568d7a2b67ef1c998b6d8b58a",
+    "area.png": "da06b7a574e2a338201632e8a28471b68c7b4d0368e085c9b022ea5a6bab622b",
+    "baby-cot.svg": "250e51f715fee69cb53449af2724feb1006ce2087abd35a1bd849caa84394e97",
+    "pillow.png": "6093a941f4a9ea84f8744ffa45164683233b631e51bdc7ac244b38ce47abd387",
+    "linen.png": "34873b1008f788d87b2eddf02ce3ff8dc4d420762aab6e7cd9bf09a92990e464",
+    "wardrobe.png": "13002fe0092052027eb200b000049b37db8375b6fe60b33d48454fd3379e9e9e",
+    "desk.png": "d57abaf99e8c241a07d03cfc35cf86bebf8124dad64c7c7135f855d1c12bcc2b",
+    "door.png": "65015f135ec6a26beb819e87da3f8de771803e338f4954a0e02e83d59f370582",
+    "balcony.svg": "08e2bca5b6a1cd24cdcc18a4f9f627951291007a13bb17052dff6e70206b5e66",
+    "terrace.png": "16b7d61d9da5d0972060e8e493a7e6d42590e0cc090da1ee850297c4e32fd1de",
+    "floor.png": "8e48439f561983ed4619aaebb0437b5642646a2142a7ba22391f0f24d129017e",
+    "tv.png": "3d239a413b1bf043a26f32c3951881875f428834e27c5f0886b65d490bba49fd",
+    "plug.png": "bf7c792485db308cce6d6e28b42718717463e86b8e18e2befe54bee81877207e",
+    "bulb.png": "30da6640acd36eee02ff235a9c4aee231d41f7fe13b189ca49cb9e3ca82cd6d2",
+    "climate.png": "651b4c06cd3b6b309e73c9a1591f54522305207ff8099d11cc15324cda1245c8",
+    "refrigerator.png": "6992e585181616764b7027ee7473e59a7d9dc8ae95585007de8b848b2478abc3",
+    "minibar.svg": "28b5ef9176f960317bf5898b127f8d9b6071140c6b76d8483ff79078da7ba022",
+    "microwave.png": "3fd1d892fb5f39677a6feef087f6c235b3d4c5ce99a4c858429d1d3114b36019",
+    "kettle.png": "727d779996b650ddf6f25266ad9a4a96acc2e0bdf67780ab645865acaa5c5128",
+    "coffee-machine.svg": "ccd2eba813679f7dbd0f41db795bd347726601ab309e3fb9151c8f04361742db",
+    "safe.png": "82fced050db4fd78af402db2f7a71841c17dea45ff934ca4903e2647b2f57f1e",
+    "bathroom.png": "348f3c8d9b52b5ad0fb2316617be5b4426d9975235f43a1a2e7cbccee6505d57",
+    "shared-bathroom.png": "e8a0ba03b277cea445d6b6ad948c32e5bde1487cab7b3ae256a205a5e1550fdb",
+    "shower.png": "a3f7dae091ab3794d552b3efb0f36da810c821d2e639dd7781c296d1ba44aaf5",
+    "bathrobe.png": "fd9d733a9b85aeb09b45b7bd02d08802b6e467f8e448ced9b01cbb74984e8ce1",
+    "slippers.png": "ed1457ee920cad4212d8cc67509697e50dfc2a9f1efa3fb9483b3ddaef10643c",
+    "towels.png": "c5a3dd27b07ca872167fb4c0fe70337027595bd4e63dd0fb6db8cae59b6af611",
+    "toiletries.png": "412ee21aec55cd7536c666c8c65dd296b1c6d3d5cbf3e078b5b42f4e117ceace",
+    "hairdryer.png": "52eb56707a7a001e2bc8504d860067c4375d1c0e5ff07329fb841643c4874ed4",
+    "iron.png": "7a5858531302b2d449e14c112713ff49531667701b8f1c1ddc08b890e4d8da70",
+    "hotel-building.png": "28a65cefe6a4f9b13b8df6a542a6911a95c5e993ecb1a7e0701dd92b0a7ab893",
+    "hotel-outline.png": "c07ef8a0011762e46031670cee551dcfbfa6c2f8ad07b2ea43ba7e3f31b952c2",
+    "hotel-network.png": "7cbcf619fbd7b29db2d8dc5554bccde0e5770ea03b8b72542f6988b78198f4a5",
+    "reception.svg": "0ef7b0cc898e5cc725f9a3657e2fdf7d984657857ce4c24f3fa00689746697f7",
+    "concierge.svg": "14a719cf8b5cef9df08688be6fc12ddd74a863ddab72780dadb6d78140bef40d",
+    "room-service.png": "2d58175a5322237276086bcac73451ed82d04055520508da6ba059d64309dd23",
+    "do-not-disturb.png": "7925c0da923a21e655154338d59b827e0f0a7be733207c093460674d15aa7202",
+    "luggage.png": "72a307ec9724a2fc8e3c6b8197a660979ae7f53bcf354bc4ad639141cd106797",
+    "luggage-outline.png": "cf65b8cc2c7846c4ddd367a51518368fdaf0dba56e09d999fe29f653f5df3690",
+    "cleaning.png": "9a963f0ec2f23e2e83b7d188c67aa70b53ac09c4ff456c028aa04ce3f648bdb9",
+    "laundry.png": "ff4f79e4f0e309fef3a6156e28bc0fe0a03c90b4cc8ddc575a850a2daf31ed78",
+    "washing-machine.png": "297257b5e7f872cb7052568d2cb34a2c485aae7e8d3e3a0f4c07a2d068cc7d17",
+    "elevator.png": "a84a394638506c36933b85c5c74fab3e84aac2270d8bd7ffd0673f3d093c0cc5",
+    "accessible.png": "0eb73997bf842018c459a79f4909a516157ddf828534a9f842486d460c2116ef",
+    "no-smoking.png": "d7b97dc791aca1e3ee9cd48f91569d474e53967dbff32ff389db91fa512135ad",
+    "pet.png": "3551bfb1035c3bb03dbba884a15c8f52bec5c41154ce458992ceba868273340c",
+    "kids-room.svg": "fbdd9331b5c009073250fba999ec4b09add0208fb8d1343b468b6ed26cd9eb02",
+    "kid.png": "7efa480481ad80fa1a6b515b6b81531d8874556058dff5025ff556301966dfab",
+    "blocks.png": "80be19cc44918c0849fb1361944fbc633336979c2f4d2e3d9fca9819a94a9ff9",
+    "board-games.png": "13cb96e7904ebc936e0a561bfdad22d5e0a362ec41d4f5b6c952a7c68a945e1d",
+    "breakfast.png": "06a3cf582c8c304dd76ed1fdd841dcdaacedb025a806a26faeb01bd924e515ac",
+    "restaurant.png": "29aa686f5f6f2a7565c4132a63144b3fa94c56c3df6c7f63339585957cbb4a44",
+    "cafe.png": "d36cb1b74ec5948366a8eae85800c813f889e15ea4d4792190d0f910bbf43abc",
+    "coffee-to-go.png": "a7ace79bfc77eb067af297ae44ba07a4a396ca9d45eaf02b60a711957db88912",
+    "bar.png": "9e2d4f8b4bd525594a1a7dde74598a81d3f1970d97d90fbdb7935b234fb375d3",
+    "wine.png": "cb535a1c66302cd204ee9bcc4448001cdce68dc4647a0c4064e43042ee870b27",
+    "kitchen.png": "ed9ddf19355677160e748295e6e6ef51e9b78b191ed503049fc1cd2758554221",
+    "water-dispenser.png": "29e666cb9a01311df295fdf718935ee78fe5a0848a1d406fa0bdaab9f6040c0c",
+    "pool.png": "57672eb348761bd7b052f90faa34895e1bc2524273ef8aa2e7d68256c225ad10",
+    "fitness.png": "c9d038205ea6764e6397f112cd165e3efb468e475f6c1c53d7159d5514f87caf",
+    "fitness-outline.png": "5aacbc34d1a1d83d689680cd8b0efdb6b63507ff517fb53828189119a3909205",
+    "spa.svg": "76c91511dc9857ded2af01dc722c49a19ec09d38007ae84f0c34a03f129891ca",
+    "sauna.png": "661fa9f3bcb6c4576ecc1d1106d25b687ee928afa013fcd1ea602b6b487a5eeb",
+    "wifi.png": "f5d17e5b5bf59b03c63d3e91a704753ef80f9f3c777ccf44ffe20936c4ece6ca",
+    "bluetooth.png": "a8f2f64489f48d55757faf12df824febd40a9b76e998f964eeb4682a4d51c1ff",
+    "map.png": "b4574bf8918eed8fa69666682bed57027aa1f70712b67a4b94f3ce5f6d35e4a0",
+    "pin.png": "fed4cc943e68908571462d915e40374e3068df716d61e2e625d07e9a0ad72613",
+    "locate.png": "6e4bbfbe5349727261dec8d06ac12209c27b8b7a84db8391c332f3352faa9df5",
+    "nearby.svg": "b2a6dcc91a14f8641d6b11692781b61f171c1d4c702c9e2ae4a36d2692d1aac0",
+    "route.png": "b93d9a5abcdef2baeac1c3fe21c141aa5e3dbf07e7b1938076fff882c8cedbb4",
+    "car.png": "4846ff3f98716546b2e4fa358d3a52babcec992da376ed0daa0db429e3545261",
+    "taxi.png": "3690e8233b7b5a502fe4a71d95d39eb160aeac17ebf7bbcfd7741bf8e7de39ea",
+    "transfer.png": "3202bf64778a515cf781d5b68f2ab7568b414a042b19c9bf1656224a2174ca90",
+    "parking.png": "7c2fd362440ceab522f2b61789e001126fbc875120d99d6c2559d43e9230ebd9",
+    "plane.png": "14aa4770c8bc97f1d120890d098cf661b984a7d2b1541fdf4b430b641a460c76",
+    "train.png": "f3054fb66456bd49810c153c7f7ff61f4a114040a9852115c7b8daded46db3fb",
+    "walk.png": "741563404bcf5b45e3f0eee07e770146fae065a9d4f5430ca8c7a40911e7aba6",
+    "museum.png": "3fd85be12fa1fcb3358d07d1d0cfb3cccfa880745a2abca3ee8a09836a2dd8cb",
+    "flag.png": "0a9673bdba81b9f2dd8751ac586707c9727f68112b8ade05dc8a6c47d5449511",
+    "park.png": "02f2093f010a5dc5f41f9b0eb22e3525c2ffd2ec036efc9433324712a3606fec",
+    "picnic.png": "576ee27b6dcc2e17c0a0ff426aa7bf13d4223f8db8c7704bcdc290427c117068",
+    "beach.png": "570a2bf48182d329dc1bd5b689da86f67ab5d4ee80ae358918c348ea29e4726f",
+    "garden-view.png": "bd05509ad309983aecd43681432f5ab77ee68d7e92b743d5b5588472dcbe3002",
+    "mountain-view.png": "c4a97382ed51d47a8dad523cbe7b1b4b3e15fa427168ff8bcdf640da22731604",
+    "sea-view.png": "0e8665bb83cb088866b07297f8819431f4c98e7487ef86f10564f3967246c272",
+    "tree.png": "bf0b809ed9d06c5eb162a2e11729b7cf33c3a4c5896425ba290d8934c640d53b",
+    "weather.png": "1de9c8554374b78222e1fbfefaf701c9d4b2705622301a877e123b6dc2535328",
+    "sun.png": "044d08e9a3b4e82805efe5a6125a7ed291268d979771062adfb0a360bf6a4a96",
+    "moon.png": "fe81ad3b202f6f76de0517e1fb4cebd0cd42a8f99862d9eacf96abfe98f0d881",
+    "sunrise.png": "e62e9d550179cc48e1a2b037a55be51239664ba567e780c4bfbd4b575a77e004",
+    "sunset.png": "76eaf1ff0f9dceca8fdee7b5c51a3b86146895408b3eec2f3e2024b643f5ef66",
+    "cloud.png": "86c401357eda54726e38aca607afcd990e2cf83ccb2891d4c66d265e6a5dddf5",
+    "cloud-sun.png": "1de9c8554374b78222e1fbfefaf701c9d4b2705622301a877e123b6dc2535328",
+    "rain.png": "b8063fc2e141e146a363554a4f40a28a4ecc69e8029a7cab46f8c6ab617d38bf",
+    "wave.png": "336a8d4d865711a4a8170cfb78b9ffc0bb252221672b2c1411cfb0da20d73d92",
+    "sea.png": "02799f70b9ffc1e0c90b1f35f39332df49bcc0c1d315183a3fb8870957be5b90",
+    "flame.png": "23f7373b0790c9544f0e263140ed09908f3d8e724dc9b10505b23f9d8f079d1d",
+    "time.png": "41c842759539291b70f6234e00d9c12ae687ddc0f20d7e4618b6f15d77eb28a8",
+    "pending.png": "f13ebc7a2fbc39882370d8a65e83803f89a3abb1988e7d07da26fc186cb661a2",
+    "success.png": "25592c05c219a805c0b5ec56e7b52b5df63c51a4fa16d23cdc48609f8ef95814",
+    "error.png": "06b64aedfb27d2ce8f514911eba23b0d3affb56c64cfdd5e725be827f81142ae",
+    "warning.png": "ea3e2579bf4e05307aef9afc0102b72a04ba11acd506c2426cdd478bc82bd3a6",
+    "help.png": "d088c7010771e512f09f167c5382a0017e5505c23090acb46ee31fe4d3d77124",
+    "info.png": "9f62fa04251d065f4dff9c5c4e165704a146f109b22fc570d14ac410b955f69e",
+    "wifi-off.png": "9f9a41e1b24b00697648fb1a48e1dcdbf4cb64fb61098cc4c42ab61d8283ce98",
+    "orbit.png": "0a32251e32c96574fb284a047997b4a23175b8121f425e42f74292dfae89e128",
+    "spark.png": "a0286e2c8d76c8d9423d4fb27ba895ab9984e94472b1df23550425324cc727d6",
+    "spark-curved.png": "1a3398680c05539069ce126b2e5fdcd32c4a114cbb2a11fe42d1536255b42cc1",
+    "spark-rays.png": "d34e6524aad05752902cd438941ca631452c62d8cf7a93e16c5d67660b5f319a",
+    "theme-light.png": "6c6dcc9305c9a2ffaec55a55b1691b117a1b5a04f09143e30b9f9899bfd9ad2b",
+    "theme-dark.png": "c5a97e51a6ec928d11a8628f875d52d29c31510ccf15db045bd8ec33d97c9251",
+    "theme-system.png": "6c3d74bbfe3494b773ba3550dcfb7e16339e0f082565d8948aaf3515b172dfa7",
+    "ui-prev.png": "f819f9da9e6ebb25eae0050caaa107af0aa1d0e2b3a7b82a56710a9914155aa0",
+    "ui-next.png": "76757d2ff8e908d37b759361a8ea331b4fff77a5267c95d060ef33c25040ccd8",
+    "ui-down.png": "3087a32989c66b42240c1e671678858a82455ec7d13b418b5c80a3c84cb43ec4",
+    "ui-up.png": "0b408d9b102ade139c3cf19eb9902cc869f2867b63e67239710fd63f71a96664",
+    "ui-tick.png": "53682b263ba175490c516c7a4eaad9fdf99298c3b3730ff333a3ea5af36f2d3c",
+    "ui-partial.png": "c3a2fabb32b917d9fe0cd729eac0a2a3613e896e2f57a4d79340d18864d06bce",
+    "ui-radio.svg": "51a49e215016b56695f820d452acdac0b2d48ffcfd1c0a8b05a5cfa73c26c8a3",
+    "ui-command.png": "25f67a1f9d95252e77a334c0fab5fd53ca29aa5dc25f704f8785b57ed13f55c0",
+    "ui-close.png": "52f2f3b44e575a27337c5e580c161e892f48ae0557091ecdbfd71a3886625b71",
+    "ui-close-sheet.png": "52f2f3b44e575a27337c5e580c161e892f48ae0557091ecdbfd71a3886625b71",
+    "art-cleanliness.png": "42aae79ab899f38780b30bbb95ec217e83cc8f3e7bd038e85576f48da83b7153",
+    "art-quiet.png": "a662bf2926130664b2f0d688ea8b2d508c60b5d99da24f9b581549ec59d7d1e1",
+    "art-wifi.png": "3e4bb595899f7ff15ef30f273dbce78f45e9d7fc224af2905588b9ecd15a9bc6",
+    "art-location.png": "e4f8fe632c52c2f826cee94ddc6da139586201a04c57a95d56e52ed20523ccc2",
+    "art-kids.png": "3dc70b524020acedbe673d170eeb2e423391f4c2266b2cc68fb8d28043cf3d97",
+    "art-pool.png": "db78158f960e9faf6604ca941e58d579ac2ce5304b0bea5d7dd86df574558998",
+    "art-breakfast.png": "167b05f7d6e977ced046a7b0d6b7a8a84a5dd3ed50bd6c5cb12f1db9b5dd7b83",
+    "art-air.png": "0bd0b2a6419f6e39c895241d65bc63ae2c43cf85d08c2b876dfa3ffa67331424",
+    "art-entertainment.png": "76445aee6ae356846b3974d99efad329a19763d0b729f12083bf4b3f47910b13",
+    "art-design.png": "0a5ad774ec62974722ca9cc78febf7f238aceae6a323bed4fc2a8efcc4608003",
+    "art-coffee.png": "377a296a8c1aebfe3985948cbbd13e90d1952dcec61bbe675255e90cbc56da60",
+    "art-attractions.png": "52739aa42c054f46251da31d572142977aafe9f7d958e5fead01d848bada0568",
+    "art-spa.png": "88b8dd1a50774f339887c42cc8a46ffbec0462572a88b83037aaaabda037fb30",
+    "art-view.png": "29ea0c3c4491123dfb07ae23a9420b1febb404bc202a8d1ea4c3905ea39d6387",
+    "art-restaurant.png": "dd9a7534f48215356674bc486c989c5d5d2c2172e756bbb598d1abf2a71cef23",
+    "art-historic.png": "0bf374eb9a9ccf64580447fd579ab550b77bed174e2af82d313a5ec2bb914b70",
+    "art-security.png": "268bbb311b0675d24aa70ddf14ae674ffec21b96936544edfa546a7c9d1d71a0",
+    "art-solo.png": "7c00ed7864558b4a0d623c3019243c238ad1e7da7bef07c30117fccc5b1ffddb",
+    "art-sport.png": "abb92292e9508d55a031bc21cd49cff5636ca57c085066ccff6d60d1e8966720",
+    "art-parking.png": "2237a9ca344ab8be365b242e70fc8dea67b1edbd07bc768693e8d20372e4a258",
+    "art-mountains.png": "c71ec69f339026394730cb81bfe41967a4fb339f8e4cdcf8f4bda507906d1ed9",
+    "art-rental.png": "cb3fa40b3ade7048f0afcd6b410a84c1c15a38dfa37adf9d7cf9203e9431c491",
+    "art-nature.png": "ebb8decc61971f445b912b8b94c4a55a5c2258169be633f5e4922a96cc9e90e6",
+    "art-water.png": "8fce223663de2e34a6d6c206a205f1079c7958050ebe3f2681858b09a04f33fe",
+    "art-park.png": "43cf052e4063327c443c062a45b48db5e65cb0f10ed150511f4d1a93b973f8cc",
+    "art-kitchen.png": "e43951a99fe8532916afbe4a0b5217732ce1587f3e325a0af8413b3fa0c3db36",
+    "art-laundry.png": "0f14181b8b6e9d6ed6b04570d18587a8f9494b0dc83c677a589ff823f44c4608",
+    "art-sauna.png": "41ae70fbe156f2f976c7e6bf689ce59d546d5a875749b3e7857fbb25ab5d7870",
+    "art-bar.png": "669e4e4825ffb5f0accb0595aee18d1283cefe47a896ea88e4ef6eb2831a05de",
+    "art-adults.png": "8a94bf064cf63e6bab37e37526313cf1bfe5c22dea76a0760178d3d33ec438b9",
+    "art-beach.png": "6c5516cfbd94fa05fcf8f797378cc7a1bf675f408097ab70f2508f0124810f03",
+    "art-work.png": "cabee22b03084b3aee970e03f8289b4fad03942b490aabda36fcc55d47aab043",
+    "preference-sleep.png": "5b0c1b4c796f83892f593d9e688b3d14851cca12f40958f791c94a795209fd70",
+    "preference-spa.png": "7d8ea1abdc33793cf301588dc0191d18132a9ac233ba439ca28fa3d2d75da77b",
+    "preference-breakfast.png": "9a62014bb8f756ef887e1bfe92b92cfd410e5339e3bab51c7c13a27b15ace768",
+    "brand-keys.png": "401a2806619743f545d5188d81087839c1c310f86c6aff23dca2f3712a0971c3",
+    "brand-launcher.png": "8c78774ff09688ede85ab0f293216fa594f709dff3290193939b95f2483783ee",
+    "route-yandex.png": "b3500e0fdfcb6b01da4f69988633b6508d686c5a903ab3e1bcc0f56548a4770a",
+    "route-google.svg": "211a7034b9801f3ce6ad305745d024585f85ed730974e520812cdbef71ac3265",
+    "route-apple.png": "29a66783fd0c372790f85e81b243dfe7c0fa1b5f78a329d677c6028ceef5744a",
+    "route-2gis.png": "60b2fbbb5dc6edd240a46d87242c1f2cfda0186f3451cf3939a8281ec76dd0ad",
+    "route-go.png": "767ddcd1222c8f102a0cd52a068fa623660cca1afefd319f57b9899403ab3392",
+    "microphone.svg": "426c153013dd867589548fdc2e6353588d4d1c9b0185a2ca973d0ffd58d21e38"
+  }
+}

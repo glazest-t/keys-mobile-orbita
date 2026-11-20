@@ -16,7 +16,7 @@ const details:Record<string,{title:string;category:'Еда'|'Отдых'|'Тра
  'sea-transfer':{title:'Трансфер из аэропорта',category:'Транспорт',icon:'transfer',description:'Поездка из аэропорта в отель на автомобиле. Время в пути зависит от дорожной обстановки. Данные рейса и время встречи можно уточнить в чате с отелем.',unit:'За одну поездку',caption:'Аэропорт → отель'},
  'sea-dinner':{title:'Ужин в ресторане',category:'Еда',icon:'restaurant',image:'brand/ideas/covers/gastro.webp',description:'Ужин в ресторане отеля: сет на двоих. Стоимость включает один сет для двух гостей, независимо от длительности проживания. Время посещения и состав меню можно уточнить у отеля.',unit:'За один сет на двоих',caption:'Сет на двоих'},
  'sea-spa':{title:'Спа-программа',category:'Отдых',icon:'spa',image:'brand/ideas/covers/hammam.webp',description:'Два часа отдыха в термальной зоне отеля. Услуга включает одно посещение; дополнительные посещения не входят в стоимость. Удобное время и правила посещения можно уточнить у отеля.',unit:'За одно посещение',caption:'Термы · 2 часа'},
- 'sea-breakfast':{title:'Завтрак «шведский стол»',category:'Еда',icon:'breakfast',image:'assets/services/breakfast-buffet.png',description:'Завтрак «шведский стол» в ресторане отеля. При добавлении в бронирование завтраки рассчитываются на всех гостей и каждый день проживания. Приходите в любое время в часы работы ресторана.',unit:'За гостя в день',caption:'За гостя в день'},
+ 'sea-breakfast':{title:'Завтрак «шведский стол»',category:'Еда',icon:'cafe',image:'assets/services/breakfast-buffet.png',description:'Завтрак «шведский стол» в ресторане отеля. При добавлении в бронирование завтраки рассчитываются на всех гостей и каждый день проживания. Приходите в любое время в часы работы ресторана.',unit:'За гостя в день',caption:'За гостя в день'},
 };
 
 export function DesktopBookingServices({commerce,setCommerce,disabled=false,catalogue=false}:{commerce:Commerce;setCommerce:Dispatch<SetStateAction<Commerce>>;disabled?:boolean;catalogue?:boolean}){
@@ -47,7 +47,7 @@ export function DesktopBookingServices({commerce,setCommerce,disabled=false,cata
   <BottomSheet open={!!service} onOpenChange={open=>{if(!open)setOpened(null);}} title={info?.title||'Услуга'}>
    {service&&info&&<div className="desktop-service-detail booking-service-detail">
     <ServiceDetailIntro kind={service.id.replace('sea-','')} image={info.image} icon={info.icon} description={info.description} unit={info.unit}/>
-    {service.id==='sea-breakfast'&&<p className="desktop-service-venue"><Icon name="breakfast" size={18}/>{venue.hours} · {venue.restaurant} · {venue.floor}</p>}
+    {service.id==='sea-breakfast'&&<p className="desktop-service-venue"><Icon name="cafe" size={18}/>{venue.hours} · {venue.restaurant} · {venue.floor}</p>}
     <div className="desktop-service-calculation"><div><span>{info.unit}</span><strong>{formatMoney(service.unitPriceMinor)}</strong></div>{service.id==='sea-breakfast'&&<div><span>Гостей: {people} · дней: {days}</span><span>{formatMoney(service.unitPriceMinor)} × {quantity}</span></div>}</div>
     <div className="desktop-service-footer"><div><small>{selected?'Добавлено в бронирование':'Стоимость услуги'}</small><strong>{formatMoney(service.unitPriceMinor*quantity)}</strong></div><Button variant={selected?'secondary':'primary'} disabled={disabled} onClick={apply}>{selected?'Убрать из брони':'Добавить'}</Button></div>
    </div>}

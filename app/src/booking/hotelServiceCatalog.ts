@@ -7,7 +7,7 @@ import {requestStatus,type ServiceRequest} from './serviceRequests.ts';
 
 // Approved full demo assortment. These are editable demonstration hotel settings, not real hotel offers.
 export const hotelServices=[
- {id:'breakfast-buffet',title:'Завтрак «шведский стол»',icon:'breakfast',category:'Еда',section:'Популярное',get description(){return tripEditorialText("ПР-122", 'Завтрак в ресторане отеля', "Завтрак в ресторане");},amountMinor:150000},
+ {id:'breakfast-buffet',title:'Завтрак «шведский стол»',icon:'cafe',category:'Еда',section:'Популярное',get description(){return tripEditorialText("ПР-122", 'Завтрак в ресторане отеля', "Завтрак в ресторане");},amountMinor:150000},
  {id:'breakfast',title:'Завтрак в номер',icon:'room-service',category:'Еда',section:'Популярное',description:'Завтрак с доставкой в номер',amountMinor:180000},
  {id:'cleaning',title:'Уборка',icon:'cleaning',category:'Номер',section:'Популярное',description:'Выберите удобное время',amountMinor:0},
  {id:'early',title:'Ранний заезд',icon:'early-check-in',category:'Номер',section:'Популярное',description:'С 09:00 до 12:00',amountMinor:250000},

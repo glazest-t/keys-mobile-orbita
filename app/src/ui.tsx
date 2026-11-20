@@ -1,5 +1,5 @@
 import {usePrototypeIcons} from './usePrototypeIcons';
-import {iconAsset} from './iconAssets';
+import {iconAsset,isColorIcon} from './iconAssets';
 import {useDesktopDialog} from './dialogActions';
 import './list-components.css';
 import './status-badge.css';
@@ -8,10 +8,17 @@ import './icon-color.css';
 import {type ReactNode,type ComponentProps,type CSSProperties, useId} from 'react';
 import {KeyboardInput,useKeyboard} from './mobile';
 function keepFieldFocus(event:{preventDefault:()=>void}){if(document.activeElement instanceof HTMLInputElement||document.activeElement instanceof HTMLTextAreaElement)event.preventDefault();}
-export function Icon({name,size=24,inheritColor=false}:{name:string;size?:number;inheritColor?:boolean}){const variant=usePrototypeIcons();const src=iconAsset(name,variant);return inheritColor?<span className="k-icon" aria-hidden="true" style={{display:'inline-block',width:size,height:size,color:'inherit',backgroundColor:'currentColor',mask:`url("${src}") center / contain no-repeat`}}/>:<span className="k-icon k-icon-default" aria-hidden="true" style={{display:'inline-block',width:size,height:size,'--icon-image':`url("${src}")`} as CSSProperties}/>;}
+export function Icon({name,size=24,inheritColor=false}:{name:string;size?:number;inheritColor?:boolean}){
+ const variant=usePrototypeIcons(),src=iconAsset(name,variant),colored=isColorIcon(name,variant);
+ const style={display:'inline-block',width:size,height:size,'--icon-image':`url("${src}")`} as CSSProperties;
+ if(colored)return <span className="k-icon k-icon-artwork" aria-hidden="true" style={style}/>;
+ if(inheritColor||variant==='new')return <span className={'k-icon'+(inheritColor?'':' k-icon-contour')} aria-hidden="true" style={{...style,...(inheritColor?{color:'inherit'}:{}),backgroundColor:'currentColor',mask:`url("${src}") center / contain no-repeat`}}/>;
+ return <span className="k-icon k-icon-default" aria-hidden="true" style={style}/>;
+}
 export function Mark(){return <img src="/brand/assets/logo/mark-cobalt-ui.svg" width="28" height="28" alt="Ключи"/>;}
 export function StatusBadge({children,tone='neutral',icon='info',className=''}:{children:ReactNode;tone?:'neutral'|'success'|'warning'|'info'|'error';icon?:string|null;className?:string}){return <span className={`k-status k-status--${tone} ${className}`}>{icon&&<Icon name={icon} size={14} inheritColor/>}<span className="k-status-label">{children}</span></span>;}
 export function Button({children,variant='primary',busy=false,busyLabel='Подождите',success=false,dismissOnly=false,...props}:ComponentProps<'button'>&{variant?:'primary'|'secondary'|'ghost'|'danger';busy?:boolean;busyLabel?:string;success?:boolean;dismissOnly?:boolean}){const desktopDialog=useDesktopDialog();if(desktopDialog&&dismissOnly)return null;const buttonVariant=desktopDialog?(variant==='ghost'?'secondary':variant==='danger'?'primary':variant):variant;return <button {...props} onPointerDown={e=>{if(document.activeElement instanceof HTMLInputElement||document.activeElement instanceof HTMLTextAreaElement)e.preventDefault();props.onPointerDown?.(e);}} disabled={props.disabled||busy||success} aria-busy={busy||undefined} className={`k-button ${buttonVariant} ${success?'is-success':''} ${props.className||''}`}>{busy?<><span className="k-spinner"/>{busyLabel}</>:<>{success&&<span className="button-success-icon"><Icon name="check" size={20} inheritColor/></span>}{children}</>}</button>;}
+export function RadioMark({checked}:{checked:boolean}){const variant=usePrototypeIcons();return checked&&variant==='new'?<Icon name="ui-radio" size={20}/>:<span className={'radio-dot '+(checked?'checked':'')} aria-hidden="true"/>;}
 export function IconButton({name,label,onClick,disabled=false,inheritColor=false}:{name:string;label:string;onClick:()=>void;disabled?:boolean;inheritColor?:boolean}){return <button className="k-icon-button" disabled={disabled} aria-label={label} onPointerDown={keepFieldFocus} onClick={onClick}><Icon name={name} size={20} inheritColor={inheritColor}/></button>;}
 export function Field({label,error,hint,prefix,endAdornment,...props}:ComponentProps<typeof KeyboardInput>&{label:string;error?:string;hint?:string;prefix?:string;endAdornment?:ReactNode}){
  const id=useId(),keyboard=useKeyboard();return <div className="k-field"><label htmlFor={id}>{label}</label><div className={`k-field-box ${error?'invalid':''}`}>{prefix&&<span className="field-prefix">{prefix}</span>}<KeyboardInput {...props} id={id} aria-invalid={!!error} aria-describedby={error||hint?id+'-help':undefined} onBlur={e=>{if(!(e.relatedTarget instanceof HTMLInputElement||e.relatedTarget instanceof HTMLTextAreaElement))keyboard.hide();props.onBlur?.(e);}}/>{endAdornment}</div>{(error||hint)&&<p id={id+'-help'} className={error?'field-error':'field-hint'} role={error?'alert':undefined}>{error||hint}</p>}</div>;

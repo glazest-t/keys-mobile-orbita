@@ -7,6 +7,7 @@ const icons:Record<PreferenceIllustrationId,string>={cleanliness:'cleaning',quie
 export function PreferenceIllustration({label,size=32,original=false,contrast=false}:{label:string;size?:number;original?:boolean;contrast?:boolean}){
  const variant=usePrototypeIcons();
  const item=preferenceIllustrationFor(label);if(!item)return null;
+ if(variant==='new')return <span className="preference-illustration" data-preference-icon={item.id} aria-hidden="true" style={{width:size,height:size}}><Icon name={`art-${item.id}`} size={size}/></span>;
  if(contrast||original||variant==='old'){
   const [x,y,w,h]=contrast?contrastPreferenceRects[item.id]:item.rect,scale=size/Math.max(w,h);
   const sheets=contrast?{1:'/assets/preferences/contrast-set-1.png',2:'/assets/preferences/contrast-set-2.png'}:{1:'/assets/preferences/set-1-1.webp',2:'/assets/preferences/set-1-2.webp'};
