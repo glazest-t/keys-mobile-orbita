@@ -47,3 +47,60 @@
 .nearby-live-map > .map-expand {z-index:5}
 .nearby-expanded-map > header {pointer-events:none}
 .nearby-expanded-map > header > button {pointer-events:auto}
+
+/* The nearby presentation setting also applies to the compact trip preview. */
+.stay-nearby-row>.nearby-place-thumb{width:44px;height:44px;border-radius:14px}
+
+/* Photo mode: visible covers in the trip preview and the complete places list. */
+.nearby-preview-carousel{min-width:0;width:100%;overscroll-behavior-inline:contain}
+.nearby-preview-carousel>.nearby-preview-track{width:100%;gap:12px;align-items:flex-start}
+.nearby-photo-card{display:flex;flex-direction:column;gap:10px;min-width:0;padding:0;border:0;background:none;color:var(--theme-text,#101320);text-align:left;cursor:pointer}
+.nearby-photo-card:focus-visible{outline:2px solid var(--theme-link,#2f5bff);outline-offset:4px;border-radius:18px}
+.nearby-place-cover{display:block;margin:0;width:100%;aspect-ratio:16/10;overflow:hidden;border-radius:20px;background:var(--theme-tint,#eaf2ff)}
+.nearby-place-cover img{display:block;width:100%;height:100%;object-fit:cover}
+.nearby-photo-caption{display:flex;flex-direction:column;gap:3px;min-width:0;width:100%}
+.nearby-photo-caption strong{font:500 17px/23px Onest,sans-serif;overflow-wrap:anywhere}
+.nearby-photo-caption small,.nearby-photo-caption>span{font:400 12px/18px Onest,sans-serif;color:var(--theme-secondary,#5a6072)}
+.nearby-preview-track>.nearby-photo-card{flex:0 0 42%;scroll-snap-align:start}
+.nearby-preview-track .nearby-place-cover{aspect-ratio:1;border-radius:18px}
+.nearby-preview-track .nearby-photo-caption strong{font-size:14px;line-height:20px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.nearby-preview-track .nearby-photo-caption small{display:none}
+.keys-app .nearby-real-places.nearby-photo-list{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;padding:0;border:0;border-radius:0;background:none}
+.desktop-app .nearby-real-places.nearby-photo-list{padding:0 10px 4px 0;max-height:440px;overflow-y:auto}
+
+/* Location first, nearby places underneath in the trip preview. */
+.keys-app .stay-location-preview h2{font:500 17px/24px Onest,sans-serif}
+.keys-app .stay-location-preview .nearby-preview-heading{margin:0;font:500 15px/21px Onest,sans-serif}
+.stay-location-preview .nearby-hotel-preview{height:180px;border-radius:20px}
+.nearby-hotel-address{display:flex;flex-direction:column;gap:3px;min-width:0}
+.nearby-hotel-address strong{font:500 13px/18px Onest,sans-serif;color:var(--theme-text,#101320)}
+.nearby-hotel-address>span{font:400 12px/17px Onest,sans-serif;color:var(--theme-secondary,#5a6072);overflow-wrap:anywhere}
+.desktop-app .stay-location-preview .nearby-hotel-preview{height:240px}
+.desktop-app .stay-location-preview .nearby-preview-track>.nearby-photo-card{flex-basis:180px}
+
+.nearby-location-link-area{position:relative;display:grid;gap:10px;isolation:isolate}
+.nearby-location-open{position:absolute;inset:0;z-index:1;border:0;border-radius:12px;background:none;cursor:pointer}
+.nearby-location-open:focus-visible{outline:2px solid var(--theme-link,#2f5bff);outline-offset:4px}
+.nearby-location-expand{position:absolute;z-index:2;top:170px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:6px;white-space:nowrap;border:0;border-radius:20px;padding:10px 14px;background:var(--theme-card,#fff);color:var(--theme-text,#101320);font:500 12px/18px Onest,sans-serif;box-shadow:0 2px 12px #1013201a;cursor:pointer}
+.nearby-location-expand:focus-visible{outline:2px solid var(--theme-link,#2f5bff);outline-offset:3px}
+.desktop-app .nearby-location-expand{top:230px}
+
+.nearby-reference-details{display:flex;flex-direction:column;gap:4px;font:400 12px/18px Onest,sans-serif;color:var(--theme-secondary,#5a6072)}
+.nearby-preview-track .nearby-reference-details{display:none}
+.nearby-photo-gallery{width:100%;min-width:0}
+.nearby-photo-gallery .nearby-photo-gallery-track{width:100%;min-width:0;gap:10px}
+.nearby-photo-gallery-track>.nearby-place-photo{flex:0 0 92%;min-width:0;scroll-snap-align:start}
+.nearby-photo-gallery-track .nearby-place-photo img{height:180px}
+.nearby-cover-icon{display:grid;place-items:center;color:var(--theme-link,#2f5bff)}
+
+/* A place may have one cover or a horizontal photo gallery. */
+.nearby-photo-list .nearby-place-cover{aspect-ratio:2/1}
+.nearby-card-gallery{width:100%;min-width:0}
+.nearby-card-gallery .nearby-card-gallery-track{width:100%;min-width:0;gap:10px}
+.nearby-gallery-photo{flex:0 0 52%;min-width:0;padding:0;border:0;background:none;cursor:pointer;scroll-snap-align:start}
+.nearby-card-open{width:100%;padding:0;border:0;background:none;color:inherit;text-align:left;cursor:pointer}
+.nearby-gallery-photo:focus-visible,.nearby-card-open:focus-visible{outline:2px solid var(--theme-link,#2f5bff);outline-offset:2px;border-radius:18px}
+
+.nearby-photo-list .nearby-gallery-photo .nearby-place-cover{aspect-ratio:1}
+
+.nearby-photo-list>.nearby-photo-card+.nearby-photo-card{border-top:1px solid var(--theme-border,#e4e7ef);padding-top:12px}

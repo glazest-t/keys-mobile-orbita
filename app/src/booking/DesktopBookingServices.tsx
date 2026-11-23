@@ -79,7 +79,7 @@ function BookingServiceCatalogue({services,selected,disabled,onOpen}:{services:B
 
    {!!featured.length&&(isDesktop?<div className="service-catalog-featured">{featured.map(card)}</div>:<Carousel ariaLabel="Услуги для поездки" contentClassName="service-catalog-featured">{featured.map(card)}</Carousel>)}
    {!!compact.length&&<section className="service-catalog-more">{!!featured.length&&<h3>Ещё для вашей поездки</h3>}<div className="service-catalog-grid">{compact.map(card)}</div></section>}
-   {!visible.length&&<div className="hotel-service-empty"><Icon name="nav-search" size={32}/><h3>{services.length?'Ничего не найдено':'Нет дополнительных услуг'}</h3><p>{services.length?'Выберите другую категорию.':'Для выбранного тарифа сейчас нет доступных услуг.'}</p>{services.length>0&&<Button variant="secondary" onClick={()=>{setCategory('Все');}}>Сбросить фильтры</Button>}</div>}
+   {!visible.length&&<div className="hotel-service-empty"><Icon outline name="nav-search" size={32}/><h3>{services.length?'Ничего не найдено':'Нет дополнительных услуг'}</h3><p>{services.length?'Выберите другую категорию.':'Для выбранного тарифа сейчас нет доступных услуг.'}</p>{services.length>0&&<Button variant="secondary" onClick={()=>{setCategory('Все');}}>Сбросить фильтры</Button>}</div>}
   </section>
  </div>;
 }

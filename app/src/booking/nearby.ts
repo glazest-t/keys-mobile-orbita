@@ -2,9 +2,9 @@ import {tripEditorialText} from '../../../prototype/domain/tripEditorialText.mjs
 import snapshot from '../../../spec/nearby-places.json' with {type:'json'};
 import photos from '../../../spec/nearby-photos.json' with {type:'json'};
 
-export type NearbyCategory='Всё'|'Музеи'|'Прогулки'|'Культура';
+export type NearbyCategory='Всё'|'Музеи'|'Прогулки'|'Культура'|'Пляжи';
 export type NearbyPhoto={url:string;source?:string;credit:string;illustrative?:boolean};
-export type NearbyPlace={id:string;name:string;category:Exclude<NearbyCategory,'Всё'>;categoryLabel:string;icon:string;about:string;coordinates:number[];source:string;radialDistanceMeters:number;walk?:{distanceMeters:number;durationSeconds:number}};
+export type NearbyPlace={details?:string[];photos?:NearbyPhoto[];photo?:NearbyPhoto;id:string;name:string;category:Exclude<NearbyCategory,'Всё'>;categoryLabel:string;icon:string;about:string;coordinates:number[];source:string;radialDistanceMeters:number;walk?:{distanceMeters:number;durationSeconds:number}};
 const rawHotels=snapshot.hotels as Record<string,NearbyPlace[]>;
 const tripPlaceDescriptions:Record<string,()=>string>={
  "70030076507742266":()=>tripEditorialText("ПР-106", "Городская достопримечательность, которую можно включить в прогулку от отеля.", "Городская достопримечательность, которую можно включить в прогулку"),

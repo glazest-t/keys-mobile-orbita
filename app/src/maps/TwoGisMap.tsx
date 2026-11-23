@@ -14,8 +14,8 @@ function loadSDK(){
  return sdkPromise;
 }
 export type MapPoint={id:string;coordinates:number[];label:string;name:string;discountPercent?:number;icon?:string;markerOffset?:number[]};
-type Props={route?:number[][][];points:MapPoint[];center:Coordinates;selected?:string;onSelect?:(id:string)=>void;onHover?:(id:string)=>void;onPreviewDismiss?:()=>void;onVisibleChange?:(ids:string[])=>void;preview?:ReactNode;interactive?:boolean;expanded?:boolean;missing?:number;label?:string};
-export function TwoGisMap({points,route,center,selected,onSelect,onHover,onPreviewDismiss,onVisibleChange,preview,interactive=true,expanded=false,missing=0,label='Карта 2ГИС'}:Props){
+type Props={boundsPadding?:{top:number;bottom:number;left:number;right:number};route?:number[][][];points:MapPoint[];center:Coordinates;selected?:string;onSelect?:(id:string)=>void;onHover?:(id:string)=>void;onPreviewDismiss?:()=>void;onVisibleChange?:(ids:string[])=>void;preview?:ReactNode;interactive?:boolean;expanded?:boolean;missing?:number;label?:string};
+export function TwoGisMap({points,route,center,boundsPadding,selected,onSelect,onHover,onPreviewDismiss,onVisibleChange,preview,interactive=true,expanded=false,missing=0,label='Карта 2ГИС'}:Props){
  const iconVariant=usePrototypeIcons();
  const canvas=useRef<HTMLDivElement>(null), mapRef=useRef<MapGL|null>(null), sdk=useRef<SDK|null>(null);
  const [status,setStatus]=useState<'loading'|'ready'|'error'>('loading'),[retry,setRetry]=useState(0);
@@ -98,9 +98,9 @@ export function TwoGisMap({points,route,center,selected,onSelect,onHover,onPrevi
   });
   viewportChanged.current=false;
   const bounds=locationBounds([...points.map(p=>p.coordinates),...(routeRef.current?.flat()||[])]);
-  if(bounds&&(points.length>1||routeRef.current?.length))map.fitBounds(bounds,{padding:routeRef.current?.length?{top:100,bottom:60,left:55,right:70}:{top:40,bottom:48,left:55,right:55},maxZoom:16,animation:{duration:0}});
+  if(bounds&&(points.length>1||routeRef.current?.length))map.fitBounds(bounds,{padding:boundsPadding||(routeRef.current?.length?{top:100,bottom:60,left:55,right:70}:{top:40,bottom:48,left:55,right:55}),maxZoom:16,animation:{duration:0}});
   else {map.setCenter(points[0]?.coordinates||center,{duration:0});map.setZoom(points.length?15:11,{duration:0});}
- },[status,markerKey,routeKey,center[0],center[1]]);
+ },[status,markerKey,routeKey,center[0],center[1],JSON.stringify(boundsPadding)]);
  useEffect(()=>{
   // Changing the icon family must not reset the current map position or zoom.
   markers.current.forEach(({button,id})=>{
