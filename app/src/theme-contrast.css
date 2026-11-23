@@ -263,20 +263,17 @@ html[data-app-theme="dark"] .keys-app .trip-history-entry { background:var(--the
 html[data-app-theme="dark"] .trip-history-entry>img.trip-album-light { display:none; }
 html[data-app-theme="dark"] .trip-history-entry>img.trip-album-dark { display:block; }
 
-/* Header utilities use filled shapes; the keyboard focus ring remains functional. */
+/* Header utility surfaces; the keyboard focus ring remains functional. */
 html[data-app-theme="dark"] .keys-app .header-utilities { border-color:transparent;box-shadow:none;background:transparent; }
 html[data-app-theme="dark"] .keys-app .header-actions :is(.k-icon-button,.avatar) { border-color:transparent;box-shadow:none; }
 html[data-app-theme="dark"] .desktop-navigation :is(.desktop-favorites-link,.desktop-profile-link) { border-color:transparent;box-shadow:none; }
 /* Saved hotels keep the same pink identity as the light theme. */
 html[data-app-theme="dark"] .keys-app .save-hotel.is-saved,
 html[data-app-theme="dark"] .keys-app .save-hotel.is-saved .k-icon { color:#e84d7a!important; }
-html[data-app-theme="dark"] .keys-app .header-utilities>.k-icon-button[aria-label="Избранное"],
 html[data-app-theme="dark"] .desktop-navigation .desktop-favorites-link {
   background:#29313f;color:#f0f4fc;
 }
-html[data-app-theme="dark"] .keys-app .header-utilities>.k-icon-button[aria-label="Избранное"] .k-icon { color:#f0f4fc;filter:none; }
 @media (hover:hover) and (pointer:fine) {
-  html[data-app-theme="dark"] .desktop-surface .keys-app .header-utilities>.k-icon-button[aria-label="Избранное"]:hover:not(:disabled):not(:active),
   html[data-app-theme="dark"] .desktop-navigation .desktop-favorites-link:hover { background:#3a4556;color:#fff; }
 }
 

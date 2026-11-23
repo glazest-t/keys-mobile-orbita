@@ -1,11 +1,12 @@
 import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
-import {useState} from 'react';
+import {useId,useRef,useState} from 'react';
 import {Icon} from '../ui';
 import {Carousel} from '../mobile';
 import {isDesktop} from '../desktop/surface';
 import {FullscreenPhotoGallery} from './FullscreenPhotoGallery';
 import {amenityIcon} from './amenityIcons';
 import {hotelFacets} from './searchFacets';
+import {manteraFacilities,type HotelFacilityGroup} from './manteraFacilities';
 import './hotel-facilities.css';
 
 const groups = [
@@ -14,7 +15,7 @@ const groups = [
  {title:'Спорт',icon:'fitness',items:['fitness']},
  {title:'Транспорт',icon:'car',items:['parking','transfer','taxi']},
  {title:'Для детей',icon:'kids-room',items:['kids-room','baby-cot']},
- {title:'Услуги отеля',icon:'reception',items:['reception','contactless-check-in','luggage','laundry','iron','cleaning','linen','towels']},
+ {title:'Услуги отеля',icon:'reception',items:['reception','contactless-check-in','luggage','laundry','iron','cleaning','linen','towels','pet']},
  {title:'Общие удобства',icon:'hotel-building',items:[]},
 ];
 
@@ -37,50 +38,66 @@ const istochnikPhotos:Record<string,string[]> = {
  parking:['/assets/istochnik-amenities/parking-1.jpg'],
 };
 
-function facilityDetails(label:string,hotelId:string):string[]{
- if(label==='Круглосуточная стойка регистрации')return ['Круглосуточно'];
- if(label==='Уборка по запросу')return ['По запросу'];
- if(label==='Заказ трансфера'||label==='Вызов такси')return ['По заказу'];
+const isPriceTag=(tag:string)=>tag==='Бесплатно'||tag==='Платно';
+type FacilityDetails={tags:string[];description?:string};
+function facilityDetails(label:string,hotelId:string):FacilityDetails{
+ if(label==='Круглосуточная стойка регистрации')return {tags:['Круглосуточно']};
+ if(label==='Уборка по запросу')return {tags:['По запросу']};
+ if(label==='Заказ трансфера'||label==='Вызов такси')return {tags:['По заказу']};
  if(label==='Парковка'){
-  if(hotelId==='orbit-sea')return ['Бесплатно','Въезд с ул. Голубая'];
+  if(hotelId==='orbit-sea')return {tags:['Бесплатно'],description:'Въезд с ул. Голубая'};
   const parking=hotelFacets(hotelId)?.parking||[];
-  return parking.filter(detail=>detail!=='Есть парковка').map(detail=>detail==='Бесплатная парковка'?'Бесплатно':detail==='Платная парковка'?'Платно':detail);
+  return {tags:parking.filter(detail=>detail!=='Есть парковка').map(detail=>detail==='Бесплатная парковка'?'Бесплатно':detail==='Платная парковка'?'Платно':detail)};
  }
- return [];
+ return {tags:[]};
 }
 
-export function HotelFacilities({amenities,hotelId,onShowAll,showPopular=true}:{amenities:string[];hotelId:string;onShowAll?:()=>void;showPopular?:boolean}){
+export function HotelFacilities({amenities,hotelId,showPopular=true}:{amenities:string[];hotelId:string;showPopular?:boolean}){
+ const [expanded,setExpanded]=useState(false);
+ const listId=useId();
+ const cardRef=useRef<HTMLDivElement>(null);
  const [galleryState,setGalleryState]=useState<{label:string;index:number}|null>(null);
  const usesIstochnikPhotos=hotelId==='orbit-sea';
  const photosByAmenity=usesIstochnikPhotos?istochnikPhotos:facilityPhotos;
- const facilities=amenities.map(label=>{
+ const facilityLabels=[...new Set(amenities)];
+ const facilities=facilityLabels.map(label=>{
   const icon=amenityIcon(label);
   return {label,group:groups.find(group=>group.items.includes(icon))??groups[groups.length-1],photos:photosByAmenity[icon]??[]};
  });
  const visibleGroups=groups.filter(group=>facilities.some(item=>item.group===group));
  const popular=showPopular?facilities.filter(item=>item.photos.length>0).slice(0,6):[];
  const gallery=popular.find(item=>item.label===galleryState?.label);
- const shownGroups=onShowAll?visibleGroups.slice(0,3):visibleGroups;
- const showAllButton=onShowAll&&visibleGroups.length>shownGroups.length;
+ const facilityGroups:HotelFacilityGroup[]=hotelId==='orbit-sea'?manteraFacilities:visibleGroups.map(group=>({...group,items:facilities.filter(item=>item.group===group).map(({label})=>({label:label==='Круглосуточная стойка регистрации'?'Стойка регистрации':label==='Уборка по запросу'?'Уборка':label,...facilityDetails(label,hotelId)}))}));
+ const showAllButton=facilityGroups.length>3||facilityGroups.some(group=>group.items.length>1);
+ const compact=!expanded&&showAllButton;
+ const shownGroups=compact?facilityGroups.slice(0,3).map(group=>({...group,items:group.items.slice(0,1)})):facilityGroups;
+ const toggleFacilities=()=>{
+  if(expanded)cardRef.current?.scrollIntoView({block:'start',behavior:'instant'});
+  setExpanded(value=>!value);
+ };
 
- const facilitiesCard=<div className="hotel-facilities-card">
-   <div className="hotel-facilities-groups">
+ const facilitiesCard=<div className="hotel-facilities-card" data-compact={compact||undefined} ref={cardRef}>
+   <div className="hotel-facilities-groups" id={listId}>
     {shownGroups.map(group=><section className="hotel-facility-group" key={group.title}>
      <h3><span className="icon-tile" aria-hidden="true"><Icon name={group.icon} size={22} inheritColor/></span><span>{group.title}</span></h3>
      <ul role="list">
-      {facilities.filter(item=>item.group===group).map(({label})=>{
-       const details=facilityDetails(label,hotelId);
-       const title=label==='Круглосуточная стойка регистрации'?'Стойка регистрации':label==='Уборка по запросу'?'Уборка':label;
+      {group.items.map(({label,...details})=>{
+       const title=label;
+       const priceTags=details.tags.filter(isPriceTag);
+       const tags=details.tags.filter(tag=>!isPriceTag(tag));
        return <li key={label}>
-        <span>{title}</span>
-        {details.length>0&&<div className="hotel-facility-labels">{details.map(detail=><span key={detail}>{detail}</span>)}</div>}
+        <div className="hotel-facility-line"><span>{title}</span>{priceTags.map(tag=><span className="hotel-facility-price-inline" key={tag}>{' '}<span className="hotel-facility-tag hotel-facility-tag-price" data-price={tag==='Бесплатно'?'free':'paid'}>{tag}</span></span>)}</div>
+        {(tags.length>0||details.description)&&<div className="hotel-facility-details">
+         {tags.map(tag=><span className="hotel-facility-tag" key={tag}>{tag}</span>)}
+         {details.description&&<p className="hotel-facility-tag hotel-facility-description">{details.description}</p>}
+        </div>}
        </li>;
       })}
      </ul>
     </section>)}
    </div>
-   {showAllButton&&<button type="button" className="hotel-facilities-all" aria-haspopup="dialog" onClick={onShowAll}>
-    <span>Все удобства отеля</span><Icon name="chevron-right" size={18} inheritColor/>
+   {showAllButton&&<button type="button" className="hotel-facilities-all" aria-expanded={expanded} aria-controls={listId} onClick={toggleFacilities}>
+    <span>{expanded?'Свернуть удобства':'Все удобства отеля'}</span><Icon name="chevron-down" size={18} inheritColor/>
    </button>}
   </div>;
 

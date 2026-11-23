@@ -121,6 +121,6 @@ export function TwoGisMap({points,route,center,selected,onSelect,onHover,onPrevi
   {status==='loading'&&<div className="gis-state" role="status"><span className="gis-spinner"/>Загружаем карту</div>}
   {status==='error'&&<div className="gis-state gis-error" role="status"><strong>Карта недоступна</strong><span>Попробуйте загрузить ещё раз</span><button type="button" onClick={()=>setRetry(v=>v+1)}>Повторить</button></div>}
   {status==='ready'&&missing>0&&points.length===0&&<div className="gis-missing">Адрес отеля уточняется</div>}
-  {status==='ready'&&interactive&&<div className="gis-zoom"><button type="button" aria-label="Приблизить карту" onClick={()=>{const m=mapRef.current;if(m){viewportChanged.current=true;m.setZoom(m.getZoom()+1);}}}><Icon name="plus" size={20} inheritColor/></button><button type="button" aria-label="Отдалить карту" onClick={()=>{const m=mapRef.current;if(m){viewportChanged.current=true;m.setZoom(m.getZoom()-1);}}}><Icon name="minus" size={20} inheritColor/></button></div>}
+  {status==='ready'&&interactive&&<div className="gis-zoom"><button type="button" aria-label="Приблизить карту" onClick={()=>{const m=mapRef.current;if(m){viewportChanged.current=true;m.setZoom(m.getZoom()+1);}}}><Icon outline name="plus" size={20}/></button><button type="button" aria-label="Отдалить карту" onClick={()=>{const m=mapRef.current;if(m){viewportChanged.current=true;m.setZoom(m.getZoom()-1);}}}><Icon outline name="minus" size={20}/></button></div>}
  </div>;
 }

@@ -99,7 +99,7 @@
 .search-sheet-body>.search-picker{flex:1;min-height:0}
 .search-sheet-body .picker-actions{margin-top:auto;padding-top:20px}
 
-/* Active navigation shares the label accent; inactive glyphs stay soft graphite. */
+/* Active navigation shares the label accent; inactive glyphs keep the theme text color. */
 .keys-app .bottom-navigation button.active .nav-icon{color:var(--theme-link,var(--theme-link,#2f5bff))}
 
 /* Mirror the same arrow for both month navigation controls. */

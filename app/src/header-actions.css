@@ -14,3 +14,12 @@
 
 /* History trip details use the same trailing action as booking details. */
 .desktop-app .app-header.trip-details-header .header-title{flex:1;min-width:0}
+
+/* Navigation utilities are always blue line icons, independent of the icon-set switch. */
+.keys-app .app-header .header-utilities .k-icon-button{color:var(--theme-icon,var(--k-action-primary,#2f5bff))!important}
+
+/* Navigation remains blue and outlined; only a saved hotel uses a filled heart. */
+.desktop-navigation .k-icon,
+.desktop-account-menu .k-icon{color:var(--theme-icon,var(--k-action-primary,#2f5bff))!important}
+.keys-app .save-hotel:not(.is-saved),
+.keys-app .save-hotel:not(.is-saved) .k-icon{color:var(--theme-icon,var(--k-action-primary,#2f5bff))!important}
