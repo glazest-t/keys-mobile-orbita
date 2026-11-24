@@ -40,7 +40,9 @@ function WifiSession({open,manual,onClose}:{open:boolean;manual:boolean;onClose:
  const connected=view==='connect'&&status==='connected';
  const title=view==='help'?'Как подключиться':connected?'Вы в сети':tripEditorialText("ПР-225", 'Wi-Fi отеля', "Wi-Fi");
  const device=isDesktop?'устройства':'телефона';
- const subtitle=view==='help'?`В настройках ${device}`:view==='credentials'?`Выберите сеть в настройках ${device}`:connected?(isDesktop?'Устройство подключено к Wi-Fi отеля':tripEditorialText("ПР-228", 'Телефон подключён к Wi-Fi отеля', "Телефон подключён к Wi-Fi")):(isDesktop?'Подключение к гостевой сети отеля':tripEditorialText("ПР-229", 'Подключим телефон к сети отеля', "Подключим телефон к Wi-Fi"));
+ const connectedCopy=tripEditorialText("ПР-228", isDesktop?'Устройство подключено к Wi-Fi отеля':'Телефон подключён к Wi-Fi отеля', `${isDesktop?'Устройство подключено':'Телефон подключён'} к Wi-Fi`);
+ const connectCopy=tripEditorialText("ПР-229", isDesktop?'Подключение к гостевой сети отеля':'Подключим телефон к сети отеля', `Подключим ${isDesktop?'устройство':'телефон'} к Wi-Fi`);
+ const subtitle=view==='help'?`В настройках ${device}`:view==='credentials'?`Выберите сеть в настройках ${device}`:connected?connectedCopy:connectCopy;
  return <BottomSheet open={open} onOpenChange={v=>{if(!v)onClose();}} title={title} snap={.64}>
   <div className={'sheet-body wifi-sheet '+(connected?'is-connected':'')} onFocusCapture={event=>{
    // Auto-focus during the sheet animation must not scroll the device shell.

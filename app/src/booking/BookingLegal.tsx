@@ -2,21 +2,18 @@ import {useState,type ReactNode} from 'react';
 import {BottomSheet} from '../mobile';
 import {Button,Icon} from '../ui';
 import {TermsPage} from '../legal/TermsPage';
-import type {Draft} from './model';
+import {usePrototypeText} from '../usePrototypeText';
 import './booking-legal.css';
 
 type Document='agreement'|'privacy'|'provider';
 const titles:Record<Document,string>={agreement:'Пользовательское соглашение',privacy:'Политика обработки персональных данных',provider:'Информация об исполнителе'};
 
-export function BookingLegal({draft,onChange,actionLabel,children}:{children?:ReactNode;draft:Draft;onChange:(patch:Partial<Draft>)=>void;actionLabel:string}){
+export function BookingLegal({actionLabel,children}:{children?:ReactNode;actionLabel:string}){
  const [document,setDocument]=useState<Document|null>(null);
+ const edited=usePrototypeText()==='edited';
  return <section className="booking-legal" aria-label="Согласия и документы">
-  <div className="booking-legal-card">{children}<label className="booking-marketing-consent">
-   <input type="checkbox" checked={draft.marketingConsent===true} onChange={event=>onChange({marketingConsent:event.target.checked})}/>
-   <span className="booking-consent-check" aria-hidden="true">{draft.marketingConsent&&<Icon name="check" size={14} inheritColor/>}</span>
-   <span>Даю согласие на получение рассылок и специальных предложений</span>
-  </label>
-  <p>Нажимая «{actionLabel}», вы соглашаетесь с <button type="button" onClick={()=>setDocument('agreement')}>Пользовательским соглашением</button> и подтверждаете, что ознакомились с <button type="button" onClick={()=>setDocument('privacy')}>Политикой обработки персональных данных</button>.</p></div>
+  <div className="booking-legal-card">{children}
+  <p className="booking-legal-copy">Нажимая «{actionLabel}», вы {edited?'принимаете':'соглашаетесь с'} <button type="button" onClick={()=>setDocument('agreement')}>{edited?'Пользовательское соглашение':'Пользовательским соглашением'}</button> и подтверждаете, что ознакомились с <button type="button" onClick={()=>setDocument('privacy')}>Политикой обработки персональных данных</button>.</p></div>
   <button type="button" className="booking-provider-link" onClick={()=>setDocument('provider')}>Информация об исполнителе <Icon name="chevron-right" size={14} inheritColor/></button>
   <BottomSheet open={document!==null} onOpenChange={open=>{if(!open)setDocument(null);}} title={document?titles[document]:''} snap={.94}>
    <div className={'booking-legal-document'+(document==='provider'?' booking-provider-document':'')}>

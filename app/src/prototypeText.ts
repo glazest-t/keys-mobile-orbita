@@ -3,7 +3,6 @@ import {setEditorialTextResolver} from '../../prototype/domain/editorialText.mjs
 import {setTripEditorialScope} from '../../prototype/domain/tripEditorialText.mjs';
 import {setNovemberEditorialScope} from '../../prototype/domain/novemberEditorialText.mjs';
 import {getPrototypeVariant} from './prototypeVariant.ts';
-import {isDesktop} from './desktop/surface.ts';
 export type PrototypeText = 'standard' | 'edited';
 export const PROTOTYPE_TEXT_KEY = 'keys-orbita-prototype-text';
 const eventName = 'keys-prototype-text-change';
@@ -41,5 +40,5 @@ export function selectPrototypeText(variant: PrototypeText, original: string, ed
 }
 
 setEditorialTextResolver(getPrototypeText);
-setNovemberEditorialScope(()=>!isDesktop&&getPrototypeVariant()==='november');
-setTripEditorialScope(()=>!isDesktop&&getPrototypeVariant()==='november'&&typeof location!=='undefined'&&/^(trips|booking-record|trip-details|trip-guide|trip-route|trip-nearby|trip-services|trip-breakfast|trip-breakfast-room|trip-chat|trip-bill|trip-review|trip-problem)$/.test(new URL(location.href).hash.slice(1)));
+setNovemberEditorialScope(()=>getPrototypeVariant()==='november');
+setTripEditorialScope(()=>getPrototypeVariant()==='november'&&typeof location!=='undefined'&&/^(trips|booking-record|trip-details|trip-guide|trip-route|trip-nearby|trip-services|trip-breakfast|trip-breakfast-room|trip-chat|trip-bill|trip-review|trip-problem)$/.test(new URL(location.href).hash.slice(1)));

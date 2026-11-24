@@ -1,9 +1,9 @@
-.checkout-review{display:flex;flex-direction:column;gap:16px;padding-bottom:16px}
-.checkout-cost-card,.booking-legal-card{padding:16px;border:1px solid var(--k-border-subtle);border-radius:24px;background:var(--k-surface-card,#fff)}
+.checkout-review{display:flex;flex-direction:column;gap:16px}
+.booking-content.checkout-page:has(>.checkout-review){padding-bottom:var(--mobile-safe-area-height,0px)}
+.checkout-cost-card{padding:16px;border:1px solid var(--k-border-subtle);border-radius:24px;background:var(--k-surface-card,#fff)}
 .checkout-cost-details>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;list-style:none;padding:0 0 12px}
 .checkout-cost-details>summary::-webkit-details-marker,.checkout-hotel-rules>summary::-webkit-details-marker{display:none}
 .checkout-cost-details>summary strong{display:block;font:600 16px/22px var(--k-font-text);color:var(--k-text-primary)}
-.checkout-cost-details>summary small{display:block;margin-top:4px;font:400 13px/19px var(--k-font-text);color:var(--k-text-secondary)}
 .checkout-cost-arrow{display:grid;place-items:center;flex:none;width:36px;height:36px;border-radius:50%;background:var(--k-action-tint,#eaf1ff);color:var(--theme-link,var(--k-action-primary))}
 .checkout-review details[open]>summary .k-icon{transform:rotate(180deg)}
 .checkout-cost-expanded{padding-bottom:16px}
@@ -14,16 +14,11 @@
 .checkout-hotel-rules>summary{display:flex;align-items:center;gap:8px;min-height:32px;margin-top:0;list-style:none;cursor:pointer;color:var(--theme-link,var(--k-action-primary));font:400 14px/20px var(--k-font-text)}
 .checkout-hotel-rules>div{padding-bottom:4px}
 .checkout-review summary:focus-visible{outline:2px solid var(--theme-link,var(--k-action-primary));outline-offset:4px;border-radius:8px}
-.checkout-review .booking-legal{padding:0;border:0;gap:8px}
-.booking-legal-card{display:flex;flex-direction:column;gap:10px}
-.keys-app .booking-legal-card>p{margin:0;font:400 12px/17px var(--k-font-text);color:var(--k-text-secondary)}
-.booking-legal-card>p button{border:0;padding:0;background:none;font:inherit;text-align:left;color:var(--theme-link,var(--k-action-primary));cursor:pointer}
-.checkout-review .booking-provider-link{align-self:center;min-height:44px;font:400 13px/19px var(--k-font-text)}
-.keys-app .booking-legal-card .checkout-pay-later{display:flex;justify-content:space-between;gap:12px;color:var(--k-text-secondary)}
-.checkout-pay-later strong{color:var(--k-text-primary);white-space:nowrap}
+.checkout-review .booking-legal{padding:0;border:0}
+.checkout-review .booking-provider-link{align-self:center}
+.checkout-payment-split{display:grid;gap:8px;margin:0;font:400 14px/21px var(--k-font-text);color:var(--k-text-secondary)}
+.checkout-payment-split>div{display:flex;justify-content:space-between;gap:12px}
+.checkout-payment-split>div:first-child,.checkout-payment-split dd{color:var(--k-text-primary)}
+.checkout-payment-split dd{margin:0;font-weight:500;white-space:nowrap}
 
 .checkout-cost-expanded .payment-summary-note{display:none}
-
-.checkout-review .booking-legal-card{padding:14px}
-.checkout-review .booking-marketing-consent{font-size:13px;line-height:18px}
-.checkout-review .booking-legal{gap:4px}

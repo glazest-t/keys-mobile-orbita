@@ -29,7 +29,7 @@
 
 /* Primary payment action follows the full width of its cart. */
 .desktop-app .desktop-flow-footer > .desktop-checkout-submit { align-items: stretch; }
-.desktop-app .desktop-flow-footer > .desktop-checkout-submit > .k-button { width: 100%; max-width: none; min-width: 0; min-height: 60px; font-size: 17px; }
+.desktop-app .desktop-flow-footer > .desktop-checkout-submit > .k-button { width: 100%; max-width: none; min-width: 0; }
 
 /* Apply filters spans the available footer width in the sidebar and dialog. */
 .desktop-surface .filter-editor-footer > .k-button { width: 100%; max-width: none; align-self: stretch; justify-self: stretch; }

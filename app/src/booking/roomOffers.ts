@@ -1,17 +1,25 @@
 import {activeRoomFilters,type RoomSelectionFilters} from './roomFilters.ts';
 import {roomVisual} from './roomVisuals.ts';
 import {canBookRate} from './rateAccess.ts';
-import {mealLabel,roomFacets} from './searchFacets.ts';
+import {mealLabel,roomFacets,matchesBedType} from './searchFacets.ts';
+import {queenBedLabel} from './filterSchema.ts';
 import {trimGuests} from './bookingParty.ts';
 import {available,catalog,cancellationDeadline,quoteDraft,type Commerce,type Search} from './model.ts';
 
 export type RoomFilters={selection?:RoomSelectionFilters;bed:'any'|'double'|'twin';breakfast:boolean;freeCancellation:boolean;payment:'any'|'at_hotel'|'online'};
 export const emptyRoomFilters:RoomFilters={bed:'any',breakfast:false,freeCancellation:false,payment:'any'};
-export const bedOptions={double:{label:'Одна двуспальная',icon:'bed-double'},twin:{label:'Две односпальные',icon:'bed-twin'},single:{label:'Одна односпальная',icon:'bed-single'},sofa:{label:'Диван-кровать',icon:'sofa-bed'},bunk:{label:'Двухъярусная',icon:'bunk-bed'},cot:{label:'Детская кроватка',icon:'baby-cot'}} as const;
+export const bedOptions={double:{label:'Одна двуспальная',icon:'bed-double'},queen:{label:queenBedLabel,icon:'bed-double'},twin:{label:'Две односпальные',icon:'bed-twin'},single:{label:'Одна односпальная',icon:'bed-single'},sofa:{label:'Диван-кровать',icon:'sofa-bed'},bunk:{label:'Двухъярусная',icon:'bunk-bed'},cot:{label:'Детская кроватка',icon:'baby-cot'}} as const;
 export const roomBeds=(id:string):(keyof typeof bedOptions)[]=>roomFacets(id)?.beds.flatMap(label=>(Object.keys(bedOptions) as (keyof typeof bedOptions)[]).filter(key=>bedOptions[key].label===label))||['double','twin'];
 // Все тарифы текущего демонстрационного каталога допускают оба способа оплаты.
 export const roomPaymentMethods = ['at_hotel','online'] as const;
 export function rateTitle(rate:typeof catalog.rates[number]){return rate.kind==='hotel_loyalty'?'Закрытый тариф'+(rate.mealPlan==='breakfast'?' с завтраком':''):rate.kind==='friendly_rate'?(rate.mealPlan==='breakfast'?'Friendly Rate с завтраком':rate.mealPlan==='none'?'Friendly Rate без питания':'Friendly Rate · '+mealLabel(rate.mealPlan)):rate.mealPlan==='breakfast'?'Гибкий с завтраком':rate.mealPlan==='none'?'Гибкий без питания':mealLabel(rate.mealPlan);}
+export function includedRoomServices(roomId:string){
+ const services=[{icon:'cleaning',title:'Уборка номера'}];
+ if(roomVisual(roomId).amenities.some(([,label])=>label==='Wi-Fi')){
+  services.unshift({icon:'wifi',title:'Wi-Fi в номере'});
+ }
+ return services;
+}
 export function roomQuote(state:Commerce,owner:string|null,rateId:string){
  const rate=catalog.rates.find(r=>r.id===rateId);
  if(!state.draft||!rate||rate.hotelId!==state.draft.hotelId)throw Error('Тариф недоступен');
@@ -24,7 +32,7 @@ export function roomOffers(state:Commerce,owner:string|null,filters:RoomFilters=
  if(selected?.payments.length&&!selected.payments.some(value=>roomPaymentMethods.includes(value as typeof roomPaymentMethods[number])))return [];
  if(selected?.cancellations.length&&!selected.cancellations.includes(free?'free':'penalty'))return [];
  if(filters.payment!=='any'&&!roomPaymentMethods.includes(filters.payment))return [];
- return catalog.rooms.filter(r=>r.hotelId===d.hotelId&&available(state,r.id,d.search)&&(filters.bed==='any'||roomBeds(r.id).includes(filters.bed))&&(!selected?.beds.length||selected.beds.some(value=>roomFacets(r.id)?.beds.includes(value)))&&(!selected?.views.length||selected.views.includes(roomVisual(r.id).view)))
+ return catalog.rooms.filter(r=>r.hotelId===d.hotelId&&available(state,r.id,d.search)&&(filters.bed==='any'||roomBeds(r.id).some(bed=>bed===filters.bed||bed==='queen'&&filters.bed==='double'))&&(!selected?.beds.length||selected.beds.some(value=>matchesBedType(roomFacets(r.id)?.beds||[],value)))&&(!selected?.views.length||selected.views.includes(roomVisual(r.id).view)))
  .map(room=>({room,rates:catalog.rates.filter(rate=>rate.roomId===room.id&&canBookRate(state,owner,rate)&&(!selected?.meals.length||selected.meals.includes(mealLabel(rate.mealPlan))||selected.meals.includes('Собственная кухня')&&roomFacets(room.id)?.kitchen)&&(!filters.breakfast||rate.mealPlan==='breakfast')&&(!filters.freeCancellation||now<=Date.parse(cancellationDeadline(d.search))))
  .sort((a,b)=>Number(b.kind==='friendly_rate')-Number(a.kind==='friendly_rate')).map(rate=>({rate,quote:roomQuote(state,owner,rate.id)}))})).filter(r=>r.rates.length);
 }

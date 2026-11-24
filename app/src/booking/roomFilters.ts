@@ -1,4 +1,4 @@
-import {filterGroups,groupValues} from './filterSchema.ts';
+import {filterGroups,groupValues,queenBedLabel} from './filterSchema.ts';
 import type {Commerce} from './model.ts';
 
 export type RoomFilterKey='meals'|'beds'|'views'|'payments'|'cancellations';
@@ -18,7 +18,7 @@ export function updateRoomFilters(state:Commerce,filters:RoomSelectionFilters):C
 }
 export const roomFilterGroups=[
  {key:'meals',label:'Питание',options:filterGroups.find(g=>g.name==='Питание')!.values.map(value=>({value,label:value}))},
- {key:'beds',label:'Кровати',options:['Одна двуспальная','Две односпальные','Одна односпальная','Диван-кровать','Двухъярусная','Детская кроватка'].map(value=>({value,label:value}))},
+ {key:'beds',label:'Кровати',options:['Одна двуспальная',queenBedLabel,'Две односпальные','Одна односпальная','Диван-кровать','Двухъярусная','Детская кроватка'].map(value=>({value,label:value}))},
  {key:'views',label:'Вид из окна',options:[]},
  {key:'payments',label:'Способ оплаты',options:[{value:'online',label:'Онлайн'},{value:'at_hotel',label:'В отеле'}]},
  {key:'cancellations',label:'Правила отмены',options:[{value:'free',label:'Бесплатная отмена'},{value:'penalty',label:'Отмена со штрафом'}]},

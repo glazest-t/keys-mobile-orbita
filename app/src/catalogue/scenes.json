@@ -263,6 +263,14 @@
     "step": "rooms"
   },
   {
+    "id": "booking-rooms-queen",
+    "title": "Номер с кроватью «Queen size»",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "rooms",
+    "rateId": "kazan-city-rate"
+  },
+  {
     "id": "booking-guest",
     "title": "Данные бронирования",
     "group": "Отель и бронирование",
@@ -282,6 +290,24 @@
     "group": "Отель и бронирование",
     "route": "booking-flow",
     "step": "checkout"
+  },
+  {
+    "id": "booking-included-services",
+    "title": "Услуги, включённые в тариф",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "checkout",
+    "rateId": "moscow-izmaylovo-tvoy-otel-breakfast",
+    "bookingSummary": {
+      "rateTitle": "Романтическое предложение",
+      "includedServices": [
+        "Завтрак в номер",
+        "Украшение номера",
+        "Игристое вино в номер",
+        "Комплимент в номер",
+        "Посещение нового панорамного СПА-центра на 13 этаже отеля с потрясающим видом на Москву"
+      ]
+    }
   },
   {
     "id": "booking-confirmation",
@@ -332,6 +358,7 @@
   },
   {
     "id": "hotel-preferences",
+    "fullOnly": true,
     "title": "Почему подходит вам",
     "group": "Отель и бронирование",
     "route": "booking-flow",
@@ -346,11 +373,10 @@
     "id": "hotel-watch",
     "title": "Следить за ценой",
     "group": "Отель и бронирование",
-    "route": "booking-flow",
-    "step": "hotel",
+    "route": "price-watches",
     "actions": [
       {
-        "selector": ".watch-price"
+        "selector": ".watch-card-price"
       }
     ]
   },
@@ -362,7 +388,7 @@
     "step": "hotel",
     "actions": [
       {
-        "text": "Расположение"
+        "selector": ".nearby-location-open"
       }
     ]
   },
@@ -370,11 +396,11 @@
     "id": "hotel-route",
     "title": "Маршрут до отеля",
     "group": "Отель и бронирование",
-    "route": "booking-flow",
-    "step": "hotel",
+    "route": "trips",
+    "trip": "upcoming",
     "actions": [
       {
-        "text": "Маршрут"
+        "selector": ".upcoming-route"
       }
     ]
   },
@@ -446,7 +472,7 @@
     "step": "checkout",
     "actions": [
       {
-        "selector": "[aria-label=\"Посмотреть расчёт стоимости бронирования\"]"
+        "selector": ".checkout-cost-details summary, [aria-label=\"Посмотреть расчёт стоимости бронирования\"]"
       }
     ]
   },
@@ -563,7 +589,7 @@
     "step": "rooms",
     "actions": [
       {
-        "selector": "[aria-label=\"Изменить даты и гостей\"]"
+        "selector": "[aria-label^=\"Изменить даты и гостей\"]"
       }
     ]
   },
@@ -1088,9 +1114,11 @@
   },
   {
     "id": "program-level",
+    "fullOnly": true,
     "title": "Условия уровня отеля",
     "group": "Выгоды и программы",
     "route": "loyalty-program/orbit-sea",
+    "loyalty": true,
     "actions": [
       {
         "selector": ".hotel-level-card.is-current"

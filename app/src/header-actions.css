@@ -23,3 +23,10 @@
 .desktop-account-menu .k-icon{color:var(--theme-icon,var(--k-action-primary,#2f5bff))!important}
 .keys-app .save-hotel:not(.is-saved),
 .keys-app .save-hotel:not(.is-saved) .k-icon{color:var(--theme-icon,var(--k-action-primary,#2f5bff))!important}
+
+/* Shared back/actions in profile, rewards, help, booking and chat headers.
+   Set the icon itself: the base .keys-app .k-icon rule otherwise uses text color. */
+.keys-app .app-header > .k-icon-button .k-icon,
+.keys-app :is(.booking-header,.hotel-chat-header,.finder-header) .k-icon{
+ color:var(--theme-link,var(--k-action-primary,#2f5bff));
+}

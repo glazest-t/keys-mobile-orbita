@@ -6,11 +6,13 @@ import {dateLabel,nights,type Search} from './model';
 import {validDateRange} from './search';
 import './results-search.css';
 
+export const searchDatesAndGuestsTitle='Когда и кто';
+
 type Props={value:Search;onApply:(search:Search)=>void|string;onClose:()=>void;showTripFeatures?:boolean};
 const SearchState=createContext<{draft:Search;setDraft:(value:Search)=>void;apply:()=>void;close:()=>void;showTripFeatures:boolean;error:string}|null>(null);
 function Header(){
  const c=useContext(SearchState)!;
- return <header className="results-query-header"><IconButton name="close" label="Закрыть изменение поиска" onClick={c.close}/><h1>Когда и кто</h1><span className="header-spacer"/></header>;
+ return <header className="results-query-header"><IconButton name="close" label="Закрыть изменение поиска" onClick={c.close}/><h1>{searchDatesAndGuestsTitle}</h1><span className="header-spacer"/></header>;
 }
 function Content(){
  const c=useContext(SearchState)!;

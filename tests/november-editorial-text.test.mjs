@@ -1,9 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {getPrototypeText} from '../app/src/prototypeText.ts';
-import {setEditorialTextResolver} from '../prototype/domain/editorialText.mjs';
-import {novemberEditorialText,setNovemberEditorialScope} from '../prototype/domain/novemberEditorialText.mjs';
-import {getPrototypeVariant} from '../app/src/prototypeVariant.ts';
+import '../app/src/prototypeText.ts';
+import {novemberEditorialText} from '../prototype/domain/novemberEditorialText.mjs';
 import {favoriteCountLabel,favoriteListName,favoriteLibrary,saveFavoriteList,setFavorite,saveFavoriteNote,INBOX} from '../app/src/booking/favorites.ts';
 import {initialCommerce} from '../app/src/booking/model.ts';
 import {restoreTripByNumber} from '../app/src/profile/history.ts';
@@ -14,17 +12,12 @@ function edition(query,run){
  finally{if(previous)Object.defineProperty(globalThis,'location',previous);else delete globalThis.location;}
 }
 
-test('November workbook changes only edited mobile copy and preserves previous editions',()=>{
- setEditorialTextResolver(getPrototypeText);
+test('November workbook changes only edited November copy and preserves previous editions',()=>{
  for(const query of ['variant=full&text=edited','variant=full&text=standard','variant=november&text=standard']){
   edition(query,()=>assert.equal(novemberEditorialText('Т-0817','Отель не найден','Не нашли этот вариант'),'Отель не найден'));
  }
  edition('variant=november&text=edited',()=>{
   assert.equal(novemberEditorialText('Т-0817','Отель не найден','Не нашли этот вариант'),'Не нашли этот вариант');
-  // Desktop supplies false, regardless of the selected text edition.
-  setNovemberEditorialScope(()=>false);
-  try{assert.equal(novemberEditorialText('Т-0817','Отель не найден','Не нашли этот вариант'),'Отель не найден');}
-  finally{setNovemberEditorialScope(()=>getPrototypeVariant()==='november');}
  });
 });
 

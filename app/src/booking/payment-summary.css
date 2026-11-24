@@ -1,4 +1,5 @@
 :is(.keys-app,.booking-price-details) .payment-summary{display:flex;flex-direction:column;gap:18px;min-width:0;width:100%;font:400 14px/21px Onest,sans-serif;color:var(--k-text-primary)}
+.payment-cost-groups{display:flex;flex-direction:column;gap:12px;min-width:0}
 :is(.keys-app,.booking-price-details) .payment-summary-group{display:flex;flex-direction:column;gap:10px;margin:0;padding:0;min-width:0}
 :is(.keys-app,.booking-price-details) .payment-summary h3{margin:0;font:600 14px/20px Onest,sans-serif;color:var(--k-text-primary)}
 :is(.keys-app,.booking-price-details) .payment-summary-row{display:flex;align-items:baseline;justify-content:space-between;gap:16px;min-width:0}
@@ -6,6 +7,7 @@
 :is(.keys-app,.booking-price-details) .payment-summary-row>span>small{text-align:left;display:block;margin-top:3px;font:400 12px/17px Onest,sans-serif;color:var(--k-text-secondary)}
 :is(.keys-app,.booking-price-details) .payment-summary-row>strong{flex:none;white-space:nowrap;font:500 14px/21px Onest,sans-serif;text-align:right;letter-spacing:0}
 :is(.keys-app,.booking-price-details) .payment-summary-row.saving>strong{color:var(--theme-success,#21805b)}
+.payment-summary-row.saving>span>b{font-weight:700;white-space:nowrap}
 :is(.keys-app,.booking-price-details) .payment-summary-row.subtotal{padding-top:14px;border-top:1px solid var(--k-border-subtle)}
 :is(.keys-app,.booking-price-details) .payment-summary-row.subtotal>span{color:var(--k-text-primary);font-weight:500}
 :is(.keys-app,.booking-price-details) .payment-summary-row.total>span{color:var(--k-text-primary);font-weight:600}
@@ -36,3 +38,28 @@
 .keys-app .booking-payment-card>header>.k-status--success{color:var(--k-status-success,var(--theme-success,#16865a))}
 .keys-app .booking-payment-card>header>.k-status--warning{color:var(--theme-warning,#b77b08)}
 .keys-app .booking-payment-card>header>.k-status--neutral{color:var(--k-text-secondary)}
+
+.payment-summary-row.payment-lodging-trigger{
+ align-items:center;width:100%;min-height:44px;margin-block:-8px;padding:0;
+ border:0;border-radius:8px;background:none;
+ color:inherit;font:inherit;cursor:pointer;
+}
+.payment-lodging-trigger:focus-visible{outline:2px solid var(--theme-link,var(--k-action-primary));outline-offset:2px}
+.payment-lodging-label{display:inline-flex;align-items:center;gap:6px}
+.payment-lodging-label>span:first-child{
+ text-decoration:underline dashed;text-underline-offset:3px;
+}
+.payment-lodging-label>.k-icon{flex:none;color:inherit}
+.payment-summary-row.payment-lodging-trigger>.payment-lodging-label{color:var(--theme-link,var(--k-action-primary))}
+.payment-lodging-trigger[aria-expanded="true"] .k-icon{transform:rotate(180deg)}
+.payment-night-prices{
+ margin-top:8px;padding:10px 12px;
+ border:1px solid var(--k-border-subtle);border-radius:12px;
+}
+.payment-night-heading,.payment-night-prices li{display:flex;justify-content:space-between;gap:12px}
+.payment-night-heading{font-size:13px;line-height:20px}
+.payment-night-heading>span,.payment-night-prices time{color:var(--k-text-secondary)}
+.payment-night-prices ul{margin:4px 0 0;padding:0;list-style:none}
+.payment-night-prices li{padding:6px 0;font-size:13px;line-height:20px}
+.payment-night-prices li+li{border-top:1px solid var(--k-border-subtle)}
+.payment-night-prices li>span{white-space:nowrap;font-weight:500}

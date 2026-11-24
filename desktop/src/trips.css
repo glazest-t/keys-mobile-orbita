@@ -62,7 +62,7 @@
 .desktop-app .nearby-embedded .nearby-place-copy strong { font: 500 14px/20px Onest,sans-serif; }
 .desktop-app .nearby-embedded .nearby-place-copy small,
 .desktop-app .nearby-embedded .nearby-place-distance { font: 400 12px/18px Onest,sans-serif; }
-.desktop-app .desktop-trip-booking .upcoming-photo { height: clamp(220px, 20vw, 300px); aspect-ratio: auto; min-height: 0; }
+.desktop-app .desktop-trip-booking .upcoming-photo { height: clamp(268px, 20vw + 48px, 348px); aspect-ratio: auto; min-height: 0; }
 .desktop-app .desktop-trip-booking .upcoming-photo > img { position: absolute; inset: 0; }
 
 .desktop-app .nearby-embedded .detail-segments button.active { background: var(--k-action-tint,var(--theme-tint,#eaf2ff)); color: var(--theme-link,var(--theme-link,#2f5bff)); box-shadow: none; }

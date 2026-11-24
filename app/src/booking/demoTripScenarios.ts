@@ -1,6 +1,6 @@
 import {beginBookingPayment} from './pendingPayment.ts';
 import {historyFixture} from '../profile/historyDemo.ts';
-import {type Commerce,initialCommerce,ensureAccount,startDraft,quoteDraft,commitBooking,cancelBooking} from './model.ts';
+import {type Commerce,initialCommerce,ensureAccount,startDraft,quoteDraft,commitBooking,cancelBooking,type Search} from './model.ts';
 import {demoCheckIn} from './stay.ts';
 import {demoCheckoutDay,confirmCheckout,checkoutDay} from './stayBill.ts';
 import {selectedTrip} from './trip.ts';
@@ -18,7 +18,7 @@ export const tripScenarios=[
 export type TripScenario=typeof tripScenarios[number]['id'];
 export type DemoTripSession={owner:string;original:Commerce};
 /** A separate, replaceable fixture; original bookings and balances are restored verbatim. */
-export function activateTripScenario(s:Commerce,owner:string,scenario:TripScenario,id:string,now=Date.now()):Commerce{
+export function activateTripScenario(s:Commerce,owner:string,scenario:TripScenario,id:string,now=Date.now(),dates:Pick<Search,'checkIn'|'checkOut'>={checkIn:'2026-11-13',checkOut:'2026-11-15'}):Commerce{
  if(!owner||!id||!tripScenarios.some(v=>v.id===scenario))throw Error('Выберите сценарий поездки');
  const original=s.demoTripSession?.original||s;
  let next=ensureAccount(initialCommerce(),owner);
@@ -29,7 +29,7 @@ export function activateTripScenario(s:Commerce,owner:string,scenario:TripScenar
   return {...next,bookings,selectedBooking:bookings[0].id,historyDemo:true,payment:{...next.payment,operations:Object.fromEntries(bookings.map(b=>[b.operation.id,b.operation]))},demoTripSession:{owner,original}};
  }
  if(scenario!=='empty'){
-  const demoSearch={...search,checkIn:'2026-11-13',checkOut:'2026-11-15'};
+  const demoSearch={...search,...dates};
   next=startDraft({...next,search:demoSearch},'orbit-sea',id,null,demoSearch.checkIn);
   next={...next,search};
   next={...next,draft:{...next.draft!,contact:{name:'Татьяна',surname:'Примерова',phone:owner,email:'tatyana@example.test'}}};

@@ -1,13 +1,12 @@
-.booking-legal{display:flex;flex-direction:column;gap:12px;padding:16px 0 4px;border-top:1px solid var(--k-border-subtle);color:var(--k-text-secondary)}
-.booking-marketing-consent{position:relative;display:flex;align-items:flex-start;gap:10px;min-height:44px;cursor:pointer;font:400 13px/19px var(--k-font-text);color:var(--k-text-primary)}
-.booking-marketing-consent input{position:absolute;width:1px;height:1px;opacity:0}
-.booking-consent-check{display:grid;place-items:center;flex:none;width:20px;height:20px;margin-top:1px;border:1.5px solid var(--theme-control-border,var(--k-text-secondary));border-radius:6px;color:white}
-.booking-marketing-consent input:checked+.booking-consent-check{background:var(--k-action-primary);border-color:var(--k-action-primary)}
-.booking-marketing-consent input:focus-visible+.booking-consent-check{outline:2px solid var(--theme-link,var(--k-action-primary));outline-offset:3px}
-.keys-app .booking-legal>p{margin:0;font:400 12px/18px var(--k-font-text);color:var(--k-text-secondary)}
-.booking-legal>p button,.booking-provider-link{border:0;padding:0;background:none;font:inherit;text-align:left;color:var(--theme-link,var(--k-action-primary));cursor:pointer}
-.booking-legal>p button{text-decoration:underline;text-underline-offset:2px}
-.booking-provider-link{display:flex;align-items:center;gap:4px;align-self:flex-start;min-height:32px;font:400 12px/18px var(--k-font-text)}
+.booking-legal{display:flex;flex-direction:column;gap:8px;padding:16px 0 0;border-top:1px solid var(--k-border-subtle);color:var(--k-text-secondary)}
+.booking-legal-card{display:flex;flex-direction:column;gap:12px;padding:16px;border:1px solid var(--k-border-subtle);border-radius:24px;background:var(--k-surface-card,#fff)}
+.keys-app .booking-legal-copy{margin:0;font:400 13px/20px var(--k-font-text);color:var(--k-text-secondary)}
+.booking-legal-copy>button,.booking-provider-link{border:0;padding:0;background:none;font:inherit;text-align:left;color:var(--theme-link,var(--k-action-primary));cursor:pointer}
+.k-button.checkout-pay-button{font-weight:600}
+.checkout-pay-amount{font-size:16px;font-weight:700;white-space:nowrap}
+.booking-legal-copy>button{max-width:100%;text-decoration:underline;text-underline-offset:2px;overflow-wrap:anywhere}
+.booking-provider-link{display:flex;align-items:center;gap:4px;align-self:flex-start;min-height:44px;font:400 14px/21px var(--k-font-text)}
+.booking-provider-link>.k-icon{flex:none}
 .booking-legal button:focus-visible{outline:2px solid var(--theme-link,var(--k-action-primary));outline-offset:3px;border-radius:3px}
 .booking-legal-document{display:flex;flex-direction:column;gap:24px}
 .booking-provider-document{gap:20px}

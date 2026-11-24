@@ -1,4 +1,5 @@
 import {useNearbyPlacesMode} from '../demoNearbyPlaces';
+import {isDesktop} from '../desktop/surface';
 import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {FullscreenPhotoGallery} from './FullscreenPhotoGallery';
 import {ReviewText} from './ReviewText';
@@ -37,7 +38,19 @@ const manteraPhotos=[
 const DetailContext=createContext<{commerce:Commerce;routeMode:number;setRouteMode:(mode:number)=>void;initialPlaceId?:string;initialMapOpen?:boolean;activeTab:'find'|'trips';category:string;setCategory:(v:string)=>void;onNavigate:(route:string)=>void;onBack?:()=>void;backLabel?:string;origin:string;setOrigin:(v:string)=>void;recentOrigins:string[];setRecentOrigins:(v:string[])=>void}|null>(null);
 export function HotelDetailProvider({commerce,onNavigate,children,onBack,backLabel,initialPlaceId,initialMapOpen,activeTab='find'}:{initialPlaceId?:string;initialMapOpen?:boolean;activeTab?:'find'|'trips';commerce:Commerce;onNavigate:(route:string)=>void;children:ReactNode;onBack?:()=>void;backLabel?:string}){const [routeMode,setRouteMode]=useState(0),[category,setCategory]=useState('Все фото'),[origin,setOrigin]=useState(''),[recentOrigins,setRecentOrigins]=useState<string[]>([]);return <DetailContext.Provider value={{commerce,routeMode,setRouteMode,initialPlaceId,initialMapOpen,activeTab,category,setCategory,onNavigate,onBack,backLabel,origin,setOrigin,recentOrigins,setRecentOrigins}}>{children}</DetailContext.Provider>;}
 function useDetails(){const c=useContext(DetailContext)!,hotel=catalog.hotels.find(h=>h.id===c.commerce.draft!.hotelId)!;return {...c,hotel,visual:hotelVisual(hotel.id)};}
-function DetailHeader({kind}:{kind:HotelDetail}){const nearbyPhotos=useNearbyPlacesMode()==='photos';const flow=useFlow(),{hotel,onBack,backLabel}=useDetails();return <header className={'detail-header '+(kind==='gallery'?'gallery-header':'')}><IconButton name="back" label={flow.canGoBack?"Назад":backLabel||"Назад к отелю"} onClick={()=>flow.canGoBack?flow.pop():onBack?.()}/><span className={kind==='nearby'?'nearby-header-title':undefined}>{kind==='nearby'?<><span>Рядом с вами</span><small>{hotel.id==='orbit-sea'?'Сочи и Сириус':nearbyPhotos?'Отель и достопримечательности':'В радиусе 1,5 км'}</small></>:kind==='gallery'?hotel.name:'Отзывы гостей'}</span>{kind!=='gallery'&&<i/>}</header>;}
+function DetailHeader({kind}:{kind:HotelDetail}){
+ const nearbyPhotos=useNearbyPlacesMode()==='photos';
+ const flow=useFlow(),{hotel,onBack,backLabel}=useDetails();
+ const desktopNearby=isDesktop&&kind==='nearby';
+ const nearbySubtitle=hotel.id==='orbit-sea'?'Сочи и Сириус':nearbyPhotos?'Отель и достопримечательности':'В радиусе 1,5 км';
+ return <header className={'detail-header '+(kind==='gallery'?'gallery-header':'')}>
+  <IconButton name="back" label={flow.canGoBack?'Назад':backLabel||'Назад к отелю'} onClick={()=>flow.canGoBack?flow.pop():onBack?.()}/>
+  {desktopNearby
+   ?<div className="nearby-header-title"><h1>Рядом с вами</h1><small>{nearbySubtitle}</small></div>
+   :<span className={kind==='nearby'?'nearby-header-title':undefined}>{kind==='nearby'?<><span>Рядом с вами</span><small>{nearbySubtitle}</small></>:kind==='gallery'?hotel.name:'Отзывы гостей'}</span>}
+  {kind!=='gallery'&&!desktopNearby&&<i/>}
+ </header>;
+}
 function GalleryFooter(){const november=useNovember();const {category,setCategory}=useDetails();if(november)return null;return <div className="gallery-footer"><Carousel ariaLabel="Категории фотографий" contentClassName="gallery-categories">{categories.map(c=><button key={c} aria-pressed={category===c} className={category===c?'active':''} onClick={()=>setCategory(c)}>{c}</button>)}</Carousel></div>;}
 function NearbyFooter(){usePrototypeIcons();const {onNavigate,activeTab}=useDetails();const tabs=[['trips','Поездки','nav-trips'],['find','Найти','nav-search'],['chats','Чаты','nav-chats'],['rewards','Выгоды','nav-rewards']];return <nav className="bottom-navigation detail-navigation" aria-label="Главные разделы" style={{'--active-tab':activeTab==='trips'?0:1} as React.CSSProperties}><span className="nav-active-pill" aria-hidden="true"/>{tabs.map(([id,label,icon])=><button key={id} className={id===activeTab?'active':''} aria-current={id===activeTab?'page':undefined} onClick={()=>onNavigate(id)}><span className="nav-icon" style={{maskImage:`url(${iconAsset(icon)})`}}/><span>{label}</span></button>)}</nav>;}
 export function hotelDetailScreen(kind:HotelDetail,nearby?:{initialPlaceId?:string;initialMapOpen?:boolean}):FlowScreen{return {id:'hotel-'+kind,headerHeight:0,footerHeight:kind==='gallery'?(getPrototypeVariant()==='november'?0:80):kind==='nearby'?100:0,footer:kind==='gallery'?()=> <GalleryFooter/>:kind==='nearby'?()=> <NearbyFooter/>:undefined,render:()=> <DetailContent kind={kind} nearby={nearby}/>};}

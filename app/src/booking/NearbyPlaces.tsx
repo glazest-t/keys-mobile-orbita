@@ -12,7 +12,7 @@ import {ExpandingMap} from '../interactions';
 import {catalog} from './model';
 import {nearbyPlaces,nearbyPhoto,nearbyIllustration,nearbyReason,nearbyJourney,type NearbyCategory,type NearbyPlace} from './nearby';
 import {TwoGisMap} from '../maps/TwoGisMap';
-import {hotelLocation,type Coordinates} from '../maps/locations';
+import {hotelAddress,hotelLocation,type Coordinates} from '../maps/locations';
 import './nearby.css';
 
 const placeIcon=(p:NearbyPlace)=>p.category==='Прогулки'?'park':p.category==='Музеи'?'museum':'pin';
@@ -42,28 +42,31 @@ function PlacePhotoCard({place,onClick,gallery=false}:{place:NearbyPlace;onClick
  return <button type="button" className="nearby-photo-card" onClick={onClick} aria-haspopup="dialog"><PlacePhoto place={place} cover/>{caption}</button>;
 }
 
-function HotelLocationPreview({hotelId,places,onOpen}:{hotelId:string;places:NearbyPlace[];onOpen:(id?:string,mapOpen?:boolean)=>void}){
+function HotelLocationPreview({hotelId,places,onOpen,locationId}:{hotelId:string;places:NearbyPlace[];onOpen:(id?:string,mapOpen?:boolean)=>void;locationId?:string}){
  const location=hotelLocation(hotelId),hotel=catalog.hotels.find(h=>h.id===hotelId);
+ const address=hotelAddress(hotelId,hotel?.city||'');
  const november=useNovember(),points=nearbyMapPoints(hotelId,places,november);
- return <div className="nearby-location-link-area">
-  <h2>Расположение</h2>
+ return <div className="nearby-location-link-area" id={locationId} tabIndex={locationId?-1:undefined} role={locationId?"region":undefined} aria-labelledby={locationId?locationId+"-title":undefined}>
+  <h2 id={locationId?locationId+"-title":undefined}>Расположение</h2>
+  {location&&<div className="nearby-hotel-address"><Icon name="pin" size={18} outline/><span className="nearby-address-text">{address}</span></div>}
   {location&&<div className="nearby-live-map nearby-hotel-preview" aria-hidden="true" inert>
    <TwoGisMap center={location.coordinates as Coordinates} points={points} selected={hotelId} interactive={false} label="Расположение отеля"/>
   </div>}
-  <div className="nearby-hotel-address"><strong>{hotel?.name}</strong><span>{location?.address}</span></div>
   <button type="button" className="nearby-location-open" aria-label="Расположение — перейти в Рядом с вами" onClick={()=>onOpen()}/>
   {location&&<button type="button" className="nearby-location-expand" onClick={()=>onOpen(undefined,true)}><Icon name="map" size={16}/>Развернуть карту</button>}
  </div>;
 }
 
-export function NearbyPreview({hotelId,onOpen,showLocation=false}:{hotelId:string;showLocation?:boolean;onOpen:(id?:string,mapOpen?:boolean)=>void}){
+export function NearbyPreview({hotelId,onOpen,showLocation=false,locationId}:{hotelId:string;showLocation?:boolean;locationId?:string;onOpen:(id?:string,mapOpen?:boolean)=>void}){
  const photos=useNearbyPlacesMode()==='photos';
  const all=hotelId==='orbit-sea'?manteraNearbyPlaces:photos?nearbyScreenshotExamples:nearbyPlaces(hotelId);
  const places=all.slice(0,photos?6:2);
  return <section className="stay-nearby stay-location-preview">
-  {showLocation&&<HotelLocationPreview key={hotelId} hotelId={hotelId} places={all} onOpen={onOpen}/>}
+  {showLocation&&<HotelLocationPreview key={hotelId} hotelId={hotelId} places={all} onOpen={onOpen} locationId={locationId}/>}
+  <div className="nearby-preview-places">
   <h3 className="nearby-preview-heading"><button type="button" className="nearby-preview-link" onClick={()=>onOpen()}><span>Рядом с вами</span><span className="nearby-preview-all">Все<Icon name="chevron-right" size={16} inheritColor/></span></button></h3>
   {places.length?photos?<Carousel ariaLabel="Места рядом с вами" className="nearby-preview-carousel" contentClassName="nearby-preview-track">{places.map(p=><PlacePhotoCard key={p.id} place={p} onClick={()=>onOpen(p.id)}/>)}</Carousel>:places.map(p=><button className="stay-nearby-row k-list-row" key={p.id} onClick={()=>onOpen(p.id)}><PlaceIcon place={p}/><span><strong>{p.name}</strong><small>{p.categoryLabel} · {nearbyJourney(p)}</small></span></button>):<p>{tripEditorialText("ПР-098", "Места рядом с отелем пока не добавлены", "Места рядом пока не добавлены")}</p>}
+  </div>
  </section>;
 }
 
@@ -106,7 +109,7 @@ export function NearbyPlaces({hotelId,initialPlaceId,initialMapOpen=false,header
   <button ref={mapTrigger} type="button" className="map-expand" onClick={event=>openMap(event.currentTarget)}><Icon name="map" size={16}/>Развернуть карту</button>
  </div>}
  {all.length>0&&<><div className="detail-segments" aria-label="Категории мест">{categories.map(c=><button key={c} className={category===c?'active':''} aria-pressed={category===c} onClick={()=>{setCategory(c);setSelected(undefined);}}>{c}</button>)}</div></>}
- {places.length?<section className={'nearby-real-places'+(photos?' nearby-photo-list':'')} aria-label="Места рядом с отелем" tabIndex={embedded?0:undefined}>{places.map(p=>photos?<PlacePhotoCard key={p.id} place={p} onClick={()=>setSelected(p)} gallery/>:<button className="nearby-place-row" key={p.id} onClick={()=>setSelected(p)}><PlaceIcon place={p}/><span className="nearby-place-copy"><small>{p.categoryLabel}</small><strong>{p.name}</strong><span className="nearby-place-distance">{nearbyJourney(p)}</span></span></button>)}</section>:<div className="nearby-empty"><Icon outline name="pin" size={32}/><h2>{location?tripEditorialText("ПР-101", 'Пока нет мест поблизости', "Пока нет мест рядом"):'Места рядом пока не добавлены'}</h2><p>{hotel?.name}</p></div>}
+ {places.length?<section className={'nearby-real-places'+(photos?' nearby-photo-list':'')} aria-label="Места рядом с отелем" tabIndex={embedded||isDesktop?0:undefined}>{places.map(p=>photos?<PlacePhotoCard key={p.id} place={p} onClick={()=>setSelected(p)} gallery/>:<button className="nearby-place-row" key={p.id} onClick={()=>setSelected(p)}><PlaceIcon place={p}/><span className="nearby-place-copy"><small>{p.categoryLabel}</small><strong>{p.name}</strong><span className="nearby-place-distance">{nearbyJourney(p)}</span></span></button>)}</section>:<div className="nearby-empty"><Icon outline name="pin" size={32}/><h2>{location?tripEditorialText("ПР-101", 'Пока нет мест поблизости', "Пока нет мест рядом"):'Места рядом пока не добавлены'}</h2><p>{hotel?.name}</p></div>}
  </Content></Scroll>
  {mapView&&createPortal(<ExpandingMap open={mapView.open} origin={mapView.origin} onClose={closeMap} title="Карта мест рядом">
   <section className="expanded-results-map nearby-expanded-map" aria-label="Карта мест рядом">

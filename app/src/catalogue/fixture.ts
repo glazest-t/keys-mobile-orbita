@@ -1,3 +1,4 @@
+import type {BookingSummaryExample} from '../booking/BookingSummary';
 import {getPrototypeText,selectPrototypeText} from '../prototypeText';
 import {createFinderChat,sendFinderMessage,completeFinderReply} from '../assistant/model';
 import {submitSupport} from '../profile/support';
@@ -10,7 +11,7 @@ import {payService,serviceQuote} from '../booking/serviceSettlement';
 import scenes from './scenes.json';
 import {collectionSearch} from '../booking/search';
 import {initialState,blankTraveler,requestCode,type State} from '../state';
-import {initialCommerce,startDraft,quoteDraft,commitBooking,type Commerce} from '../booking/model';
+import {initialCommerce,catalog,startDraft,quoteDraft,commitBooking,type Commerce} from '../booking/model';
 import {activateTripScenario,type TripScenario} from '../booking/demoTripScenarios';
 import {prepareDeviceEntry} from '../demoEntry';
 import {ensureDemoHotelPoints} from '../rewards/loyalty';
@@ -18,16 +19,19 @@ import {ensureWelcomePoints,ensureDemoPointsHistory} from '../rewards/points';
 import {registerHotelierInterest,submitVerification,resolveVerification,verificationClaim} from '../hotelier/verification';
 import {saveSwipeLike,favoriteNavigation,saveFavoriteList} from '../booking/favorites';
 import {savePriceWatch,watchKey} from '../booking/priceWatch';
-import {roomOffers} from '../booking/roomOffers';
+import {roomOffers,selectRoomRate} from '../booking/roomOffers';
 import {saveSwipePreferences} from '../booking/swipePreferences';
 import {freeTextDraft,saveFreeText} from '../booking/preferences';
-export type CatalogueScene={id:string;title:string;group:string;route:string;trip?:string;step?:string;role?:string;sheet?:string;launch?:boolean;device?:string;biometric?:string;onboarding?:number;actions?:{text?:string;selector?:string;contains?:string}[];[key:string]:unknown};
+export type CatalogueScene={id:string;title:string;group:string;route:string;fullOnly?:boolean;trip?:string;rateId?:string;bookingSummary?:BookingSummaryExample;step?:string;role?:string;sheet?:string;launch?:boolean;device?:string;biometric?:string;onboarding?:number;actions?:{text?:string;selector?:string;contains?:string}[];[key:string]:unknown};
 export const catalogueScene:CatalogueScene|null=typeof location==='undefined'?null:(scenes as CatalogueScene[]).find(s=>s.id===new URLSearchParams(location.search).get('catalogue'))||null;
 export type CatalogueFixture={state:State;commerce:Commerce};
 export async function createCatalogueFixture(scene:CatalogueScene):Promise<CatalogueFixture>{
  const owner='+79990000001';
  let state:State={...initialState(),onboarded:true,activePhone:owner,users:{[owner]:{phone:owner,name:'Татьяна',travelers:[{...blankTraveler('primary'),primary:true,name:'Татьяна',surname:'Соколова',phone:owner,email:'tatyana@example.test',birthDate:'1992-04-18',citizenship:'Россия'},{...blankTraveler('companion'),name:'Иван',surname:'Соколов',phone:'+79990000002',email:'ivan@example.test'}]}}};
- let commerce=activateTripScenario(initialCommerce(),owner,(scene.trip||'empty') as TripScenario,'catalogue-booking');
+ const initial=initialCommerce();
+ const now=Date.now();
+ const futureDates=['record-cancel','hotel-route'].includes(scene.id)?{checkIn:new Date(now+7*86400000).toISOString().slice(0,10),checkOut:new Date(now+9*86400000).toISOString().slice(0,10)}:undefined;
+ let commerce=activateTripScenario(initial,owner,(scene.trip||'empty') as TripScenario,'catalogue-booking',now,futureDates);
  commerce=ensureDemoHotelPoints(ensureDemoPointsHistory(ensureWelcomePoints(commerce,owner),owner),owner);
  if(scene.trip==='cancelled')commerce={...commerce,historyReturnTo:'trips',historyBrowse:{[owner]:{query:'',filter:'Отменённые'}}};
  if(scene.pendingBooking)commerce={...commerce,draft:{...commerce.bookings[0].draft,step:'confirmation'}};
@@ -50,7 +54,9 @@ export async function createCatalogueFixture(scene:CatalogueScene):Promise<Catal
  if(scene.wish){const d=freeTextDraft(commerce,owner);commerce=saveFreeText(commerce,owner,{...d,stage:'results',wishText:'Отель у моря со спа',wishAppliedText:'Отель у моря со спа',wishInterests:['sea','spa'],mode:'city',city:'Сочи'});}
  if(scene.adults)commerce={...commerce,search:{...commerce.search,adults:Number(scene.adults)}};
  if(scene.step){
-  commerce=startDraft(commerce,'orbit-sea','catalogue-draft',owner);
+  const rate=catalog.rates.find(rate=>rate.id===scene.rateId);
+  commerce=startDraft(commerce,rate?.hotelId||'orbit-sea','catalogue-draft',owner);
+  if(rate)commerce=selectRoomRate(commerce,owner,rate.id);
   commerce={...commerce,draft:{...commerce.draft!,step:scene.step,contact:{name:'Татьяна',surname:'Соколова',phone:owner,email:'tatyana@example.test'}}};
   if(scene.nearbyDates){
    const d=commerce.draft!,start=Date.parse(d.search.checkIn+'T00:00:00Z'),end=Date.parse(d.search.checkOut+'T00:00:00Z');
@@ -73,10 +79,11 @@ export async function createCatalogueFixture(scene:CatalogueScene):Promise<Catal
  if(scene.pinConfigured)state=await confirmPin(state,owner,'1234','1234');
  if(scene.breakfast){
   const b=commerce.bookings.find(b=>b.id===commerce.selectedBooking)!;
-  const date=availableBreakfastDates(b,{mode:'buffet',time:'09:00',date:b.draft.search.checkOut,persons:1,comment:''})[0];
-  commerce=requestBreakfast(commerce,owner,b.id,{mode:'buffet',date,time:'09:00',persons:1,comment:''},'catalogue-service');
-  commerce=confirmPricedServices(commerce,owner,b.id,['catalogue-service']);
-  if(scene.paid)commerce=payService(commerce,owner,b.id,'catalogue-service',serviceQuote(commerce,owner,b.id,'catalogue-service',false),'sbp','success');
+  const fixtureNow=b.stay?new Date().toISOString():b.draft.search.checkIn+'T12:00:00+03:00';
+  const date=availableBreakfastDates(b,{mode:'buffet',time:'09:00',date:b.draft.search.checkOut,persons:1,comment:''},fixtureNow)[0];
+  commerce=requestBreakfast(commerce,owner,b.id,{mode:'buffet',date,time:'09:00',persons:1,comment:''},'catalogue-service',fixtureNow);
+  commerce=confirmPricedServices(commerce,owner,b.id,['catalogue-service'],fixtureNow);
+  if(scene.paid)commerce=payService(commerce,owner,b.id,'catalogue-service',serviceQuote(commerce,owner,b.id,'catalogue-service',false,fixtureNow),'sbp','success',fixtureNow);
  }
  if(scene.hotelNotifications)commerce={...commerce,notificationHotelId:'orbit-sea'};
  if(['welcome','phone','code','name','hotelier-invite','hotelier-pilot'].includes(scene.route)){

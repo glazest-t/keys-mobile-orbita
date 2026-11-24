@@ -4,9 +4,13 @@
 .room-offer{border:1px solid var(--theme-border,#e4e7ef);background:var(--theme-card,#fff);border-radius:24px;overflow:hidden}
 .room-offer-photo{height:180px;position:relative}
 .room-offer-photo .photo-counter{left:auto;right:12px}
-.room-offer-heading{padding:14px 14px 0;display:flex;flex-direction:column;gap:4px}
+.room-offer-heading{--room-offer-inset:14px;padding:14px var(--room-offer-inset) 0;display:flex;flex-direction:column;gap:4px}
 .keys-app .room-offer-heading h2{font:500 17px/23px Onest;letter-spacing:0;margin:0}
 .keys-app .room-offer-heading p{font:400 13px/19px Onest;color:var(--theme-secondary,#5a6072);margin:0}
+.room-offer-heading>.room-offer-facts{width:auto;min-width:0;max-width:none;margin-inline:calc(-1 * var(--room-offer-inset))}
+.room-offer-facts-track{flex-wrap:nowrap;align-items:center;gap:8px;padding-inline:var(--room-offer-inset)}
+.keys-app:not(.desktop-app) .room-offer-facts-track{padding-bottom:4px}
+.room-offer-facts .mobile-carousel-scrollbar-thumb{bottom:0}
 .room-link{display:flex;align-items:center;gap:2px;padding:2px 0;border:0;background:none;text-align:left;font:500 13px/19px Onest;color:var(--theme-link,#2f5bff);min-height:24px}
 .room-offer-rates{gap:8px;padding:14px;align-items:stretch}
 .room-tariff{flex:none;width:224px;padding:14px;border-radius:20px;border:1px solid var(--theme-border,#e4e7ef);display:flex;flex-direction:column;gap:12px;color:var(--theme-text,#101320);background:var(--theme-card,#fff)}

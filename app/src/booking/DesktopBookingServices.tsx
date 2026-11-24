@@ -46,7 +46,7 @@ export function DesktopBookingServices({commerce,setCommerce,disabled=false,cata
   </div>;})}</div>}
   <BottomSheet open={!!service} onOpenChange={open=>{if(!open)setOpened(null);}} title={info?.title||'Услуга'}>
    {service&&info&&<div className="desktop-service-detail booking-service-detail">
-    <ServiceDetailIntro kind={service.id.replace('sea-','')} image={info.image} icon={info.icon} description={info.description} unit={info.unit}/>
+    <ServiceDetailIntro kind={service.id.replace('sea-','')} image={info.image} icon={info.icon} description={info.description}/>
     {service.id==='sea-breakfast'&&<p className="desktop-service-venue"><Icon name="cafe" size={18}/>{venue.hours} · {venue.restaurant} · {venue.floor}</p>}
     <div className="desktop-service-calculation"><div><span>{info.unit}</span><strong>{formatMoney(service.unitPriceMinor)}</strong></div>{service.id==='sea-breakfast'&&<div><span>Гостей: {people} · дней: {days}</span><span>{formatMoney(service.unitPriceMinor)} × {quantity}</span></div>}</div>
     <div className="desktop-service-footer"><div><small>{selected?'Добавлено в бронирование':'Стоимость услуги'}</small><strong>{formatMoney(service.unitPriceMinor*quantity)}</strong></div><Button variant={selected?'secondary':'primary'} disabled={disabled} onClick={apply}>{selected?'Убрать из брони':'Добавить'}</Button></div>

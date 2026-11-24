@@ -68,7 +68,7 @@ export function HotelFacilities({amenities,hotelId,showPopular=true}:{amenities:
  const popular=showPopular?facilities.filter(item=>item.photos.length>0).slice(0,6):[];
  const gallery=popular.find(item=>item.label===galleryState?.label);
  const facilityGroups:HotelFacilityGroup[]=hotelId==='orbit-sea'?manteraFacilities:visibleGroups.map(group=>({...group,items:facilities.filter(item=>item.group===group).map(({label})=>({label:label==='Круглосуточная стойка регистрации'?'Стойка регистрации':label==='Уборка по запросу'?'Уборка':label,...facilityDetails(label,hotelId)}))}));
- const showAllButton=facilityGroups.length>3||facilityGroups.some(group=>group.items.length>1);
+ const showAllButton=!isDesktop&&(facilityGroups.length>3||facilityGroups.some(group=>group.items.length>1));
  const compact=!expanded&&showAllButton;
  const shownGroups=compact?facilityGroups.slice(0,3).map(group=>({...group,items:group.items.slice(0,1)})):facilityGroups;
  const toggleFacilities=()=>{

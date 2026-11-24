@@ -1,7 +1,12 @@
 import locations from '../../../spec/map-locations.json' with {type:'json'};
 export type Coordinates = [number, number];
-export type Location = {coordinates:number[];source:string;sourceName:string;address:string;checkedAt:string};
+export type Location = {coordinates:number[];source:string;sourceName:string;address:string;fullAddress?:string;checkedAt:string};
 export const hotelLocation = (id:string) => (locations as Record<string,Location>)[id];
+export function hotelAddress(id:string,city:string){
+ const location=hotelLocation(id);
+ if(!location)return undefined;
+ return location.fullAddress||(city&&location.address.includes(city)?location.address:[city,location.address].filter(Boolean).join(', '));
+}
 export const cityCenter = (city:string):Coordinates => ({'Москва':[37.6178,55.7558],'Санкт-Петербург':[30.3158,59.939],'Сочи':[39.7231,43.5855],'Казань':[49.1064,55.7961]} as Record<string,Coordinates>)[city] || [37.6178,55.7558];
 export function locationBounds(points:number[][]){
  if(!points.length)return null;

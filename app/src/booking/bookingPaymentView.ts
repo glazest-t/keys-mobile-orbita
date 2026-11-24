@@ -20,6 +20,18 @@ export function bookingCostLines(d:Draft,q:BookingQuote){
  const reconciled=services.reduce((n,s)=>n+s.amount,0)===q.serviceTotalMinor;
  return {price,services:reconciled?services:q.serviceTotalMinor?[{id:'services',title:'Услуги в бронировании',detail:services.map(s=>s.title).join(', '),amount:q.serviceTotalMinor}]:[]};
 }
+/** The demo quote stores one base amount for the stay. Split it without losing kopecks. */
+export function lodgingNightPrices(checkIn:string,nights:number,baseMinor:number){
+ const start=Date.parse(checkIn+'T00:00:00Z');
+ if(!Number.isFinite(start)||!Number.isSafeInteger(nights)||nights<1)return [];
+ const perNight=Math.floor(baseMinor/nights);
+ const remainder=baseMinor%nights;
+ return Array.from({length:nights},(_,index)=>({
+  date:new Date(start+index*86400000).toISOString().slice(0,10),
+  amountMinor:perNight+(index<remainder?1:0),
+ }));
+}
+
 export function bookingPaymentView(b:Booking){
  const bill=stayBill(b),cancelled=b.operation.status==='cancelled';
  const groups=new Map<string,{id:string;title:string;status:string;amount:number;due:number}>();
