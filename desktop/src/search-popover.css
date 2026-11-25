@@ -10,17 +10,17 @@
 .desktop-app .desktop-search-trigger.is-active {background:var(--theme-card,#fff);box-shadow:0 0 0 2px var(--k-action-primary),0 4px 16px #10132014;z-index:1;}
 .desktop-app .desktop-search-field.is-active::before {display:none;}
 .desktop-app .desktop-search-trigger>span:not(.k-icon) {display:flex;flex-direction:column;min-width:0;gap:2px;}
+.desktop-app .desktop-search-destination {cursor:text;}
+.desktop-app .desktop-search-destination>span:not(.k-icon) {flex:1;}
+.desktop-app .desktop-search-destination input {width:100%;min-width:0;padding:0;border:0;outline:none;background:transparent;color:inherit;font:500 15px/21px var(--k-font-text);text-overflow:ellipsis;}
+.desktop-app .desktop-search-destination input::placeholder {color:var(--k-text-secondary);opacity:1;}
 .desktop-app .desktop-search-fields small {font:400 11px/15px var(--k-font-text);color:var(--k-text-secondary);}
 .desktop-app .desktop-search-fields strong {font:500 15px/21px var(--k-font-text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .desktop-app .desktop-search-bar>.k-button {width:100%;max-width:none;height:64px;border-radius:18px;padding:12px 20px;font-size:16px;}
 .desktop-app .desktop-search-popover {position:absolute;top:calc(100% + 12px);left:0;width:min(440px,100%);background:var(--theme-card,#fff);border:1px solid var(--k-border-subtle);border-radius:24px;padding:20px 24px 24px;box-shadow:0 16px 48px #10132024;z-index:70;overflow:auto;overscroll-behavior:contain;outline:none;}
 .desktop-app .desktop-search-popover-dates {width:min(720px,100%);left:50%;transform:translateX(-50%);}
 .desktop-app .desktop-search-popover-guests {left:auto;right:0;width:min(440px,100%);}
-.desktop-app .desktop-destination-input {display:flex;align-items:center;gap:12px;padding:4px 12px;border:1px solid var(--k-border-subtle);border-radius:14px;min-height:52px;}
-.desktop-app .desktop-destination-input:focus-within {border-color:var(--k-text-secondary);}
-.desktop-app .desktop-destination-input input {min-width:0;width:100%;border:0;outline:none;background:transparent;color:var(--k-text-primary);font:400 16px/22px var(--k-font-text);}
-.desktop-app .desktop-destination-input .k-icon-button {border:0;width:32px;height:32px;flex:none;}
-.desktop-app .desktop-destination-label {font:400 13px/20px var(--k-font-text);margin:16px 0 8px;}
+.desktop-app .desktop-destination-label {font:400 13px/20px var(--k-font-text);margin:0 0 8px;}
 .desktop-app .desktop-destination-list {display:flex;flex-direction:column;gap:4px;}
 .desktop-app .desktop-destination-list>button {display:flex;align-items:center;gap:12px;border:0;border-radius:12px;padding:10px 8px;background:transparent;text-align:left;color:var(--k-text-primary);width:100%;}
 .desktop-app .desktop-destination-list>button:hover {background:var(--k-surface-app);}
@@ -28,6 +28,7 @@
 .desktop-app .desktop-destination-list>button>span:not(.icon-tile) {display:flex;flex-direction:column;gap:3px;}
 .desktop-app .desktop-destination-list strong {font:500 15px/21px var(--k-font-text);white-space:normal;}
 .desktop-app .desktop-destination-list small {font:400 12px/18px var(--k-font-text);color:var(--k-text-secondary);}
+.desktop-app .desktop-destination-heading {display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;}
 .desktop-app .desktop-search-popover .calendar-months {display:grid;grid-template-columns:1fr 1fr;gap:24px;}
 .desktop-app .desktop-search-popover .calendar-months h3 {font:500 15px/22px var(--k-font-text);text-align:center;margin:10px 0 16px;}
 .desktop-app .desktop-search-popover .calendar-grid button {min-width:0;min-height:36px;}
@@ -39,7 +40,7 @@
 .desktop-app .desktop-results-search .desktop-search-fields {grid-template-columns:minmax(0,1fr) minmax(0,1.2fr) minmax(0,.75fr);}
 .desktop-app .desktop-results-search .desktop-search-trigger {padding:8px 12px;gap:10px;min-height:56px;}
 .desktop-app .desktop-results-search .desktop-search-bar>.k-button {height:56px;}
-.desktop-app .desktop-results-search .desktop-search-fields strong {font-size:14px;}
+.desktop-app .desktop-results-search .desktop-search-fields :is(strong,.desktop-search-destination input) {font-size:14px;}
 @media(max-width:1100px){
  .desktop-app .desktop-search-bar {grid-template-columns:minmax(0,1fr) 150px;gap:16px;}
  .desktop-app .desktop-search-trigger {padding-inline:12px;gap:8px;}

@@ -5,7 +5,71 @@
 .keys-app .sms-code-cells input:focus{border-color:var(--k-text-secondary)}
 .keys-app .sms-code-cells input[aria-invalid="true"]{border-color:var(--k-status-errorText)}
 
-.keys-app .sms-code-field.is-success input{border-color:var(--k-status-success);background:var(--k-status-successTint,var(--theme-success-bg,#BFF0DE));color:var(--k-status-success);-webkit-text-fill-color:currentColor;opacity:1;caret-color:transparent}
+.keys-app .pin-code-field.is-success input{border-color:var(--k-status-success);background:var(--k-status-successTint,var(--theme-success-bg,#BFF0DE));color:var(--k-status-success);-webkit-text-fill-color:currentColor;opacity:1;caret-color:transparent}
 .keys-app .sms-code-success{display:flex;align-items:center;gap:6px;color:var(--k-status-success);font:500 14px/20px var(--k-font-text)}
 
 .pin-code-field{max-width:280px;align-self:center}.pin-code-field .sms-code-label{text-align:center}.pin-code-field .sms-code-cells{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+
+#code-form{gap:16px}
+#code-form .text-action{border-radius:8px;outline-offset:3px}
+.sms-code-recipient{font:400 14px/20px var(--k-font-text)}
+.sms-code-recipient>div{display:flex;align-items:center;flex-wrap:wrap;gap:0 12px}
+.sms-code-recipient strong{font:600 16px/22px var(--k-font-text);white-space:nowrap}
+.sms-code-entry .sms-code-label{font:500 14px/20px var(--k-font-text)}
+.sms-code-entry-control{position:relative}
+.sms-code-entry-input{
+ position:absolute;inset:0;z-index:1;width:100%;height:100%;padding:0;border:0;border-radius:14px;
+ background:transparent;color:transparent;caret-color:transparent;outline:none;font-size:16px;
+}
+.sms-code-entry-input::selection{background:transparent;color:transparent}
+.sms-code-entry-input:autofill{opacity:0}
+.sms-code-cell{
+ display:grid;place-items:center;min-width:0;height:56px;
+ border:1.5px solid var(--k-border-subtle);
+ border-radius:14px;background:var(--theme-field,var(--k-surface-card));color:var(--k-text-primary);
+ font:500 22px/28px var(--k-font-display);
+ transition-property:background-color,border-color,color;
+ transition-duration:var(--k-duration-quick);
+ transition-timing-function:var(--k-ease-arrive);
+}
+.keys-app .sms-code-entry .sms-code-error{color:var(--k-status-errorText);font-size:12px}
+.sms-code-digit,.sms-code-error,.sms-code-resent{
+ animation:auth-feedback-enter var(--k-duration-instant) var(--k-ease-arrive);
+}
+.sms-code-entry.is-invalid .sms-code-cell{border-color:var(--k-status-errorText);transition-duration:var(--k-duration-instant)}
+.sms-code-entry.is-success .sms-code-cell{
+ border-color:var(--k-status-success);background:var(--k-status-successTint,var(--theme-success-bg,#bff0de));
+ transition-delay:calc(var(--sms-code-position) * 24ms);
+}
+.sms-code-result:empty{position:absolute;width:1px;height:1px;overflow:hidden}
+.keys-app .sms-code-entry .sms-code-success{
+ animation:auth-feedback-enter var(--k-duration-quick) var(--k-ease-arrive);
+}
+.keys-app .sms-code-entry .sms-code-success .button-success-icon{
+ animation:sms-check-reveal var(--k-duration-quick) var(--k-ease-arrive) var(--k-duration-instant) both;
+}
+@keyframes sms-check-reveal{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0)}}
+.sms-code-entry-input:focus:not([readonly])+.sms-code-cells [data-selected]{background:var(--k-action-tint)}
+.sms-code-entry-input:focus+.sms-code-cells [data-active]{
+ border-color:var(--theme-link,var(--k-action-primary));
+}
+.sms-code-resend{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.sms-code-resend :is(.sms-code-wait,.sms-code-resent){font:400 14px/20px var(--k-font-text);color:var(--k-text-secondary)}
+.keys-app #code-form :is(.sms-code-success,.sms-code-resent){color:var(--theme-success,#11734d)}
+.sms-code-wait strong{font-weight:600;color:var(--k-text-primary);white-space:nowrap}
+.sms-code-availability{position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap}
+
+.sms-code-keypad{
+ position:absolute;inset:0;z-index:2;
+ display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(4,1fr);gap:6px;
+ padding:12px 12px calc(var(--device-safe-area-bottom,34px) + 6px);background:#d8d9de;color:#151515;
+}
+.keyboard-dock[data-platform="android"] .sms-code-keypad{bottom:var(--device-safe-area-bottom,48px);padding-bottom:6px;background:#f3f2f6}
+html[data-app-theme="dark"] .keyboard-dock .sms-code-keypad{background:#263047;color:var(--k-text-primary)}
+.sms-code-keypad button{
+ display:grid;place-items:center;min-width:0;min-height:0;padding:0;border:0;border-radius:8px;
+ background:var(--theme-control,#fff);color:inherit;font:500 26px/1 var(--k-font-text);cursor:pointer;
+}
+.sms-code-keypad button:active{background:var(--theme-control-border,#c1c4cc)}
+.sms-code-keypad-zero{grid-column:2}
+.sms-code-keypad button.sms-code-keypad-delete{grid-column:3;font-size:14px}

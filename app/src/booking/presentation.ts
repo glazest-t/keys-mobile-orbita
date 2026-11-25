@@ -12,6 +12,10 @@ export const visuals:Record<string,{styles:string[];location:string;address:stri
 };
 Object.assign(visuals,addedVisuals);
 export const hotelVisual=(id:string)=>visuals[id]||visuals['orbit-sea'];
+export function hotelStarLabel(stars:number|undefined){
+ if(stars===undefined||!Number.isInteger(stars)||stars<1||stars>5)return null;
+ return `${stars} ${stars===1?'звезда':stars<5?'звезды':'звёзд'}`;
+}
 export type HotelReview = {name:string;date:string;score:string;text:string;tags:string[];photos?:string[];reply?:string};
 export const reviewExamples:HotelReview[]=[
  {name:'Анна',date:'18 августа · пара · 5 ночей',score:'4,8',text:`Завтраки отличные, море в двух шагах. Номер тихий, хотя окна на парк. Отдыхали вдвоём пять ночей и успели оценить отель в разное время дня. Приехали немного раньше заселения: вещи оставили на хранение и отправились гулять. Когда вернулись, номер уже был готов, а сотрудники рассказали, где проходят завтраки и как пройти к бассейну.

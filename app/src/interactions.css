@@ -64,12 +64,24 @@
 @keyframes points-orbit-expand{0%,100%{transform:translate(0,0)}45%,60%{transform:translate(10px,-10px)}}
 @media(prefers-reduced-motion:reduce){.points-balance .points-orbit-track,.points-balance .points-orbit-dot{animation:none}}
 
-/* I3: Orbit easing for SMS feedback and the next authentication step. */
+/* Auth forms advance together while the header and keyboard keep their own motion. */
+.keys-app .auth-step{animation:auth-step-enter var(--k-duration-base) var(--k-ease-arrive)}
+.keys-app #phone-form{--auth-step-offset:-8px}
+.keys-app:is([data-route="phone"],[data-route="name"]) .app-footer{
+ animation:auth-feedback-enter var(--k-duration-quick) var(--k-ease-arrive);
+}
+@keyframes auth-step-enter{
+ from{opacity:.65;transform:translateX(var(--auth-step-offset,8px))}
+ to{opacity:1;transform:translateX(0)}
+}
+@keyframes auth-feedback-enter{from{opacity:.65}to{opacity:1}}
+
+/* I3: Occupied PIN cells and their feedback keep the original Orbit timing. */
 .keys-app .sms-code-cells input{transition:background-color var(--k-duration-base) var(--k-ease-orbit),border-color var(--k-duration-base) var(--k-ease-orbit),color var(--k-duration-base) var(--k-ease-orbit)}
-.keys-app .orbit-enter,.keys-app .sms-code-success{animation:orbit-enter var(--k-duration-base) var(--k-ease-orbit) both}
-.keys-app .sms-code-success .button-success-icon{animation:orbit-enter var(--k-duration-base) var(--k-ease-orbit) both}
+.keys-app .pin-code-field .sms-code-success{animation:orbit-enter var(--k-duration-base) var(--k-ease-orbit) both}
+.keys-app .pin-code-field .sms-code-success .button-success-icon{animation:orbit-enter var(--k-duration-base) var(--k-ease-orbit) both}
 @keyframes orbit-enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-@media(prefers-reduced-motion:reduce){.keys-app .orbit-enter,.keys-app .sms-code-success,.keys-app .sms-code-success .button-success-icon{animation:none}.keys-app .sms-code-cells input{transition:none}}
+@media(prefers-reduced-motion:reduce){.keys-app .pin-code-field .sms-code-success,.keys-app .pin-code-field .sms-code-success .button-success-icon{animation:none}.keys-app .sms-code-cells input{transition:none}}
 
 /* ch2: message arrival and the assistant typing state share Orbit motion. */
 .hotel-chat-message{animation:orbit-enter var(--k-duration-base) var(--k-ease-orbit) both}

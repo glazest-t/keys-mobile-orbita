@@ -50,6 +50,6 @@ export function Onboarding({onStart,onLogin,registered=false}:{onStart:()=>void;
     {step>0&&<div className="onboarding-secondary">{step===last&&!registered?<Button variant="ghost" onClick={()=>setDestination('login')}>У меня уже есть бронь</Button>:<Button variant="ghost" onClick={()=>setStep(step-1)}>Назад</Button>}</div>}
    </footer>
   </div>
-  {destination&&<div className="onboarding-finish" role="status"><div aria-hidden="true">{reduced?<Mark/>:<SourceFinish/>}</div><h1>Добро пожаловать</h1>{!registered&&<p>Войдём в ваш профиль</p>}</div>}
+  {destination&&<div className="onboarding-finish" role="status"><div aria-hidden="true">{reduced?<Mark/>:<SourceFinish/>}</div><h1>Добро пожаловать</h1></div>}
  </div>;
 }

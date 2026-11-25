@@ -5,7 +5,7 @@ import './theme-contrast.css';
 import {tripEditorialText} from '../../prototype/domain/tripEditorialText.mjs';
 import {HotelFinder} from './assistant/HotelFinder';
 import {finderLibrary,startFinderBooking} from './assistant/model';
-import {entryEditorialText} from './entryEditorialText.ts';
+import {entryEditorialText,isEntryEdited} from './entryEditorialText.ts';
 import {usePrototypeText} from './usePrototypeText';
 import {editorialText} from '../../prototype/domain/editorialText.mjs';
 import {deferAmendmentNavigation} from './booking/amendmentNavigation';
@@ -86,7 +86,7 @@ import {UpcomingTrip,type TripAction} from './booking/UpcomingTrip';
 import {TripPreparation} from './booking/TripPreparation';
 import {BookingRecord} from './booking/BookingRecord';
 import {useState,useEffect,useRef,type ReactNode,type CSSProperties} from 'react';
-import {createPortal} from 'react-dom';
+import {createPortal,flushSync} from 'react-dom';
 import {MobileScroll,BottomSheet,useKeyboard,useKeyboardInsets,KeyboardInput} from './mobile';
 import {StatusBadge,Button,Field,Icon,IconButton,Mark,Empty,Row,Switch} from './ui';
 import {initialState,decodeState,STORAGE_KEY,requestCode,verifyCode,completeName,completeRegistrationTour,registrationContinuation,finishHotelierEntry,displayPhone,blankTraveler,validateTraveler,saveTraveler,deleteTraveler,type State,type Traveler} from './state';
@@ -143,6 +143,8 @@ function Prototype({fixture}:{fixture?:CatalogueFixture}){usePrototypeIcons();us
  const summaryExample=fixtureDraft&&commerce.draft?.id===fixtureDraft.id&&commerce.draft.rateId===fixtureDraft.rateId?catalogueScene?.bookingSummary:undefined;
  const [state,setState]=useState<State>(seed.data),[memory,setMemory]=useState(seed.memory),[routeState,setRoute]=useState(()=>catalogueScene?.route||initialRoute()),[onboardingRun,replayOnboarding]=useState(0);
  const [codeAccepted,setCodeAccepted]=useState(false);
+ const [lastResendAt,setLastResendAt]=useState<number|null>(null);
+ const codeInput=useRef<HTMLInputElement>(null),resendAction=useRef<HTMLButtonElement>(null);
  const [accessLocked,setAccessLocked]=useState(()=>shouldLockOnStartup(seed.data,isDesktop,!!catalogueScene?.pinConfigured));
  const [biometricOutcome,setBiometricOutcome]=useState<BiometricResult>(catalogueScene?.biometric==='failure'?'failure':'success');
  const entryRun=useRef(0);const [entryBusy,setEntryBusy]=useState(false),[accessRun,setAccessRun]=useState(0);
@@ -160,6 +162,7 @@ function Prototype({fixture}:{fixture?:CatalogueFixture}){usePrototypeIcons();us
  const novemberHidden=['notifications','profile-style','preferences','help-article/notifications'];
  const desktopReviewOpen=isDesktop&&routeState==='trip-review';
  const route=desktopReviewOpen?reviewReturn.current:surfaceRoute(november&&novemberHidden.includes(routeState)?'profile':november&&(routeState.startsWith('loyalty-program/')||routeState.startsWith('loyalty-connect/'))?'loyalty-programs':routeState,!!user);
+ const codeExpired=!!state.request&&now>=state.request.expiresAt;
  useEffect(()=>{if(route!=='price-watches')setWatchEditKey('');},[route]);
  const recoverAccess=()=>{if(!user)return;setAccessLocked(false);setSheet(null);setPhone(user.phone.slice(2));setCode('');setState(s=>({...s,activePhone:null,request:null,verifiedPhone:null,hotelierOnboarding:false,hotelierTourTarget:undefined,securityRecoveryPhone:user.phone,returnTo:'profile-security'}));go('phone',true);};
  const preference=route==='wish-search'?freeTextDraft(commerce,user?.phone||'guest'):preferenceDraft(commerce,user?.phone||'guest');
@@ -217,14 +220,22 @@ function Prototype({fixture}:{fixture?:CatalogueFixture}){usePrototypeIcons();us
  },[keyboard.visible,keyboard.focusedElement,insets.bottomInset]);
  useEffect(()=>{
   setCodeAccepted(false);
-  if(route!=='code'||!/^\d{6}$/.test(code))return;
+  if(route!=='code'||!state.request||!/^\d{6}$/.test(code))return;
+  const checkedAt=Date.now();
+  if(checkedAt>=state.request.expiresAt){setNow(checkedAt);return;}
   try{
-   const next=verifyCode(state,code);
+   const next=verifyCode(state,code,checkedAt);
    setError('');setCodeAccepted(true);keyboard.hide();
    const timer=setTimeout(()=>{setState(next);setCode('');if(next.verifiedPhone)setName(next.users[next.verifiedPhone]?.name||'');go(next.activePhone?state.returnTo:'name',true);},interactionMotion.successHoldMs);
    return()=>clearTimeout(timer);
-  }catch(e){setError((e as Error).message);}
+  }catch(e){setError(entryEditorialText('ДОП-012',(e as Error).message,'Неверный код. Сверьте 6 цифр с последним СМС'));}
  },[code,route,state]);
+ useEffect(()=>{
+  if(route==='code'&&codeExpired&&!codeAccepted&&document.activeElement===codeInput.current){
+   keyboard.hide();
+   resendAction.current?.focus({preventScroll:true});
+  }
+ },[route,codeExpired,codeAccepted]);
  useEffect(()=>{if(route==='code'&&!state.request)go('phone',true);if(['edit','traveler','travelers'].includes(route)&&!user)go('profile',true);if(route==='name'&&!state.verifiedPhone)go(user?state.returnTo:'phone',true);},[route,state.activePhone,state.verifiedPhone]);
  useEffect(()=>{routeRef.current=route;},[route]);useEffect(()=>{dirtyRef.current=dirty;},[dirty]);
  useEffect(()=>{if(!catalogueScene&&!memory){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));}catch{setMemory(true);}}},[state,memory]);
@@ -292,7 +303,21 @@ function Prototype({fixture}:{fixture?:CatalogueFixture}){usePrototypeIcons();us
  function exitHotelier(){const next=finishHotelierEntry(state);setState(next);if(next.hotelierTourTarget){replayOnboarding(n=>n+1);go('welcome',true);}else go(['trips','profile','rewards'].includes(next.hotelierReturnTo||'')?next.hotelierReturnTo!:'trips');}
  function login(returnTo='profile'){setState(s=>({...s,request:null,verifiedPhone:null,returnTo,hotelierOnboarding:false,hotelierEntryVariant:undefined,hotelierTourTarget:undefined}));setCode('');go('phone');}
  function finishWelcome(target='find'){if(user&&state.hotelierTourTarget){const next=state.hotelierTourTarget;setState(completeRegistrationTour);go(next,true);return;}setState(s=>({...s,onboarded:true}));if(user)go(target);else login(target);}
- function send(){try{setState(requestCode(state,phone));setCode('');setError('');go('code');}catch(e){setError((e as Error).message);}}
+ function send(){
+  const requestedAt=Date.now();
+  try{setState(requestCode(state,phone,requestedAt));setNow(requestedAt);setCode('');setError('');go('code');}
+  catch(e){setError((e as Error).message);}
+ }
+ function resendCode(){
+  if(!state.request||codeAccepted)return;
+  const requestedAt=Date.now();
+  try{
+   const next=requestCode(state,state.request.phone,requestedAt);
+   flushSync(()=>{setState(next);setNow(requestedAt);setLastResendAt(requestedAt);setCode('');setError('');});
+   codeInput.current?.focus({preventScroll:true});
+   codeInput.current?.setSelectionRange(0,0);
+  }catch(e){setError((e as Error).message);}
+ }
 
  function finishName(){try{const next=completeName(state,name);setState(next);if(next.hotelierTourTarget)replayOnboarding(n=>n+1);go(registrationContinuation(next),true);}catch(e){setError((e as Error).message);}}
  function editTraveler(t?:Traveler,returnTo:string|null=null){editorReturn.current=returnTo;editorBack.current=route;if(route!=='traveler')travelerBack.current=route==='travelers'?'travelers':'profile';if(t)setSelected(t.id);setDraft(t?{...t}:blankTraveler(crypto.randomUUID()));setDirty(false);setFormErrors({});go('edit');}
@@ -312,14 +337,32 @@ function Prototype({fixture}:{fixture?:CatalogueFixture}){usePrototypeIcons();us
  }else if(route==='results'||route==='results-map'){body=<DiscoveryResults setCommerce={setCommerce} commerce={commerce} owner={user?.phone||null} onOpen={openHotel} onEdit={openSheet} onMap={expandMap} searchHeader={isDesktop?<ResultsHeader commerce={commerce} setCommerce={setCommerce} owner={user?.phone||null} onBack={()=>go('find')} onEdit={editResultsSearch} onField={openSheet} onSearch={search}/>:undefined}/>;
  }else if(route==='booking-record'||route.startsWith('trip-')){body=currentBooking?null:<Empty icon="nav-trips" title={editorialText("РШ-355", "Поездка не найдена", "Не нашли поездку. Проверьте правильность введённых данных")} action={<Button onClick={()=>go('trips')}>{editorialText("РШ-357", "К поездкам", "Мои поездки")}</Button>}>{editorialText("РШ-356", "Откройте поездку из своего профиля.", "Откройте поездку из своего профиля")}</Empty>;
  }else if(route==='phone'){
-  body=<form className="auth-content" onSubmit={e=>{e.preventDefault();send();}} id="phone-form"><h1>{state.hotelierOnboarding?editorialText('ОТ-013',<>У каждой поездки<br/>свой характер</>,'Вход в «Ключи»'):<>У каждой поездки<br/>свой характер</>}</h1><div className="login-art-source" role="img" aria-label="Карточка отеля у моря на орбите" dangerouslySetInnerHTML={{__html:loginArt}}/><p className="auth-caption">{state.hotelierOnboarding&&state.returnTo==='hotelier'?editorialText('ОТ-014','Подберём отель под ваши планы','После входа подтвердите статус отельера, чтобы открыть Friendly Rate.'):entryEditorialText("ДОП-008", "Подберём отель под ваши планы", "Подберём, где остановиться")}</p><PhoneField label={entryEditorialText('ДОП-009','Номер телефона','Телефон')} value={phone} onValueChange={value=>{setPhone(value);setError('');}} error={error}/></form>;
+  body=<form className="auth-content auth-step" onSubmit={e=>{e.preventDefault();send();}} id="phone-form"><h1>{state.hotelierOnboarding?editorialText('ОТ-013',<>У каждой поездки<br/>свой характер</>,'Вход в «Ключи»'):<>У каждой поездки<br/>свой характер</>}</h1><div className="login-art-source" role="img" aria-label="Карточка отеля у моря на орбите" dangerouslySetInnerHTML={{__html:loginArt}}/><p className="auth-caption">{state.hotelierOnboarding&&state.returnTo==='hotelier'?editorialText('ОТ-014','Подберём отель под ваши планы','После входа подтвердите статус отельера, чтобы открыть Friendly Rate.'):entryEditorialText("ДОП-008", "Подберём отель под ваши планы", "Подберём, где остановиться")}</p><PhoneField label={entryEditorialText('ДОП-009','Номер телефона','Телефон')} value={phone} onValueChange={value=>{setPhone(value);setError('');}} error={error}/></form>;
   footer=<><Button type="submit" form="phone-form">Получить код</Button><p className="terms">Продолжая, вы принимаете <a href="#terms" onPointerDown={e=>e.preventDefault()} onClick={e=>{e.preventDefault();termsReturn.current='phone';setTermsDocument('agreement');go('terms');}}>условия</a> сервиса</p></>;
  }else if(route==='code'){
   const wait=Math.max(0,Math.ceil(((state.request?.resendAt||0)-now)/1000));
-  body=<form key="code" className="auth-content orbit-enter" onSubmit={e=>e.preventDefault()} id="code-form"><h1>Введите код</h1><p>Отправили СМС на номер<br/><strong>{state.request?displayPhone(state.request.phone):'Запросите новый код'}</strong></p><button type="button" className="text-action" onClick={back}>Изменить номер</button><SmsCodeField value={code} success={codeAccepted} onChange={value=>{if(value!==code){setCode(value);setError('');}}} error={error}/><Button type="button" variant="ghost" disabled={wait>0||codeAccepted} onClick={()=>{try{setState(requestCode(state,state.request?.phone||phone));setCode('');setError('');setToast('Новый код отправлен');}catch(e){setError((e as Error).message);}}}>{wait?`Отправить код снова через 0:${String(wait).padStart(2,'0')}`:'Отправить код снова'}</Button></form>;
+  const resent=!codeExpired&&!!state.request&&state.request.issuedAt===lastResendAt;
+  const edited=isEntryEdited();
+  body=<form key="code" className="auth-content auth-step" onSubmit={e=>e.preventDefault()} id="code-form">
+   <h1>Введите код</h1>
+   {state.request&&<div className="sms-code-recipient">
+    <p>Отправили СМС на номер</p>
+    <div><strong>{displayPhone(state.request.phone)}</strong><button type="button" className="text-action" aria-label="Изменить номер" onClick={back}>{edited?'Изменить':'Изменить номер'}</button></div>
+   </div>}
+   <SmsCodeField inputRef={codeInput} label={edited?'Введите 6 цифр из СМС':'Код из СМС'} value={code} success={codeAccepted} expired={codeExpired} onChange={value=>{setCode(value);setError('');}} error={codeExpired?'Срок действия кода истёк':error}/>
+   {!codeAccepted&&<div className="sms-code-resend">
+    <div role="status" aria-atomic="true">
+     {resent&&<p className="sms-code-resent">Новый код отправлен</p>}
+     {!wait&&!codeExpired&&state.request&&<span className="sms-code-availability">Можно отправить код снова</span>}
+    </div>
+    {wait>0
+     ?<p className="sms-code-wait">{edited?'Повторная отправка через':'Отправить код снова через'} <strong>0:{String(wait).padStart(2,'0')}</strong></p>
+     :<button ref={resendAction} type="button" className="text-action" onClick={resendCode}>{codeExpired?'Запросить новый код':'Отправить код снова'}</button>}
+   </div>}
+  </form>;
   footer=null;
  }else if(route==='name'){
-  body=<form key="name" className="auth-content orbit-enter" id="name-form" onSubmit={e=>{e.preventDefault();finishName();}}><h1>Как вас зовут?</h1><Field label="Ваше имя" autoComplete="given-name" value={name} placeholder="Имя" onChange={e=>{setName(e.target.value);setError('');}} error={error}/><div className="soft-note"><Icon name="secure"/><span>{entryEditorialText("ДОП-014", "Сохраним данные для следующих поездок", "Сохраним для будущих поездок")}</span></div></form>;
+  body=<form key="name" className="auth-content auth-step" id="name-form" onSubmit={e=>{e.preventDefault();finishName();}}><h1>Как вас зовут?</h1><Field label="Ваше имя" autoComplete="given-name" value={name} placeholder="Имя" onChange={e=>{setName(e.target.value);setError('');}} error={error}/><div className="soft-note"><Icon name="secure"/><span>{entryEditorialText("ДОП-014", "Сохраним данные для следующих поездок", "Сохраним для будущих поездок")}</span></div></form>;
   footer=<><Button form="name-form" type="submit">Продолжить</Button></>;
  }else if(route==='trips'){
   body=<>{!hasTrips&&<h1>Поездки</h1>}{user&&<HotelierBanner commerce={commerce} owner={user.phone} onOpen={()=>openHotelier('trips')} onDismiss={()=>setCommerce(s=>({...s,hotelierBannerDismissed:{...s.hotelierBannerDismissed,[user.phone]:bannerStamp(s,user.phone)}}))}/>}{user&&hasTrips?<UpcomingTrip setCommerce={setCommerce} failNext={failNext} onPaymentAttempt={()=>setFailNext(false)} onNearby={(id,placeId,mapOpen=false)=>{setNearbyPlaceId(placeId);setNearbyMapOpen(mapOpen);openTripAction(id,'nearby');}} onReview={openReview} openedDoorId={door.openedId} openingDoorId={door.pendingId} commerce={commerce} owner={user.phone} name={user.name} onSelect={id=>setCommerce(s=>({...s,selectedBooking:id}))} onDetails={openBooking} onAction={openTripAction}/>:<><EmptyTrip commerce={commerce} setCommerce={setCommerce} owner={user?.phone} onSearch={()=>go('find')} onLogin={()=>login('trips')} onAdded={()=>setToast('Бронь добавлена')} onAddBooking={isDesktop?openAddBooking:undefined}/></>}{user&&!hasTrips&&<BenefitsBanner onOpen={()=>go('rewards')}/>}<TripHistoryEntry onOpen={()=>{setCommerce(s=>({...s,historyReturnTo:'trips'}));go('profile-history');}}/></>;

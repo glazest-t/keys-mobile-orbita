@@ -6,7 +6,7 @@ import imported from '../spec/imported-hotels.json' with {type:'json'};
 import {initialCommerce,ensureAccount,startDraft,quoteDraft,commitBooking,catalog} from '../app/src/booking/model.ts';
 import {discoveryOffers} from '../app/src/booking/offers.ts';
 import {roomVisual} from '../app/src/booking/roomVisuals.ts';
-import {hotelVisual} from '../app/src/booking/presentation.ts';
+import {hotelVisual,hotelStarLabel} from '../app/src/booking/presentation.ts';
 import {hotelFacets} from '../app/src/booking/searchFacets.ts';
 const owner='import-qa';
 const state=()=>{const s=ensureAccount(initialCommerce(),owner);return {...s,search:{...s.search,city:'Москва',checkIn:'2026-11-13',checkOut:'2026-11-15',adults:2,childrenAges:[]}};};
@@ -30,6 +30,11 @@ test('Unknown stars are not advertised as unstarred and sort after known stars',
  const s=state();s.searchSort='stars-asc';const offers=discoveryOffers(s,null),unknown=offers.findIndex(o=>hotelVisual(o.h.id).stars<0);
  assert.ok(unknown>0);assert.ok(offers.slice(unknown).every(o=>hotelVisual(o.h.id).stars<0));
  s.searchFilters=['Звездность отеля: Без звёзд'];assert.ok(discoveryOffers(s,null).every(o=>hotelVisual(o.h.id).stars===0));
+});
+test('Hotel star badges only label valid classifications',()=>{
+ const unknown=hotelVisual('moscow-otel-shelterz-vdnh').stars;
+ for(const stars of [unknown,0,undefined,NaN,2.5,6])assert.equal(hotelStarLabel(stars),null);
+ assert.deepEqual([1,2,3,4,5].map(hotelStarLabel),['1 звезда','2 звезды','3 звезды','4 звезды','5 звёзд']);
 });
 test('ibis retains verified photos and breakfast; every imported room has its own photos',()=>{
  const ibis=catalog.hotels.find(h=>h.id==='moscow-ibis-moskva-kievskaya');assert.ok(ibis);

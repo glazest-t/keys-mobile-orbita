@@ -1,10 +1,11 @@
 import {novemberEditorialText} from '../../../prototype/domain/novemberEditorialText.mjs';
 import {entryEditorialText} from '../entryEditorialText';
 import {useEffect,useId,useRef,useState} from 'react';
-import {Button,Icon,IconButton} from '../ui';
+import {Button,Icon} from '../ui';
 import {Calendar,GuestFields} from '../booking/SearchControls';
 import {catalog,dateLabel,searchError,type Commerce,type Search} from '../booking/model';
 import {destinationSuggestions,guestCountLabel,popularCities,validDateRange} from '../booking/search';
+import {hotelStarLabel,visuals} from '../booking/presentation';
 
 type Step='city'|'dates'|'guests';
 const titles={city:'Куда поедем?',dates:'Когда планируете поездку?',guests:'Кто едет?'};
@@ -14,17 +15,26 @@ export function DesktopSearchBar({commerce,onSearch}:{commerce:Commerce;onSearch
  const [step,setStep]=useState<Step|null>(null),[query,setQuery]=useState(''),[hotelId,setHotelId]=useState<string>(),[error,setError]=useState('');
  const [maxHeight,setMaxHeight]=useState(560),[guestRight,setGuestRight]=useState(0);
  const root=useRef<HTMLDivElement>(null),panel=useRef<HTMLDivElement>(null),input=useRef<HTMLInputElement>(null);
- const triggers=useRef<Partial<Record<Step,HTMLButtonElement|null>>>({}),id=useId();
+ const restoringInputFocus=useRef(false);
+ const triggers=useRef<Partial<Record<Exclude<Step,'city'>,HTMLButtonElement|null>>>({}),id=useId();
  const selectedHotel=catalog.hotels.find(h=>h.id===hotelId);
  const suggestions=destinationSuggestions(query,{...commerce,search:draft});
  useEffect(()=>{setDraft(structuredClone(commerce.search));setHotelId(undefined);setQuery('');setError('');},[commerce.search]);
- function close(restore=false){const previous=step;setStep(null);if(restore&&previous)triggers.current[previous]?.focus();}
+ function close(restore=false){
+  setStep(null);
+  if(!restore||!step)return;
+  if(step==='city'){
+   restoringInputFocus.current=true;
+   input.current?.focus();
+   restoringInputFocus.current=false;
+  }else triggers.current[step]?.focus();
+ }
  function open(next:Step){setError('');setStep(next);}
  useEffect(()=>{
   if(!step)return;
   const update=()=>{if(!root.current)return;const bounds=root.current.getBoundingClientRect();setMaxHeight(Math.max(180,window.innerHeight-bounds.bottom-28));const anchor=triggers.current.guests?.getBoundingClientRect();if(anchor)setGuestRight(Math.min(Math.max(0,bounds.width-440),Math.max(0,bounds.right-anchor.right)));};
   const outside=(e:PointerEvent)=>{if(root.current&&!root.current.contains(e.target as Node))setStep(null);};
-  const escape=(e:KeyboardEvent)=>{if(e.key==='Escape'){e.preventDefault();setStep(null);triggers.current[step]?.focus();}};
+  const escape=(e:KeyboardEvent)=>{if(e.key==='Escape'&&!e.isComposing){e.preventDefault();close(true);}};
   update();const observer=new ResizeObserver(update);if(root.current)observer.observe(root.current);document.addEventListener('pointerdown',outside);document.addEventListener('keydown',escape);
   window.addEventListener('resize',update);window.addEventListener('scroll',update,true);
   if(step==='city')input.current?.focus();else panel.current?.focus({preventScroll:true});
@@ -43,16 +53,65 @@ export function DesktopSearchBar({commerce,onSearch}:{commerce:Commerce;onSearch
   close();onSearch(value,selected);
  }
  const destinationPlaceholder=novemberEditorialText('Т-0938','город или название отеля','Город или название места');
- const fields=[{key:'city' as const,label:entryEditorialText('ДОП-018','Куда','Город или направление'),value:query||selectedHotel?.name||draft.city||destinationPlaceholder,icon:'nav-search'},
+ const destinationLabel=entryEditorialText('ДОП-018','Куда','Город или направление');
+ const destinationValue=selectedHotel?.name||draft.city;
+ const choosingDestination=step==='city';
+ const fields=[
   {key:'dates' as const,label:'Даты',value:draft.checkIn&&draft.checkOut?dateLabel(draft):draft.checkIn?'Выберите дату выезда':'Указать даты',icon:'calendar'},
   {key:'guests' as const,label:'Гости',value:guestCountLabel(draft),icon:'guests'}];
  return <div className={'desktop-search-bar'+(step?' is-editing':'')} ref={root} onBlur={e=>{if(e.relatedTarget&&!e.currentTarget.contains(e.relatedTarget as Node))setStep(null);}}>
-  <div className="desktop-search-fields">{fields.map(f=><div key={f.key} className={'desktop-search-field'+(step===f.key?' is-active':'')}><button ref={el=>{triggers.current[f.key]=el;}} type="button" className={'desktop-search-trigger'+(step===f.key?' is-active':'')} aria-haspopup="dialog" aria-expanded={step===f.key} aria-controls={step===f.key?id:undefined} onClick={()=>step===f.key?close():open(f.key)}><Icon name={f.icon} size={20} inheritColor/><span><small>{f.label}</small><strong>{f.value}</strong></span></button>{step===f.key&&<button type="button" className="desktop-search-field-close" aria-label={`Закрыть окно «${f.label}»`} onClick={()=>close(true)}><Icon name="close" size={16} inheritColor/></button>}</div>)}</div>
+  <div className="desktop-search-fields">
+   <div className={'desktop-search-field'+(choosingDestination?' is-active':'')}>
+    <label className={'desktop-search-trigger desktop-search-destination'+(choosingDestination?' is-active':'')}>
+     <Icon name="nav-search" size={20} inheritColor/>
+     <span><small>{destinationLabel}</small><input
+      ref={input}
+      role="combobox"
+      aria-label={destinationPlaceholder}
+      aria-haspopup="dialog"
+      aria-expanded={choosingDestination}
+      aria-controls={choosingDestination?id:undefined}
+      autoComplete="off"
+      placeholder={destinationValue||destinationPlaceholder}
+      value={query||(choosingDestination?'':destinationValue)}
+      onFocus={()=>{if(!restoringInputFocus.current)open('city');}}
+      onClick={()=>{if(!choosingDestination)open('city');}}
+      onChange={e=>{setQuery(e.target.value);setError('');if(!choosingDestination)open('city');}}
+      onKeyDown={e=>{
+       if(e.nativeEvent.isComposing)return;
+       if(e.key==='ArrowDown'){
+        e.preventDefault();
+        if(choosingDestination)panel.current?.querySelector<HTMLButtonElement>('.desktop-destination-list > button')?.focus();
+        else open('city');
+       }
+       if(e.key==='Enter'&&choosingDestination){
+        e.preventDefault();
+        const match=suggestions[0];
+        if(match)select(match.city,match.hotelId);
+        else if(query.trim())setError('Ничего не найдено. Попробуйте другое название.');
+        else open('dates');
+       }
+      }}
+     /></span>
+    </label>
+    {choosingDestination&&<button type="button" className="desktop-search-field-close" aria-label={query?'Очистить направление':`Закрыть окно «${destinationLabel}»`} onClick={()=>{
+     if(query){setQuery('');setError('');input.current?.focus();}
+     else close(true);
+    }}><Icon name="close" size={16} inheritColor/></button>}
+   </div>
+   {fields.map(f=><div key={f.key} className={'desktop-search-field'+(step===f.key?' is-active':'')}><button ref={el=>{triggers.current[f.key]=el;}} type="button" className={'desktop-search-trigger'+(step===f.key?' is-active':'')} aria-haspopup="dialog" aria-expanded={step===f.key} aria-controls={step===f.key?id:undefined} onClick={()=>step===f.key?close():open(f.key)}><Icon name={f.icon} size={20} inheritColor/><span><small>{f.label}</small><strong>{f.value}</strong></span></button>{step===f.key&&<button type="button" className="desktop-search-field-close" aria-label={`Закрыть окно «${f.label}»`} onClick={()=>close(true)}><Icon name="close" size={16} inheritColor/></button>}</div>)}
+  </div>
   <Button onClick={submit}><Icon name="nav-search" size={20} inheritColor/>Найти</Button>
   {step&&<div className={'desktop-search-popover desktop-search-popover-'+step} id={id} ref={panel} role="dialog" aria-label={titles[step]} tabIndex={-1} style={{maxHeight,...(step==='guests'?{right:guestRight}: {})}}>
-   {step==='city'&&<><div className="desktop-destination-input"><Icon name="nav-search" size={20}/><input ref={input} aria-label={destinationPlaceholder} placeholder={destinationPlaceholder} value={query} onChange={e=>{setQuery(e.target.value);setError('');}} onKeyDown={e=>{if(e.key==='Enter'&&!e.nativeEvent.isComposing){e.preventDefault();const match=suggestions[0];if(match)select(match.city,match.hotelId);else setError('Ничего не найдено. Попробуйте другое название.');}}}/>{query&&<IconButton name="close" label="Очистить направление" onClick={()=>{setQuery('');input.current?.focus();}}/>}</div>
+   {step==='city'&&<>
     <p className="desktop-destination-label">{query.trim()?'Города и отели':'Популярные направления'}</p>
-    <div className="desktop-destination-list">{query.trim()?suggestions.map(s=><button type="button" key={s.id} onClick={()=>select(s.city,s.hotelId)}><span className="icon-tile"><Icon name={s.hotelId?'room':'pin'} size={22}/></span><span><strong>{s.title}</strong><small>{s.subtitle}</small></span></button>):popularCities.map(city=><button type="button" key={city} onClick={()=>select(city)}><span className="icon-tile"><Icon name="pin" size={22}/></span><strong>{city}</strong></button>)}</div>
+    <div className="desktop-destination-list">{query.trim()?suggestions.map(s=>{
+     const starsLabel=s.hotelId?hotelStarLabel(visuals[s.hotelId]?.stars):null;
+     return <button type="button" key={s.id} onClick={()=>select(s.city,s.hotelId)}>
+      <span className="icon-tile"><Icon outline name={s.hotelId?'room':'pin'} size={22}/></span>
+      <span><span className="desktop-destination-heading"><strong>{s.title}</strong>{starsLabel&&<b className="hotel-star-badge">{starsLabel}</b>}</span><small>{s.subtitle}</small></span>
+     </button>;
+    }):popularCities.map(city=><button type="button" key={city} onClick={()=>select(city)}><span className="icon-tile"><Icon outline name="pin" size={22}/></span><strong>{city}</strong></button>)}</div>
     {query.trim()&&!suggestions.length&&<p>Ничего не нашли. Попробуйте другое название.</p>}</>}
    {step==='dates'&&<Calendar value={draft} visibleMonths={2} onChange={value=>{setDraft(value);setError('');if(value.checkOut){const dateError=validDateRange({...value,adults:1,childrenAges:[]});if(dateError)setError(dateError);else open('guests');}}}/>}
    {step==='guests'&&<GuestFields value={draft} onChange={value=>{setDraft(value);setError('');}} showTripFeatures/>}

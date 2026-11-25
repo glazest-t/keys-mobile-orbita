@@ -48,7 +48,7 @@ html[data-app-theme="dark"] .keys-app .hotel-rating--poor.hotel-rating { backgro
 /* Compound fields get one boundary around the complete control, never around the inner input. */
 html[data-app-theme="dark"] :is(.keys-app,.bottom-sheet,.desktop-search-popover,.filter-editor) :is(
   .k-field-box,.traveler-select,.search-journey-input,.destination-header>div,
-  .desktop-destination-input,.filter-area-input,.filter-price-fields label,
+  .filter-area-input,.filter-price-fields label,
   .service-catalog-search,.desktop-program-search,.origin-search,.deposit-input,
   .hotel-chat-composer form,.finder-composer form
 ) {
@@ -58,7 +58,7 @@ html[data-app-theme="dark"] :is(.keys-app,.bottom-sheet,.desktop-search-popover,
 }
 html[data-app-theme="dark"] :is(.keys-app,.bottom-sheet,.desktop-search-popover,.filter-editor) :is(
   .k-field-box,.traveler-select,.search-journey-input,.destination-header>div,
-  .desktop-destination-input,.filter-area-input,.filter-price-fields label,
+  .filter-area-input,.filter-price-fields label,
   .service-catalog-search,.desktop-program-search,.origin-search,.deposit-input,
   .hotel-chat-composer form,.finder-composer form
 ):focus-within {

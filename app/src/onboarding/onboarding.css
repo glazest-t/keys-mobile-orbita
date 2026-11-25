@@ -18,7 +18,6 @@
 .onboarding-finish{gap:18px;animation:obFade .6s cubic-bezier(.4,0,.2,1) both;text-align:center;padding:24px}
 .onboarding-finish img{width:96px;height:96px;animation:obPop .6s cubic-bezier(.34,1.56,.64,1) both}
 .onboarding-finish h1{font-size:24px;line-height:30px;animation:obText .5s .3s both}
-.onboarding-finish p{animation:obText .5s .4s both}
 @media(prefers-reduced-motion:reduce){.onboarding-flow *{animation:none!important;transition:none!important}.onboarding-splash{display:none}}
 .onboarding-pages{position:absolute;inset:0}
 .keys-app .onboarding-panel h1,.keys-app .onboarding-panel>p{margin:0 8px}
@@ -57,6 +56,7 @@
 .room-control-success{position:absolute;right:-5px;top:-5px;display:grid;place-items:center;width:25px;height:25px;border-radius:50%;border:3px solid var(--theme-border,#fff);background:var(--k-status-successBg,var(--theme-success-bg,#bff0de));color:var(--k-status-successText,var(--theme-success,#16865a))}
 
 /* Selected second-step composition: two independent loyalty programs. */
+.keys-app:not(.desktop-app) .onboarding-flow{container:onboarding / size}
 .onboarding-benefits-panel .onboarding-art-stage{width:100%}
 .onboarding-benefits-art{position:relative;width:100%;height:270px;isolation:isolate;pointer-events:none}
 .benefits-card,.benefits-orbit,.benefits-plus{position:absolute;transition:transform .8s var(--k-ease-orbit,cubic-bezier(.65,0,.35,1)),opacity .45s ease;will-change:transform,opacity}
@@ -80,6 +80,31 @@
 .onboarding-benefit>div{min-width:0;padding-top:4px}
 .keys-app .onboarding-benefit h2{margin:0 0 7px;font:600 18px/24px var(--k-font-text)}
 .keys-app .onboarding-benefit p{margin:0;font:400 16px/22px var(--k-font-text);color:var(--k-text-secondary)}
+
+@container onboarding (min-height:0px){
+ .onboarding-benefits-panel .onboarding-art-stage{
+  /* Leave room for the heading, both descriptions, and the fixed navigation. */
+  --benefits-art-height:calc(100cqh - var(--device-safe-area-top,54px) - var(--device-safe-area-bottom,0px) - var(--benefits-content-space,520px));
+  width:min(100%,312px,max(72px,calc(var(--benefits-art-height) * 4 / 3)));
+ }
+ .onboarding-benefits-art{height:auto;aspect-ratio:4 / 3}
+ .benefits-card--keys{top:14%}
+ .benefits-card--hotel{top:-3%}
+ .benefits-orbit{inset:7% 4% 2%}
+ .benefits-pearl{width:7%;height:auto;aspect-ratio:1}
+ .benefits-pearl--last{width:8%}
+ .benefits-plus{width:19%;height:auto}
+}
+
+@container onboarding (max-width:370px) or (max-height:740px){
+ .onboarding-benefits-panel{gap:12px;--benefits-content-space:502px}
+ .keys-app .onboarding-benefits-panel h1{font-size:clamp(25px,8cqw,32px);line-height:1.25}
+ .onboarding-benefits-copy{gap:16px}
+ .onboarding-benefit{gap:12px}
+ .onboarding-benefit-icon{width:52px;height:52px}
+ .onboarding-benefit>div{padding-top:0}
+ .keys-app .onboarding-benefit h2{margin-bottom:4px}
+}
 
 /* Third step: source signals → shortlist → individual matches (D-011). */
 .onboarding-personal-panel .onboarding-art-stage{width:100%}
