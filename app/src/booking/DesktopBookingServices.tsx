@@ -41,7 +41,7 @@ export function DesktopBookingServices({commerce,setCommerce,disabled=false,cata
  return <>
   {catalogue?<BookingServiceCatalogue services={services} selected={draft.services} disabled={disabled} onOpen={setOpened}/>:<div className="desktop-service-list">{services.map(s=>{const item=view(s),added=draft.services.includes(s.id);return <div className="desktop-service-row" key={s.id}>
    <button type="button" className="desktop-service-details-trigger" disabled={disabled} aria-label={`Подробнее: ${item.title}`} aria-haspopup="dialog" onClick={()=>setOpened(s.id)}/>
-   <span className="icon-tile"><Icon name={november&&item.category!=='Еда'?'room-service':item.icon} size={22}/></span><span className="desktop-service-copy"><strong>{item.title}</strong><small>{!november||item.category==='Еда'?item.caption+' · ':''}{formatMoney(s.unitPriceMinor)}</small></span>
+   <span className="icon-tile"><Icon outline name={november&&item.category!=='Еда'?'room-service':item.icon} size={22}/></span><span className="desktop-service-copy"><strong>{item.title}</strong><small>{!november||item.category==='Еда'?item.caption+' · ':''}{formatMoney(s.unitPriceMinor)}</small></span>
    {added?<StatusBadge tone="success" icon="check">Добавлено</StatusBadge>:<Button className="desktop-service-add" variant="secondary" disabled={disabled} aria-label={`Добавить: ${item.title}`} onClick={()=>setAdded(s,true)}>Добавить</Button>}
   </div>;})}</div>}
   <BottomSheet open={!!service} onOpenChange={open=>{if(!open)setOpened(null);}} title={info?.title||'Услуга'}>

@@ -4,7 +4,7 @@
   --desktop-page-width: 1280px;
   --desktop-page-gutter: 32px;
 }
-.desktop-app .desktop-flow[data-step="booking-details"] {
+.desktop-app .desktop-flow:is([data-step="booking-details"],[data-step="stay-bill"]) {
   width: calc(100% - 2 * var(--desktop-page-gutter));
   max-width: var(--desktop-page-width);
   margin: 24px auto 64px;
@@ -71,11 +71,6 @@
 }
 .desktop-app[data-route^="profile-trip/"] .history-detail-hotel { grid-column: 1/-1; }
 .desktop-app[data-route^="profile-trip/"] .profile-history-page > .k-button { min-width: 0; }
-.desktop-app:is([data-route="profile-deletion"],[data-route="profile-pin-off"]) .app-header {
-  max-width: 800px;
-  width: calc(100% - 64px);
-  margin: 24px auto 0;
-}
 @media(max-width:900px) {
   .desktop-app[data-route^="profile-trip/"] .profile-history-page { grid-template-columns: minmax(0,1fr); }
 }

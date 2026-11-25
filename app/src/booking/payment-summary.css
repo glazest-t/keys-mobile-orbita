@@ -20,7 +20,7 @@
 .keys-app .booking-payment-card>.k-button{width:100%;max-width:none}
 .keys-app .payment-summary .booking-payment-status{justify-content:flex-start}
 .keys-app .payment-summary .booking-payment-status .booking-balance-link{font-weight:500;font-size:14px}
-.keys-app .mobile-trip-detail>.booking-payment-card{order:5;padding:16px;border-radius:22px}
+.keys-app .mobile-trip-detail>.booking-payment-card{gap:12px;padding:16px;border-radius:22px}
 .keys-app .booking-panel:has(>.payment-summary){padding:16px}
 .desktop-app .booking-payment-card .booking-reward{margin:0}
 @media(max-width:370px){:is(.keys-app,.booking-price-details) .payment-summary-row{gap:8px}:is(.keys-app,.booking-price-details) .payment-summary-row.total>strong{font-size:20px}:is(.keys-app,.booking-price-details) .payment-summary-settlement{padding:12px}}

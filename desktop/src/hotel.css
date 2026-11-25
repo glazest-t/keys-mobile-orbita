@@ -128,7 +128,7 @@
 .desktop-hotel-side-photos>.hero-photo:only-child{grid-row:1/3}
 .desktop-hotel-summary,.desktop-hotel-summary .hotel-preferences{border:0;box-shadow:none}
 .desktop-hotel-summary :is(.hotel-review-summary,.hotel-price-card){border:1px solid var(--k-border-subtle);box-shadow:none}
-.desktop-hotel-overview>.hotel-heading{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:24px;align-items:center}
+.desktop-hotel-overview>.hotel-heading{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:24px;align-items:center;padding-inline:0}
 .desktop-hotel-overview>.hotel-heading h1{margin:0}
 .desktop-hotel-overview>.hotel-heading>p{grid-column:1/-1;flex-wrap:wrap;margin-top:12px}
 .desktop-hotel-address{display:inline-flex;align-items:center;gap:4px;min-width:0;padding:0;border:0;background:none;color:var(--theme-link,var(--k-action-primary));font:inherit;text-align:left}
@@ -239,7 +239,9 @@
 .desktop-app .nearby-real-places::-webkit-scrollbar-thumb{border:2px solid var(--theme-border,#fff);border-radius:12px;background:#a8b9d4}
 .desktop-app .nearby-real-places::-webkit-scrollbar-thumb:hover{background:#6987b3}
 /* The standalone nearby page keeps the map and list aligned. */
-.desktop-app .desktop-flow[data-step="hotel-nearby"] .detail-header>.nearby-header-title{align-items:flex-start}
+.desktop-app .desktop-flow[data-step="hotel-nearby"] .detail-header{align-items:flex-start}
+.desktop-app .desktop-flow[data-step="hotel-nearby"] .detail-header>.k-icon-button{margin-top:2px}
+.desktop-app .desktop-flow[data-step="hotel-nearby"] .detail-header>.nearby-header-title{align-items:flex-start;padding-top:10px}
 .keys-app.desktop-app .detail-header>.nearby-header-title h1{margin:0;font:500 20px/28px Onest,sans-serif;letter-spacing:-.3px}
 .desktop-app .desktop-flow[data-step="hotel-nearby"]>.desktop-flow-layout{display:block}
 .desktop-app .desktop-flow[data-step="hotel-nearby"]>.desktop-flow-layout>.desktop-flow-footer{display:none}

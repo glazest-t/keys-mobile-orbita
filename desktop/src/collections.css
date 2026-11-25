@@ -183,7 +183,9 @@
 .desktop-app .desktop-favorite-search-row > .k-button { width: auto; min-width: 132px; height: 60px; min-height: 60px; flex: none; gap: 8px; border-radius: 18px; }
 
 /* Saved hotels and their map share the desktop search composition. */
-.desktop-app .desktop-favorite-detail .favorite-header,
+.desktop-app .desktop-favorite-detail .favorite-header {
+ width:calc(100% - 2 * var(--desktop-page-gutter));max-width:var(--desktop-page-width);margin-inline:auto;
+}
 .desktop-app .desktop-favorite-detail .favorite-content { max-width:none;margin-left:24px;margin-right:24px; }
 .desktop-app .desktop-favorite-detail .favorite-content { display:flex;flex-direction:column;gap:20px; }
 .desktop-favorite-collections { display:flex;gap:8px;flex-wrap:wrap; }

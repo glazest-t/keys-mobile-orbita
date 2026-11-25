@@ -70,8 +70,11 @@
 .desktop-app .desktop-flow[data-step^="change-booking-"]{max-width:1120px}
 .desktop-app .amend-page{height:auto;padding-top:0;background:transparent}
 .desktop-app .amend-content{padding:0 0 48px;gap:24px}
-.keys-app.desktop-app .amend-header h1{font:500 24px/34px Unbounded,Onest,sans-serif;letter-spacing:-.6px}
-.desktop-app .amend-header p{font-size:14px;line-height:21px;margin-top:6px}
+.desktop-app .amend-header{align-items:flex-start;gap:16px}
+.desktop-app .amend-header>.k-icon-button{margin-top:2px}
+.desktop-app .amend-header>div{padding-top:10px;min-width:0}
+.keys-app.desktop-app .amend-header h1{font:500 20px/28px Onest,sans-serif;letter-spacing:-.3px}
+.desktop-app .amend-header p{font:400 12px/18px Onest,sans-serif;margin-top:2px}
 .desktop-app .amend-layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;align-items:start;gap:28px}
 .desktop-app .amend-aside{position:sticky;top:100px}
 .desktop-app .amend-card,.desktop-app .amend-price{padding:24px;border:1px solid var(--theme-border,#e7ecf4);border-radius:22px}

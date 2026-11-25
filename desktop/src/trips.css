@@ -32,17 +32,17 @@
 .desktop-app .completed-repeat strong { font-size: 16px; line-height: 24px; }
 .desktop-app .completed-repeat .k-button { min-height: 44px; }
 
-.desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) {
+.desktop-app .keys-content[data-page-route="trips"]:has(>.benefits-banner-comparison) {
   display: grid; grid-template-columns: 1.1fr 1fr; gap: 24px; align-items: start;
 }
-.desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) > h1,
-.desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) > .hotelier-banner { grid-column: 1/-1; }
-.desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) > .k-empty {
+.desktop-app .keys-content[data-page-route="trips"]:has(>.benefits-banner-comparison) > h1,
+.desktop-app .keys-content[data-page-route="trips"]:has(>.benefits-banner-comparison) > .hotelier-banner { grid-column: 1/-1; }
+.desktop-app .keys-content[data-page-route="trips"]:has(>.benefits-banner-comparison) > .k-empty {
   grid-column: 1; grid-row: span 2; padding: 32px; min-height: 460px; justify-content: center; gap: 20px;
 }
-.desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) > .k-empty .k-button { width: 280px; max-width: 100%; margin: auto; }
-.desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) > .trip-history-entry { grid-column: 2; margin: 0; }
-.desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) > .benefits-banner-comparison { grid-column: 2; }
+.desktop-app .keys-content[data-page-route="trips"]:has(>.benefits-banner-comparison) > .k-empty .k-button { width: 280px; max-width: 100%; margin: auto; }
+.desktop-app .keys-content[data-page-route="trips"]:has(>.benefits-banner-comparison) > .trip-history-entry { grid-column: 2; margin: 0; }
+.desktop-app .keys-content[data-page-route="trips"]:has(>.benefits-banner-comparison) > .benefits-banner-comparison { grid-column: 2; }
 
 @media (max-width: 900px) {
  .desktop-app .desktop-trip-columns,
@@ -111,33 +111,33 @@
  .desktop-benefits-copy > strong { font-size: 20px; line-height: 27px; }
 }
 /* Keep the two right-column cards together when the empty state is taller. */
-.desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) { grid-template-rows: auto auto minmax(0,1fr); }
-.desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison):has(>.hotelier-banner) { grid-template-rows: auto auto auto minmax(0,1fr); }
+.desktop-app .keys-content[data-page-route="trips"]:has(>.benefits-banner-comparison) { grid-template-rows: auto auto minmax(0,1fr); }
+.desktop-app .keys-content[data-page-route="trips"]:has(>.benefits-banner-comparison):has(>.hotelier-banner) { grid-template-rows: auto auto auto minmax(0,1fr); }
 
 /* Empty state and the two promos share the same top and bottom edges. */
-.desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) > .trip-history-entry { height: auto; align-self: stretch; }
+.desktop-app .keys-content[data-page-route="trips"]:has(>.benefits-banner-comparison) > .trip-history-entry { height: auto; align-self: stretch; }
 
 /* Empty-trip promos share typography, padding and a bottom-aligned text action. */
 .desktop-app .trip-history-entry { background: linear-gradient(110deg,var(--theme-tint,#D6F1FF) 0%,var(--k-action-tint) 55%,var(--theme-card,#FFFFFF) 100%); }
-.desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) { grid-template-rows: auto minmax(0,1fr) minmax(0,1fr); }
-.desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison):has(>.hotelier-banner) { grid-template-rows: auto auto minmax(0,1fr) minmax(0,1fr); }
-.desktop-app[data-route="trips"] .benefits-banner-comparison { align-self: stretch; }
+.desktop-app .keys-content[data-page-route="trips"]:has(>.benefits-banner-comparison) { grid-template-rows: auto minmax(0,1fr) minmax(0,1fr); }
+.desktop-app .keys-content[data-page-route="trips"]:has(>.benefits-banner-comparison):has(>.hotelier-banner) { grid-template-rows: auto auto minmax(0,1fr) minmax(0,1fr); }
+.desktop-app [data-page-route="trips"] .benefits-banner-comparison { align-self: stretch; }
 .desktop-app .desktop-benefits-banner { position: relative; height: 100%; align-items: stretch; padding: 24px; background: radial-gradient(ellipse at 0% 100%,var(--theme-tint,#d5f1ff) 0%,transparent 62%),radial-gradient(ellipse at 100% 100%,var(--theme-tint,#eaf2ff) 0%,transparent 68%),linear-gradient(120deg,var(--theme-tint,#eaf2ff),var(--theme-tint,#eaf2ff)); }
-.desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) > .trip-history-entry { padding: 24px; }
+.desktop-app .keys-content[data-page-route="trips"]:has(>.benefits-banner-comparison) > .trip-history-entry { padding: 24px; }
 .desktop-app .desktop-benefits-copy,
-.desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) .trip-history-entry-copy { height: 100%; padding: 0; gap: 8px; width: calc(100% - 164px); max-width: none; flex: none; }
+.desktop-app .keys-content[data-page-route="trips"]:has(>.benefits-banner-comparison) .trip-history-entry-copy { height: 100%; padding: 0; gap: 8px; width: calc(100% - 164px); max-width: none; flex: none; }
 .desktop-app .desktop-benefits-copy > strong,
-.desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) .trip-history-entry-copy > strong { font: 500 22px/28px Unbounded,sans-serif; letter-spacing: -.7px; white-space: normal; }
+.desktop-app .keys-content[data-page-route="trips"]:has(>.benefits-banner-comparison) .trip-history-entry-copy > strong { font: 500 22px/28px Unbounded,sans-serif; letter-spacing: -.7px; white-space: normal; }
 .desktop-app .desktop-benefits-copy > span:not(.desktop-benefits-link),
-.desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) .trip-history-entry-copy > small { font: 400 14px/21px Onest,sans-serif; color: var(--k-text-secondary,var(--theme-secondary,#5a6072)); white-space: normal; }
+.desktop-app .keys-content[data-page-route="trips"]:has(>.benefits-banner-comparison) .trip-history-entry-copy > small { font: 400 14px/21px Onest,sans-serif; color: var(--k-text-secondary,var(--theme-secondary,#5a6072)); white-space: normal; }
 .desktop-app .desktop-benefits-copy .desktop-benefits-link,
-.desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) .trip-history-entry-copy > span { margin-top: auto; padding-top: 16px; display: flex; align-items: center; gap: 6px; font: 500 14px/20px Onest,sans-serif; color: var(--theme-link,var(--theme-link,#2f5bff)); }
+.desktop-app .keys-content[data-page-route="trips"]:has(>.benefits-banner-comparison) .trip-history-entry-copy > span { margin-top: auto; padding-top: 16px; display: flex; align-items: center; gap: 6px; font: 500 14px/20px Onest,sans-serif; color: var(--theme-link,var(--theme-link,#2f5bff)); }
 .desktop-app .desktop-benefits-art { position: absolute; right: 24px; top: 50%; transform: translateY(-50%); }
 @media (max-width: 1100px) {
  .desktop-app .desktop-benefits-copy,
- .desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) .trip-history-entry-copy { width: calc(100% - 120px); }
+ .desktop-app .keys-content[data-page-route="trips"]:has(>.benefits-banner-comparison) .trip-history-entry-copy { width: calc(100% - 120px); }
  .desktop-app .desktop-benefits-copy > strong,
- .desktop-app[data-route="trips"] .keys-content:has(>.benefits-banner-comparison) .trip-history-entry-copy > strong { font-size: 20px; line-height: 27px; }
+ .desktop-app .keys-content[data-page-route="trips"]:has(>.benefits-banner-comparison) .trip-history-entry-copy > strong { font-size: 20px; line-height: 27px; }
 }
 
 /* Hotel identity and directions share the photo caption. */

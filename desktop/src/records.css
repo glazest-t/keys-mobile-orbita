@@ -11,11 +11,13 @@
 .desktop-app .record-card{padding:20px;gap:14px}
 .desktop-app .record-section h2{font:500 18px/26px Onest,sans-serif;padding:0}
 .desktop-app .record-actions{flex-direction:row;flex-wrap:wrap;align-items:center;gap:12px;padding-top:12px}
+.desktop-app .record-content>.record-actions{margin-top:0;padding-top:0}
+.desktop-app .record-content>.record-actions:empty{display:none}
 .desktop-app .record-details-column{display:flex;flex-direction:column;gap:24px;min-width:0}
 .desktop-app .record-confirmation-documents .k-row{padding:0;min-height:44px;gap:12px}
 .desktop-app .record-confirmation-documents .icon-tile{color:var(--theme-link,var(--k-action-primary))}
 .desktop-app .record-actions .k-button{width:auto;flex:1;min-width:180px;height:48px;min-height:48px}
-.desktop-app .desktop-flow:is([data-step^="change-booking-"],[data-step="stay-review"],[data-step="stay-problem"],[data-step="stay-bill"],[data-step^="trip-documents-"],[data-step^="document-"]){max-width:880px}
+.desktop-app .desktop-flow:is([data-step^="change-booking-"],[data-step="stay-review"],[data-step="stay-problem"],[data-step^="trip-documents-"],[data-step^="document-"]){max-width:880px}
 .desktop-app .desktop-flow:is([data-step^="change-booking-"],[data-step="stay-review"],[data-step="stay-problem"],[data-step="stay-bill"],[data-step^="trip-documents-"],[data-step^="document-"])>.desktop-flow-layout{display:block}
 .desktop-app .desktop-flow:is([data-step^="change-booking-"],[data-step="stay-review"],[data-step="stay-problem"],[data-step="stay-bill"],[data-step^="trip-documents-"],[data-step^="document-"]) .desktop-flow-footer{position:relative;inset:auto;margin-top:24px;background:transparent;border:0;border-top:1px solid var(--k-border-subtle);border-radius:0;padding:24px 0 0}
 .desktop-app .desktop-flow-footer .record-footer,
@@ -46,6 +48,7 @@
 
 .desktop-app .bill-footer:after{display:none}
 .desktop-app .stay-bill-content{padding:0!important}
+.desktop-app .desktop-flow[data-step="stay-bill"] :is(.stay-bill-content,.desktop-flow-footer){max-width:880px;margin-inline:auto}
 .desktop-app .desktop-flow-footer .bill-footer{height:auto;min-height:0}
 .desktop-app .bill-footer>div{width:100%}
 .desktop-app .shared-booking-page{position:relative;inset:auto;min-height:calc(100dvh - 72px);padding:1px 0}
@@ -73,7 +76,13 @@
 .desktop-app .record-details-layout{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
 .desktop-app .record-information-column{display:flex;flex-direction:column;gap:24px;min-width:0}
 .desktop-app .record-payment-column{min-width:0}
-@media(max-width:760px){.desktop-app .record-details-layout{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:760px){
+ .desktop-app .record-details-layout{grid-template-columns:minmax(0,1fr)}
+ .desktop-app .record-hotel .record-hotel-copy{grid-template-columns:minmax(0,1fr)}
+ .desktop-app .record-hotel-copy>.booking-hotel-contacts{grid-column:1;grid-row:auto;margin-top:8px}
+ .desktop-app .record-number{flex-wrap:wrap;gap:12px}
+ .desktop-app .record-number>span:first-child{min-width:0;overflow-wrap:anywhere}
+}
 
 /* Review entry, saved review and confirmation share the desktop dialog. */
 .desktop-modal:has(.stay-review-content){width:min(640px,calc(100vw - 48px))}

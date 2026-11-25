@@ -16,6 +16,10 @@ export function selectedTrip(state:Commerce,owner:string){
  const active=ownTrips(state,owner).filter(b=>(b.operation.status==='confirmed'||b.operation.status==='awaiting_payment')&&b.stay?.status!=='checked_out');
  const completed=ownTrips(state,owner).filter(b=>b.stay?.status==='checked_out');return active.find(b=>b.id===state.selectedBooking)||completed.find(b=>b.id===state.selectedBooking)||active[0]||completed.at(-1);
 }
+export function formatTripCardDate(value:string,keepMonthPeriod=false){
+ const label=new Date(value+'T12:00:00').toLocaleDateString('ru-RU',{day:'numeric',month:'short'});
+ return keepMonthPeriod?label:label.replace(/\.$/,'');
+}
 export function tripFacts(b:Booking){
  const rate=catalog.rates.find(r=>r.id===b.draft.rateId);
  const early=b.serviceRequests?.find(r=>r.kind==='early'&&guaranteedTimeService(r)&&!['cancelled','review'].includes(requestStatus(b,r))&&r.date===b.draft.search.checkIn);

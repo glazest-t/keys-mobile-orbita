@@ -30,3 +30,47 @@
 .keys-app :is(.booking-header,.hotel-chat-header,.finder-header) .k-icon{
  color:var(--theme-link,var(--k-action-primary,#2f5bff));
 }
+
+/* Align mobile page toolbars with the same row below the device safe area. */
+.keys-app:not(.desktop-app,.desktop-modal){
+ --mobile-page-toolbar-height:56px;
+ --mobile-page-toolbar-inset:12px;
+}
+/* The hotel photo starts above the safe area, so its toolbar supplies its own offset. */
+.keys-app:not(.desktop-app,.desktop-modal) .hotel-page .hero-actions{
+ top:var(--device-safe-area-top,54px);
+ inset-inline:var(--mobile-page-toolbar-inset);
+ height:var(--mobile-page-toolbar-height);
+}
+.keys-app:not(.desktop-app,.desktop-modal,.auth-screen) :is(
+ .app-header:has(>.k-icon-button):not(:has(>.header-actions)),.booking-header,.record-header,.results-query-header,.favorite-header
+){
+ min-height:var(--mobile-page-toolbar-height);
+ padding:0 var(--mobile-page-toolbar-inset);
+}
+.keys-app:not(.desktop-app,.desktop-modal,.auth-screen) :is(
+ .app-header:has(>.k-icon-button):not(:has(>.header-actions)),.trip-header,.results-query-header,
+ .rooms-fixed-header .booking-search-header,.scroll-detail-header,.scroll-gallery-header
+){
+ height:var(--mobile-page-toolbar-height);
+}
+.keys-app:not(.desktop-app,.desktop-modal,.auth-screen) .app-header:has(>.k-icon-button):not(:has(>.header-actions))+.keys-content{
+ padding-top:12px;
+}
+.keys-app:not(.desktop-app,.desktop-modal) .benefits-page>h1{line-height:32px}
+.keys-app:not(.desktop-app,.desktop-modal) .detail-header{
+ padding-inline:var(--mobile-page-toolbar-inset);
+}
+.keys-app:not(.desktop-app,.desktop-modal) .detail-header.gallery-header{padding-block:0}
+.keys-app:not(.desktop-app,.desktop-modal) .detail-header:not(.gallery-header),
+.keys-app:not(.desktop-app,.desktop-modal) .app-header>.header-title{line-height:21px}
+.keys-app:not(.desktop-app,.desktop-modal) .detail-header:not(.gallery-header){font-size:15px}
+.keys-app:not(.desktop-app,.desktop-modal) .favorite-content{padding-top:8px}
+.keys-app:not(.desktop-app,.desktop-modal) .favorite-heading{padding-inline:0}
+.keys-app:not(.desktop-app,.desktop-modal) .history-toolbar{
+ min-height:var(--mobile-page-toolbar-height);margin:-10px -4px -4px;
+}
+.keys-app:not(.desktop-app,.desktop-modal) .amend-content{padding-top:0}
+.keys-app:not(.desktop-app,.desktop-modal) .amend-header{
+ min-height:var(--mobile-page-toolbar-height);margin-inline:-4px;
+}
