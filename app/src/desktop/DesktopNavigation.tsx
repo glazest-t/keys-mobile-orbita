@@ -1,10 +1,15 @@
 import {useNovember} from '../usePrototypeVariant';
+import {usePrototypeCopy} from '../usePrototypeText';
 import {useState,useEffect,useRef} from 'react';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import {Icon,Mark} from '../ui';
 
-export function DesktopNavigation({route,name,photo,points=0,unread=false,onNavigate,onLogin,onLogout}:{route:string;name?:string;photo?:string;points?:number;unread?:boolean;onNavigate:(route:string)=>void;onLogin:()=>void;onLogout:()=>void}){
+export function DesktopNavigation({route,name,photo,points=0,unread=false,onNavigate,onLogin,onLogout,onAddBooking}:{route:string;onAddBooking?:()=>void;name?:string;photo?:string;points?:number;unread?:boolean;onNavigate:(route:string)=>void;onLogin:()=>void;onLogout:()=>void}){
  const november=useNovember();
+ const addBookingHint=usePrototypeCopy(
+  november?'Добавьте её по номеру и коду из ваучера':'Добавьте её по номеру бронирования',
+  november?'Номер брони и код из ваучера':'Номер бронирования',
+ );
  const active=route==='ai-assistant'||route==='trip-chat'||route.startsWith('hotel-chat/')?'chats':route.startsWith('trip')||route==='booking-record'?'trips':route==='points'||route.startsWith('loyalty-')?'rewards':['results','results-map','booking-flow','swipe','wish-search','search-params'].includes(route)?'find':route;
  const pointsWord=new Intl.PluralRules('ru').select(points);
  const pointsLabel=points.toLocaleString('ru-RU')+' '+(pointsWord==='one'?'балл':pointsWord==='few'?'балла':'баллов');
@@ -24,6 +29,13 @@ export function DesktopNavigation({route,name,photo,points=0,unread=false,onNavi
   <nav aria-label="Главные разделы">{[['find','Найти'],['trips','Поездки'],['chats','Чаты'],['rewards','Выгоды']].map(([id,label])=><button key={id} aria-current={active===id?'page':undefined} onClick={()=>onNavigate(id)}>{label}</button>)}</nav>
   <button className="desktop-demo-toggle" aria-expanded={demo} aria-controls="desktop-demo-tools" onClick={()=>setDemo(v=>!v)}>Сценарии{demo?' ×':''}</button>
   <div className="desktop-navigation-actions">
+   {onAddBooking&&<button type="button" className="desktop-add-booking" aria-labelledby="desktop-add-booking-label" aria-describedby="desktop-add-booking-hint" title="У меня есть бронь" aria-haspopup={name?'dialog':undefined} onClick={onAddBooking}>
+    <span className="desktop-add-booking-icon"><Icon name="plus" size={18} inheritColor/></span>
+    <span className="desktop-add-booking-copy">
+     <span id="desktop-add-booking-label">У меня есть бронь</span>
+     <small id="desktop-add-booking-hint">{addBookingHint}</small>
+    </span>
+   </button>}
    <button className="desktop-favorites-link" aria-label="Избранное" title="Избранное" aria-current={route==='favorites'||route==='favorite-list'?'page':undefined} onClick={()=>onNavigate('favorites')}><Icon outline name="favorite-outline" size={22} inheritColor/></button>
    {!november&&<button className="desktop-notification-button" aria-label={unread?'Уведомления: есть новые':'Уведомления'} onClick={()=>onNavigate('notifications')}><Icon outline name="bell" size={20}/>{unread&&<span className="notification-dot" aria-hidden="true"/>}</button>}
    {name&&<button className="desktop-points-link" aria-label={`Баллы «Ключей»: ${pointsLabel}. Открыть выгоды`} onClick={()=>onNavigate('rewards')}><Icon outline name="gift" size={20} inheritColor/><span>{pointsLabel}</span></button>}
