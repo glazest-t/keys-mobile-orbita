@@ -84,7 +84,7 @@ export function FullscreenPhotoGallery({title,photos,selected,onSelect,subject}:
      {canPage&&<img className="fullscreen-photo-next" src={photos[adjacentIndex(selected,1)].src} alt="" draggable={false}/>}
     </motion.div>
     {isDesktop&&canPage&&<>
-     <IconButton name="back" label={`Предыдущее фото ${subject}`} onClick={()=>change(-1)}/>
+     <IconButton name="chevron-right" mirrored label={`Предыдущее фото ${subject}`} onClick={()=>change(-1)}/>
      <IconButton name="chevron-right" label={`Следующее фото ${subject}`} onClick={()=>change(1)}/>
     </>}
    </div>}

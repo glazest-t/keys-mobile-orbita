@@ -3,6 +3,7 @@
 .k-icon-default { background:var(--icon-image) center / contain no-repeat; }
 .k-icon-contour { color:var(--theme-icon,var(--k-action-primary,#2F5BFF)); }
 .k-icon-artwork { background:var(--icon-image) center / contain no-repeat; }
+.k-icon-button-mirrored > .k-icon { transform:scaleX(-1); }
 html[data-app-theme="dark"] .k-icon-default {
   color:var(--theme-icon,#94bcff);
   background-image:none;

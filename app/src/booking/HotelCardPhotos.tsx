@@ -50,7 +50,7 @@ export function HotelCardPhotos({name,photos,onOpen,showArrows=false,photoIndex=
    <img src={photos[active]} alt={`${name} · фото ${active+1}`} draggable={false}/>
   </button>}
   {showArrows&&photos.length>1&&<div className="hotel-card-photo-arrows">
-   <IconButton name="back" label={`Предыдущее фото: ${name}`} disabled={active===0} onClick={()=>navigate(-1)}/>
+   <IconButton name="chevron-right" mirrored label={`Предыдущее фото: ${name}`} disabled={active===0} onClick={()=>navigate(-1)}/>
    <IconButton name="chevron-right" label={`Следующее фото: ${name}`} disabled={active===photos.length-1} onClick={()=>navigate(1)}/>
   </div>}
   {(!showArrows||photos.length>1)&&<span className="photo-counter" aria-live="polite" aria-atomic="true">{active+1} / {photos.length}</span>}
