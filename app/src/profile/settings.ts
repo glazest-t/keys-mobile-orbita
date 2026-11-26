@@ -1,8 +1,8 @@
 import type {State,User} from '../state.ts';
 
 export type PinCredential={salt:string;digest:string};
-export type ProfileSettings={pinCredential?:PinCredential;pinFailures?:number;pinBlockedUntil?:number;push:boolean;email:boolean;sms:boolean;booking:boolean;messages:boolean;services:boolean;benefits:boolean;offers:boolean;quiet:boolean;quietStart:string;quietEnd:string;biometric:boolean;pinEnabled:boolean;otherSession:boolean;personalization:boolean;analytics:boolean;deletionRequestedAt:string|null};
-export const defaultSettings=():ProfileSettings=>({push:true,email:false,sms:false,booking:true,messages:true,services:true,benefits:true,offers:false,quiet:false,quietStart:'22:00',quietEnd:'08:00',biometric:false,pinEnabled:false,otherSession:true,personalization:true,analytics:false,deletionRequestedAt:null});
+export type ProfileSettings={pinCredential?:PinCredential;pinFailures?:number;pinBlockedUntil?:number;push:boolean;email:boolean;sms:boolean;booking:boolean;messages:boolean;services:boolean;benefits:boolean;offers:boolean;favoriteOffers:boolean;quiet:boolean;quietStart:string;quietEnd:string;biometric:boolean;pinEnabled:boolean;otherSession:boolean;personalization:boolean;analytics:boolean;deletionRequestedAt:string|null};
+export const defaultSettings=():ProfileSettings=>({push:true,email:false,sms:false,booking:true,messages:true,services:true,benefits:true,offers:false,favoriteOffers:false,quiet:false,quietStart:'22:00',quietEnd:'08:00',biometric:false,pinEnabled:false,otherSession:true,personalization:true,analytics:false,deletionRequestedAt:null});
 export function profileSettings(user:User):ProfileSettings{const settings={...defaultSettings(),...user.settings};if(!settings.pinCredential){settings.pinEnabled=false;settings.biometric=false;}return settings;}
 export function updateSettings(s:State,owner:string,patch:Partial<ProfileSettings>):State{
  const user=s.users[owner];if(!user||s.activePhone!==owner)throw Error('Войдите в профиль');

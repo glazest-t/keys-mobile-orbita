@@ -7,9 +7,9 @@ import {getPrototypeText} from '../prototypeText';
 import {RatingBadge} from './RatingBadge';
 import {FriendlyRateBadge} from '../hotelier/FriendlyRateBadge';
 import {ratePrice} from './friendlyRate';
-import {useState,type CSSProperties,type Dispatch,type SetStateAction} from 'react';
+import {useId,useState,type CSSProperties,type Dispatch,type SetStateAction} from 'react';
 import {BottomSheet,MobileScroll,useKeyboard,useMobileDevice} from '../mobile';
-import {Button,Empty,Icon,IconButton} from '../ui';
+import {Button,Empty,Icon,IconButton,Switch} from '../ui';
 import {ExpandingMap} from '../interactions';
 import {FavoritesMap} from './FavoritesMap';
 import {SavedButton} from './Discovery';
@@ -23,14 +23,23 @@ import {hotelVisual} from './presentation';
 import './favorites.css';
 
 const reviewPlural=new Intl.PluralRules('ru');
+const favoriteOffersConsent='Согласие на рассылку';
 
-type Props={commerce:Commerce;setCommerce:Dispatch<SetStateAction<Commerce>>;owner:string;detail:boolean;mapOpen:boolean;onMap:()=>void;onMapClose:()=>void;onBack:()=>void;onList:(id:string)=>void;onOpen:(id:string)=>void;onSearch:()=>void};
+type Props={commerce:Commerce;setCommerce:Dispatch<SetStateAction<Commerce>>;owner:string;favoriteOffersEnabled:boolean;onFavoriteOffersChange:(enabled:boolean)=>void;detail:boolean;mapOpen:boolean;onMap:()=>void;onMapClose:()=>void;onBack:()=>void;onList:(id:string)=>void;onOpen:(id:string)=>void;onSearch:()=>void};
 
-export function FavoritesScreen({commerce,setCommerce,owner,detail,mapOpen,onMap,onMapClose,onBack,onList,onOpen,onSearch}:Props){
+export function FavoritesScreen({commerce,setCommerce,owner,favoriteOffersEnabled,onFavoriteOffersChange,detail,mapOpen,onMap,onMapClose,onBack,onList,onOpen,onSearch}:Props){
  const lib=favoriteLibrary(commerce,owner),list=lib.lists.find(l=>l.id===lib.selectedId)||lib.lists[0];
  const items=isDesktop&&!detail?lib.lists.flatMap(l=>favoriteOffers(commerce,owner,l.id)).sort((a,b)=>(commerce.savedHotels?.[owner]||[]).indexOf(a.hotel.id)-(commerce.savedHotels?.[owner]||[]).indexOf(b.hotel.id)):favoriteOffers(commerce,owner,list.id),allCount=commerce.savedHotels?.[owner]?.length||0;
  const [received]=useState(()=>readFavoriteShare(window.location.href));
  const [sheet,setSheet]=useState(received?'received':''),[hotelId,setHotelId]=useState(''),[error,setError]=useState(''),[shareMessage,setShareMessage]=useState('');
+ const offersLabelId=useId();
+ const [offersError,setOffersError]=useState('');
+ const changeFavoriteOffers=(enabled:boolean)=>{
+  try{
+   onFavoriteOffersChange(enabled);
+   setOffersError('');
+  }catch(e){setOffersError((e as Error).message);}
+ };
  const keyboard=useKeyboard(),{device}=useMobileDevice(),saving=useFavoriteSaving();
  const close=()=>{keyboard.hide();setSheet('');setError('');setShareMessage('');if(received){const url=new URL(location.href);url.searchParams.delete('favoriteShare');history.replaceState(null,'',url);}};
  const open=(target:string,id='')=>{keyboard.hide();setError('');setHotelId(id);setSheet(target);};
@@ -58,6 +67,14 @@ export function FavoritesScreen({commerce,setCommerce,owner,detail,mapOpen,onMap
  const searchControls=<div className="favorite-search">{[['dates','calendar','Даты',compactDates(list.search)],['guests','guests','Гости',guestLabel(list.search)]].map(([key,icon,label,value])=><button className="k-surface-action" key={key} onClick={()=>open(key)}><Icon outline name={icon} size={20} inheritColor/><span><small>{label}</small><strong>{value}</strong></span></button>)}</div>;
  return <div className={"favorite-screen"+(isDesktop?" desktop-favorite-detail":"")} style={{'--favorite-safe-top':`${device.geometry.safeArea.top}px`} as CSSProperties}>
  <div className="favorite-scroll-frame" inert={mapOpen} aria-hidden={mapOpen}><MobileScroll key={detail?list.id:'lists'}><header className="favorite-header" inert={mapOpen} aria-hidden={mapOpen}><IconButton outline name="back" label={detail?novemberEditorialText("Т-0857", 'Назад к спискам', "Назад"):'Назад'} onClick={onBack}/>{isDesktop&&<div className="desktop-favorite-title"><h1>{title}</h1><span>{countLabel(detail?items.length:allCount)}</span></div>}{detail?(!isDesktop&&<IconButton outline name="map" label={novemberEditorialText("Т-0859", "Карта отелей подборки", "Места на карте")} onClick={onMap}/>):!isDesktop&&<button className="favorite-new text-action" onClick={()=>open('create')}><Icon outline name="plus" size={18} inheritColor/>{newCollectionLabel}</button>}{isDesktop&&detail&&<button className="text-action favorite-share-button" onClick={()=>open('share')}><Icon outline name="share" size={18} inheritColor/>Поделиться подборкой</button>}</header><main className="favorite-content">{!isDesktop&&<div className="favorite-heading"><h1>{title}</h1><span>{countLabel(detail?items.length:allCount)}</span></div>}
+ {!detail&&<div className="favorite-offers">
+  <div>
+   <p id={offersLabelId}>Получать предложения по&nbsp;избранному</p>
+   <button type="button" className="favorite-offers-consent text-action" aria-haspopup="dialog" onClick={()=>open('offers-consent')}>{favoriteOffersConsent}</button>
+  </div>
+  <Switch checked={favoriteOffersEnabled} labelledBy={offersLabelId} onChange={changeFavoriteOffers}/>
+  {offersError&&<p className="field-error" role="alert">{offersError}</p>}
+ </div>}
  {!detail&&!isDesktop?<>{allCount===0&&emptyFavorites}{(allCount>0||lists.length>1)&&<div className="favorite-lists">{listCard(lists[0].id,true)}{lists.length>1&&<section>{lists.slice(1).map(l=>listCard(l.id))}</section>}</div>}</>:<>
   <div className={isDesktop?'desktop-favorites-layout':'favorite-layout-passthrough'}><div className={isDesktop?'desktop-favorites-hotels':'favorite-layout-passthrough'}>
   {(isDesktop?<div className="desktop-favorite-search-row">{searchControls}</div>:searchControls)}
@@ -112,8 +129,12 @@ export function FavoritesScreen({commerce,setCommerce,owner,detail,mapOpen,onMap
  {isDesktop&&items.length>0&&!shown.length&&<Empty outline icon="map" title="В этой области нет избранных отелей" action={<Button variant="secondary" onClick={resetMap}>Показать все отели</Button>}>Отдалите или переместите карту.</Empty>}
  </div>{mapPanel}</div></>}</main></MobileScroll></div>
  <ExpandingMap open={mapOpen} onClose={onMapClose} origin={`inset(${device.geometry.safeArea.top+8}px 12px calc(100% - ${device.geometry.safeArea.top+52}px) calc(100% - 56px) round 22px)`}><FavoritesMap initialSelected={commerce.draft?.returnTo==='favorite-map'?commerce.draft.hotelId:undefined} name={favoriteListName(list)} search={list.search} items={items} onClose={onMapClose} onOpen={onOpen} onDates={()=>open('dates')}/></ExpandingMap>
- <BottomSheet open={!!sheet} onOpenChange={value=>{if(!value)close();}} title={({create:novemberEditorialText("ДОП-ИЗБ-001", 'Новый список', "Новая подборка"),dates:'Даты поездки',guests:'Кто едет',move:editedNovember?'Переместить в подборку':'Переместить в список',share:'Поделиться списком',received:'С вами поделились списком'} as Record<string,string>)[sheet]||title} snap={sheet==='dates'?.9:sheet==='guests'?.8:.7}>
+ <BottomSheet open={!!sheet} onOpenChange={value=>{if(!value)close();}} title={({create:novemberEditorialText("ДОП-ИЗБ-001", 'Новый список', "Новая подборка"),dates:'Даты поездки',guests:'Кто едет','offers-consent':favoriteOffersConsent,move:editedNovember?'Переместить в подборку':'Переместить в список',share:'Поделиться списком',received:'С вами поделились списком'} as Record<string,string>)[sheet]||title} snap={sheet==='dates'?.9:sheet==='guests'?.8:.7}>
   <div className="sheet-body favorite-sheet">{error&&<p className="field-error" role="alert">{error}</p>}
+   {sheet==='offers-consent'&&<>
+    <p>Переключатель включает рассылку о специальных предложениях отелей из избранного. Отключить её можно в разделе «Избранное» в любой момент.</p>
+    <Button variant="secondary" onClick={close}>Понятно</Button>
+   </>}
    {sheet==='create'&&<FavoriteName onSave={name=>{const id=crypto.randomUUID();setCommerce(saveFavoriteList(commerce,owner,id,name));close();saving?.selectList(id);onList(id);}}/>}
    {sheet==='move'&&<FavoriteDestination commerce={commerce} owner={owner} currentListId={lib.assignment[hotelId]} onSelect={(id,next)=>{
     if(next)setCommerce(setFavorite(next,owner,hotelId,id));
