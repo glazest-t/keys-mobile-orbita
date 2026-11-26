@@ -181,11 +181,8 @@
 .desktop-app[data-route="edit"] .keys-content { padding-bottom: 24px!important; }
 .desktop-app[data-route="edit"] .app-footer { padding-top: 0; padding-bottom: 64px; }
 
-/* Keep the title aligned with the first action when the delete link is present. */
-.desktop-app .desktop-traveler-actions { margin-inline-start: auto; flex: none; }
+.desktop-app .desktop-traveler-actions { flex: none; flex-direction: row; gap: 12px; margin-inline-start: auto; }
 .desktop-app .desktop-traveler-actions > .k-button { width: auto; }
-.desktop-app[data-route="traveler"] .app-header:has(.traveler-delete-link) { height: auto; align-items: flex-start; }
-.desktop-app[data-route="traveler"] .app-header:has(.traveler-delete-link) > .header-title { display: flex; align-items: center; min-height: 44px; }
 .desktop-app[data-route="traveler"] .details > div:nth-last-child(-n+2) { border-bottom: 0; }
 @media(max-width:900px) {
  .desktop-app[data-route="traveler"] .app-header { height: auto; min-height: 48px; flex-wrap: wrap; }
