@@ -28,7 +28,6 @@
 .desktop-app .desktop-destination-list>button>span:not(.icon-tile) {display:flex;flex-direction:column;gap:3px;}
 .desktop-app .desktop-destination-list strong {font:500 15px/21px var(--k-font-text);white-space:normal;}
 .desktop-app .desktop-destination-list small {font:400 12px/18px var(--k-font-text);color:var(--k-text-secondary);}
-.desktop-app .desktop-destination-heading {display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;}
 .desktop-app .desktop-search-popover .calendar-months {display:grid;grid-template-columns:1fr 1fr;gap:24px;}
 .desktop-app .desktop-search-popover .calendar-months h3 {font:500 15px/22px var(--k-font-text);text-align:center;margin:10px 0 16px;}
 .desktop-app .desktop-search-popover .calendar-grid button {min-width:0;min-height:36px;}

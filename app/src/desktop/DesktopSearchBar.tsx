@@ -3,9 +3,9 @@ import {entryEditorialText} from '../entryEditorialText';
 import {useEffect,useId,useRef,useState} from 'react';
 import {Button,Icon} from '../ui';
 import {Calendar,GuestFields} from '../booking/SearchControls';
-import {catalog,dateLabel,searchError,type Commerce,type Search} from '../booking/model';
-import {destinationSuggestions,guestCountLabel,popularCities,validDateRange} from '../booking/search';
-import {hotelStarLabel,visuals} from '../booking/presentation';
+import {catalog,searchError,type Commerce,type Search} from '../booking/model';
+import {compactDates,destinationSuggestions,guestCountLabel,popularCities,validDateRange} from '../booking/search';
+import {DestinationSuggestionTitle} from '../booking/DestinationSuggestionTitle';
 
 type Step='city'|'dates'|'guests';
 const titles={city:'Куда поедем?',dates:'Когда планируете поездку?',guests:'Кто едет?'};
@@ -57,7 +57,7 @@ export function DesktopSearchBar({commerce,onSearch}:{commerce:Commerce;onSearch
  const destinationValue=selectedHotel?.name||draft.city;
  const choosingDestination=step==='city';
  const fields=[
-  {key:'dates' as const,label:'Даты',value:draft.checkIn&&draft.checkOut?dateLabel(draft):draft.checkIn?'Выберите дату выезда':'Указать даты',icon:'calendar'},
+  {key:'dates' as const,label:'Даты',value:draft.checkIn&&draft.checkOut?compactDates(draft):draft.checkIn?'Выберите дату выезда':'Указать даты',icon:'calendar'},
   {key:'guests' as const,label:'Гости',value:guestCountLabel(draft),icon:'guests'}];
  return <div className={'desktop-search-bar'+(step?' is-editing':'')} ref={root} onBlur={e=>{if(e.relatedTarget&&!e.currentTarget.contains(e.relatedTarget as Node))setStep(null);}}>
   <div className="desktop-search-fields">
@@ -105,13 +105,10 @@ export function DesktopSearchBar({commerce,onSearch}:{commerce:Commerce;onSearch
   {step&&<div className={'desktop-search-popover desktop-search-popover-'+step} id={id} ref={panel} role="dialog" aria-label={titles[step]} tabIndex={-1} style={{maxHeight,...(step==='guests'?{right:guestRight}: {})}}>
    {step==='city'&&<>
     <p className="desktop-destination-label">{query.trim()?'Города и отели':'Популярные направления'}</p>
-    <div className="desktop-destination-list">{query.trim()?suggestions.map(s=>{
-     const starsLabel=s.hotelId?hotelStarLabel(visuals[s.hotelId]?.stars):null;
-     return <button type="button" key={s.id} onClick={()=>select(s.city,s.hotelId)}>
+    <div className="desktop-destination-list">{query.trim()?suggestions.map(s=><button type="button" key={s.id} onClick={()=>select(s.city,s.hotelId)}>
       <span className="icon-tile"><Icon outline name={s.hotelId?'room':'pin'} size={22}/></span>
-      <span><span className="desktop-destination-heading"><strong>{s.title}</strong>{starsLabel&&<b className="hotel-star-badge">{starsLabel}</b>}</span><small>{s.subtitle}</small></span>
-     </button>;
-    }):popularCities.map(city=><button type="button" key={city} onClick={()=>select(city)}><span className="icon-tile"><Icon outline name="pin" size={22}/></span><strong>{city}</strong></button>)}</div>
+      <span><strong><DestinationSuggestionTitle title={s.title} hotelId={s.hotelId}/></strong><small>{s.subtitle}</small></span>
+     </button>):popularCities.map(city=><button type="button" key={city} onClick={()=>select(city)}><span className="icon-tile"><Icon outline name="pin" size={22}/></span><strong>{city}</strong></button>)}</div>
     {query.trim()&&!suggestions.length&&<p>Ничего не нашли. Попробуйте другое название.</p>}</>}
    {step==='dates'&&<Calendar value={draft} visibleMonths={2} onChange={value=>{setDraft(value);setError('');if(value.checkOut){const dateError=validDateRange({...value,adults:1,childrenAges:[]});if(dateError)setError(dateError);else open('guests');}}}/>}
    {step==='guests'&&<GuestFields value={draft} onChange={value=>{setDraft(value);setError('');}} showTripFeatures/>}

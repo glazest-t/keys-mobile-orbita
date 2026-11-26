@@ -1,6 +1,5 @@
 /* Hotel overview: rooms and full information share one desktop page. */
-.desktop-hotel-overview{display:flex;flex-direction:column;gap:28px;min-width:0}
-.desktop-hotel-overview>.hotel-heading h1{margin:0 0 12px}
+.desktop-hotel-overview{display:flex;flex-direction:column;gap:24px;min-width:0}
 .desktop-hotel-top{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:28px;align-items:stretch}
 .desktop-hotel-top>.source-hotel-hero{height:auto;min-height:440px;margin:0}
 .desktop-hotel-photo-carousel{position:absolute;inset:0;height:100%;scroll-snap-type:x mandatory;overscroll-behavior-x:contain}
@@ -30,14 +29,14 @@
 .desktop-hotel-rooms-heading h2{margin:0 0 8px}
 .desktop-hotel-rooms-heading p{margin:0;color:var(--k-text-secondary);font:400 14px/20px Onest,sans-serif}
 .desktop-hotel-rooms-heading>.k-button{width:auto;flex:none}
-.desktop-hotel-overview .desktop-hotel-information{display:flex;flex-direction:column;gap:32px;padding:0}
+.desktop-hotel-overview .desktop-hotel-information{display:flex;flex-direction:column;gap:24px;padding:0}
 .desktop-hotel-information>.hotel-section{margin:0;padding:28px;background:var(--k-surface-card);border:1px solid var(--k-border-subtle);border-radius:28px}
 .desktop-hotel-information .hotel-description{font-size:16px;line-height:26px;max-width:960px;margin:0}
 .desktop-hotel-information .hotel-amenities{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .desktop-hotel-information .hotel-amenities>span{display:flex;align-items:center;gap:10px}
 .desktop-hotel-information .hotel-location .source-map{height:320px}
 .desktop-hotel-information #hotel-reviews{scroll-margin-top:24px}
-.desktop-hotel-reviews{display:block;column-count:2;column-gap:16px;margin-top:20px}
+.desktop-hotel-reviews{display:block;column-count:2;column-gap:16px;margin-top:12px}
 .desktop-hotel-reviews>.review-card{break-inside:avoid;page-break-inside:avoid;width:100%;min-width:0;max-width:none;margin:0 0 16px;background:var(--k-surface-app);padding:20px;border-radius:20px}
 .desktop-hotel-reviews .review-card p{white-space:normal;overflow:visible;display:block;-webkit-line-clamp:unset;font-size:15px;line-height:24px}
 .desktop-hotel-back{display:inline-flex;align-items:center;align-self:flex-start;gap:12px;margin-bottom:-16px;padding:0;border:0;border-radius:22px;background:transparent;color:var(--k-text-primary);font:500 14px/20px Onest,sans-serif;cursor:pointer}
@@ -128,9 +127,9 @@
 .desktop-hotel-side-photos>.hero-photo:only-child{grid-row:1/3}
 .desktop-hotel-summary,.desktop-hotel-summary .hotel-preferences{border:0;box-shadow:none}
 .desktop-hotel-summary :is(.hotel-review-summary,.hotel-price-card){border:1px solid var(--k-border-subtle);box-shadow:none}
-.desktop-hotel-overview>.hotel-heading{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:24px;align-items:center;padding-inline:0}
-.desktop-hotel-overview>.hotel-heading h1{margin:0}
-.desktop-hotel-overview>.hotel-heading>p{grid-column:1/-1;flex-wrap:wrap;margin-top:12px}
+.desktop-hotel-overview .hotel-heading{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:24px;align-items:center;padding-inline:0}
+.desktop-hotel-overview .hotel-heading h1{margin:0}
+.desktop-hotel-overview .hotel-heading>p{grid-column:1/-1;flex-wrap:wrap;margin-top:4px}
 .desktop-hotel-address{display:inline-flex;align-items:center;gap:4px;min-width:0;padding:0;border:0;background:none;color:var(--theme-link,var(--k-action-primary));font:inherit;text-align:left}
 .desktop-hotel-address .k-icon{flex:none}
 .desktop-hotel-address:hover{text-decoration:underline;text-underline-offset:3px}
@@ -143,6 +142,7 @@
 .desktop-hotel-featured-amenities{padding:16px;border-radius:20px;background:var(--theme-card,#f2f7fc)}
 .keys-app .desktop-hotel-featured-amenities h2{margin:0 0 12px;font:500 14px/20px Onest,sans-serif}
 .desktop-hotel-featured-amenities ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px;margin:0;padding:0;list-style:none}
+.desktop-hotel-featured-amenities[data-guest-style] ul{grid-template-columns:1fr}
 .desktop-hotel-featured-amenities li{display:flex;align-items:center;gap:8px;min-width:0;font:400 14px/20px Onest,sans-serif}
 .desktop-hotel-featured-amenities li>span:last-child{min-width:0;overflow-wrap:anywhere}
 .desktop-hotel-summary .hotel-review-summary{margin:0}
@@ -166,6 +166,7 @@
 /* The outer section already groups facilities and location. */
 .desktop-hotel-information .hotel-facilities-card{border:0;padding:0 4px;border-radius:0}
 .desktop-hotel-information .hotel-location{border:0}
+.desktop-hotel-information>.hotel-location-section{padding:0;border:0;background:none}
 
 /* Location and nearby places stay together on the hotel page. */
 .desktop-hotel-location-head{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px;align-items:end}

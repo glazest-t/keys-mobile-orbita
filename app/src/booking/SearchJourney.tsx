@@ -3,8 +3,9 @@ import {useId,useRef,useState} from 'react';
 import {KeyboardInput,useKeyboard} from '../mobile';
 import {Button,Icon,IconButton} from '../ui';
 import {Calendar,GuestFields} from './SearchControls';
-import {catalog,dateLabel,searchError,type Commerce,type Search} from './model';
-import {destinationSuggestions,guestCountLabel,popularCities,tripFeaturesLabel,validDateRange} from './search';
+import {DestinationSuggestionTitle} from './DestinationSuggestionTitle';
+import {catalog,searchError,type Commerce,type Search} from './model';
+import {compactDates,destinationSuggestions,guestCountLabel,popularCities,tripFeaturesLabel,validDateRange} from './search';
 import './search-journey.css';
 
 type Step='city'|'dates'|'guests';
@@ -22,7 +23,7 @@ export function SearchJourney({commerce,initialStep,onApply,onClose}:{commerce:C
  const selectedHotel=catalog.hotels.find(h=>h.id===hotelId);
  const suggestions=destinationSuggestions(query,{...commerce,search:draft});
  const datesError=validDateRange({...draft,adults:1,childrenAges:[]}),guestsError=draft.childrenAges.some(age=>age<0);
- const summaries={city:selectedHotel?.name||draft.city||'Выберите направление',dates:draft.checkOut?dateLabel(draft):'Указать даты',guests:guestsChosen?guestCountLabel(draft):'Добавить гостей'};
+ const summaries={city:selectedHotel?.name||draft.city||'Выберите направление',dates:compactDates(draft),guests:guestsChosen?guestCountLabel(draft):'Добавить гостей'};
  function open(next:Step){if(next==='guests')setGuestsChosen(true);keyboard.hide();setError('');setStep(next);requestAnimationFrame(()=>scroll.current?.scrollTo({top:0,behavior:'instant'}));}
  function select(city:string,hotel?:string){setDraft(s=>({...s,city}));setHotelId(hotel);setQuery('');open('dates');}
  function change(value:Search){setError('');setDraft(value);}
@@ -45,7 +46,7 @@ export function SearchJourney({commerce,initialStep,onApply,onClose}:{commerce:C
      {key==='city'&&<>
       <div className="search-journey-input"><Icon name="nav-search" size={20} inheritColor/><KeyboardInput aria-label={novemberEditorialText("Т-2025", "город или название отеля", "Город или название места")} placeholder={selectedHotel?.name||draft.city||novemberEditorialText("Т-2026", 'город или название отеля', "Город или название места")} value={query} onChange={e=>setQuery(e.target.value)} onKeyDown={e=>{if(e.key==='Enter'&&!e.nativeEvent.isComposing){e.preventDefault();next();}}} enterKeyHint="search"/>{query&&<IconButton name="close" label="Очистить направление" onClick={()=>setQuery('')}/>}</div>
       <p className="search-journey-label">{query.trim()?'Города и отели':'Популярные направления'}</p>
-      <div className="search-journey-destinations">{query.trim()?suggestions.map(s=><button type="button" key={s.id} onClick={()=>select(s.city,s.hotelId)}><span className="icon-tile"><Icon name={s.hotelId?'room':'pin'} size={20} inheritColor/></span><span><strong>{s.title}</strong><small>{s.subtitle}</small></span></button>):popularCities.map(city=><button type="button" key={city} onClick={()=>select(city)}><span className="icon-tile"><Icon name="pin" size={20} inheritColor/></span><span><strong>{city}</strong></span></button>)}</div>
+      <div className="search-journey-destinations">{query.trim()?suggestions.map(s=><button type="button" key={s.id} onClick={()=>select(s.city,s.hotelId)}><span className="icon-tile"><Icon name={s.hotelId?'room':'pin'} size={20} inheritColor/></span><span><strong><DestinationSuggestionTitle title={s.title} hotelId={s.hotelId}/></strong><small>{s.subtitle}</small></span></button>):popularCities.map(city=><button type="button" key={city} onClick={()=>select(city)}><span className="icon-tile"><Icon name="pin" size={20} inheritColor/></span><span><strong>{city}</strong></span></button>)}</div>
       {query.trim()&&!suggestions.length&&<p className="search-journey-label">Ничего не нашли. Попробуйте другое название.</p>}
      </>}
      {key==='dates'&&<Calendar value={draft} onChange={change}/>}

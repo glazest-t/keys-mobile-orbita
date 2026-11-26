@@ -1,6 +1,18 @@
 import {searchOptions,normalizeQuery,type RecentSearch} from './filterSchema.ts';
 import {hotelFacets} from './searchFacets.ts';
 import {catalog,searchHotels,searchError,type Commerce,type Search} from './model.ts';
+
+const searchDayLabel=new Intl.DateTimeFormat('ru-RU',{day:'numeric',month:'short',timeZone:'UTC'});
+
+export function compactDates({checkIn,checkOut}:Pick<Search,'checkIn'|'checkOut'>){
+ const start=new Date(checkIn+'T12:00:00Z'),end=new Date(checkOut+'T12:00:00Z');
+ if(!Number.isFinite(start.getTime())||!Number.isFinite(end.getTime()))return 'Указать даты';
+ const label=(date:Date)=>searchDayLabel.format(date).replace(/\.$/,'');
+ return checkIn.slice(0,7)===checkOut.slice(0,7)
+  ?`${start.getUTCDate()}–${label(end)}`
+  :`${label(start)} — ${label(end)}`;
+}
+
 export const popularCities=['Сочи','Москва','Санкт-Петербург','Казань','Калининград','Алтай'];
 export function rememberSearch(state:Commerce,value:RecentSearch):Commerce{
  const {filtersSnapshot,...search}=value;

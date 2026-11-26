@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="solid-alpha">
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="3"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+</svg>

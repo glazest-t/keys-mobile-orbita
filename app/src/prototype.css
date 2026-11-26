@@ -17,6 +17,22 @@
 /* Keep parked scenes behind the app safe-area surface during transitions. */
 .keys-app .flow-stack:has([data-flow-current="true"] :is(.page-scroll,.booking-scroll))::before{content:"";position:absolute;inset:0 0 auto;height:var(--device-safe-area-top,54px);background:var(--k-surface-app);z-index:5;pointer-events:none}
 
+/* Let the photograph continue behind the device chrome on the hotel overview. */
+.keys-app .flow-stack:has([data-flow-current="true"] .source-hotel-hero[data-photo-behind-status])::before{background:none}
+.device-screen .source-hotel-hero .hero-photo::after{content:none}
+html[data-app-theme="dark"] .device-screen{--hotel-status-theme-color:#fff;--hotel-status-theme-invert:1}
+.device-screen:not(:has(.fullscreen-photo-gallery)):has([data-flow-current="true"] .source-hotel-hero)>.status-bar{
+ color:var(--hotel-status-theme-color,#000);
+ --hotel-status-invert:var(--hotel-status-theme-invert,0);
+}
+.device-screen:not(:has(.fullscreen-photo-gallery)):has([data-flow-current="true"] .source-hotel-hero)>.status-bar .status-indicator-svg{
+ filter:url('/assets/hotels/status-opacity.svg#solid-alpha') brightness(0) invert(var(--hotel-status-invert));
+}
+.device-screen:not(:has(.fullscreen-photo-gallery)):has([data-flow-current="true"] [data-photo-behind-status][data-photo-status-time="light"])>.status-bar .status-time{color:#fff}
+.device-screen:not(:has(.fullscreen-photo-gallery)):has([data-flow-current="true"] [data-photo-behind-status][data-photo-status-time="dark"])>.status-bar .status-time{color:#000}
+.device-screen:not(:has(.fullscreen-photo-gallery)):has([data-flow-current="true"] [data-photo-behind-status][data-photo-status-icons="light"])>.status-bar{--hotel-status-invert:1}
+.device-screen:not(:has(.fullscreen-photo-gallery)):has([data-flow-current="true"] [data-photo-behind-status][data-photo-status-icons="dark"])>.status-bar{--hotel-status-invert:0}
+
 .page-scroll.reviews .scroll-detail-header{height:44px}
 
 /* Selected empty-trip illustration: orbital window, variant 3. */

@@ -4,7 +4,12 @@ beforeFixtureTest(t=>t.mock.timers.enable({apis:['Date'],now:new Date('2026-11-0
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {initialCommerce,searchHotels,startDraft,quoteDraft,ensureAccount} from '../app/src/booking/model.ts';
-import {rememberSearch,destinationSuggestions,collectionSearch,validDateRange} from '../app/src/booking/search.ts';
+import {compactDates,rememberSearch,destinationSuggestions,collectionSearch,validDateRange} from '../app/src/booking/search.ts';
+test('Диапазон дат в поиске сохраняет компактный формат без точек',()=>{
+ assert.equal(compactDates({checkIn:'2026-11-12',checkOut:'2026-11-19'}),'12–19 нояб');
+ assert.equal(compactDates({checkIn:'2026-11-26',checkOut:'2026-12-03'}),'26 нояб — 3 дек');
+ assert.equal(compactDates({checkIn:'2026-12-28',checkOut:'2027-01-04'}),'28 дек — 4 янв');
+});
 test('Подсказки ищут город и отель; пустой запрос не дублирует популярные',()=>{const s=initialCommerce();assert.deepEqual(destinationSuggestions('',s),[]);const found=destinationSuggestions('Со',s);assert.ok(found.some(v=>v.city==='Сочи'&&!v.hotelId));assert.ok(found.some(v=>v.hotelId==='orbit-sea'));assert.equal(destinationSuggestions('нет такого места',s).length,0);});
 test('История не мутирует исходный поиск, удаляет повторы и сохраняет условия',()=>{let s=initialCommerce();const request={...s.search,withPet:true,childrenAges:[7]};s=rememberSearch(s,request);request.childrenAges[0]=8;assert.equal(s.recentSearches[0].childrenAges[0],7);s=rememberSearch(s,s.recentSearches[0]);assert.equal(s.recentSearches.length,1);assert.equal(s.search.withPet,true);});
 test('Особенности поездки реально отбирают отели без изменения числа гостей',()=>{let s=initialCommerce();s.search={...s.search,city:'Сочи',adults:1,withPet:true,byCar:true};const found=searchHotels(s);assert.deepEqual(found.map(h=>h.id),['pine-sochi']);assert.equal(s.search.adults,1);s.search={...s.search,withPet:false,businessTrip:true};assert.ok(searchHotels(s).some(h=>h.id==='orbit-sea'));});

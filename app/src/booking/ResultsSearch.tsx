@@ -2,8 +2,8 @@ import {createContext,useContext,useState} from 'react';
 import {FlowStack,MobileScroll,type FlowScreen} from '../mobile';
 import {Button,IconButton} from '../ui';
 import {Calendar,GuestFields} from './SearchControls';
-import {dateLabel,nights,type Search} from './model';
-import {validDateRange} from './search';
+import {nights,type Search} from './model';
+import {compactDates,validDateRange} from './search';
 import './results-search.css';
 
 export const searchDatesAndGuestsTitle='Когда и кто';
@@ -21,7 +21,8 @@ function Content(){
 function Footer(){
  const c=useContext(SearchState)!,error=validDateRange(c.draft),count=nights(c.draft);
  const nightLabel=count%10===1&&count%100!==11?'ночь':count%10>=2&&count%10<=4&&(count%100<12||count%100>14)?'ночи':'ночей';
- return <footer className="results-query-footer">{error&&c.draft.checkOut&&<p className="field-error" role="alert">{error}</p>}<Button disabled={!!error} onClick={c.apply} aria-label={c.draft.checkOut?`Применить поиск: ${dateLabel(c.draft)}, ${count} ${nightLabel}`:'Выберите дату выезда'}>{c.draft.checkOut?`${dateLabel(c.draft)} · ${count} ${nightLabel}`:'Выберите дату выезда'}</Button></footer>;
+ const dates=compactDates(c.draft);
+ return <footer className="results-query-footer">{error&&c.draft.checkOut&&<p className="field-error" role="alert">{error}</p>}<Button disabled={!!error} onClick={c.apply} aria-label={c.draft.checkOut?`Применить поиск: ${dates}, ${count} ${nightLabel}`:'Выберите дату выезда'}>{c.draft.checkOut?`${dates} · ${count} ${nightLabel}`:'Выберите дату выезда'}</Button></footer>;
 }
 const screen:FlowScreen={id:'results-query',headerHeight:0,footerHeight:76,footer:()=> <Footer/>,render:()=> <Content/>};
 export function ResultsSearch({value,onApply,onClose,showTripFeatures=true}:Props){

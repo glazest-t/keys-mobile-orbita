@@ -68,12 +68,15 @@
 .keys-app .nearby-real-places.nearby-photo-list{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;padding:0;border:0;border-radius:0;background:none}
 .desktop-app .nearby-embedded .nearby-real-places.nearby-photo-list{padding:0 10px 4px 0;max-height:440px;overflow-y:auto}
 
-/* Location first, nearby places underneath in the trip preview. */
-.keys-app .stay-location-preview h2{font:500 17px/24px Onest,sans-serif}
+/* Location and nearby venues on the hotel page. */
+.section-label .nearby-location-title{display:block;min-height:24px;padding:0;border:0;border-radius:4px;background:none;color:inherit;font:inherit;letter-spacing:inherit;text-align:start;cursor:pointer}
+.section-label .nearby-location-title:focus-visible{outline:2px solid var(--theme-link,#2f5bff);outline-offset:3px}
 .keys-app .stay-location-preview .nearby-preview-heading{margin:0;font:500 15px/21px Onest,sans-serif}
 .stay-location-preview .nearby-hotel-preview{height:180px;border-radius:20px}
+.nearby-hotel-address-row{display:flex;justify-content:space-between;align-items:center;gap:12px}
 .nearby-hotel-address{display:flex;align-items:flex-start;gap:6px;min-width:0}
 .nearby-hotel-address .nearby-address-text{font:400 12px/17px Onest,sans-serif;color:var(--theme-secondary,#5a6072);overflow-wrap:anywhere}
+.keys-app .k-button.nearby-location-route{position:relative;z-index:2;flex:none;width:auto;height:auto;min-height:36px;padding:8px 12px;gap:6px;border-radius:12px;font:500 13px/18px Onest,sans-serif;white-space:nowrap}
 .desktop-app .stay-location-preview .nearby-hotel-preview{height:240px}
 .desktop-app .stay-location-preview .nearby-preview-track>.nearby-photo-card{flex-basis:180px}
 

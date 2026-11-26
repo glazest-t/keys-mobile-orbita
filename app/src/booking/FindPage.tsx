@@ -5,10 +5,10 @@ import {DesktopSearchBar} from '../desktop/DesktopSearchBar';
 import {useNovember} from '../usePrototypeVariant';
 import {Carousel} from '../mobile';
 import {Button,Icon} from '../ui';
-import {catalog,dateLabel,guestLabel,hotelPhoto,type Commerce,type Search} from './model';
-import {guestCountLabel,tripFeaturesLabel} from './search';
+import {catalog,hotelPhoto,type Commerce,type Search} from './model';
+import {compactDates,guestCountLabel,tripFeaturesLabel} from './search';
 import swipeArt from './art/swipe.html?raw';
-export function compactDates(s:Search){const a=new Date(s.checkIn+'T12:00:00'),b=new Date(s.checkOut+'T12:00:00');return a.getMonth()===b.getMonth()?`${a.getDate()}–${b.toLocaleDateString('ru-RU',{day:'numeric',month:'short'}).replace('.','')}`:dateLabel(s);}
+export {compactDates} from './search';
 export function FindPage({commerce,onEdit,onSearch,onOpen,onSwipe,onCollection}:{commerce:Commerce;onEdit:(s:string)=>void;onSearch:(s?:Search,hotelId?:string)=>void;onOpen:(id:string)=>void;onSwipe:()=>void;onCollection:(kind:string)=>void}){
  const november=useNovember();
  const history=commerce.recentSearches||[];

@@ -1,7 +1,9 @@
 import editorial from '../../../spec/hotel-editorial.json' with {type:'json'};
 import {addedVisuals} from './searchFacets.ts';
 // Visual content follows «Все экраны». Prices, inventory and all bookings remain demo data.
-export const MANTERA_COVER='https://mantera.ru/upload/iblock/085/k3rkzcqoh8t9b345pyoiz36iafe9ouro.jpg';
+// The hotel's cover is served locally so contrast can be measured on the image.
+// Source: https://mantera.ru/upload/iblock/085/k3rkzcqoh8t9b345pyoiz36iafe9ouro.jpg
+export const MANTERA_COVER='/assets/hotels/mantera-lobby.jpg';
 const asset=(name:string)=>'/brand/assets/assets/'+name;
 export const visuals:Record<string,{styles:string[];location:string;address:string;distance:string;stars:number;rating:number;reviews:number;amenities:string[];photos:string[];description:string}>={
  'orbit-sea':{styles:["Тихое место", "У моря", "Спа", "С детьми", "Гастро"],location:'Сочи · Сириус',address:'Голубая улица, 1а',distance:'200 м до моря',stars:5,rating:4.8,reviews:214,amenities:['Завтрак','Бассейн','Спа','Ресторан','Парковка','Wi-Fi','Рабочее место'],photos:[MANTERA_COVER,asset('next-trip.jpg'),asset('maidens-premium-king.jpg'),asset('room-suite-2.jpg')],description:'Курорт на первой линии: свой пляж, спа с термами и четыре ресторана.'},

@@ -248,6 +248,14 @@
     "step": "hotel"
   },
   {
+    "id": "booking-hotel-style",
+    "title": "Об отеле · Под ваш стиль",
+    "group": "Отель и бронирование",
+    "route": "booking-flow",
+    "step": "hotel",
+    "swipe": true
+  },
+  {
     "id": "booking-nearby-cheaper",
     "title": "Соседние даты · дешевле",
     "group": "Отель и бронирование",
@@ -1285,7 +1293,13 @@
     "title": "Первый поиск · Ваш стиль",
     "group": "Поиск и подбор",
     "route": "find",
-    "firstFind": true
+    "firstFind": true,
+    "actions": [
+      {
+        "selector": ".find-search-card .k-button",
+        "contains": "Найти"
+      }
+    ]
   },
   {
     "id": "booking-hotel-loyalty",
