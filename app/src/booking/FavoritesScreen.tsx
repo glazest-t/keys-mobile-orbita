@@ -65,20 +65,32 @@ export function FavoritesScreen({commerce,setCommerce,owner,favoriteOffersEnable
  }
  const emptyFavorites=<Empty outline icon="favorite-outline" title={novemberEditorialText('Т-0861','Сохраните то, что нравится','Сохраните, чтобы не потерять')} action={<Button onClick={onSearch}>Найти</Button>}>{novemberEditorialText('Т-0863','Нажмите на сердце в карточке отеля.','Нажмите на сердечко, чтобы сохранить')}</Empty>;
  const searchControls=<div className="favorite-search">{[['dates','calendar','Даты',compactDates(list.search)],['guests','guests','Гости',guestLabel(list.search)]].map(([key,icon,label,value])=><button className="k-surface-action" key={key} onClick={()=>open(key)}><Icon outline name={icon} size={20} inheritColor/><span><small>{label}</small><strong>{value}</strong></span></button>)}</div>;
- return <div className={"favorite-screen"+(isDesktop?" desktop-favorite-detail":"")} style={{'--favorite-safe-top':`${device.geometry.safeArea.top}px`} as CSSProperties}>
- <div className="favorite-scroll-frame" inert={mapOpen} aria-hidden={mapOpen}><MobileScroll key={detail?list.id:'lists'}><header className="favorite-header" inert={mapOpen} aria-hidden={mapOpen}><IconButton outline name="back" label={detail?novemberEditorialText("Т-0857", 'Назад к спискам', "Назад"):'Назад'} onClick={onBack}/>{isDesktop&&<div className="desktop-favorite-title"><h1>{title}</h1><span>{countLabel(detail?items.length:allCount)}</span></div>}{detail?(!isDesktop&&<IconButton outline name="map" label={novemberEditorialText("Т-0859", "Карта отелей подборки", "Места на карте")} onClick={onMap}/>):!isDesktop&&<button className="favorite-new text-action" onClick={()=>open('create')}><Icon outline name="plus" size={18} inheritColor/>{newCollectionLabel}</button>}{isDesktop&&detail&&<button className="text-action favorite-share-button" onClick={()=>open('share')}><Icon outline name="share" size={18} inheritColor/>Поделиться подборкой</button>}</header><main className="favorite-content">{!isDesktop&&<div className="favorite-heading"><h1>{title}</h1><span>{countLabel(detail?items.length:allCount)}</span></div>}
- {!detail&&<div className="favorite-offers">
+ const offersSwitch=<Switch checked={favoriteOffersEnabled} labelledBy={offersLabelId} onChange={changeFavoriteOffers}/>;
+ const offersControl=!detail&&<div className="favorite-offers">
+  {isDesktop&&offersSwitch}
   <div>
    <p id={offersLabelId}>Получать предложения по&nbsp;избранному</p>
    <button type="button" className="favorite-offers-consent text-action" aria-haspopup="dialog" onClick={()=>open('offers-consent')}>{favoriteOffersConsent}</button>
   </div>
-  <Switch checked={favoriteOffersEnabled} labelledBy={offersLabelId} onChange={changeFavoriteOffers}/>
+  {!isDesktop&&offersSwitch}
   {offersError&&<p className="field-error" role="alert">{offersError}</p>}
- </div>}
+ </div>;
+ return <div className={"favorite-screen"+(isDesktop?" desktop-favorite-detail":"")} style={{'--favorite-safe-top':`${device.geometry.safeArea.top}px`} as CSSProperties}>
+ <div className="favorite-scroll-frame" inert={mapOpen} aria-hidden={mapOpen}><MobileScroll key={detail?list.id:'lists'}>
+ <header className="favorite-header" inert={mapOpen} aria-hidden={mapOpen}>
+  <IconButton outline name="back" label={detail?novemberEditorialText("Т-0857", 'Назад к спискам', "Назад"):'Назад'} onClick={onBack}/>
+  {isDesktop&&<div className="desktop-favorite-title"><h1>{title}</h1><span>{countLabel(detail?items.length:allCount)}</span></div>}
+  {!isDesktop&&(detail?<IconButton outline name="map" label={novemberEditorialText("Т-0859", "Карта отелей подборки", "Места на карте")} onClick={onMap}/>:<button className="favorite-new text-action" onClick={()=>open('create')}><Icon outline name="plus" size={18} inheritColor/>{newCollectionLabel}</button>)}
+  {isDesktop&&detail&&<button className="text-action favorite-share-button" onClick={()=>open('share')}><Icon outline name="share" size={18} inheritColor/>Поделиться подборкой</button>}
+ </header>
+ <main className="favorite-content">
+ {!isDesktop&&<div className="favorite-heading"><h1>{title}</h1><span>{countLabel(detail?items.length:allCount)}</span></div>}
+ {!isDesktop&&offersControl}
  {!detail&&!isDesktop?<>{allCount===0&&emptyFavorites}{(allCount>0||lists.length>1)&&<div className="favorite-lists">{listCard(lists[0].id,true)}{lists.length>1&&<section>{lists.slice(1).map(l=>listCard(l.id))}</section>}</div>}</>:<>
   <div className={isDesktop?'desktop-favorites-layout':'favorite-layout-passthrough'}><div className={isDesktop?'desktop-favorites-hotels':'favorite-layout-passthrough'}>
   {(isDesktop?<div className="desktop-favorite-search-row">{searchControls}</div>:searchControls)}
   {isDesktop&&<nav className="desktop-favorite-collections" aria-label="Подборки избранного"><button className={'filter-chip '+(!detail?'selected':'')} onClick={()=>{if(detail)onBack();else resetMap();}} aria-current={!detail?'page':undefined}>Все отели · {allCount}</button>{lists.map(l=><button key={l.id} className={'filter-chip '+(detail&&l.id===list.id?'selected':'')} onClick={()=>onList(l.id)}>{favoriteListName(l)} · {favoriteItems(commerce,owner,l.id).length}</button>)}<button className="favorite-new text-action" onClick={()=>open('create')}><Icon outline name="plus" size={18} inheritColor/>{newCollectionLabel}</button></nav>}
+  {isDesktop&&offersControl}
   {isDesktop&&mapView?.key===mapKey&&<div className="desktop-map-results-status"><span>В области карты: {shown.length}</span><button className="text-action" onClick={resetMap}>Показать все</button></div>}
   {items.length>0&&(!isDesktop||detail)&&<p className="favorite-caption">Цены за {nights(list.search)} {nights(list.search)%10===1&&nights(list.search)!==11?'ночь':nights(list.search)%10>=2&&nights(list.search)%10<=4&&(nights(list.search)<12||nights(list.search)>14)?'ночи':'ночей'} · {guestLabel(list.search)}</p>}
   {shown.map(({hotel,quote})=>{
@@ -103,9 +115,12 @@ export function FavoritesScreen({commerce,setCommerce,owner,favoriteOffersEnable
      <SavedButton hotelId={hotel.id} saved onClick={()=>setCommerce(s=>setFavorite(s,owner,hotel.id,null))}/>
     </div>
     {isDesktop?<div className="favorite-hotel-details">
-     {moveButton}
      <button className="favorite-hotel-name" onClick={openHotel}>{hotel.name}</button>
-     <small className="favorite-hotel-search">{location}{!detail&&` · ${compactDates(assignedList.search)}`}</small>
+     {moveButton}
+     <small className="favorite-hotel-search">
+      {location}
+      {!detail&&nights(assignedList.search)>0&&<span className="favorite-hotel-dates">{compactDates(assignedList.search)}</span>}
+     </small>
      <div className="favorite-hotel-bottom">
       {rating}
       <button className="favorite-price-action" onClick={openHotel}>{quote?<span className="discovery-price">

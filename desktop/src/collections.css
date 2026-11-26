@@ -75,7 +75,6 @@
 .desktop-app .favorite-cover.photos-0 { display: flex; }
 .desktop-app .favorite-list-label { padding: 0 4px 4px; }
 .desktop-app .favorite-list-label strong { font-size: 18px; line-height: 26px; }
-.desktop-app .favorite-content:has(.favorite-search) { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); align-items: start; }
 .desktop-app .favorite-heading,.desktop-app .favorite-search,.desktop-app .favorite-caption { grid-column: 1/-1; }
 .desktop-app .favorite-search { max-width: 680px; width: 100%; }
 .desktop-app .favorite-hotel-details { padding: 20px; }
@@ -172,97 +171,85 @@
 .desktop-map-title{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .desktop-map-dialog:focus{outline:none}
 
-/* Collection detail uses the standard inner-page title and one search/map toolbar. */
-.desktop-app .desktop-favorite-detail .favorite-header { justify-content: flex-start; gap: 16px; height: 48px; padding: 0; margin-top: 24px; margin-bottom: 24px; }
-.desktop-app .desktop-favorite-title { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 12px; min-width: 0; }
-.desktop-app .desktop-favorite-title h1 { margin: 0; font: 500 20px/28px Onest,sans-serif; letter-spacing: -.3px; }
-.desktop-app .desktop-favorite-title > span { font: 400 13px/19px Onest,sans-serif; color: var(--k-text-secondary,var(--theme-secondary,#5a6072)); }
-.desktop-app .desktop-favorite-detail .favorite-content { padding-top: 8px; }
-.desktop-app .desktop-favorite-search-row { grid-column: 1/-1; display: flex; align-items: center; gap: 16px; min-width: 0; }
-.desktop-app .desktop-favorite-search-row > .favorite-search { flex: 1; }
-.desktop-app .desktop-favorite-search-row > .k-button { width: auto; min-width: 132px; height: 60px; min-height: 60px; flex: none; gap: 8px; border-radius: 18px; }
-
-/* Saved hotels and their map share the desktop search composition. */
+/* Favorites share one page frame across the title, controls, list and map. */
+.desktop-app .desktop-favorite-detail :is(.favorite-header,.favorite-content) {
+ max-width:none;margin-inline:var(--desktop-wide-gutter);
+}
 .desktop-app .desktop-favorite-detail .favorite-header {
- width:calc(100% - 2 * var(--desktop-page-gutter));max-width:var(--desktop-page-width);margin-inline:auto;
+ justify-content:flex-start;gap:8px 16px;min-height:48px;padding:0;margin-block:24px;
 }
-.desktop-app .desktop-favorite-detail .favorite-content { max-width:none;margin-left:24px;margin-right:24px; }
-.desktop-app .desktop-favorite-detail .favorite-content { display:flex;flex-direction:column;gap:20px; }
-.desktop-favorite-collections { display:flex;gap:8px;flex-wrap:wrap; }
-.desktop-favorites-layout { display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start;width:100%; }
-.desktop-favorites-hotels { display:flex;flex-direction:column;gap:16px;min-width:0; }
-.desktop-favorites-map { position:sticky;top:20px;height:calc(100dvh - 120px);min-height:320px;border-radius:24px;overflow:hidden; }
-.desktop-favorites-hotels .favorite-hotel { display:grid;grid-template-columns:minmax(150px,32%) minmax(0,1fr);overflow:hidden; }
-.desktop-favorites-hotels .discovery-photo { grid-column:1;grid-row:1/3;min-height:230px;height:100%; }
-.desktop-favorites-hotels .discovery-photo :is(.hotel-card-photos,.hotel-photo-carousel,.hotel-photo-track,.photo-open,img) { height:100%;min-height:230px;object-fit:cover; }
-.desktop-favorites-hotels .favorite-hotel-details { grid-column:2;min-width:0;padding:20px; }
-.desktop-favorites-hotels .favorite-hotel-title { align-items:start;gap:12px; }
-.desktop-favorites-hotels .favorite-hotel-title > strong { font:500 18px/24px Onest; }
-.desktop-favorites-hotels .favorite-note { grid-column:2;align-self:end; }
-.favorite-hotel-search { display:block;margin-top:10px;color:var(--k-text-secondary);font:400 12px/18px Onest; }
-@media(max-width:1100px) {
- .desktop-favorites-hotels .favorite-hotel { grid-template-columns:minmax(0,1fr); }
- .desktop-favorites-hotels .discovery-photo { grid-column:1;grid-row:auto;height:200px;min-height:200px; }
- .desktop-favorites-hotels .favorite-hotel-details,.desktop-favorites-hotels .favorite-note { grid-column:1; }
+.desktop-favorite-title { display:flex;flex:1;align-items:baseline;flex-wrap:wrap;gap:4px 12px;min-width:0; }
+.desktop-favorite-title h1 { margin:0;min-width:0;overflow-wrap:anywhere;font:500 20px/28px Onest,sans-serif;letter-spacing:-.3px; }
+.desktop-favorite-title > span { font:400 13px/19px Onest,sans-serif;color:var(--k-text-secondary); }
+.desktop-app .desktop-favorite-detail .favorite-content { gap:20px; }
+.desktop-favorite-collections { display:flex;flex-wrap:wrap;align-items:center;gap:8px; }
+.desktop-favorite-collections .filter-chip { max-width:100%;white-space:normal;overflow-wrap:anywhere;text-align:left; }
+.desktop-favorites-layout { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start; }
+.desktop-favorites-hotels { display:flex;flex-direction:column;gap:16px;min-width:0;container-type:inline-size; }
+.desktop-favorites-hotels > .favorite-offers {
+ grid-template-columns:auto minmax(0,1fr);max-width:none;padding:12px;
+ border:0;border-radius:var(--k-radius-md);background:var(--k-action-tint);
 }
-.desktop-favorites-hotels .favorite-hotel-title { flex-direction:column;align-items:stretch; }
-.desktop-favorites-hotels .favorite-price { align-self:flex-end; }
-.desktop-favorites-hotels .favorite-price > s { font:400 12px/18px Onest;color:var(--k-text-secondary); }
-/* Favourite controls align with the list; map starts alongside the search form. */
-.desktop-favorites-hotels .desktop-favorite-search-row,
-.desktop-favorites-hotels .desktop-favorite-search-row > .favorite-search { width:100%;max-width:none; }
-.desktop-favorites-hotels .desktop-favorite-collections { gap:8px;align-items:center; }
-.desktop-favorites-hotels .favorite-new { margin-left:0; }
-.desktop-favorite-collections .text-action { display:inline-flex;align-items:center;gap:6px;min-height:36px;white-space:nowrap; }
-.desktop-favorites-hotels .favorite-hotel { grid-template-columns:minmax(140px,29%) minmax(0,1fr);min-height:220px; }
-.desktop-favorites-hotels .discovery-photo { grid-row:1;height:100%;min-height:220px; }
-.desktop-favorites-hotels .discovery-photo :is(.hotel-card-photos,.hotel-photo-carousel,.hotel-photo-track,.photo-open,img) { min-height:220px; }
-.desktop-favorites-hotels .favorite-hotel-details { display:flex;flex-direction:column;gap:8px;padding:20px; }
-.favorite-list-tag { align-self:flex-end;display:flex;align-items:center;gap:6px;max-width:100%;border:0;border-radius:12px;padding:6px 10px;background:var(--k-action-tint);color:var(--theme-link,var(--k-action-primary));font:500 12px/18px Onest; }
-.favorite-hotel-name { border:0;background:transparent;padding:0;text-align:left;color:var(--k-text-primary);font:500 18px/24px Onest; }
-.desktop-favorites-hotels .favorite-hotel-search { margin:0; }
-.favorite-hotel-bottom { display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:auto;padding-top:12px; }
-.desktop-favorites-hotels .favorite-rating { display:flex;flex-wrap:wrap;gap:4px 6px;margin:0;font:400 12px/18px Onest; }
-.favorite-price-action { border:0;background:transparent;padding:0;color:var(--k-text-primary);text-align:right;flex:none; }
+.desktop-favorites-hotels > .favorite-offers > div {
+ display:flex;flex-wrap:wrap;align-items:center;column-gap:8px;min-width:0;
+}
+.desktop-favorites-hotels .favorite-offers-consent { margin-inline-start:auto; }
+.desktop-favorites-hotels .favorite-search { max-width:none;grid-template-columns:repeat(2,minmax(0,1fr)); }
+.desktop-favorites-hotels .favorite-search strong { overflow-wrap:anywhere; }
+.desktop-favorites-map {
+ position:sticky;top:20px;height:calc(100dvh - 120px);min-height:320px;
+ border-radius:24px;overflow:hidden;
+}
+
+.desktop-favorites-hotels .favorite-hotel {
+ --favorite-photo-height:176px;
+ display:grid;grid-template-columns:minmax(140px,29%) minmax(0,1fr);
+}
+.desktop-favorites-hotels .discovery-photo { height:auto;min-height:var(--favorite-photo-height); }
+.desktop-favorites-hotels .discovery-photo > .hotel-card-photos { position:absolute;inset:0; }
+.desktop-favorites-hotels .discovery-photo :is(.hotel-card-photos,.hotel-photo-carousel,.hotel-photo-track,.photo-open) {
+ height:100%;min-height:0;
+}
+.desktop-favorites-hotels .discovery-photo .photo-open img { height:100%;object-fit:cover; }
+.desktop-favorites-hotels .favorite-hotel-details {
+ display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto 1fr;
+ gap:6px 12px;padding:16px;min-width:0;
+}
+.favorite-hotel-name {
+ align-self:start;min-width:0;overflow:hidden;overflow-wrap:anywhere;
+ display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;
+ border:0;background:transparent;padding:0;text-align:left;color:var(--k-text-primary);font:500 18px/24px Onest;
+}
+.favorite-list-tag {
+ display:flex;align-self:start;align-items:center;gap:6px;max-width:150px;min-width:0;
+ border:0;border-radius:12px;padding:6px 10px;background:var(--k-action-tint);
+ color:var(--theme-link,var(--k-action-primary));font:500 12px/18px Onest;
+}
+.favorite-list-tag > span { overflow:hidden;text-overflow:ellipsis;white-space:nowrap; }
+.favorite-list-tag > .k-icon { flex:none; }
+.favorite-hotel-search {
+ grid-column:1/-1;display:grid;gap:2px;color:var(--k-text-secondary);font:400 12px/18px Onest;
+}
+.favorite-hotel-bottom {
+ grid-column:1/-1;align-self:end;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;
+ gap:4px 12px;padding-top:8px;
+}
+.desktop-favorites-hotels .favorite-rating { flex-wrap:wrap;gap:4px 6px;margin:0;font:400 12px/18px Onest; }
+.favorite-price-action { border:0;background:transparent;padding:0;color:var(--k-text-primary);text-align:right;flex:none;margin-inline-start:auto; }
+
+@container (max-width:520px) {
+ .desktop-favorites-hotels .favorite-hotel { --favorite-photo-height:200px;grid-template-columns:minmax(0,1fr); }
+}
+@media (max-width:900px) {
+ .desktop-favorites-layout { grid-template-columns:minmax(0,1fr); }
+ .desktop-favorites-map { position:relative;top:auto;height:clamp(320px,56dvh,440px); }
+}
+@media (max-width:560px) {
+ .desktop-app .desktop-favorite-detail .favorite-header { flex-wrap:wrap; }
+}
+
 .favorite-share-url { width:100%;padding:12px;border:1px solid var(--k-border-subtle);border-radius:12px;background:var(--k-surface-app);font:400 13px/20px Onest; }
 .favorite-shared-hotels { display:flex;flex-direction:column;gap:12px; }
 .favorite-shared-hotels > div { display:flex;align-items:center;gap:12px; }
 .favorite-shared-hotels img { width:64px;height:64px;object-fit:cover;border-radius:12px; }
-@media(min-width:1501px) {
- .desktop-favorites-layout { grid-template-columns:minmax(360px,calc(50% - 336px)) minmax(0,1fr); }
-}
-@media(min-width:1501px) and (max-width:1900px),(max-width:1100px) {
- .desktop-favorites-hotels .favorite-hotel { grid-template-columns:minmax(0,1fr); }
- .desktop-favorites-hotels .discovery-photo { grid-column:1;grid-row:1;height:200px;min-height:200px; }
- .desktop-favorites-hotels .discovery-photo :is(.hotel-card-photos,.hotel-photo-carousel,.hotel-photo-track,.photo-open,img) { height:200px;min-height:200px; }
- .desktop-favorites-hotels .favorite-hotel-details { grid-column:1;grid-row:2;min-height:190px; }
-}
-
-/* Compact favourite cards: title and collection share the first row. */
-.desktop-favorites-hotels .favorite-hotel { min-height:176px; }
-.desktop-favorites-hotels .discovery-photo { height:auto; }
-.desktop-favorites-hotels .discovery-photo > .hotel-card-photos { position:absolute;inset:0;height:100%; }
-.desktop-favorites-hotels .discovery-photo,
-.desktop-favorites-hotels .discovery-photo :is(.hotel-card-photos,.hotel-photo-carousel,.hotel-photo-track,.photo-open,img) { min-height:176px; }
-.desktop-favorites-hotels .favorite-hotel-details {
- display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto 1fr;
- gap:6px 12px;padding:16px;min-height:0;align-content:start;
-}
-.desktop-favorites-hotels .favorite-hotel-name {
- grid-column:1;grid-row:1;align-self:start;min-width:0;
- display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;
-}
-.desktop-favorites-hotels .favorite-list-tag {
- grid-column:2;grid-row:1;align-self:start;max-width:150px;min-width:0;
-}
-.desktop-favorites-hotels .favorite-list-tag > span { overflow:hidden;text-overflow:ellipsis;white-space:nowrap; }
-.desktop-favorites-hotels .favorite-list-tag > .icon { flex-shrink:0; }
-.desktop-favorites-hotels .favorite-hotel-search { grid-column:1/-1;grid-row:2; }
-.desktop-favorites-hotels .favorite-hotel-bottom { grid-column:1/-1;grid-row:3;margin-top:0;padding-top:8px;align-self:end; }
-@media(min-width:1501px) and (max-width:1900px),(max-width:1100px) {
- .desktop-favorites-hotels .discovery-photo,
- .desktop-favorites-hotels .discovery-photo :is(.hotel-card-photos,.hotel-photo-carousel,.hotel-photo-track,.photo-open,img) { height:200px;min-height:200px; }
- .desktop-favorites-hotels .favorite-hotel-details { min-height:0; }
-}
-.desktop-favorites-hotels .discovery-photo .photo-open img { height:100%;min-height:0; }
 .desktop-app .favorite-header>.favorite-share-button{margin-left:auto;display:inline-flex;align-items:center;gap:8px;min-height:44px;flex:none;white-space:nowrap}

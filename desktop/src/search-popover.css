@@ -20,6 +20,8 @@
 .desktop-app .desktop-search-popover {position:absolute;top:calc(100% + 12px);left:0;width:min(440px,100%);background:var(--theme-card,#fff);border:1px solid var(--k-border-subtle);border-radius:24px;padding:20px 24px 24px;box-shadow:0 16px 48px #10132024;z-index:70;overflow:auto;overscroll-behavior:contain;outline:none;}
 .desktop-app .desktop-search-popover-dates {width:min(720px,100%);left:50%;transform:translateX(-50%);}
 .desktop-app .desktop-search-popover-guests {left:auto;right:0;width:min(440px,100%);}
+.desktop-modal:has(.search-picker .guest-fields) {width:min(440px,calc(100vw - 48px));}
+.desktop-modal .search-picker:has(.guest-fields) {min-height:0;}
 .desktop-app .desktop-destination-label {font:400 13px/20px var(--k-font-text);margin:0 0 8px;}
 .desktop-app .desktop-destination-list {display:flex;flex-direction:column;gap:4px;}
 .desktop-app .desktop-destination-list>button {display:flex;align-items:center;gap:12px;border:0;border-radius:12px;padding:10px 8px;background:transparent;text-align:left;color:var(--k-text-primary);width:100%;}

@@ -1,6 +1,6 @@
 /* Full-width desktop search: shared search/filters, desktop composition only. */
 .desktop-app[data-route=results] .keys-content,
-.desktop-app[data-route=results-map] .keys-content{max-width:none;margin:0 24px;padding:20px 0 40px!important}
+.desktop-app[data-route=results-map] .keys-content{max-width:none;margin:0 var(--desktop-wide-gutter);padding:20px 0 40px!important}
 .desktop-results-search{margin:24px 24px 0}
 .desktop-results-search form{display:grid;grid-template-columns:minmax(180px,1.3fr) minmax(240px,1fr) minmax(160px,.8fr) 180px;align-items:center;gap:8px;padding:8px;background:var(--theme-card,#fff);border:1px solid var(--theme-border,#e4e7ef);border-radius:24px}
 .desktop-results-search form>button:not(.k-button){display:flex;align-items:center;gap:14px;min-width:0;min-height:60px;padding:8px 20px;border:0;border-right:1px solid var(--theme-border,#e4e7ef);border-radius:0;background:transparent;color:var(--theme-text,#101320);text-align:left}
@@ -63,7 +63,6 @@
 .desktop-map-empty{min-height:420px;display:flex;align-items:center;justify-content:center;flex-direction:column;background:var(--theme-tint,#eaf0f7);color:var(--theme-secondary,#5a6072);text-align:center;font-size:13px}
 @media(max-width:1250px){
  .desktop-results-layout{grid-template-columns:300px minmax(0,1fr) 240px;gap:16px}
- .desktop-app[data-route=results] .keys-content,.desktop-app[data-route=results-map] .keys-content{margin:0 20px}
  .desktop-results-search{margin:20px 20px 0}
  .desktop-results-list .hotel-list-card{grid-template-columns:140px minmax(0,1fr)}
  .desktop-results-list .hotel-list-card-info{padding:14px;gap:8px}

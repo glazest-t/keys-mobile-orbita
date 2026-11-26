@@ -1,8 +1,11 @@
-/* Shared desktop page frame. Search keeps its independent wide layout.
-   Focused auth/edit forms and the conversation viewer retain their own widths. */
+/* Shared desktop page widths and gutters. */
 .desktop-app {
   --desktop-page-width: 1280px;
   --desktop-page-gutter: 32px;
+  --desktop-wide-gutter: 24px;
+}
+@media (max-width: 1250px) {
+ .desktop-app { --desktop-wide-gutter: 20px; }
 }
 .desktop-app .desktop-flow:is([data-step="booking-details"],[data-step="stay-bill"]) {
   width: calc(100% - 2 * var(--desktop-page-gutter));
