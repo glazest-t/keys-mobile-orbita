@@ -1,5 +1,6 @@
 /* Hotel overview: rooms and full information share one desktop page. */
-.desktop-hotel-overview{display:flex;flex-direction:column;gap:24px;min-width:0}
+.desktop-hotel-overview{--hotel-detail-section-gap:48px;display:flex;flex-direction:column;gap:var(--k-space-sectionGap,24px);min-width:0}
+.desktop-hotel-overview>:is(.desktop-hotel-rooms,.desktop-hotel-information){margin-block-start:calc(var(--hotel-detail-section-gap) - var(--k-space-sectionGap,24px))}
 .desktop-hotel-top{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:28px;align-items:stretch}
 .desktop-hotel-top>.source-hotel-hero{height:auto;min-height:440px;margin:0}
 .desktop-hotel-photo-carousel{position:absolute;inset:0;height:100%;scroll-snap-type:x mandatory;overscroll-behavior-x:contain}
@@ -29,8 +30,10 @@
 .desktop-hotel-rooms-heading h2{margin:0 0 8px}
 .desktop-hotel-rooms-heading p{margin:0;color:var(--k-text-secondary);font:400 14px/20px Onest,sans-serif}
 .desktop-hotel-rooms-heading>.k-button{width:auto;flex:none}
-.desktop-hotel-overview .desktop-hotel-information{display:flex;flex-direction:column;gap:24px;padding:0}
+.desktop-hotel-overview .desktop-hotel-information{display:flex;flex-direction:column;gap:var(--hotel-detail-section-gap);padding:0}
 .desktop-hotel-information>.hotel-section{margin:0;padding:28px;background:var(--k-surface-card);border:1px solid var(--k-border-subtle);border-radius:28px}
+.desktop-hotel-information>.hotel-section:is(.hotel-location-section,#hotel-reviews){padding:0;border:0;border-radius:0;background:none}
+.keys-app .desktop-hotel-information :is(.hotel-location-section,#hotel-reviews) .section-label>h2{padding-inline:0}
 .desktop-hotel-information .hotel-description{font-size:16px;line-height:26px;max-width:960px;margin:0}
 .desktop-hotel-information .hotel-amenities{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .desktop-hotel-information .hotel-amenities>span{display:flex;align-items:center;gap:10px}
@@ -38,6 +41,7 @@
 .desktop-hotel-information #hotel-reviews{scroll-margin-top:24px}
 .desktop-hotel-reviews{display:block;column-count:2;column-gap:16px;margin-top:12px}
 .desktop-hotel-reviews>.review-card{break-inside:avoid;page-break-inside:avoid;width:100%;min-width:0;max-width:none;margin:0 0 16px;background:var(--k-surface-app);padding:20px;border-radius:20px}
+html[data-app-theme="dark"] .desktop-hotel-reviews>.review-card{background:var(--k-surface-card)}
 .desktop-hotel-reviews .review-card p{white-space:normal;overflow:visible;display:block;-webkit-line-clamp:unset;font-size:15px;line-height:24px}
 .desktop-hotel-back{display:inline-flex;align-items:center;align-self:flex-start;gap:12px;margin-bottom:-16px;padding:0;border:0;border-radius:22px;background:transparent;color:var(--k-text-primary);font:500 14px/20px Onest,sans-serif;cursor:pointer}
 .desktop-hotel-back-icon{display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--k-border-subtle);border-radius:50%;background:var(--k-surface-card)}
@@ -53,12 +57,14 @@
 .desktop-room-search-field strong{font:500 15px/22px Onest,sans-serif}
 .desktop-room-search>form>.k-button{width:auto;min-width:190px;height:60px}
 @media(max-width:1100px){
+ .desktop-hotel-overview{--hotel-detail-section-gap:40px}
  .desktop-hotel-top{grid-template-columns:minmax(0,1fr) 340px;gap:20px}
  .desktop-hotel-summary{padding:20px}
  .desktop-hotel-information .hotel-amenities{grid-template-columns:repeat(2,minmax(0,1fr))}
  .desktop-hotel-rooms .room-offer{grid-template-columns:260px minmax(0,1fr)}
 }
 @media(max-width:800px){
+ .desktop-hotel-overview{--hotel-detail-section-gap:32px}
  .desktop-hotel-top{grid-template-columns:1fr}
  .desktop-hotel-top>.source-hotel-hero{height:360px;min-height:0}
  .desktop-hotel-rooms-heading{align-items:flex-start;flex-direction:column;gap:12px}
@@ -166,7 +172,34 @@
 /* The outer section already groups facilities and location. */
 .desktop-hotel-information .hotel-facilities-card{border:0;padding:0 4px;border-radius:0}
 .desktop-hotel-information .hotel-location{border:0}
-.desktop-hotel-information>.hotel-location-section{padding:0;border:0;background:none}
+.desktop-app .desktop-location-preview{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:16px 24px;padding:0;border:0;border-radius:0;background:none}
+.desktop-location-preview>.section-label{grid-column:1/-1}
+.desktop-location-preview .nearby-location-link-area{min-width:0;align-content:start;gap:12px}
+.desktop-location-preview .nearby-hotel-address-row{min-height:36px;flex-wrap:wrap;gap:8px 12px}
+.desktop-location-preview .nearby-hotel-address{flex:1 1 12rem;align-items:center}
+.desktop-location-preview .nearby-hotel-address>.k-icon{flex:none}
+.desktop-location-preview .nearby-address-text{font-size:14px;line-height:20px}
+.desktop-location-preview .nearby-location-actions{display:flex;flex-wrap:wrap;gap:8px}
+.desktop-app .desktop-location-preview .nearby-hotel-preview{height:clamp(280px,28vw,380px)}
+.desktop-app .desktop-location-preview .nearby-preview-places{min-height:0;gap:12px}
+.desktop-location-preview .nearby-preview-link{min-height:36px;padding:0 4px}
+.nearby-desktop-preview-list{flex:1 1 0;min-height:0;contain:size;overflow:auto;overscroll-behavior-y:contain;scrollbar-gutter:stable;scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--k-text-secondary) 52%,transparent) transparent}
+.nearby-desktop-preview-list>.nearby-photo-card{display:grid;grid-template-columns:clamp(100px,9vw,128px) minmax(0,1fr);align-items:center;gap:12px;width:100%;min-height:56px;padding:8px 4px}
+.nearby-desktop-preview-list>.nearby-photo-card:has(>.nearby-category-tile){grid-template-columns:44px minmax(0,1fr)}
+.nearby-desktop-preview-list>.nearby-photo-card+.nearby-photo-card{border-top:1px solid var(--k-border-subtle)}
+.nearby-desktop-preview-list>.nearby-photo-card:hover{background:var(--theme-tint,#eaf2ff);border-radius:var(--k-radius-sm,12px)}
+.nearby-desktop-preview-list:focus-visible,.nearby-desktop-preview-list>.nearby-photo-card:focus-visible{outline:2px solid var(--k-action-primary);outline-offset:-2px;border-radius:var(--k-radius-sm,12px)}
+.nearby-desktop-preview-list .nearby-place-cover{aspect-ratio:4/3;border-radius:12px}
+.nearby-desktop-preview-list .nearby-photo-caption{gap:0}
+.nearby-desktop-preview-list .nearby-photo-caption strong{font-size:14px;line-height:20px}
+.desktop-app .desktop-location-preview:not(:has(.nearby-location-link-area)){grid-template-columns:minmax(0,1fr)}
+.desktop-location-preview:not(:has(.nearby-location-link-area)) .nearby-desktop-preview-list{flex:auto;contain:none;max-height:320px}
+
+@media(max-width:740px){
+ .desktop-app .desktop-location-preview{grid-template-columns:minmax(0,1fr);gap:16px}
+ .desktop-app .desktop-location-preview .nearby-hotel-preview{height:240px}
+ .nearby-desktop-preview-list{flex:auto;contain:none;max-height:320px}
+}
 
 /* Location and nearby places stay together on the hotel page. */
 .desktop-hotel-location-head{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px;align-items:end}
@@ -194,7 +227,7 @@
 
 .desktop-hotel-summary .hotel-review-praise{margin-top:4px;font:400 13px/19px Onest,sans-serif;color:var(--k-text-secondary)}
 
-.desktop-reviews-overview{display:flex;align-items:center;gap:14px;padding:8px 4px 0}
+.desktop-reviews-overview{display:flex;align-items:center;gap:14px;padding-top:8px}
 .desktop-reviews-overview>.hotel-rating{flex:none;min-width:54px;min-height:48px;display:grid;place-items:center;border-radius:14px;font-size:18px}
 .desktop-reviews-overview>div{display:flex;flex-direction:column;gap:4px;min-width:0}
 .desktop-reviews-overview strong{font:500 16px/22px Onest,sans-serif}
@@ -216,20 +249,30 @@
 
 .keys-app .desktop-nearby-date[aria-pressed=true]>.desktop-nearby-date-badge{background:var(--k-action-primary);color:#fff}
 
-/* Four neighbouring prices fill the room section; navigation reveals the next four. */
-.desktop-app .desktop-nearby-dates-carousel{width:100%;max-width:none;mask-image:none;-webkit-mask-image:none;scroll-snap-type:x mandatory}
-.desktop-app .desktop-nearby-dates-track{width:100%;gap:10px;padding:16px 0 2px}
-.desktop-app .desktop-nearby-date{flex:0 0 calc((100% - 30px)/4);min-width:0;scroll-snap-align:start}
+/* Four full cards on wide screens, with room to preview the preceding and following dates. */
+.desktop-app .desktop-nearby-dates-carousel{width:100%;max-width:none;mask-image:none;-webkit-mask-image:none;scroll-snap-type:x mandatory;scroll-padding-inline:var(--nearby-dates-peek)}
+.desktop-app .desktop-nearby-dates-track{width:100%;gap:var(--nearby-dates-gap);padding:16px var(--nearby-dates-peek) 2px}
+.desktop-app .desktop-nearby-dates-track::after{content:"";flex:0 0 calc(var(--nearby-dates-peek) - var(--nearby-dates-gap))}
+.desktop-app .desktop-nearby-date{flex:0 0 calc((100% - 3 * var(--nearby-dates-gap))/4);min-width:0;scroll-snap-align:start}
 .desktop-app .desktop-nearby-dates>header{align-items:center;padding:0;margin-bottom:2px}
 .desktop-app .desktop-nearby-dates>header p{margin:0;text-align:right;white-space:nowrap}
-.desktop-nearby-dates-slider{position:relative;isolation:isolate}
-.desktop-nearby-date-controls{position:absolute;inset:16px 0 2px;z-index:1;display:flex;justify-content:space-between;pointer-events:none}
-.desktop-nearby-date-edge{display:flex;align-items:center;width:88px;background:linear-gradient(to right,var(--theme-card-a250,rgba(255,255,255,.98)),var(--theme-card-a204,rgba(255,255,255,.8)) 42%,rgba(255,255,255,0))}
-.desktop-nearby-date-edge.previous{padding-left:4px}
-.desktop-nearby-date-edge.next{justify-content:flex-end;padding-right:4px;background:linear-gradient(to left,var(--theme-card-a250,rgba(255,255,255,.98)),var(--theme-card-a204,rgba(255,255,255,.8)) 42%,rgba(255,255,255,0))}
-.desktop-nearby-date-edge>button{pointer-events:auto;color:var(--theme-link,var(--k-action-primary));box-shadow:0 2px 8px #162b5014}
-.desktop-nearby-date-edge.next .k-icon{transform:rotate(180deg)}
-.desktop-nearby-date-edge>button:disabled{opacity:.35;cursor:default}
+.desktop-carousel-navigation{position:relative;isolation:isolate}
+.desktop-nearby-dates-slider{--nearby-dates-peek:clamp(56px,8vw,112px);--nearby-dates-gap:clamp(8px,1.15vw,16px);--carousel-controls-top:16px;--carousel-controls-bottom:2px}
+.desktop-popular-facilities-carousel{--carousel-controls-bottom:39px}
+.desktop-popular-facilities-carousel .hotel-popular-facilities-scroll{scroll-snap-type:x proximity}
+.desktop-popular-facilities-carousel .hotel-popular-facilities-scroll[data-dragging=true]{scroll-snap-type:none}
+.desktop-popular-facilities-carousel .hotel-facility-photo-card{scroll-snap-align:start}
+.desktop-carousel-controls{position:absolute;inset:var(--carousel-controls-top,0) 0 var(--carousel-controls-bottom,0);z-index:1;display:flex;justify-content:space-between;pointer-events:none}
+.desktop-carousel-edge{display:flex;align-items:center;width:88px;background:linear-gradient(to right,var(--theme-card-a250,rgba(255,255,255,.98)),var(--theme-card-a204,rgba(255,255,255,.8)) 42%,rgba(255,255,255,0))}
+.desktop-carousel-edge.previous{padding-left:4px}
+.desktop-carousel-edge.next{justify-content:flex-end;margin-left:auto;padding-right:4px;background:linear-gradient(to left,var(--theme-card-a250,rgba(255,255,255,.98)),var(--theme-card-a204,rgba(255,255,255,.8)) 42%,rgba(255,255,255,0))}
+.desktop-nearby-dates-slider .desktop-carousel-edge{width:var(--nearby-dates-peek);justify-content:center;padding-inline:0}
+.desktop-carousel-edge>button{pointer-events:auto;color:var(--theme-link,var(--k-action-primary));box-shadow:0 2px 8px #162b5014}
+.desktop-carousel-edge.next .k-icon{transform:rotate(180deg)}
+.desktop-carousel-edge>button:disabled{opacity:.35;cursor:default}
+@media(max-width:800px){
+ .desktop-app .desktop-nearby-date{flex-basis:max(128px,calc((100% - 3 * var(--nearby-dates-gap))/4));padding-inline:8px}
+}
 .desktop-app .desktop-hotel-location-address{display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:20px;padding:0}
 .desktop-app .desktop-hotel-location-address>p{flex:1;min-width:0}
 .desktop-hotel-location-actions{display:flex;flex:none;gap:8px;flex-wrap:nowrap}
@@ -239,21 +282,49 @@
 .desktop-app .nearby-real-places::-webkit-scrollbar-track{background:transparent}
 .desktop-app .nearby-real-places::-webkit-scrollbar-thumb{border:2px solid var(--theme-border,#fff);border-radius:12px;background:#a8b9d4}
 .desktop-app .nearby-real-places::-webkit-scrollbar-thumb:hover{background:#6987b3}
-/* The standalone nearby page keeps the map and list aligned. */
-.desktop-app .desktop-flow[data-step="hotel-nearby"] .detail-header{align-items:flex-start}
-.desktop-app .desktop-flow[data-step="hotel-nearby"] .detail-header>.k-icon-button{margin-top:2px}
-.desktop-app .desktop-flow[data-step="hotel-nearby"] .detail-header>.nearby-header-title{align-items:flex-start;padding-top:10px}
+/* Let the page scroll through every place while the map stays in view. */
+.desktop-app .desktop-flow[data-step="hotel-nearby"] .scroll-detail-header{height:auto;margin-bottom:20px}
+.desktop-app .desktop-flow[data-step="hotel-nearby"] .detail-header{align-items:center;height:auto;min-height:56px;margin:0}
+.desktop-app .desktop-flow[data-step="hotel-nearby"] .detail-header>.nearby-header-title{align-items:flex-start}
 .keys-app.desktop-app .detail-header>.nearby-header-title h1{margin:0;font:500 20px/28px Onest,sans-serif;letter-spacing:-.3px}
 .desktop-app .desktop-flow[data-step="hotel-nearby"]>.desktop-flow-layout{display:block}
 .desktop-app .desktop-flow[data-step="hotel-nearby"]>.desktop-flow-layout>.desktop-flow-footer{display:none}
-.desktop-app .desktop-flow[data-step="hotel-nearby"] .detail-nearby{display:grid;grid-template-columns:minmax(0,1fr) 380px;grid-template-rows:auto minmax(0,1fr);gap:12px 24px;height:calc(100dvh - 190px);min-height:440px;padding:0;max-width:none}
-.desktop-app .desktop-flow[data-step="hotel-nearby"] .nearby-live-map{grid-column:1;grid-row:1/3;height:100%;min-height:0;border-radius:24px}
+.desktop-app .desktop-flow[data-step="hotel-nearby"] .detail-nearby{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,32%);grid-template-rows:auto 1fr;align-items:start;gap:12px 24px;padding:0;max-width:none}
+.desktop-app .desktop-flow[data-step="hotel-nearby"] .nearby-live-map{grid-column:1;grid-row:1/3;position:sticky;top:24px;height:clamp(280px,calc(100dvh - 196px),720px);border-radius:24px}
 .desktop-app .desktop-flow[data-step="hotel-nearby"] .detail-segments{grid-column:2;grid-row:1;gap:4px}
-.desktop-app .desktop-flow[data-step="hotel-nearby"] .nearby-real-places{grid-column:2;grid-row:2;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:0 12px;border:1px solid var(--k-border-subtle);border-radius:20px}
-.desktop-app .desktop-flow[data-step="hotel-nearby"] .nearby-photo-list{padding-block:12px}
+.desktop-app .desktop-flow[data-step="hotel-nearby"] .nearby-real-places{grid-column:2;grid-row:2;min-width:0;padding:0 12px;border:1px solid var(--k-border-subtle);border-radius:20px}
+.desktop-app .desktop-flow[data-step="hotel-nearby"] .nearby-real-places.nearby-photo-list{padding:0;border:0}
 .desktop-app .desktop-flow[data-step="hotel-nearby"] .nearby-gallery-photo{flex-basis:calc((100% - 10px)/2)}
 .desktop-app .desktop-flow[data-step="hotel-nearby"] .nearby-place-row{grid-template-columns:48px minmax(0,1fr);gap:12px}
 .desktop-app .desktop-flow[data-step="hotel-nearby"] .nearby-empty{grid-column:2;grid-row:1/3}
+.desktop-app .desktop-flow[data-step="hotel-nearby"] .nearby-empty:only-child{grid-column:1/-1}
+.desktop-app:has(.desktop-flow[data-step="hotel-nearby"]) .desktop-map-dialog:has(>.nearby-expanded-map){top:0}
+
+@media(max-width:900px){
+ .desktop-app .desktop-flow[data-step="hotel-nearby"] .detail-nearby{display:flex;flex-direction:column;align-items:stretch;gap:16px}
+ .desktop-app .desktop-flow[data-step="hotel-nearby"] .nearby-live-map{position:relative;top:auto;height:clamp(220px,40dvh,320px)}
+ .desktop-app .desktop-flow[data-step="hotel-nearby"] .nearby-gallery-photo .nearby-place-cover{aspect-ratio:4/3}
+}
+
+.keys-app.desktop-modal:has(.nearby-place-sheet--desktop-hotel .nearby-place-photo){
+ --nearby-dialog-max-width:min(880px,calc(100vw - 48px));
+ width:max-content;
+ max-width:var(--nearby-dialog-max-width);
+}
+.desktop-modal .nearby-place-sheet--desktop-hotel .nearby-place-photo{
+ --nearby-photo-max-height:min(62dvh,560px);
+ width:min(calc(var(--nearby-dialog-max-width) - 56px),calc(var(--nearby-photo-max-height) * var(--nearby-photo-aspect,1)));
+ max-width:100%;
+ aspect-ratio:var(--nearby-photo-aspect,1);
+ margin-inline:auto;
+ background:transparent;
+}
+.desktop-modal .nearby-place-sheet--desktop-hotel p{max-width:60ch}
+.desktop-modal .nearby-place-sheet--desktop-hotel .nearby-place-photo img{width:100%;height:100%;object-fit:contain}
+.keys-app .nearby-desktop-gallery .nearby-place-photo>.k-icon-button{position:absolute;top:50%;transform:translateY(-50%);background:var(--theme-card,#fff);color:var(--k-primary,#2f5bff);box-shadow:0 2px 12px #10132026}
+.nearby-desktop-gallery .nearby-place-photo>.k-icon-button:first-of-type{inset-inline-start:12px}
+.nearby-desktop-gallery .nearby-place-photo>.k-icon-button:last-of-type{inset-inline-end:12px}
+.nearby-desktop-photo-count{position:absolute;inset-inline-start:12px;bottom:12px;border-radius:20px;padding:4px 10px;background:#101320d9;color:#fff;font:500 12px/18px Onest,sans-serif}
 
 /* Dates and guests stay in a modal over the unfinished booking. */
 .keys-app.desktop-modal:has(.desktop-booking-search-editor){width:min(820px,calc(100vw - 48px))}

@@ -1,11 +1,13 @@
 import {useNovember} from '../usePrototypeVariant';
 import {usePrototypeCopy} from '../usePrototypeText';
+import {travelersTitleCopy} from '../travelers/copy';
 import {useState,useEffect,useRef} from 'react';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import {Icon,Mark} from '../ui';
 
 export function DesktopNavigation({route,name,photo,points=0,unread=false,onNavigate,onLogin,onLogout,onAddBooking}:{route:string;onAddBooking?:()=>void;name?:string;photo?:string;points?:number;unread?:boolean;onNavigate:(route:string)=>void;onLogin:()=>void;onLogout:()=>void}){
  const november=useNovember();
+ const travelersTitle=usePrototypeCopy(...travelersTitleCopy);
  const addBookingHint=usePrototypeCopy(
   november?'Добавьте её по номеру и коду из ваучера':'Добавьте её по номеру бронирования',
   november?'Номер брони и код из ваучера':'Номер бронирования',
@@ -17,7 +19,7 @@ export function DesktopNavigation({route,name,photo,points=0,unread=false,onNavi
  const pendingMenuAction=useRef<(()=>void)|null>(null);
  const menuItems=[
   ['profile-history','nav-trips','История поездок'],
-  ['travelers','guests','Путешественники'],
+  ['travelers','guests',travelersTitle],
   ['price-watches','discount','Следим за ценами'],
   ['help','help','Помощь и поддержка'],
  ];

@@ -1,5 +1,6 @@
 import type {BookingSummaryExample} from '../booking/BookingSummary';
 import {getPrototypeText,selectPrototypeText} from '../prototypeText';
+import {isDesktop} from '../desktop/surface';
 import {createFinderChat,sendFinderMessage,completeFinderReply} from '../assistant/model';
 import {submitSupport} from '../profile/support';
 import {confirmPin} from '../profile/settings';
@@ -32,9 +33,18 @@ export async function createCatalogueFixture(scene:CatalogueScene):Promise<Catal
  const now=Date.now();
  const futureDates=['record-cancel','hotel-route'].includes(scene.id)?{checkIn:new Date(now+7*86400000).toISOString().slice(0,10),checkOut:new Date(now+9*86400000).toISOString().slice(0,10)}:undefined;
  let commerce=activateTripScenario(initial,owner,(scene.trip||'empty') as TripScenario,'catalogue-booking',now,futureDates);
+ if(isDesktop&&(scene.nearbyDates||['booking-hotel','results'].includes(scene.id))){
+  // Leave two earlier dates in the catalogue carousel so both arrows can be used.
+  const search=commerce.search;
+  const today=new Date(now).toLocaleDateString('en-CA');
+  const offset=Math.max(0,Date.parse(today)+2*86400000-Date.parse(search.checkIn));
+  const shift=(date:string)=>new Date(Date.parse(date)+offset).toISOString().slice(0,10);
+  commerce={...commerce,search:{...search,checkIn:shift(search.checkIn),checkOut:shift(search.checkOut)}};
+ }
  commerce=ensureDemoHotelPoints(ensureDemoPointsHistory(ensureWelcomePoints(commerce,owner),owner),owner);
  if(scene.trip==='cancelled')commerce={...commerce,historyReturnTo:'trips',historyBrowse:{[owner]:{query:'',filter:'Отменённые'}}};
  if(scene.pendingBooking)commerce={...commerce,draft:{...commerce.bookings[0].draft,step:'confirmation'}};
+ if(scene.route==='traveler'||scene.route==='edit')state.selectedTravelerId='companion';
  if(scene.firstFind)state.users[owner].travelStyleIntro='pending';
  if(scene.loyalty)commerce={...commerce,hotelMemberships:{...commerce.hotelMemberships,[owner]:{...commerce.hotelMemberships?.[owner],'orbit-sea':true}}};
  if(scene.role&&scene.role!=='guest'){

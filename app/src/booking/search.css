@@ -84,7 +84,6 @@
 .swipe-browser .swipe-empty{padding-top:calc(var(--device-safe-area-top,54px) + var(--swipe-heading-height) + 24px)}
 
 .swipe-heading .k-icon-button{background:var(--theme-card-a31,#FFFFFF1F);border-color:var(--theme-border-a64,#FFFFFF40);color:white}
-.swipe-heading .k-icon{filter:brightness(0) invert(1)}
 
 /* Route-scoped system chrome colour; original runtime geometry and assets stay intact. */
 .device-screen:has(.swipe-browser) .status-bar{color:#FFFFFF;background:#0d0f17}

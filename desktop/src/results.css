@@ -43,13 +43,13 @@
 .desktop-results-list-heading h1{margin:0;font:500 20px/28px Unbounded;letter-spacing:-.6px}
 .desktop-results-sort{width:38px;height:38px;display:grid;place-items:center;border:1px solid var(--theme-border,#e4e7ef);border-radius:50%;background:var(--theme-card,#fff);cursor:pointer}
 .desktop-results-list .hotel-list-card{display:grid;grid-template-columns:minmax(140px,29%) minmax(0,1fr);min-width:0;min-height:176px;margin:0;border-radius:24px}
+.desktop-results-list .hotel-list-card>.guest-style-match{grid-column:1/-1;min-width:0}
 .desktop-results-list .hotel-list-card-info{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto 1fr auto;align-items:start;gap:6px 12px;padding:16px;min-width:0;text-align:left}
 .desktop-results-list .hotel-list-card-info h2{grid-column:1/-1;grid-row:1;margin:0;font:500 18px/24px Onest;overflow-wrap:anywhere;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
 .desktop-results-list .discovery-price{grid-column:2;grid-row:2;align-self:end;position:static;order:0;margin:0;text-align:right;display:flex;align-items:flex-end;flex-direction:column;gap:6px;min-width:0}
 .desktop-results-list .discovery-price strong{font:500 18px/25px Unbounded;letter-spacing:-.6px;white-space:nowrap}
 .desktop-results-list .discovery-price>span{display:flex;gap:5px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
-.desktop-results-list .hotel-list-card-info>p{grid-column:1;grid-row:2;margin:0;font-size:12px;line-height:18px;align-self:start;display:block}
-.desktop-results-list .hotel-list-card-info>p img{display:inline;vertical-align:middle;margin-right:4px}
+.desktop-results-list .hotel-list-card-info>p{grid-column:1;grid-row:2;margin:0;font-size:12px;line-height:18px;align-self:start}
 .desktop-results-list .discovery-rating{grid-column:1/-1;grid-row:3;align-self:end;display:flex;align-items:center;gap:8px}
 .desktop-results-list .discovery-rating span{font-size:12px}
 .desktop-results-list .discovery-photo{height:auto;min-height:176px}

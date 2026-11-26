@@ -10,3 +10,31 @@ html[data-app-theme="dark"] .k-icon-default {
   background-color:currentColor;
   mask:var(--icon-image) center / contain no-repeat;
 }
+
+/* Action glyphs use the link palette on every surface, including portalled menus. */
+:where(button,a[href],summary,[role="button"],[role="link"],[role="tab"],[role^="menuitem"],[role="option"],label:has(>input:enabled),.desktop-breakfast-select:has(>select:enabled)):not(:where(:disabled,[aria-disabled="true"]))
+  :is(.k-icon:not(.k-icon-artwork),.gis-place-icon):not(:where(.bottom-navigation *,.sort-icon-chip *,.k-status *,.service-added-badge *)) {
+  color:var(--k-interactive-icon-color,var(--theme-icon,var(--theme-link,var(--k-action-primary,#2f5bff)))) !important;
+}
+
+/* Original monochrome SVGs also take the action color, through their alpha mask. */
+:where(button,a[href],summary,[role="button"],[role="link"],[role="tab"],[role^="menuitem"],[role="option"],label:has(>input:enabled),.desktop-breakfast-select:has(>select:enabled)):not(:where(:disabled,[aria-disabled="true"]))
+  .k-icon-default:not(:where(.bottom-navigation *,.sort-icon-chip *,.k-status *,.service-added-badge *)) {
+  background:currentColor;
+  mask:var(--icon-image) center / contain no-repeat;
+}
+
+/* Accent fills and selection marks use their existing contrasting foreground. */
+:where(
+  .k-button.primary,.k-button.danger,.save-hotel.is-saved,.gis-price-pin.selected,
+  .trip-hotel-address,.booking-card-action,.profile-points,.swipe-like,
+  .payment-choice-check,.results-sort-check,.profile-photo-camera,.photo-counter,.desktop-room-photo-count
+) { --k-interactive-icon-color:currentColor; }
+
+:where(.danger-text) { --k-interactive-icon-color:var(--theme-error,#e5484d); }
+:where(
+  .map-list-button,.favorite-mobile-list-tag,.hero-caption,.swipe-heading .k-icon-button,
+  .swipe-amenities>button,.fullscreen-photo-stage>.k-icon-button
+) { --k-interactive-icon-color:var(--theme-icon,#94bcff); }
+
+.device-picker-trigger>svg { color:var(--theme-icon,var(--theme-link,var(--k-action-primary,#2f5bff))); }

@@ -3,6 +3,7 @@ import {useId,useRef,useState} from 'react';
 import {Icon} from '../ui';
 import {Carousel} from '../mobile';
 import {isDesktop} from '../desktop/surface';
+import {DesktopCarouselNavigation} from './DesktopCarouselNavigation';
 import {FullscreenPhotoGallery} from './FullscreenPhotoGallery';
 import {amenityIcon} from './amenityIcons';
 import {hotelFacets} from './searchFacets';
@@ -101,14 +102,7 @@ export function HotelFacilities({amenities,hotelId,showPopular=true}:{amenities:
    </button>}
   </div>;
 
- return <>
-  {showPopular?<section className="hotel-section hotel-amenities-section">
-   <h2>{novemberEditorialText("Т-1077", "Удобства отеля", "Удобства")}</h2>
-   {facilitiesCard}
-  </section>:facilitiesCard}
-  {popular.length>0&&<section className={`hotel-section hotel-popular-facilities${isDesktop?'':' hotel-popular-facilities-mobile'}`}>
-   <h2>Популярные удобства</h2>
-   <Carousel ariaLabel="Фото популярных удобств" className="hotel-popular-facilities-scroll" contentClassName="hotel-popular-facilities-track">
+ const popularCarousel=<Carousel ariaLabel="Фото популярных удобств" className="hotel-popular-facilities-scroll" contentClassName="hotel-popular-facilities-track">
     {popular.map(({label,photos})=><div className="hotel-facility-photo-card" key={label}>
      <button type="button" className="hotel-facility-photo-cover" aria-label={`Посмотреть фото: ${label}${photos.length>1?` · ${photos.length} фото`:""}`} aria-haspopup="dialog" onClick={()=>setGalleryState({label,index:0})}>
       <img src={photos[0]} alt="" draggable={false}/>
@@ -116,11 +110,32 @@ export function HotelFacilities({amenities,hotelId,showPopular=true}:{amenities:
      </button>
      <span className="hotel-facility-photo-caption">{label}</span>
     </div>)}
-   </Carousel>
+ </Carousel>;
+
+ return <>
+  {showPopular?<section className="hotel-section hotel-amenities-section">
+   <h2>{novemberEditorialText("Т-1077", "Удобства отеля", "Удобства")}</h2>
+   {facilitiesCard}
+  </section>:facilitiesCard}
+  {popular.length>0&&<section className={`hotel-section hotel-popular-facilities${isDesktop?'':' hotel-popular-facilities-mobile'}`}>
+   <h2>Популярные удобства</h2>
+   {isDesktop?<DesktopCarouselNavigation className="desktop-popular-facilities-carousel" previousLabel="Предыдущие удобства" nextLabel="Следующие удобства" itemCount={popular.length} hideUnavailable scrollStep={facilityScrollStep}>
+    {popularCarousel}
+   </DesktopCarouselNavigation>:popularCarousel}
   </section>}
   {gallery&&<FullscreenPhotoGallery title={gallery.label} subject="удобства"
    photos={gallery.photos.map((src,index)=>({src,label:`${gallery.label} · фото ${index+1}`}))}
    selected={galleryState?.index??null}
    onSelect={index=>setGalleryState(index===null?null:{label:gallery.label,index})}/>}
  </>;
+}
+
+function facilityScrollStep(viewport:HTMLElement){
+ const track=viewport.querySelector('.hotel-popular-facilities-track');
+ const card=track?.firstElementChild;
+ if(!track||!card)return viewport.clientWidth;
+ const gap=parseFloat(getComputedStyle(track).columnGap);
+ const stride=card.getBoundingClientRect().width+gap;
+ const cardsPerPage=Math.max(1,Math.floor((viewport.clientWidth+gap)/stride));
+ return cardsPerPage*stride;
 }

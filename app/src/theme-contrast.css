@@ -180,8 +180,9 @@ html[data-app-theme="dark"] .device-picker-trigger:focus-visible { outline-color
 /* Accent-surface refinements: white actions, translucent trip actions and legible icons. */
 html[data-app-theme="dark"] { --theme-icon:#94bcff; --theme-accent-button:#f4f7ff; --theme-accent-ink:#193979; }
 html[data-app-theme="dark"] :is(.keys-app,.sheet-body) :is(.icon-tile,.nearby-category-tile) { color:var(--theme-icon); }
-html[data-app-theme="dark"] :is(.keys-app,.sheet-body) :is(.icon-tile,.nearby-category-tile) .k-icon { color:inherit!important;filter:none; }
-html[data-app-theme="dark"] .keys-app :is(.hotel-facility-group,.hotel-facilities-all,.hotel-arrival-times,.booking-time-label,.booking-time-value,.booking-wishes-row,.text-action,.section-label button,.personal-price,.watch-price,.location-address,.hero-actions,.record-details-header,.trip-details-header,.desktop-hotel-heading-actions,.desktop-hotel-back-icon) .k-icon {
+html[data-app-theme="dark"] :is(.keys-app,.sheet-body) :is(.icon-tile,.nearby-category-tile) .k-icon { color:inherit;filter:none; }
+html[data-app-theme="dark"] .keys-app :is(.hotel-facility-group,.hotel-facilities-all,.hotel-arrival-times,.booking-time-label,.booking-time-value,.booking-wishes-row,.text-action,.section-label button,.personal-price,.watch-price,.location-address,.hero-actions,.record-details-header,.trip-details-header,.desktop-hotel-heading-actions,.desktop-hotel-back-icon) .k-icon,
+html[data-app-theme="dark"] .keys-app :is(.detail-scroll.nearby .detail-header,.nearby-expanded-map>header)>.k-icon-button .k-icon {
   color:var(--theme-icon)!important;
 }
 html[data-app-theme="dark"] .keys-app .k-list-row.danger-text>.icon-tile { color:var(--theme-error); }

@@ -145,7 +145,6 @@
 .desktop-app:is([data-route="traveler"],[data-route="edit"]) :is(.app-header,.keys-content,.app-footer),
 .desktop-app[data-route^="help-article/"] :is(.app-header,.keys-content) { max-width: 1280px; width: calc(100% - 64px); margin-inline: auto; }
 .desktop-app[data-route="traveler"] .details { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 32px; padding: 16px 24px; }
-.desktop-app[data-route="traveler"] .keys-content > h1 { font: 500 22px/30px Onest,sans-serif; margin: 0; }
 .desktop-app[data-route="traveler"] .keys-content > .k-button { width: 320px; align-self: flex-end; }
 .desktop-app[data-route^="help-article/"] .support-page { max-width: none; margin: 0; display: block; }
 .desktop-app[data-route^="help-article/"] .support-article { padding: 28px; }
@@ -182,14 +181,14 @@
 .desktop-app[data-route="edit"] .keys-content { padding-bottom: 24px!important; }
 .desktop-app[data-route="edit"] .app-footer { padding-top: 0; padding-bottom: 64px; }
 
-/* Traveler details: actions in the toolbar, no divider against the card edge. */
-.desktop-app .desktop-traveler-actions { margin-left: auto; display: flex; align-items: center; gap: 12px; }
-.desktop-app .desktop-traveler-actions .k-button { width: auto; }
-.desktop-app .desktop-traveler-actions .desktop-traveler-delete { color: var(--k-status-errorText); }
+/* Keep the title aligned with the first action when the delete link is present. */
+.desktop-app .desktop-traveler-actions { margin-inline-start: auto; flex: none; }
+.desktop-app .desktop-traveler-actions > .k-button { width: auto; }
+.desktop-app[data-route="traveler"] .app-header:has(.traveler-delete-link) { height: auto; align-items: flex-start; }
+.desktop-app[data-route="traveler"] .app-header:has(.traveler-delete-link) > .header-title { display: flex; align-items: center; min-height: 44px; }
 .desktop-app[data-route="traveler"] .details > div:nth-last-child(-n+2) { border-bottom: 0; }
 @media(max-width:900px) {
  .desktop-app[data-route="traveler"] .app-header { height: auto; min-height: 48px; flex-wrap: wrap; }
- .desktop-app .desktop-traveler-actions { gap: 8px; }
 }
 
 /* Security settings use the same page frame as the other profile sections. */

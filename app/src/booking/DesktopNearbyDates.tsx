@@ -1,38 +1,28 @@
-import {useLayoutEffect,useMemo,useRef,useState} from 'react';
+import {useCallback,useMemo,useState} from 'react';
 import {Carousel} from '../mobile';
-import {Icon,StatusBadge} from '../ui';
+import {StatusBadge} from '../ui';
+import {DesktopCarouselNavigation} from './DesktopCarouselNavigation';
 import {dateLabel,formatMoney,guestLabel,nights,type Commerce,type Search} from './model';
 import {nearbyDateOffers,withDemoNearbyDate} from './nearbyDates';
 
 export function DesktopNearbyDates({commerce,owner,onApply}:{commerce:Commerce;owner:string|null;onApply:(search:Search,pricedCommerce:Commerce)=>void|string}){
  const [error,setError]=useState('');
- const [edges,setEdges]=useState({start:true,end:false});
- const sectionRef=useRef<HTMLElement>(null);
  const pricedCommerce=useMemo(()=>withDemoNearbyDate(commerce,owner),[commerce,owner]);
  const offers=useMemo(()=>nearbyDateOffers(pricedCommerce,owner),[pricedCommerce,owner]);
  const selectedDate=offers.find(offer=>offer.selected)?.search.checkIn;
- useLayoutEffect(()=>{
-  const viewport=sectionRef.current?.querySelector<HTMLElement>('.desktop-nearby-dates-carousel');
-  const selected=viewport?.querySelector<HTMLElement>('[aria-pressed="true"]');
-  if(!viewport||!selected)return;
-  const reveal=()=>{
-   const track=selected.parentElement!;
-   const inset=parseFloat(getComputedStyle(track).paddingLeft);
-   const stride=selected.getBoundingClientRect().width+parseFloat(getComputedStyle(track).columnGap);
-   viewport.scrollLeft+=selected.getBoundingClientRect().left-viewport.getBoundingClientRect().left-inset-stride;
-  };
-  const update=()=>setEdges({start:viewport.scrollLeft<=2,end:viewport.scrollLeft+viewport.clientWidth>=viewport.scrollWidth-2});
-  const resize=()=>{reveal();update();};
-  resize();viewport.addEventListener('scroll',update,{passive:true});
-  const observer=new ResizeObserver(resize);
-  observer.observe(viewport);
-  return ()=>{observer.disconnect();viewport.removeEventListener('scroll',update);};
+ const revealSelected=useCallback((viewport:HTMLElement)=>{
+  const selected=viewport.querySelector<HTMLElement>('[aria-pressed="true"]');
+  const track=selected?.parentElement;
+  if(!selected||!track)return;
+  const previous=selected.previousElementSibling;
+  const firstVisible=previous?.previousElementSibling?previous:selected;
+  const inset=parseFloat(getComputedStyle(track).paddingLeft);
+  viewport.scrollLeft+=firstVisible.getBoundingClientRect().left-viewport.getBoundingClientRect().left-inset;
  },[selectedDate]);
- const move=(direction:number)=>{const viewport=sectionRef.current?.querySelector<HTMLElement>('.desktop-nearby-dates-carousel');if(viewport)viewport.scrollBy({left:direction*(viewport.clientWidth+10),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});};
  if(!offers.length)return null;
- return <section ref={sectionRef} className="desktop-nearby-dates" aria-label="Цены на соседние даты">
+ return <section className="desktop-nearby-dates" aria-label="Цены на соседние даты">
   <header><h2>Цены на соседние даты</h2><p>За {nights(commerce.draft!.search)} ноч. · {guestLabel(commerce.draft!.search)}</p></header>
-  <div className="desktop-nearby-dates-slider">
+  <DesktopCarouselNavigation className="desktop-nearby-dates-slider" previousLabel="Предыдущие даты" nextLabel="Следующие даты" itemCount={offers.length} onResize={revealSelected} scrollStep={nearbyDatesPageWidth}>
   <Carousel ariaLabel="Соседние даты проживания" className="desktop-nearby-dates-carousel" contentClassName="desktop-nearby-dates-track">
    {offers.map(offer=><button type="button" key={offer.search.checkIn} className="desktop-nearby-date" disabled={offer.priceMinor===null} aria-pressed={offer.selected} onClick={()=>{if(!offer.selected)setError(onApply(offer.search,pricedCommerce)||'');}}>
     <span className="desktop-nearby-date-label">{dateLabel(offer.search)}</span>
@@ -40,11 +30,18 @@ export function DesktopNearbyDates({commerce,owner,onApply}:{commerce:Commerce;o
     {offer.selected?<StatusBadge className="desktop-nearby-date-badge" tone="info" icon={null}>Ваши даты</StatusBadge>:offer.cheaper?<StatusBadge className="desktop-nearby-date-badge" tone="success" icon={null}>Дешевле</StatusBadge>:null}
    </button>)}
   </Carousel>
-   <div className="desktop-nearby-date-controls">
-    <div className="desktop-nearby-date-edge previous"><button type="button" className="k-icon-button" aria-label="Предыдущие даты" disabled={edges.start} onClick={()=>move(-1)}><Icon name="back" size={20} inheritColor/></button></div>
-    <div className="desktop-nearby-date-edge next"><button type="button" className="k-icon-button" aria-label="Следующие даты" disabled={edges.end} onClick={()=>move(1)}><Icon name="back" size={20} inheritColor/></button></div>
-   </div>
-  </div>
+  </DesktopCarouselNavigation>
   {error&&<p className="field-error" role="alert">{error}</p>}
  </section>;
+}
+
+function nearbyDatesPageWidth(viewport:HTMLElement){
+ const track=viewport.querySelector<HTMLElement>('.desktop-nearby-dates-track');
+ const card=track?.firstElementChild;
+ if(!track||!card)return viewport.clientWidth;
+ const styles=getComputedStyle(track);
+ const gap=parseFloat(styles.columnGap);
+ const stride=card.getBoundingClientRect().width+gap;
+ const visibleWidth=track.clientWidth-parseFloat(styles.paddingLeft)-parseFloat(styles.paddingRight);
+ return Math.max(1,Math.floor((visibleWidth+gap+1)/stride))*stride;
 }

@@ -1,6 +1,8 @@
 import {LanguageSetting} from '../profile/LanguageSetting';
 import {ThemeSetting} from '../profile/ThemeSetting';
 import {useNovember} from '../usePrototypeVariant';
+import {usePrototypeCopy} from '../usePrototypeText';
+import {travelersTitleCopy} from '../travelers/copy';
 import {isDesktop} from '../desktop/surface';
 import {ProfilePhoto} from '../profile/ProfilePhoto';
 import {useState,type Dispatch,type SetStateAction} from 'react';
@@ -14,6 +16,7 @@ import './profile.css';
 
 export function ProfilePage({user,commerce,onPhotoChange,onEdit,onBenefits,onHotelier,onGuests,onStyle,onNotifications,onSecurity,onData,onHistory,onHelp,onWatches,onInvite,onAbout,onLogout,onLanguage,onSupport}:{user:User;commerce:Commerce;onPhotoChange:(photo?:string)=>void;onEdit:()=>void;onBenefits:()=>void;onHotelier:()=>void;onGuests:()=>void;onStyle:()=>void;onNotifications:()=>void;onSecurity:()=>void;onData:()=>void;onHistory:()=>void;onHelp:()=>void;onWatches:()=>void;onInvite:()=>void;onAbout:()=>void;onLogout:()=>void;onLanguage:(language:'ru'|'en')=>void;onSupport:()=>void}){
  const november=useNovember();
+ const travelersTitle=usePrototypeCopy(...travelersTitleCopy);
  const approved=commerce.accounts[user.phone]?.hotelierStatus==='approved';
  const surname=user.travelers.find(t=>t.primary)?.surname||'';
  const name=[user.name,surname].filter(Boolean).join(' ');
@@ -24,7 +27,7 @@ export function ProfilePage({user,commerce,onPhotoChange,onEdit,onBenefits,onHot
   <button className="profile-points k-surface-action" onClick={onBenefits} aria-label={`Баллы «Ключей»: ${balance.toLocaleString('ru-RU')}. Открыть выгоды`}><span><small>Баллы «Ключей»</small><strong>{balance.toLocaleString('ru-RU')} <span>{pointsWord==='one'?'балл':pointsWord==='few'?'балла':'баллов'}</span></strong></span><span className="profile-points-link">Выгоды<Icon name="chevron-right" size={16} inheritColor/></span></button>
   <section className="profile-navigation-group" aria-labelledby="profile-travel-title"><h2 id="profile-travel-title">Мои поездки</h2><div className="k-card">
    <Row icon="nav-trips" title="История поездок" onClick={onHistory}/>
-   <Row icon="guests" title="Путешественники" onClick={onGuests}/>
+   <Row icon="guests" title={travelersTitle} onClick={onGuests}/>
    {!november&&<Row icon="style-match" title="Мой стиль" onClick={onStyle}/>}
   </div></section>
   <section className="profile-navigation-group" aria-labelledby="profile-benefits-title"><h2 id="profile-benefits-title">Моя выгода</h2><div className="k-card">

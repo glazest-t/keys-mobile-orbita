@@ -13,7 +13,6 @@
 .keys-app .profile-page .k-list-row+.k-list-row:before{left:12px;right:12px}
 .profile-page .k-list-row small{display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
 .profile-page .danger-text>span:nth-child(2){color:var(--theme-error,#e5484d)}
-.keys-app .profile-page .k-list-row>.k-icon{color:var(--theme-disabled,#a3a8b3)!important}
 
 .profile-navigation-group{display:flex;flex-direction:column;gap:8px}
 .keys-app .profile-navigation-group>h2{padding:0 4px;font:600 18px/25px var(--k-font-text);color:var(--k-text-primary);letter-spacing:-.25px}

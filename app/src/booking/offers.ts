@@ -1,11 +1,11 @@
 import {getPrototypeVariant} from '../prototypeVariant.ts';
-import {swipePreferenceScore} from './swipePreferences.ts';
+import {swipePreferenceScore,travelStyleMatch} from './swipePreferences.ts';
 import {promotionBasisPoints} from './promotions.ts';
 import {type Commerce,catalog,searchHotels,quoteDraft,startDraft,cancellationDeadline} from './model.ts';
 import {hotelVisual} from './presentation.ts';
 import {hotelFacets} from './searchFacets.ts';
 import {filterGroups,normalizeFilters,groupValues,priceRange,priceMode,priceError,sortKey,compareNumber,updateSearchOptions} from './filterSchema.ts';
-export function discoveryOffers(commerce:Commerce,owner:string|null){
+export function discoveryOffers(commerce:Commerce,owner:string|null,{rankByStyle=false}:{rankByStyle?:boolean}={}){
  if(getPrototypeVariant()==='november')commerce={...commerce,searchDistrict:undefined,searchFilters:commerce.searchFilters?.filter(f=>!f.startsWith('Сеть отеля: '))};
  const filters=normalizeFilters(commerce.searchFilters),range=priceRange(commerce),sort=sortKey(commerce.searchSort);
  if(priceError(range))return [];
@@ -30,6 +30,11 @@ export function discoveryOffers(commerce:Commerce,owner:string|null){
   const price=priceMode(commerce)==='night'?Math.round(q.lodgingMinor/q.nights/100)*100:q.lodgingMinor;
   return price>=(range.min??0)&&(range.max===null||price<=range.max)&&(commerce.collection!=='discount'||promotionBasisPoints(h.id)>=1000&&q.hotelDiscountMinor>0)&&(commerce.collection!=='friendly'||catalog.rates.find(r=>r.id===q.rateId)?.kind==='friendly_rate');
  });
+ const themes=commerce.swipePreferences?.[owner||'guest']?.themes;
+ if(rankByStyle&&sort==='recommended'&&themes?.length&&filterCount(commerce)===0&&!commerce.collection){
+  const styleMatches=new Map(hotels.map(({h})=>[h.id,travelStyleMatch(h.id,themes).percent]));
+  return hotels.sort((a,b)=>compareNumber(styleMatches.get(a.h.id),styleMatches.get(b.h.id),true));
+ }
  hotels.sort((a,b)=>{
   const av=hotelVisual(a.h.id),bv=hotelVisual(b.h.id);
   if(sort==='price'||sort==='price-desc')return compareNumber(a.q.lodgingMinor,b.q.lodgingMinor,sort==='price-desc');

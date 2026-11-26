@@ -1,5 +1,6 @@
 /* Shared hotel and booking header controls, across mobile and desktop. */
 .keys-app :is(.hotel-page .hero-actions,.desktop-hotel-heading-actions,.record-details-header,.trip-details-header) :is(.k-icon-button,.save-hotel),
+.keys-app :is(.detail-scroll.nearby .detail-header,.nearby-expanded-map>header)>.k-icon-button,
 .fullscreen-photo-header > .k-icon-button,
 .keys-app .desktop-hotel-back .desktop-hotel-back-icon{
  width:44px;height:44px;min-width:44px;min-height:44px;flex:none;
@@ -8,6 +9,7 @@
  backdrop-filter:none;box-shadow:none;
 }
 .keys-app :is(.hotel-page .hero-actions,.desktop-hotel-heading-actions,.record-details-header,.trip-details-header) :is(.k-icon-button,.save-hotel) .k-icon,
+.keys-app :is(.detail-scroll.nearby .detail-header,.nearby-expanded-map>header)>.k-icon-button .k-icon,
 .keys-app .desktop-hotel-back .desktop-hotel-back-icon .k-icon{
  width:20px!important;height:20px!important;color:inherit;
 }

@@ -44,7 +44,7 @@ function DetailHeader({kind}:{kind:HotelDetail}){
  const desktopNearby=isDesktop&&kind==='nearby';
  const nearbySubtitle=hotel.id==='orbit-sea'?'Сочи и Сириус':nearbyPhotos?'Отель и достопримечательности':'В радиусе 1,5 км';
  return <header className={'detail-header '+(kind==='gallery'?'gallery-header':'')}>
-  <IconButton name="back" label={flow.canGoBack?'Назад':backLabel||'Назад к отелю'} onClick={()=>flow.canGoBack?flow.pop():onBack?.()}/>
+  <IconButton name="back" inheritColor={kind==='nearby'} label={flow.canGoBack?'Назад':backLabel||'Назад к отелю'} onClick={()=>flow.canGoBack?flow.pop():onBack?.()}/>
   {desktopNearby
    ?<div className="nearby-header-title"><h1>Рядом с вами</h1><small>{nearbySubtitle}</small></div>
    :<span className={kind==='nearby'?'nearby-header-title':undefined}>{kind==='nearby'?<><span>Рядом с вами</span><small>{nearbySubtitle}</small></>:kind==='gallery'?hotel.name:'Отзывы гостей'}</span>}

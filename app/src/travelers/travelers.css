@@ -5,6 +5,12 @@
 }
 .traveler-list-info>.k-icon{margin-top:1px}
 .traveler-list-info>p{margin:0;font:400 14px/21px var(--k-font-text);color:var(--k-text-primary)}
+.traveler-actions{display:flex;flex-direction:column;align-items:center;gap:4px}
+.traveler-actions>.traveler-delete-link{
+ justify-content:center;min-height:44px;margin:0;padding:0 16px;border-radius:8px;
+ color:var(--theme-error,var(--k-status-errorText,#c42e50));font:500 14px/20px var(--k-font-text);
+}
+.traveler-actions>.traveler-delete-link:hover{color:var(--theme-error,var(--k-status-errorText,#c42e50));text-decoration:underline}
 .traveler-field-label{font:400 12px/18px var(--k-font-text);color:var(--k-text-secondary)}
 .traveler-select{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:58px;width:100%;padding:15px 16px;border:1px solid var(--k-border-subtle);border-radius:16px;background:var(--theme-card-a217,#ffffffd9);color:var(--k-text-primary);font:400 17px/26px var(--k-font-text);text-align:left}
 .traveler-select .muted{font-size:17px;color:var(--k-text-secondary)}
