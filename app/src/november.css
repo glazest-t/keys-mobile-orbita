@@ -39,7 +39,6 @@
 
 .points-payment-card>.november-partial-points{margin-top:0}
 
-[data-prototype-variant="november"] .review-comment textarea{min-height:192px}
 
 /* Network cards use the closed-rate dark surface and warm gold accents. */
 .keys-app .november-network-card{box-sizing:border-box;width:100%;display:flex;align-items:center;gap:14px;text-align:left;padding:20px;border-radius:22px;border:1px solid #d5b87945;background:linear-gradient(145deg,#1b1e33,#29283f);color:#fff;font-family:Onest;box-shadow:none}

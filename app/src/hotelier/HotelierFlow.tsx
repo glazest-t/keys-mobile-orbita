@@ -29,7 +29,7 @@ export function HotelierBanner({commerce,owner,onOpen,onDismiss}:{commerce:Comme
    <span className="hotelier-friendly-description">{editorialText('ОТ-004','Закрытые тарифы для вас','Скидки для своих')}</span>
    <span className="hotelier-friendly-more">{entryEditorialText("ДОП-058", "О возможностях", "Детали")}<Icon name="chevron-right" size={14} inheritColor/></span>
   </button>
-  <button className="hotelier-banner-close" onClick={onDismiss} aria-label="Скрыть баннер статуса отельера"><Icon name="close" size={18} inheritColor/></button>
+  <button className="hotelier-banner-close" onClick={onDismiss} aria-label="Скрыть баннер статуса отельера"><Icon name="close" size={16} inheritColor/></button>
  </section>;
  const waiting=status==='none'||status==='pending';
  return <section className={'hotelier-banner '+(waiting?'hotelier-awaiting-banner':'')}><button className="hotelier-banner-action" onClick={onOpen}><span className="icon-tile"><Icon name={waiting?'pending':'ticket'} size={18} inheritColor/></span><span><strong>{waiting?entryEditorialText("ДОП-059", "Статус отельера ожидает подтверждения", "Ожидаем подтверждения"):entryEditorialText("ДОП-035", "Привязка отклонена", "Запрос отклонён")}</strong><small>{waiting?'Подтвердите в кабинете TravelLine':entryEditorialText("ДОП-060", "Можно отправить запрос повторно", "Отправьте запрос ещё раз")}</small><span className="hotelier-banner-cta">{waiting?'Подтвердить':entryEditorialText("ДОП-061", "Повторить запрос", "Отправить запрос")}</span></span><Icon name="chevron-right" size={18} inheritColor/></button></section>;

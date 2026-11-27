@@ -90,7 +90,6 @@
 .desktop-modal .desktop-flow[data-step="stay-review"] .desktop-flow-layout{display:flex;gap:24px}
 .desktop-modal .desktop-flow[data-step="stay-review"] .desktop-flow-content{width:100%;min-width:0}
 .desktop-modal .stay-review-content{padding:0;gap:20px}
-.desktop-modal .review-comment textarea{min-height:180px}
 .desktop-modal .desktop-flow[data-step="stay-review"] .desktop-flow-footer{padding:0;border:0;background:transparent;border-radius:0;box-shadow:none}
 .desktop-modal .review-footer{display:flex;justify-content:center;padding:0;border:0;background:transparent;backdrop-filter:none}
 .desktop-modal .review-footer:after{display:none}
@@ -101,4 +100,47 @@
 .keys-app.desktop-modal .desktop-flow[data-step="stay-review"] .review-footer>.k-button{align-self:center}
 .keys-app.desktop-modal .review-footer{flex-direction:row;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center}
 .keys-app.desktop-modal .review-footer>.k-button{flex:0 1 auto;min-width:180px;align-self:center;padding-inline:24px}
+/* The desktop review follows one vertical reading order. */
+.desktop-modal:has(.review-form-content) .desktop-flow[data-step="stay-review"] .desktop-flow-layout{gap:0}
+.desktop-modal .review-form-content{padding:0;gap:20px}
+.desktop-modal .review-form-content .review-hotel{padding:10px;grid-template-columns:60px minmax(0,1fr)}
+.desktop-modal .review-form-content .review-hotel img{width:60px;height:60px;border-radius:14px}
+.desktop-modal .review-form-content .review-rating{gap:12px}
+.desktop-modal .review-form-content .review-rating h1{font-size:24px;line-height:30px}
+.desktop-modal .review-form-content .review-stars{justify-content:center;flex-wrap:wrap;gap:8px}
+.desktop-modal .review-form-content .review-stars button{width:52px;height:52px;border-radius:16px}
+.desktop-modal .review-form-content .review-comment{gap:10px}
+.desktop-modal .review-form-content .review-comment label{font-size:17px;line-height:24px}
+.desktop-modal .review-form-content .review-comment textarea{height:clamp(76px,calc(100dvh - 650px),180px);min-height:0}
+.desktop-modal .review-form-content:has(.review-topic-groups) .review-comment textarea{height:clamp(76px,calc(100dvh - 715px),180px)}
+.desktop-modal .review-form-content .review-photos{--review-photo-size:min(64px,max(44px,calc((100% - 40px) / 6)));gap:8px}
+.desktop-modal .review-form-content .review-photos .review-add-photo{min-height:44px}
+.desktop-modal .review-form-content .review-anonymous{align-self:flex-start;margin-top:2px}
+.desktop-modal:has(.review-form-content) .review-footer{margin-top:24px}
+
+@media(min-width:640px){
+ .desktop-modal .review-form-content>.review-topic-groups{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:16px 20px}
+}
+
+@media(max-height:760px){
+ .desktop-modal:has(.review-form-content){max-height:calc(100dvh - 32px)}
+ .desktop-modal:has(.review-form-content)>.desktop-modal-header{padding-block:12px 8px}
+ .desktop-modal:has(.review-form-content)>.desktop-modal-body{padding-bottom:16px}
+ .desktop-modal .review-form-content{gap:12px}
+ .desktop-modal .review-form-content .review-hotel{padding:6px 10px;grid-template-columns:44px minmax(0,1fr)}
+ .desktop-modal .review-form-content .review-hotel img{width:44px;height:44px;border-radius:10px}
+ .desktop-modal .review-form-content .review-rating{gap:6px}
+ .desktop-modal .review-form-content .review-rating h1{font-size:22px;line-height:28px}
+ .desktop-modal .review-form-content .review-stars button{width:44px;height:44px;border-radius:14px}
+ .desktop-modal .review-form-content .review-comment{gap:6px}
+ .desktop-modal .review-form-content .review-photos{--review-photo-size:44px}
+ .desktop-modal:has(.review-form-content) .review-footer{margin-top:12px}
+}
+@media(max-height:640px){
+ .desktop-modal .review-form-content:has(.review-topic-groups){gap:8px}
+ .desktop-modal .review-form-content:has(.review-topic-groups) .review-rating{gap:4px}
+ .desktop-modal .review-form-content:has(.review-topic-groups) .review-comment textarea{height:68px}
+ .desktop-modal .review-form-content .review-topics{gap:4px}
+ .desktop-modal:has(.review-form-content .review-topic-groups) .review-footer{margin-top:8px}
+}
 .desktop-app .trip-detail-review>.k-button{width:auto;min-height:44px;padding:10px 20px;align-self:flex-start}

@@ -205,6 +205,7 @@ html[data-app-theme="dark"] .keys-app .benefit-tabs button:not([aria-pressed="tr
 html[data-app-theme="dark"] .keys-app :is(.benefit-hero .k-button.secondary,.k-button.secondary.upcoming-route):not(:disabled) {
   background:var(--theme-accent-button);color:var(--theme-accent-ink);border-color:transparent;box-shadow:none;
 }
+html[data-app-theme="dark"] .keys-app .k-button.secondary.upcoming-route { --k-interactive-icon-color:currentColor; }
 html[data-app-theme="dark"] .keys-app .k-button.secondary.booking-card-action:not(:disabled) {
   background:#264cde;color:#fff;border-color:transparent;box-shadow:none;
 }

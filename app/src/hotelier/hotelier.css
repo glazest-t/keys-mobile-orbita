@@ -22,7 +22,7 @@
 .hotelier-profile-identity>div{display:flex;flex-direction:column;align-items:flex-start;min-width:0;gap:4px}
 .keys-app .hotelier-profile-identity h1{font:500 22px/28px Unbounded;letter-spacing:-.6px;margin:0}
 .keys-app .hotelier-profile-identity p{font:400 13px/19px Onest;margin:0}
-.hotelier-profile-badge{position:relative;display:inline-flex;align-items:center;gap:6px;max-width:100%;border:0;border-radius:13px;min-height:26px;padding:3px 9px 3px 4px;background:var(--k-feature-friendly);color:#fff;font:500 12px/18px Onest;white-space:nowrap;box-shadow:0 6px 14px #0b6b6326}
+.hotelier-profile-badge{position:relative;display:inline-flex;align-items:center;gap:6px;max-width:100%;border:0;border-radius:13px;min-height:26px;padding:3px 9px 3px 4px;background:var(--k-feature-friendly);color:#fff;--k-interactive-icon-color:currentColor;font:500 12px/18px Onest;white-space:nowrap;box-shadow:0 6px 14px #0b6b6326}
 .hotelier-profile-badge::before{content:"";position:absolute;inset:-9px 0}
 .hotelier-profile-badge>span:first-child{display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--theme-card-a38,#ffffff26);flex:none}
 .bottom-sheet:has(.hotelier-info) .sheet-header{position:relative;padding-left:78px;min-height:62px}
@@ -57,14 +57,14 @@
 .hotelier-share-link .k-field-box>button{position:static;flex:none;white-space:nowrap;display:flex;gap:5px;align-items:center;justify-content:center;min-height:44px;border:0;border-radius:10px;padding:0 10px;background:var(--theme-tint,#eaf2ff);color:var(--theme-link,#2f5bff);font:500 13px/18px Onest}
 
 /* Подтверждённый Friendly Rate: выбранный пользователем вариант 2. */
-.hotelier-friendly-banner{border:0;border-radius:24px;background:#075654 url('/brand/illustrations/hotelier-friendly-portal.png') center/cover no-repeat;color:#fff}
+.hotelier-friendly-banner{border:0;border-radius:24px;background:#075654 url('/brand/illustrations/hotelier-friendly-portal.png') center/cover no-repeat;color:#fff;--k-interactive-icon-color:currentColor}
 .hotelier-friendly-action{display:flex;flex-direction:column;align-items:flex-start;min-width:0;width:100%;min-height:136px;padding:16px;border:0;background:transparent;color:inherit;text-align:left}
 .hotelier-friendly-status{display:flex;align-items:center;gap:7px;font:400 10px/18px Onest;white-space:nowrap;margin-bottom:5px}
 .hotelier-friendly-status>span{display:grid;place-items:center;flex:none;width:19px;height:19px;background:var(--theme-card-a31,#ffffff1f);border-radius:50%}
 .hotelier-friendly-action>strong{font:500 24px/30px Unbounded;letter-spacing:-.7px;white-space:nowrap}
 .hotelier-friendly-description{margin-top:2px;font:400 12px/17px Onest;white-space:nowrap}
 .hotelier-friendly-more{display:flex;align-items:center;gap:5px;margin-top:12px;font:500 12px/18px Onest}
-.hotelier-friendly-banner>.hotelier-banner-close{position:absolute;right:0;top:0;width:44px;height:44px;color:#fff}
+.hotelier-friendly-banner>.hotelier-banner-close{position:absolute;right:0;top:0;width:44px;height:44px;color:inherit;background:radial-gradient(circle,#003a37bf 13.5px,transparent 14.5px)}
 .hotelier-friendly-action:focus-visible,.hotelier-friendly-banner>.hotelier-banner-close:focus-visible{outline:2px solid var(--theme-border,white);outline-offset:-4px;border-radius:20px}
 /* i1 / i2: invitations share the original app palette and component density. */
 .hotelier-share-page{padding-top:8px}
