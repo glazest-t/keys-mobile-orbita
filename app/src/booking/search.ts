@@ -1,4 +1,4 @@
-import {searchOptions,normalizeQuery,type RecentSearch} from './filterSchema.ts';
+import {searchOptions,normalizeQuery,recentSearchQuery,type RecentSearch} from './filterSchema.ts';
 import {hotelFacets} from './searchFacets.ts';
 import {catalog,searchHotels,searchError,type Commerce,type Search} from './model.ts';
 
@@ -15,11 +15,13 @@ export function compactDates({checkIn,checkOut}:Pick<Search,'checkIn'|'checkOut'
 
 export const popularCities=['Сочи','Москва','Санкт-Петербург','Казань','Калининград','Алтай'];
 export function rememberSearch(state:Commerce,value:RecentSearch):Commerce{
- const {filtersSnapshot,...search}=value;
- const key=(s:RecentSearch)=>{const {filtersSnapshot:_,...query}=s;return JSON.stringify(query);};
+ const {filtersSnapshot}=value;
+ const search=recentSearchQuery(value);
  const restored=filtersSnapshot?{...state,...structuredClone(filtersSnapshot)}:state;
  const next={...restored,search:structuredClone(search),searchDistrict:restored.searchDistrict?.city===search.city?restored.searchDistrict:undefined};
- return {...next,recentSearches:[{...structuredClone(search),filtersSnapshot:searchOptions(next)},...(state.recentSearches||[]).filter(s=>key(s)!==key(search))].slice(0,6)};
+ const entry={...structuredClone(search),filtersSnapshot:searchOptions(next)};
+ const key=JSON.stringify(search);
+ return {...next,recentSearches:[entry,...(state.recentSearches||[]).filter(s=>JSON.stringify(recentSearchQuery(s))!==key)].slice(0,6)};
 }
 export function destinationSuggestions(query:string,state:Commerce){
  const q=normalizeQuery(query);

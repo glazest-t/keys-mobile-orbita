@@ -3,6 +3,7 @@ import {beforeEach as beforeFixtureTest} from 'node:test';
 beforeFixtureTest(t=>t.mock.timers.enable({apis:['Date'],now:new Date('2026-11-01T12:00:00Z')}));
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {applySwipePreferences} from '../app/src/booking/swipePreferences.ts';
 import {initialCommerce,searchHotels,startDraft,quoteDraft,ensureAccount} from '../app/src/booking/model.ts';
 import {compactDates,rememberSearch,destinationSuggestions,collectionSearch,validDateRange} from '../app/src/booking/search.ts';
 test('Диапазон дат в поиске сохраняет компактный формат без точек',()=>{
@@ -15,3 +16,15 @@ test('История не мутирует исходный поиск, удал
 test('Особенности поездки реально отбирают отели без изменения числа гостей',()=>{let s=initialCommerce();s.search={...s.search,city:'Сочи',adults:1,withPet:true,byCar:true};const found=searchHotels(s);assert.deepEqual(found.map(h=>h.id),['pine-sochi']);assert.equal(s.search.adults,1);s.search={...s.search,withPet:false,businessTrip:true};assert.ok(searchHotels(s).some(h=>h.id==='orbit-sea'));});
 test('Короткая поездка и любой город меняют запрос, остальные условия сохраняются',()=>{const s=initialCommerce().search;const short=collectionSearch(s,'weekend');assert.equal(Date.parse(short.checkOut)-Date.parse(short.checkIn),2*86400000);assert.equal(collectionSearch(s,'anywhere').city,'Любой город');assert.equal(short.adults,s.adults);assert.ok(validDateRange({...s,checkOut:''}));});
 test('Новые услуги включаются в общую цену и доступны для полного покрытия баллами',()=>{const owner='+79001234567';let s=ensureAccount(initialCommerce(),owner);s=startDraft(s,'orbit-sea','services');s.draft.services=['sea-early','sea-late','sea-dinner','sea-spa'];s.draft.usePoints=true;s.payment.balances['keys:'+owner]=1000000;const q=quoteDraft(s,owner);assert.equal(q.serviceTotalMinor,1670000);assert.equal(q.cashDueMinor,0);});
+
+test('Недавний поиск игнорирует ранее сохранённые категории «Под ваши планы»',()=>{
+ const owner='guest';
+ const initial=applySwipePreferences(initialCommerce(),owner,['spa']);
+ const legacy={...initial.search,styleThemes:['family'],filtersSnapshot:{minRating:4.5}};
+ const state=rememberSearch({...initial,recentSearches:[legacy]},legacy);
+ assert.deepEqual(state.search,initial.search);
+ assert.deepEqual(state.swipePreferences[owner].themes,['spa']);
+ assert.equal(state.minRating,4.5);
+ assert.equal(state.recentSearches.length,1);
+ assert.equal('styleThemes' in state.recentSearches[0],false);
+});

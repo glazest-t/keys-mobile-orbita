@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {resolveGuestProfile} from '../app/src/demoGuestProfile.ts';
 import {travelStyleMatch,applySwipePreferences} from '../app/src/booking/swipePreferences.ts';
-import {initialCommerce} from '../app/src/booking/model.ts';
+import {catalog,initialCommerce} from '../app/src/booking/model.ts';
 import {discoveryOffers} from '../app/src/booking/offers.ts';
 import {travelStyleReasonItems} from '../app/src/booking/travelStyleReasons.ts';
 import {popularCities} from '../app/src/booking/search.ts';
@@ -108,4 +108,17 @@ test('All popular destinations have comparable offers with style and combined fi
    }
   }
  }
+});
+
+
+test('Edited matching reasons promise included breakfast only for a rate that includes it',()=>{
+ const hotelId='orbit-sea',themes=['food'];
+ const commerce=initialCommerce();
+ const reasons=meal=>travelStyleReasonItems(hotelId,themes,'завтраки',{commerce,offer:{
+  rateId:catalog.rates.find(rate=>rate.hotelId===hotelId&&(rate.mealPlan==='none')===(meal==='none')).id,
+  lodgingMinor:0,nights:1,
+ }},'edited');
+ assert.ok(reasons('breakfast').some(item=>item.text==='Завтрак включён в стоимость'));
+ assert.ok(reasons('none').some(item=>item.text==='Гости хвалят завтраки'));
+ assert.ok(reasons('breakfast').some(item=>item.text==='Ресторан на территории: есть авторское и детское меню'));
 });

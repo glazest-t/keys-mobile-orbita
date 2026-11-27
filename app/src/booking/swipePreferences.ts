@@ -1,16 +1,19 @@
+import {selectPrototypeText,type PrototypeText} from '../prototypeText.ts';
 import {type Commerce} from './model.ts';
 import {basicHotelPreferences,hotelPreferenceFeatures,hotelPreferenceHighlights} from './hotelPreferences.ts';
 
 export const swipeThemes=[
- {id:'family',title:'Семейный отдых',icon:'guests',features:['С детьми','Детская комната','Бассейн','Завтрак','Кондиционер','Анимация']},
- {id:'discover',title:'Открытия и опыт',icon:'nearby',features:['Дизайн','Кафе и кофейни','Рядом с достопримечательностями','Удобное расположение']},
- {id:'romantic',title:'Романтический',icon:'heart',features:['Спа','Вид из окна','Ресторан','Историческое здание','Тихое место']},
- {id:'culture',title:'Культура и история',icon:'map',features:['Рядом с достопримечательностями','Завтрак','Историческое здание','Удобное расположение']},
- {id:'active',title:'Активный отдых',icon:'fitness',features:['Фитнес-центр','Парковка','Завтрак','В горах','Прокат инвентаря','Бассейн']},
- {id:'nature',title:'Природа и эко',icon:'weather',features:['На природе','Тихое место','У моря','Парк рядом']},
- {id:'spa',title:'Спа и здоровье',icon:'spa',features:['Спа','Тихое место','Бассейн','Сауна']},
- {id:'food',title:'Гастрономия',icon:'restaurant',features:['Ресторан','Завтрак','Кафе и кофейни','Бар','Гастро']},
+ {id:'family',title:'Семейный отдых',editedTitle:'С детьми',icon:'guests',features:['С детьми','Детская комната','Бассейн','Завтрак','Кондиционер','Анимация']},
+ {id:'discover',title:'Открытия и опыт',editedTitle:'Необычные места',icon:'nearby',features:['Дизайн','Кафе и кофейни','Рядом с достопримечательностями','Удобное расположение']},
+ {id:'romantic',title:'Романтический',editedTitle:'Для двоих',icon:'heart',features:['Спа','Вид из окна','Ресторан','Историческое здание','Тихое место']},
+ {id:'culture',title:'Культура и история',editedTitle:'Рядом с центром',icon:'map',features:['Рядом с достопримечательностями','Завтрак','Историческое здание','Удобное расположение']},
+ {id:'active',title:'Активный отдых',editedTitle:'Спорт и активность',icon:'fitness',features:['Фитнес-центр','Парковка','Завтрак','В горах','Прокат инвентаря','Бассейн']},
+ {id:'nature',title:'Природа и эко',editedTitle:'На природе',icon:'weather',features:['На природе','Тихое место','У моря','Парк рядом']},
+ {id:'spa',title:'Спа и здоровье',editedTitle:'Спа и релакс',icon:'spa',features:['Спа','Тихое место','Бассейн','Сауна']},
+ {id:'food',title:'Гастрономия',editedTitle:'Вкусная еда',icon:'restaurant',features:['Ресторан','Завтрак','Кафе и кофейни','Бар','Гастро']},
 ];
+export function swipeThemeTitle(theme:typeof swipeThemes[number],mode:PrototypeText){return selectPrototypeText(mode,theme.title,theme.editedTitle);}
+
 export function matchedSwipePreferences(hotelId:string,themeIds:string[]){return hotelPreferenceHighlights(hotelId,swipeThemes.filter(t=>themeIds.includes(t.id)).flatMap(t=>t.features));}
 export type SwipePreferences={themes:string[];completed:boolean};
 export function needsSwipePreferences(s:Commerce,owner:string){return !s.swipePreferences?.[owner]?.completed;}

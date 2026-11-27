@@ -28,7 +28,7 @@ html[data-app-theme="dark"] .k-icon-default {
 :where(
   .k-button.primary,.k-button.danger,.save-hotel.is-saved,.gis-price-pin.selected,
   .trip-hotel-address,.booking-card-action,.profile-points,.swipe-like,
-  .payment-choice-check,.results-sort-check,.profile-photo-camera,.photo-counter,.desktop-room-photo-count
+  .payment-choice-check,.results-sort-check,.swipe-theme-check,.profile-photo-camera,.photo-counter,.desktop-room-photo-count
 ) { --k-interactive-icon-color:currentColor; }
 
 :where(.danger-text) { --k-interactive-icon-color:var(--theme-error,#e5484d); }

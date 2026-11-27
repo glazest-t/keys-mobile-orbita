@@ -1,6 +1,8 @@
 import {useGuestProfile} from '../useGuestProfile';
 import {GuestStyleEditor} from './GuestStyleEditor';
 import {applySwipePreferences} from './swipePreferences';
+import {travelPlanHeart} from './travelPlansArtwork';
+import {usePrototypeCopy} from '../usePrototypeText';
 import {SortSheet} from './SortSheet';
 import {useNovember} from '../usePrototypeVariant';
 import {useState,type Dispatch,type SetStateAction} from 'react';
@@ -12,6 +14,7 @@ import {districtsFor} from './offers';
 import {normalizeFilters,quickFilters,toggleQuick,sortKey,sortOptions,updateSearchOptions,priceRange,priceMode} from './filterSchema';
 export function SearchFilterRail({commerce,setCommerce,owner,map=false,getResultCount,hideAllFilters=false}:{hideAllFilters?:boolean;commerce:Commerce;setCommerce:Dispatch<SetStateAction<Commerce>>;owner:string|null;map?:boolean;getResultCount?:(s:Commerce)=>number}){
  const november=useNovember(),hasGuestProfile=useGuestProfile();
+ const styleLabel=usePrototypeCopy('Мой стиль','Под мои планы');
  const [editingStyle,setEditingStyle]=useState(false);
  const styleOwner=owner||'guest',styleThemes=commerce.swipePreferences?.[styleOwner]?.themes||[];
  const canEditStyle=!!owner||hasGuestProfile;
@@ -23,7 +26,7 @@ export function SearchFilterRail({commerce,setCommerce,owner,map=false,getResult
  return <><Carousel ariaLabel={map?'Фильтры карты':'Фильтры отелей'} className={map?'map-filter-rail':'results-controls-rail'} contentClassName="discovery-chip-track">
  {!hideAllFilters&&<button className="filter-chip all-filters-chip" aria-haspopup="dialog" aria-expanded={sheet==='filters'} onClick={()=>setSheet('filters')}><Icon name="preferences" size={16}/>Фильтры{count>0&&<b>{count}</b>}</button>}
  <button className={'filter-chip sort-icon-chip '+(sort!=='recommended'?'selected':'')} aria-label={`Сортировка: ${sortLabel}`} aria-haspopup="dialog" aria-expanded={sheet==='sort'} onClick={()=>setSheet('sort')}><Icon name="sort" size={18} inheritColor/></button>
- {canEditStyle&&<button className={'filter-chip '+(styleThemes.length?'selected':'')} aria-haspopup="dialog" onClick={()=>setEditingStyle(true)}><img className="guest-style-heart" src="/assets/preferences/style-heart-3d-blue.png" width={22} height={22} alt="" aria-hidden="true" draggable={false}/>Мой стиль</button>}
+ {canEditStyle&&<button className={'filter-chip '+(styleThemes.length?'selected':'')} aria-haspopup="dialog" onClick={()=>setEditingStyle(true)}><img className="guest-style-heart" src={travelPlanHeart} width={22} height={22} alt="" aria-hidden="true" draggable={false}/>{styleLabel}</button>}
  {!november&&districts.length>0&&<button className={'filter-chip '+(district?'selected':'')} aria-label={`Район: ${district||'Все районы'}`} onClick={()=>setSheet('district')}>{district||'Район'}<Icon name="chevron-down" size={14}/></button>}
  {quickFilters.map(q=><button className={'filter-chip '+(selectedQuick.includes(q)?'selected':'')} key={q.label} aria-pressed={selectedQuick.includes(q)} onClick={()=>setCommerce(s=>toggleQuick(s,q.values))}>{q.label}</button>)}
  {hasRange&&<button className="filter-chip selected" aria-label={"Убрать фильтр цены: "+rangeLabel} onClick={()=>setCommerce(s=>updateSearchOptions(s,{priceRangeMinor:undefined,maxNightly:null}))}>{rangeLabel}<Icon name="close" size={12}/></button>}
