@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import locations from '../../spec/map-locations.json' with {type:'json'};
 import hotels from '../../spec/demo-data.json' with {type:'json'};
-import {hotelLocation,locationBounds,cityCenter,twoGisPlaceUrl} from '../src/maps/locations.ts';
+import {hotelLocation,hotelSearchCoordinates,locationBounds,cityCenter,twoGisPlaceUrl} from '../src/maps/locations.ts';
 test('На реальной карте только сопоставленные объекты каталога, долгота перед широтой',()=>{
  const ids=new Set(hotels.hotels.map(h=>h.id));
  for(const [id,p] of Object.entries(locations)){
@@ -20,4 +20,12 @@ test('Карта охватывает разные города и не прид
  assert.equal(locationBounds([]),null);
  assert.deepEqual(locationBounds([[37.6,55.7],[30.3,59.9],[39.9,43.4]]),{southWest:[30.3,43.4],northEast:[39.9,59.9]});
  assert.deepEqual(cityCenter('Сочи'),[39.7231,43.5855]);
+});
+test('Условные точки отелей исследования доступны только на карте выдачи',()=>{
+ assert.deepEqual(hotelSearchCoordinates('altai-style-river'),[85.828,51.855]);
+ assert.ok(hotelSearchCoordinates('kaliningrad-style-harbor'));
+ assert.deepEqual(hotelSearchCoordinates('orbit-sea'),hotelLocation('orbit-sea').coordinates);
+ assert.equal(hotelLocation('altai-style-river'),undefined);
+ assert.equal(twoGisPlaceUrl('kaliningrad-style-harbor'),undefined);
+ assert.equal(hotelSearchCoordinates('not-a-hotel'),undefined);
 });

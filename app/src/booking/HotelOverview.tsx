@@ -2,7 +2,7 @@ import {novemberEditorialText} from '../../../prototype/domain/novemberEditorial
 import {usePrototypeCopy} from '../usePrototypeText';
 import {ReviewText} from './ReviewText';
 import {HotelFacilities} from './HotelFacilities';
-import {GuestStyleMatchDetails,useGuestStyleMatch} from './GuestStyleMatch';
+import {GuestStyleMatchDetails,GuestStyleReasonIcon,useGuestStyleMatch} from './GuestStyleMatch';
 import {useHotelRoute} from './MapAppChooser';
 import {ReviewPhotos} from './ReviewPhotos';
 import {NearbyPreview} from './NearbyPlaces';
@@ -13,7 +13,6 @@ import {hotelAddress} from '../maps/locations';
 import {PreferenceIllustration} from './PreferenceIllustration';
 import {preferenceIllustrationFor} from './preferenceIllustrations';
 import {RatingBadge} from './RatingBadge';
-import {FriendlyRateBadge} from '../hotelier/FriendlyRateBadge';
 import {ratePrice} from './friendlyRate';
 import {roomOffers} from './roomOffers';
 import {importedHotel} from './importedHotels';
@@ -54,7 +53,7 @@ export function HotelOverview({commerce,setCommerce,owner,onBack,onDetail,onPref
  };
  const [sheet,setSheet]=useState<'price'|'share'|'watch'|'preferences'|null>(null),[tag,setTag]=useState('Все');
  const {openRoute,routeSheet}=useHotelRoute(hotel.id,()=>onDetail('route'));
- const styleReasons=useGuestStyleMatch({hotelId:hotel.id,commerce,owner})?.reasons??[];
+ const styleReasons=useGuestStyleMatch({hotelId:hotel.id,commerce,owner,offer:d.returnTo?undefined:q})?.reasons??[];
  const preferences=commerce.swipePreferences?.[owner||'guest'];
  const themes=swipeThemes.filter(t=>preferences?.themes.includes(t.id));
  const matches=matchedSwipePreferences(hotel.id,preferences?.themes||[]);
@@ -88,7 +87,7 @@ export function HotelOverview({commerce,setCommerce,owner,onBack,onDetail,onPref
  const featuredHeading=hasStyleMatches?'Мой стиль':novemberEditorialText("Т-1125", "Удобства отеля", "Удобства");
  const desktopFeatures=featuredItems.length>0&&<section className="desktop-hotel-featured-amenities" data-guest-style={hasStyleMatches||undefined} aria-label={hasStyleMatches?featuredHeading:'Ключевые удобства отеля'}>
   <h2>{featuredHeading}</h2>
-  <ul>{featuredItems.map(({feature,text})=><li key={feature}><PreferenceIllustration label={feature} size={32} original contrast={hasStyleMatches}/><span>{text}</span></li>)}</ul>
+  <ul>{featuredItems.map(({feature,text})=><li key={feature}>{hasStyleMatches?<GuestStyleReasonIcon feature={feature} size={32}/>:<PreferenceIllustration label={feature} size={32} original/>}<span>{text}</span></li>)}</ul>
  </section>;
  const ratingBlock=<button className="hotel-review-summary" onClick={()=>isDesktop?document.getElementById('hotel-reviews')?.scrollIntoView({block:'start'}):onDetail('reviews')}>
   <RatingBadge value={v.rating}/>
@@ -98,7 +97,7 @@ export function HotelOverview({commerce,setCommerce,owner,onBack,onDetail,onPref
   </span>
   <Icon name="chevron-right" size={18}/>
  </button>;
- const priceBlock=<><section className="hotel-price-card"><button onClick={()=>setSheet('price')}><span><span className="personal-price"><Icon name="best-price" size={16} inheritColor/>Цена для вас</span><span className="hotel-price-value"><strong>{formatMoney(q.lodgingMinor)}</strong>{price.friendly?<FriendlyRateBadge percent={price.percent}/>:price.discountMinor>0&&<b>−{price.percent}%</b>}{price.discountMinor>0&&<s>{formatMoney(price.baseMinor)}</s>}</span></span><Icon name="chevron-right" size={18}/></button></section></>;
+ const priceBlock=<><section className="hotel-price-card"><button onClick={()=>setSheet('price')}><span><span className="personal-price"><Icon name="best-price" size={16} inheritColor/>Цена для вас</span><span className="hotel-price-value"><strong>{formatMoney(q.lodgingMinor)}</strong>{price.discountMinor>0&&<b className={price.friendly?'friendly-discount':undefined}>−{price.percent}%</b>}{price.discountMinor>0&&<s>{formatMoney(price.baseMinor)}</s>}</span></span><Icon name="chevron-right" size={18}/></button></section></>;
  const overviewSummary=<div className="hotel-overview-summary">
   {heading}
   {!isDesktop&&<><GuestStyleMatchDetails reasons={styleReasons}/>{preferencesBlock}{ratingBlock}{priceBlock}</>}

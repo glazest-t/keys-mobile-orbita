@@ -173,6 +173,84 @@
     "route": "results"
   },
   {
+    "id": "results-style-sochi",
+    "title": "Сочи · Мой стиль",
+    "group": "Исследование выдачи",
+    "route": "results",
+    "styleStudy": {
+      "city": "Сочи",
+      "themes": [
+        "spa",
+        "nature"
+      ]
+    }
+  },
+  {
+    "id": "results-style-moscow",
+    "title": "Москва · Мой стиль",
+    "group": "Исследование выдачи",
+    "route": "results",
+    "styleStudy": {
+      "city": "Москва",
+      "themes": [
+        "family",
+        "active"
+      ]
+    }
+  },
+  {
+    "id": "results-style-petersburg",
+    "title": "Санкт-Петербург · Мой стиль",
+    "group": "Исследование выдачи",
+    "route": "results",
+    "styleStudy": {
+      "city": "Санкт-Петербург",
+      "themes": [
+        "culture",
+        "discover"
+      ]
+    }
+  },
+  {
+    "id": "results-style-kazan",
+    "title": "Казань · Мой стиль",
+    "group": "Исследование выдачи",
+    "route": "results",
+    "styleStudy": {
+      "city": "Казань",
+      "themes": [
+        "spa",
+        "food"
+      ]
+    }
+  },
+  {
+    "id": "results-style-kaliningrad",
+    "title": "Калининград · Мой стиль",
+    "group": "Исследование выдачи",
+    "route": "results",
+    "styleStudy": {
+      "city": "Калининград",
+      "themes": [
+        "culture",
+        "food"
+      ]
+    }
+  },
+  {
+    "id": "results-style-altai",
+    "title": "Алтай · Мой стиль",
+    "group": "Исследование выдачи",
+    "route": "results",
+    "styleStudy": {
+      "city": "Алтай",
+      "themes": [
+        "nature",
+        "active"
+      ]
+    }
+  },
+  {
     "id": "results-edit",
     "title": "Изменить даты и гостей",
     "group": "Поиск и подбор",

@@ -15,7 +15,7 @@ export function SearchFilterRail({commerce,setCommerce,owner,map=false,getResult
  const [editingStyle,setEditingStyle]=useState(false);
  const styleOwner=owner||'guest',styleThemes=commerce.swipePreferences?.[styleOwner]?.themes||[];
  const canEditStyle=!!owner||hasGuestProfile;
- const [sheet,setSheet]=useState<'filters'|'sort'|'district'|null>(null),filters=normalizeFilters(commerce.searchFilters).filter(f=>!november||!f.startsWith('Сеть отеля: ')),sort=sortKey(commerce.searchSort),count=filterCount(commerce),districts=districtsFor(commerce),district=commerce.searchDistrict?.city===commerce.search.city?commerce.searchDistrict.name:undefined;
+ const [sheet,setSheet]=useState<'filters'|'sort'|'district'|null>(null),filters=normalizeFilters(commerce.searchFilters).filter(f=>!november||!f.startsWith('Сеть отеля: ')),sort=sortKey(commerce.searchSort),count=filterCount(commerce),districts=districtsFor(commerce,owner),district=commerce.searchDistrict?.city===commerce.search.city?commerce.searchDistrict.name:undefined;
  const selectedQuick=quickFilters.filter(q=>q.values.every(v=>filters.includes(v))),extra=filters.filter(v=>!selectedQuick.some(q=>q.values.includes(v)));
  const range=priceRange(commerce),hasRange=range.min!==null||range.max!==null;const money=(v:number)=>Math.round(v/100).toLocaleString('ru');
  const rangeLabel=[range.min!==null?`от ${money(range.min)}`:'',range.max!==null?`до ${money(range.max)}`:''].filter(Boolean).join(' ')+` ₽ ${priceMode(commerce)==='night'?'за ночь':'за проживание'}`;

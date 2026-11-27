@@ -5,7 +5,7 @@ import {isDesktop} from '../desktop/surface';
 import {getPrototypeVariant} from '../prototypeVariant';
 import {getPrototypeText} from '../prototypeText';
 import {RatingBadge} from './RatingBadge';
-import {FriendlyRateBadge} from '../hotelier/FriendlyRateBadge';
+import {HotelCardPrice} from './HotelCardPrice';
 import {ratePrice} from './friendlyRate';
 import {useId,useState,type CSSProperties,type Dispatch,type SetStateAction} from 'react';
 import {BottomSheet,MobileScroll,useKeyboard,useMobileDevice} from '../mobile';
@@ -52,7 +52,8 @@ export function FavoritesScreen({commerce,setCommerce,owner,favoriteOffersEnable
  const current=shown.find(i=>i.hotel.id===hovered);
  const resetMap=()=>{setMapView(null);setHovered(null);setMapReset(v=>v+1);};
  const openDates=(id:string)=>{if(isDesktop&&!detail)onList(lib.assignment[id]);open('dates');};
- const preview=current&&<div className="desktop-map-preview"><button className="desktop-map-preview-open" onClick={()=>current.quote?onOpen(current.hotel.id):openDates(current.hotel.id)} aria-label={novemberEditorialText("Т-0852",`Открыть отель ${current.hotel.name}`,`Открыть ${current.hotel.name}`)}><img src={hotelVisual(current.hotel.id).photos[0]} alt=""/><span><strong>{current.hotel.name}</strong><span className="desktop-map-preview-rating"><RatingBadge value={hotelVisual(current.hotel.id).rating}/><small>{hotelVisual(current.hotel.id).reviews} отзывов</small></span>{current.quote?<span className="desktop-map-preview-price"><b>{formatMoney(current.quote.cashDueMinor)}</b>{current.quote.hotelDiscountMinor>0&&<><s>{formatMoney(current.quote.baseLodgingMinor)}</s><span className="desktop-map-preview-discount">−{ratePrice(current.quote).percent}%</span></>}</span>:<span className="favorite-unavailable">Нет номеров</span>}</span></button></div>;
+ const previewPrice=current?.quote&&ratePrice(current.quote);
+ const preview=current&&<div className="desktop-map-preview"><button className="desktop-map-preview-open" onClick={()=>current.quote?onOpen(current.hotel.id):openDates(current.hotel.id)} aria-label={novemberEditorialText("Т-0852",`Открыть отель ${current.hotel.name}`,`Открыть ${current.hotel.name}`)}><img src={hotelVisual(current.hotel.id).photos[0]} alt=""/><span><strong>{current.hotel.name}</strong><span className="desktop-map-preview-rating"><RatingBadge value={hotelVisual(current.hotel.id).rating}/><small>{hotelVisual(current.hotel.id).reviews} отзывов</small></span>{current.quote?<span className="desktop-map-preview-price"><b>{formatMoney(current.quote.cashDueMinor)}</b>{previewPrice&&previewPrice.discountMinor>0&&<><s>{formatMoney(previewPrice.baseMinor)}</s><span className={'desktop-map-preview-discount'+(previewPrice.friendly?' friendly-discount':'')}>−{previewPrice.percent}%</span></>}</span>:<span className="favorite-unavailable">Нет номеров</span>}</span></button></div>;
  const mapPanel=isDesktop&&<aside className="desktop-favorites-map" aria-label="Избранные отели на карте">{items.length?<HotelMap key={`${mapKey}:${mapReset}`} items={items.map(({hotel,quote})=>({id:hotel.id,price:quote?.cashDueMinor,label:quote?undefined:'Нет номеров',discountPercent:quote?ratePrice(quote).percent:0}))} selected={current?.hotel.id} onSelect={setHovered} onHover={setHovered} onPreviewDismiss={()=>setHovered(null)} onVisibleChange={ids=>setMapView({key:mapKey,ids})} preview={preview} interactive/>:<div className="desktop-map-empty"><Icon outline name="map" size={32}/><p>Сохранённые отели появятся на карте</p></div>}</aside>;
 
  const lists=[...lib.lists.filter(l=>l.id!==INBOX),...lib.lists.filter(l=>l.id===INBOX)];
@@ -123,19 +124,14 @@ export function FavoritesScreen({commerce,setCommerce,owner,favoriteOffersEnable
      </small>
      <div className="favorite-hotel-bottom">
       {rating}
-      <button className="favorite-price-action" onClick={openHotel}>{quote?<span className="discovery-price">
-       <strong>{formatMoney(quote.cashDueMinor)}</strong>
-       {quote.hotelDiscountMinor>0&&<><s>{formatMoney(quote.baseLodgingMinor)}</s><b>−{ratePrice(quote).percent}%</b></>}
-       {quote.rateKind==='friendly_rate'&&<FriendlyRateBadge percent={ratePrice(quote).percent}/>}
-      </span>:<span className="favorite-unavailable">Нет номеров</span>}</button>
+      <button className="favorite-price-action" onClick={openHotel}>{quote?<HotelCardPrice quote={quote}/>:<span className="favorite-unavailable">Нет номеров</span>}</button>
      </div>
     </div>:<div className="favorite-hotel-details">
      <button className="favorite-hotel-title k-surface-action" onClick={openHotel}>
       <strong>{hotel.name}</strong>
-      <span className={quote?'favorite-price':'favorite-unavailable'}>{quote?formatMoney(quote.cashDueMinor):'Нет номеров'}</span>
+      {quote?.rateKind==='friendly_rate'?<HotelCardPrice quote={quote}/>:<span className={quote?'favorite-price':'favorite-unavailable'}>{quote?formatMoney(quote.cashDueMinor):'Нет номеров'}</span>}
       {location}
      </button>
-     {quote?.rateKind==='friendly_rate'&&<FriendlyRateBadge percent={ratePrice(quote).percent}/>}
      {rating}
     </div>}
    </article>;

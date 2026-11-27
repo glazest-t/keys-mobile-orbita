@@ -1,4 +1,14 @@
 import {travelStyleMatch} from './swipePreferences.ts';
+import {catalog,type Commerce} from './model.ts';
+import {counterValue,priceMode,priceRange,roomAreaGroup} from './filterSchema.ts';
+import {appliedOfferFilters,matchesHotelFilter} from './offers.ts';
+import {hotelFacets,matchesRate,matchesRoom} from './searchFacets.ts';
+import {hotelVisual} from './presentation.ts';
+import {getPrototypeVariant} from '../prototypeVariant.ts';
+import type {BookingQuote} from '../../../prototype/domain/booking.mjs';
+
+type StyleOffer=Pick<BookingQuote,'rateId'|'lodgingMinor'|'nights'>;
+type StyleReason={feature:string;text:string};
 
 const descriptions:Record<string,string>={
  'С детьми':'Можно отдохнуть всей семьёй',
@@ -35,13 +45,53 @@ const descriptions:Record<string,string>={
  'Гастро':'Отель подойдёт для знакомства с местной кухней',
 };
 
-/** Reasons only describe selected, confirmed features; praise comes from existing review summaries. */
-export function travelStyleReasonItems(hotelId:string,themeIds:string[],reviewPraise=''){
+const roomGroups=['Выбор кровати','Комнаты','Удобства в номере',roomAreaGroup,'Спальни','Кровати','Ванные комнаты'];
+const filterFeatures:Record<string,string>={
+ 'Завтрак включён':'Завтрак','Собственная кухня':'Кухня','Можно с детьми':'С детьми',
+ 'Есть парковка':'Парковка','Бесплатная парковка':'Парковка',
+};
+const filterDescriptions:Record<string,string>={
+ 'Завтрак включён':'Завтрак включён в тариф','Собственная кухня':'В номере есть кухня',
+ 'Бесплатная парковка':'Есть бесплатная парковка','Можно с питомцем':'Можно приехать с питомцем',
+};
+
+function offerFilterReasons(hotelId:string,commerce:Commerce,offer:StyleOffer):StyleReason[]{
+ const rate=catalog.rates.find(rate=>rate.id===offer.rateId&&rate.hotelId===hotelId);
+ if(!rate)return [];
+ const reasons=appliedOfferFilters(commerce).flatMap(filter=>{
+  const separator=filter.indexOf(': ');
+  const group=separator<0?'':filter.slice(0,separator);
+  const value=separator<0?filter:filter.slice(separator+2);
+  const singleFilter={...commerce,searchFilters:[filter]};
+  const matches=group==='Питание'
+   ?matchesRate(singleFilter,{...rate,kind:'standard'})
+   :roomGroups.includes(group)?matchesRoom(singleFilter,rate.roomId):matchesHotelFilter(commerce,hotelId,group,value);
+  if(!matches)return [];
+  const feature=filterFeatures[value]||value;
+  const text=group===roomAreaGroup?`Площадь номера от ${value} м²`
+   :['Спальни','Кровати','Ванные комнаты'].includes(group)?`${group} · от ${counterValue([filter],group)}`
+   :filterDescriptions[value]||descriptions[feature]||value;
+  return [{feature:group===roomAreaGroup||['Спальни','Кровати','Ванные комнаты'].includes(group)?group:feature,text}];
+ });
+ const visual=hotelVisual(hotelId),district=commerce.searchDistrict,range=priceRange(commerce);
+ if(commerce.minRating&&visual.rating>=commerce.minRating)reasons.push({feature:'Оценка гостей',text:`Оценка гостей ${visual.rating.toLocaleString('ru-RU')}`});
+ if(getPrototypeVariant()!=='november'&&district?.city===commerce.search.city&&hotelFacets(hotelId)?.district===district.name)reasons.push({feature:'Район',text:district.name});
+ const price=priceMode(commerce)==='night'?Math.round(offer.lodgingMinor/offer.nights/100)*100:offer.lodgingMinor;
+ if((range.min!==null||range.max!==null)&&price>=(range.min??0)&&(range.max===null||price<=range.max))reasons.push({feature:'Цена',text:'Цена в выбранном диапазоне'});
+ return reasons;
+}
+
+/** The score stays about travel style; reasons can also explain the current search offer. */
+export function travelStyleReasonItems(hotelId:string,themeIds:string[],reviewPraise='',search?:{commerce:Commerce;offer:StyleOffer}){
  const {matched}=travelStyleMatch(hotelId,themeIds);
- return matched.filter(feature=>!!descriptions[feature]).slice(0,3).map(feature=>({
+ const styleReasons=matched.filter(feature=>!!descriptions[feature]).map(feature=>({
   feature,
   text:feature==='Спа'&&reviewPraise.includes('спа')?'Гости хвалят спа':feature==='Завтрак'&&reviewPraise.includes('завтрак')?'Гости хвалят завтраки':descriptions[feature],
  }));
+ if(!search||!themeIds.length)return styleReasons.slice(0,3);
+ const unique=(reasons:StyleReason[])=>reasons.filter((item,index)=>reasons.findIndex(reason=>reason.feature===item.feature)===index);
+ const filters=unique(offerFilterReasons(hotelId,search.commerce,search.offer));
+ return unique([...filters.slice(0,styleReasons.length?2:3),...styleReasons,...filters]).slice(0,3);
 }
 export function travelStyleReasons(hotelId:string,themeIds:string[],reviewPraise=''){
  return travelStyleReasonItems(hotelId,themeIds,reviewPraise).map(item=>item.text);

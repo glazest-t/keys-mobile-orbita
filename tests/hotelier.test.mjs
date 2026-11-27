@@ -90,7 +90,7 @@ test('В каждом отеле есть FR −35%; открывается то
  const {selectRoomRate,roomOffers,updateRoomSearch}=await import('../app/src/booking/roomOffers.ts');
  const {ratePrice}=await import('../app/src/booking/friendlyRate.ts');
  const state=ensureAccount(base(),other);state.accounts[owner].hotelierStatus='approved';
- assert.equal(new Set(catalog.rates.filter(r=>r.kind==='friendly_rate').map(r=>r.hotelId)).size,53);
+ assert.equal(new Set(catalog.rates.filter(r=>r.kind==='friendly_rate').map(r=>r.hotelId)).size,catalog.hotels.length);
  for(const regular of catalog.rates.filter(r=>r.kind==='standard')){
   const fr=catalog.rates.find(r=>r.baseRateId===regular.id);assert.ok(fr,regular.id);
   assert.equal(fr.nightlyMinor,Math.round(regular.nightlyMinor*.65));assert.equal(fr.mealPlan,regular.mealPlan);

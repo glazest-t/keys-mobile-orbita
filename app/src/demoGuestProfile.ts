@@ -1,9 +1,13 @@
+import scenes from './catalogue/scenes.json' with {type:'json'};
+
 /** Prototype scenario only; does not sign users out or erase their preferences. */
 export const GUEST_PROFILE_KEY='keys-orbita-demo-guest-profile';
 const eventName='keys-demo-guest-profile';
+const styleStudyScenes=new Set(scenes.filter(scene=>scene.styleStudy).map(scene=>scene.id));
 export function resolveGuestProfile(href:string,saved:string|null){
- const value=new URL(href).searchParams.get('guestProfile');
- return (value==='yes'||value==='no'?value:saved)==='yes';
+ const params=new URL(href).searchParams,value=params.get('guestProfile');
+ if(value==='yes'||value==='no')return value==='yes';
+ return styleStudyScenes.has(params.get('catalogue')||'')||saved==='yes';
 }
 export function getGuestProfile(){
  if(typeof location==='undefined')return false;

@@ -23,7 +23,7 @@ import {savePriceWatch,watchKey} from '../booking/priceWatch';
 import {roomOffers,selectRoomRate} from '../booking/roomOffers';
 import {saveSwipePreferences} from '../booking/swipePreferences';
 import {freeTextDraft,saveFreeText} from '../booking/preferences';
-export type CatalogueScene={id:string;title:string;group:string;route:string;fullOnly?:boolean;trip?:string;rateId?:string;bookingSummary?:BookingSummaryExample;step?:string;role?:string;sheet?:string;launch?:boolean;device?:string;biometric?:string;onboarding?:number;actions?:{text?:string;selector?:string;contains?:string}[];[key:string]:unknown};
+export type CatalogueScene={id:string;title:string;group:string;route:string;fullOnly?:boolean;trip?:string;rateId?:string;bookingSummary?:BookingSummaryExample;step?:string;role?:string;sheet?:string;launch?:boolean;device?:string;biometric?:string;onboarding?:number;styleStudy?:{city:string;themes:string[]};actions?:{text?:string;selector?:string;contains?:string}[];[key:string]:unknown};
 export const catalogueScene:CatalogueScene|null=typeof location==='undefined'?null:(scenes as CatalogueScene[]).find(s=>s.id===new URLSearchParams(location.search).get('catalogue'))||null;
 export type CatalogueFixture={state:State;commerce:Commerce};
 export async function createCatalogueFixture(scene:CatalogueScene):Promise<CatalogueFixture>{
@@ -60,6 +60,12 @@ export async function createCatalogueFixture(scene:CatalogueScene):Promise<Catal
  const watch=startDraft(commerce,'orbit-sea','catalogue-watch',owner);
  commerce=savePriceWatch(commerce,owner,watch.draft!,{mode:'any',targetMinor:null,push:true,active:true,priceMinor:quoteDraft(watch,owner).cashDueMinor+550000});
  if(scene.swipe)commerce=saveSwipePreferences(commerce,owner,['nature','spa'],true);
+ if(scene.styleStudy){
+  const {city,themes}=scene.styleStudy;
+  const today=Date.parse(new Date(now).toLocaleDateString('en-CA'));
+  const dateAfter=(days:number)=>new Date(today+days*86400000).toISOString().slice(0,10);
+  commerce=saveSwipePreferences({...commerce,search:{...commerce.search,city,checkIn:dateAfter(7),checkOut:dateAfter(10),adults:2,childrenAges:[]}},owner,themes,true);
+ }
  if(scene.collection)commerce={...commerce,collection:String(scene.collection),search:collectionSearch(commerce.search,String(scene.collection))};
  if(scene.wish){const d=freeTextDraft(commerce,owner);commerce=saveFreeText(commerce,owner,{...d,stage:'results',wishText:'Отель у моря со спа',wishAppliedText:'Отель у моря со спа',wishInterests:['sea','spa'],mode:'city',city:'Сочи'});}
  if(scene.adults)commerce={...commerce,search:{...commerce.search,adults:Number(scene.adults)}};

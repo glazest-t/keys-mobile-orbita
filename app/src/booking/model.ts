@@ -9,6 +9,7 @@ import {normalizeContactPhone} from '../travelers/contactPhone.ts';
 import {hotelProgramDiscount,hotelLoyaltySnapshot,programWallets} from '../rewards/loyalty.ts';
 import {promotionBasisPoints} from './promotions.ts';
 import {matchesRoom,matchesRate,matchesDestination,hotelFacets} from './searchFacets.ts';
+import {normalizeQuery} from './filterSchema.ts';
 import {watchKey} from './priceWatch.ts';
 import {validateBookingTimes} from './bookingTimes.ts';
 import {serviceCancellation} from './serviceSettlement.ts';
@@ -59,7 +60,7 @@ export function available(state:Commerce,roomId:string,s:Search,today?:string){
  const used=state.bookings.filter(b=>b.operation.status==='confirmed'&&b.stay?.status!=='checked_out'&&b.draft.roomId===roomId&&b.draft.search.checkIn<s.checkOut&&b.draft.search.checkOut>s.checkIn).length;
  return slot.remaining>used;
 }
-export function searchHotels(state:Commerce){return data.hotels.filter(h=>matchesDestination(state.search.city,h)&&(!state.search.withPet||hotelFacets(h.id)?.booking.includes('Можно с питомцем'))&&(!state.search.childrenAges.length||hotelFacets(h.id)?.booking.includes('Можно с детьми'))&&data.rooms.some(r=>r.hotelId===h.id&&matchesRoom(state,r.id)&&available(state,r.id,state.search)&&data.rates.some(rate=>rate.roomId===r.id&&matchesRate(state,rate))));}
+export function searchHotels(state:Commerce,{includeStyleExamples=false}:{includeStyleExamples?:boolean}={}){return data.hotels.filter(h=>(!h.styleExample||includeStyleExamples||normalizeQuery(state.search.city)===normalizeQuery(h.name))&&matchesDestination(state.search.city,h)&&(!state.search.withPet||hotelFacets(h.id)?.booking.includes('Можно с питомцем'))&&(!state.search.childrenAges.length||hotelFacets(h.id)?.booking.includes('Можно с детьми'))&&data.rooms.some(r=>r.hotelId===h.id&&matchesRoom(state,r.id)&&available(state,r.id,state.search)&&data.rates.some(rate=>rate.roomId===r.id&&matchesRate(state,rate))));}
 export function startDraft(state:Commerce,hotelId:string,id:string,owner:string|null=null,today?:string):Commerce{
  const eligible=(r:typeof data.rates[number])=>matchesRate(state,r)&&canBookRate(state,owner||null,r);
  const room=data.rooms.find(r=>r.hotelId===hotelId&&matchesRoom(state,r.id)&&available(state,r.id,state.search,today)&&data.rates.some(rate=>rate.roomId===r.id&&eligible(rate)));

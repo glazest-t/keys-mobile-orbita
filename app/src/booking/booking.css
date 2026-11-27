@@ -113,9 +113,17 @@
 .keys-app .discovery-price { display:grid;grid-template-columns:auto auto;justify-content:end;align-content:end;align-items:center;gap:4px 6px; }
 .keys-app .discovery-price > strong { grid-column:1;grid-row:2; }
 .keys-app .discovery-price > b { grid-column:2;grid-row:2; }
-.keys-app .discovery-price > .friendly-rate-label { grid-column:1/-1;grid-row:3; }
 .keys-app .discovery-price > s { grid-column:1/-1;grid-row:1;text-align:right; }
 .keys-app .hotel-price-value > s { flex-basis:100%; }
+.keys-app .discovery-price > b.friendly-discount,.keys-app .hotel-price-value > b.friendly-discount,.keys-app .desktop-map-preview-discount.friendly-discount,.keys-app .room-current-price > b.friendly-discount{background:var(--k-feature-friendly)}
+
+.favorite-hotel-title > .discovery-price{grid-row:1;grid-column:2;align-self:start}
+.map-hotel-card .discovery-price{align-self:start}
+.map-hotel-card .discovery-price > strong{font:500 16px/22px Unbounded;letter-spacing:-.4px}
+.keys-app .map-hotel-card .discovery-price > s{text-align:left}
+.swipe-source-details .discovery-price{flex:none}
+.keys-app .swipe-source-details .discovery-price > s,.hotel-card-nightly-label{color:#e6eaff;font:400 11px/16px Onest}
+.hotel-card-nightly-label{grid-column:1;grid-row:3;text-align:right}
 
 /* The hotel's hero gallery is swipeable on mobile as well as desktop. */
 .hotel-hero-carousel{position:absolute;inset:0;height:100%}

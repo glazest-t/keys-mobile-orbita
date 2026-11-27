@@ -12,7 +12,9 @@ function setup(){return startDraft(ensureAccount(initialCommerce(),owner),'orbit
 test('Стиль тарифа определяется доступом, а не процентом скидки',()=>{
  const s=setup(),q=quoteDraft(s,owner);assert.ok(q.hotelDiscountMinor>0);
  assert.equal(rateAppearance(catalog.rates.find(r=>r.id===s.draft.rateId)),'');
- assert.equal(rateAppearance(closed),'loyalty');assert.equal(rateAppearance({kind:'friendly_rate',hotelId:'orbit-sea'}),'friendly');
+ assert.equal(rateAppearance(closed),'loyalty');
+ assert.equal(rateAppearance(catalog.rates.find(r=>r.id==='sea-friendly-rate')),'friendly');
+ assert.equal(rateAppearance(catalog.rates.find(r=>r.id==='sea-standard-breakfast-friendly')),'');
 });
 test('Закрытый тариф скрыт и недоступен ниже уровня и без программы',()=>{
  const s=setup();assert.equal(canBookRate(s,owner,closed),false);assert.ok(roomOffers(s,owner).every(o=>o.rates.every(r=>r.rate.id!==closed.id)));
@@ -26,5 +28,12 @@ test('Ценитель видит закрытый и обычные тариф�
  assert.ok(offers.some(r=>r.rate.id===closed.id));assert.ok(offers.some(r=>r.rate.kind==='standard'));
  const selected=selectRoomRate(s,owner,closed.id);assert.equal(quoteDraft(selected,owner).rateKind,'hotel_loyalty');
  assert.ok(offers.every(r=>r.rate.kind!=='friendly_rate'));
- s.accounts[owner].hotelierStatus='approved';assert.ok(roomOffers(s,owner)[0].rates.some(r=>r.rate.kind==='friendly_rate'));
+ const breakfastFriendly=catalog.rates.find(r=>r.id==='sea-standard-breakfast-friendly');
+ assert.equal(canBookRate(s,owner,breakfastFriendly),false);
+ s.accounts[owner].hotelierStatus='approved';
+ const approvedOffers=roomOffers(s,owner)[0].rates;
+ assert.ok(approvedOffers.some(r=>r.rate.id==='sea-friendly-rate'));
+ assert.ok(approvedOffers.some(r=>r.rate.id===breakfastFriendly.id));
+ const friendly=selectRoomRate(s,owner,breakfastFriendly.id);
+ assert.equal(quoteDraft(friendly,owner).rateKind,'friendly_rate');
 });

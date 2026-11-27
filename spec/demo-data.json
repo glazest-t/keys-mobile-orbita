@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "disclaimer": "Первые пять отелей и фотографии — из пользовательских макетов. Восемь объектов Казани вымышлены для проверки фильтров; их сети, характеристики и фотографии — демонстрационные. Цены, наличие, отзывы и операции — тестовые. Персональные данные вымышлены. Двадцать московских отелей добавлены из пользовательской ссылки Ozon Travel (снимок 27.10.2026): реальные названия, фото, рейтинги, опубликованные удобства и цены. Недостающие поля номеров и правила бронирования — тестовые по согласованию пользователя; точные границы в spec/imported-hotels.json. Цены фиксированы и не обновляются с Ozon. Добавлены 20 объектов Санкт-Петербурга по ссылке Ozon, снимок цен за 5–8 ноября 2026 для двух гостей. Применяется опубликованная округлённая цена за ночь: итог за три ночи может отличаться от исходного на 1 рубль. Недостающие параметры и наличие тестовые; отзывы вымышлены.",
+  "disclaimer": "Первые пять отелей и фотографии — из пользовательских макетов. Восемь объектов Казани вымышлены для проверки фильтров; их сети, характеристики и фотографии — демонстрационные. Цены, наличие, отзывы и операции — тестовые. Персональные данные вымышлены. Двадцать московских отелей добавлены из пользовательской ссылки Ozon Travel (снимок 27.10.2026): реальные названия, фото, рейтинги, опубликованные удобства и цены. Недостающие поля номеров и правила бронирования — тестовые по согласованию пользователя; точные границы в spec/imported-hotels.json. Цены фиксированы и не обновляются с Ozon. Добавлены 20 объектов Санкт-Петербурга по ссылке Ozon, снимок цен за 5–8 ноября 2026 для двух гостей. Применяется опубликованная округлённая цена за ночь: итог за три ночи может отличаться от исходного на 1 рубль. Недостающие параметры и наличие тестовые; отзывы вымышлены. Шесть отелей Сочи с идентификатором sochi-style-* вымышлены для проверки стиля путешествий и фильтров. Фотографии иллюстративные. Для исследования выдачи также добавлены вымышленные отели Москвы, Санкт-Петербурга, Казани, Калининграда и Алтая. Точки таких объектов на карте выдачи условные, фотографии иллюстративные.",
   "currency": "RUB",
   "user": {
     "id": "guest-demo",
@@ -57,7 +57,11 @@
       "city": "Казань",
       "hotelDiscountBasisPoints": 0,
       "checkInTime": "15:00",
-      "checkOutTime": "12:00"
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        49.116,
+        55.792
+      ]
     },
     {
       "id": "kazan-apartment",
@@ -65,7 +69,11 @@
       "city": "Казань",
       "hotelDiscountBasisPoints": 0,
       "checkInTime": "15:00",
-      "checkOutTime": "12:00"
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        49.128,
+        55.781
+      ]
     },
     {
       "id": "kazan-apart",
@@ -73,7 +81,11 @@
       "city": "Казань",
       "hotelDiscountBasisPoints": 1500,
       "checkInTime": "15:00",
-      "checkOutTime": "12:00"
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        49.096,
+        55.798
+      ]
     },
     {
       "id": "kazan-guest",
@@ -81,7 +93,11 @@
       "city": "Казань",
       "hotelDiscountBasisPoints": 0,
       "checkInTime": "15:00",
-      "checkOutTime": "12:00"
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        49.122,
+        55.845
+      ]
     },
     {
       "id": "kazan-hostel",
@@ -89,7 +105,11 @@
       "city": "Казань",
       "hotelDiscountBasisPoints": 0,
       "checkInTime": "15:00",
-      "checkOutTime": "12:00"
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        49.103,
+        55.784
+      ]
     },
     {
       "id": "kazan-country",
@@ -97,7 +117,11 @@
       "city": "Казань",
       "hotelDiscountBasisPoints": 0,
       "checkInTime": "15:00",
-      "checkOutTime": "12:00"
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        48.986,
+        55.854
+      ]
     },
     {
       "id": "kazan-camp",
@@ -105,7 +129,11 @@
       "city": "Казань",
       "hotelDiscountBasisPoints": 1500,
       "checkInTime": "15:00",
-      "checkOutTime": "12:00"
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        48.951,
+        55.907
+      ]
     },
     {
       "id": "kazan-health",
@@ -113,7 +141,11 @@
       "city": "Казань",
       "hotelDiscountBasisPoints": 0,
       "checkInTime": "15:00",
-      "checkOutTime": "12:00"
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        48.898,
+        55.886
+      ]
     },
     {
       "id": "moscow-izmaylovo-tvoy-otel",
@@ -434,6 +466,282 @@
       "hotelDiscountBasisPoints": 0,
       "checkInTime": "15:00",
       "checkOutTime": "12:00"
+    },
+    {
+      "id": "sochi-style-spa",
+      "name": "Термы у моря",
+      "city": "Сочи",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "styleExample": true,
+      "demoMapCoordinates": [
+        39.93,
+        43.421
+      ]
+    },
+    {
+      "id": "sochi-style-family",
+      "name": "Летний двор",
+      "city": "Сочи",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "styleExample": true,
+      "demoMapCoordinates": [
+        39.895,
+        43.438
+      ]
+    },
+    {
+      "id": "sochi-style-park",
+      "name": "Кедровая тропа",
+      "city": "Сочи",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "styleExample": true,
+      "demoMapCoordinates": [
+        39.857,
+        43.526
+      ]
+    },
+    {
+      "id": "sochi-style-food",
+      "name": "Инжир и соль",
+      "city": "Сочи",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "styleExample": true,
+      "demoMapCoordinates": [
+        39.725,
+        43.585
+      ]
+    },
+    {
+      "id": "sochi-style-culture",
+      "name": "Ателье у театра",
+      "city": "Сочи",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "styleExample": true,
+      "demoMapCoordinates": [
+        39.729,
+        43.572
+      ]
+    },
+    {
+      "id": "sochi-style-active",
+      "name": "Высота 620",
+      "city": "Сочи",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "styleExample": true,
+      "demoMapCoordinates": [
+        40.272,
+        43.685
+      ]
+    },
+    {
+      "id": "moscow-style-yauza",
+      "name": "Причал на Яузе",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        37.704,
+        55.759
+      ],
+      "styleExample": true
+    },
+    {
+      "id": "moscow-style-lime",
+      "name": "Липовый квартал",
+      "city": "Москва",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        37.679,
+        55.797
+      ],
+      "styleExample": true
+    },
+    {
+      "id": "spb-style-garden",
+      "name": "Линии и сады",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        30.257,
+        59.941
+      ],
+      "styleExample": true
+    },
+    {
+      "id": "spb-style-pier",
+      "name": "Тихий причал",
+      "city": "Санкт-Петербург",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        29.983,
+        60.052
+      ],
+      "styleExample": true
+    },
+    {
+      "id": "kazan-style-kaban",
+      "name": "Двор у Кабана",
+      "city": "Казань",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        49.129,
+        55.776
+      ],
+      "styleExample": true
+    },
+    {
+      "id": "kazan-style-river",
+      "name": "Чайка над Казанкой",
+      "city": "Казань",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        49.143,
+        55.817
+      ],
+      "styleExample": true
+    },
+    {
+      "id": "kaliningrad-style-harbor",
+      "name": "Дом у старой гавани",
+      "city": "Калининград",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        20.531,
+        54.7
+      ]
+    },
+    {
+      "id": "kaliningrad-style-courtyard",
+      "name": "Янтарный двор",
+      "city": "Калининград",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        20.486,
+        54.685
+      ]
+    },
+    {
+      "id": "kaliningrad-style-table",
+      "name": "Соль и тмин",
+      "city": "Калининград",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        20.505,
+        54.723
+      ]
+    },
+    {
+      "id": "kaliningrad-style-loft",
+      "name": "Мансарда у башни",
+      "city": "Калининград",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        20.474,
+        54.722
+      ]
+    },
+    {
+      "id": "kaliningrad-style-park",
+      "name": "Берёзовый сквер",
+      "city": "Калининград",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        20.452,
+        54.73
+      ]
+    },
+    {
+      "id": "altai-style-river",
+      "name": "Тихая Катунь",
+      "city": "Алтай",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        85.828,
+        51.855
+      ]
+    },
+    {
+      "id": "altai-style-mountain",
+      "name": "Горная слобода",
+      "city": "Алтай",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        85.997,
+        51.448
+      ]
+    },
+    {
+      "id": "altai-style-meadow",
+      "name": "Луга и сосны",
+      "city": "Алтай",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        85.832,
+        51.592
+      ]
+    },
+    {
+      "id": "altai-style-kitchen",
+      "name": "Дом у перевала",
+      "city": "Алтай",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        85.92,
+        51.934
+      ]
+    },
+    {
+      "id": "altai-style-table",
+      "name": "Кедр и мёд",
+      "city": "Алтай",
+      "hotelDiscountBasisPoints": 0,
+      "checkInTime": "15:00",
+      "checkOutTime": "12:00",
+      "demoMapCoordinates": [
+        85.956,
+        51.754
+      ]
     }
   ],
   "rooms": [
@@ -1125,6 +1433,138 @@
       "id": "spb-mini-otel-sadovaya-loft-room-3",
       "hotelId": "spb-mini-otel-sadovaya-loft",
       "title": "Номер улучшенный стандарт с 1 двуспальной кроватью",
+      "maxGuests": 2
+    },
+    {
+      "id": "sochi-style-spa-room",
+      "hotelId": "sochi-style-spa",
+      "title": "Стандарт",
+      "maxGuests": 3
+    },
+    {
+      "id": "sochi-style-family-room",
+      "hotelId": "sochi-style-family",
+      "title": "Семейный номер",
+      "maxGuests": 5
+    },
+    {
+      "id": "sochi-style-park-room",
+      "hotelId": "sochi-style-park",
+      "title": "Стандарт",
+      "maxGuests": 3
+    },
+    {
+      "id": "sochi-style-food-room",
+      "hotelId": "sochi-style-food",
+      "title": "Стандарт",
+      "maxGuests": 2
+    },
+    {
+      "id": "sochi-style-culture-room",
+      "hotelId": "sochi-style-culture",
+      "title": "Апартаменты с кухней",
+      "maxGuests": 3
+    },
+    {
+      "id": "sochi-style-active-room",
+      "hotelId": "sochi-style-active",
+      "title": "Стандарт",
+      "maxGuests": 4
+    },
+    {
+      "id": "moscow-style-yauza-room",
+      "hotelId": "moscow-style-yauza",
+      "title": "Семейный номер",
+      "maxGuests": 4
+    },
+    {
+      "id": "moscow-style-lime-room",
+      "hotelId": "moscow-style-lime",
+      "title": "Апартаменты с кухней",
+      "maxGuests": 5
+    },
+    {
+      "id": "spb-style-garden-room",
+      "hotelId": "spb-style-garden",
+      "title": "Апартаменты с кухней",
+      "maxGuests": 4
+    },
+    {
+      "id": "spb-style-pier-room",
+      "hotelId": "spb-style-pier",
+      "title": "Семейный номер",
+      "maxGuests": 5
+    },
+    {
+      "id": "kazan-style-kaban-room",
+      "hotelId": "kazan-style-kaban",
+      "title": "Семейный номер",
+      "maxGuests": 5
+    },
+    {
+      "id": "kazan-style-river-room",
+      "hotelId": "kazan-style-river",
+      "title": "Семейный номер",
+      "maxGuests": 4
+    },
+    {
+      "id": "kaliningrad-style-harbor-room",
+      "hotelId": "kaliningrad-style-harbor",
+      "title": "Семейный номер",
+      "maxGuests": 4
+    },
+    {
+      "id": "kaliningrad-style-courtyard-room",
+      "hotelId": "kaliningrad-style-courtyard",
+      "title": "Семейный номер",
+      "maxGuests": 5
+    },
+    {
+      "id": "kaliningrad-style-table-room",
+      "hotelId": "kaliningrad-style-table",
+      "title": "Стандарт",
+      "maxGuests": 2
+    },
+    {
+      "id": "kaliningrad-style-loft-room",
+      "hotelId": "kaliningrad-style-loft",
+      "title": "Апартаменты с кухней",
+      "maxGuests": 3
+    },
+    {
+      "id": "kaliningrad-style-park-room",
+      "hotelId": "kaliningrad-style-park",
+      "title": "Стандарт",
+      "maxGuests": 3
+    },
+    {
+      "id": "altai-style-river-room",
+      "hotelId": "altai-style-river",
+      "title": "Семейный номер",
+      "maxGuests": 4
+    },
+    {
+      "id": "altai-style-mountain-room",
+      "hotelId": "altai-style-mountain",
+      "title": "Семейный номер",
+      "maxGuests": 5
+    },
+    {
+      "id": "altai-style-meadow-room",
+      "hotelId": "altai-style-meadow",
+      "title": "Семейный номер",
+      "maxGuests": 4
+    },
+    {
+      "id": "altai-style-kitchen-room",
+      "hotelId": "altai-style-kitchen",
+      "title": "Апартаменты с кухней",
+      "maxGuests": 4
+    },
+    {
+      "id": "altai-style-table-room",
+      "hotelId": "altai-style-table",
+      "title": "Стандарт",
       "maxGuests": 2
     }
   ],
@@ -2809,7 +3249,8 @@
       "nightlyMinor": 1118000,
       "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
       "mealPlan": "breakfast",
-      "baseRateId": "sea-standard-breakfast"
+      "baseRateId": "sea-standard-breakfast",
+      "friendlyRateBadgeOnly": true
     },
     {
       "id": "sea-deluxe-breakfast-friendly",
@@ -2819,7 +3260,8 @@
       "nightlyMinor": 1488500,
       "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
       "mealPlan": "breakfast",
-      "baseRateId": "sea-deluxe-breakfast"
+      "baseRateId": "sea-deluxe-breakfast",
+      "friendlyRateBadgeOnly": true
     },
     {
       "id": "sea-suite-breakfast-friendly",
@@ -2829,7 +3271,8 @@
       "nightlyMinor": 2106000,
       "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
       "mealPlan": "breakfast",
-      "baseRateId": "sea-suite-breakfast"
+      "baseRateId": "sea-suite-breakfast",
+      "friendlyRateBadgeOnly": true
     },
     {
       "id": "kazan-city-rate-friendly",
@@ -4520,6 +4963,424 @@
       "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
       "mealPlan": "breakfast",
       "requiredHotelLevel": "connoisseur"
+    },
+    {
+      "id": "sochi-style-spa-rate",
+      "hotelId": "sochi-style-spa",
+      "roomId": "sochi-style-spa-room",
+      "kind": "standard",
+      "nightlyMinor": 1840000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "sochi-style-spa-rate-friendly",
+      "hotelId": "sochi-style-spa",
+      "roomId": "sochi-style-spa-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 1196000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "sochi-style-spa-rate"
+    },
+    {
+      "id": "sochi-style-family-rate",
+      "hotelId": "sochi-style-family",
+      "roomId": "sochi-style-family-room",
+      "kind": "standard",
+      "nightlyMinor": 1450000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "sochi-style-family-rate-friendly",
+      "hotelId": "sochi-style-family",
+      "roomId": "sochi-style-family-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 942500,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "sochi-style-family-rate"
+    },
+    {
+      "id": "sochi-style-park-rate",
+      "hotelId": "sochi-style-park",
+      "roomId": "sochi-style-park-room",
+      "kind": "standard",
+      "nightlyMinor": 1320000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "sochi-style-park-rate-friendly",
+      "hotelId": "sochi-style-park",
+      "roomId": "sochi-style-park-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 858000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "sochi-style-park-rate"
+    },
+    {
+      "id": "sochi-style-food-rate",
+      "hotelId": "sochi-style-food",
+      "roomId": "sochi-style-food-room",
+      "kind": "standard",
+      "nightlyMinor": 1610000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "sochi-style-food-rate-friendly",
+      "hotelId": "sochi-style-food",
+      "roomId": "sochi-style-food-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 1046500,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "sochi-style-food-rate"
+    },
+    {
+      "id": "sochi-style-culture-rate",
+      "hotelId": "sochi-style-culture",
+      "roomId": "sochi-style-culture-room",
+      "kind": "standard",
+      "nightlyMinor": 1390000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "sochi-style-culture-rate-friendly",
+      "hotelId": "sochi-style-culture",
+      "roomId": "sochi-style-culture-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 903500,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "sochi-style-culture-rate"
+    },
+    {
+      "id": "sochi-style-active-rate",
+      "hotelId": "sochi-style-active",
+      "roomId": "sochi-style-active-room",
+      "kind": "standard",
+      "nightlyMinor": 1540000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "sochi-style-active-rate-friendly",
+      "hotelId": "sochi-style-active",
+      "roomId": "sochi-style-active-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 1001000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "sochi-style-active-rate"
+    },
+    {
+      "id": "moscow-style-yauza-rate",
+      "hotelId": "moscow-style-yauza",
+      "roomId": "moscow-style-yauza-room",
+      "kind": "standard",
+      "nightlyMinor": 1070000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-style-yauza-rate-friendly",
+      "hotelId": "moscow-style-yauza",
+      "roomId": "moscow-style-yauza-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 695500,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-style-yauza-rate"
+    },
+    {
+      "id": "moscow-style-lime-rate",
+      "hotelId": "moscow-style-lime",
+      "roomId": "moscow-style-lime-room",
+      "kind": "standard",
+      "nightlyMinor": 1380000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "moscow-style-lime-rate-friendly",
+      "hotelId": "moscow-style-lime",
+      "roomId": "moscow-style-lime-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 897000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "moscow-style-lime-rate"
+    },
+    {
+      "id": "spb-style-garden-rate",
+      "hotelId": "spb-style-garden",
+      "roomId": "spb-style-garden-room",
+      "kind": "standard",
+      "nightlyMinor": 910000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "spb-style-garden-rate-friendly",
+      "hotelId": "spb-style-garden",
+      "roomId": "spb-style-garden-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 591500,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "spb-style-garden-rate"
+    },
+    {
+      "id": "spb-style-pier-rate",
+      "hotelId": "spb-style-pier",
+      "roomId": "spb-style-pier-room",
+      "kind": "standard",
+      "nightlyMinor": 1430000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "spb-style-pier-rate-friendly",
+      "hotelId": "spb-style-pier",
+      "roomId": "spb-style-pier-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 929500,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "spb-style-pier-rate"
+    },
+    {
+      "id": "kazan-style-kaban-rate",
+      "hotelId": "kazan-style-kaban",
+      "roomId": "kazan-style-kaban-room",
+      "kind": "standard",
+      "nightlyMinor": 890000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "kazan-style-kaban-rate-friendly",
+      "hotelId": "kazan-style-kaban",
+      "roomId": "kazan-style-kaban-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 578500,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "kazan-style-kaban-rate"
+    },
+    {
+      "id": "kazan-style-river-rate",
+      "hotelId": "kazan-style-river",
+      "roomId": "kazan-style-river-room",
+      "kind": "standard",
+      "nightlyMinor": 1360000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "kazan-style-river-rate-friendly",
+      "hotelId": "kazan-style-river",
+      "roomId": "kazan-style-river-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 884000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "kazan-style-river-rate"
+    },
+    {
+      "id": "kaliningrad-style-harbor-rate",
+      "hotelId": "kaliningrad-style-harbor",
+      "roomId": "kaliningrad-style-harbor-room",
+      "kind": "standard",
+      "nightlyMinor": 850000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "kaliningrad-style-harbor-rate-friendly",
+      "hotelId": "kaliningrad-style-harbor",
+      "roomId": "kaliningrad-style-harbor-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 552500,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "kaliningrad-style-harbor-rate"
+    },
+    {
+      "id": "kaliningrad-style-courtyard-rate",
+      "hotelId": "kaliningrad-style-courtyard",
+      "roomId": "kaliningrad-style-courtyard-room",
+      "kind": "standard",
+      "nightlyMinor": 720000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "kaliningrad-style-courtyard-rate-friendly",
+      "hotelId": "kaliningrad-style-courtyard",
+      "roomId": "kaliningrad-style-courtyard-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 468000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "kaliningrad-style-courtyard-rate"
+    },
+    {
+      "id": "kaliningrad-style-table-rate",
+      "hotelId": "kaliningrad-style-table",
+      "roomId": "kaliningrad-style-table-room",
+      "kind": "standard",
+      "nightlyMinor": 920000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "kaliningrad-style-table-rate-friendly",
+      "hotelId": "kaliningrad-style-table",
+      "roomId": "kaliningrad-style-table-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 598000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "kaliningrad-style-table-rate"
+    },
+    {
+      "id": "kaliningrad-style-loft-rate",
+      "hotelId": "kaliningrad-style-loft",
+      "roomId": "kaliningrad-style-loft-room",
+      "kind": "standard",
+      "nightlyMinor": 580000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "kaliningrad-style-loft-rate-friendly",
+      "hotelId": "kaliningrad-style-loft",
+      "roomId": "kaliningrad-style-loft-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 377000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "kaliningrad-style-loft-rate"
+    },
+    {
+      "id": "kaliningrad-style-park-rate",
+      "hotelId": "kaliningrad-style-park",
+      "roomId": "kaliningrad-style-park-room",
+      "kind": "standard",
+      "nightlyMinor": 530000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "kaliningrad-style-park-rate-friendly",
+      "hotelId": "kaliningrad-style-park",
+      "roomId": "kaliningrad-style-park-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 344500,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "kaliningrad-style-park-rate"
+    },
+    {
+      "id": "altai-style-river-rate",
+      "hotelId": "altai-style-river",
+      "roomId": "altai-style-river-room",
+      "kind": "standard",
+      "nightlyMinor": 1510000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "altai-style-river-rate-friendly",
+      "hotelId": "altai-style-river",
+      "roomId": "altai-style-river-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 981500,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "altai-style-river-rate"
+    },
+    {
+      "id": "altai-style-mountain-rate",
+      "hotelId": "altai-style-mountain",
+      "roomId": "altai-style-mountain-room",
+      "kind": "standard",
+      "nightlyMinor": 1120000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "altai-style-mountain-rate-friendly",
+      "hotelId": "altai-style-mountain",
+      "roomId": "altai-style-mountain-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 728000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "altai-style-mountain-rate"
+    },
+    {
+      "id": "altai-style-meadow-rate",
+      "hotelId": "altai-style-meadow",
+      "roomId": "altai-style-meadow-room",
+      "kind": "standard",
+      "nightlyMinor": 780000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "altai-style-meadow-rate-friendly",
+      "hotelId": "altai-style-meadow",
+      "roomId": "altai-style-meadow-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 507000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "altai-style-meadow-rate"
+    },
+    {
+      "id": "altai-style-kitchen-rate",
+      "hotelId": "altai-style-kitchen",
+      "roomId": "altai-style-kitchen-room",
+      "kind": "standard",
+      "nightlyMinor": 610000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none"
+    },
+    {
+      "id": "altai-style-kitchen-rate-friendly",
+      "hotelId": "altai-style-kitchen",
+      "roomId": "altai-style-kitchen-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 396500,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "none",
+      "baseRateId": "altai-style-kitchen-rate"
+    },
+    {
+      "id": "altai-style-table-rate",
+      "hotelId": "altai-style-table",
+      "roomId": "altai-style-table-room",
+      "kind": "standard",
+      "nightlyMinor": 890000,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast"
+    },
+    {
+      "id": "altai-style-table-rate-friendly",
+      "hotelId": "altai-style-table",
+      "roomId": "altai-style-table-room",
+      "kind": "friendly_rate",
+      "nightlyMinor": 578500,
+      "freeCancellationUntil": "2026-11-09T15:00:00+03:00",
+      "mealPlan": "breakfast",
+      "baseRateId": "altai-style-table-rate"
     }
   ],
   "availability": [
@@ -5212,6 +6073,138 @@
       "from": "2026-10-27",
       "to": "2027-12-31",
       "remaining": 8
+    },
+    {
+      "roomId": "sochi-style-spa-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
+    },
+    {
+      "roomId": "sochi-style-family-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
+    },
+    {
+      "roomId": "sochi-style-park-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
+    },
+    {
+      "roomId": "sochi-style-food-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
+    },
+    {
+      "roomId": "sochi-style-culture-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
+    },
+    {
+      "roomId": "sochi-style-active-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
+    },
+    {
+      "roomId": "moscow-style-yauza-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
+    },
+    {
+      "roomId": "moscow-style-lime-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
+    },
+    {
+      "roomId": "spb-style-garden-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
+    },
+    {
+      "roomId": "spb-style-pier-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
+    },
+    {
+      "roomId": "kazan-style-kaban-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
+    },
+    {
+      "roomId": "kazan-style-river-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
+    },
+    {
+      "roomId": "kaliningrad-style-harbor-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
+    },
+    {
+      "roomId": "kaliningrad-style-courtyard-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
+    },
+    {
+      "roomId": "kaliningrad-style-table-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
+    },
+    {
+      "roomId": "kaliningrad-style-loft-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
+    },
+    {
+      "roomId": "kaliningrad-style-park-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
+    },
+    {
+      "roomId": "altai-style-river-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
+    },
+    {
+      "roomId": "altai-style-mountain-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
+    },
+    {
+      "roomId": "altai-style-meadow-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
+    },
+    {
+      "roomId": "altai-style-kitchen-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
+    },
+    {
+      "roomId": "altai-style-table-room",
+      "from": "2026-11-12",
+      "to": "2026-11-19",
+      "remaining": 4
     }
   ],
   "services": [
