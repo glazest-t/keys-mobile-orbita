@@ -89,7 +89,7 @@ export function HotelOverview({commerce,setCommerce,owner,onBack,onDetail,onPref
  const featuredHeading=hasStyleMatches?featuredStyleHeading:novemberEditorialText("Т-1125", "Удобства отеля", "Удобства");
  const desktopFeatures=featuredItems.length>0&&<section className="desktop-hotel-featured-amenities" data-guest-style={hasStyleMatches||undefined} aria-label={hasStyleMatches?featuredHeading:'Ключевые удобства отеля'}>
   <h2>{featuredHeading}</h2>
-  <ul>{featuredItems.map(({feature,text})=><li key={feature}>{hasStyleMatches?<GuestStyleReasonIcon feature={feature} size={32}/>:<PreferenceIllustration label={feature} size={32} original/>}<span>{text}</span></li>)}</ul>
+  <ul>{featuredItems.map(({feature,text})=><li key={feature} className={hasStyleMatches?"guest-style-reason-surface":undefined}>{hasStyleMatches?<GuestStyleReasonIcon feature={feature} size={64}/>:<PreferenceIllustration label={feature} size={32} original/>}<span>{text}</span></li>)}</ul>
  </section>;
  const ratingBlock=<button className="hotel-review-summary" onClick={()=>isDesktop?document.getElementById('hotel-reviews')?.scrollIntoView({block:'start'}):onDetail('reviews')}>
   <RatingBadge value={v.rating}/>

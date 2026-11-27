@@ -2,7 +2,7 @@
 .guest-style-editor{position:absolute;inset:var(--device-safe-area-top,54px) 0 0}
 .filter-editor:has(.guest-style-editor):before{background:var(--k-surface-app)}
 .desktop-surface .filter-editor:has(.guest-style-editor){
- width:min(600px,calc(100vw - 32px));max-height:calc(100dvh - 48px);overflow:hidden;
+ width:min(900px,calc(100vw - 32px));max-height:calc(100dvh - 48px);overflow:hidden;
  translate:-50% -50%;transform:none;
 }
 .desktop-surface .guest-style-editor{
@@ -14,10 +14,10 @@
 }
 .desktop-surface .guest-style-editor .swipe-preferences-intro{
  display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;gap:8px;
- flex:none;padding:24px 24px 16px;text-align:center;
+ flex:none;padding:32px 32px 24px;text-align:center;
 }
 .desktop-surface .guest-style-editor .swipe-preferences-intro h1{
- grid-column:2;grid-row:1;margin:0;font-size:26px;line-height:1.3;
+ grid-column:2;grid-row:1;margin:0;font-size:32px;line-height:1.3;
 }
 .desktop-surface .guest-style-editor .swipe-preferences-intro h1:focus{outline:none}
 .desktop-surface .guest-style-editor .swipe-preferences-intro>.k-icon-button{
@@ -26,41 +26,50 @@
 .desktop-surface .guest-style-editor .swipe-preferences-intro h1 br{display:none}
 .desktop-surface .guest-style-editor .swipe-preferences-intro h1 span::before{content:' '}
 .desktop-surface .guest-style-editor .swipe-preferences-intro p{
- grid-column:1/-1;grid-row:2;margin:0;color:var(--k-text-secondary);font:400 14px/20px var(--k-font-text);
+ grid-column:1/-1;grid-row:2;max-width:620px;margin:0 auto;color:var(--k-text-secondary);
+ font:400 15px/22px var(--k-font-text);text-wrap:balance;
 }
 .desktop-surface .guest-style-editor .swipe-preferences>.desktop-scroll{
  flex:1 1 auto;min-height:0;max-height:none!important;overflow-y:auto!important;
  overscroll-behavior:contain;scrollbar-gutter:stable both-edges;
 }
-.desktop-surface .guest-style-editor .swipe-preferences-content{padding:8px 16px 24px}
+.desktop-surface .guest-style-editor .swipe-preferences-content{padding:8px 24px 32px}
 .desktop-surface .guest-style-editor .swipe-preferences-cloud{
- grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;
- max-width:512px;margin-inline:auto;padding:0;
+ grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch;gap:24px;
+ max-width:768px;margin-inline:auto;padding:0;
 }
-.desktop-surface .guest-style-editor .orbit-bubble-item:nth-child(n){grid-column:auto}
+.desktop-surface .guest-style-editor .orbit-bubble-item:nth-child(n){grid-column:auto;aspect-ratio:auto}
 .desktop-surface .guest-style-editor .swipe-preferences-cloud::before{inset:20px -40px}
 .desktop-surface .guest-style-editor .swipe-preferences-footer{
  position:relative;inset:auto;display:flex;justify-content:center;flex:none;
- padding:16px 24px 20px;border-top:1px solid var(--k-border-subtle);background:var(--k-surface-app);
+ padding:20px 32px 24px;border-top:1px solid var(--k-border-subtle);background:var(--k-surface-app);
 }
-.desktop-surface .guest-style-editor .swipe-preferences-footer>.k-button{width:min(100%,320px)}
-@container guest-style (max-width:470px){
- .desktop-surface .guest-style-editor .swipe-preferences-intro{padding-inline:16px}
+.desktop-surface .guest-style-editor .swipe-preferences-footer>.k-button{width:min(100%,360px)}
+@container guest-style (max-width:680px){
+ .desktop-surface .guest-style-editor .swipe-preferences-intro{padding-inline:20px}
+ .desktop-surface .guest-style-editor .swipe-preferences-intro h1{font-size:26px}
+ .desktop-surface .guest-style-editor .swipe-preferences-cloud{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:560px}
+}
+@container guest-style (max-width:460px){
  .desktop-surface .guest-style-editor .swipe-preferences-intro h1{font-size:22px}
- .desktop-surface .guest-style-editor .swipe-preferences-cloud{grid-template-columns:repeat(3,minmax(0,1fr));max-width:384px}
+ .desktop-surface .guest-style-editor .swipe-preferences-content{padding-inline:16px}
+ .desktop-surface .guest-style-editor .swipe-preferences-cloud{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:364px}
 }
-@container guest-style (max-width:350px){
- .desktop-surface .guest-style-editor .swipe-preferences-cloud{grid-template-columns:repeat(2,minmax(0,1fr));max-width:248px}
-}
-@media(max-height:540px){
- .desktop-surface .guest-style-editor .swipe-preferences-intro{padding-block:12px 8px}
+@media(max-height:640px){
+ .desktop-surface .guest-style-editor .swipe-preferences-intro{padding-block:16px 12px}
+ .desktop-surface .guest-style-editor .swipe-preferences-content{padding-bottom:16px}
  .desktop-surface .guest-style-editor .swipe-preferences-footer{padding-block:12px}
 }
 
-.guest-style-editor .trip-plans-preferences .orbit-bubble-item{width:100%}
+/* Give the phone grid more room while keeping the heading and footer on their existing insets. */
+:where(.guest-style-editor .trip-plans-preferences) .swipe-preferences-cloud{margin-inline:-8px}
+.guest-style-editor .trip-plans-preferences .orbit-bubble-item{width:100%;aspect-ratio:1 / 1.05}
+@media(max-width:360px){
+ .guest-style-editor .trip-plans-preferences .orbit-bubble-item{aspect-ratio:1 / 1.12}
+}
 .guest-style-editor .trip-plans-preferences button.swipe-theme[aria-checked]{
  align-items:flex-start;justify-content:flex-start;
- padding:8px 9px;gap:4px;
+ aspect-ratio:auto;height:100%;padding:8px 9px;gap:4px;
  border:1px solid var(--k-border-subtle);border-radius:16px;
  background:linear-gradient(145deg,var(--k-surface-card),var(--theme-tint,#eaf2ff));
  box-shadow:none;color:var(--k-text-primary);
@@ -78,6 +87,25 @@
 .trip-plans-preferences .trip-plans-scene{
  position:absolute;right:2px;bottom:2px;
  width:85%;height:auto;aspect-ratio:1;object-fit:contain;pointer-events:none;user-select:none;
+}
+/* Keep a consistent title row above the scene, including on cards with a two-line label. */
+.desktop-surface .guest-style-editor .trip-plans-preferences button.swipe-theme[aria-checked]{
+ display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(40px,auto) auto;
+ align-content:space-between;align-items:start;justify-content:stretch;
+ gap:8px;padding:12px;
+ font-size:16px;line-height:20px;
+}
+.desktop-surface .trip-plans-preferences .swipe-theme-label{grid-row:1;padding-inline-end:20px}
+.desktop-surface .trip-plans-preferences .trip-plans-scene{
+ position:static;grid-row:2;width:100%;aspect-ratio:5/4;object-fit:cover;object-position:center bottom;
+}
+.desktop-surface .guest-style-editor .trip-plans-preferences .swipe-theme-check{
+ width:20px;height:20px;top:10px;right:10px;
+}
+@container guest-style (max-width:460px){
+ .desktop-surface .guest-style-editor .trip-plans-preferences button.swipe-theme[aria-checked]{
+  padding:10px;font-size:14px;line-height:18px;
+ }
 }
 @media(hover:hover){
  .guest-style-editor .trip-plans-preferences button.swipe-theme[aria-checked]:hover{border-color:var(--theme-link,var(--k-action-primary))}
@@ -115,11 +143,19 @@
  align-items:center;
  gap:8px;
  padding:6px 8px;
- border:1px solid var(--k-border-subtle);
- border-radius:16px;
- background:var(--k-surface-card);
+ border:1px solid transparent;
  color:var(--k-text-primary);
  font:400 13px/18px Onest,sans-serif;
 }
 .guest-style-details-tile>.preference-illustration{flex:none}
 .guest-style-details-label>span{white-space:nowrap}
+
+
+.guest-style-reason-surface{
+ --reason-surface:#eef3fc;
+ border-radius:16px;
+ background:var(--reason-surface);
+}
+[data-app-theme="dark"] .guest-style-reason-surface{
+ background:color-mix(in srgb,var(--reason-surface) 14%,var(--k-surface-card));
+}

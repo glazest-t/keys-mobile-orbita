@@ -150,6 +150,7 @@ html[data-app-theme="dark"] .desktop-hotel-reviews>.review-card{background:var(-
 .desktop-hotel-featured-amenities ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px;margin:0;padding:0;list-style:none}
 .desktop-hotel-featured-amenities[data-guest-style] ul{grid-template-columns:1fr}
 .desktop-hotel-featured-amenities li{display:flex;align-items:center;gap:8px;min-width:0;font:400 14px/20px Onest,sans-serif}
+.desktop-hotel-featured-amenities .guest-style-reason-surface{padding:4px 8px}
 .desktop-hotel-featured-amenities li>span:last-child{min-width:0;overflow-wrap:anywhere}
 .desktop-hotel-summary .hotel-review-summary{margin:0}
 

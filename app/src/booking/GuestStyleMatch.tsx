@@ -76,8 +76,8 @@ export function GuestStyleMatchDetails({reasons}:{reasons:ReturnType<typeof trav
    <ul className="guest-style-details-track" role="list">
     {reasons.map(({feature,text})=>{
      const [first,second]=splitStyleReason(text);
-     return <li key={feature} className="guest-style-details-tile">
-      <GuestStyleReasonIcon feature={feature} size={24}/>
+     return <li key={feature} className="guest-style-details-tile guest-style-reason-surface">
+      <GuestStyleReasonIcon feature={feature} size={48}/>
       <span className="guest-style-details-label"><span>{first}</span>{second&&<> <span>{second}</span></>}</span>
      </li>;
     })}
